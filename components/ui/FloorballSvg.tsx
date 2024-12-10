@@ -28,12 +28,12 @@ const SvgComponent = (props: SvgProps) => (
     <Path
       stroke="#fff"
       strokeWidth={5}
-      d="M210.5 822.5v-45h63v45zM263.5 822v22M224.5 822v22M175.5 48.5v120h133v-120z"
+      d="M210.5 822.5v-45h63v45zM264.5 822v22M219.5 822v22M175.5 48.5v120h133v-120z"
     />
     <Path
       stroke="#fff"
       strokeWidth={5}
-      d="M210.5 85.5v45h63v-45zM263.5 86V64M224.5 86V64"
+      d="M210.5 85.5v45h63v-45zM264.5 86V64M219.5 86V64"
     />
     <Path
       fill="#fff"
