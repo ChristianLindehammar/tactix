@@ -7,11 +7,12 @@ interface Props {
 }
 
 export const FloorballCourt = ({ availableHeight }: Props) => {
-  const width = (availableHeight * 908) / 484; // maintain aspect ratio
+  const height = availableHeight;
+  const width = (height * 484) / 908;
 
   return (
     <View style={styles.container}>
-      <FloorballSvg height={availableHeight} width={width} />
+      <FloorballSvg width={width} height={height} />
     </View>
   );
 };
@@ -21,5 +22,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
 });
