@@ -1,30 +1,60 @@
 import { StyleSheet, View, Button, TextInput, FlatList, TouchableOpacity, Text } from 'react-native';
 import { useState } from 'react';
+import { Team, Player } from '@/models';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function TeamScreen() {
-  const [players, setPlayers] = useState([]);
+  const [team, setTeam] = useState<Team>({
+    id: '1',
+    name: 'My Team',
+    startingPlayers: [],
+    benchPlayers: [],
+    createdBy: 'user1',
+    sharedWith: [],
+    lastEdited: Date.now(),
+    editedBy: 'user1',
+  });
   const [newPlayerName, setNewPlayerName] = useState('');
-  const [courtPlayers, setCourtPlayers] = useState([]);
-  const [benchPlayers, setBenchPlayers] = useState([]);
 
   const addPlayer = () => {
     if (newPlayerName.trim() !== '') {
-      setPlayers([...players, { id: Date.now().toString(), name: newPlayerName }]);
+      const newPlayer: Player = { id: Date.now().toString(), name: newPlayerName };
+      setTeam((prevTeam) => ({
+        ...prevTeam,
+        benchPlayers: [...prevTeam.benchPlayers, newPlayer],
+      }));
       setNewPlayerName('');
     }
   };
 
   const movePlayerToCourt = (playerId) => {
-    setBenchPlayers((prevBenchPlayers) => prevBenchPlayers.filter((id) => id !== playerId));
-    setCourtPlayers((prevCourtPlayers) => [...prevCourtPlayers, playerId]);
+    setTeam((prevTeam) => {
+      const player = prevTeam.benchPlayers.find((p) => p.id === playerId);
+      if (player) {
+        return {
+          ...prevTeam,
+          benchPlayers: prevTeam.benchPlayers.filter((p) => p.id !== playerId),
+          startingPlayers: [...prevTeam.startingPlayers, player],
+        };
+      }
+      return prevTeam;
+    });
   };
 
   const movePlayerToBench = (playerId) => {
-    setCourtPlayers((prevCourtPlayers) => prevCourtPlayers.filter((id) => id !== playerId));
-    setBenchPlayers((prevBenchPlayers) => [...prevBenchPlayers, playerId]);
+    setTeam((prevTeam) => {
+      const player = prevTeam.startingPlayers.find((p) => p.id === playerId);
+      if (player) {
+        return {
+          ...prevTeam,
+          startingPlayers: prevTeam.startingPlayers.filter((p) => p.id !== playerId),
+          benchPlayers: [...prevTeam.benchPlayers, player],
+        };
+      }
+      return prevTeam;
+    });
   };
 
   return (
@@ -41,7 +71,7 @@ export default function TeamScreen() {
       <ThemedView style={styles.sectionContainer}>
         <ThemedText type="subtitle">On the Court</ThemedText>
         <FlatList
-          data={courtPlayers.map((id) => players.find((player) => player.id === id))}
+          data={team.startingPlayers}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => movePlayerToBench(item.id)} style={styles.playerItem}>
@@ -53,7 +83,7 @@ export default function TeamScreen() {
       <ThemedView style={styles.sectionContainer}>
         <ThemedText type="subtitle">On the Bench</ThemedText>
         <FlatList
-          data={benchPlayers.map((id) => players.find((player) => player.id === id))}
+          data={team.benchPlayers}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => movePlayerToCourt(item.id)} style={styles.playerItem}>
