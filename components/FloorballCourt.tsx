@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, PanResponder, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import FloorballSvg from './ui/FloorballSvg';
+import { Player } from './Player';
 
 interface Player {
   id: string;
@@ -18,29 +19,17 @@ export const FloorballCourt = ({ availableHeight, playerPositions, onDragEnd }: 
   const height = availableHeight;
   const width = (height * 484) / 908;
 
-  const panResponder = PanResponder.create({
-    onStartShouldSetPanResponder: () => true,
-    onPanResponderMove: (evt, gestureState) => {
-      const { moveX, moveY } = gestureState;
-      const playerId = evt.target.dataset.playerId;
-      if (playerId) {
-        onDragEnd(playerId, { x: moveX, y: moveY });
-      }
-    },
-  });
-
   return (
     <View style={styles.container}>
       <FloorballSvg width={width} height={height} />
       {playerPositions.map((player) => (
-        <View
+        <Player
           key={player.id}
-          style={[styles.player, { left: player.position.x, top: player.position.y }]}
-          {...panResponder.panHandlers}
-          data-player-id={player.id}
-        >
-          <Text style={styles.playerName}>{player.name}</Text>
-        </View>
+          id={player.id}
+          name={player.name}
+          position={player.position}
+          onDragEnd={onDragEnd}
+        />
       ))}
     </View>
   );

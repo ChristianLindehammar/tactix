@@ -12,7 +12,7 @@ export interface Team {
 export interface Player {
   id: string;
   name: string;
-  position?: Position;
+  position: Position;
 }
 
 export interface Position {

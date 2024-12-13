@@ -1,4 +1,4 @@
-import { StyleSheet, View, Button, TextInput, FlatList, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, Button, TextInput, FlatList, Text } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -7,6 +7,7 @@ import { LAYOUT } from '@/constants/layout';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Player as PlayerComponent } from '@/components/Player';
 
 export default function TeamScreen() {
   const insets = useSafeAreaInsets();
@@ -24,7 +25,7 @@ export default function TeamScreen() {
 
   const addPlayer = () => {
     if (newPlayerName.trim() !== '') {
-      const newPlayer: Player = { id: Date.now().toString(), name: newPlayerName };
+      const newPlayer: Player = { id: Date.now().toString(), name: newPlayerName, position: { x: 0, y: 0 } };
       setTeam((prevTeam) => ({
         ...prevTeam,
         benchPlayers: [...prevTeam.benchPlayers, newPlayer],
@@ -61,6 +62,26 @@ export default function TeamScreen() {
     });
   };
 
+  const handleDragEnd = (playerId, position) => {
+    setTeam((prevTeam) => {
+      const playerIndex = prevTeam.startingPlayers.findIndex((p) => p.id === playerId);
+      if (playerIndex !== -1) {
+        const updatedPlayers = [...prevTeam.startingPlayers];
+        updatedPlayers[playerIndex] = { ...updatedPlayers[playerIndex], position };
+        return { ...prevTeam, startingPlayers: updatedPlayers };
+      }
+      return prevTeam;
+    });
+  };
+
+  const handleSwipe = (playerId) => {
+    setTeam((prevTeam) => ({
+      ...prevTeam,
+      startingPlayers: prevTeam.startingPlayers.filter((p) => p.id !== playerId),
+      benchPlayers: prevTeam.benchPlayers.filter((p) => p.id !== playerId),
+    }));
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
@@ -79,9 +100,13 @@ export default function TeamScreen() {
             data={team.startingPlayers}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => movePlayerToBench(item.id)} style={styles.playerItem}>
-                <Text style={styles.player}>{item.name}</Text>
-              </TouchableOpacity>
+              <PlayerComponent
+                id={item.id}
+                name={item.name}
+                position={item.position}
+                onDragEnd={handleDragEnd}
+                onSwipe={handleSwipe}
+              />
             )}
           />
         </ThemedView>
@@ -91,9 +116,13 @@ export default function TeamScreen() {
             data={team.benchPlayers}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => movePlayerToCourt(item.id)} style={styles.playerItem}>
-                <Text style={styles.player}>{item.name}</Text>
-              </TouchableOpacity>
+              <PlayerComponent
+                id={item.id}
+                name={item.name}
+                position={item.position}
+                onDragEnd={handleDragEnd}
+                onSwipe={handleSwipe}
+              />
             )}
           />
         </ThemedView>

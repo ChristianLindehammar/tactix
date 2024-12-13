@@ -6,14 +6,21 @@ interface PlayerProps {
   name: string;
   position: { x: number; y: number };
   onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
+  onSwipe: (playerId: string) => void;
 }
 
-export const Player = ({ id, name, position, onDragEnd }: PlayerProps) => {
+export const Player = ({ id, name, position, onDragEnd, onSwipe }: PlayerProps) => {
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderMove: (evt, gestureState) => {
       const { moveX, moveY } = gestureState;
       onDragEnd(id, { x: moveX, y: moveY });
+    },
+    onPanResponderRelease: (evt, gestureState) => {
+      const { dx } = gestureState;
+      if (dx > 50 || dx < -50) {
+        onSwipe(id);
+      }
     },
   });
 
