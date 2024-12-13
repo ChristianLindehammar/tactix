@@ -2,7 +2,7 @@ import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
 import { useState, useRef, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Team, Player } from '@/types/models';
+import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -10,79 +10,35 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerSeparator } from '@/components/PlayerSeparator';
+import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
   const insets = useSafeAreaInsets();
-  const [team, setTeam] = useState<Team>({
-    id: '1',
-    name: 'My Team',
-    startingPlayers: [],
-    benchPlayers: [],
-    createdBy: 'user1',
-    sharedWith: [],
-    lastEdited: Date.now(),
-    editedBy: 'user1',
-  });
+  const { team, addBenchPlayer, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const separatorRef = useRef<View>(null);
   const [separatorY, setSeparatorY] = useState<number>(0);
 
   const addPlayer = () => {
     if (newPlayerName.trim() !== '') {
-      const newPlayer: Player = { id: Date.now().toString(), name: newPlayerName, position: { x: 0, y: 0 } };
-      setTeam((prevTeam) => ({
-        ...prevTeam,
-        benchPlayers: [...prevTeam.benchPlayers, newPlayer],
-      }));
+      addBenchPlayer({ id: Date.now().toString(), name: newPlayerName, position: { x: 0, y: 0 }});
       setNewPlayerName('');
     }
-  };
-
-  const movePlayerToCourt = (playerId) => {
-    setTeam((prevTeam) => {
-      const player = prevTeam.benchPlayers.find((p) => p.id === playerId);
-      if (player) {
-        return {
-          ...prevTeam,
-          benchPlayers: prevTeam.benchPlayers.filter((p) => p.id !== playerId),
-          startingPlayers: [...prevTeam.startingPlayers, player],
-        };
-      }
-      return prevTeam;
-    });
-  };
-
-  const movePlayerToBench = (playerId) => {
-    setTeam((prevTeam) => {
-      const player = prevTeam.startingPlayers.find((p) => p.id === playerId);
-      if (player) {
-        return {
-          ...prevTeam,
-          startingPlayers: prevTeam.startingPlayers.filter((p) => p.id !== playerId),
-          benchPlayers: [...prevTeam.benchPlayers, player],
-        };
-      }
-      return prevTeam;
-    });
   };
 
   const onSeparatorLayout = useCallback(() => {
     if (separatorRef.current) {
       separatorRef.current.measureInWindow((x, y, width, height) => {
-        console.log('Separator position updated:', y);
         setSeparatorY(y);
       });
     }
   }, []);
 
-  const handlePlayerDragEnd = (player: Player, yPosition: number) => {
+  const handlePlayerDragEnd = (player: PlayerType, yPosition: number) => {
     // Measure separator position again on drag end to ensure accuracy
     separatorRef.current?.measureInWindow((x, y) => {
-      console.log('Current positions:', {
-        playerY: yPosition,
-        separatorY: y
-      });
-      
+
+
       const isAboveSeparator = yPosition < y;
       const currentlyOnCourt = team.startingPlayers.some((p) => p.id === player.id);
 

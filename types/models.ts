@@ -1,18 +1,18 @@
 export interface Team {
   id: string;
   name: string;
-  startingPlayers: Player[];
-  benchPlayers: Player[];
+  startingPlayers: PlayerType[];
+  benchPlayers: PlayerType[];
   createdBy: string;
   sharedWith: string[];
   lastEdited: number;
   editedBy: string;
 }
 
-export interface Player {
+export interface PlayerType {
   id: string;
   name: string;
-  position: Position;
+  position: { x: number; y: number };
 }
 
 export interface Position {

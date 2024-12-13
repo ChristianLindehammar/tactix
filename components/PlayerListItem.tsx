@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { Player } from '@/types/models';
+import { PlayerType } from '@/types/models';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -10,9 +10,9 @@ import Animated, {
 } from 'react-native-reanimated';
 
 interface PlayerListItemProps {
-  player: Player;
-  onPress: (player: Player) => void;
-  onDragEnd: (player: Player, y: number) => void;
+  player: PlayerType;
+  onPress: (player: PlayerType) => void;
+  onDragEnd: (player: PlayerType, y: number) => void;
   isOnCourt: boolean;
 }
 
