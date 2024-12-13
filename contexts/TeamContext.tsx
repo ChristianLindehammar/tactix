@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { Team } from '@/models';
+import React, { createContext, useState, PropsWithChildren } from 'react';
+import { Team } from '@/types/models';
 
 interface TeamContextProps {
   team: Team;
@@ -8,7 +8,7 @@ interface TeamContextProps {
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
 
-export const TeamProvider: React.FC = ({ children }) => {
+export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [team, setTeam] = useState<Team>({
     id: '1',
     name: 'My Team',

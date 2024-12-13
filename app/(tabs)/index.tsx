@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { ThemedView } from '@/components/ThemedView';
 import { FloorballCourt } from '@/components/FloorballCourt';
 import { LAYOUT } from '@/constants/layout';
-import { TeamContext } from '@/contexts/TeamContext';
+import { Team } from '@/types/models';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -25,13 +25,11 @@ export default function HomeScreen() {
   };
 
   return (
-    <TeamContext.Provider value={{ team, setTeam }}>
-      <ThemedView style={styles.container}>
-        <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-          <FloorballCourt availableHeight={availableHeight} playerPositions={playerPositions} onDragEnd={handleDragEnd} />
-        </View>
-      </ThemedView>
-    </TeamContext.Provider>
+    <ThemedView style={styles.container}>
+      <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+        <FloorballCourt availableHeight={availableHeight} playerPositions={playerPositions} onDragEnd={handleDragEnd} />
+      </View>
+    </ThemedView>
   );
 }
 

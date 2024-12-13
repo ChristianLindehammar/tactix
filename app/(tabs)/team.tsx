@@ -1,11 +1,15 @@
 import { StyleSheet, View, Button, TextInput, FlatList, TouchableOpacity, Text } from 'react-native';
 import { useState } from 'react';
-import { Team, Player } from '@/models';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Team, Player } from '@/types/models';
+import { LAYOUT } from '@/constants/layout';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function TeamScreen() {
+  const insets = useSafeAreaInsets();
   const [team, setTeam] = useState<Team>({
     id: '1',
     name: 'My Team',
@@ -58,45 +62,50 @@ export default function TeamScreen() {
   };
 
   return (
-    <ThemedView>
-      <ThemedView style={styles.addPlayerContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter player name"
-          value={newPlayerName}
-          onChangeText={setNewPlayerName}
-        />
-        <Button title="Add Player" onPress={addPlayer} />
+    <SafeAreaView style={{ flex: 1 }}>
+      <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+        <ThemedView style={styles.addPlayerContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter player name"
+            value={newPlayerName}
+            onChangeText={setNewPlayerName}
+          />
+          <Button title="Add Player" onPress={addPlayer} />
+        </ThemedView>
+        <ThemedView style={styles.sectionContainer}>
+          <ThemedText type="subtitle">On the Court</ThemedText>
+          <FlatList
+            data={team.startingPlayers}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <TouchableOpacity onPress={() => movePlayerToBench(item.id)} style={styles.playerItem}>
+                <Text style={styles.player}>{item.name}</Text>
+              </TouchableOpacity>
+            )}
+          />
+        </ThemedView>
+        <ThemedView style={styles.sectionContainer}>
+          <ThemedText type="subtitle">On the Bench</ThemedText>
+          <FlatList
+            data={team.benchPlayers}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <TouchableOpacity onPress={() => movePlayerToCourt(item.id)} style={styles.playerItem}>
+                <Text style={styles.player}>{item.name}</Text>
+              </TouchableOpacity>
+            )}
+          />
+        </ThemedView>
       </ThemedView>
-      <ThemedView style={styles.sectionContainer}>
-        <ThemedText type="subtitle">On the Court</ThemedText>
-        <FlatList
-          data={team.startingPlayers}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => movePlayerToBench(item.id)} style={styles.playerItem}>
-              <Text style={styles.player}>{item.name}</Text>
-            </TouchableOpacity>
-          )}
-        />
-      </ThemedView>
-      <ThemedView style={styles.sectionContainer}>
-        <ThemedText type="subtitle">On the Bench</ThemedText>
-        <FlatList
-          data={team.benchPlayers}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => movePlayerToCourt(item.id)} style={styles.playerItem}>
-              <Text style={styles.player}>{item.name}</Text>
-            </TouchableOpacity>
-          )}
-        />
-      </ThemedView>
-    </ThemedView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   addPlayerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
