@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import FloorballSvg from './ui/FloorballSvg';
 import { Player } from './Player';
 
@@ -20,23 +20,30 @@ export const FloorballCourt = ({ availableHeight, playerPositions, onDragEnd }: 
   const width = (height * 484) / 908;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { width, height }]}>
       <FloorballSvg width={width} height={height} />
-      {playerPositions.map((player) => (
-        <Player
-          key={player.id}
-          id={player.id}
-          name={player.name}
-          position={player.position}
-          onDragEnd={onDragEnd}
-        />
-      ))}
+      <View style={StyleSheet.absoluteFill}>
+        {playerPositions.map((player) => (
+          <Player
+            key={player.id}
+            id={player.id}
+            name={player.name}
+            position={player.position}
+            onDragEnd={(pos) => onDragEnd(player.id, pos)}
+            containerSize={{ width, height }}
+          />
+        ))}
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    position: 'relative',
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
   },

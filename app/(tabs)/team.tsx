@@ -111,10 +111,10 @@ export default function TeamScreen() {
           </ThemedView>
           
           <FlatList
-            data={[]} // Empty data array since we're using ListHeaderComponent and ListFooterComponent
+            data={[]}
             ListHeaderComponent={
               <>
-                <ThemedText style={styles.headerText}>Court</ThemedText>
+                <ThemedText style={styles.headerText}>Court Players</ThemedText>
                 {team.startingPlayers.map(player => (
                   <PlayerListItem
                     key={player.id}
@@ -128,7 +128,7 @@ export default function TeamScreen() {
                   ref={separatorRef}
                   onLayout={onSeparatorLayout}
                 />
-                <ThemedText style={styles.headerText}>Bench</ThemedText>
+                <ThemedText style={styles.headerText}>Bench Players</ThemedText>
                 {team.benchPlayers.map(player => (
                   <PlayerListItem
                     key={player.id}
@@ -175,13 +175,6 @@ const styles = StyleSheet.create({
   sectionContainer: {
     margin: 16,
     flex: 1,
-  },
-  courtView: {
-    height: 200,
-    backgroundColor: '#e8e8e8',
-    borderRadius: 8,
-    margin: 8,
-    position: 'relative',
   },
   headerText: {
     textAlign: 'center',
