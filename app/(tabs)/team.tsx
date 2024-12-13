@@ -1,13 +1,15 @@
-import { StyleSheet, View, Button, TextInput, FlatList, Text } from 'react-native';
-import { useState } from 'react';
+import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
+import { useState, useRef, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Team, Player } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Player as PlayerComponent } from '@/components/Player';
+import { PlayerListItem } from '@/components/PlayerListItem';
+import { PlayerSeparator } from '@/components/PlayerSeparator';
 
 export default function TeamScreen() {
   const insets = useSafeAreaInsets();
@@ -22,6 +24,8 @@ export default function TeamScreen() {
     editedBy: 'user1',
   });
   const [newPlayerName, setNewPlayerName] = useState('');
+  const separatorRef = useRef<View>(null);
+  const [separatorY, setSeparatorY] = useState<number>(0);
 
   const addPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -62,72 +66,85 @@ export default function TeamScreen() {
     });
   };
 
-  const handleDragEnd = (playerId, position) => {
-    setTeam((prevTeam) => {
-      const playerIndex = prevTeam.startingPlayers.findIndex((p) => p.id === playerId);
-      if (playerIndex !== -1) {
-        const updatedPlayers = [...prevTeam.startingPlayers];
-        updatedPlayers[playerIndex] = { ...updatedPlayers[playerIndex], position };
-        return { ...prevTeam, startingPlayers: updatedPlayers };
+  const onSeparatorLayout = useCallback(() => {
+    if (separatorRef.current) {
+      separatorRef.current.measureInWindow((x, y, width, height) => {
+        console.log('Separator position updated:', y);
+        setSeparatorY(y);
+      });
+    }
+  }, []);
+
+  const handlePlayerDragEnd = (player: Player, yPosition: number) => {
+    // Measure separator position again on drag end to ensure accuracy
+    separatorRef.current?.measureInWindow((x, y) => {
+      console.log('Current positions:', {
+        playerY: yPosition,
+        separatorY: y
+      });
+      
+      const isAboveSeparator = yPosition < y;
+      const currentlyOnCourt = team.startingPlayers.some((p) => p.id === player.id);
+
+      if (isAboveSeparator && !currentlyOnCourt) {
+        console.log('Moving player to court');
+        movePlayerToCourt(player.id);
+      } else if (!isAboveSeparator && currentlyOnCourt) {
+        console.log('Moving player to bench');
+        movePlayerToBench(player.id);
       }
-      return prevTeam;
     });
   };
 
-  const handleSwipe = (playerId) => {
-    setTeam((prevTeam) => ({
-      ...prevTeam,
-      startingPlayers: prevTeam.startingPlayers.filter((p) => p.id !== playerId),
-      benchPlayers: prevTeam.benchPlayers.filter((p) => p.id !== playerId),
-    }));
-  };
-
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-        <ThemedView style={styles.addPlayerContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter player name"
-            value={newPlayerName}
-            onChangeText={setNewPlayerName}
-          />
-          <Button title="Add Player" onPress={addPlayer} />
-        </ThemedView>
-        <ThemedView style={styles.sectionContainer}>
-          <ThemedText type="subtitle">On the Court</ThemedText>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+          <ThemedView style={styles.addPlayerContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter player name"
+              value={newPlayerName}
+              onChangeText={setNewPlayerName}
+            />
+            <Button title="Add Player" onPress={addPlayer} />
+          </ThemedView>
+          
           <FlatList
-            data={team.startingPlayers}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <PlayerComponent
-                id={item.id}
-                name={item.name}
-                position={item.position}
-                onDragEnd={handleDragEnd}
-                onSwipe={handleSwipe}
-              />
-            )}
+            data={[]} // Empty data array since we're using ListHeaderComponent and ListFooterComponent
+            ListHeaderComponent={
+              <>
+                <ThemedText style={styles.headerText}>Court</ThemedText>
+                {team.startingPlayers.map(player => (
+                  <PlayerListItem
+                    key={player.id}
+                    player={player}
+                    onPress={() => {}}
+                    onDragEnd={handlePlayerDragEnd}
+                    isOnCourt={true}
+                  />
+                ))}
+                <PlayerSeparator 
+                  ref={separatorRef}
+                  onLayout={onSeparatorLayout}
+                />
+                <ThemedText style={styles.headerText}>Bench</ThemedText>
+                {team.benchPlayers.map(player => (
+                  <PlayerListItem
+                    key={player.id}
+                    player={player}
+                    onPress={() => {}}
+                    onDragEnd={handlePlayerDragEnd}
+                    isOnCourt={false}
+                  />
+                ))}
+              </>
+            }
+            renderItem={() => null}
           />
         </ThemedView>
-        <ThemedView style={styles.sectionContainer}>
-          <ThemedText type="subtitle">On the Bench</ThemedText>
-          <FlatList
-            data={team.benchPlayers}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <PlayerComponent
-                id={item.id}
-                name={item.name}
-                position={item.position}
-                onDragEnd={handleDragEnd}
-                onSwipe={handleSwipe}
-              />
-            )}
-          />
-        </ThemedView>
-      </ThemedView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
 
@@ -157,5 +174,18 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     margin: 16,
+    flex: 1,
+  },
+  courtView: {
+    height: 200,
+    backgroundColor: '#e8e8e8',
+    borderRadius: 8,
+    margin: 8,
+    position: 'relative',
+  },
+  headerText: {
+    textAlign: 'center',
+    padding: 16,
+    fontSize: 16,
   },
 });
