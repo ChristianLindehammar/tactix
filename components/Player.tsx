@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, StyleSheet, PanResponder } from 'react-native';
+import { View, StyleSheet, PanResponder, Text } from 'react-native';
 
 interface PlayerProps {
   id: string;
+  name: string;
   position: { x: number; y: number };
   onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
 }
 
-export const Player = ({ id, position, onDragEnd }: PlayerProps) => {
+export const Player = ({ id, name, position, onDragEnd }: PlayerProps) => {
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderMove: (evt, gestureState) => {
@@ -20,16 +21,24 @@ export const Player = ({ id, position, onDragEnd }: PlayerProps) => {
     <View
       style={[styles.player, { left: position.x, top: position.y }]}
       {...panResponder.panHandlers}
-    />
+    >
+      <Text style={styles.playerName}>{name}</Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   player: {
     position: 'absolute',
-    width: 20,
-    height: 20,
+    width: 40,
+    height: 40,
     backgroundColor: 'red',
-    borderRadius: 10,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  playerName: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
