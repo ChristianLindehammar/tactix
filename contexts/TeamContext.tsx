@@ -1,10 +1,11 @@
 import React, { createContext, useState, PropsWithChildren, useContext } from 'react';
-import { Team, PlayerType } from '@/types/models';
+import { Team, PlayerType, Position } from '@/types/models';
+import { LAYOUT } from '@/constants/layout';
 
 interface TeamContextProps {
   team: Team;
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
-  addBenchPlayer: (player: PlayerType) => void;
+  addPlayer: (name: string) => void;  // New method
   movePlayerToCourt: (playerId: string) => void;
   movePlayerToBench: (playerId: string) => void;
 }
@@ -35,10 +36,61 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }));
   };
 
-  const addBenchPlayer = (player: PlayerType) => {
+  const findFreePosition = (): Position => {
+    const playerSize = LAYOUT.PLAYER.SIZE;
+    const padding = 10;
+    const spacing = playerSize + padding;
+
+    const isPositionTaken = (pos: Position): boolean => {
+      return [...team.startingPlayers, ...team.benchPlayers].some(
+        player => Math.abs(player.position.x - pos.x) < playerSize && 
+                 Math.abs(player.position.y - pos.y) < playerSize
+      );
+    };
+
+    // Calculate maximum columns that fit within court width
+    const maxColumns = Math.floor((LAYOUT.FLOORBALL_COURT.WIDTH - padding * 2) / spacing);
+    
+    // Start from top-left with some padding
+    let column = 0;
+    let row = 0;
+    
+    // Try to find a free position using grid-based placement
+    while (row * spacing + playerSize + padding < LAYOUT.FLOORBALL_COURT.HEIGHT) {
+      while (column < maxColumns) {
+        const x = padding + column * spacing;
+        const y = padding + row * spacing;
+        const pos = { x, y };
+        
+        if (!isPositionTaken(pos)) {
+          return pos;
+        }
+        column++;
+      }
+      column = 0;
+      row++;
+    }
+
+    // Fallback: return position within safe bounds
+    const safeWidth = LAYOUT.FLOORBALL_COURT.WIDTH - playerSize - padding * 2;
+    const safeHeight = LAYOUT.FLOORBALL_COURT.HEIGHT - playerSize - padding * 2;
+    return {
+      x: padding + Math.random() * safeWidth,
+      y: padding + Math.random() * safeHeight
+    };
+  };
+
+  const addPlayer = (name: string) => {
+    const position = findFreePosition();
+    const newPlayer: PlayerType = {
+      id: Date.now().toString(),
+      name: name,
+      position
+    };
+    
     setTeam(currentTeam => ({
       ...currentTeam,
-      benchPlayers: [...currentTeam.benchPlayers, player],
+      benchPlayers: [...currentTeam.benchPlayers, newPlayer],
     }));
   };
 
@@ -73,7 +125,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     <TeamContext.Provider value={{ 
       team, 
       updatePlayerPosition, 
-      addBenchPlayer, 
+      addPlayer,  // Replace addBenchPlayer with addPlayer
       movePlayerToCourt, 
       movePlayerToBench 
     }}>

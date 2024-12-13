@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
 import { useState, useRef, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,14 +15,14 @@ import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
   const insets = useSafeAreaInsets();
-  const { team, addBenchPlayer, movePlayerToCourt, movePlayerToBench } = useTeam();
+  const { team, addPlayer, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const separatorRef = useRef<View>(null);
   const [separatorY, setSeparatorY] = useState<number>(0);
 
-  const addPlayer = () => {
+  const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
-      addBenchPlayer({ id: Date.now().toString(), name: newPlayerName, position: { x: 0, y: 0 }});
+      addPlayer(newPlayerName);
       setNewPlayerName('');
     }
   };
@@ -63,7 +64,7 @@ export default function TeamScreen() {
               value={newPlayerName}
               onChangeText={setNewPlayerName}
             />
-            <Button title="Add Player" onPress={addPlayer} />
+            <Button title="Add Player" onPress={handleAddPlayer} />
           </ThemedView>
           
           <FlatList

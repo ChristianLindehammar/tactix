@@ -19,14 +19,22 @@ interface PlayerProps {
 export function Player({ id, name, position, onDragEnd, containerSize }: PlayerProps) {
   const translateX = useSharedValue(position.x);
   const translateY = useSharedValue(position.y);
+  const offsetX = useSharedValue(0);
+  const offsetY = useSharedValue(0);
 
   const panGesture = Gesture.Pan()
+    .onStart((event) => {
+      offsetX.value = translateX.value - event.absoluteX;
+      offsetY.value = translateY.value - event.absoluteY;
+    })
     .onUpdate((event) => {
-      translateX.value = Math.max(0, Math.min(event.absoluteX, containerSize.width - 40));
-      translateY.value = Math.max(0, Math.min(event.absoluteY, containerSize.height - 40));
+      translateX.value = event.absoluteX + offsetX.value;
+      translateY.value = event.absoluteY + offsetY.value;
     })
     .onEnd(() => {
-      runOnJS(onDragEnd)({ x: translateX.value, y: translateY.value });
+      const newX = translateX.value / containerSize.width;
+      const newY = translateY.value / containerSize.height;
+      runOnJS(onDragEnd)({ x: newX, y: newY });
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -39,7 +47,7 @@ export function Player({ id, name, position, onDragEnd, containerSize }: PlayerP
   return (
     <GestureDetector gesture={panGesture}>
       <Animated.View style={[styles.player, animatedStyle]}>
-        <Text style={styles.playerName}>{name[0]}</Text>
+        <Text style={styles.playerName}>{name.slice(0, 8)}</Text>
       </Animated.View>
     </GestureDetector>
   );
@@ -48,16 +56,16 @@ export function Player({ id, name, position, onDragEnd, containerSize }: PlayerP
 const styles = StyleSheet.create({
   player: {
     position: 'absolute',
-    width: 40,
-    height: 40,
+    width: 60,
+    height: 60,
     backgroundColor: '#2196F3',
-    borderRadius: 20,
+    borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
   playerName: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
   },
 });
