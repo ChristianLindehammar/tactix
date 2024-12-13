@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, PanResponder } from 'react-native';
+import { PlayerPosition, Position } from '@/types/player';
 
-interface PlayerProps {
-  id: string;
-  position: { x: number; y: number };
-  onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
-}
+type PlayerProps = PlayerPosition & {
+  onDragEnd: (playerId: string, position: Position) => void;
+};
 
 export const Player = ({ id, position, onDragEnd }: PlayerProps) => {
   const panResponder = PanResponder.create({
