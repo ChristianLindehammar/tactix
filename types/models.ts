@@ -12,7 +12,7 @@ export interface Team {
 export interface PlayerType {
   id: string;
   name: string;
-  position: { x: number; y: number };
+  position: 'forward' | 'center' | 'back' | 'court';
 }
 
 export interface Position {

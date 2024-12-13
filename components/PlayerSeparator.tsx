@@ -2,18 +2,15 @@ import React, { forwardRef } from 'react';
 import { View, ViewProps, StyleSheet } from 'react-native';
 import { ThemedText } from './ThemedText';
 
-interface PlayerSeparatorProps extends ViewProps {
-  onLayout?: () => void;
-}
 
-export const PlayerSeparator = forwardRef<View, PlayerSeparatorProps>((props, ref) => {
+
+export const PlayerSeparator = forwardRef<View>((props, ref) => {
   return (
     <View
       ref={ref}
       {...props}
       style={[
         styles.container,
-        props.style
       ]}
     >
       <View style={styles.line} />

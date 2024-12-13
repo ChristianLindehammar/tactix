@@ -1,11 +1,10 @@
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTeam, TeamProvider } from '@/contexts/TeamContext';
+import { useTeam } from '@/contexts/TeamContext';
 
 import { ThemedView } from '@/components/ThemedView';
 import { FloorballCourt } from '@/components/FloorballCourt';
 import { LAYOUT } from '@/constants/layout';
-import { Team } from '@/types/models';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();

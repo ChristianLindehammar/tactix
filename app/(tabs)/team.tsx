@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -14,11 +13,9 @@ import { PlayerSeparator } from '@/components/PlayerSeparator';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
-  const insets = useSafeAreaInsets();
   const { team, addPlayer, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const separatorRef = useRef<View>(null);
-  const [separatorY, setSeparatorY] = useState<number>(0);
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -27,13 +24,6 @@ export default function TeamScreen() {
     }
   };
 
-  const onSeparatorLayout = useCallback(() => {
-    if (separatorRef.current) {
-      separatorRef.current.measureInWindow((x, y, width, height) => {
-        setSeparatorY(y);
-      });
-    }
-  }, []);
 
   const handlePlayerDragEnd = (player: PlayerType, yPosition: number) => {
     // Measure separator position again on drag end to ensure accuracy
@@ -83,7 +73,6 @@ export default function TeamScreen() {
                 ))}
                 <PlayerSeparator 
                   ref={separatorRef}
-                  onLayout={onSeparatorLayout}
                 />
                 <ThemedText style={styles.headerText}>Bench Players</ThemedText>
                 {team.benchPlayers.map(player => (
