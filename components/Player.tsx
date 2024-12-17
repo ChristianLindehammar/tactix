@@ -1,3 +1,4 @@
+import { Position } from '@/types/models';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -11,8 +12,8 @@ import Animated, {
 interface PlayerProps {
   id: string;
   name: string;
-  position: { x: number; y: number };
-  onDragEnd: (position: { x: number; y: number }) => void;
+  position: Position;
+  onDragEnd: (position: Position) => void;
   containerSize: { width: number; height: number };
 }
 

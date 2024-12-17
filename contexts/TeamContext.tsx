@@ -28,10 +28,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setTeam(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
-        player.id === playerId ? { ...player, position } : player
+        player.id === playerId ? { ...player, courtPosition: position } : player
       ),
       benchPlayers: currentTeam.benchPlayers.map(player =>
-        player.id === playerId ? { ...player, position } : player
+        player.id === playerId ? { ...player, courtPosition: position } : player
       )
     }));
   };
@@ -43,8 +43,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     const isPositionTaken = (pos: Position): boolean => {
       return [...team.startingPlayers, ...team.benchPlayers].some(
-        player => Math.abs(player.position.x - pos.x) < playerSize && 
-                 Math.abs(player.position.y - pos.y) < playerSize
+        player => player.courtPosition && 
+                  Math.abs(player.courtPosition.x - pos.x) < playerSize && 
+                  Math.abs(player.courtPosition.y - pos.y) < playerSize
       );
     };
 
@@ -85,7 +86,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const newPlayer: PlayerType = {
       id: Date.now().toString(),
       name: name,
-      position
+      courtPosition: position, // Assign to courtPosition
+      position: 'forward' // Provide a default role
     };
     
     setTeam(currentTeam => ({
