@@ -9,6 +9,7 @@ interface TeamContextProps {
   setPlayerType: (playerId: string, position: PlayerPosition) => void; // Renamed method
   movePlayerToCourt: (playerId: string) => void;
   movePlayerToBench: (playerId: string) => void;
+  updatePlayerIndex: (playerId: string, newIndex: number, isCourt: boolean) => void;  // Add this line
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -89,6 +90,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       name: name,
       courtPosition: position, // Assign to courtPosition
       position: PlayerPosition.Forward,
+      index: team.benchPlayers.length,  // Add index based on current length
     };
     
     setTeam(currentTeam => ({
@@ -109,29 +111,68 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }));
   };
 
+  const updatePlayerIndex = (playerId: string, newIndex: number, isCourt: boolean) => {
+    setTeam(currentTeam => {
+      const players = isCourt ? currentTeam.startingPlayers : currentTeam.benchPlayers;
+      const player = players.find(p => p.id === playerId);
+      if (!player) return currentTeam;
+
+      const updatedPlayers = players
+        .map(p => {
+          if (p.id === playerId) return { ...p, index: newIndex };
+          if (p.index >= newIndex) return { ...p, index: p.index + 1 };
+          return p;
+        })
+        .sort((a, b) => a.index - b.index);
+
+      return {
+        ...currentTeam,
+        startingPlayers: isCourt ? updatedPlayers : currentTeam.startingPlayers,
+        benchPlayers: isCourt ? currentTeam.benchPlayers : updatedPlayers,
+      };
+    });
+  };
+
   const movePlayerToCourt = (playerId: string) => {
     setTeam(currentTeam => {
       const player = currentTeam.benchPlayers.find(p => p.id === playerId);
       if (!player) return currentTeam;
+      
+      // Update indices for remaining bench players
+      const updatedBenchPlayers = currentTeam.benchPlayers
+        .filter(p => p.id !== playerId)
+        .map((p, idx) => ({ ...p, index: idx }));
+
+      // Add player to court with new index
+      const playerWithNewIndex = { ...player, index: currentTeam.startingPlayers.length };
+
       return {
         ...currentTeam,
-        benchPlayers: currentTeam.benchPlayers.filter(p => p.id !== playerId),
-        startingPlayers: [...currentTeam.startingPlayers, player],
+        benchPlayers: updatedBenchPlayers,
+        startingPlayers: [...currentTeam.startingPlayers, playerWithNewIndex]
+          .sort((a, b) => a.index - b.index),
       };
     });
   };
 
   const movePlayerToBench = (playerId: string) => {
     setTeam(currentTeam => {
-      const player = currentTeam.startingPlayers.find(p => p.id === playerId)
-      
-
+      const player = currentTeam.startingPlayers.find(p => p.id === playerId);
       if (!player) return currentTeam;
+
+      // Update indices for remaining court players
+      const updatedStartingPlayers = currentTeam.startingPlayers
+        .filter(p => p.id !== playerId)
+        .map((p, idx) => ({ ...p, index: idx }));
+
+      // Add player to bench with new index
+      const playerWithNewIndex = { ...player, index: currentTeam.benchPlayers.length };
 
       return {
         ...currentTeam,
-        startingPlayers: currentTeam.startingPlayers.filter(p => p.id !== playerId),
-        benchPlayers: [...currentTeam.benchPlayers, player],
+        startingPlayers: updatedStartingPlayers,
+        benchPlayers: [...currentTeam.benchPlayers, playerWithNewIndex]
+          .sort((a, b) => a.index - b.index),
       };
     });
   };
@@ -141,9 +182,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       team, 
       updatePlayerPosition, 
       addPlayer, 
-      setPlayerType,  // Updated method name
+      setPlayerType,  
       movePlayerToCourt, 
-      movePlayerToBench 
+      movePlayerToBench,
+      updatePlayerIndex,  
     }}>
       {children}
     </TeamContext.Provider>

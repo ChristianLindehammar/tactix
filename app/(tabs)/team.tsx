@@ -13,7 +13,7 @@ import { PlayerSeparator } from '@/components/PlayerSeparator';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
-  const { team, addPlayer, movePlayerToCourt, movePlayerToBench } = useTeam();
+  const { team, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex} = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const separatorRef = useRef<View>(null);
 
@@ -62,28 +62,32 @@ export default function TeamScreen() {
             ListHeaderComponent={
               <>
                 <ThemedText style={styles.headerText}>Court Players</ThemedText>
-                {team.startingPlayers.map(player => (
-                  <PlayerListItem
-                    key={player.id}
-                    player={player}
-                    onPress={() => {}}
-                    onDragEnd={handlePlayerDragEnd}
-                    isOnCourt={true}
-                  />
-                ))}
+                {team.startingPlayers
+                  .sort((a, b) => a.index - b.index)
+                  .map(player => (
+                    <PlayerListItem
+                      key={player.id}
+                      player={player}
+                      onPress={() => {}}
+                      onDragEnd={handlePlayerDragEnd}
+                      isOnCourt={true}
+                    />
+                  ))}
                 <PlayerSeparator 
                   ref={separatorRef}
                 />
                 <ThemedText style={styles.headerText}>Bench Players</ThemedText>
-                {team.benchPlayers.map(player => (
-                  <PlayerListItem
-                    key={player.id}
-                    player={player}
-                    onPress={() => {}}
-                    onDragEnd={handlePlayerDragEnd}
-                    isOnCourt={false}
-                  />
-                ))}
+                {team.benchPlayers
+                  .sort((a, b) => a.index - b.index)
+                  .map(player => (
+                    <PlayerListItem
+                      key={player.id}
+                      player={player}
+                      onPress={() => {}}
+                      onDragEnd={handlePlayerDragEnd}
+                      isOnCourt={false}
+                    />
+                  ))}
               </>
             }
             renderItem={() => null}
