@@ -27,7 +27,8 @@ export const FloorballCourt = ({ availableHeight, playerPositions, onDragEnd }: 
                 key={player.id}
                 id={player.id}
                 name={player.name}
-                position={player.courtPosition ?? { x: 0, y: 0 }}
+                position={player.position}
+                courtPosition={player.courtPosition ?? { x: 0, y: 0 }}
                 onDragEnd={(pos) => onDragEnd(player.id, pos)}
                 containerSize={{ width, height }}
               />

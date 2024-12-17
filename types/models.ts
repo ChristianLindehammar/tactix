@@ -10,16 +10,17 @@ export interface Team {
 }
 
 export enum PlayerPosition {
-  forward = 'Forward',
-  center = 'Center',
-  back = 'Back',
+  Goalkeeper = 'Goalkeeper',
+  Defense = 'Defense',
+  Midfielder = 'Midfielder',
+  Forward = 'Forward',
 }
 
 export interface PlayerType {
   id: string;
   name: string;
   position: PlayerPosition;
-  courtPosition?: Position;  // renamed from 'position' to 'courtPosition'
+  courtPosition?: Position; 
 }
 
 export interface Position {

@@ -1,4 +1,4 @@
-import { Position } from '@/types/models';
+import { PlayerPosition, PlayerType, Position } from '@/types/models';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -8,18 +8,20 @@ import Animated, {
   runOnJS,
   withSpring,
 } from 'react-native-reanimated';
+import { positionColors } from '@/constants/positionColors'; // Added import
 
 interface PlayerProps {
   id: string;
   name: string;
-  position: Position;
+  position: PlayerPosition;
+  courtPosition: Position;
   onDragEnd: (position: Position) => void;
   containerSize: { width: number; height: number };
 }
 
-export function Player({ id, name, position, onDragEnd, containerSize }: PlayerProps) {
-  const translateX = useSharedValue(position.x);
-  const translateY = useSharedValue(position.y);
+export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
+  const translateX = useSharedValue(courtPosition.x);
+  const translateY = useSharedValue(courtPosition.y);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
 
@@ -43,6 +45,7 @@ export function Player({ id, name, position, onDragEnd, containerSize }: PlayerP
       { translateX: translateX.value },
       { translateY: translateY.value },
     ],
+    backgroundColor: positionColors[position],
   }));
 
   return (

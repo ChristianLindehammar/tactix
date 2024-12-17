@@ -1,11 +1,12 @@
 import React, { createContext, useState, PropsWithChildren, useContext } from 'react';
-import { Team, PlayerType, Position } from '@/types/models';
+import { Team, PlayerType, Position, PlayerPosition } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
 
 interface TeamContextProps {
   team: Team;
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
-  addPlayer: (name: string) => void;  // New method
+  addPlayer: (name: string) => void;
+  setPlayerType: (playerId: string, position: PlayerPosition) => void; // Renamed method
   movePlayerToCourt: (playerId: string) => void;
   movePlayerToBench: (playerId: string) => void;
 }
@@ -87,12 +88,24 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       id: Date.now().toString(),
       name: name,
       courtPosition: position, // Assign to courtPosition
-      position: 'forward' // Provide a default role
+      position: PlayerPosition.Forward,
     };
     
     setTeam(currentTeam => ({
       ...currentTeam,
       benchPlayers: [...currentTeam.benchPlayers, newPlayer],
+    }));
+  };
+
+  const setPlayerType = (playerId: string, position: PlayerPosition) => { // Renamed method
+    setTeam(currentTeam => ({
+      ...currentTeam,
+      startingPlayers: currentTeam.startingPlayers.map(player =>
+        player.id === playerId ? { ...player, position } : player
+      ),
+      benchPlayers: currentTeam.benchPlayers.map(player =>
+        player.id === playerId ? { ...player, position } : player
+      ),
     }));
   };
 
@@ -127,7 +140,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     <TeamContext.Provider value={{ 
       team, 
       updatePlayerPosition, 
-      addPlayer,  // Replace addBenchPlayer with addPlayer
+      addPlayer, 
+      setPlayerType,  // Updated method name
       movePlayerToCourt, 
       movePlayerToBench 
     }}>

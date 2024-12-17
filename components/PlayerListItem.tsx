@@ -9,6 +9,8 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import { positionColors } from '@/constants/positionColors';
+import { useTeam } from '@/contexts/TeamContext'; // Import useTeam
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -17,7 +19,8 @@ interface PlayerListItemProps {
   isOnCourt: boolean;
 }
 
-export function PlayerListItem({ player, onPress, onDragEnd, isOnCourt }) {
+export function PlayerListItem({ player, onPress, onDragEnd, isOnCourt }:PlayerListItemProps) {
+  const { setPlayerType } = useTeam(); // Renamed method from setPlayerPosition to setPlayerType
   const translateY = useSharedValue(0);
 
   const panGesture = Gesture.Pan()
@@ -43,13 +46,18 @@ export function PlayerListItem({ player, onPress, onDragEnd, isOnCourt }) {
 
   return (
     <GestureDetector gesture={panGesture}>
-      <Animated.View style={[styles.container, animatedStyle]}>
+      <Animated.View style={[
+        styles.container,
+        animatedStyle,
+        { backgroundColor: positionColors[player.position] },
+      ]}>
         <Text>{player.name}</Text>
         <SegmentedControl
           values={positions}
           selectedIndex={positions.indexOf(player.position)}
           onChange={(event) => {
-            console.log(event.nativeEvent.selectedSegmentIndex)
+            const selectedPosition = positions[event.nativeEvent.selectedSegmentIndex];
+            setPlayerType(player.id, selectedPosition); // Updated method name
           }}
           style={styles.segmentedControl}
         />
