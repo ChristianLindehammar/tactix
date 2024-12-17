@@ -9,10 +9,16 @@ export interface Team {
   editedBy: string;
 }
 
+export enum PlayerPosition {
+  forward = 'Forward',
+  center = 'Center',
+  back = 'Back',
+}
+
 export interface PlayerType {
   id: string;
   name: string;
-  position: 'forward' | 'center' | 'back';
+  position: PlayerPosition;
   courtPosition?: Position;  // renamed from 'position' to 'courtPosition'
 }
 

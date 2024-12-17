@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { PlayerType } from '@/types/models';
+import { PlayerType, PlayerPosition } from '@/types/models';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   runOnJS,
   withTiming,
 } from 'react-native-reanimated';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -38,11 +39,20 @@ export function PlayerListItem({ player, onPress, onDragEnd, isOnCourt }) {
     transform: [{ translateY: translateY.value }],
   }));
 
+  const positions = Object.values(PlayerPosition)
+
   return (
     <GestureDetector gesture={panGesture}>
       <Animated.View style={[styles.container, animatedStyle]}>
         <Text>{player.name}</Text>
-        <Text style={styles.status}>{isOnCourt ? 'Court' : 'Bench'}</Text>
+        <SegmentedControl
+          values={positions}
+          selectedIndex={positions.indexOf(player.position)}
+          onChange={(event) => {
+            console.log(event.nativeEvent.selectedSegmentIndex)
+          }}
+          style={styles.segmentedControl}
+        />
       </Animated.View>
     </GestureDetector>
   );
@@ -69,5 +79,8 @@ const styles = StyleSheet.create({
   status: {
     fontSize: 12,
     color: '#666',
+  },
+  segmentedControl: {
+    marginTop: 8,
   },
 });
