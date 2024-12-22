@@ -15,20 +15,33 @@ interface TeamContextProps {
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
 
 export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [team, setTeam] = useState<Team>({
-    id: '1',
-    name: 'My Team',
-    startingPlayers: [],
-    benchPlayers: [],
-    createdBy: 'user1',
-    sharedWith: [],
-    lastEdited: Date.now(),
-    editedBy: 'user1',
-    sport: 'floorball',
-  });
+  const [teams, setTeams] = useState<Team[]>([
+    {
+      id: '1',
+      name: 'My Team',
+      startingPlayers: [],
+      benchPlayers: [],
+      createdBy: 'user1',
+      sharedWith: [],
+      lastEdited: Date.now(),
+      editedBy: 'user1',
+      sport: 'floorball',
+    },
+  ]);
+  const [selectedTeamId] = useState<string>('1');
+
+  const selectedTeam = teams.find(t => t.id === selectedTeamId) || teams[0];
+
+  const updateTeamInTeams = (updater: (team: Team) => Team) => {
+    setTeams((prevTeams) => {
+      return prevTeams.map((team) =>
+        team.id === selectedTeamId ? updater(team) : team
+      );
+    });
+  };
 
   const updatePlayerPosition = (playerId: string, position: { x: number; y: number }) => {
-    setTeam(currentTeam => ({
+    updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
         player.id === playerId ? { ...player, courtPosition: position } : player
@@ -45,7 +58,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const spacing = playerSize + padding;
 
     const isPositionTaken = (pos: Position): boolean => {
-      return [...team.startingPlayers, ...team.benchPlayers].some(
+      return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(
         player => player.courtPosition && 
                   Math.abs(player.courtPosition.x - pos.x) < playerSize && 
                   Math.abs(player.courtPosition.y - pos.y) < playerSize
@@ -91,17 +104,17 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       name: name,
       courtPosition: position, // Assign to courtPosition
       position: PlayerPosition.Forward,
-      index: team.benchPlayers.length,  // Add index based on current length
+      index: selectedTeam.benchPlayers.length,  // Add index based on current length
     };
     
-    setTeam(currentTeam => ({
+    updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       benchPlayers: [...currentTeam.benchPlayers, newPlayer],
     }));
   };
 
   const setPlayerType = (playerId: string, position: PlayerPosition) => { // Renamed method
-    setTeam(currentTeam => ({
+    updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
         player.id === playerId ? { ...player, position } : player
@@ -113,7 +126,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const updatePlayerIndex = (playerId: string, newIndex: number, isCourt: boolean) => {
-    setTeam(currentTeam => {
+    updateTeamInTeams(currentTeam => {
       const players = isCourt ? currentTeam.startingPlayers : currentTeam.benchPlayers;
       const player = players.find(p => p.id === playerId);
       if (!player) return currentTeam;
@@ -135,7 +148,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const movePlayerToCourt = (playerId: string) => {
-    setTeam(currentTeam => {
+    updateTeamInTeams(currentTeam => {
       const player = currentTeam.benchPlayers.find(p => p.id === playerId);
       if (!player) return currentTeam;
       
@@ -157,7 +170,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const movePlayerToBench = (playerId: string) => {
-    setTeam(currentTeam => {
+    updateTeamInTeams(currentTeam => {
       const player = currentTeam.startingPlayers.find(p => p.id === playerId);
       if (!player) return currentTeam;
 
@@ -180,7 +193,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <TeamContext.Provider value={{ 
-      team, 
+      team: selectedTeam, 
       updatePlayerPosition, 
       addPlayer, 
       setPlayerType,  
