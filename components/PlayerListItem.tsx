@@ -1,68 +1,51 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { PlayerType, PlayerPosition } from '@/types/models';
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  runOnJS,
-  withTiming,
-} from 'react-native-reanimated';
-import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { positionColors } from '@/constants/positionColors';
-import { useTeam } from '@/contexts/TeamContext'; // Import useTeam
+import { useTeam } from '@/contexts/TeamContext';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import { ScaleDecorator } from "react-native-draggable-flatlist";
 
 interface PlayerListItemProps {
   player: PlayerType;
-  onPress: (player: PlayerType) => void;
-  onDragEnd: (player: PlayerType, y: number) => void;
+  onPress: () => void;
   isOnCourt: boolean;
+  drag?: () => void;
+  isActive?: boolean;
 }
 
-export function PlayerListItem({ player, onPress, onDragEnd, isOnCourt }:PlayerListItemProps) {
-  const { setPlayerType } = useTeam(); // Renamed method from setPlayerPosition to setPlayerType
-  const translateY = useSharedValue(0);
-
-  const panGesture = Gesture.Pan()
-    .onBegin(() => {
-      'worklet';
-      translateY.value = 0;
-    })
-    .onUpdate((event) => {
-      'worklet';
-      translateY.value = event.translationY;
-    })
-    .onEnd((event) => {
-      'worklet';
-      runOnJS(onDragEnd)(player, event.absoluteY);
-      translateY.value = withTiming(0);
-    });
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: translateY.value }],
-  }));
-
-  const positions = Object.values(PlayerPosition)
+export const PlayerListItem: React.FC<PlayerListItemProps> = ({
+  player,
+  onPress,
+  isOnCourt,
+  drag,
+  isActive
+}) => {
+  const { setPlayerType } = useTeam();
+  const positions = Object.values(PlayerPosition);
 
   return (
-    <GestureDetector gesture={panGesture}>
-      <Animated.View style={[
-        styles.container,
-        animatedStyle,
-        { backgroundColor: positionColors[player.position] },
-      ]}>
+    <ScaleDecorator>
+      <TouchableOpacity 
+        onLongPress={drag}
+        disabled={isActive}
+        style={[
+          styles.container,
+          { backgroundColor: isActive ? '#e0e0e0' : positionColors[player.position] }
+        ]}
+      >
         <Text>{player.name}</Text>
         <SegmentedControl
           values={positions}
           selectedIndex={positions.indexOf(player.position)}
           onChange={(event) => {
             const selectedPosition = positions[event.nativeEvent.selectedSegmentIndex];
-            setPlayerType(player.id, selectedPosition); // Updated method name
+            setPlayerType(player.id, selectedPosition);
           }}
           style={styles.segmentedControl}
         />
-      </Animated.View>
-    </GestureDetector>
+      </TouchableOpacity>
+    </ScaleDecorator>
   );
 }
 

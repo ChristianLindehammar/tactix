@@ -1,9 +1,10 @@
-import React from 'react';
-import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
-import { useState, useRef } from 'react';
+import React, { useRef } from 'react';
+import { StyleSheet, View, Button, TextInput, Text } from 'react-native';
+import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
+import { NestableDraggableFlatList, NestableScrollContainer } from "react-native-draggable-flatlist";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { ThemedText } from '@/components/ThemedText';
@@ -15,7 +16,7 @@ import { PlayerType } from '@/types/models';
 export default function TeamScreen() {
   const { team, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex} = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
-  const separatorRef = useRef<View>(null);
+  const benchHeaderRef = useRef<View>(null);
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -24,23 +25,62 @@ export default function TeamScreen() {
     }
   };
 
+  const handlePlayersChange = ({ data, from, to }: any) => {
+    const movedPlayer = data[to];
+    if (movedPlayer.type !== 'player') return;
 
-  const handlePlayerDragEnd = (player: PlayerType, yPosition: number) => {
-    // Measure separator position again on drag end to ensure accuracy
-    separatorRef.current?.measureInWindow((x, y) => {
-
-
-      const isAboveSeparator = yPosition < y;
-      const currentlyOnCourt = team.startingPlayers.some((p) => p.id === player.id);
-
-      if (isAboveSeparator && !currentlyOnCourt) {
-        console.log('Moving player to court');
-        movePlayerToCourt(player.id);
-      } else if (!isAboveSeparator && currentlyOnCourt) {
-        console.log('Moving player to bench');
-        movePlayerToBench(player.id);
+    benchHeaderRef.current?.measureInWindow((x, benchY) => {
+      // Find the indices of headers in the data array
+      const benchHeaderIndex = data.findIndex((item: any) => item.id === 'bench-header');
+      
+      // If dropped before bench header index, it's court. If after, it's bench
+      if (to < benchHeaderIndex) {
+        console.log('Move to court');
+        movePlayerToCourt(movedPlayer.id);
+      } else {
+        console.log('Move to bench');
+        movePlayerToBench(movedPlayer.id);
       }
+
+      // Update indices after moving
+      const players = data.filter((item: any) => item.type === 'player');
+      players.forEach((player: PlayerType, index: number) => {
+        updatePlayerIndex(player.id, index, !!player.courtPosition);
+      });
     });
+  };
+
+  // Combine data into a single array with headers
+  const listData = [
+    { id: 'court-header', type: 'header', title: 'Court Players' },
+    ...team.startingPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
+    { id: 'bench-header', type: 'header', title: 'Bench Players' },
+    ...team.benchPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
+  ];
+
+  const renderItem = ({ item, drag, isActive }: any) => {
+    if (item.type === 'header') {
+      return (
+        <View ref={item.title === 'Bench Players' ? benchHeaderRef : undefined}>
+          <ThemedText style={styles.headerText}>
+            {item.title}
+          </ThemedText>
+        </View>
+      );
+    }
+    if (item.type === 'separator') {
+      return <PlayerSeparator />;
+    }
+    return (
+      <PlayerListItem
+        key={item.id}
+        player={item}
+        onPress={() => {}}
+        drag={drag}
+        isActive={isActive}
+        isOnCourt={team.startingPlayers.some(p => p.id === item.id)}
+      />
+    );
   };
 
   return (
@@ -57,41 +97,14 @@ export default function TeamScreen() {
             <Button title="Add Player" onPress={handleAddPlayer} />
           </ThemedView>
           
-          <FlatList
-            data={[]}
-            ListHeaderComponent={
-              <>
-                <ThemedText style={styles.headerText}>Court Players</ThemedText>
-                {team.startingPlayers
-                  .sort((a, b) => a.index - b.index)
-                  .map(player => (
-                    <PlayerListItem
-                      key={player.id}
-                      player={player}
-                      onPress={() => {}}
-                      onDragEnd={handlePlayerDragEnd}
-                      isOnCourt={true}
-                    />
-                  ))}
-                <PlayerSeparator 
-                  ref={separatorRef}
-                />
-                <ThemedText style={styles.headerText}>Bench Players</ThemedText>
-                {team.benchPlayers
-                  .sort((a, b) => a.index - b.index)
-                  .map(player => (
-                    <PlayerListItem
-                      key={player.id}
-                      player={player}
-                      onPress={() => {}}
-                      onDragEnd={handlePlayerDragEnd}
-                      isOnCourt={false}
-                    />
-                  ))}
-              </>
-            }
-            renderItem={() => null}
-          />
+          <NestableScrollContainer>
+            <NestableDraggableFlatList
+              data={listData}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+              onDragEnd={handlePlayersChange}
+            />
+          </NestableScrollContainer>
         </ThemedView>
       </SafeAreaView>
     </GestureHandlerRootView>
