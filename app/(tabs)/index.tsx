@@ -1,26 +1,45 @@
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
+import { useSport } from '@/context/SportContext';
 
 import { ThemedView } from '@/components/ThemedView';
-import { FloorballCourt } from '@/components/FloorballCourt';
+import { GenericCourt } from '@/components/GenericCourt';
+import FloorballSvg from '@/components/ui/FloorballSvg';
+import FootballSvg from '@/components/ui/FootballSvg';
 import { LAYOUT } from '@/constants/layout';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition } = useTeam();
+  const { selectedSport } = useSport();
 
   const availableHeight = Dimensions.get('window').height 
     - insets.top 
     - LAYOUT.TAB_BAR_HEIGHT;
 
+  const courtConfig = {
+    floorball: {
+      Svg: FloorballSvg,
+      aspectRatio: 484/908,
+    },
+    football: {
+      Svg: FootballSvg,
+      aspectRatio: 680/1050,
+    }
+  };
+
+  const { Svg, aspectRatio } = courtConfig[selectedSport];
+
   return (
     <ThemedView style={styles.container}>
       <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-        <FloorballCourt 
-          availableHeight={availableHeight} 
-          playerPositions={team.startingPlayers} 
-          onDragEnd={updatePlayerPosition} 
+        <GenericCourt 
+          availableHeight={availableHeight}
+          playerPositions={team.startingPlayers}
+          onDragEnd={updatePlayerPosition}
+          CourtSvg={Svg}
+          aspectRatio={aspectRatio}
         />
       </View>
     </ThemedView>

@@ -24,6 +24,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     sharedWith: [],
     lastEdited: Date.now(),
     editedBy: 'user1',
+    sport: 'floorball',
   });
 
   const updatePlayerPosition = (playerId: string, position: { x: number; y: number }) => {

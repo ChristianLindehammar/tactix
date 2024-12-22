@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import FloorballSvg from './ui/FloorballSvg';
 import { Player } from './Player';
 import { PlayerType } from '@/types/models';
 
@@ -9,29 +8,29 @@ interface Props {
   availableHeight: number;
   playerPositions: PlayerType[];
   onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
+  CourtSvg: React.ComponentType<{ width: number; height: number }>;
+  aspectRatio: number; // width/height ratio of the court
 }
 
-export const FloorballCourt = ({ availableHeight, playerPositions, onDragEnd }: Props) => {
+export const GenericCourt = ({ availableHeight, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
   const height = availableHeight;
-  console.log(playerPositions);
-  const width = (height * 484) / 908;
+  const width = height * aspectRatio;
 
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
       <View style={[styles.container, { width, height }]}>
-        <FloorballSvg width={width} height={height} />
+        <CourtSvg width={width} height={height} />
         <View style={StyleSheet.absoluteFill}>
-          {playerPositions
-            .map((player) => (
-              <Player
-                key={player.id}
-                id={player.id}
-                name={player.name}
-                position={player.position}
-                courtPosition={player.courtPosition ?? { x: 0, y: 0 }}
-                onDragEnd={(pos) => onDragEnd(player.id, pos)}
-                containerSize={{ width, height }}
-              />
+          {playerPositions.map((player) => (
+            <Player
+              key={player.id}
+              id={player.id}
+              name={player.name}
+              position={player.position}
+              courtPosition={player.courtPosition ?? { x: 0, y: 0 }}
+              onDragEnd={(pos) => onDragEnd(player.id, pos)}
+              containerSize={{ width, height }}
+            />
           ))}
         </View>
       </View>

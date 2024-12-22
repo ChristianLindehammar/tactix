@@ -10,7 +10,6 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { PlayerListItem } from '@/components/PlayerListItem';
-import { PlayerSeparator } from '@/components/PlayerSeparator';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {

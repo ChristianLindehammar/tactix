@@ -1,13 +1,16 @@
 import { StyleSheet, Image, Platform } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
+import { useSport } from '@/context/SportContext';
 
 import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
+  const { selectedSport, setSelectedSport } = useSport();
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -22,20 +25,19 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Settings</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+      <ThemedText>
+      This app helps sports coaches prepare their teams for matches and training sessions. It provides tools and features to organize training plans, manage team tactics, and develop game strategies effectively.
+        
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+      <Collapsible title="General settings">
+        <ThemedText>Select current sport</ThemedText>
+        <Picker
+          selectedValue={selectedSport}
+          onValueChange={(itemValue) => setSelectedSport(itemValue)}
+          style={styles.picker}>
+          <Picker.Item label="Floorball" value="floorball" />
+          <Picker.Item label="Football" value="football" />
+        </Picker>
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -51,5 +53,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  picker: {
+    marginTop: 8,
+    marginBottom: 16,
   },
 });

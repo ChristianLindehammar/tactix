@@ -7,6 +7,7 @@ export interface Team {
   sharedWith: string[];
   lastEdited: number;
   editedBy: string;
+  sport: 'floorball' | 'football';
 }
 
 export enum PlayerPosition {
