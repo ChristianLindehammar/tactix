@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity, Alert, Pressable } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -7,6 +7,7 @@ import { LAYOUT } from '@/constants/layout';
 import { NestableDraggableFlatList, NestableScrollContainer } from "react-native-draggable-flatlist";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RBSheet from 'react-native-raw-bottom-sheet';
+import TeamBottomSheet from '@/components/TeamBottomSheet';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -14,12 +15,8 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex, createTeam, selectTeam, removeTeam } = useTeam();
+  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
-  const [showCreateTeam, setShowCreateTeam] = useState(false);
-  const [showSelectTeam, setShowSelectTeam] = useState(false);
-  const [showRemoveTeam, setShowRemoveTeam] = useState(false);
-  const [newTeamName, setNewTeamName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const bottomSheetRef = useRef<typeof RBSheet>(null);
 
@@ -95,7 +92,6 @@ export default function TeamScreen() {
               <Button
                 title="Create Team"
                 onPress={() => {
-                  setShowCreateTeam(true);
                   bottomSheetRef.current?.open();
                 }}
               />
@@ -129,84 +125,16 @@ export default function TeamScreen() {
           )}
         </SafeAreaView>
       </ThemedView>
-      <TouchableOpacity
-        style={{ position: 'absolute', right: 16, bottom: 100 }}
+      <Pressable
+        style={styles.fab}
         onPress={() => bottomSheetRef.current?.open()}
       >
-        <Text style={{ fontSize: 32 }}>+</Text>
-      </TouchableOpacity>
-      <RBSheet ref={bottomSheetRef} height={200} openDuration={250}>
-        <View style={{ padding: 20 }}>
-          {(!showCreateTeam && !showSelectTeam && !showRemoveTeam) && (
-            <>
-              <Button title="Create Team" onPress={() => setShowCreateTeam(true)} />
-              <Button title="Select Existing Team" onPress={() => setShowSelectTeam(true)} />
-              <Button title="Remove Existing Team" onPress={() => setShowRemoveTeam(true)} />
-            </>
-          )}
-          {showCreateTeam && (
-            <>
-              <TextInput
-                placeholder="New Team Name"
-                value={newTeamName}
-                onChangeText={setNewTeamName}
-                style={{ borderColor: '#ccc', borderWidth: 1, marginBottom: 10, padding: 8 }}
-              />
-              <Button
-                title="Confirm"
-                onPress={() => {
-                  createTeam(newTeamName.trim());
-                  setNewTeamName('');
-                  setShowCreateTeam(false);
-                  bottomSheetRef.current?.close();
-                }}
-              />
-            </>
-          )}
-          {showSelectTeam && (
-            <>
-              {teams.map((item) => (
-                <Button
-                  key={item.id}
-                  title={item.name}
-                  onPress={() => {
-                    selectTeam(item.id);
-                    setShowSelectTeam(false);
-                    bottomSheetRef.current?.close();
-                  }}
-                />
-              ))}
-            </>
-          )}
-          {showRemoveTeam && (
-            <>
-              {teams.map((item) => (
-                <Button
-                  key={item.id}
-                  title={`Remove ${item.name}`}
-                  onPress={() => {
-                    Alert.alert(
-                      'Remove Team',
-                      `Are you sure you want to remove "${item.name}"?`,
-                      [
-                        { text: 'Cancel', style: 'cancel' },
-                        {
-                          text: 'OK',
-                          onPress: () => {
-                            removeTeam(item.id);
-                            setShowRemoveTeam(false);
-                            bottomSheetRef.current?.close();
-                          },
-                        },
-                      ]
-                    );
-                  }}
-                />
-              ))}
-            </>
-          )}
-        </View>
-      </RBSheet>
+        <Text style={styles.fabText}>+</Text>
+      </Pressable>
+      <TeamBottomSheet
+        ref={bottomSheetRef}
+        onClose={() => {}}
+      />
     </GestureHandlerRootView>
   );
 }
@@ -249,5 +177,26 @@ const styles = StyleSheet.create({
     padding: 16,
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  fab: {
+    position: 'absolute',
+    right: 16,
+    bottom: 100,
+    backgroundColor: '#2196F3',
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  fabText: {
+    fontSize: 24,
+    color: 'white',
+    textAlign: 'center',
   },
 });
