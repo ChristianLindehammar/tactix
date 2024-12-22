@@ -4,12 +4,15 @@ import { LAYOUT } from '@/constants/layout';
 
 interface TeamContextProps {
   team: Team;
+  teams: Team[];                // Expose all teams
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
   addPlayer: (name: string) => void;
   setPlayerType: (playerId: string, position: PlayerPosition) => void; // Renamed method
   movePlayerToCourt: (playerId: string) => void;
   movePlayerToBench: (playerId: string) => void;
   updatePlayerIndex: (playerId: string, newIndex: number, isCourt: boolean) => void;  // Add this line
+  createTeam: (name: string) => void; // Add this
+  selectTeam: (teamId: string) => void;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -28,7 +31,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       sport: 'floorball',
     },
   ]);
-  const [selectedTeamId] = useState<string>('1');
+  const [selectedTeamId, setSelectedTeamId] = useState<string>('1');
 
   const selectedTeam = teams.find(t => t.id === selectedTeamId) || teams[0];
 
@@ -191,15 +194,39 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     });
   };
 
+  const createTeam = (name: string) => {
+    const now = Date.now();
+    const newTeam: Team = {
+      id: now.toString(),
+      name,
+      startingPlayers: [],
+      benchPlayers: [],
+      createdBy: 'user1',
+      sharedWith: [],
+      lastEdited: now,
+      editedBy: 'user1',
+      sport: 'floorball',
+    };
+    setTeams(prev => [...prev, newTeam]);
+    setSelectedTeamId(newTeam.id);
+  };
+
+  const selectTeam = (teamId: string) => {
+    setSelectedTeamId(teamId);
+  };
+
   return (
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
+      teams,
       updatePlayerPosition, 
       addPlayer, 
       setPlayerType,  
       movePlayerToCourt, 
       movePlayerToBench,
       updatePlayerIndex,  
+      createTeam,
+      selectTeam,
     }}>
       {children}
     </TeamContext.Provider>

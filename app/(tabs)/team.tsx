@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { NestableDraggableFlatList, NestableScrollContainer } from "react-native-draggable-flatlist";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import RBSheet from 'react-native-raw-bottom-sheet';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -13,9 +14,13 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
-  const { team, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex} = useTeam();
+  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex, createTeam, selectTeam } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
+  const [showCreateTeam, setShowCreateTeam] = useState(false);
+  const [showSelectTeam, setShowSelectTeam] = useState(false);
+  const [newTeamName, setNewTeamName] = useState('');
   const benchHeaderRef = useRef<View>(null);
+  const bottomSheetRef = useRef<typeof RBSheet>(null);
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -108,6 +113,56 @@ export default function TeamScreen() {
           </ThemedView>
         </SafeAreaView>
       </ThemedView>
+      <TouchableOpacity
+        style={{ position: 'absolute', right: 16, bottom: 100 }}
+        onPress={() => bottomSheetRef.current?.open()}
+      >
+        <Text style={{ fontSize: 32 }}>+</Text>
+      </TouchableOpacity>
+      <RBSheet ref={bottomSheetRef} height={200} openDuration={250}>
+        <View style={{ padding: 20 }}>
+          {(!showCreateTeam && !showSelectTeam) && (
+            <>
+              <Button title="Create Team" onPress={() => setShowCreateTeam(true)} />
+              <Button title="Select Existing Team" onPress={() => setShowSelectTeam(true)} />
+            </>
+          )}
+          {showCreateTeam && (
+            <>
+              <TextInput
+                placeholder="New Team Name"
+                value={newTeamName}
+                onChangeText={setNewTeamName}
+                style={{ borderColor: '#ccc', borderWidth: 1, marginBottom: 10, padding: 8 }}
+              />
+              <Button
+                title="Confirm"
+                onPress={() => {
+                  createTeam(newTeamName.trim());
+                  setNewTeamName('');
+                  setShowCreateTeam(false);
+                  bottomSheetRef.current?.close();
+                }}
+              />
+            </>
+          )}
+          {showSelectTeam && (
+            <>
+              {teams.map((item) => (
+                <Button
+                  key={item.id}
+                  title={item.name}
+                  onPress={() => {
+                    selectTeam(item.id);
+                    setShowSelectTeam(false);
+                    bottomSheetRef.current?.close();
+                  }}
+                />
+              ))}
+            </>
+          )}
+        </View>
+      </RBSheet>
     </GestureHandlerRootView>
   );
 }
