@@ -9,6 +9,7 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import { positionColors } from '@/constants/positionColors'; // Added import
+import { LAYOUT } from '@/constants/layout';
 
 interface PlayerProps {
   id: string;
@@ -20,16 +21,20 @@ interface PlayerProps {
 }
 
 export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
-  // Initialize with actual pixel values instead of ratios
-  const translateX = useSharedValue(courtPosition.x * containerSize.width);
-  const translateY = useSharedValue(courtPosition.y * containerSize.height);
+  // Calculate scale factors
+  const scaleX = containerSize.width / LAYOUT.FLOORBALL_COURT.WIDTH;
+  const scaleY = containerSize.height / LAYOUT.FLOORBALL_COURT.HEIGHT;
+
+  // Initialize with scaled values
+  const translateX = useSharedValue(courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
+  const translateY = useSharedValue(courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
 
-  // Update values when container size or court position changes
+  // Update when container size or position changes
   React.useEffect(() => {
-    translateX.value = courtPosition.x * containerSize.width;
-    translateY.value = courtPosition.y * containerSize.height;
+    translateX.value = courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX;
+    translateY.value = courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY;
   }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
 
   const panGesture = Gesture.Pan()
@@ -42,8 +47,9 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
       translateY.value = event.absoluteY + offsetY.value;
     })
     .onEnd(() => {
-      const newX = translateX.value / containerSize.width;
-      const newY = translateY.value / containerSize.height;
+      // Convert back to ratio based on original dimensions
+      const newX = translateX.value / (LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
+      const newY = translateY.value / (LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
       runOnJS(onDragEnd)({ x: newX, y: newY });
     });
 

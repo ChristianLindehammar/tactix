@@ -61,27 +61,26 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const padding = 10;
     const spacing = playerSize + padding;
 
+    // Use ratios for position calculations
     const isPositionTaken = (pos: Position): boolean => {
       if (!selectedTeam) return false;
       return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(
         player => player.courtPosition && 
-                  Math.abs(player.courtPosition.x - pos.x) < playerSize && 
-                  Math.abs(player.courtPosition.y - pos.y) < playerSize
+                  Math.abs(player.courtPosition.x - pos.x) < (playerSize / LAYOUT.FLOORBALL_COURT.WIDTH) && 
+                  Math.abs(player.courtPosition.y - pos.y) < (playerSize / LAYOUT.FLOORBALL_COURT.HEIGHT)
       );
     };
 
-    // Calculate maximum columns that fit within court width
-    const maxColumns = Math.floor((LAYOUT.FLOORBALL_COURT.WIDTH - padding * 2) / spacing);
+    // Calculate positions as ratios of original dimensions
+    const maxColumns = Math.floor(LAYOUT.FLOORBALL_COURT.WIDTH / spacing);
     
-    // Start from top-left with some padding
     let column = 0;
     let row = 0;
     
-    // Try to find a free position using grid-based placement
-    while (row * spacing + playerSize + padding < LAYOUT.FLOORBALL_COURT.HEIGHT) {
+    while (row * spacing < LAYOUT.FLOORBALL_COURT.HEIGHT) {
       while (column < maxColumns) {
-        const x = padding + column * spacing;
-        const y = padding + row * spacing;
+        const x = (padding + column * spacing) / LAYOUT.FLOORBALL_COURT.WIDTH;
+        const y = (padding + row * spacing) / LAYOUT.FLOORBALL_COURT.HEIGHT;
         const pos = { x, y };
         
         if (!isPositionTaken(pos)) {
@@ -93,12 +92,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       row++;
     }
 
-    // Fallback: return position within safe bounds
-    const safeWidth = LAYOUT.FLOORBALL_COURT.WIDTH - playerSize - padding * 2;
-    const safeHeight = LAYOUT.FLOORBALL_COURT.HEIGHT - playerSize - padding * 2;
+    // Fallback: return ratio-based position
     return {
-      x: padding + Math.random() * safeWidth,
-      y: padding + Math.random() * safeHeight
+      x: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.WIDTH - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.WIDTH,
+      y: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.HEIGHT - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.HEIGHT
     };
   };
 
