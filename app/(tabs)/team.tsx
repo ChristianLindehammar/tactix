@@ -52,7 +52,7 @@ export default function TeamScreen() {
 
   // Combine data into a single array with headers
   const listData = [
-    { id: 'court-header', type: 'header', title: 'Court Players' },
+
     ...team.startingPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
     { id: 'bench-header', type: 'header', title: 'Bench Players' },
     ...team.benchPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
@@ -68,9 +68,7 @@ export default function TeamScreen() {
         </View>
       );
     }
-    if (item.type === 'separator') {
-      return <PlayerSeparator />;
-    }
+
     return (
       <PlayerListItem
         key={item.id}
@@ -96,7 +94,9 @@ export default function TeamScreen() {
             />
             <Button title="Add Player" onPress={handleAddPlayer} />
           </ThemedView>
-          
+          <ThemedText style={styles.headerText}>
+            Starting Players
+          </ThemedText>
           <NestableScrollContainer>
             <NestableDraggableFlatList
               data={listData}
