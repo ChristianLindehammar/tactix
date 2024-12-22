@@ -62,6 +62,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const spacing = playerSize + padding;
 
     const isPositionTaken = (pos: Position): boolean => {
+      if (!selectedTeam) return false;
       return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(
         player => player.courtPosition && 
                   Math.abs(player.courtPosition.x - pos.x) < playerSize && 
@@ -108,7 +109,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       name: name,
       courtPosition: position, // Assign to courtPosition
       position: PlayerPosition.Forward,
-      index: selectedTeam.benchPlayers.length,  // Add index based on current length
+      index: selectedTeam?.benchPlayers.length || 0,  // Add index based on current length
     };
     
     updateTeamInTeams(currentTeam => ({

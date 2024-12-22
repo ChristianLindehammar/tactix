@@ -21,17 +21,22 @@ export const GenericCourt = ({ availableHeight, playerPositions, onDragEnd, Cour
       <View style={[styles.container, { width, height }]}>
         <CourtSvg width={width} height={height} />
         <View style={StyleSheet.absoluteFill}>
-          {playerPositions.map((player) => (
-            <Player
-              key={player.id}
-              id={player.id}
-              name={player.name}
-              position={player.position}
-              courtPosition={player.courtPosition ?? { x: 0, y: 0 }}
-              onDragEnd={(pos) => onDragEnd(player.id, pos)}
-              containerSize={{ width, height }}
-            />
-          ))}
+          {playerPositions.map((player) => {
+            // Only render players that have a valid courtPosition
+            if (!player.courtPosition) return null;
+            
+            return (
+              <Player
+                key={player.id}
+                id={player.id}
+                name={player.name}
+                position={player.position}
+                courtPosition={player.courtPosition}
+                onDragEnd={(pos) => onDragEnd(player.id, pos)}
+                containerSize={{ width, height }}
+              />
+            );
+          })}
         </View>
       </View>
     </GestureHandlerRootView>

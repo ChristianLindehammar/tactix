@@ -20,10 +20,17 @@ interface PlayerProps {
 }
 
 export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
-  const translateX = useSharedValue(courtPosition.x);
-  const translateY = useSharedValue(courtPosition.y);
+  // Initialize with actual pixel values instead of ratios
+  const translateX = useSharedValue(courtPosition.x * containerSize.width);
+  const translateY = useSharedValue(courtPosition.y * containerSize.height);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
+
+  // Update values when container size or court position changes
+  React.useEffect(() => {
+    translateX.value = courtPosition.x * containerSize.width;
+    translateY.value = courtPosition.y * containerSize.height;
+  }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
 
   const panGesture = Gesture.Pan()
     .onStart((event) => {
