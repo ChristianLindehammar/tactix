@@ -58,7 +58,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
               onChangeText={setNewTeamName}
               style={{ borderColor: '#ccc', borderWidth: 1, marginBottom: 10, padding: 8 }}
             />
-            <Button title="Confirm" onPress={handleCreateTeamConfirm} />
+            <Button title="Confirm" onPress={handleCreateTeamConfirm} disabled={newTeamName.trim() === ''} />
           </>
         )}
         {showSelectTeam && (

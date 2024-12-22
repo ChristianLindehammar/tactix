@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity, Alert, Pressable } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, Pressable } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -108,7 +108,7 @@ export default function TeamScreen() {
                   value={newPlayerName}
                   onChangeText={setNewPlayerName}
                 />
-                <Button title="Add Player" onPress={handleAddPlayer} />
+                <Button title="Add Player" onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} />
               </ThemedView>
               <ThemedText style={styles.headerText}>
                 Starting Players
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 16,
     bottom: 100,
-    backgroundColor: '#2196F3',
+    backgroundColor: '#0097B2',
     width: 56,
     height: 56,
     borderRadius: 28,
