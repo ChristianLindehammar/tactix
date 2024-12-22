@@ -83,30 +83,32 @@ export default function TeamScreen() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-          <ThemedView style={styles.addPlayerContainer}>
-            <TextInput
-              style={styles.input}
-              placeholder="Enter player name"
-              value={newPlayerName}
-              onChangeText={setNewPlayerName}
-            />
-            <Button title="Add Player" onPress={handleAddPlayer} />
+      <ThemedView style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
+          <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+            <ThemedView style={styles.addPlayerContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder="Enter player name"
+                value={newPlayerName}
+                onChangeText={setNewPlayerName}
+              />
+              <Button title="Add Player" onPress={handleAddPlayer} />
+            </ThemedView>
+            <ThemedText style={styles.headerText}>
+              Starting Players
+            </ThemedText>
+            <NestableScrollContainer>
+              <NestableDraggableFlatList
+                data={listData}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id}
+                onDragEnd={handlePlayersChange}
+              />
+            </NestableScrollContainer>
           </ThemedView>
-          <ThemedText style={styles.headerText}>
-            Starting Players
-          </ThemedText>
-          <NestableScrollContainer>
-            <NestableDraggableFlatList
-              data={listData}
-              renderItem={renderItem}
-              keyExtractor={(item) => item.id}
-              onDragEnd={handlePlayersChange}
-            />
-          </NestableScrollContainer>
-        </ThemedView>
-      </SafeAreaView>
+        </SafeAreaView>
+      </ThemedView>
     </GestureHandlerRootView>
   );
 }
