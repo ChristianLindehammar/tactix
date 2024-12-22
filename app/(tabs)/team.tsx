@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -14,10 +14,11 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex, createTeam, selectTeam } = useTeam();
+  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench , updatePlayerIndex, createTeam, selectTeam, removeTeam } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
+  const [showRemoveTeam, setShowRemoveTeam] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const bottomSheetRef = useRef<typeof RBSheet>(null);
@@ -56,10 +57,9 @@ export default function TeamScreen() {
 
   // Combine data into a single array with headers
   const listData = [
-
-    ...team.startingPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
+    ...(team?.startingPlayers || []).sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
     { id: 'bench-header', type: 'header', title: 'Bench Players' },
-    ...team.benchPlayers.sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
+    ...(team?.benchPlayers || []).sort((a, b) => a.index - b.index).map(p => ({ ...p, type: 'player' })),
   ];
 
   const renderItem = ({ item, drag, isActive }: any) => {
@@ -80,7 +80,7 @@ export default function TeamScreen() {
         onPress={() => {}}
         drag={drag}
         isActive={isActive}
-        isOnCourt={team.startingPlayers.some(p => p.id === item.id)}
+        isOnCourt={team?.startingPlayers.some(p => p.id === item.id) ?? false}
       />
     );
   };
@@ -89,28 +89,44 @@ export default function TeamScreen() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={{ flex: 1 }}>
         <SafeAreaView style={{ flex: 1 }}>
-          <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-            <ThemedView style={styles.addPlayerContainer}>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter player name"
-                value={newPlayerName}
-                onChangeText={setNewPlayerName}
+          {teams.length === 0 ? (
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+              <Text>No teams exist. Please create a team first.</Text>
+              <Button
+                title="Create Team"
+                onPress={() => {
+                  setShowCreateTeam(true);
+                  bottomSheetRef.current?.open();
+                }}
               />
-              <Button title="Add Player" onPress={handleAddPlayer} />
+            </View>
+          ) : (
+            <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+              <ThemedText style={styles.teamName}>
+                {team?.name}
+              </ThemedText>
+              <ThemedView style={styles.addPlayerContainer}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Enter player name"
+                  value={newPlayerName}
+                  onChangeText={setNewPlayerName}
+                />
+                <Button title="Add Player" onPress={handleAddPlayer} />
+              </ThemedView>
+              <ThemedText style={styles.headerText}>
+                Starting Players
+              </ThemedText>
+              <NestableScrollContainer>
+                <NestableDraggableFlatList
+                  data={listData}
+                  renderItem={renderItem}
+                  keyExtractor={(item) => item.id}
+                  onDragEnd={handlePlayersChange}
+                />
+              </NestableScrollContainer>
             </ThemedView>
-            <ThemedText style={styles.headerText}>
-              Starting Players
-            </ThemedText>
-            <NestableScrollContainer>
-              <NestableDraggableFlatList
-                data={listData}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id}
-                onDragEnd={handlePlayersChange}
-              />
-            </NestableScrollContainer>
-          </ThemedView>
+          )}
         </SafeAreaView>
       </ThemedView>
       <TouchableOpacity
@@ -121,10 +137,11 @@ export default function TeamScreen() {
       </TouchableOpacity>
       <RBSheet ref={bottomSheetRef} height={200} openDuration={250}>
         <View style={{ padding: 20 }}>
-          {(!showCreateTeam && !showSelectTeam) && (
+          {(!showCreateTeam && !showSelectTeam && !showRemoveTeam) && (
             <>
               <Button title="Create Team" onPress={() => setShowCreateTeam(true)} />
               <Button title="Select Existing Team" onPress={() => setShowSelectTeam(true)} />
+              <Button title="Remove Existing Team" onPress={() => setShowRemoveTeam(true)} />
             </>
           )}
           {showCreateTeam && (
@@ -156,6 +173,33 @@ export default function TeamScreen() {
                     selectTeam(item.id);
                     setShowSelectTeam(false);
                     bottomSheetRef.current?.close();
+                  }}
+                />
+              ))}
+            </>
+          )}
+          {showRemoveTeam && (
+            <>
+              {teams.map((item) => (
+                <Button
+                  key={item.id}
+                  title={`Remove ${item.name}`}
+                  onPress={() => {
+                    Alert.alert(
+                      'Remove Team',
+                      `Are you sure you want to remove "${item.name}"?`,
+                      [
+                        { text: 'Cancel', style: 'cancel' },
+                        {
+                          text: 'OK',
+                          onPress: () => {
+                            removeTeam(item.id);
+                            setShowRemoveTeam(false);
+                            bottomSheetRef.current?.close();
+                          },
+                        },
+                      ]
+                    );
                   }}
                 />
               ))}
@@ -199,5 +243,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 16,
     fontSize: 16,
+  },
+  teamName: {
+    textAlign: 'center',
+    padding: 16,
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });

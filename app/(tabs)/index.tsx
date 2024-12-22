@@ -1,4 +1,4 @@
-import { StyleSheet, View, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
@@ -13,6 +13,14 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition } = useTeam();
   const { selectedSport } = useSport();
+
+  if (!team) {
+    return (
+      <ThemedView style={styles.container}>
+        <Text>No team selected. Please create or select one.</Text>
+      </ThemedView>
+    );
+  }
 
   const availableHeight = Dimensions.get('window').height 
     - insets.top 
@@ -36,7 +44,7 @@ export default function HomeScreen() {
       <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
         <GenericCourt 
           availableHeight={availableHeight}
-          playerPositions={team.startingPlayers}
+          playerPositions={team?.startingPlayers ?? []}
           onDragEnd={updatePlayerPosition}
           CourtSvg={Svg}
           aspectRatio={aspectRatio}

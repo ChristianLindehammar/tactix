@@ -3,7 +3,7 @@ import { Team, PlayerType, Position, PlayerPosition } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
 
 interface TeamContextProps {
-  team: Team;
+  team?: Team; // Make optional
   teams: Team[];                // Expose all teams
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
   addPlayer: (name: string) => void;
@@ -13,6 +13,7 @@ interface TeamContextProps {
   updatePlayerIndex: (playerId: string, newIndex: number, isCourt: boolean) => void;  // Add this line
   createTeam: (name: string) => void; // Add this
   selectTeam: (teamId: string) => void;
+  removeTeam: (teamId: string) => void; // Add this
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -33,7 +34,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   ]);
   const [selectedTeamId, setSelectedTeamId] = useState<string>('1');
 
-  const selectedTeam = teams.find(t => t.id === selectedTeamId) || teams[0];
+  const selectedTeam = teams.find(t => t.id === selectedTeamId);
 
   const updateTeamInTeams = (updater: (team: Team) => Team) => {
     setTeams((prevTeams) => {
@@ -215,6 +216,20 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setSelectedTeamId(teamId);
   };
 
+  const removeTeam = (teamId: string) => {
+    setTeams(prev => {
+      const updated = prev.filter(t => t.id !== teamId);
+      if (teamId === selectedTeamId) {
+        if (updated.length === 0) {
+          setSelectedTeamId('');
+        } else {
+          setSelectedTeamId(updated[0].id);
+        }
+      }
+      return updated;
+    });
+  };
+
   return (
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
@@ -227,6 +242,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       updatePlayerIndex,  
       createTeam,
       selectTeam,
+      removeTeam,
     }}>
       {children}
     </TeamContext.Provider>
