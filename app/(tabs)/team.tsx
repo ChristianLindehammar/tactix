@@ -9,6 +9,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
+import { MenuProvider } from 'react-native-popup-menu';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -73,45 +74,47 @@ export default function TeamScreen() {
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <ThemedView style={{ flex: 1 }}>
-        <SafeAreaView style={{ flex: 1 }}>
-          {teams.length === 0 ? (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text>No teams exist. Please create a team first.</Text>
-              <Button
-                title='Create Team'
-                onPress={() => {
-                  bottomSheetRef.current?.open();
-                }}
-              />
-            </View>
-          ) : (
-            <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-              <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
-              <ThemedView style={styles.addPlayerContainer}>
-                <TextInput style={styles.input} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
-                <Button title='Add Player' onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} />
-              </ThemedView>
-
-              <NestableScrollContainer>
-                <NestableDraggableFlatList
-                  ListHeaderComponent={<ThemedText style={styles.headerText}>Starting Players</ThemedText>}
-                  data={listData}
-                  renderItem={renderItem}
-                  keyExtractor={(item) => item.id}
-                  onDragEnd={handlePlayersChange}
+    <MenuProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <ThemedView style={{ flex: 1 }}>
+          <SafeAreaView style={{ flex: 1 }}>
+            {teams.length === 0 ? (
+              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text>No teams exist. Please create a team first.</Text>
+                <Button
+                  title='Create Team'
+                  onPress={() => {
+                    bottomSheetRef.current?.open();
+                  }}
                 />
-              </NestableScrollContainer>
-            </ThemedView>
-          )}
-        </SafeAreaView>
-      </ThemedView>
-      <Pressable style={styles.fab} onPress={() => bottomSheetRef.current?.open()}>
-      <Ionicons name="people-outline" size={28} color="white" />
-      </Pressable>
-      <TeamBottomSheet ref={bottomSheetRef} onClose={() => {}} />
-    </GestureHandlerRootView>
+              </View>
+            ) : (
+              <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+                <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
+                <ThemedView style={styles.addPlayerContainer}>
+                  <TextInput style={styles.input} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
+                  <Button title='Add Player' onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} />
+                </ThemedView>
+
+                <NestableScrollContainer>
+                  <NestableDraggableFlatList
+                    ListHeaderComponent={<ThemedText style={styles.headerText}>Starting Players</ThemedText>}
+                    data={listData}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id}
+                    onDragEnd={handlePlayersChange}
+                  />
+                </NestableScrollContainer>
+              </ThemedView>
+            )}
+          </SafeAreaView>
+        </ThemedView>
+        <Pressable style={styles.fab} onPress={() => bottomSheetRef.current?.open()}>
+        <Ionicons name="people-outline" size={28} color="white" />
+        </Pressable>
+        <TeamBottomSheet ref={bottomSheetRef} onClose={() => {}} />
+      </GestureHandlerRootView>
+    </MenuProvider>
   );
 }
 

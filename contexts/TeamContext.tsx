@@ -15,6 +15,8 @@ interface TeamContextProps {
   selectTeam: (teamId: string) => void;
   removeTeam: (teamId: string) => void; // Add this
   renameTeam: (teamId: string, newName: string) => void; // Add this
+  renamePlayer: (playerId: string, newName: string) => void; // Add this
+  deletePlayer: (playerId: string) => void; // Add this
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -237,6 +239,40 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     ));
   };
 
+  const renamePlayer = (playerId: string, newName: string) => {
+    setTeams(prevTeams => 
+      prevTeams.map(t => {
+        if (t.id === selectedTeamId) {
+          return {
+            ...t,
+            startingPlayers: t.startingPlayers.map(p => 
+              p.id === playerId ? { ...p, name: newName } : p
+            ),
+            benchPlayers: t.benchPlayers.map(p => 
+              p.id === playerId ? { ...p, name: newName } : p
+            ),
+          };
+        }
+        return t;
+      })
+    );
+  };
+
+  const deletePlayer = (playerId: string) => {
+    setTeams(prevTeams => 
+      prevTeams.map(t => {
+        if (t.id === selectedTeamId) {
+          return {
+            ...t,
+            startingPlayers: t.startingPlayers.filter(p => p.id !== playerId),
+            benchPlayers: t.benchPlayers.filter(p => p.id !== playerId),
+          };
+        }
+        return t;
+      })
+    );
+  };
+
   return (
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
@@ -251,6 +287,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       selectTeam,
       removeTeam,
       renameTeam,
+      renamePlayer,
+      deletePlayer,
     }}>
       {children}
     </TeamContext.Provider>
