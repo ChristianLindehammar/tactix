@@ -2,8 +2,8 @@ import React, { forwardRef, useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, Alert, StyleSheet } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import { useTeam } from '@/contexts/TeamContext';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 type TeamBottomSheetProps = {
   onClose: () => void;
@@ -15,6 +15,14 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
+
+  // Fix the theme color hook calls
+  const bottomSheetColors = useThemeColor({}, 'bottomSheet');
+  const backgroundColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.background;
+  const textColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.text;
+  const iconColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.icon;
+  const inputColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.input;
+  const dragHandleColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.dragHandle;
 
   const handleCreateTeamConfirm = () => {
     createTeam(newTeamName.trim());
@@ -42,7 +50,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
     props.onClose();
   };
 
-  const mainMenuItems = [
+  const mainMenuItems: { icon: keyof typeof MaterialIcons.glyphMap; title: string; onPress: () => void }[] = [
     {
       icon: 'group-add',
       title: 'Create Team',
@@ -68,8 +76,8 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
       closeOnDragDown={true}
       closeOnPressMask={true}
       customStyles={{
-        container: styles.bottomSheetContainer,
-        draggableIcon: styles.draggableIcon,
+        container: [styles.bottomSheetContainer, { backgroundColor }],
+        draggableIcon: [styles.draggableIcon, { backgroundColor: dragHandleColor }],
       }}
       onClose={handleClose}>
       <View style={styles.content}>
@@ -77,8 +85,8 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
           <>
             {mainMenuItems.map((item, index) => (
               <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
-                <MaterialIcons size={24} name={item.icon} color='#9BA0A5' style={styles.menuIcon} />
-                <Text style={styles.menuText}>{item.title}</Text>
+                <MaterialIcons size={24} name={item.icon} color={iconColor} style={styles.menuIcon} />
+                <Text style={[styles.menuText, { color: textColor }]}>{item.title}</Text>
               </TouchableOpacity>
             ))}
           </>
@@ -86,7 +94,13 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
 
         {showCreateTeam && (
           <View style={styles.formContainer}>
-            <TextInput placeholder='New Team Name' placeholderTextColor='#9BA0A5' value={newTeamName} onChangeText={setNewTeamName} style={styles.input} />
+            <TextInput 
+              placeholder='New Team Name' 
+              placeholderTextColor={iconColor}
+              value={newTeamName} 
+              onChangeText={setNewTeamName} 
+              style={[styles.input, { backgroundColor: inputColor, color: textColor }]} 
+            />
             <TouchableOpacity style={[styles.button, newTeamName.trim() === '' && styles.buttonDisabled]} onPress={handleCreateTeamConfirm} disabled={newTeamName.trim() === ''}>
               <Text style={styles.buttonText}>Confirm</Text>
             </TouchableOpacity>
@@ -97,8 +111,8 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
           <>
             {teams.map((item) => (
               <TouchableOpacity key={item.id} style={styles.menuItem} onPress={() => handleSelectTeam(item.id)}>
-                <MaterialIcons size={24} name='groups-3' color='#9BA0A5' style={styles.menuIcon} />
-                <Text style={styles.menuText}>{item.name}</Text>
+                <MaterialIcons size={24} name='groups-3' color={iconColor} style={styles.menuIcon} />
+                <Text style={[styles.menuText, { color: textColor as string }]}>{item.name}</Text>
               </TouchableOpacity>
             ))}
           </>
@@ -116,8 +130,8 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
                     { text: 'OK', onPress: () => handleRemoveTeam(item.id) },
                   ]);
                 }}>
-                <MaterialIcons size={24} name='group-remove' color='#9BA0A5' style={styles.menuIcon} />
-                <Text style={styles.menuText}>{item.name}</Text>
+                <MaterialIcons size={24} name='group-remove' color={iconColor as string} style={styles.menuIcon} />
+                <Text style={[styles.menuText, { color: textColor as string }]}>{item.name}</Text>
               </TouchableOpacity>
             ))}
           </>
@@ -129,12 +143,10 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
 
 const styles = StyleSheet.create({
   bottomSheetContainer: {
-    backgroundColor: '#2A2F33',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
   },
   draggableIcon: {
-    backgroundColor: '#9BA0A5',
     width: 40,
   },
   content: {
@@ -151,22 +163,18 @@ const styles = StyleSheet.create({
     height: 24,
   },
   menuText: {
-    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '400',
   },
   menuIcon: {
-    color: '#9BA0A5',
     marginRight: 16,
   },
   formContainer: {
     padding: 16,
   },
   input: {
-    backgroundColor: '#3A4045',
     borderRadius: 8,
     padding: 12,
-    color: '#FFFFFF',
     marginBottom: 16,
   },
   button: {
