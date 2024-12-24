@@ -84,9 +84,18 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
             <MenuTrigger>
               <Ionicons name="ellipsis-horizontal" size={24} color="black" />
             </MenuTrigger>
-            <MenuOptions>
+            <MenuOptions customStyles={{
+              optionsContainer: styles.menuContainer,
+              optionWrapper: styles.menuOption,
+            }}>
               <MenuOption onSelect={handleRename} text="Rename" />
-              <MenuOption onSelect={handleDelete} text="Delete" style={{ color: 'red' }} />
+              <MenuOption 
+                onSelect={handleDelete} 
+                text="Delete" 
+                customStyles={{
+                  optionWrapper: styles.deleteOption,
+                }} 
+              />
             </MenuOptions>
           </Menu>
         </View>
@@ -134,5 +143,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 8,
+  },
+  menuContainer: {
+    borderRadius: 8,
+    padding: 4,
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  menuOption: {
+    padding: 12,
+  },
+  deleteOption: {
+    padding: 12,
+    borderTopWidth: 1,
+    borderTopColor: '#eee',
   },
 });
