@@ -10,10 +10,11 @@ type TeamBottomSheetProps = {
 };
 
 const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props, ref) => {
-  const { teams, createTeam, selectTeam, removeTeam } = useTeam();
+  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
+  const [showRenameTeam, setShowRenameTeam] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
 
   // Fix the theme color hook calls
@@ -43,10 +44,20 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
     (ref as any)?.current?.close();
   };
 
+  const handleRenameTeam = () => {
+    if (team && newTeamName.trim()) {
+      renameTeam(team.id, newTeamName.trim());
+      setNewTeamName('');
+      setShowRenameTeam(false);
+      (ref as any)?.current?.close();
+    }
+  };
+
   const handleClose = () => {
     setShowCreateTeam(false);
     setShowSelectTeam(false);
     setShowRemoveTeam(false);
+    setShowRenameTeam(false);
     props.onClose();
   };
 
@@ -58,12 +69,22 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
     },
     {
       icon: 'groups-3',
-      title: 'Select Existing Team',
+      title: 'Select Team',
       onPress: () => setShowSelectTeam(true),
     },
     {
+      icon: 'edit',
+      title: 'Rename Team',
+      onPress: () => {
+        if (team) {
+          setNewTeamName(team.name);
+          setShowRenameTeam(true);
+        }
+      },
+    },
+    {
       icon: 'group-remove',
-      title: 'Remove Existing Team',
+      title: 'Remove Team',
       onPress: () => setShowRemoveTeam(true),
     },
   ];
@@ -71,7 +92,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
   return (
     <RBSheet
       ref={ref}
-      height={250}
+      height={280}
       openDuration={250}
       closeOnDragDown={true}
       closeOnPressMask={true}
@@ -81,7 +102,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
       }}
       onClose={handleClose}>
       <View style={styles.content}>
-        {!showCreateTeam && !showSelectTeam && !showRemoveTeam && (
+        {!showCreateTeam && !showSelectTeam && !showRemoveTeam && !showRenameTeam && (
           <>
             {mainMenuItems.map((item, index) => (
               <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
@@ -135,6 +156,25 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
               </TouchableOpacity>
             ))}
           </>
+        )}
+
+        {showRenameTeam && (
+          <View style={styles.formContainer}>
+            <TextInput 
+              placeholder='New Team Name' 
+              placeholderTextColor={iconColor}
+              value={newTeamName} 
+              onChangeText={setNewTeamName} 
+              style={[styles.input, { backgroundColor: inputColor, color: textColor }]} 
+            />
+            <TouchableOpacity 
+              style={[styles.button, newTeamName.trim() === '' && styles.buttonDisabled]} 
+              onPress={handleRenameTeam} 
+              disabled={newTeamName.trim() === ''}
+            >
+              <Text style={styles.buttonText}>Rename</Text>
+            </TouchableOpacity>
+          </View>
         )}
       </View>
     </RBSheet>

@@ -14,6 +14,7 @@ interface TeamContextProps {
   createTeam: (name: string) => void; // Add this
   selectTeam: (teamId: string) => void;
   removeTeam: (teamId: string) => void; // Add this
+  renameTeam: (teamId: string, newName: string) => void; // Add this
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -228,6 +229,14 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     });
   };
 
+  const renameTeam = (teamId: string, newName: string) => {
+    setTeams(prev => prev.map(team => 
+      team.id === teamId 
+        ? { ...team, name: newName, lastEdited: Date.now() }
+        : team
+    ));
+  };
+
   return (
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
@@ -241,6 +250,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       createTeam,
       selectTeam,
       removeTeam,
+      renameTeam,
     }}>
       {children}
     </TeamContext.Provider>
