@@ -15,12 +15,16 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const bottomSheetRef = useRef<typeof RBSheet>(null);
+  const tintColor  = useThemeColor({}, 'tint') as string
+  const textColor  = useThemeColor({}, 'text') as string
+
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -92,8 +96,8 @@ export default function TeamScreen() {
               <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
                 <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
                 <ThemedView style={styles.addPlayerContainer}>
-                  <TextInput style={styles.input} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
-                  <Button title='Add Player' onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} />
+                  <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
+                  <Button title='Add Player' onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} color={tintColor}/>
                 </ThemedView>
 
                 <NestableScrollContainer>
