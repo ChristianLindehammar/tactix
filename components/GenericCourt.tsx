@@ -8,7 +8,7 @@ interface Props {
   availableHeight: number;
   playerPositions: PlayerType[];
   onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
-  CourtSvg: React.ComponentType<{ width: number; height: number }>;
+  CourtSvg: React.ComponentType<{ width: number; height: number, stroke?: string }>;
   aspectRatio: number; // width/height ratio of the court
 }
 
@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
   },
   container: {
     position: 'relative',
-    backgroundColor: '#fff',
     borderRadius: 8,
     overflow: 'hidden',
     justifyContent: 'center',

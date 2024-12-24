@@ -15,8 +15,6 @@ const SvgComponent = (props: SvgProps) => (
       x={2.505}
       y={905.5}
       fill="#0097B2"
-      stroke="#fff"
-      strokeWidth={5}
       rx={37.5}
       transform="rotate(-90 2.505 905.5)"
     />
