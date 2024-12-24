@@ -7,6 +7,8 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
 import { ScaleDecorator } from "react-native-draggable-flatlist";
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from '@react-navigation/native';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -26,6 +28,9 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
   const positions = Object.values(PlayerPosition);
   const [isEditing, setIsEditing] = useState(false);
+  const textColor = useThemeColor({}, 'text') as string;
+  const { colors } = useTheme();
+
 
   const handleRename = () => {
     Alert.prompt(
@@ -79,21 +84,33 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
         ]}
       >
         <View style={styles.headerRow}>
-          <Text>{player.name}</Text>
+          <Text >{player.name}</Text>
           <Menu>
             <MenuTrigger>
-              <Ionicons name="ellipsis-horizontal" size={24} color="black" />
+              <Ionicons name="ellipsis-horizontal" size={24} color={textColor} />
             </MenuTrigger>
             <MenuOptions customStyles={{
-              optionsContainer: styles.menuContainer,
+              optionsContainer: [
+                styles.menuContainer,
+                { 
+                  backgroundColor: colors.card,
+                }
+              ],
               optionWrapper: styles.menuOption,
             }}>
-              <MenuOption onSelect={handleRename} text="Rename" />
+              <MenuOption 
+                onSelect={handleRename} 
+                text="Rename" 
+                customStyles={{
+                  optionText: { color: textColor }
+                }}
+              />
               <MenuOption 
                 onSelect={handleDelete} 
                 text="Delete" 
                 customStyles={{
                   optionWrapper: styles.deleteOption,
+                  optionText: { color: 'red' }
                 }} 
               />
             </MenuOptions>
@@ -106,7 +123,7 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
             const selectedPosition = positions[event.nativeEvent.selectedSegmentIndex];
             setPlayerType(player.id, selectedPosition);
           }}
-          style={styles.segmentedControl}
+          style={styles.segmentedControl, { backgroundColor: colors.card }}
         />
       </TouchableOpacity>
     </ScaleDecorator>
@@ -147,7 +164,6 @@ const styles = StyleSheet.create({
   menuContainer: {
     borderRadius: 8,
     padding: 4,
-    backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
