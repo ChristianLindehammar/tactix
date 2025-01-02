@@ -1,7 +1,7 @@
 
 export const positionColors: Record<string, string> = {
-  Goalkeeper: '#FFAB91',
-  Defense: '#80DEEA',
-  Midfielder: '#A5D6A7',
-  Forward: '#CE93D8',
+  Goalkeeper: '#5eaec3',
+  Defense: '#a7d0dc', 
+  Midfielder: '#8b8b8b',
+  Forward: '#9aadb3',
 };

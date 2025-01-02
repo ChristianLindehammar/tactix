@@ -27,7 +27,6 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
 }) => {
   const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
   const positions = Object.values(PlayerPosition);
-  const [isEditing, setIsEditing] = useState(false);
   const textColor = useThemeColor({}, 'text') as string;
   const { colors } = useTheme();
 
