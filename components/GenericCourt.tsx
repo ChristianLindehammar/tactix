@@ -6,20 +6,18 @@ import { PlayerType } from '@/types/models';
 
 interface Props {
   availableHeight: number;
+  availableWidth: number;
   playerPositions: PlayerType[];
   onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
   CourtSvg: React.ComponentType<{ width: number; height: number, stroke?: string }>;
   aspectRatio: number; // width/height ratio of the court
 }
 
-export const GenericCourt = ({ availableHeight, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
-  const height = availableHeight;
-  const width = height * aspectRatio;
-
+export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
-      <View style={[styles.container, { width, height }]}>
-        <CourtSvg width={width} height={height} />
+      <View style={[styles.container, { width: availableWidth, height: availableHeight }]}>
+        <CourtSvg width={availableWidth} height={availableHeight} />
         <View style={StyleSheet.absoluteFill}>
           {playerPositions.map((player) => {
             // Only render players that have a valid courtPosition
@@ -33,7 +31,7 @@ export const GenericCourt = ({ availableHeight, playerPositions, onDragEnd, Cour
                 position={player.position}
                 courtPosition={player.courtPosition}
                 onDragEnd={(pos) => onDragEnd(player.id, pos)}
-                containerSize={{ width, height }}
+                containerSize={{ width: availableWidth, height: availableHeight }}
               />
             );
           })}

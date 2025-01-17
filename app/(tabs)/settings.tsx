@@ -25,10 +25,11 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Settings</ThemedText>
       </ThemedView>
-      <ThemedText>
-      This app helps sports coaches prepare their teams for matches and training sessions. It provides tools and features to organize training plans, manage team tactics, and develop game strategies effectively.
-        
-        </ThemedText>
+        <Collapsible title="About the app">
+        <ThemedText>This app helps sports coaches prepare their teams for matches and training sessions. It provides tools and features to organize training plans, manage team tactics, and develop game strategies effectively.</ThemedText>
+
+      </Collapsible>
+
       <Collapsible title="General settings">
         <ThemedText>Select current sport</ThemedText>
         <Picker

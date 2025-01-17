@@ -26,6 +26,8 @@ export default function HomeScreen() {
     - insets.top 
     - LAYOUT.TAB_BAR_HEIGHT;
 
+    const availableWidth = Dimensions.get('window').width;
+
   const courtConfig = {
     floorball: {
       Svg: FloorballSvg,
@@ -33,17 +35,31 @@ export default function HomeScreen() {
     },
     football: {
       Svg: FootballSvg,
-      aspectRatio: 680/1050,
+      aspectRatio: 549/800,
     }
   };
 
   const { Svg, aspectRatio } = courtConfig[selectedSport];
 
+  // Calculate dimensions to fill the screen while maintaining aspect ratio
+  const screenRatio = availableWidth / availableHeight;
+  
+  const finalDimensions = screenRatio > aspectRatio
+    ? { 
+        width: availableHeight * aspectRatio, 
+        height: availableHeight 
+      }
+    : { 
+        width: availableWidth, 
+        height: availableWidth / aspectRatio 
+      };
+
   return (
     <ThemedView style={styles.container}>
       <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
         <GenericCourt 
-          availableHeight={availableHeight}
+          availableHeight={finalDimensions.height}
+          availableWidth={finalDimensions.width}
           playerPositions={team?.startingPlayers ?? []}
           onDragEnd={updatePlayerPosition}
           CourtSvg={Svg}
