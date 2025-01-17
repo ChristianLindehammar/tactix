@@ -1,6 +1,7 @@
-import React, { createContext, useState, PropsWithChildren, useContext } from 'react';
+import React, { createContext, useState, PropsWithChildren, useContext, useEffect } from 'react';
 import { Team, PlayerType, Position, PlayerPosition } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
+import { getItem, setItem } from '../app/utils/AsyncStorage';
 
 interface TeamContextProps {
   team?: Team; // Make optional
@@ -21,21 +22,51 @@ interface TeamContextProps {
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
 
+const TEAMS_STORAGE_KEY = 'teams';
+const SELECTED_TEAM_KEY = 'selectedTeamId';
+
 export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [teams, setTeams] = useState<Team[]>([
-    {
-      id: '1',
-      name: 'My Team',
-      startingPlayers: [],
-      benchPlayers: [],
-      createdBy: 'user1',
-      sharedWith: [],
-      lastEdited: Date.now(),
-      editedBy: 'user1',
-      sport: 'floorball',
-    },
-  ]);
-  const [selectedTeamId, setSelectedTeamId] = useState<string>('1');
+  const [teams, setTeams] = useState<Team[]>([]);
+  const [selectedTeamId, setSelectedTeamId] = useState<string>('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load initial data
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const storedTeams = await getItem(TEAMS_STORAGE_KEY);
+        const storedSelectedId = await getItem(SELECTED_TEAM_KEY);
+        
+        if (storedTeams) {
+          setTeams(storedTeams);
+          if (storedSelectedId && storedTeams.some(t => t.id === storedSelectedId)) {
+            setSelectedTeamId(storedSelectedId);
+          } else if (storedTeams.length > 0) {
+            setSelectedTeamId(storedTeams[0].id);
+          }
+        }
+      } catch (error) {
+        console.error('Error loading teams:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadData();
+  }, []);
+
+  // Save teams whenever they change
+  useEffect(() => {
+    if (!isLoading) {
+      setItem(TEAMS_STORAGE_KEY, teams);
+    }
+  }, [teams, isLoading]);
+
+  // Save selected team whenever it changes
+  useEffect(() => {
+    if (!isLoading) {
+      setItem(SELECTED_TEAM_KEY, selectedTeamId);
+    }
+  }, [selectedTeamId, isLoading]);
 
   const selectedTeam = teams.find(t => t.id === selectedTeamId);
 
@@ -272,6 +303,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       })
     );
   };
+
+  if (isLoading) {
+    return null; // or return a loading spinner
+  }
 
   return (
     <TeamContext.Provider value={{ 

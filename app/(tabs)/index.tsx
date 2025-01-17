@@ -1,4 +1,5 @@
-import { StyleSheet, View, Dimensions, Text } from 'react-native';
+import { StyleSheet, View, Dimensions, Text, Pressable } from 'react-native';
+import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
@@ -8,6 +9,8 @@ import { GenericCourt } from '@/components/GenericCourt';
 import FloorballSvg from '@/components/ui/FloorballSvg';
 import FootballSvg from '@/components/ui/FootballSvg';
 import { LAYOUT } from '@/constants/layout';
+import { ThemedText } from '@/components/ThemedText';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -16,8 +19,21 @@ export default function HomeScreen() {
 
   if (!team) {
     return (
-      <ThemedView style={styles.container}>
-        <Text>No team selected. Please create or select one.</Text>
+      <ThemedView style={[styles.container, styles.centerContent]}>
+        <Pressable 
+          style={styles.noTeamContainer} 
+          onPress={() => router.push('/team')}
+        >
+          <ThemedText style={styles.noTeamText}>
+            No team selected. Please create or select one.
+          </ThemedText>
+          <IconSymbol 
+            name="arrow.right.circle.fill" 
+            size={42} 
+            color="gray" 
+            style={styles.arrow}
+          />
+        </Pressable>
       </ThemedView>
     );
   }
@@ -73,6 +89,22 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  centerContent: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  noTeamContainer: {
+    alignItems: 'center',
+    // alight the text and icon in the center
+    padding: 16,
+  },
+  noTeamText: {
+    textAlign: 'center',
+    marginRight: 8,
+  },
+  arrow: {
+    opacity: 0.7,
   },
   courtContainer: {
     flex: 1,
