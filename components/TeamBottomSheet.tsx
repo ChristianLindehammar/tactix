@@ -130,11 +130,13 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
   ];
 
   return (
+    <View>
     <RBSheet
       ref={ref}
       height={400}
       openDuration={250}
       closeOnDragDown={true}
+      useNativeDriver={true}
       closeOnPressMask={true}
       customStyles={{
         container: [styles.bottomSheetContainer, { backgroundColor }],
@@ -218,6 +220,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
         )}
       </View>
     </RBSheet>
+    </View>
   );
 });
 

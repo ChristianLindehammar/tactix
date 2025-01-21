@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, Pressable } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, Pressable, Platform } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   fab: {
     position: 'absolute',
     right: 16,
-    bottom: 100,
+    bottom: Platform.OS === 'android' ? 30 : 100,
     backgroundColor: '#0097B2',
     width: 56,
     height: 56,
