@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
 
-type Sport = 'floorball' | 'football';
+type Sport = 'floorball' | 'football' | 'hockey';
 
 interface SportContextType {
   selectedSport: Sport;
@@ -13,13 +13,13 @@ const SportContext = createContext<SportContextType | undefined>(undefined);
 const STORAGE_KEY = 'selectedSport';
 
 export function SportProvider({ children }: { children: React.ReactNode }) {
-  const [selectedSport, setSelectedSport] = useState<Sport>('floorball');
+  const [selectedSport, setSelectedSport] = useState<Sport>('football');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadInitialSport = async () => {
       const saved = await getItem(STORAGE_KEY);
-      if (saved === 'floorball' || saved === 'football') {
+      if (saved === 'floorball' || saved === 'football' || saved === 'hockey') {
         setSelectedSport(saved);
       }
       setIsLoading(false);

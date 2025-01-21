@@ -13,6 +13,7 @@ import FootballSvg from '@/components/ui/FootballSvg';
 import { LAYOUT } from '@/constants/layout';
 import { ThemedText } from '@/components/ThemedText';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import HockeySvg from '@/components/ui/HockeySvg';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -65,7 +66,11 @@ export default function HomeScreen() {
     football: {
       Svg: FootballSvg,
       aspectRatio: 549/800,
-    }
+    },
+    hockey: {
+      Svg: HockeySvg,
+      aspectRatio: 427/846, 
+    },
   };
 
   const { Svg, aspectRatio } = courtConfig[selectedSport];

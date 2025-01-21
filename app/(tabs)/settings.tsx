@@ -38,6 +38,7 @@ export default function TabTwoScreen() {
           style={styles.picker}>
           <Picker.Item label="Floorball" value="floorball" />
           <Picker.Item label="Football" value="football" />
+          <Picker.Item label="Hockey" value="hockey" />
         </Picker>
       </Collapsible>
     </ParallaxScrollView>

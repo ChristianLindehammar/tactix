@@ -9,6 +9,7 @@ import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-m
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@react-navigation/native';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { useSport } from '@/context/SportContext';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -26,7 +27,13 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   isActive
 }) => {
   const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
+  const { selectedSport } = useSport();
   const positions = Object.values(PlayerPosition);
+  const displayPositions = positions.map(pos =>
+    pos === PlayerPosition.Midfielder && selectedSport === 'floorball'
+      ? 'Center'
+      : pos
+  );
   const textColor = useThemeColor({}, 'text') as string;
   const { colors } = useTheme();
 
@@ -116,10 +123,13 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
           </Menu>
         </View>
         <SegmentedControl
-          values={positions}
+          values={displayPositions}
           selectedIndex={positions.indexOf(player.position)}
           onChange={(event) => {
-            const selectedPosition = positions[event.nativeEvent.selectedSegmentIndex];
+            const selectedDisplayPosition = displayPositions[event.nativeEvent.selectedSegmentIndex];
+            const selectedPosition = selectedDisplayPosition === 'Center'
+              ? PlayerPosition.Midfielder
+              : selectedDisplayPosition;
             setPlayerType(player.id, selectedPosition);
           }}
           style={styles.segmentedControl, { backgroundColor: colors.card }}

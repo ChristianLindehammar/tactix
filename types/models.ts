@@ -12,7 +12,7 @@ export interface Team {
 
 export enum PlayerPosition {
   Goalkeeper = 'Goalkeeper',
-  Defense = 'Defense',
+  Defender = 'Defender',
   Midfielder = 'Midfielder',
   Forward = 'Forward',
 }
