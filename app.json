@@ -9,13 +9,34 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleDocumentTypes": [
+          {
+            "CFBundleTypeName": "Tactix Team File",
+            "LSItemContentTypes": ["public.data"],
+            "LSHandlerRank": "Owner"
+          }
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "mimeType": "application/x-tactix",
+              "path": "*.tactix"
+            }
+          ],
+          "category": ["BROWSABLE","DEFAULT"]
+        }
+      ]
     },
     "web": {
       "bundler": "metro",

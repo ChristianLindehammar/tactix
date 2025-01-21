@@ -2,6 +2,9 @@ import React, { createContext, useState, PropsWithChildren, useContext, useEffec
 import { Team, PlayerType, Position, PlayerPosition } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
+import * as DocumentPicker from 'expo-document-picker';
 
 interface TeamContextProps {
   team?: Team; // Make optional
@@ -18,6 +21,9 @@ interface TeamContextProps {
   renameTeam: (teamId: string, newName: string) => void; // Add this
   renamePlayer: (playerId: string, newName: string) => void; // Add this
   deletePlayer: (playerId: string) => void; // Add this
+  exportTeam: (teamId: string) => void; // Add this
+  importTeam: (importedTeam: Team) => void; // Add this
+  importTeamFromFile: (fileUri: string) => Promise<void>; // Add this
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -304,6 +310,36 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     );
   };
 
+  const exportTeam = async (teamId: string) => {
+    const teamToExport = teams.find(t => t.id === teamId);
+    if (!teamToExport) return;
+    const fileUri = FileSystem.documentDirectory + `tactix_team_${teamId}.tactix`;
+    await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(teamToExport));
+    await Sharing.shareAsync(fileUri, { mimeType: 'application/x-tactix' });
+  };
+
+  const importTeam = async (importedTeam: Team) => {
+    // Validate importedTeam
+    if (!importedTeam.name) return;
+    let finalName = importedTeam.name;
+    let counter = 1;
+    while (teams.some(t => t.name === finalName)) {
+      finalName = `${importedTeam.name} (${counter++})`;
+    }
+    // Validate importedTeam and add to teams if valid
+    setTeams(prev => [...prev, { ...importedTeam, name: finalName }]);
+  };
+
+  const importTeamFromFile = async (fileUri: string) => {
+    try {
+      const contents = await FileSystem.readAsStringAsync(fileUri);
+      const parsed: Team = JSON.parse(contents);
+      await importTeam(parsed);
+    } catch (err) {
+      console.error('Error importing team file:', err);
+    }
+  };
+
   if (isLoading) {
     return null; // or return a loading spinner
   }
@@ -324,6 +360,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       renameTeam,
       renamePlayer,
       deletePlayer,
+      exportTeam,
+      importTeam,
+      importTeamFromFile,
     }}>
       {children}
     </TeamContext.Provider>

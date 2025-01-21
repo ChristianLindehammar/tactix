@@ -3,6 +3,8 @@ import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
+import { useEffect } from 'react';
+import * as Linking from 'expo-linking';
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
@@ -14,8 +16,19 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
-  const { team, updatePlayerPosition } = useTeam();
+  const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
   const { selectedSport } = useSport();
+
+  useEffect(() => {
+    const handleOpenURL = async ({ url }: { url: string }) => {
+      if (url.startsWith('file://')) {
+        console.log('Importing team from file:', url);
+        await importTeamFromFile(url);
+      }
+    };
+    const subscription = Linking.addEventListener('url', handleOpenURL);
+    return () => subscription.remove();
+  }, []);
 
   if (!team) {
     return (

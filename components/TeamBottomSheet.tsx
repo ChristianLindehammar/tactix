@@ -4,13 +4,14 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import { useTeam } from '@/contexts/TeamContext';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import * as DocumentPicker from 'expo-document-picker';
 
 type TeamBottomSheetProps = {
   onClose: () => void;
 };
 
 const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props, ref) => {
-  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam } = useTeam();
+  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
@@ -53,6 +54,23 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
     }
   };
 
+  const handleExportTeam = async () => {
+    if (!team) return;
+    await exportTeam(team.id);
+    (ref as any)?.current?.close();
+  };
+
+  const handleImportTeam = async () => {
+    const result = await DocumentPicker.getDocumentAsync({
+      type: '*/*',
+      copyToCacheDirectory: true,
+    });
+    if (result.type === 'success') {
+      await importTeamFromFile(result.uri);
+    }
+    (ref as any)?.current?.close();
+  };
+
   const handleClose = () => {
     setShowCreateTeam(false);
     setShowSelectTeam(false);
@@ -87,12 +105,22 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
       title: 'Remove Team',
       onPress: () => setShowRemoveTeam(true),
     },
+    {
+      icon: 'share',
+      title: 'Share Team',
+      onPress: handleExportTeam,
+    },
+    {
+      icon: 'file-upload',
+      title: 'Import Team',
+      onPress: handleImportTeam,
+    },
   ];
 
   return (
     <RBSheet
       ref={ref}
-      height={280}
+      height={400}
       openDuration={250}
       closeOnDragDown={true}
       closeOnPressMask={true}
