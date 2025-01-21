@@ -132,7 +132,7 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
               : selectedDisplayPosition;
             setPlayerType(player.id, selectedPosition);
           }}
-          style={styles.segmentedControl, { backgroundColor: colors.card }}
+          style={[styles.segmentedControl, { backgroundColor: colors.card }]}
         />
       </TouchableOpacity>
     </ScaleDecorator>
@@ -163,6 +163,9 @@ const styles = StyleSheet.create({
   },
   segmentedControl: {
     marginTop: 8,
+    maxWidth: 500,
+    alignSelf: 'flex-start',
+    width: '100%',
   },
   headerRow: {
     flexDirection: 'row',

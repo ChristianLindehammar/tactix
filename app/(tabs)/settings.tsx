@@ -15,31 +15,31 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
+      <IconSymbol
+        size={310}
+        color="#808080"
+        name="gearshape"
+        style={styles.headerImage}
+      />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Settings</ThemedText>
+      <ThemedText type="title">Settings</ThemedText>
       </ThemedView>
-        <Collapsible title="About the app">
-        <ThemedText>This app helps sports coaches prepare their teams for matches and training sessions. It provides tools and features to organize training plans, manage team tactics, and develop game strategies effectively.</ThemedText>
+      <Collapsible title="About the app">
+      <ThemedText>A tool for sports coaches to plan team training, manage tactics, and develop game strategies.</ThemedText>
 
       </Collapsible>
 
-      <Collapsible title="General settings">
-        <ThemedText>Select current sport</ThemedText>
-        <Picker
-          selectedValue={selectedSport}
-          onValueChange={(itemValue) => setSelectedSport(itemValue)}
-          style={styles.picker}>
-          <Picker.Item label="Floorball" value="floorball" />
-          <Picker.Item label="Football" value="football" />
-          <Picker.Item label="Hockey" value="hockey" />
-        </Picker>
+      <Collapsible title="General settings" defaultOpen={true}>
+      <ThemedText>Select current sport</ThemedText>
+      <Picker
+        selectedValue={selectedSport}
+        onValueChange={(itemValue) => setSelectedSport(itemValue)}
+        style={styles.picker}>
+        <Picker.Item label="Floorball" value="floorball" />
+        <Picker.Item label="Football" value="football" />
+        <Picker.Item label="Hockey" value="hockey" />
+      </Picker>
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -59,5 +59,8 @@ const styles = StyleSheet.create({
   picker: {
     marginTop: 8,
     marginBottom: 16,
+    maxWidth: 300,
+    alignSelf: 'flex-start',
+    width: '100%',
   },
 });
