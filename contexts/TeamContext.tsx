@@ -319,15 +319,19 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const importTeam = async (importedTeam: Team) => {
-    // Validate importedTeam
     if (!importedTeam.name) return;
     let finalName = importedTeam.name;
     let counter = 1;
     while (teams.some(t => t.name === finalName)) {
       finalName = `${importedTeam.name} (${counter++})`;
     }
-    // Validate importedTeam and add to teams if valid
-    setTeams(prev => [...prev, { ...importedTeam, name: finalName }]);
+    const now = Date.now().toString();
+    const newTeam = { ...importedTeam, id: now, name: finalName };
+    setTeams(prev => [...prev, newTeam]);
+
+    // log all teams ids
+    console.log('All teams:', teams.map(t => t.id));
+    setSelectedTeamId(now);
   };
 
   const importTeamFromFile = async (fileUri: string) => {

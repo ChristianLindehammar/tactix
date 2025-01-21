@@ -61,14 +61,26 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
   };
 
   const handleImportTeam = async () => {
-    const result = await DocumentPicker.getDocumentAsync({
-      type: '*/*',
-      copyToCacheDirectory: true,
-    });
-    if (result.type === 'success') {
-      await importTeamFromFile(result.uri);
+    try {
+      const result = await DocumentPicker.getDocumentAsync({
+        type: '*/*',
+        copyToCacheDirectory: true,
+      });
+      console.log('Importing team from file:', result);
+      
+      if (!result.canceled && result.assets?.[0]) {
+        const file = result.assets[0];
+        if (!file.name.endsWith('.tactix')) {
+          Alert.alert('Invalid File', 'Please select a .tactix file');
+          return;
+        }
+        await importTeamFromFile(file.uri);
+        (ref as any)?.current?.close();
+      }
+    } catch (error) {
+      Alert.alert('Error', 'Failed to import team file');
+      console.error('Import team error:', error);
     }
-    (ref as any)?.current?.close();
   };
 
   const handleClose = () => {
