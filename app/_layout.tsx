@@ -8,6 +8,7 @@ import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { TeamProvider } from '@/contexts/TeamContext';
 import { SportProvider } from '@/context/SportContext';
+import { SheetProvider } from 'react-native-actions-sheet';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -35,11 +36,13 @@ export default function RootLayout() {
       <TeamProvider>
         <SafeAreaProvider>
           <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-            <Stack>
-              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              <Stack.Screen name="+not-found" />
-            </Stack>
-            <StatusBar style="auto" />
+            <SheetProvider>
+              <Stack>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen name="+not-found" />
+              </Stack>
+              <StatusBar style="auto" />
+            </SheetProvider>
           </ThemeProvider>
         </SafeAreaProvider>
       </TeamProvider>

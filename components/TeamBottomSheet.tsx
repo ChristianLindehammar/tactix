@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, Alert, StyleSheet } from 'react-native';
-import RBSheet from 'react-native-raw-bottom-sheet';
+import ActionSheet, { SheetManager } from 'react-native-actions-sheet';
 import { useTeam } from '@/contexts/TeamContext';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
@@ -10,7 +10,7 @@ type TeamBottomSheetProps = {
   onClose: () => void;
 };
 
-const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props, ref) => {
+const TeamBottomSheet = forwardRef<ActionSheet, TeamBottomSheetProps>((props, ref) => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
@@ -30,19 +30,19 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
     createTeam(newTeamName.trim());
     setNewTeamName('');
     setShowCreateTeam(false);
-    (ref as any)?.current?.close();
+    (ref as any)?.current?.hide();
   };
 
   const handleSelectTeam = (teamId: string) => {
     selectTeam(teamId);
     setShowSelectTeam(false);
-    (ref as any)?.current?.close();
+    (ref as any)?.current?.hide();
   };
 
   const handleRemoveTeam = (teamId: string) => {
     removeTeam(teamId);
     setShowRemoveTeam(false);
-    (ref as any)?.current?.close();
+    (ref as any)?.current?.hide();
   };
 
   const handleRenameTeam = () => {
@@ -50,14 +50,14 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
       renameTeam(team.id, newTeamName.trim());
       setNewTeamName('');
       setShowRenameTeam(false);
-      (ref as any)?.current?.close();
+      (ref as any)?.current?.hide();
     }
   };
 
   const handleExportTeam = async () => {
     if (!team) return;
     await exportTeam(team.id);
-    (ref as any)?.current?.close();
+    (ref as any)?.current?.hide();
   };
 
   const handleImportTeam = async () => {
@@ -75,7 +75,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
           return;
         }
         await importTeamFromFile(file.uri);
-        (ref as any)?.current?.close();
+        (ref as any)?.current?.hide();
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to import team file');
@@ -131,17 +131,9 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
 
   return (
     <View>
-    <RBSheet
+    <ActionSheet
       ref={ref}
-      height={400}
-      openDuration={250}
-      closeOnDragDown={true}
-      useNativeDriver={true}
-      closeOnPressMask={true}
-      customStyles={{
-        container: [styles.bottomSheetContainer, { backgroundColor }],
-        draggableIcon: [styles.draggableIcon, { backgroundColor: dragHandleColor }],
-      }}
+      id="team-bottom-sheet"
       onClose={handleClose}>
       <View style={styles.content}>
         {!showCreateTeam && !showSelectTeam && !showRemoveTeam && !showRenameTeam && (
@@ -219,7 +211,7 @@ const TeamBottomSheet = forwardRef<typeof RBSheet, TeamBottomSheetProps>((props,
           </View>
         )}
       </View>
-    </RBSheet>
+    </ActionSheet>
     </View>
   );
 });

@@ -6,7 +6,7 @@ import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { NestableDraggableFlatList, NestableScrollContainer } from 'react-native-draggable-flatlist';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import RBSheet from 'react-native-raw-bottom-sheet';
+import { SheetManager } from 'react-native-actions-sheet';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
 import { MenuProvider } from 'react-native-popup-menu';
@@ -113,7 +113,7 @@ export default function TeamScreen() {
             )}
           </SafeAreaView>
         </ThemedView>
-        <Pressable style={styles.fab} onPress={() => bottomSheetRef.current?.open()}>
+        <Pressable style={styles.fab} onPress={() => SheetManager.show('team-bottom-sheet')}>
         <Ionicons name="people-outline" size={28} color="white" />
         </Pressable>
         <TeamBottomSheet ref={bottomSheetRef} onClose={() => {}} />
