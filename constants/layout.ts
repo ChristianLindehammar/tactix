@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export const LAYOUT = {
   FLOORBALL_COURT: {
     CENTER_X: 242,  // Center X coordinate of the court SVG
@@ -12,6 +14,6 @@ export const LAYOUT = {
     OFFSET: 40,
     MAX_TRIES: 5
   },
-  TAB_BAR_HEIGHT: 80,
-  COURT_PADDING: 40
+  TAB_BAR_HEIGHT: Platform.OS === 'ios' ? 80 : 50,
+  COURT_PADDING: Platform.OS === 'ios' ? 40 : 60
 };

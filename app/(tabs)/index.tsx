@@ -54,9 +54,10 @@ export default function HomeScreen() {
 
   const availableHeight = Dimensions.get('window').height 
     - insets.top 
+    - insets.bottom
     - LAYOUT.TAB_BAR_HEIGHT;
 
-    const availableWidth = Dimensions.get('window').width;
+  const availableWidth = Dimensions.get('window').width;
 
   const courtConfig = {
     floorball: {
