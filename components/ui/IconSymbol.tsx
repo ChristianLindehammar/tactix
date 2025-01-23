@@ -11,9 +11,7 @@ type IconMapping = {
 };
 
 const MAPPING: Record<string, IconMapping> = {
-  'house.fill': { type: 'ionicon', icon: 'home' },
-  'paperplane.fill': { type: 'ionicon', icon: 'paper-plane' },
-  'chevron.left.forwardslash.chevron.right': { type: 'ionicon', icon: 'code-working' },
+  'arrow.right.circle.fill': { type: 'ionicon', icon: 'arrow-forward-circle' },
   'chevron.right': { type: 'ionicon', icon: 'chevron-forward' },
   'sportscourt.fill': { type: 'custom', icon: CourtIconSvg },
   'person.3.fill': { type: 'ionicon', icon: 'people' },

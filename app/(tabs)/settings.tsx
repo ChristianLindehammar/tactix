@@ -18,7 +18,7 @@ export default function TabTwoScreen() {
       <IconSymbol
         size={310}
         color="#808080"
-        name="gearshape"
+        name="gear"
         style={styles.headerImage}
       />
       }>
@@ -26,8 +26,28 @@ export default function TabTwoScreen() {
       <ThemedText type="title">Settings</ThemedText>
       </ThemedView>
       <Collapsible title="About the app">
-      <ThemedText>A tool for sports coaches to plan team training, manage tactics, and develop game strategies.</ThemedText>
+      <ThemedText style={{ marginBottom: 8 }}>A tool for sports coaches to plan team training, manage tactics, and develop game strategies.</ThemedText>
 
+      <Collapsible title="3rd party libraries">
+        <ThemedText style={{ marginBottom: 8 }}>
+          This app uses several open-source libraries:
+        </ThemedText>
+        <ThemedView style={{ paddingLeft: 16 }}>
+          <ThemedText>• @expo/vector-icons - MIT License</ThemedText>
+          <ThemedText>• async-storage - MIT License</ThemedText>
+          <ThemedText>• @react-native-picker - MIT License</ThemedText>
+          <ThemedText>• @react-navigation - MIT License</ThemedText>
+          <ThemedText>• expo and related packages - MIT License</ThemedText>
+          <ThemedText>• react & react-native - MIT License</ThemedText>
+          <ThemedText>• react-native-actions-sheet - MIT License</ThemedText>
+          <ThemedText>• react-native-draggable-flatlist - MIT License</ThemedText>
+          <ThemedText>• react-native-gesture-handler - MIT License</ThemedText>
+          <ThemedText>• react-native-popup-menu - MIT License</ThemedText>
+          <ThemedText>• react-native-reanimated - MIT License</ThemedText>
+          <ThemedText>• react-native-svg - MIT License</ThemedText>
+          <ThemedText>• react-native-webview - MIT License</ThemedText>
+        </ThemedView>
+      </Collapsible>
       </Collapsible>
 
       <Collapsible title="General settings" defaultOpen={true}>
