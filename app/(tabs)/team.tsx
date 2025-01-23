@@ -10,6 +10,7 @@ import { SheetManager } from 'react-native-actions-sheet';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
 import { MenuProvider } from 'react-native-popup-menu';
+import ActionSheet from 'react-native-actions-sheet';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -21,7 +22,7 @@ export default function TeamScreen() {
   const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
-  const bottomSheetRef = useRef<typeof RBSheet>(null);
+  const bottomSheetRef = useRef<ActionSheet>(null);
   const tintColor  = useThemeColor({}, 'tint') as string
   const textColor  = useThemeColor({}, 'text') as string
 
@@ -87,9 +88,7 @@ export default function TeamScreen() {
                 <Text>No teams exist. Please create a team first.</Text>
                 <Button
                   title='Create Team'
-                  onPress={() => {
-                    bottomSheetRef.current?.open();
-                  }}
+                  onPress={() => bottomSheetRef.current?.show()}
                 />
               </View>
             ) : (
@@ -113,10 +112,10 @@ export default function TeamScreen() {
             )}
           </SafeAreaView>
         </ThemedView>
-        <Pressable style={styles.fab} onPress={() => SheetManager.show('team-bottom-sheet')}>
-        <Ionicons name="people-outline" size={28} color="white" />
+        <Pressable style={styles.fab} onPress={() => bottomSheetRef.current?.show()}>
+          <Ionicons name="people-outline" size={28} color="white" />
         </Pressable>
-        <TeamBottomSheet ref={bottomSheetRef} onClose={() => {}} />
+        <TeamBottomSheet ref={bottomSheetRef} />
       </GestureHandlerRootView>
     </MenuProvider>
   );

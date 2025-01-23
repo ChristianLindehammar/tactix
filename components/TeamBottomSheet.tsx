@@ -6,11 +6,9 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
 
-type TeamBottomSheetProps = {
-  onClose: () => void;
-};
 
-const TeamBottomSheet = forwardRef<ActionSheet, TeamBottomSheetProps>((props, ref) => {
+
+const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
@@ -88,7 +86,6 @@ const TeamBottomSheet = forwardRef<ActionSheet, TeamBottomSheetProps>((props, re
     setShowSelectTeam(false);
     setShowRemoveTeam(false);
     setShowRenameTeam(false);
-    props.onClose();
   };
 
   const mainMenuItems: { icon: keyof typeof MaterialIcons.glyphMap; title: string; onPress: () => void }[] = [
@@ -130,7 +127,6 @@ const TeamBottomSheet = forwardRef<ActionSheet, TeamBottomSheetProps>((props, re
   ];
 
   return (
-    <View>
     <ActionSheet
       ref={ref}
       id="team-bottom-sheet"
@@ -212,7 +208,6 @@ const TeamBottomSheet = forwardRef<ActionSheet, TeamBottomSheetProps>((props, re
         )}
       </View>
     </ActionSheet>
-    </View>
   );
 });
 
