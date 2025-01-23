@@ -18,11 +18,9 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
 
   // Fix the theme color hook calls
   const bottomSheetColors = useThemeColor({}, 'bottomSheet');
-  const backgroundColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.background;
   const textColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.text;
   const iconColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.icon;
   const inputColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.input;
-  const dragHandleColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.dragHandle;
 
   const handleCreateTeamConfirm = () => {
     createTeam(newTeamName.trim());

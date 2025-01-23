@@ -1,3 +1,7 @@
+
+export type Sport = 'floorball' | 'football' | 'hockey';
+
+
 export interface Team {
   id: string;
   name: string;
@@ -7,7 +11,7 @@ export interface Team {
   sharedWith: string[];
   lastEdited: number;
   editedBy: string;
-  sport: 'floorball' | 'football';
+  sport: Sport
 }
 
 export enum PlayerPosition {

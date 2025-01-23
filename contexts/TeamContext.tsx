@@ -4,7 +4,7 @@ import { LAYOUT } from '@/constants/layout';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
-import * as DocumentPicker from 'expo-document-picker';
+import { useSport } from '@/context/SportContext';
 
 interface TeamContextProps {
   team?: Team; // Make optional
@@ -35,6 +35,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [selectedTeamId, setSelectedTeamId] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
+  const { selectedSport } = useSport();
 
   // Load initial data
   useEffect(() => {
@@ -74,7 +75,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }
   }, [selectedTeamId, isLoading]);
 
-  const selectedTeam = teams.find(t => t.id === selectedTeamId);
+  const filteredTeams = teams.filter(team => team.sport === selectedSport);
+  const selectedTeam = filteredTeams.find(t => t.id === selectedTeamId);
 
   const updateTeamInTeams = (updater: (team: Team) => Team) => {
     setTeams((prevTeams) => {
@@ -244,7 +246,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       sharedWith: [],
       lastEdited: now,
       editedBy: 'user1',
-      sport: 'floorball',
+      sport: selectedSport,
     };
     setTeams(prev => [...prev, newTeam]);
     setSelectedTeamId(newTeam.id);
@@ -351,7 +353,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
-      teams,
+      teams: filteredTeams,
       updatePlayerPosition, 
       addPlayer, 
       setPlayerType,  

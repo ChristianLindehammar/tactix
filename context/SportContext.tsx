@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
+import { Sport } from '@/types/models';
 
-type Sport = 'floorball' | 'football' | 'hockey';
 
 interface SportContextType {
   selectedSport: Sport;
