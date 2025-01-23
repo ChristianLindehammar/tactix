@@ -34,43 +34,30 @@ export default function HomeScreen() {
   if (!team) {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
-        <Pressable 
-          style={styles.noTeamContainer} 
-          onPress={() => router.push('/team')}
-        >
-          <ThemedText style={styles.noTeamText}>
-            No team selected. Please create or select one.
-          </ThemedText>
-          <IconSymbol 
-            name="arrow.right.circle.fill" 
-            size={42} 
-            color="gray" 
-            style={styles.arrow}
-          />
+        <Pressable style={styles.noTeamContainer} onPress={() => router.push('/team')}>
+          <ThemedText style={styles.noTeamText}>No team selected. Please create or select one.</ThemedText>
+          <IconSymbol name='arrow.right.circle.fill' size={42} color='gray' style={styles.arrow} />
         </Pressable>
       </ThemedView>
     );
   }
 
-  const availableHeight = Dimensions.get('window').height 
-    - insets.top 
-    - insets.bottom
-    - LAYOUT.TAB_BAR_HEIGHT;
+  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
 
   const availableWidth = Dimensions.get('window').width;
 
   const courtConfig = {
     floorball: {
       Svg: FloorballSvg,
-      aspectRatio: 484/908,
+      aspectRatio: 484 / 908,
     },
     football: {
       Svg: FootballSvg,
-      aspectRatio: 549/800,
+      aspectRatio: 549 / 800,
     },
     hockey: {
       Svg: HockeySvg,
-      aspectRatio: 427/846, 
+      aspectRatio: 427 / 846,
     },
   };
 
@@ -78,21 +65,22 @@ export default function HomeScreen() {
 
   // Calculate dimensions to fill the screen while maintaining aspect ratio
   const screenRatio = availableWidth / availableHeight;
-  
-  const finalDimensions = screenRatio > aspectRatio
-    ? { 
-        width: availableHeight * aspectRatio, 
-        height: availableHeight 
-      }
-    : { 
-        width: availableWidth, 
-        height: availableWidth / aspectRatio 
-      };
+
+  const finalDimensions =
+    screenRatio > aspectRatio
+      ? {
+          width: availableHeight * aspectRatio,
+          height: availableHeight,
+        }
+      : {
+          width: availableWidth,
+          height: availableWidth / aspectRatio,
+        };
 
   return (
     <ThemedView style={styles.container}>
       <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-        <GenericCourt 
+        <GenericCourt
           availableHeight={finalDimensions.height}
           availableWidth={finalDimensions.width}
           playerPositions={team?.startingPlayers ?? []}

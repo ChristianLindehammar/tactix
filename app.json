@@ -1,15 +1,16 @@
 {
   "expo": {
-    "name": "tactix",
-    "slug": "tactix",
+    "name": "Tactix",
+    "slug": "Tactix",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "tactix",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
+      "icon": "./assets/images/icon.png",
       "infoPlist": {
         "CFBundleDocumentTypes": [
           {
@@ -28,13 +29,14 @@
           }
         ]
       },
-      "bundleIdentifier": "com.anonymous.tactix"
+      "bundleIdentifier": "com.lhconsult.tactix"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "package": "com.lhconsult.tactix",
       "intentFilters": [
         {
           "action": "VIEW",
@@ -62,7 +64,6 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
