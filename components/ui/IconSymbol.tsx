@@ -1,31 +1,31 @@
-// This file is a fallback for using MaterialIcons on Android and web.
+// This file is a fallback for using Ionicons on Android and web.
 
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SymbolWeight } from 'expo-symbols';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
+import CourtIconSvg from './CourtIconSvg';
 
-// Add your SFSymbol to MaterialIcons mappings here.
-const MAPPING = {
-  // See MaterialIcons here: https://icons.expo.fyi
-  // See SF Symbols in the SF Symbols app on Mac.
-  'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
-} as Partial<
-  Record<
-    import('expo-symbols').SymbolViewProps['name'],
-    React.ComponentProps<typeof MaterialIcons>['name']
-  >
->;
+type IconMapping = {
+  type: 'ionicon' | 'custom';
+  icon: React.ComponentProps<typeof Ionicons>['name'] | React.ComponentType<any>;
+};
+
+const MAPPING: Record<string, IconMapping> = {
+  'house.fill': { type: 'ionicon', icon: 'home' },
+  'paperplane.fill': { type: 'ionicon', icon: 'paper-plane' },
+  'chevron.left.forwardslash.chevron.right': { type: 'ionicon', icon: 'code-working' },
+  'chevron.right': { type: 'ionicon', icon: 'chevron-forward' },
+  'sportscourt.fill': { type: 'custom', icon: CourtIconSvg },
+  'person.3.fill': { type: 'ionicon', icon: 'people' },
+  'gear': { type: 'ionicon', icon: 'settings' },
+} as const;
 
 export type IconSymbolName = keyof typeof MAPPING;
 
 /**
- * An icon component that uses native SFSymbols on iOS, and MaterialIcons on Android and web. This ensures a consistent look across platforms, and optimal resource usage.
+ * An icon component that uses native SFSymbols on iOS, and Ionicons on Android and web. This ensures a consistent look across platforms, and optimal resource usage.
  *
- * Icon `name`s are based on SFSymbols and require manual mapping to MaterialIcons.
+ * Icon `name`s are based on SFSymbols and require manual mapping to Ionicons.
  */
 export function IconSymbol({
   name,
@@ -37,7 +37,23 @@ export function IconSymbol({
   size?: number;
   color: string | OpaqueColorValue;
   style?: StyleProp<ViewStyle>;
-  weight?: SymbolWeight;
 }) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  const mapping = MAPPING[name];
+  
+  if (!mapping) {
+    console.warn(`No mapping found for icon: ${name}`);
+    return null;
+  }
+
+  if (mapping.type === 'custom') {
+    const CustomIcon = mapping.icon as React.ComponentType<any>;
+    return <CustomIcon width={size} height={size} fill={color} style={style} />;
+  }
+
+  return <Ionicons 
+    name={mapping.icon as React.ComponentProps<typeof Ionicons>['name']} 
+    size={size} 
+    color={color} 
+    style={style}
+  />;
 }

@@ -6,23 +6,22 @@ import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { NestableDraggableFlatList, NestableScrollContainer } from 'react-native-draggable-flatlist';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { SheetManager } from 'react-native-actions-sheet';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
 import { MenuProvider } from 'react-native-popup-menu';
-import ActionSheet from 'react-native-actions-sheet';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import ActionSheet from 'react-native-actions-sheet';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
-  const bottomSheetRef = useRef<ActionSheet>(null);
+  const bottomSheetRef = useRef<typeof ActionSheet>(null);
   const tintColor  = useThemeColor({}, 'tint') as string
   const textColor  = useThemeColor({}, 'text') as string
 

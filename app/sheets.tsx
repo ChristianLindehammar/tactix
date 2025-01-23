@@ -1,4 +1,4 @@
-import { registerSheet } from 'react-native-actions-sheet';
+import { registerSheet, SheetDefinition } from 'react-native-actions-sheet';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 
 registerSheet('team-bottom-sheet', TeamBottomSheet);
