@@ -14,11 +14,21 @@
         "CFBundleDocumentTypes": [
           {
             "CFBundleTypeName": "Tactix Team File",
-            "LSItemContentTypes": ["public.data"],
+            "LSItemContentTypes": [
+              "public.data"
+            ],
+            "LSHandlerRank": "Owner"
+          },
+          {
+            "CFBundleTypeName": "Tactix Team File",
+            "LSItemContentTypes": [
+              "public.data"
+            ],
             "LSHandlerRank": "Owner"
           }
         ]
-      }
+      },
+      "bundleIdentifier": "com.anonymous.tactix"
     },
     "android": {
       "adaptiveIcon": {
@@ -34,7 +44,10 @@
               "path": "*.tactix"
             }
           ],
-          "category": ["BROWSABLE","DEFAULT"]
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ]
     },
