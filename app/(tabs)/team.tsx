@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, Pressable, Platform } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Text, Pressable, Platform, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -23,6 +23,7 @@ export default function TeamScreen() {
   const benchHeaderRef = useRef<View>(null);
   const bottomSheetRef = useRef<typeof ActionSheet>(null);
   const tintColor  = useThemeColor({}, 'tint') as string
+  const backgroundColor = useThemeColor({}, 'background') as string
   const textColor  = useThemeColor({}, 'text') as string
 
 
@@ -83,13 +84,14 @@ export default function TeamScreen() {
         <ThemedView style={{ flex: 1 }}>
           <SafeAreaView style={{ flex: 1 }}>
             {teams.length === 0 ? (
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>No teams exist. Please create a team first.</Text>
-                <Button
-                  title='Create Team'
-                  onPress={() => bottomSheetRef.current?.show()}
-                />
-              </View>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+                <ThemedText>No teams exist. Please create a team first.</ThemedText>
+                            <TouchableOpacity 
+                              style={[styles.button, { backgroundColor: backgroundColor, borderColor: tintColor }]} 
+                              onPress={() => bottomSheetRef.current?.show()}>
+                              <ThemedText style={styles.buttonText}>Create Team</ThemedText>
+                            </TouchableOpacity>
+                </View>
             ) : (
               <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
                 <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
@@ -179,5 +181,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: 'white',
     textAlign: 'center',
+  },
+  buttonText: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    borderRadius: 8,
+    padding: 12,
+    alignItems: 'center',
+    borderWidth: 1,
   },
 });

@@ -5,8 +5,7 @@ import { useTeam } from '@/contexts/TeamContext';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
-
-
+import { ThemedText } from './ThemedText';
 
 const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
@@ -16,11 +15,11 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
   const [showRenameTeam, setShowRenameTeam] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
 
-  // Fix the theme color hook calls
-  const bottomSheetColors = useThemeColor({}, 'bottomSheet');
-  const textColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.text;
-  const iconColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.icon;
-  const inputColor = typeof bottomSheetColors === 'string' ? bottomSheetColors : bottomSheetColors.input;
+  // Update theme color handling
+  const backgroundColor = useThemeColor({}, 'background');
+  const textColor = useThemeColor({}, 'text');
+  const tintColor = useThemeColor({}, 'tint');
+  const borderColor = useThemeColor({}, 'borderColor');
 
   const handleCreateTeamConfirm = () => {
     createTeam(newTeamName.trim());
@@ -86,16 +85,18 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
     setShowRenameTeam(false);
   };
 
-  const mainMenuItems: { icon: keyof typeof MaterialIcons.glyphMap; title: string; onPress: () => void }[] = [
+  const mainMenuItems: { icon: keyof typeof MaterialIcons.glyphMap; title: string; onPress: () => void; visible?: boolean }[] = [
     {
       icon: 'group-add',
       title: 'Create Team',
       onPress: () => setShowCreateTeam(true),
+      visible: true, // Always visible
     },
     {
       icon: 'groups-3',
       title: 'Select Team',
       onPress: () => setShowSelectTeam(true),
+      visible: teams.length > 0,
     },
     {
       icon: 'edit',
@@ -106,21 +107,25 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
           setShowRenameTeam(true);
         }
       },
+      visible: !!team,
     },
     {
       icon: 'group-remove',
       title: 'Remove Team',
       onPress: () => setShowRemoveTeam(true),
+      visible: teams.length > 0,
     },
     {
       icon: 'share',
       title: 'Share Team',
       onPress: handleExportTeam,
+      visible: !!team,
     },
     {
       icon: 'file-upload',
       title: 'Import Team',
       onPress: handleImportTeam,
+      visible: true, // Always visible
     },
   ];
 
@@ -128,14 +133,16 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
     <ActionSheet
       ref={ref}
       id="team-bottom-sheet"
-      onClose={handleClose}>
-      <View style={styles.content}>
+      onClose={handleClose}
+      containerStyle={[styles.bottomSheetContainer, { backgroundColor }]}
+      indicatorStyle={{ backgroundColor: borderColor }}>
+      <View style={[styles.content, { backgroundColor }]}>
         {!showCreateTeam && !showSelectTeam && !showRemoveTeam && !showRenameTeam && (
           <>
-            {mainMenuItems.map((item, index) => (
+            {mainMenuItems.filter(item => item.visible).map((item, index) => (
               <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
-                <MaterialIcons size={24} name={item.icon} color={iconColor} style={styles.menuIcon} />
-                <Text style={[styles.menuText, { color: textColor }]}>{item.title}</Text>
+                <MaterialIcons size={24} name={item.icon} color={tintColor} style={styles.menuIcon} />
+                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.title}</ThemedText>
               </TouchableOpacity>
             ))}
           </>
@@ -145,13 +152,20 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
           <View style={styles.formContainer}>
             <TextInput 
               placeholder='New Team Name' 
-              placeholderTextColor={iconColor}
+              placeholderTextColor={textColor}
               value={newTeamName} 
               onChangeText={setNewTeamName} 
-              style={[styles.input, { backgroundColor: inputColor, color: textColor }]} 
+              style={[styles.input, { 
+                borderColor, 
+                color: textColor,
+                backgroundColor: backgroundColor 
+              }]} 
             />
-            <TouchableOpacity style={[styles.button, newTeamName.trim() === '' && styles.buttonDisabled]} onPress={handleCreateTeamConfirm} disabled={newTeamName.trim() === ''}>
-              <Text style={styles.buttonText}>Confirm</Text>
+            <TouchableOpacity 
+              style={[styles.button, { backgroundColor: tintColor }, newTeamName.trim() === '' && styles.buttonDisabled]} 
+              onPress={handleCreateTeamConfirm} 
+              disabled={newTeamName.trim() === ''}>
+              <ThemedText style={styles.buttonText}>Confirm</ThemedText>
             </TouchableOpacity>
           </View>
         )}
@@ -160,8 +174,8 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
           <>
             {teams.map((item) => (
               <TouchableOpacity key={item.id} style={styles.menuItem} onPress={() => handleSelectTeam(item.id)}>
-                <MaterialIcons size={24} name='groups-3' color={iconColor} style={styles.menuIcon} />
-                <Text style={[styles.menuText, { color: textColor as string }]}>{item.name}</Text>
+                <MaterialIcons size={24} name='groups-3' color={tintColor} style={styles.menuIcon} />
+                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
               </TouchableOpacity>
             ))}
           </>
@@ -179,8 +193,8 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
                     { text: 'OK', onPress: () => handleRemoveTeam(item.id) },
                   ]);
                 }}>
-                <MaterialIcons size={24} name='group-remove' color={iconColor as string} style={styles.menuIcon} />
-                <Text style={[styles.menuText, { color: textColor as string }]}>{item.name}</Text>
+                <MaterialIcons size={24} name='group-remove' color={tintColor} style={styles.menuIcon} />
+                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
               </TouchableOpacity>
             ))}
           </>
@@ -190,17 +204,21 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
           <View style={styles.formContainer}>
             <TextInput 
               placeholder='New Team Name' 
-              placeholderTextColor={iconColor}
+              placeholderTextColor={textColor}
               value={newTeamName} 
               onChangeText={setNewTeamName} 
-              style={[styles.input, { backgroundColor: inputColor, color: textColor }]} 
+              style={[styles.input, { 
+                borderColor, 
+                color: textColor,
+                backgroundColor: backgroundColor 
+              }]} 
             />
             <TouchableOpacity 
-              style={[styles.button, newTeamName.trim() === '' && styles.buttonDisabled]} 
+              style={[styles.button, { backgroundColor: tintColor }, newTeamName.trim() === '' && styles.buttonDisabled]} 
               onPress={handleRenameTeam} 
               disabled={newTeamName.trim() === ''}
             >
-              <Text style={styles.buttonText}>Rename</Text>
+              <ThemedText style={styles.buttonText}>Rename</ThemedText>
             </TouchableOpacity>
           </View>
         )}
@@ -241,6 +259,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   input: {
+    borderWidth: 1,
     borderRadius: 8,
     padding: 12,
     marginBottom: 16,
@@ -255,7 +274,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#3A4045',
   },
   buttonText: {
-    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '500',
   },
