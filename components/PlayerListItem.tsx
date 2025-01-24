@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Alert, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Alert, View, Button } from 'react-native';
 import { PlayerType, PlayerPosition } from '@/types/models';
 import { positionColors } from '@/constants/positionColors';
 import { useTeam } from '@/contexts/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { ScaleDecorator } from "react-native-draggable-flatlist";
-import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@react-navigation/native';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useSport } from '@/context/SportContext';
+import { OptionMenuModal } from './OptionMenuModal';
+import { CustomInputDialog } from './CustomInputDialog';
+import { Ionicons } from '@expo/vector-icons';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -36,47 +37,27 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   );
   const textColor = useThemeColor({}, 'text') as string;
   const { colors } = useTheme();
+  const [modalVisible, setModalVisible] = useState(false);
+  const [renameDialogVisible, setRenameDialogVisible] = useState(false);
+  const [deleteDialogVisible, setDeleteDialogVisible] = useState(false);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-
-  const handleRename = () => {
-    Alert.prompt(
-      "Rename Player",
-      "Enter new name:",
-      [
-        {
-          text: "Cancel",
-          style: "cancel"
-        },
-        {
-          text: "OK",
-          onPress: (newName) => {
-            if (newName?.trim()) {
-              renamePlayer(player.id, newName.trim());
-            }
-          }
-        }
-      ],
-      "plain-text",
-      player.name
-    );
+  const handleRename = (newName: string) => {
+    if (newName.trim()) {
+      renamePlayer(player.id, newName.trim());
+    }
+    setRenameDialogVisible(false);
   };
 
   const handleDelete = () => {
-    Alert.alert(
-      "Delete Player",
-      `Are you sure you want to delete ${player.name}?`,
-      [
-        {
-          text: "Cancel",
-          style: "cancel"
-        },
-        {
-          text: "Delete",
-          onPress: () => deletePlayer(player.id),
-          style: "destructive"
-        }
-      ]
-    );
+    deletePlayer(player.id);
+    setDeleteDialogVisible(false);
+  };
+
+  const handleOptionsPress = (event: any) => {
+    const { pageX, pageY } = event.nativeEvent;
+    setModalPosition({ top: pageY, left: pageX });
+    setModalVisible(true);
   };
 
   return (
@@ -91,37 +72,34 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
       >
         <View style={styles.headerRow}>
           <Text >{player.name}</Text>
-          <Menu>
-            <MenuTrigger>
-              <Ionicons name="ellipsis-horizontal" size={24} color={textColor} />
-            </MenuTrigger>
-            <MenuOptions customStyles={{
-              optionsContainer: [
-                styles.menuContainer,
-                { 
-                  backgroundColor: colors.card,
-                }
-              ],
-              optionWrapper: styles.menuOption,
-            }}>
-              <MenuOption 
-                onSelect={handleRename} 
-                text="Rename" 
-                customStyles={{
-                  optionText: { color: textColor }
-                }}
-              />
-              <MenuOption 
-                onSelect={handleDelete} 
-                text="Delete" 
-                customStyles={{
-                  optionWrapper: styles.deleteOption,
-                  optionText: { color: 'red' }
-                }} 
-              />
-            </MenuOptions>
-          </Menu>
+          <TouchableOpacity onPress={handleOptionsPress}>
+          <Ionicons name="ellipsis-horizontal" size={24} color={textColor} />
+          </TouchableOpacity>
         </View>
+
+        <OptionMenuModal
+          visible={modalVisible}
+          onClose={() => setModalVisible(false)}
+          onRename={() => setRenameDialogVisible(true)}
+          onDelete={() => setDeleteDialogVisible(true)}
+          position={modalPosition}
+        />
+
+        <CustomInputDialog
+          visible={renameDialogVisible}
+          title="Rename Player"
+          onCancel={() => setRenameDialogVisible(false)}
+          onSubmit={handleRename}
+          initialValue={player.name}
+        />
+
+        <CustomInputDialog
+          visible={deleteDialogVisible}
+          title={`Delete ${player.name}?`}
+          onCancel={() => setDeleteDialogVisible(false)}
+          onSubmit={handleDelete}
+        />
+
         <SegmentedControl
           values={displayPositions}
           selectedIndex={positions.indexOf(player.position)}

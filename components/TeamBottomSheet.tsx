@@ -132,7 +132,6 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
 
   return (
     <ActionSheet
-      ref={ref}
       id="team-bottom-sheet"
       onClose={handleClose}
       containerStyle={[styles.bottomSheetContainer, { backgroundColor }]}

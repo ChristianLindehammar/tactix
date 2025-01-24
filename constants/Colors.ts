@@ -15,6 +15,7 @@ export const Colors = {
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
     borderColor: '#E2E8F0',
+    menuBackground: '#F9FAFB',
     bottomSheet: {
       background: '#FFFFFF',
       text: '#000000',
@@ -33,6 +34,7 @@ export const Colors = {
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
     borderColor: '#2A2F33',
+    menuBackground: '#2A2F33',
     bottomSheet: {
       background: '#2A2F33',
       text: '#FFFFFF',
