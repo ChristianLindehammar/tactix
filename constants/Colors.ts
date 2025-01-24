@@ -22,6 +22,8 @@ export const Colors = {
       input: '#F0F0F0',
       dragHandle: '#CCCCCC',
     },
+    buttonEnabled: '#0097B2',
+    buttonDisabled: '#CCC',
   },
   dark: {
     text: '#ECEDEE',
@@ -38,5 +40,7 @@ export const Colors = {
       input: '#3A4045',
       dragHandle: '#9BA0A5',
     },
+    buttonEnabled: '#444D51',
+    buttonDisabled: '#3A4045',
   },
 };

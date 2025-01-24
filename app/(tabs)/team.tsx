@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, Button, TextInput, Text, Pressable, Platform, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TextInput, Text, Pressable, Platform } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -16,6 +16,7 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import ActionSheet from 'react-native-actions-sheet';
+import { ThemedButton } from '@/components/ThemedButton';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
@@ -86,18 +87,18 @@ export default function TeamScreen() {
             {teams.length === 0 ? (
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
                 <ThemedText>No teams exist. Please create a team first.</ThemedText>
-                            <TouchableOpacity 
-                              style={[styles.button, { backgroundColor: backgroundColor, borderColor: tintColor }]} 
-                              onPress={() => bottomSheetRef.current?.show()}>
-                              <ThemedText style={styles.buttonText}>Create Team</ThemedText>
-                            </TouchableOpacity>
+                            <ThemedButton onPress={() => bottomSheetRef.current?.show()}>
+                              Create Team
+                            </ThemedButton>
                 </View>
             ) : (
               <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
                 <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
                 <ThemedView style={styles.addPlayerContainer}>
                   <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
-                  <Button title='Add Player' onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''} color={tintColor}/>
+                  <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
+                    Add Player
+                  </ThemedButton>
                 </ThemedView>
 
                 <NestableScrollContainer>

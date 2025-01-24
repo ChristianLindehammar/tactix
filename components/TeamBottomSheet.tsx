@@ -6,6 +6,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
 import { ThemedText } from './ThemedText';
+import { ThemedButton } from './ThemedButton';
 
 const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
@@ -161,12 +162,11 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
                 backgroundColor: backgroundColor 
               }]} 
             />
-            <TouchableOpacity 
-              style={[styles.button, { backgroundColor: tintColor }, newTeamName.trim() === '' && styles.buttonDisabled]} 
+            <ThemedButton 
               onPress={handleCreateTeamConfirm} 
               disabled={newTeamName.trim() === ''}>
-              <ThemedText style={styles.buttonText}>Confirm</ThemedText>
-            </TouchableOpacity>
+              Confirm
+            </ThemedButton>
           </View>
         )}
 
@@ -213,13 +213,11 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
                 backgroundColor: backgroundColor 
               }]} 
             />
-            <TouchableOpacity 
-              style={[styles.button, { backgroundColor: tintColor }, newTeamName.trim() === '' && styles.buttonDisabled]} 
+            <ThemedButton 
               onPress={handleRenameTeam} 
-              disabled={newTeamName.trim() === ''}
-            >
-              <ThemedText style={styles.buttonText}>Rename</ThemedText>
-            </TouchableOpacity>
+              disabled={newTeamName.trim() === ''}>
+              Rename
+            </ThemedButton>
           </View>
         )}
       </View>
