@@ -312,12 +312,43 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     );
   };
 
+  const sanitizeFileName = (name: string): string => {
+    return name
+      .replace(/[^a-z0-9]/gi, '_') // Replace any non-alphanumeric characters with underscore
+      .toLowerCase()
+      .slice(0, 50); // Limit length to 50 characters
+  };
+
   const exportTeam = async (teamId: string) => {
-    const teamToExport = teams.find(t => t.id === teamId);
-    if (!teamToExport) return;
-    const fileUri = FileSystem.documentDirectory + `tactix_team_${teamId}.tactix`;
-    await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(teamToExport));
-    await Sharing.shareAsync(fileUri, { mimeType: 'application/x-tactix' });
+    try {
+      const teamToExport = teams.find(t => t.id === teamId);
+      if (!teamToExport) return;
+  
+      const sanitizedName = sanitizeFileName(teamToExport.name);
+      const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.tactix`;
+      
+      await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(teamToExport, null, 2));
+  
+      const isAvailable = await Sharing.isAvailableAsync();
+      if (!isAvailable) {
+        alert('Sharing is not available on this device');
+        return;
+      }
+  
+      await Sharing.shareAsync(fileUri, {
+        mimeType: 'text/plain',
+        dialogTitle: `Share ${teamToExport.name}`,
+        UTI: 'public.plain-text'
+      }).catch(error => {
+        console.error('Sharing error:', error);
+        alert('Failed to share team');
+      });
+  
+      await FileSystem.deleteAsync(fileUri, { idempotent: true }).catch(console.error);
+    } catch (error) {
+      console.error('Error exporting team:', error);
+      alert('Failed to export team');
+    }
   };
 
   const importTeam = async (importedTeam: Team) => {
