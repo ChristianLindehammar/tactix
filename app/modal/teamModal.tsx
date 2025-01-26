@@ -124,64 +124,67 @@ export default function TeamModal() {
   ];
 
   return (
-    <View style={[styles.container, { backgroundColor }]}>
-      {!showSelectTeam && !showRemoveTeam && (
-        <>
-          {mainMenuItems
-            .filter(item => item.visible)
-            .map((item, index) => (
-              <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
-                <MaterialIcons size={24} name={item.icon} color={tintColor} style={styles.menuIcon} />
-                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.title}</ThemedText>
+    <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' }}>
+      <TouchableOpacity style={{ flex: 1 }} activeOpacity={1} onPress={handleClose} />
+      <View style={[styles.sheetContainer, { backgroundColor }]}>
+        {!showSelectTeam && !showRemoveTeam && (
+          <>
+            {mainMenuItems
+              .filter(item => item.visible)
+              .map((item, index) => (
+                <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
+                  <MaterialIcons size={24} name={item.icon} color={tintColor} style={styles.menuIcon} />
+                  <ThemedText style={[styles.menuText, { color: textColor }]}>{item.title}</ThemedText>
+                </TouchableOpacity>
+              ))}
+          </>
+        )}
+
+        {showSelectTeam && (
+          <>
+            {teams.map((item) => (
+              <TouchableOpacity key={item.id} style={styles.menuItem} onPress={() => handleSelectTeam(item.id)}>
+                <MaterialIcons size={24} name='groups-3' color={tintColor} style={styles.menuIcon} />
+                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
               </TouchableOpacity>
             ))}
-        </>
-      )}
+          </>
+        )}
 
-      {showSelectTeam && (
-        <>
-          {teams.map((item) => (
-            <TouchableOpacity key={item.id} style={styles.menuItem} onPress={() => handleSelectTeam(item.id)}>
-              <MaterialIcons size={24} name='groups-3' color={tintColor} style={styles.menuIcon} />
-              <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
-            </TouchableOpacity>
-          ))}
-        </>
-      )}
+        {showRemoveTeam && (
+          <>
+            {teams.map((item) => (
+              <TouchableOpacity
+                key={item.id}
+                style={styles.menuItem}
+                onPress={() => {
+                  Alert.alert('Remove Team', `Are you sure you want to remove "${item.name}"?`, [
+                    { text: 'Cancel', style: 'cancel' },
+                    { text: 'OK', onPress: () => handleRemoveTeam(item.id) },
+                  ]);
+                }}>
+                <MaterialIcons size={24} name='group-remove' color={tintColor} style={styles.menuIcon} />
+                <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
+              </TouchableOpacity>
+            ))}
+          </>
+        )}
 
-      {showRemoveTeam && (
-        <>
-          {teams.map((item) => (
-            <TouchableOpacity
-              key={item.id}
-              style={styles.menuItem}
-              onPress={() => {
-                Alert.alert('Remove Team', `Are you sure you want to remove "${item.name}"?`, [
-                  { text: 'Cancel', style: 'cancel' },
-                  { text: 'OK', onPress: () => handleRemoveTeam(item.id) },
-                ]);
-              }}>
-              <MaterialIcons size={24} name='group-remove' color={tintColor} style={styles.menuIcon} />
-              <ThemedText style={[styles.menuText, { color: textColor }]}>{item.name}</ThemedText>
-            </TouchableOpacity>
-          ))}
-        </>
-      )}
+        <CustomInputDialog
+          visible={showCreateTeam}
+          title="Create New Team"
+          onCancel={() => setShowCreateTeam(false)}
+          onSubmit={handleCreateTeamConfirm}
+        />
 
-      <CustomInputDialog
-        visible={showCreateTeam}
-        title="Create New Team"
-        onCancel={() => setShowCreateTeam(false)}
-        onSubmit={handleCreateTeamConfirm}
-      />
-
-      <CustomInputDialog
-        visible={showRenameTeam}
-        title="Rename Team"
-        onCancel={() => setShowRenameTeam(false)}
-        onSubmit={handleRenameTeam}
-        initialValue={team?.name}
-      />
+        <CustomInputDialog
+          visible={showRenameTeam}
+          title="Rename Team"
+          onCancel={() => setShowRenameTeam(false)}
+          onSubmit={handleRenameTeam}
+          initialValue={team?.name}
+        />
+      </View>
     </View>
   );
 }
@@ -201,5 +204,10 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontSize: 16,
+  },
+  sheetContainer: {
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    padding: 16,
   },
 });

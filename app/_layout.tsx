@@ -46,12 +46,12 @@ export default function RootLayout() {
                 <Stack.Screen 
                   name="modal/teamModal" 
                   options={{ 
-                    presentation: 'modal',
-                    title: 'Team',
-                    headerStyle: {
-                      backgroundColor: colorScheme === 'dark' ? '#000' : '#fff',
+                    presentation: 'transparentModal',
+                    animation: 'fade',  // This will fade the background
+                    headerShown: false, // Remove the header
+                    cardStyle: { 
+                      backgroundColor: 'transparent',
                     },
-                    headerTintColor: colorScheme === 'dark' ? '#fff' : '#000',
                   }} 
                 />
                 <Stack.Screen name="+not-found" options={{ title: 'Oops!' }} />
