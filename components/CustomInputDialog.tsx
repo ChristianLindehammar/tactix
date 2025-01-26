@@ -3,6 +3,7 @@ import { Modal, View, TextInput, StyleSheet, TouchableOpacity } from 'react-nati
 import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { Colors } from '@/constants/Colors';
 
 interface CustomInputDialogProps {
   visible: boolean;
@@ -20,9 +21,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
   initialValue = ''
 }) => {
   const [value, setValue] = useState(initialValue);
-  const backgroundColor = useThemeColor({}, 'background');
   const textColor = useThemeColor({}, 'text');
-  const tintColor = useThemeColor({}, 'tint');
 
   return (
     <Modal visible={visible} transparent animationType="fade">
@@ -41,7 +40,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
               <ThemedText>Cancel</ThemedText>
             </TouchableOpacity>
             <TouchableOpacity 
-              style={[styles.button, { backgroundColor: tintColor }]} 
+              style={[styles.button, { backgroundColor: Colors.light.tint }]} 
               onPress={() => value.trim() && onSubmit(value.trim())}
             >
               <ThemedText style={{ color: '#fff' }}>OK</ThemedText>
