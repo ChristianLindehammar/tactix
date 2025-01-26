@@ -5,6 +5,8 @@ import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
 import { useEffect } from 'react';
 import * as Linking from 'expo-linking';
+import { Picker } from '@react-native-picker/picker';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
@@ -18,7 +20,8 @@ import HockeySvg from '@/components/ui/HockeySvg';
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
-  const { selectedSport } = useSport();
+  const { selectedSport, setSelectedSport } = useSport();
+  const textColor = useThemeColor({}, 'text');
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
@@ -31,11 +34,31 @@ export default function HomeScreen() {
     return () => subscription.remove();
   }, []);
 
+  if (!selectedSport) {
+    return (
+      <ThemedView style={[styles.container, styles.centerContent]}>
+        <View style={styles.sportSelectorContainer}>
+          <ThemedText style={styles.titleText}>Welcome to Tactix!</ThemedText>
+          <ThemedText style={styles.subtitleText}>First, select your preferred sport:</ThemedText>
+          <Picker
+            selectedValue={selectedSport || "football"}
+            onValueChange={(itemValue) => setSelectedSport(itemValue)}
+            style={[styles.picker, { color: textColor }]}>
+            {/* Remove the null option since iOS doesn't handle it well */}
+            <Picker.Item label="Floorball" value="floorball" />
+            <Picker.Item label="Football" value="football" />
+            <Picker.Item label="Hockey" value="hockey" />
+          </Picker>
+        </View>
+      </ThemedView>
+    );
+  }
+
   if (!team) {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
         <Pressable style={styles.noTeamContainer} onPress={() => router.push('/team')}>
-          <ThemedText style={styles.noTeamText}>No team selected. Please create or select one.</ThemedText>
+          <ThemedText style={styles.noTeamText}>Now, let's create your team!</ThemedText>
           <IconSymbol name='arrow.right.circle.fill' size={42} color='gray' style={styles.arrow} />
         </Pressable>
       </ThemedView>
@@ -103,7 +126,6 @@ const styles = StyleSheet.create({
   },
   noTeamContainer: {
     alignItems: 'center',
-    // alight the text and icon in the center
     padding: 16,
   },
   noTeamText: {
@@ -118,5 +140,30 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: LAYOUT.COURT_PADDING,
+  },
+  sportSelectorContainer: {
+    padding: 20,
+    width: '100%',
+    maxWidth: 300,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  titleText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  subtitleText: {
+    fontSize: 16,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  picker: {
+    marginTop: 8,
+    marginBottom: 16,
+    width: '100%',
+    height: 150, // Add fixed height for better vertical centering
   },
 });

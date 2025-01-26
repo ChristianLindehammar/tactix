@@ -43,7 +43,7 @@ const SvgComponent = (props: SvgProps) => (
     <Path stroke="#D4484E" strokeWidth={2} d="M9 58h409M7 782h413" />
     <Path stroke="#D4484E" strokeWidth={4} d="M5 421h417" />
     <Path stroke="#4588E0" strokeWidth={4} d="M5 537h417M5 305h417" />
-    <Circle cx={214} cy={422} r={6} fill="#4588E0" />
+    <Circle cx={214} cy={421} r={6} fill="#4588E0" />
     <Circle cx={214.5} cy={422.5} r={63.5} stroke="#D4484E" strokeWidth={2} />
     <Circle cx={306.5} cy={698.5} r={63.5} stroke="#D4484E" strokeWidth={2} />
     <Circle cx={306.5} cy={143.5} r={63.5} stroke="#D4484E" strokeWidth={2} />
