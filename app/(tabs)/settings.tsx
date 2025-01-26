@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { useSport } from '@/context/SportContext';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 import { Collapsible } from '@/components/Collapsible';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -10,6 +11,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function SettingsScreen() {
   const { selectedSport, setSelectedSport } = useSport();
+  const textColor = useThemeColor({}, 'text');
 
   return (
     <ParallaxScrollView
@@ -40,13 +42,9 @@ export default function SettingsScreen() {
           <ThemedText>• @react-navigation - MIT License</ThemedText>
           <ThemedText>• expo and related packages - MIT License</ThemedText>
           <ThemedText>• react & react-native - MIT License</ThemedText>
-          <ThemedText>• react-native-actions-sheet - MIT License</ThemedText>
           <ThemedText>• react-native-draggable-flatlist - MIT License</ThemedText>
-          <ThemedText>• react-native-gesture-handler - MIT License</ThemedText>
-          <ThemedText>• react-native-popup-menu - MIT License</ThemedText>
           <ThemedText>• react-native-reanimated - MIT License</ThemedText>
           <ThemedText>• react-native-svg - MIT License</ThemedText>
-          <ThemedText>• react-native-webview - MIT License</ThemedText>
         </ThemedView>
       </Collapsible>
       </Collapsible>
@@ -56,7 +54,7 @@ export default function SettingsScreen() {
       <Picker
         selectedValue={selectedSport}
         onValueChange={(itemValue) => setSelectedSport(itemValue)}
-        style={styles.picker}>
+        style={[styles.picker, { color: textColor }]}>
         <Picker.Item label="Floorball" value="floorball" />
         <Picker.Item label="Football" value="football" />
         <Picker.Item label="Hockey" value="hockey" />

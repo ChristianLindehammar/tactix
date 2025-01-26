@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 4,
     minWidth: 64,
-    alignItems: 'center',
+    alignItems: 'center'
   },
 });
