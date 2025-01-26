@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, Alert, StyleSheet } from 'react-native';
 import ActionSheet, { SheetManager } from 'react-native-actions-sheet';
 import { useTeam } from '@/contexts/TeamContext';
@@ -8,7 +8,7 @@ import * as DocumentPicker from 'expo-document-picker';
 import { ThemedText } from './ThemedText';
 import { ThemedButton } from './ThemedButton';
 
-const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
+const TeamBottomSheet = () => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
@@ -26,19 +26,19 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
     createTeam(newTeamName.trim());
     setNewTeamName('');
     setShowCreateTeam(false);
-    (ref as any)?.current?.hide();
+    SheetManager.hide('team-bottom-sheet');
   };
 
   const handleSelectTeam = (teamId: string) => {
     selectTeam(teamId);
     setShowSelectTeam(false);
-    (ref as any)?.current?.hide();
+    SheetManager.hide('team-bottom-sheet');
   };
 
   const handleRemoveTeam = (teamId: string) => {
     removeTeam(teamId);
     setShowRemoveTeam(false);
-    (ref as any)?.current?.hide();
+    SheetManager.hide('team-bottom-sheet');
   };
 
   const handleRenameTeam = () => {
@@ -46,14 +46,14 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
       renameTeam(team.id, newTeamName.trim());
       setNewTeamName('');
       setShowRenameTeam(false);
-      (ref as any)?.current?.hide();
+      SheetManager.hide('team-bottom-sheet');
     }
   };
 
   const handleExportTeam = async () => {
     if (!team) return;
     await exportTeam(team.id);
-    (ref as any)?.current?.hide();
+    SheetManager.hide('team-bottom-sheet');
   };
 
   const handleImportTeam = async () => {
@@ -71,7 +71,7 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
           return;
         }
         await importTeamFromFile(file.uri);
-        (ref as any)?.current?.hide();
+        SheetManager.hide('team-bottom-sheet');
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to import team file');
@@ -222,7 +222,7 @@ const TeamBottomSheet = forwardRef<typeof ActionSheet>((props, ref) => {
       </View>
     </ActionSheet>
   );
-});
+};
 
 const styles = StyleSheet.create({
   bottomSheetContainer: {

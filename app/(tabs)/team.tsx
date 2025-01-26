@@ -9,22 +9,19 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
 import { MenuProvider } from 'react-native-popup-menu';
+import { SheetManager } from 'react-native-actions-sheet';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import ActionSheet from 'react-native-actions-sheet';
 import { ThemedButton } from '@/components/ThemedButton';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
-  const bottomSheetRef = useRef<typeof ActionSheet>(null);
-  const tintColor  = useThemeColor({}, 'tint') as string
-  const backgroundColor = useThemeColor({}, 'background') as string
   const textColor  = useThemeColor({}, 'text') as string
 
 
@@ -87,7 +84,7 @@ export default function TeamScreen() {
             {teams.length === 0 ? (
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
                 <ThemedText>No teams exist. Please create a team first.</ThemedText>
-                            <ThemedButton onPress={() => bottomSheetRef.current?.show()}>
+                            <ThemedButton onPress={() => SheetManager.show('team-bottom-sheet')}>
                               Create Team
                             </ThemedButton>
                 </View>
@@ -114,10 +111,10 @@ export default function TeamScreen() {
             )}
           </SafeAreaView>
         </ThemedView>
-        <Pressable style={styles.fab} onPress={() => bottomSheetRef.current?.show()}>
+        <Pressable style={styles.fab} onPress={() => SheetManager.show('team-bottom-sheet')}>
           <Ionicons name="people-outline" size={28} color="white" />
         </Pressable>
-        <TeamBottomSheet ref={bottomSheetRef} />
+        <TeamBottomSheet />
       </GestureHandlerRootView>
     </MenuProvider>
   );
