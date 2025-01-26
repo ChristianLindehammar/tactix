@@ -16,40 +16,48 @@
         "CFBundleDocumentTypes": [
           {
             "CFBundleTypeName": "Tactix Team File",
-            "LSItemContentTypes": [
-              "public.data"
-            ],
-            "LSHandlerRank": "Owner"
-          },
+            "LSHandlerRank": "Owner",
+            "LSItemContentTypes": ["com.lindehammar-konsult.tactix.team"],
+            "CFBundleTypeExtensions": ["tactix"]
+          }
+        ],
+        "UTExportedTypeDeclarations": [
           {
-            "CFBundleTypeName": "Tactix Team File",
-            "LSItemContentTypes": [
-              "public.data"
-            ],
-            "LSHandlerRank": "Owner"
+            "UTTypeIdentifier": "com.lindehammar-konsult.tactix.team",
+            "UTTypeDescription": "Tactix Team File",
+            "UTTypeConformsTo": ["public.data", "public.content"],
+            "UTTypeTagSpecification": {
+              "public.filename-extension": "tactix"
+            }
           }
         ]
       },
-      "bundleIdentifier": "com.lhconsult.tactix"
+      "bundleIdentifier": "com.lindehammar-konsult.tactix"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lhconsult.tactix",
+      "package": "com.lindehammarkonsult.tactix",
       "intentFilters": [
         {
-          "action": "VIEW",
+          "action": "android.intent.action.VIEW",
           "data": [
             {
-              "mimeType": "application/x-tactix",
-              "path": "*.tactix"
+              "scheme": "file",
+              "host": "*",
+              "pathPattern": ".*\\.tactix"
+            },
+            {
+              "scheme": "content",
+              "host": "*",
+              "pathPattern": ".*\\.tactix"
             }
           ],
           "category": [
-            "BROWSABLE",
-            "DEFAULT"
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
           ]
         }
       ]

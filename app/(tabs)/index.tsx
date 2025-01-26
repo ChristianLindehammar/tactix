@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import * as Linking from 'expo-linking';
 import { Picker } from '@react-native-picker/picker';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import * as FileSystem from 'expo-file-system';
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
@@ -25,11 +26,46 @@ export default function HomeScreen() {
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
-      if (url.startsWith('file://')) {
-        console.log('Importing team from file:', url);
-        await importTeamFromFile(url);
+      try {
+        console.log('Handling URL:', url);
+        let fileUri = url;
+
+        // Handle content:// URIs on Android
+        if (Platform.OS === 'android' && url.startsWith('content://')) {
+          const tempFile = `${FileSystem.cacheDirectory}temp.tactix`;
+          await FileSystem.copyAsync({
+            from: url,
+            to: tempFile
+          });
+          fileUri = tempFile;
+        }
+
+        // Validate file extension
+        if (!fileUri.toLowerCase().endsWith('.tactix')) {
+          throw new Error('Invalid file type. Only .tactix files are supported.');
+        }
+
+        await importTeamFromFile(fileUri);
+
+        // Clean up temp file if created
+        if (fileUri !== url) {
+          await FileSystem.deleteAsync(fileUri, { idempotent: true });
+        }
+      } catch (error) {
+        console.error('Error handling file:', error);
+        Alert.alert('Error', 'Failed to import team file');
       }
     };
+
+    // Handle both cold and warm starts
+    const checkInitialURL = async () => {
+      const initialUrl = await Linking.getInitialURL();
+      if (initialUrl) {
+        await handleOpenURL({ url: initialUrl });
+      }
+    };
+    checkInitialURL();
+
     const subscription = Linking.addEventListener('url', handleOpenURL);
     return () => subscription.remove();
   }, []);

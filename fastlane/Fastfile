@@ -1,0 +1,51 @@
+default_platform(:ios)
+
+before_all do
+  ensure_git_branch
+  ensure_git_status_clean
+  git_pull
+end
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    setup_ci if ENV['CI']
+    
+    # Ensure that your app is ready for submission
+    ensure_build_directory
+
+    # Build your iOS app
+    build_ios_app(
+      workspace: "ios/tactix.xcworkspace",
+      scheme: "tactix",
+      export_method: "app-store",
+      output_directory: "ios/build",
+      output_name: "tactix.ipa"
+    )
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+end
+
+platform :android do
+  desc "Push a new beta build to Play Store"
+  lane :beta do
+    setup_ci if ENV['CI']
+
+    # Ensure that your app is ready for submission
+    gradle(
+      task: 'clean bundle',
+      build_type: 'Release',
+      project_dir: 'android/'
+    )
+
+    # Upload to Play Store
+    upload_to_play_store(
+      track: 'beta',
+      aab: "#{lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]}"
+    )
+  end
+end
