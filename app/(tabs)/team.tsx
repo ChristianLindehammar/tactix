@@ -6,10 +6,13 @@ import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
 import { NestableDraggableFlatList, NestableScrollContainer } from 'react-native-draggable-flatlist';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import TeamBottomSheet from '@/components/TeamBottomSheet';
 import { Ionicons } from '@expo/vector-icons';
 import { MenuProvider } from 'react-native-popup-menu';
-import { SheetManager } from 'react-native-actions-sheet';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+
+type RootStackParamList = {
+  'modal/teamModal': undefined;
+};
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -23,7 +26,7 @@ export default function TeamScreen() {
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const textColor  = useThemeColor({}, 'text') as string
-
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -84,7 +87,7 @@ export default function TeamScreen() {
             {teams.length === 0 ? (
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
                 <ThemedText>No teams exist. Please create a team first.</ThemedText>
-                            <ThemedButton onPress={() => SheetManager.show('team-bottom-sheet')}>
+                            <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>
                               Create Team
                             </ThemedButton>
                 </View>
@@ -111,10 +114,9 @@ export default function TeamScreen() {
             )}
           </SafeAreaView>
         </ThemedView>
-        <Pressable style={styles.fab} onPress={() => SheetManager.show('team-bottom-sheet')}>
+        <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
           <Ionicons name="people-outline" size={28} color="white" />
         </Pressable>
-        <TeamBottomSheet />
       </GestureHandlerRootView>
     </MenuProvider>
   );

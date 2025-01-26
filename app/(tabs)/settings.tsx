@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { useSport } from '@/context/SportContext';
 
@@ -8,7 +8,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export default function TabTwoScreen() {
+export default function SettingsScreen() {
   const { selectedSport, setSelectedSport } = useSport();
 
   return (

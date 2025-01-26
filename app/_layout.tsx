@@ -8,7 +8,6 @@ import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { TeamProvider } from '@/contexts/TeamContext';
 import { SportProvider } from '@/context/SportContext';
-import { SheetProvider } from 'react-native-actions-sheet';
 import { View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -42,13 +41,22 @@ export default function RootLayout() {
         <TeamProvider>
           <SafeAreaProvider>
             <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-              <SheetProvider>
-                <Stack>
-                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                  <Stack.Screen name="+not-found" />
-                </Stack>
-                <StatusBar style="auto" />
-              </SheetProvider>
+              <Stack>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen 
+                  name="modal/teamModal" 
+                  options={{ 
+                    presentation: 'modal',
+                    title: 'Team',
+                    headerStyle: {
+                      backgroundColor: colorScheme === 'dark' ? '#000' : '#fff',
+                    },
+                    headerTintColor: colorScheme === 'dark' ? '#fff' : '#000',
+                  }} 
+                />
+                <Stack.Screen name="+not-found" options={{ title: 'Oops!' }} />
+              </Stack>
+              <StatusBar style="auto" />
             </ThemeProvider>
           </SafeAreaProvider>
         </TeamProvider>
