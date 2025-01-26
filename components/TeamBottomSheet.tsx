@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, Alert, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import ActionSheet, { SheetManager } from 'react-native-actions-sheet';
 import { useTeam } from '@/contexts/TeamContext';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
 import { ThemedText } from './ThemedText';
-import { ThemedButton } from './ThemedButton';
+import { CustomInputDialog } from './CustomInputDialog';
 
 const TeamBottomSheet = () => {
   const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
@@ -14,7 +14,6 @@ const TeamBottomSheet = () => {
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
   const [showRenameTeam, setShowRenameTeam] = useState(false);
-  const [newTeamName, setNewTeamName] = useState('');
 
   // Update theme color handling
   const backgroundColor = useThemeColor({}, 'background');
@@ -22,11 +21,12 @@ const TeamBottomSheet = () => {
   const tintColor = useThemeColor({}, 'tint');
   const borderColor = useThemeColor({}, 'borderColor');
 
-  const handleCreateTeamConfirm = () => {
-    createTeam(newTeamName.trim());
-    setNewTeamName('');
-    setShowCreateTeam(false);
-    SheetManager.hide('team-bottom-sheet');
+  const handleCreateTeamConfirm = (teamName: string) => {
+    if (teamName.trim()) {
+      createTeam(teamName.trim());
+      setShowCreateTeam(false);
+      SheetManager.hide('team-bottom-sheet');
+    }
   };
 
   const handleSelectTeam = (teamId: string) => {
@@ -41,10 +41,9 @@ const TeamBottomSheet = () => {
     SheetManager.hide('team-bottom-sheet');
   };
 
-  const handleRenameTeam = () => {
-    if (team && newTeamName.trim()) {
-      renameTeam(team.id, newTeamName.trim());
-      setNewTeamName('');
+  const handleRenameTeam = (newName: string) => {
+    if (team && newName.trim()) {
+      renameTeam(team.id, newName.trim());
       setShowRenameTeam(false);
       SheetManager.hide('team-bottom-sheet');
     }
@@ -104,7 +103,6 @@ const TeamBottomSheet = () => {
       title: 'Rename Team',
       onPress: () => {
         if (team) {
-          setNewTeamName(team.name);
           setShowRenameTeam(true);
         }
       },
@@ -137,7 +135,7 @@ const TeamBottomSheet = () => {
       containerStyle={[styles.bottomSheetContainer, { backgroundColor }]}
       indicatorStyle={{ backgroundColor: borderColor }}>
       <View style={[styles.content, { backgroundColor }]}>
-        {!showCreateTeam && !showSelectTeam && !showRemoveTeam && !showRenameTeam && (
+        {!showSelectTeam && !showRemoveTeam && (
           <>
             {mainMenuItems.filter(item => item.visible).map((item, index) => (
               <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
@@ -148,26 +146,20 @@ const TeamBottomSheet = () => {
           </>
         )}
 
-        {showCreateTeam && (
-          <View style={styles.formContainer}>
-            <TextInput 
-              placeholder='New Team Name' 
-              placeholderTextColor={textColor}
-              value={newTeamName} 
-              onChangeText={setNewTeamName} 
-              style={[styles.input, { 
-                borderColor, 
-                color: textColor,
-                backgroundColor: backgroundColor 
-              }]} 
-            />
-            <ThemedButton 
-              onPress={handleCreateTeamConfirm} 
-              disabled={newTeamName.trim() === ''}>
-              Confirm
-            </ThemedButton>
-          </View>
-        )}
+        <CustomInputDialog
+          visible={showCreateTeam}
+          title="Create New Team"
+          onCancel={() => setShowCreateTeam(false)}
+          onSubmit={handleCreateTeamConfirm}
+        />
+
+        <CustomInputDialog
+          visible={showRenameTeam}
+          title="Rename Team"
+          onCancel={() => setShowRenameTeam(false)}
+          onSubmit={handleRenameTeam}
+          initialValue={team?.name}
+        />
 
         {showSelectTeam && (
           <>
@@ -197,27 +189,6 @@ const TeamBottomSheet = () => {
               </TouchableOpacity>
             ))}
           </>
-        )}
-
-        {showRenameTeam && (
-          <View style={styles.formContainer}>
-            <TextInput 
-              placeholder='New Team Name' 
-              placeholderTextColor={textColor}
-              value={newTeamName} 
-              onChangeText={setNewTeamName} 
-              style={[styles.input, { 
-                borderColor, 
-                color: textColor,
-                backgroundColor: backgroundColor 
-              }]} 
-            />
-            <ThemedButton 
-              onPress={handleRenameTeam} 
-              disabled={newTeamName.trim() === ''}>
-              Rename
-            </ThemedButton>
-          </View>
         )}
       </View>
     </ActionSheet>
