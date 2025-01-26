@@ -5,6 +5,7 @@ import { getItem, setItem } from '../app/utils/AsyncStorage';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { useSport } from '@/context/SportContext';
+import { Platform, Alert } from 'react-native';
 
 interface TeamContextProps {
   team?: Team; // Make optional
@@ -325,26 +326,82 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       if (!teamToExport) return;
   
       const sanitizedName = sanitizeFileName(teamToExport.name);
-      const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.tactix`;
-      
-      await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(teamToExport, null, 2));
+      const fileContent = JSON.stringify(teamToExport, null, 2);
   
-      const isAvailable = await Sharing.isAvailableAsync();
-      if (!isAvailable) {
-        alert('Sharing is not available on this device');
-        return;
+      if (Platform.OS === "android") {
+        Alert.alert(
+          'Export Team',
+          'How would you like to export the team?',
+          [
+            {
+              text: 'Save to Files',
+              onPress: async () => {
+                const permissions = await FileSystem.StorageAccessFramework.requestDirectoryPermissionsAsync();
+                
+                if (permissions.granted) {
+                  // First write to cache
+                  const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}.json`;
+                  await FileSystem.writeAsStringAsync(tempUri, fileContent);
+                  
+                  // Read as base64
+                  const base64 = await FileSystem.readAsStringAsync(tempUri, { 
+                    encoding: FileSystem.EncodingType.Base64 
+                  });
+  
+                  // Save to user selected directory
+                  await FileSystem.StorageAccessFramework.createFileAsync(
+                    permissions.directoryUri, 
+                    sanitizedName, 
+                    'application/json'
+                  ).then(async (uri) => {
+                    await FileSystem.writeAsStringAsync(uri, base64, { 
+                      encoding: FileSystem.EncodingType.Base64 
+                    });
+                  });
+  
+                  // Clean up temp file
+                  await FileSystem.deleteAsync(tempUri, { idempotent: true });
+                }
+              }
+            },
+            {
+              text: 'Share',
+              onPress: async () => {
+                const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}.json`;
+                await FileSystem.writeAsStringAsync(tempUri, fileContent);
+                await Sharing.shareAsync(tempUri, {
+                  mimeType: 'text/plain',
+                  dialogTitle: `Share ${teamToExport.name}`,
+                  UTI: 'public.plain-text'
+                });
+                await FileSystem.deleteAsync(tempUri, { idempotent: true });
+              }
+            },
+            {
+              text: 'Cancel',
+              style: 'cancel'
+            }
+          ]
+        );
+      } else {
+        // iOS implementation remains unchanged
+        const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.tactix`;
+        await FileSystem.writeAsStringAsync(fileUri, fileContent);
+        
+        const isAvailable = await Sharing.isAvailableAsync();
+        if (!isAvailable) {
+          alert('Sharing is not available on this device');
+          return;
+        }
+        
+        await Sharing.shareAsync(fileUri, {
+          mimeType: 'text/plain',
+          dialogTitle: `Share ${teamToExport.name}`,
+          UTI: 'public.plain-text'
+        });
+        
+        await FileSystem.deleteAsync(fileUri, { idempotent: true });
       }
-  
-      await Sharing.shareAsync(fileUri, {
-        mimeType: 'text/plain',
-        dialogTitle: `Share ${teamToExport.name}`,
-        UTI: 'public.plain-text'
-      }).catch(error => {
-        console.error('Sharing error:', error);
-        alert('Failed to share team');
-      });
-  
-      await FileSystem.deleteAsync(fileUri, { idempotent: true }).catch(console.error);
     } catch (error) {
       console.error('Error exporting team:', error);
       alert('Failed to export team');
