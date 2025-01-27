@@ -65,8 +65,8 @@ const TeamBottomSheet = () => {
       
       if (!result.canceled && result.assets?.[0]) {
         const file = result.assets[0];
-        if (!file.name.endsWith('.tactix')) {
-          Alert.alert('Invalid File', 'Please select a .tactix file');
+        if (!file.name.endsWith('.coachmate')) {
+          Alert.alert('Invalid File', 'Please select a .coachmate file');
           return;
         }
         await importTeamFromFile(file.uri);

@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "Tactix",
-    "slug": "Tactix",
+    "name": "CoachMate",
+    "slug": "CoachMate",
     "description": "© 2025 Christian Lindehammar. All rights reserved.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "tactix",
+    "scheme": "coachmate",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -16,31 +16,31 @@
       "infoPlist": {
         "CFBundleDocumentTypes": [
           {
-            "CFBundleTypeName": "Tactix Team File",
+            "CFBundleTypeName": "CoachMate Team File",
             "LSHandlerRank": "Owner",
             "LSItemContentTypes": [
-              "com.lindehammar-konsult.tactix.team"
+              "com.lindehammar-konsult.coachmate.team"
             ],
             "CFBundleTypeExtensions": [
-              "tactix"
+              "coachmate"
             ]
           }
         ],
         "UTExportedTypeDeclarations": [
           {
-            "UTTypeIdentifier": "com.lindehammar-konsult.tactix.team",
-            "UTTypeDescription": "Tactix Team File",
+            "UTTypeIdentifier": "com.lindehammar-konsult.coachmate.team",
+            "UTTypeDescription": "CoachMate Team File",
             "UTTypeConformsTo": [
               "public.data",
               "public.content"
             ],
             "UTTypeTagSpecification": {
-              "public.filename-extension": "tactix"
+              "public.filename-extension": "coachmate"
             }
           }
         ]
       },
-      "bundleIdentifier": "com.lindehammar-konsult.tactix",
+      "bundleIdentifier": "com.lindehammar-konsult.coachmate",
       "appleTeamId": "4H4Q7SQF95"
     },
     "android": {
@@ -48,7 +48,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lindehammarkonsult.tactix",
+      "package": "com.lindehammarkonsult.coachmate",
       "intentFilters": [
         {
           "action": "android.intent.action.VIEW",
@@ -56,12 +56,12 @@
             {
               "scheme": "file",
               "host": "*",
-              "pathPattern": ".*\\.tactix"
+              "pathPattern": ".*\\.coachmate"
             },
             {
               "scheme": "content",
               "host": "*",
-              "pathPattern": ".*\\.tactix"
+              "pathPattern": ".*\\.coachmate"
             }
           ],
           "category": [

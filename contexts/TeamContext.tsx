@@ -385,7 +385,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         );
       } else {
         // iOS implementation remains unchanged
-        const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.tactix`;
+        const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.coachmate`;
         await FileSystem.writeAsStringAsync(fileUri, fileContent);
         
         const isAvailable = await Sharing.isAvailableAsync();

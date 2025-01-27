@@ -32,7 +32,7 @@ export default function HomeScreen() {
 
         // Handle content:// URIs on Android
         if (Platform.OS === 'android' && url.startsWith('content://')) {
-          const tempFile = `${FileSystem.cacheDirectory}temp.tactix`;
+          const tempFile = `${FileSystem.cacheDirectory}temp.coachmate`;
           await FileSystem.copyAsync({
             from: url,
             to: tempFile
@@ -41,8 +41,8 @@ export default function HomeScreen() {
         }
 
         // Validate file extension
-        if (!fileUri.toLowerCase().endsWith('.tactix')) {
-          throw new Error('Invalid file type. Only .tactix files are supported.');
+        if (!fileUri.toLowerCase().endsWith('.coachmate')) {
+          throw new Error('Invalid file type. Only .coachmate files are supported.');
         }
 
         await importTeamFromFile(fileUri);
@@ -74,7 +74,7 @@ export default function HomeScreen() {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
         <View style={styles.sportSelectorContainer}>
-          <ThemedText style={styles.titleText}>Welcome to Tactix!</ThemedText>
+          <ThemedText style={styles.titleText}>Welcome to CoachMate!</ThemedText>
           <ThemedText style={styles.subtitleText}>First, select your preferred sport:</ThemedText>
           <Picker
             selectedValue={selectedSport || "football"}

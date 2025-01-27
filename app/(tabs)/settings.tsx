@@ -29,7 +29,7 @@ export default function SettingsScreen() {
       </ThemedView>
       <Collapsible title="About the app">
       <ThemedText style={{ marginBottom: 8 }}>A tool for sports coaches to plan team training, manage tactics, and develop game strategies.</ThemedText>
-      <ThemedText style={{ marginBottom: 16 }}>© 2025 Tactix by Christian Lindehammar. All rights reserved.</ThemedText>
+      <ThemedText style={{ marginBottom: 16 }}>© 2025 CoachMate by Christian Lindehammar. All rights reserved.</ThemedText>
 
       <Collapsible title="3rd party libraries">
         <ThemedText style={{ marginBottom: 8 }}>

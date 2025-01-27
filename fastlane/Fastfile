@@ -16,11 +16,11 @@ platform :ios do
 
     # Build your iOS app
     build_ios_app(
-      workspace: "ios/tactix.xcworkspace",
-      scheme: "tactix",
+      workspace: "ios/coachmate.xcworkspace",
+      scheme: "coachmate",
       export_method: "app-store",
       output_directory: "ios/build",
-      output_name: "tactix.ipa"
+      output_name: "coachmate.ipa"
     )
 
     # Upload to TestFlight
