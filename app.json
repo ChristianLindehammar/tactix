@@ -12,27 +12,36 @@
     "ios": {
       "supportsTablet": true,
       "icon": "./assets/images/icon.png",
+      "buildNumber": "1",
       "infoPlist": {
         "CFBundleDocumentTypes": [
           {
             "CFBundleTypeName": "Tactix Team File",
             "LSHandlerRank": "Owner",
-            "LSItemContentTypes": ["com.lindehammar-konsult.tactix.team"],
-            "CFBundleTypeExtensions": ["tactix"]
+            "LSItemContentTypes": [
+              "com.lindehammar-konsult.tactix.team"
+            ],
+            "CFBundleTypeExtensions": [
+              "tactix"
+            ]
           }
         ],
         "UTExportedTypeDeclarations": [
           {
             "UTTypeIdentifier": "com.lindehammar-konsult.tactix.team",
             "UTTypeDescription": "Tactix Team File",
-            "UTTypeConformsTo": ["public.data", "public.content"],
+            "UTTypeConformsTo": [
+              "public.data",
+              "public.content"
+            ],
             "UTTypeTagSpecification": {
               "public.filename-extension": "tactix"
             }
           }
         ]
       },
-      "bundleIdentifier": "com.lindehammar-konsult.tactix"
+      "bundleIdentifier": "com.lindehammar-konsult.tactix",
+      "appleTeamId": "4H4Q7SQF95"
     },
     "android": {
       "adaptiveIcon": {
@@ -80,6 +89,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "69e9ae8c-493e-4f23-a1d9-38e673506934"
+      }
     }
   }
 }

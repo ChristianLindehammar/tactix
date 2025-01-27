@@ -7000,9 +7000,18 @@ index 0000000..917080c
 +  }
 +}
 diff --git a/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec b/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
-index 6680c60..95d1bb5 100644
+index 6680c60..0bfdc4e 100644
 --- a/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
 +++ b/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
+@@ -41,7 +41,7 @@ Pod::Spec.new do |spec|
+ 
+   spec.ios.vendored_frameworks = "destroot/Library/Frameworks/ios/hermes.framework"
+   spec.osx.vendored_frameworks = "destroot/Library/Frameworks/macosx/hermes.framework"
+-  spec.visionos.vendored_frameworks = "destroot/Library/Frameworks/xros/hermes.framework"
++  # spec.visionos.vendored_frameworks = "destroot/Library/Frameworks/xros/hermes.framework"
+ 
+   if HermesEngineSourceType::isPrebuilt(source_type) then
+ 
 @@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
        ss.source_files = "destroot/include/hermes/**/*.h"
        ss.header_mappings_dir = "destroot/include"
