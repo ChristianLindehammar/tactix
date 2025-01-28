@@ -7,6 +7,9 @@ import * as Sharing from 'expo-sharing';
 import { useSport } from '@/context/SportContext';
 import { Platform, Alert } from 'react-native';
 
+const FILE_EXTENSION = '.coachmate';
+const FILE_MIME_TYPE = 'application/coachmate';
+
 interface TeamContextProps {
   team?: Team; // Make optional
   teams: Team[];                // Expose all teams
@@ -339,27 +342,23 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
                 const permissions = await FileSystem.StorageAccessFramework.requestDirectoryPermissionsAsync();
                 
                 if (permissions.granted) {
-                  // First write to cache
-                  const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}.json`;
+                  const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}${FILE_EXTENSION}`;
                   await FileSystem.writeAsStringAsync(tempUri, fileContent);
                   
-                  // Read as base64
                   const base64 = await FileSystem.readAsStringAsync(tempUri, { 
                     encoding: FileSystem.EncodingType.Base64 
                   });
   
-                  // Save to user selected directory
                   await FileSystem.StorageAccessFramework.createFileAsync(
                     permissions.directoryUri, 
-                    sanitizedName, 
-                    'application/json'
+                    `${sanitizedName}${FILE_EXTENSION}`, 
+                    FILE_MIME_TYPE
                   ).then(async (uri) => {
                     await FileSystem.writeAsStringAsync(uri, base64, { 
                       encoding: FileSystem.EncodingType.Base64 
                     });
                   });
   
-                  // Clean up temp file
                   await FileSystem.deleteAsync(tempUri, { idempotent: true });
                 }
               }
@@ -367,12 +366,12 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
             {
               text: 'Share',
               onPress: async () => {
-                const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}.json`;
+                const tempUri = `${FileSystem.cacheDirectory}${sanitizedName}${FILE_EXTENSION}`;
                 await FileSystem.writeAsStringAsync(tempUri, fileContent);
                 await Sharing.shareAsync(tempUri, {
-                  mimeType: 'text/plain',
+                  mimeType: FILE_MIME_TYPE,
                   dialogTitle: `Share ${teamToExport.name}`,
-                  UTI: 'public.plain-text'
+                  UTI: 'public.data'  // Changed from 'public.plain-text' for better iOS compatibility
                 });
                 await FileSystem.deleteAsync(tempUri, { idempotent: true });
               }
@@ -384,8 +383,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
           ]
         );
       } else {
-        // iOS implementation remains unchanged
-        const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}.coachmate`;
+        // iOS implementation
+        const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}${FILE_EXTENSION}`;
         await FileSystem.writeAsStringAsync(fileUri, fileContent);
         
         const isAvailable = await Sharing.isAvailableAsync();
@@ -395,9 +394,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         }
         
         await Sharing.shareAsync(fileUri, {
-          mimeType: 'text/plain',
+          mimeType: FILE_MIME_TYPE,
           dialogTitle: `Share ${teamToExport.name}`,
-          UTI: 'public.plain-text'
+          UTI: 'public.data'  
         });
         
         await FileSystem.deleteAsync(fileUri, { idempotent: true });
