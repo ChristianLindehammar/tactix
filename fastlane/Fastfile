@@ -11,6 +11,15 @@ platform :ios do
   lane :beta do
     setup_ci if ENV['CI']
     
+    # Sync certificates
+    match(type: "appstore", readonly: true)
+    
+    # Increment build number
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1,
+      xcodeproj: "ios/coachmate.xcodeproj"
+    )
+    
     # Ensure that your app is ready for submission
     ensure_build_directory
 
@@ -31,9 +40,14 @@ platform :ios do
 end
 
 platform :android do
-  desc "Push a new beta build to Play Store"
+  desc "Push a new beta build to Play Store Internal Testing"
   lane :beta do
     setup_ci if ENV['CI']
+
+    # Increment version code
+    increment_version_code(
+      gradle_file_path: "android/app/build.gradle"
+    )
 
     # Ensure that your app is ready for submission
     gradle(
@@ -42,9 +56,9 @@ platform :android do
       project_dir: 'android/'
     )
 
-    # Upload to Play Store
+    # Upload to Play Store Internal Testing
     upload_to_play_store(
-      track: 'beta',
+      track: 'internal',
       aab: "#{lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]}"
     )
   end
