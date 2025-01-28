@@ -34,7 +34,7 @@ Push a new beta build to TestFlight
 [bundle exec] fastlane android beta
 ```
 
-Push a new beta build to Play Store
+Push a new beta build to Play Store Internal Testing
 
 ----
 
