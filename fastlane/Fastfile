@@ -20,9 +20,9 @@ platform :ios do
       xcodeproj: "ios/coachmate.xcodeproj"
     )
     
-    # Ensure that your app is ready for submission
-    ensure_build_directory
-
+    # Create build directory
+    sh "mkdir -p ios/build"
+    
     # Build your iOS app
     build_ios_app(
       workspace: "ios/coachmate.xcworkspace",
