@@ -1,4 +1,4 @@
-import { StyleSheet, View, Dimensions, Text, Pressable } from 'react-native';
+import { StyleSheet, View, Dimensions, Pressable, Platform, Alert } from 'react-native';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -51,6 +51,8 @@ export default function HomeScreen() {
         if (fileUri !== url) {
           await FileSystem.deleteAsync(fileUri, { idempotent: true });
         }
+
+        router.replace('/(tabs)/team');
       } catch (error) {
         console.error('Error handling file:', error);
         Alert.alert('Error', 'Failed to import team file');
