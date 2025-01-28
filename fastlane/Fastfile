@@ -56,16 +56,27 @@ platform :android do
   lane :beta do
     setup_ci if ENV['CI']
 
+    # Clean the project first
+    gradle(
+      task: 'clean',
+      project_dir: 'android/'
+    )
+
     # Increment version code
     increment_version_code(
       gradle_file_path: "android/app/build.gradle"
     )
 
-    # Ensure that your app is ready for submission
+    # Build the release bundle with detailed logging
     gradle(
-      task: 'clean bundle',
+      task: 'bundle',
       build_type: 'Release',
-      project_dir: 'android/'
+      project_dir: 'android/',
+      properties: {
+        "org.gradle.jvmargs" => "-Xmx4096m"
+      },
+      print_command: true,
+      flags: "--stacktrace --info"
     )
 
     # Upload to Play Store Internal Testing
