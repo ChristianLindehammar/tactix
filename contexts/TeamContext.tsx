@@ -39,7 +39,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [selectedTeamId, setSelectedTeamId] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
-  const { selectedSport } = useSport();
+  const { selectedSport, setSelectedSport } = useSport();  // Update this line to destructure setSelectedSport
 
   // Load initial data
   useEffect(() => {
@@ -409,6 +409,12 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const importTeam = async (importedTeam: Team) => {
     if (!importedTeam.name) return;
+
+    // Switch sport if the imported team has a different sport
+    if (importedTeam.sport && importedTeam.sport !== selectedSport) {
+      setSelectedSport(importedTeam.sport);
+    }
+
     let finalName = importedTeam.name;
     let counter = 1;
     while (teams.some(t => t.name === finalName)) {
