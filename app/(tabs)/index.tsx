@@ -27,6 +27,10 @@ export default function HomeScreen() {
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
       try {
+        if (!url || !url.startsWith('file://')) {
+          return;
+        }
+
         console.log('Handling URL:', url);
         let fileUri = url;
 

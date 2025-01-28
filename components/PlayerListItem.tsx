@@ -22,8 +22,6 @@ interface PlayerListItemProps {
 
 export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   player,
-  onPress,
-  isOnCourt,
   drag,
   isActive
 }) => {
@@ -39,7 +37,6 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   const { colors } = useTheme();
   const [modalVisible, setModalVisible] = useState(false);
   const [renameDialogVisible, setRenameDialogVisible] = useState(false);
-  const [deleteDialogVisible, setDeleteDialogVisible] = useState(false);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
   const handleRename = (newName: string) => {
@@ -50,8 +47,21 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   };
 
   const handleDelete = () => {
-    deletePlayer(player.id);
-    setDeleteDialogVisible(false);
+    Alert.alert(
+      "Delete Player",
+      `Are you sure you want to delete ${player.name}?`,
+      [
+        {
+          text: "Cancel",
+          style: "cancel"
+        },
+        {
+          text: "Delete",
+          style: "destructive",
+          onPress: () => deletePlayer(player.id)
+        }
+      ]
+    );
   };
 
   const handleOptionsPress = (event: any) => {
@@ -81,7 +91,7 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
           visible={modalVisible}
           onClose={() => setModalVisible(false)}
           onRename={() => setRenameDialogVisible(true)}
-          onDelete={() => setDeleteDialogVisible(true)}
+          onDelete={handleDelete}
           position={modalPosition}
         />
 
@@ -91,13 +101,6 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
           onCancel={() => setRenameDialogVisible(false)}
           onSubmit={handleRename}
           initialValue={player.name}
-        />
-
-        <CustomInputDialog
-          visible={deleteDialogVisible}
-          title={`Delete ${player.name}?`}
-          onCancel={() => setDeleteDialogVisible(false)}
-          onSubmit={handleDelete}
         />
 
         <SegmentedControl
