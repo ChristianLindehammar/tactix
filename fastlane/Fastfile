@@ -34,9 +34,10 @@ platform :ios do
 
     # Upload to TestFlight
     upload_to_testflight(
+      key_id: "9KF34Z7C3A",
+      issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
+      key_filepath: "../AuthKey_9KF34Z7C3A.p8",
       skip_waiting_for_build_processing: true,
-      apple_id: ENV['APPLE_ID'],
-      app_specific_password: ENV['APP_SPECIFIC_PASSWORD'],
     )
   end
 end
