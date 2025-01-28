@@ -79,6 +79,21 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }
   }, [selectedTeamId, isLoading]);
 
+  // Add this new effect to handle sport changes
+  useEffect(() => {
+    if (!isLoading) {
+      const teamsInSport = teams.filter(team => team.sport === selectedSport);
+      if (teamsInSport.length > 0) {
+        // If current selected team is not in the new sport, select the first team of the new sport
+        if (!teamsInSport.some(team => team.id === selectedTeamId)) {
+          setSelectedTeamId(teamsInSport[0].id);
+        }
+      } else {
+        setSelectedTeamId('');
+      }
+    }
+  }, [selectedSport, teams, isLoading]);
+
   const filteredTeams = teams.filter(team => team.sport === selectedSport);
   const selectedTeam = filteredTeams.find(t => t.id === selectedTeamId);
 
