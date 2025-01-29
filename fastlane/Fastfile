@@ -72,8 +72,12 @@ platform :android do
       build_type: 'Release',
       project_dir: 'android/',
       properties: {
-        "android.injected.version.code" => current_build_number,
-        "org.gradle.jvmargs" => "-Xmx4096m"
+      "android.injected.version.code" => current_build_number,
+      "org.gradle.jvmargs" => "-Xmx4096m",
+      "android.injected.signing.store.file" => "keystore.jks",
+      "android.injected.signing.store.password" => ENV["ANDROID_KEYSTORE_PASSWORD"],
+      "android.injected.signing.key.alias" => "coachmate",
+      "android.injected.signing.key.password" => ENV["ANDROID_KEY_PASSWORD"],
       },
       print_command: true,
       flags: "--stacktrace --info"
