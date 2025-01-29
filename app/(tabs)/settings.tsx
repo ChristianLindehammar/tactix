@@ -56,7 +56,7 @@ export default function SettingsScreen() {
         onValueChange={(itemValue) => setSelectedSport(itemValue)}
         style={[styles.picker, { color: textColor }]}>
         <Picker.Item label="Floorball" value="floorball" />
-        <Picker.Item label="Football" value="football" />
+        <Picker.Item label="Soccer" value="football" />
         <Picker.Item label="Hockey" value="hockey" />
       </Picker>
       </Collapsible>

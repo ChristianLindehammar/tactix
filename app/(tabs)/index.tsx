@@ -86,9 +86,8 @@ export default function HomeScreen() {
             selectedValue={selectedSport || "football"}
             onValueChange={(itemValue) => setSelectedSport(itemValue)}
             style={[styles.picker, { color: textColor }]}>
-            {/* Remove the null option since iOS doesn't handle it well */}
             <Picker.Item label="Floorball" value="floorball" />
-            <Picker.Item label="Football" value="football" />
+            <Picker.Item label="Soccer" value="football" />
             <Picker.Item label="Hockey" value="hockey" />
           </Picker>
         </View>
