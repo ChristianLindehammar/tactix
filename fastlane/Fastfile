@@ -62,10 +62,9 @@ platform :android do
       project_dir: 'android/'
     )
 
-    # Increment version code
-    increment_version_code(
-      gradle_file_path: "android/app/build.gradle"
-    )
+    # Get the latest version code from internal track
+    previous_build_number = google_play_track_version_codes(track: "internal")[0]
+    current_build_number = previous_build_number + 1
 
     # Build the release bundle with detailed logging
     gradle(
@@ -73,6 +72,7 @@ platform :android do
       build_type: 'Release',
       project_dir: 'android/',
       properties: {
+        "android.injected.version.code" => current_build_number,
         "org.gradle.jvmargs" => "-Xmx4096m"
       },
       print_command: true,
@@ -82,7 +82,12 @@ platform :android do
     # Upload to Play Store Internal Testing
     upload_to_play_store(
       track: 'internal',
-      aab: "#{lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]}"
+      skip_upload_apk: true,
+      aab: "#{lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]}",
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      release_status: 'draft'
     )
   end
 end
