@@ -11,23 +11,22 @@ const FILE_EXTENSION = '.coachmate';
 const FILE_MIME_TYPE = 'application/coachmate';
 
 interface TeamContextProps {
-  team?: Team; // Make optional
-  teams: Team[];                // Expose all teams
+  team?: Team;
+  teams: Team[];
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
   addPlayer: (name: string) => void;
-  setPlayerType: (playerId: string, position: PlayerPosition) => void; // Renamed method
-  movePlayerToCourt: (playerId: string) => void;
-  movePlayerToBench: (playerId: string) => void;
-  updatePlayerIndex: (playerId: string, newIndex: number, isCourt: boolean) => void;  // Add this line
-  createTeam: (name: string) => void; // Add this
+  setPlayerType: (playerId: string, position: PlayerPosition) => void;
+  createTeam: (name: string) => void;
   selectTeam: (teamId: string) => void;
-  removeTeam: (teamId: string) => void; // Add this
-  renameTeam: (teamId: string, newName: string) => void; // Add this
-  renamePlayer: (playerId: string, newName: string) => void; // Add this
-  deletePlayer: (playerId: string) => void; // Add this
-  exportTeam: (teamId: string) => void; // Add this
-  importTeam: (importedTeam: Team) => void; // Add this
-  importTeamFromFile: (fileUri: string) => Promise<void>; // Add this
+  removeTeam: (teamId: string) => void;
+  renameTeam: (teamId: string, newName: string) => void;
+  renamePlayer: (playerId: string, newName: string) => void;
+  deletePlayer: (playerId: string) => void;
+  exportTeam: (teamId: string) => void;
+  importTeam: (importedTeam: Team) => void;
+  importTeamFromFile: (fileUri: string) => Promise<void>;
+  setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
+  reindexPlayers: (players: PlayerType[], isCourt: boolean) => void;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -39,9 +38,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [selectedTeamId, setSelectedTeamId] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
-  const { selectedSport, setSelectedSport } = useSport();  // Update this line to destructure setSelectedSport
+  const { selectedSport, setSelectedSport } = useSport();
 
-  // Load initial data
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -65,26 +63,22 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     loadData();
   }, []);
 
-  // Save teams whenever they change
   useEffect(() => {
     if (!isLoading) {
       setItem(TEAMS_STORAGE_KEY, teams);
     }
   }, [teams, isLoading]);
 
-  // Save selected team whenever it changes
   useEffect(() => {
     if (!isLoading) {
       setItem(SELECTED_TEAM_KEY, selectedTeamId);
     }
   }, [selectedTeamId, isLoading]);
 
-  // Add this new effect to handle sport changes
   useEffect(() => {
     if (!isLoading) {
       const teamsInSport = teams.filter(team => team.sport === selectedSport);
       if (teamsInSport.length > 0) {
-        // If current selected team is not in the new sport, select the first team of the new sport
         if (!teamsInSport.some(team => team.id === selectedTeamId)) {
           setSelectedTeamId(teamsInSport[0].id);
         }
@@ -122,7 +116,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const padding = 10;
     const spacing = playerSize + padding;
 
-    // Use ratios for position calculations
     const isPositionTaken = (pos: Position): boolean => {
       if (!selectedTeam) return false;
       return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(
@@ -132,7 +125,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       );
     };
 
-    // Calculate positions as ratios of original dimensions
     const maxColumns = Math.floor(LAYOUT.FLOORBALL_COURT.WIDTH / spacing);
     
     let column = 0;
@@ -153,7 +145,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       row++;
     }
 
-    // Fallback: return ratio-based position
     return {
       x: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.WIDTH - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.WIDTH,
       y: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.HEIGHT - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.HEIGHT
@@ -165,9 +156,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const newPlayer: PlayerType = {
       id: Date.now().toString(),
       name: name,
-      courtPosition: position, // Assign to courtPosition
+      courtPosition: position,
       position: PlayerPosition.Forward,
-      index: selectedTeam?.benchPlayers.length || 0,  // Add index based on current length
+      index: selectedTeam?.benchPlayers.length || 0,
     };
     
     updateTeamInTeams(currentTeam => ({
@@ -176,7 +167,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }));
   };
 
-  const setPlayerType = (playerId: string, position: PlayerPosition) => { // Renamed method
+  const setPlayerType = (playerId: string, position: PlayerPosition) => {
     updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
@@ -188,70 +179,31 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }));
   };
 
-  const updatePlayerIndex = (playerId: string, newIndex: number, isCourt: boolean) => {
-    updateTeamInTeams(currentTeam => {
-      const players = isCourt ? currentTeam.startingPlayers : currentTeam.benchPlayers;
-      const player = players.find(p => p.id === playerId);
-      if (!player) return currentTeam;
-
-      const updatedPlayers = players
-        .map(p => {
-          if (p.id === playerId) return { ...p, index: newIndex };
-          if (p.index >= newIndex) return { ...p, index: p.index + 1 };
-          return p;
-        })
-        .sort((a, b) => a.index - b.index);
-
-      return {
-        ...currentTeam,
-        startingPlayers: isCourt ? updatedPlayers : currentTeam.startingPlayers,
-        benchPlayers: isCourt ? currentTeam.benchPlayers : updatedPlayers,
-      };
-    });
+  const setPlayers = (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => {
+    setTeams(prevTeams => prevTeams.map(team => {
+      if (team.id === selectedTeamId) {
+        return {
+          ...team,
+          startingPlayers: courtPlayers,
+          benchPlayers: benchPlayers,
+        };
+      }
+      return team;
+    }));
   };
-
-  const movePlayerToCourt = (playerId: string) => {
-    updateTeamInTeams(currentTeam => {
-      const player = currentTeam.benchPlayers.find(p => p.id === playerId);
-      if (!player) return currentTeam;
-      
-      // Update indices for remaining bench players
-      const updatedBenchPlayers = currentTeam.benchPlayers
-        .filter(p => p.id !== playerId)
-        .map((p, idx) => ({ ...p, index: idx }));
-
-      // Add player to court with new index
-      const playerWithNewIndex = { ...player, index: currentTeam.startingPlayers.length };
-
-      return {
-        ...currentTeam,
-        benchPlayers: updatedBenchPlayers,
-        startingPlayers: [...currentTeam.startingPlayers, playerWithNewIndex]
-          .sort((a, b) => a.index - b.index),
-      };
-    });
-  };
-
-  const movePlayerToBench = (playerId: string) => {
-    updateTeamInTeams(currentTeam => {
-      const player = currentTeam.startingPlayers.find(p => p.id === playerId);
-      if (!player) return currentTeam;
-
-      // Update indices for remaining court players
-      const updatedStartingPlayers = currentTeam.startingPlayers
-        .filter(p => p.id !== playerId)
-        .map((p, idx) => ({ ...p, index: idx }));
-
-      // Add player to bench with new index
-      const playerWithNewIndex = { ...player, index: currentTeam.benchPlayers.length };
-
-      return {
-        ...currentTeam,
-        startingPlayers: updatedStartingPlayers,
-        benchPlayers: [...currentTeam.benchPlayers, playerWithNewIndex]
-          .sort((a, b) => a.index - b.index),
-      };
-    });
+  
+  const reindexPlayers = (players: PlayerType[], isCourt: boolean) => {
+    const updated = players.map((p, index) => ({ ...p, index }));
+    setTeams(prevTeams => prevTeams.map(team => {
+      if (team.id === selectedTeamId) {
+        return {
+          ...team,
+          startingPlayers: isCourt ? updated : team.startingPlayers,
+          benchPlayers: isCourt ? team.benchPlayers : updated,
+        };
+      }
+      return team;
+    }));
   };
 
   const createTeam = (name: string) => {
@@ -333,9 +285,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const sanitizeFileName = (name: string): string => {
     return name
-      .replace(/[^a-z0-9]/gi, '_') // Replace any non-alphanumeric characters with underscore
+      .replace(/[^a-z0-9]/gi, '_')
       .toLowerCase()
-      .slice(0, 50); // Limit length to 50 characters
+      .slice(0, 50);
   };
 
   const exportTeam = async (teamId: string) => {
@@ -386,7 +338,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
                 await Sharing.shareAsync(tempUri, {
                   mimeType: FILE_MIME_TYPE,
                   dialogTitle: `Share ${teamToExport.name}`,
-                  UTI: 'public.data'  // Changed from 'public.plain-text' for better iOS compatibility
+                  UTI: 'public.data'
                 });
                 await FileSystem.deleteAsync(tempUri, { idempotent: true });
               }
@@ -398,7 +350,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
           ]
         );
       } else {
-        // iOS implementation
         const fileUri = `${FileSystem.cacheDirectory}${sanitizedName}${FILE_EXTENSION}`;
         await FileSystem.writeAsStringAsync(fileUri, fileContent);
         
@@ -425,7 +376,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const importTeam = async (importedTeam: Team) => {
     if (!importedTeam.name) return;
 
-    // Switch sport if the imported team has a different sport
     if (importedTeam.sport && importedTeam.sport !== selectedSport) {
       setSelectedSport(importedTeam.sport);
     }
@@ -439,7 +389,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const newTeam = { ...importedTeam, id: now, name: finalName };
     setTeams(prev => [...prev, newTeam]);
 
-    // log all teams ids
     console.log('All teams:', teams.map(t => t.id));
     setSelectedTeamId(now);
   };
@@ -455,7 +404,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   if (isLoading) {
-    return null; // or return a loading spinner
+    return null;
   }
 
   return (
@@ -465,9 +414,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       updatePlayerPosition, 
       addPlayer, 
       setPlayerType,  
-      movePlayerToCourt, 
-      movePlayerToBench,
-      updatePlayerIndex,  
       createTeam,
       selectTeam,
       removeTeam,
@@ -477,6 +423,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       exportTeam,
       importTeam,
       importTeamFromFile,
+      setPlayers,
+      reindexPlayers,
     }}>
       {children}
     </TeamContext.Provider>

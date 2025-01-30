@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useMemo, useRef } from 'react';
 import { StyleSheet, View, TextInput, Text, Pressable, Platform } from 'react-native';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -22,7 +22,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { ThemedButton } from '@/components/ThemedButton';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, movePlayerToCourt, movePlayerToBench, updatePlayerIndex } = useTeam();
+  const { team, teams, addPlayer, reindexPlayers, setPlayers} = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const textColor  = useThemeColor({}, 'text') as string
@@ -35,39 +35,28 @@ export default function TeamScreen() {
     }
   };
 
-  const handlePlayersChange = ({ data, from, to }: any) => {
-    const movedPlayer = data[to];
-    if (movedPlayer.type !== 'player') return;
-
-    benchHeaderRef.current?.measureInWindow((x, benchY) => {
-      // Find the indices of headers in the data array
-      const benchHeaderIndex = data.findIndex((item: any) => item.id === 'bench-header');
-
-      // If dropped before bench header index, it's court. If after, it's bench
-      if (to < benchHeaderIndex) {
-        console.log('Move to court');
-        movePlayerToCourt(movedPlayer.id);
-      } else {
-        console.log('Move to bench');
-        movePlayerToBench(movedPlayer.id);
-      }
-
-      // Update indices after moving
-      const players = data.filter((item: any) => item.type === 'player');
-      players.forEach((player: PlayerType, index: number) => {
-        updatePlayerIndex(player.id, index, !!player.courtPosition);
-      });
-    });
+  const handlePlayersChange = ({ data }: any) => {
+    const benchHeaderIndex = data.findIndex((item: any) => item.id === 'bench-header');
+    const courtPlayers = data
+      .slice(0, benchHeaderIndex)
+      .filter((item: any) => item.type === 'player')
+      .map((p: PlayerType) => ({ ...p }));
+    const benchPlayers = data
+      .slice(benchHeaderIndex + 1)
+      .filter((item: any) => item.type === 'player')
+      .map((p: PlayerType) => ({ ...p }));
+    setPlayers(courtPlayers, benchPlayers);
+    reindexPlayers(courtPlayers, true);
+    reindexPlayers(benchPlayers, false);
   };
 
-  // Combine data into a single array with headers
-  const listData = [
-    ...(team?.startingPlayers || []).sort((a, b) => a.index - b.index).map((p) => ({ ...p, type: 'player' })),
+  const listData = useMemo(() => [
+    ...(team?.startingPlayers || []).map((p) => ({ ...p, type: 'player' })),
     { id: 'bench-header', type: 'header', title: 'Bench Players' },
-    ...(team?.benchPlayers || []).sort((a, b) => a.index - b.index).map((p) => ({ ...p, type: 'player' })),
-  ];
+    ...(team?.benchPlayers || []).map((p) => ({ ...p, type: 'player' })),
+  ], [team?.startingPlayers, team?.benchPlayers]);
 
-  const renderItem = ({ item, drag, isActive }: any) => {
+  const renderItem = useCallback(({ item, drag, isActive }: any) => {
     if (item.type === 'header') {
       return (
         <View ref={item.title === 'Bench Players' ? benchHeaderRef : undefined}>
@@ -76,8 +65,15 @@ export default function TeamScreen() {
       );
     }
 
-    return <PlayerListItem key={item.id} player={item} onPress={() => {}} drag={drag} isActive={isActive} isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} />;
-  };
+    return <PlayerListItem 
+      key={item.id} 
+      player={item} 
+      onPress={() => {}} 
+      drag={drag} 
+      isActive={isActive} 
+      isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} 
+    />;
+}, [benchHeaderRef, team?.startingPlayers]);
 
   return (
     <MenuProvider>
