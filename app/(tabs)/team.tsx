@@ -48,7 +48,7 @@ export default function TeamScreen() {
           });
         }
         setShowTooltip(true);
-      }, 500); // Small delay to ensure layout is complete
+      }, 1000); // Small delay to ensure layout is complete
 
       const timer = setTimeout(() => setShowTooltip(false), 5000);
       return () => {
