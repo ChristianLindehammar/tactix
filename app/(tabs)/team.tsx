@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import { StyleSheet, View, TextInput, Pressable, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
@@ -6,6 +6,8 @@ import { LAYOUT } from '@/constants/layout';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { DragHintOverlay } from '@/components/DragHintOverlay';
 
 type RootStackParamList = {
   'modal/teamModal': undefined;
@@ -21,14 +23,42 @@ import ReorderableList, {
   ReorderableListReorderEvent,
   reorderItems,
 } from 'react-native-reorderable-list';
+import { TooltipModal } from '@/components/TooltipModal';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, setPlayers } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
+  const [showTooltip, setShowTooltip] = useState(false);
   const benchHeaderRef = useRef<View>(null);
   const textColor  = useThemeColor({}, 'text') as string
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
+  const [showDragHint, setShowDragHint] = useState(true);
+
+  useEffect(() => {
+    if (teams.length > 0 && team && team.startingPlayers.length === 0 && team.benchPlayers.length === 0) {
+      setShowTooltip(true);
+      const timer = setTimeout(() => setShowTooltip(false), 5000); // Hide after 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [teams, team]);
+
+  useEffect(() => {
+    const checkAndShowDragHint = async () => {
+      if (team?.startingPlayers.length === 2 || team?.benchPlayers.length === 2) {
+        const hasShownHint = await AsyncStorage.getItem('dragHintShown');
+        if (!hasShownHint) {
+          setShowDragHint(true);
+        }
+      }
+    };
+    checkAndShowDragHint();
+  }, [team?.startingPlayers.length, team?.benchPlayers.length]);
+
+  const handleDragHintFinish = useCallback(async () => {
+    setShowDragHint(false);
+    await AsyncStorage.setItem('dragHintShown', 'true');
+  }, []);
 
   const listData = useMemo(() => [
     ...(team?.startingPlayers || []).map((p) => ({ ...p, type: 'player' })),
@@ -87,7 +117,18 @@ export default function TeamScreen() {
                   </View>
               ) : (
                 <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+                  <DragHintOverlay 
+                    visible={showDragHint} 
+                    onFinish={handleDragHintFinish}
+                  />
                   <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
+                  
+                  <TooltipModal
+                    visible={showTooltip}
+                    onClose={() => setShowTooltip(false)}
+                    message="Start by adding players to your team using the input field above"
+                  />
+
                   <ThemedView style={styles.addPlayerContainer}>
                     <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
                     <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
