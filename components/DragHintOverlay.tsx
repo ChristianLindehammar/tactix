@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { Animated, StyleSheet, View, Pressable } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { Animated, StyleSheet, View, Pressable, Keyboard } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface DragHintOverlayProps {
   visible: boolean;
@@ -15,6 +16,9 @@ export const DragHintOverlay: React.FC<DragHintOverlayProps> = ({
   const translateY = useRef(new Animated.Value(0)).current;
   const opacity = useRef(new Animated.Value(0)).current;
   const animationRef = useRef<Animated.CompositeAnimation>();
+  const [keyboardVisible, setKeyboardVisible] = useState(false);
+  const { t } = useTranslation();
+  
 
   const handleDismiss = () => {
     animationRef.current?.stop();
@@ -26,7 +30,21 @@ export const DragHintOverlay: React.FC<DragHintOverlayProps> = ({
   };
 
   useEffect(() => {
-    if (visible) {
+    const keyboardDidShow = Keyboard.addListener('keyboardDidShow', () => {
+      setKeyboardVisible(true);
+    });
+    const keyboardDidHide = Keyboard.addListener('keyboardDidHide', () => {
+      setKeyboardVisible(false);
+    });
+
+    return () => {
+      keyboardDidShow.remove();
+      keyboardDidHide.remove();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (visible && !keyboardVisible) {
       const animation = Animated.sequence([
         Animated.timing(opacity, {
           toValue: 1,
@@ -59,16 +77,16 @@ export const DragHintOverlay: React.FC<DragHintOverlayProps> = ({
     return () => {
       animationRef.current?.stop();
     };
-  }, [visible]);
+  }, [visible, keyboardVisible]);
 
-  if (!visible) return null;
+  if (!visible || keyboardVisible) return null;
 
   return (
     <Animated.View style={[styles.container, { opacity }]}>
       <Pressable style={styles.pressable} onPress={handleDismiss}>
         <View style={styles.content}>
           <ThemedText style={styles.text}>
-            Drag and hold players up and down to reorder them
+            {t('dragHint')}
           </ThemedText>
           <Animated.View style={{ transform: [{ translateY }] }}>
             <MaterialCommunityIcons name="gesture-tap-hold" size={32} color="#fff" />

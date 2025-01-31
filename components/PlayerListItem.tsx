@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, Alert, View, Button } from 'react-native';
-import { PlayerType, PlayerPosition } from '@/types/models';
+import { PlayerType, PlayerPosition, usePlayerPositionTranslation } from '@/types/models';
 import { positionColors } from '@/constants/positionColors';
 import { useTeam } from '@/contexts/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
@@ -11,6 +11,7 @@ import { OptionMenuModal } from './OptionMenuModal';
 import { CustomInputDialog } from './CustomInputDialog';
 import { Ionicons } from '@expo/vector-icons';
 import { useReorderableDrag } from 'react-native-reorderable-list';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -22,13 +23,22 @@ export const PlayerListItem = React.memo(
     const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
     const { selectedSport } = useSport();
     const positions = Object.values(PlayerPosition);
-    const displayPositions = positions.map((pos) => (pos === PlayerPosition.Midfielder && selectedSport === 'floorball' ? 'Center' : pos));
     const textColor = useThemeColor({}, 'text') as string;
     const { colors } = useTheme();
     const [modalVisible, setModalVisible] = useState(false);
     const [renameDialogVisible, setRenameDialogVisible] = useState(false);
     const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
     const drag = useReorderableDrag();
+    const { t } = useTranslation();
+
+    const { translatePosition } = usePlayerPositionTranslation();
+    const translatedPositions = useMemo(() => 
+      positions.filter(pos => 
+        !(selectedSport === 'floorball' && pos === PlayerPosition.Midfielder) &&
+        !(selectedSport !== 'floorball' && pos === PlayerPosition.Center)
+      ).map(pos => translatePosition(pos)),
+      [translatePosition, selectedSport]
+    );
 
     const handleRename = (newName: string) => {
       if (newName.trim()) {
@@ -38,13 +48,16 @@ export const PlayerListItem = React.memo(
     };
 
     const handleDelete = () => {
-      Alert.alert('Delete Player', `Are you sure you want to delete ${player.name}?`, [
+      Alert.alert(
+        t('deletePlayer'),
+        t('deletePlayerConfirm', { playerName: player.name })
+        , [
         {
-          text: 'Cancel',
+          text: t('cancel'),
           style: 'cancel',
         },
         {
-          text: 'Delete',
+          text: t('delete'),
           style: 'destructive',
           onPress: () => deletePlayer(player.id),
         },
@@ -68,15 +81,14 @@ export const PlayerListItem = React.memo(
 
         <OptionMenuModal visible={modalVisible} onClose={() => setModalVisible(false)} onRename={() => setRenameDialogVisible(true)} onDelete={handleDelete} position={modalPosition} />
 
-        <CustomInputDialog visible={renameDialogVisible} title='Rename Player' onCancel={() => setRenameDialogVisible(false)} onSubmit={handleRename} initialValue={player.name} />
+        <CustomInputDialog visible={renameDialogVisible} title={t('renamePlayer')} onCancel={() => setRenameDialogVisible(false)} onSubmit={handleRename} initialValue={player.name} />
 
         <SegmentedControl
-          values={displayPositions}
+          values={translatedPositions}
           selectedIndex={positions.indexOf(player.position)}
           onChange={(event) => {
-            const selectedDisplayPosition = displayPositions[event.nativeEvent.selectedSegmentIndex];
-            const selectedPosition = selectedDisplayPosition === 'Center' ? PlayerPosition.Midfielder : selectedDisplayPosition;
-            setPlayerType(player.id, selectedPosition);
+            const selectedDisplayPosition = translatedPositions[event.nativeEvent.selectedSegmentIndex];
+            setPlayerType(player.id, selectedDisplayPosition as PlayerPosition);
           }}
           style={[styles.segmentedControl, { backgroundColor: colors.card }]}
         />

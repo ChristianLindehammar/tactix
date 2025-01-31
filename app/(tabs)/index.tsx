@@ -17,12 +17,15 @@ import { LAYOUT } from '@/constants/layout';
 import { ThemedText } from '@/components/ThemedText';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import HockeySvg from '@/components/ui/HockeySvg';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
   const { selectedSport, setSelectedSport } = useSport();
   const textColor = useThemeColor({}, 'text');
+  const { t } = useTranslation();
+
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
@@ -59,7 +62,7 @@ export default function HomeScreen() {
         router.replace('/(tabs)/team');
       } catch (error) {
         console.error('Error handling file:', error);
-        Alert.alert('Error', 'Failed to import team file');
+        Alert.alert(t('error'), t('failedToImportTeamFile'));
       }
     };
 
@@ -80,15 +83,17 @@ export default function HomeScreen() {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
         <View style={styles.sportSelectorContainer}>
-          <ThemedText style={styles.titleText}>Welcome to CoachMate!</ThemedText>
-          <ThemedText style={styles.subtitleText}>First, select your preferred sport:</ThemedText>
+          <ThemedText style={styles.titleText}>
+            {t('welcomeToCoachMate')}</ThemedText>
+          <ThemedText style={styles.subtitleText}>
+            {t('selectPreferredSport')}</ThemedText>
           <Picker
             selectedValue={selectedSport || "football"}
             onValueChange={(itemValue) => setSelectedSport(itemValue)}
             style={[styles.picker, { color: textColor }]}>
-            <Picker.Item label="Floorball" value="floorball" />
-            <Picker.Item label="Soccer" value="football" />
-            <Picker.Item label="Hockey" value="hockey" />
+            <Picker.Item label={t('floorball')} value='floorball' />
+            <Picker.Item label={t('soccer')} value='football' />
+            <Picker.Item label={t('hockey')} value='hockey' />
           </Picker>
         </View>
       </ThemedView>
@@ -99,7 +104,9 @@ export default function HomeScreen() {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
         <Pressable style={styles.noTeamContainer} onPress={() => router.push('/team')}>
-          <ThemedText style={styles.noTeamText}>Now, let's create your team!</ThemedText>
+          <ThemedText style={styles.noTeamText}>
+            {t('createTeamPrompt')}
+            </ThemedText>
           <IconSymbol name='arrow.right.circle.fill' size={42} color='gray' style={styles.arrow} />
         </Pressable>
       </ThemedView>

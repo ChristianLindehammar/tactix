@@ -6,6 +6,7 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { useSport } from '@/context/SportContext';
 import { Platform, Alert } from 'react-native';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const FILE_EXTENSION = '.coachmate';
 const FILE_MIME_TYPE = 'application/coachmate';
@@ -38,6 +39,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [selectedTeamId, setSelectedTeamId] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
   const { selectedSport, setSelectedSport } = useSport();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const loadData = async () => {
@@ -284,8 +286,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   
       if (Platform.OS === "android") {
         Alert.alert(
-          'Export Team',
-          'How would you like to export the team?',
+          t('exportTeam'),
+          t('howToExportTeam'),
           [
             {
               text: 'Save to Files',
@@ -339,7 +341,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         
         const isAvailable = await Sharing.isAvailableAsync();
         if (!isAvailable) {
-          alert('Sharing is not available on this device');
+          Alert.alert(t('error'), t('sharingNotAvailable'));
           return;
         }
         
@@ -353,7 +355,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       }
     } catch (error) {
       console.error('Error exporting team:', error);
-      alert('Failed to export team');
+      Alert.alert(t('error'), t('failedToExportTeam'));
     }
   };
 

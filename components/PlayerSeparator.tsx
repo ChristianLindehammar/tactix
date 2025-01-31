@@ -1,20 +1,14 @@
 import React, { forwardRef } from 'react';
-import { View, ViewProps, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { ThemedText } from './ThemedText';
-
-
+import { useTranslation } from '@/hooks/useTranslation';
 
 export const PlayerSeparator = forwardRef<View>((props, ref) => {
+  const { t } = useTranslation();
   return (
-    <View
-      ref={ref}
-      {...props}
-      style={[
-        styles.container,
-      ]}
-    >
+    <View ref={ref} {...props} style={[styles.container]}>
       <View style={styles.line} />
-      <ThemedText style={styles.text}>Court / Bench Separator</ThemedText>
+      <ThemedText style={styles.text}>{t('courtBenchSeparator')}</ThemedText>
       <View style={styles.line} />
     </View>
   );

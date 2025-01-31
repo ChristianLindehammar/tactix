@@ -7,6 +7,7 @@ import * as DocumentPicker from 'expo-document-picker';
 import { useNavigation } from '@react-navigation/native';
 import { ThemedText } from '@/components/ThemedText';
 import { CustomInputDialog } from '@/components/CustomInputDialog';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function TeamModal() {
   const navigation = useNavigation();
@@ -19,7 +20,8 @@ export default function TeamModal() {
   const backgroundColor = useThemeColor({}, 'background');
   const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
-  const borderColor = useThemeColor({}, 'borderColor');
+  const { t } = useTranslation();
+  
 
   const handleCreateTeamConfirm = (teamName: string) => {
     if (teamName.trim()) {
@@ -64,14 +66,14 @@ export default function TeamModal() {
       if (!result.canceled && result.assets?.[0]) {
         const file = result.assets[0];
         if (!file.name.endsWith('.coachmate')) {
-          Alert.alert('Invalid File', 'Please select a .coachmate file');
+          Alert.alert(t('invalidFile'), t('selectCoachmateFile'));
           return;
         }
         await importTeamFromFile(file.uri);
         navigation.goBack();
       }
     } catch (error) {
-      Alert.alert('Error', 'Failed to import team file');
+      Alert.alert(t('error'), t('failedToImportTeamFile'));
       console.error('Import team error:', error);
     }
   };
@@ -87,37 +89,37 @@ export default function TeamModal() {
   const mainMenuItems = [
     {
       icon: 'group-add',
-      title: 'Create Team',
+      title: t('createTeam'),
       onPress: () => setShowCreateTeam(true),
       visible: true,
     },
     {
       icon: 'groups-3',
-      title: 'Select Team',
+      title: t('selectTeam'),
       onPress: () => setShowSelectTeam(true),
       visible: teams.length > 0,
     },
     {
       icon: 'edit',
-      title: 'Rename Team',
+      title: t('renameTeam'),
       onPress: () => team && setShowRenameTeam(true),
       visible: !!team,
     },
     {
       icon: 'group-remove',
-      title: 'Remove Team',
+      title: t('removeTeam'),
       onPress: () => setShowRemoveTeam(true),
       visible: teams.length > 0,
     },
     {
       icon: 'share',
-      title: 'Share Team',
+      title: t('shareTeam'),
       onPress: handleExportTeam,
       visible: !!team,
     },
     {
       icon: 'file-upload',
-      title: 'Import Team',
+      title: t('importTeam'),
       onPress: handleImportTeam,
       visible: true,
     },
@@ -158,9 +160,9 @@ export default function TeamModal() {
                 key={item.id}
                 style={styles.menuItem}
                 onPress={() => {
-                  Alert.alert('Remove Team', `Are you sure you want to remove "${item.name}"?`, [
-                    { text: 'Cancel', style: 'cancel' },
-                    { text: 'OK', onPress: () => handleRemoveTeam(item.id) },
+                  Alert.alert(t('removeTeam'), t('teamRemoveConfirm', { teamName: item.name }), [
+                    { text: t('cancel'), style: 'cancel' },
+                    { text: t('ok'), onPress: () => handleRemoveTeam(item.id) },
                   ]);
                 }}>
                 <MaterialIcons size={24} name='group-remove' color={tintColor} style={styles.menuIcon} />
@@ -172,14 +174,14 @@ export default function TeamModal() {
 
         <CustomInputDialog
           visible={showCreateTeam}
-          title="Create New Team"
+          title={t('createNewTeam')}
           onCancel={() => setShowCreateTeam(false)}
           onSubmit={handleCreateTeamConfirm}
         />
 
         <CustomInputDialog
           visible={showRenameTeam}
-          title="Rename Team"
+          title={t('renameTeam')}
           onCancel={() => setShowRenameTeam(false)}
           onSubmit={handleRenameTeam}
           initialValue={team?.name}

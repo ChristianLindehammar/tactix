@@ -19,38 +19,37 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { ThemedButton } from '@/components/ThemedButton';
-import ReorderableList, {
-  ReorderableListReorderEvent,
-  reorderItems,
-} from 'react-native-reorderable-list';
+import ReorderableList, { ReorderableListReorderEvent, reorderItems } from 'react-native-reorderable-list';
 import { TooltipModal } from '@/components/TooltipModal';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, setPlayers } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
   const benchHeaderRef = useRef<View>(null);
-  const textColor  = useThemeColor({}, 'text') as string
+  const textColor = useThemeColor({}, 'text') as string;
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const [showDragHint, setShowDragHint] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
   const textInputRef = useRef<TextInput>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (teams.length > 0 && team && team.startingPlayers.length === 0 && team.benchPlayers.length === 0) {
       setTimeout(() => {
         if (textInputRef.current) {
           textInputRef.current.measure((x, y, width, height, pageX, pageY) => {
-            setTooltipPosition({ 
-              x: pageX + (width / 2), 
-              y: pageY + height + 10 
+            setTooltipPosition({
+              x: pageX + width / 2,
+              y: pageY + height + 10,
             });
           });
         }
         setShowTooltip(true);
       }, 500); // Small delay to ensure layout is complete
-      
+
       const timer = setTimeout(() => setShowTooltip(false), 5000);
       return () => {
         clearTimeout(timer);
@@ -75,11 +74,14 @@ export default function TeamScreen() {
     await AsyncStorage.setItem('dragHintShown', 'true');
   }, []);
 
-  const listData = useMemo(() => [
-    ...(team?.startingPlayers || []).map((p) => ({ ...p, type: 'player' })),
-    { id: 'bench-header', type: 'header', title: 'Bench Players' },
-    ...(team?.benchPlayers || []).map((p) => ({ ...p, type: 'player' })),
-  ], [team?.startingPlayers, team?.benchPlayers]);
+  const listData = useMemo(
+    () => [
+      ...(team?.startingPlayers || []).map((p) => ({ ...p, type: 'player' })),
+      { id: 'bench-header', type: 'header', title: t('benchPlayers') },
+      ...(team?.benchPlayers || []).map((p) => ({ ...p, type: 'player' })),
+    ],
+    [team?.startingPlayers, team?.benchPlayers]
+  );
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -93,88 +95,71 @@ export default function TeamScreen() {
     const benchHeaderIndex = newData.findIndex((item: any) => item.id === 'bench-header');
     const courtPlayers = newData
       .slice(0, benchHeaderIndex)
-      .filter((item): item is (PlayerType & { type: string }) => item.type === 'player')
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
       .map((p) => ({ ...p }));
     const benchPlayers = newData
       .slice(benchHeaderIndex + 1)
-      .filter((item): item is (PlayerType & { type: string }) => item.type === 'player')
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
       .map((p) => ({ ...p }));
     setPlayers(courtPlayers, benchPlayers);
   };
 
-  const renderItem = useCallback(({ item }: any) => {
+  const renderItem = useCallback(
+    ({ item }: any) => {
+      if (item.type === 'header') {
+        return (
+          <View ref={item.title ===  t('benchPlayers') ? benchHeaderRef : undefined}>
+            <ThemedText style={styles.headerText}>{item.title}</ThemedText>
+          </View>
+        );
+      }
 
-    if (item.type === 'header') {
-      return (
-        <View ref={item.title === 'Bench Players' ? benchHeaderRef : undefined}>
-          <ThemedText style={styles.headerText}>{item.title}</ThemedText>
-        </View>
-      );
-    }
-
-    return <PlayerListItem 
-      key={item.id} 
-      player={item} 
-      isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} 
-    />;
-}, [benchHeaderRef, team?.startingPlayers]);
+      return <PlayerListItem key={item.id} player={item} isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} />;
+    },
+    [benchHeaderRef, team?.startingPlayers]
+  );
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-          <ThemedView style={{ flex: 1 }}>
-            <SafeAreaView style={{ flex: 1 }}>
-              {teams.length === 0 ? (
-                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-                  <ThemedText>No teams exist. Please create a team first.</ThemedText>
-                              <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>
-                                Create Team
-                              </ThemedButton>
-                  </View>
-              ) : (
-                <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-                  <DragHintOverlay 
-                    visible={showDragHint} 
-                    onFinish={handleDragHintFinish}
-                  />
-                  <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
-                  
-                  <TooltipModal
-                    visible={showTooltip}
-                    onClose={() => setShowTooltip(false)}
-                    message="Start by adding players to your team using the input field above"
-                    position={tooltipPosition}
-                  />
+      <ThemedView style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
+          {teams.length === 0 ? (
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+              <ThemedText>{t('noTeamsExist')}</ThemedText>
+              <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>{t('createTeam')}</ThemedButton>
+            </View>
+          ) : (
+            <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+              <DragHintOverlay visible={showDragHint} onFinish={handleDragHintFinish} />
+              <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
 
-                  <ThemedView style={styles.addPlayerContainer}>
-                    <TextInput 
-                      ref={textInputRef}
-                      style={[styles.input, {color: textColor}]} 
-                      placeholder='Enter player name' 
-                      value={newPlayerName} 
-                      onChangeText={setNewPlayerName} 
-                    />
-                    <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
-                      Add Player
-                    </ThemedButton>
-                  </ThemedView>
+              <TooltipModal visible={showTooltip} onClose={() => setShowTooltip(false)} message={t('startByAddingPlayers')} position={tooltipPosition} />
 
-                  <ReorderableList
-                    ListHeaderComponent={<ThemedText style={styles.headerText}>Starting Players</ThemedText>}
-                    data={listData}  // Use listData directly instead of playerData
-                    onReorder={handleReorder}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id}
-                    shouldUpdateActiveItem
-                  />
-                </ThemedView>
-              )}
-            </SafeAreaView>
-          <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
-            <Ionicons name="people-outline" size={28} color="white" />
-          </Pressable>
-          </ThemedView>
+              <ThemedView style={styles.addPlayerContainer}>
+                <TextInput ref={textInputRef} style={[styles.input, { color: textColor }]} placeholder={t('enterPlayerName')} value={newPlayerName} onChangeText={setNewPlayerName} />
+                <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
+                  {t('addPlayer')}
+                </ThemedButton>
+              </ThemedView>
+
+              <ReorderableList
+                ListHeaderComponent={<ThemedText style={styles.headerText}>
+                  {t('startingPlayers')}
+                </ThemedText>}
+                data={listData} // Use listData directly instead of playerData
+                onReorder={handleReorder}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id}
+                shouldUpdateActiveItem
+              />
+            </ThemedView>
+          )}
+        </SafeAreaView>
+        <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
+          <Ionicons name='people-outline' size={28} color='white' />
+        </Pressable>
+      </ThemedView>
     </GestureHandlerRootView>
-
   );
 }
 

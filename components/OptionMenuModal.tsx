@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Modal, Button, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface OptionMenuModalProps {
   visible: boolean;
@@ -15,6 +16,7 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({
   visible, onClose, onRename, onDelete, position,
 }) => {
   const menuBackground = useThemeColor({}, 'menuBackground');
+  const { t } = useTranslation();
 
   return (
     <Modal visible={visible} transparent onRequestClose={onClose}>
@@ -22,11 +24,15 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({
         <View style={[styles.container, { top: position.top - 30, left: position.left - 200 }]}>
           <View style={[styles.menuBox, { backgroundColor: menuBackground }]}>
             <TouchableOpacity style={styles.menuItem} onPress={() => { onRename(); onClose(); }}>
-              <ThemedText style={styles.menuItemText}>Rename</ThemedText>
+              <ThemedText style={styles.menuItemText}>
+                {t('rename')}
+              </ThemedText>
             </TouchableOpacity>
             <View style={styles.menuItemBorder} />
             <TouchableOpacity style={styles.menuItem} onPress={() => { onDelete(); onClose(); }}>
-              <ThemedText style={styles.menuItemText}>Delete</ThemedText>
+              <ThemedText style={styles.menuItemText}>
+                {t('delete')}
+              </ThemedText>
             </TouchableOpacity>
           </View>
         </View>
