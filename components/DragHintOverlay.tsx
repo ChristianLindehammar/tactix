@@ -68,7 +68,7 @@ export const DragHintOverlay: React.FC<DragHintOverlayProps> = ({
       <Pressable style={styles.pressable} onPress={handleDismiss}>
         <View style={styles.content}>
           <ThemedText style={styles.text}>
-            Drag players up and down to reorder them
+            Drag and hold players up and down to reorder them
           </ThemedText>
           <Animated.View style={{ transform: [{ translateY }] }}>
             <MaterialCommunityIcons name="gesture-tap-hold" size={32} color="#fff" />
