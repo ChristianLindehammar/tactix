@@ -4,24 +4,21 @@ import { PlayerType, PlayerPosition } from '@/types/models';
 import { positionColors } from '@/constants/positionColors';
 import { useTeam } from '@/contexts/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import { ScaleDecorator } from 'react-native-draggable-flatlist';
 import { useTheme } from '@react-navigation/native';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useSport } from '@/context/SportContext';
 import { OptionMenuModal } from './OptionMenuModal';
 import { CustomInputDialog } from './CustomInputDialog';
 import { Ionicons } from '@expo/vector-icons';
+import { useReorderableDrag } from 'react-native-reorderable-list';
 
 interface PlayerListItemProps {
   player: PlayerType;
-  onPress: () => void;
   isOnCourt: boolean;
-  drag?: () => void;
-  isActive?: boolean;
 }
 
 export const PlayerListItem = React.memo(
-  ({ player, drag, isActive }: PlayerListItemProps) => {
+  ({ player }: PlayerListItemProps) => {
     const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
     const { selectedSport } = useSport();
     const positions = Object.values(PlayerPosition);
@@ -31,6 +28,7 @@ export const PlayerListItem = React.memo(
     const [modalVisible, setModalVisible] = useState(false);
     const [renameDialogVisible, setRenameDialogVisible] = useState(false);
     const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+    const drag = useReorderableDrag();
 
     const handleRename = (newName: string) => {
       if (newName.trim()) {
@@ -60,39 +58,36 @@ export const PlayerListItem = React.memo(
     };
 
     return (
-      <ScaleDecorator>
-        <TouchableOpacity onLongPress={drag} disabled={isActive} style={[styles.container, { backgroundColor: isActive ? '#e0e0e0' : positionColors[player.position] }]}>
-          <View style={styles.headerRow}>
-            <Text>{player.name}</Text>
-            <TouchableOpacity onPress={handleOptionsPress}>
-              <Ionicons name='ellipsis-horizontal' size={24} color={textColor} />
-            </TouchableOpacity>
-          </View>
+      <TouchableOpacity onLongPress={drag} style={[styles.container, { backgroundColor: positionColors[player.position] }]}>
+        <View style={styles.headerRow}>
+          <Text>{player.name}</Text>
+          <TouchableOpacity onPress={handleOptionsPress}>
+            <Ionicons name='ellipsis-horizontal' size={24} color={textColor} />
+          </TouchableOpacity>
+        </View>
 
-          <OptionMenuModal visible={modalVisible} onClose={() => setModalVisible(false)} onRename={() => setRenameDialogVisible(true)} onDelete={handleDelete} position={modalPosition} />
+        <OptionMenuModal visible={modalVisible} onClose={() => setModalVisible(false)} onRename={() => setRenameDialogVisible(true)} onDelete={handleDelete} position={modalPosition} />
 
-          <CustomInputDialog visible={renameDialogVisible} title='Rename Player' onCancel={() => setRenameDialogVisible(false)} onSubmit={handleRename} initialValue={player.name} />
+        <CustomInputDialog visible={renameDialogVisible} title='Rename Player' onCancel={() => setRenameDialogVisible(false)} onSubmit={handleRename} initialValue={player.name} />
 
-          <SegmentedControl
-            values={displayPositions}
-            selectedIndex={positions.indexOf(player.position)}
-            onChange={(event) => {
-              const selectedDisplayPosition = displayPositions[event.nativeEvent.selectedSegmentIndex];
-              const selectedPosition = selectedDisplayPosition === 'Center' ? PlayerPosition.Midfielder : selectedDisplayPosition;
-              setPlayerType(player.id, selectedPosition);
-            }}
-            style={[styles.segmentedControl, { backgroundColor: colors.card }]}
-          />
-        </TouchableOpacity>
-      </ScaleDecorator>
+        <SegmentedControl
+          values={displayPositions}
+          selectedIndex={positions.indexOf(player.position)}
+          onChange={(event) => {
+            const selectedDisplayPosition = displayPositions[event.nativeEvent.selectedSegmentIndex];
+            const selectedPosition = selectedDisplayPosition === 'Center' ? PlayerPosition.Midfielder : selectedDisplayPosition;
+            setPlayerType(player.id, selectedPosition);
+          }}
+          style={[styles.segmentedControl, { backgroundColor: colors.card }]}
+        />
+      </TouchableOpacity>
     );
   },
   (prevProps, nextProps) => {
     return (
       prevProps.player.id === nextProps.player.id &&
       prevProps.player.name === nextProps.player.name &&
-      prevProps.player.position === nextProps.player.position &&
-      prevProps.isActive === nextProps.isActive
+      prevProps.player.position === nextProps.player.position
     );
   }
 );

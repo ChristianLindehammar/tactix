@@ -1,13 +1,10 @@
-import React, { useCallback, useMemo, useRef } from 'react';
-import { StyleSheet, View, TextInput, Text, Pressable, Platform } from 'react-native';
-import { useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { StyleSheet, View, TextInput, Pressable, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { LAYOUT } from '@/constants/layout';
-import { NestableDraggableFlatList, NestableScrollContainer } from 'react-native-draggable-flatlist';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
-import { MenuProvider } from 'react-native-popup-menu';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 type RootStackParamList = {
@@ -20,6 +17,10 @@ import { PlayerListItem } from '@/components/PlayerListItem';
 import { PlayerType } from '@/types/models';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { ThemedButton } from '@/components/ThemedButton';
+import ReorderableList, {
+  ReorderableListReorderEvent,
+  reorderItems,
+} from 'react-native-reorderable-list';
 
 export default function TeamScreen() {
   const { team, teams, addPlayer, setPlayers } = useTeam();
@@ -28,25 +29,6 @@ export default function TeamScreen() {
   const textColor  = useThemeColor({}, 'text') as string
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  const handleAddPlayer = () => {
-    if (newPlayerName.trim() !== '') {
-      addPlayer(newPlayerName);
-      setNewPlayerName('');
-    }
-  };
-
-  const handlePlayersChange = ({ data }: any) => {
-    const benchHeaderIndex = data.findIndex((item: any) => item.id === 'bench-header');
-    const courtPlayers = data
-      .slice(0, benchHeaderIndex)
-      .filter((item: any) => item.type === 'player')
-      .map((p: PlayerType) => ({ ...p }));
-    const benchPlayers = data
-      .slice(benchHeaderIndex + 1)
-      .filter((item: any) => item.type === 'player')
-      .map((p: PlayerType) => ({ ...p }));
-    setPlayers(courtPlayers, benchPlayers);
-  };
 
   const listData = useMemo(() => [
     ...(team?.startingPlayers || []).map((p) => ({ ...p, type: 'player' })),
@@ -54,7 +36,29 @@ export default function TeamScreen() {
     ...(team?.benchPlayers || []).map((p) => ({ ...p, type: 'player' })),
   ], [team?.startingPlayers, team?.benchPlayers]);
 
-  const renderItem = useCallback(({ item, drag, isActive }: any) => {
+  const handleAddPlayer = () => {
+    if (newPlayerName.trim() !== '') {
+      addPlayer(newPlayerName);
+      setNewPlayerName('');
+    }
+  };
+
+  const handleReorder = ({ from, to }: ReorderableListReorderEvent) => {
+    const newData = reorderItems(listData, from, to);
+    const benchHeaderIndex = newData.findIndex((item: any) => item.id === 'bench-header');
+    const courtPlayers = newData
+      .slice(0, benchHeaderIndex)
+      .filter((item): item is (PlayerType & { type: string }) => item.type === 'player')
+      .map((p) => ({ ...p }));
+    const benchPlayers = newData
+      .slice(benchHeaderIndex + 1)
+      .filter((item): item is (PlayerType & { type: string }) => item.type === 'player')
+      .map((p) => ({ ...p }));
+    setPlayers(courtPlayers, benchPlayers);
+  };
+
+  const renderItem = useCallback(({ item }: any) => {
+
     if (item.type === 'header') {
       return (
         <View ref={item.title === 'Bench Players' ? benchHeaderRef : undefined}>
@@ -66,55 +70,48 @@ export default function TeamScreen() {
     return <PlayerListItem 
       key={item.id} 
       player={item} 
-      onPress={() => {}} 
-      drag={drag} 
-      isActive={isActive} 
       isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} 
     />;
 }, [benchHeaderRef, team?.startingPlayers]);
 
-  const keyExtractor = React.useCallback((item: any, index: number) => `${item.id}-${index}`, []);
-
   return (
-    <MenuProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <ThemedView style={{ flex: 1 }}>
-          <SafeAreaView style={{ flex: 1 }}>
-            {teams.length === 0 ? (
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-                <ThemedText>No teams exist. Please create a team first.</ThemedText>
-                            <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>
-                              Create Team
-                            </ThemedButton>
-                </View>
-            ) : (
-              <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-                <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
-                <ThemedView style={styles.addPlayerContainer}>
-                  <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
-                  <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
-                    Add Player
-                  </ThemedButton>
-                </ThemedView>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+          <ThemedView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1 }}>
+              {teams.length === 0 ? (
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+                  <ThemedText>No teams exist. Please create a team first.</ThemedText>
+                              <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>
+                                Create Team
+                              </ThemedButton>
+                  </View>
+              ) : (
+                <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+                  <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
+                  <ThemedView style={styles.addPlayerContainer}>
+                    <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
+                    <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
+                      Add Player
+                    </ThemedButton>
+                  </ThemedView>
 
-                <NestableScrollContainer>
-                  <NestableDraggableFlatList
+                  <ReorderableList
                     ListHeaderComponent={<ThemedText style={styles.headerText}>Starting Players</ThemedText>}
-                    data={listData}
+                    data={listData}  // Use listData directly instead of playerData
+                    onReorder={handleReorder}
                     renderItem={renderItem}
-                    keyExtractor={keyExtractor}
-                    onDragEnd={handlePlayersChange}
+                    keyExtractor={item => item.id}
+                    shouldUpdateActiveItem
                   />
-                </NestableScrollContainer>
-              </ThemedView>
-            )}
-          </SafeAreaView>
-        </ThemedView>
-        <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
-          <Ionicons name="people-outline" size={28} color="white" />
-        </Pressable>
-      </GestureHandlerRootView>
-    </MenuProvider>
+                </ThemedView>
+              )}
+            </SafeAreaView>
+          <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
+            <Ionicons name="people-outline" size={28} color="white" />
+          </Pressable>
+          </ThemedView>
+    </GestureHandlerRootView>
+
   );
 }
 

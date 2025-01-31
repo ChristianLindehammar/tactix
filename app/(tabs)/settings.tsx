@@ -42,7 +42,7 @@ export default function SettingsScreen() {
           <ThemedText>• @react-navigation - MIT License</ThemedText>
           <ThemedText>• expo and related packages - MIT License</ThemedText>
           <ThemedText>• react & react-native - MIT License</ThemedText>
-          <ThemedText>• react-native-draggable-flatlist - MIT License</ThemedText>
+          <ThemedText>• react-native-reorderable-list - MIT License</ThemedText>
           <ThemedText>• react-native-reanimated - MIT License</ThemedText>
           <ThemedText>• react-native-svg - MIT License</ThemedText>
         </ThemedView>
