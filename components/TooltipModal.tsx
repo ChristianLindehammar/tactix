@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    marginTop: -1, 
   },
   tooltipText: {
     textAlign: 'center',
@@ -75,11 +76,12 @@ const styles = StyleSheet.create({
   arrow: {
     width: 0,
     height: 0,
-    borderLeftWidth: 10,
-    borderRightWidth: 10,
-    borderBottomWidth: 10,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderBottomWidth: 8,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    marginBottom: -1,
+    alignSelf: 'center',
+    marginLeft: 20,
   },
 });
