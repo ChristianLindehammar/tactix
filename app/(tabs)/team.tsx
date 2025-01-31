@@ -33,13 +33,28 @@ export default function TeamScreen() {
   const textColor  = useThemeColor({}, 'text') as string
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  const [showDragHint, setShowDragHint] = useState(true);
+  const [showDragHint, setShowDragHint] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
+  const textInputRef = useRef<TextInput>(null);
 
   useEffect(() => {
     if (teams.length > 0 && team && team.startingPlayers.length === 0 && team.benchPlayers.length === 0) {
-      setShowTooltip(true);
-      const timer = setTimeout(() => setShowTooltip(false), 5000); // Hide after 5 seconds
-      return () => clearTimeout(timer);
+      setTimeout(() => {
+        if (textInputRef.current) {
+          textInputRef.current.measure((x, y, width, height, pageX, pageY) => {
+            setTooltipPosition({ 
+              x: pageX + (width / 2), 
+              y: pageY + height + 10 
+            });
+          });
+        }
+        setShowTooltip(true);
+      }, 500); // Small delay to ensure layout is complete
+      
+      const timer = setTimeout(() => setShowTooltip(false), 5000);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [teams, team]);
 
@@ -127,10 +142,17 @@ export default function TeamScreen() {
                     visible={showTooltip}
                     onClose={() => setShowTooltip(false)}
                     message="Start by adding players to your team using the input field above"
+                    position={tooltipPosition}
                   />
 
                   <ThemedView style={styles.addPlayerContainer}>
-                    <TextInput style={[styles.input, {color: textColor}]} placeholder='Enter player name' value={newPlayerName} onChangeText={setNewPlayerName} />
+                    <TextInput 
+                      ref={textInputRef}
+                      style={[styles.input, {color: textColor}]} 
+                      placeholder='Enter player name' 
+                      value={newPlayerName} 
+                      onChangeText={setNewPlayerName} 
+                    />
                     <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
                       Add Player
                     </ThemedButton>
