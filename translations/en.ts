@@ -1,5 +1,3 @@
-import { addPlayer } from '@/services/firebase';
-
 export default {  
   // Navigation
   settings: 'Settings',

@@ -4,6 +4,7 @@ import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { Colors } from '@/constants/Colors';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface CustomInputDialogProps {
   visible: boolean;
@@ -22,6 +23,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
 }) => {
   const [value, setValue] = useState(initialValue);
   const textColor = useThemeColor({}, 'text');
+  const { t } = useTranslation();
 
   return (
     <Modal visible={visible} transparent animationType="fade">
@@ -37,13 +39,17 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
           />
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.button} onPress={onCancel}>
-              <ThemedText>Cancel</ThemedText>
+              <ThemedText>
+               { t('cancel')}
+              </ThemedText>
             </TouchableOpacity>
             <TouchableOpacity 
               style={[styles.button, { backgroundColor: Colors.light.tint }]} 
               onPress={() => value.trim() && onSubmit(value.trim())}
             >
-              <ThemedText style={{ color: '#fff' }}>OK</ThemedText>
+              <ThemedText style={{ color: '#fff' }}>
+                { t('ok')}
+              </ThemedText>
             </TouchableOpacity>
           </View>
         </ThemedView>
