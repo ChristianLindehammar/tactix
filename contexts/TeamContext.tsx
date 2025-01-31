@@ -26,7 +26,6 @@ interface TeamContextProps {
   importTeam: (importedTeam: Team) => void;
   importTeamFromFile: (fileUri: string) => Promise<void>;
   setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
-  reindexPlayers: (players: PlayerType[], isCourt: boolean) => void;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -158,7 +157,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       name: name,
       courtPosition: position,
       position: PlayerPosition.Forward,
-      index: selectedTeam?.benchPlayers.length || 0,
     };
     
     updateTeamInTeams(currentTeam => ({
@@ -186,20 +184,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
           ...team,
           startingPlayers: courtPlayers,
           benchPlayers: benchPlayers,
-        };
-      }
-      return team;
-    }));
-  };
-  
-  const reindexPlayers = (players: PlayerType[], isCourt: boolean) => {
-    const updated = players.map((p, index) => ({ ...p, index }));
-    setTeams(prevTeams => prevTeams.map(team => {
-      if (team.id === selectedTeamId) {
-        return {
-          ...team,
-          startingPlayers: isCourt ? updated : team.startingPlayers,
-          benchPlayers: isCourt ? team.benchPlayers : updated,
         };
       }
       return team;
@@ -424,7 +408,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       importTeam,
       importTeamFromFile,
       setPlayers,
-      reindexPlayers,
     }}>
       {children}
     </TeamContext.Provider>

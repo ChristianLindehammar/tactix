@@ -22,7 +22,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { ThemedButton } from '@/components/ThemedButton';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, reindexPlayers, setPlayers} = useTeam();
+  const { team, teams, addPlayer, setPlayers } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const benchHeaderRef = useRef<View>(null);
   const textColor  = useThemeColor({}, 'text') as string
@@ -46,8 +46,6 @@ export default function TeamScreen() {
       .filter((item: any) => item.type === 'player')
       .map((p: PlayerType) => ({ ...p }));
     setPlayers(courtPlayers, benchPlayers);
-    reindexPlayers(courtPlayers, true);
-    reindexPlayers(benchPlayers, false);
   };
 
   const listData = useMemo(() => [
@@ -74,6 +72,8 @@ export default function TeamScreen() {
       isOnCourt={team?.startingPlayers.some((p) => p.id === item.id) ?? false} 
     />;
 }, [benchHeaderRef, team?.startingPlayers]);
+
+  const keyExtractor = React.useCallback((item: any, index: number) => `${item.id}-${index}`, []);
 
   return (
     <MenuProvider>
@@ -102,7 +102,7 @@ export default function TeamScreen() {
                     ListHeaderComponent={<ThemedText style={styles.headerText}>Starting Players</ThemedText>}
                     data={listData}
                     renderItem={renderItem}
-                    keyExtractor={(item) => item.id}
+                    keyExtractor={keyExtractor}
                     onDragEnd={handlePlayersChange}
                   />
                 </NestableScrollContainer>

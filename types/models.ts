@@ -26,7 +26,6 @@ export interface PlayerType {
   name: string;
   position: PlayerPosition;
   courtPosition?: Position; 
-  index: number;  // Add this line
 }
 
 export interface Position {
