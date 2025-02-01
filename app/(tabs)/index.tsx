@@ -18,12 +18,13 @@ import { ThemedText } from '@/components/ThemedText';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import HockeySvg from '@/components/ui/HockeySvg';
 import { useTranslation } from '@/hooks/useTranslation';
+import BandySvg from '@/components/ui/BandySvg';
+import { SportSelector } from '@/components/SportSelector';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
-  const { selectedSport, setSelectedSport } = useSport();
-  const textColor = useThemeColor({}, 'text');
+  const { selectedSport } = useSport();
   const { t } = useTranslation();
 
 
@@ -87,14 +88,7 @@ export default function HomeScreen() {
             {t('welcomeToCoachMate')}</ThemedText>
           <ThemedText style={styles.subtitleText}>
             {t('selectPreferredSport')}</ThemedText>
-          <Picker
-            selectedValue={selectedSport || "football"}
-            onValueChange={(itemValue) => setSelectedSport(itemValue)}
-            style={[styles.picker, { color: textColor }]}>
-            <Picker.Item label={t('floorball')} value='floorball' />
-            <Picker.Item label={t('soccer')} value='football' />
-            <Picker.Item label={t('hockey')} value='hockey' />
-          </Picker>
+          <SportSelector />
         </View>
       </ThemedView>
     );
@@ -129,6 +123,10 @@ export default function HomeScreen() {
     hockey: {
       Svg: HockeySvg,
       aspectRatio: 427 / 846,
+    },
+    bandy: {
+      Svg: BandySvg, 
+      aspectRatio: 549 / 840,
     },
   };
 

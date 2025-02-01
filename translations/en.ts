@@ -12,6 +12,7 @@ export default {
   floorball: 'Floorball',
   soccer: 'Soccer',
   hockey: 'Hockey',
+  bandy: 'Bandy',
 
 
   // Home Screen

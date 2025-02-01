@@ -1,6 +1,6 @@
 import { useTranslation } from '@/hooks/useTranslation';
 
-export type Sport = 'floorball' | 'football' | 'hockey';
+export type Sport = 'floorball' | 'football' | 'hockey' | 'bandy';
 
 
 export interface Team {

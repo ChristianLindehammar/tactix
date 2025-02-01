@@ -14,6 +14,7 @@ export default {
   floorball: 'Salibandy',
   soccer: 'Jalkapallo',
   hockey: 'Jääkiekko',
+  bandy: 'Jääpallo',
 
   // Home Screen
   welcomeToCoachMate: 'Tervetuloa CoachMateen!',

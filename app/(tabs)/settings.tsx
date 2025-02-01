@@ -9,10 +9,9 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SportSelector } from '@/components/SportSelector';
 
 export default function SettingsScreen() {
-  const { selectedSport, setSelectedSport } = useSport();
-  const textColor = useThemeColor({}, 'text');
   const { t } = useTranslation();
 
   return (
@@ -42,11 +41,7 @@ export default function SettingsScreen() {
 
       <Collapsible title={t('generalSettings')} defaultOpen={true}>
         <ThemedText>{t('selectCurrentSport')}</ThemedText>
-        <Picker selectedValue={selectedSport} onValueChange={(itemValue) => setSelectedSport(itemValue)} style={[styles.picker, { color: textColor }]}>
-          <Picker.Item label={t('floorball')} value='floorball' />
-          <Picker.Item label={t('soccer')} value='football' />
-          <Picker.Item label={t('hockey')} value='hockey' />
-        </Picker>
+        <SportSelector />
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -62,12 +57,5 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
-  },
-  picker: {
-    marginTop: 8,
-    marginBottom: 16,
-    maxWidth: 300,
-    alignSelf: 'flex-start',
-    width: '100%',
   },
 });

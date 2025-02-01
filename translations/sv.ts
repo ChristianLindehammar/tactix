@@ -14,6 +14,7 @@ export default {
   floorball: 'Innebandy',
   soccer: 'Fotboll',
   hockey: 'Hockey',
+  bandy: 'Bandy',
 
   // Home Screen
   welcomeToCoachMate: 'Välkommen till CoachMate!',

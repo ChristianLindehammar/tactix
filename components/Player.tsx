@@ -6,7 +6,6 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   runOnJS,
-  withSpring,
 } from 'react-native-reanimated';
 import { positionColors } from '@/constants/positionColors'; // Added import
 import { LAYOUT } from '@/constants/layout';

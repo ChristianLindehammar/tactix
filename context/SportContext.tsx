@@ -18,7 +18,7 @@ export function SportProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const loadInitialSport = async () => {
       const saved = await getItem(STORAGE_KEY);
-      if (saved === 'floorball' || saved === 'football' || saved === 'hockey') {
+      if (saved === 'floorball' || saved === 'football' || saved === 'hockey' || saved === 'bandy') {
         setSelectedSport(saved);
       } else {
         setSelectedSport(null);
