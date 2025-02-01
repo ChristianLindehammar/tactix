@@ -32,12 +32,17 @@ export const PlayerListItem = React.memo(
     const { t } = useTranslation();
 
     const { translatePosition } = usePlayerPositionTranslation();
-    const translatedPositions = useMemo(() => 
+    const filteredPositions = useMemo(() => 
       positions.filter(pos => 
         !(selectedSport === 'floorball' && pos === PlayerPosition.Midfielder) &&
         !(selectedSport !== 'floorball' && pos === PlayerPosition.Center)
-      ).map(pos => translatePosition(pos)),
-      [translatePosition, selectedSport]
+      ),
+      [selectedSport]
+    );
+
+    const translatedPositions = useMemo(() => 
+      filteredPositions.map(pos => translatePosition(pos)),
+      [translatePosition, filteredPositions]
     );
 
     const handleRename = (newName: string) => {
@@ -85,10 +90,11 @@ export const PlayerListItem = React.memo(
 
         <SegmentedControl
           values={translatedPositions}
-          selectedIndex={positions.indexOf(player.position)}
+          selectedIndex={filteredPositions.indexOf(player.position)}
           onChange={(event) => {
-            const selectedDisplayPosition = translatedPositions[event.nativeEvent.selectedSegmentIndex];
-            setPlayerType(player.id, selectedDisplayPosition as PlayerPosition);
+            const selectedIndex = event.nativeEvent.selectedSegmentIndex;
+            const selectedPosition = filteredPositions[selectedIndex];
+            setPlayerType(player.id, selectedPosition);
           }}
           style={[styles.segmentedControl, { backgroundColor: colors.card }]}
         />
