@@ -4,7 +4,7 @@ export default {
   // Navigation
   settings: 'Inställningar',
   team: 'Lag',
-  sportsCourt: 'Planen',
+  playGround: 'Spelplan',
   
   // Settings Screen
   aboutTheApp: 'Ett verktyg för sporttränare att planera laguppställningar, hantera taktik och utveckla spelstrategier.',

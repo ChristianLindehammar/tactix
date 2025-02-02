@@ -4,7 +4,7 @@ export default {
   // Navigation
   settings: 'Asetukset',
   team: 'Joukkue',
-  sportsCourt: 'Kenttä',
+  playGround: 'Pelikenttä',
   
   // Settings Screen
   aboutTheApp: 'Työkalu urheiluvalmentajille joukkueharjoitusten suunnitteluun, taktiikan hallintaan ja pelistrategioiden kehittämiseen.',

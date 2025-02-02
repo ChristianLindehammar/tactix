@@ -2,7 +2,7 @@ export default {
   // Navigation
   settings: 'Settings',
   team: 'Team',
-  sportsCourt: 'Sports Court',
+  playGround: 'Play Ground',
   
   // Settings Screen
   aboutTheApp: 'A tool for sports coaches to plan team training, manage tactics, and develop game strategies.',
