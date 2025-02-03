@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, Alert, View } from 'react-native';
 import { PlayerType, usePlayerPositionTranslation } from '@/types/models';
-import { positionColors } from '@/constants/positionColors';
 import { useTeam } from '@/contexts/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useTheme } from '@react-navigation/native';
@@ -23,7 +22,7 @@ export const PlayerListItem = React.memo(
   ({ player }: PlayerListItemProps) => {
     const { setPlayerType, deletePlayer, renamePlayer } = useTeam();
     const { selectedSport } = useSport();
-    const { positions } = sportsConfig[selectedSport ?? 'soccer'];
+    const { positions, positionColors } = sportsConfig[selectedSport ?? 'soccer'];
     const textColor = useThemeColor({}, 'text') as string;
     const { colors } = useTheme();
     const [modalVisible, setModalVisible] = useState(false);
@@ -34,10 +33,12 @@ export const PlayerListItem = React.memo(
 
     const { translatePosition } = usePlayerPositionTranslation();
 
-    const translatedPositions = useMemo(() => 
-      positions.map(pos => translatePosition(pos)),
-      [translatePosition, positions]
-    );
+    const translatedPositions = useMemo(() => {
+      if (selectedSport === 'basketball') {
+        return positions.map(pos => t(`playerPositionsShort.${pos}`, { defaultValue: t(`playerPositions.${pos}`) }));
+      }
+      return positions.map(pos => translatePosition(pos));
+    }, [translatePosition, positions, selectedSport, t]);
 
     const handleRename = (newName: string) => {
       if (newName.trim()) {
@@ -69,8 +70,10 @@ export const PlayerListItem = React.memo(
       setModalVisible(true);
     };
 
+    const safeIndex = positions.indexOf(player.position) >= 0 ? positions.indexOf(player.position) : 0;
+
     return (
-      <TouchableOpacity onLongPress={drag} style={[styles.container, { backgroundColor: positionColors[player.position] }]}>
+      <TouchableOpacity onLongPress={drag} style={[styles.container, { backgroundColor: positionColors?.[player.position] || '#f0f0f0' }]}>
         <View style={styles.headerRow}>
           <Text>{player.name}</Text>
           <TouchableOpacity onPress={handleOptionsPress}>
@@ -84,7 +87,7 @@ export const PlayerListItem = React.memo(
 
         <SegmentedControl
           values={translatedPositions}
-          selectedIndex={positions.indexOf(player.position) ?? 0}
+          selectedIndex={safeIndex}
           onChange={(event) => {
             const selectedIndex = event.nativeEvent.selectedSegmentIndex;
             const selectedPosition = positions[selectedIndex];

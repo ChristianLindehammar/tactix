@@ -49,6 +49,14 @@ export default {
     PowerForward: 'Power Forward'
   },
 
+  playerPositionsShort: {
+    PointGuard: 'PG',
+    ShootingGuard: 'SG',
+    SmallForward: 'SF',
+    PowerForward: 'PF',
+    Center: 'C'
+  },
+
   // Not Found Screen
   screenNotExist: "Tätä näyttöä ei ole olemassa.",
   goToHome: 'Mene kotinäyttöön!',

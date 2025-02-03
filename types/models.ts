@@ -27,7 +27,7 @@ export const usePlayerPositionTranslation = () => {
 export interface PlayerType {
   id: string;
   name: string;
-  position: string; // changed from PlayerPosition
+  position: string;
   courtPosition?: Position; 
 }
 

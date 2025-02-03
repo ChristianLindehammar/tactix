@@ -1,4 +1,4 @@
-import { PlayerPosition, PlayerType, Position } from '@/types/models';
+import { Position } from '@/types/models';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -7,13 +7,14 @@ import Animated, {
   useSharedValue,
   runOnJS,
 } from 'react-native-reanimated';
-import { positionColors } from '@/constants/positionColors'; // Added import
+import { useSport } from '@/context/SportContext';
+import { sportsConfig } from '@/constants/sports';
 import { LAYOUT } from '@/constants/layout';
 
 interface PlayerProps {
   id: string;
   name: string;
-  position: PlayerPosition;
+  position: string;
   courtPosition: Position;
   onDragEnd: (position: Position) => void;
   containerSize: { width: number; height: number };
@@ -36,6 +37,10 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
     translateY.value = courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY;
   }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
 
+  const { selectedSport } = useSport();
+  const { positions, positionColors = {} } = sportsConfig[selectedSport ?? 'soccer'];
+  const safePosition = positions.includes(position) ? position : positions[0];
+
   const panGesture = Gesture.Pan()
     .onStart((event) => {
       offsetX.value = translateX.value - event.absoluteX;
@@ -57,7 +62,7 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
       { translateX: translateX.value },
       { translateY: translateY.value },
     ],
-    backgroundColor: positionColors[position],
+    backgroundColor: positionColors[safePosition] || 'white',
   }));
 
   return (
