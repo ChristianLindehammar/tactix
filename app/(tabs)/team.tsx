@@ -146,7 +146,8 @@ export default function TeamScreen() {
                 ListHeaderComponent={<ThemedText style={styles.headerText}>
                   {t('startingPlayers')}
                 </ThemedText>}
-                data={listData} // Use listData directly instead of playerData
+                ListFooterComponent={<View style={styles.listFooter} />}
+                data={listData} 
                 onReorder={handleReorder}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
@@ -166,6 +167,9 @@ export default function TeamScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  listFooter: {
+    paddingBottom: 80,
   },
   addPlayerContainer: {
     flexDirection: 'row',
