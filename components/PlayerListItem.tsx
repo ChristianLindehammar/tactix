@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   segmentedControl: {
     marginTop: 8,
-    maxWidth: 500,
+    maxWidth: 600,
     alignSelf: 'flex-start',
     width: '100%',
   },

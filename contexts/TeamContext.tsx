@@ -1,5 +1,5 @@
 import React, { createContext, useState, PropsWithChildren, useContext, useEffect } from 'react';
-import { Team, PlayerType, Position, PlayerPosition } from '@/types/models';
+import { Team, PlayerType, Position } from '@/types/models';
 import { LAYOUT } from '@/constants/layout';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
 import * as FileSystem from 'expo-file-system';
@@ -7,6 +7,7 @@ import * as Sharing from 'expo-sharing';
 import { useSport } from '@/context/SportContext';
 import { Platform, Alert } from 'react-native';
 import { useTranslation } from '@/hooks/useTranslation';
+import { sportsConfig } from '@/constants/sports';
 
 const FILE_EXTENSION = '.coachmate';
 const FILE_MIME_TYPE = 'application/coachmate';
@@ -16,7 +17,7 @@ interface TeamContextProps {
   teams: Team[];
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
   addPlayer: (name: string) => void;
-  setPlayerType: (playerId: string, position: PlayerPosition) => void;
+  setPlayerType: (playerId: string, position: string) => void;
   createTeam: (name: string) => void;
   selectTeam: (teamId: string) => void;
   removeTeam: (teamId: string) => void;
@@ -33,6 +34,11 @@ export const TeamContext = createContext<TeamContextProps | undefined>(undefined
 
 const TEAMS_STORAGE_KEY = 'teams';
 const SELECTED_TEAM_KEY = 'selectedTeamId';
+
+const getValidPosition = (position: string, sport: string): string => {
+  const availablePositions = sportsConfig[sport].positions;
+  return availablePositions.includes(position) ? position : availablePositions[0];
+};
 
 export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [teams, setTeams] = useState<Team[]>([]);
@@ -154,11 +160,13 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const addPlayer = (name: string) => {
     const position = findFreePosition();
+    const defaultPosition = sportsConfig[selectedSport || 'soccer'].positions[0];
+    
     const newPlayer: PlayerType = {
       id: Date.now().toString(),
       name: name,
       courtPosition: position,
-      position: PlayerPosition.Forward,
+      position: defaultPosition,
     };
     
     updateTeamInTeams(currentTeam => ({
@@ -167,14 +175,14 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }));
   };
 
-  const setPlayerType = (playerId: string, position: PlayerPosition) => {
+  const setPlayerType = (playerId: string, position: string) => {
     updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
-        player.id === playerId ? { ...player, position } : player
+        player.id === playerId ? { ...player, position: getValidPosition(position, currentTeam.sport) } : player
       ),
       benchPlayers: currentTeam.benchPlayers.map(player =>
-        player.id === playerId ? { ...player, position } : player
+        player.id === playerId ? { ...player, position: getValidPosition(position, currentTeam.sport) } : player
       ),
     }));
   };
@@ -203,7 +211,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       sharedWith: [],
       lastEdited: now,
       editedBy: 'user1',
-      sport: selectedSport,
+      sport: selectedSport || 'soccer',
     };
     setTeams(prev => [...prev, newTeam]);
     setSelectedTeamId(newTeam.id);
