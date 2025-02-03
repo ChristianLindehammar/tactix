@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Alert, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Alert, View, useWindowDimensions } from 'react-native';
 import { PlayerType, usePlayerPositionTranslation } from '@/types/models';
 import { useTeam } from '@/contexts/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
@@ -30,15 +30,21 @@ export const PlayerListItem = React.memo(
     const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
     const drag = useReorderableDrag();
     const { t } = useTranslation();
+    const { width } = useWindowDimensions();
+    const isLargeDevice = width >= 768; // iPad mini width is 768px
 
     const { translatePosition } = usePlayerPositionTranslation();
 
     const translatedPositions = useMemo(() => {
       if (selectedSport === 'basketball') {
-        return positions.map(pos => t(`playerPositionsShort.${pos}`, { defaultValue: t(`playerPositions.${pos}`) }));
+        return positions.map(pos => 
+          isLargeDevice 
+            ? t(`playerPositions.${pos}`)
+            : t(`playerPositionsShort.${pos}`, { defaultValue: t(`playerPositions.${pos}`) })
+        );
       }
       return positions.map(pos => translatePosition(pos));
-    }, [translatePosition, positions, selectedSport, t]);
+    }, [translatePosition, positions, selectedSport, t, isLargeDevice]);
 
     const handleRename = (newName: string) => {
       if (newName.trim()) {
