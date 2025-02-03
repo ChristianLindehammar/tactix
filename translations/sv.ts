@@ -15,6 +15,7 @@ export default {
   soccer: 'Fotboll',
   hockey: 'Hockey',
   bandy: 'Bandy',
+  basketball: 'Basket',
 
   // Home Screen
   welcomeToCoachMate: 'Välkommen till CoachMate!',
@@ -41,7 +42,11 @@ export default {
     Defender: 'Försvarare',
     Midfielder: 'Mittfältare',
     Center: "Center",
-    Forward: 'Anfallare'
+    Forward: 'Anfallare',
+    PointGuard: 'Point Guard',
+    ShootingGuard: 'Shooting Guard',
+    SmallForward: 'Small Forward',
+    PowerForward: 'Power Forward'
   },
 
   // Not Found Screen

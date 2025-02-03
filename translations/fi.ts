@@ -15,6 +15,7 @@ export default {
   soccer: 'Jalkapallo',
   hockey: 'Jääkiekko',
   bandy: 'Jääpallo',
+  basketball: 'Koripallo',
 
   // Home Screen
   welcomeToCoachMate: 'Tervetuloa CoachMateen!',
@@ -41,7 +42,11 @@ export default {
     Defender: 'Puolustaja',
     Midfielder: 'Keskikenttäpelaaja',
     Center: "Keskushyökkääjä",
-    Forward: 'Hyökkääjä'
+    Forward: 'Hyökkääjä',
+    PointGuard: 'Point Guard',
+    ShootingGuard: 'Shooting Guard',
+    SmallForward: 'Small Forward',
+    PowerForward: 'Power Forward'
   },
 
   // Not Found Screen

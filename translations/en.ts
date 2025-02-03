@@ -13,6 +13,7 @@ export default {
   soccer: 'Soccer',
   hockey: 'Hockey',
   bandy: 'Bandy',
+  basketball: 'Basketball',
 
 
   // Home Screen
@@ -39,7 +40,11 @@ export default {
     Defender: 'Defender',
     Midfielder: 'Midfielder',
     Center: "Center",
-    Forward: 'Forward'
+    Forward: 'Forward',
+    PointGuard: 'Point Guard',
+    ShootingGuard: 'Shooting Guard',
+    SmallForward: 'Small Forward',
+    PowerForward: 'Power Forward'
   },
 
   // Not Found Screen

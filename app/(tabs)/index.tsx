@@ -5,21 +5,16 @@ import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
 import { useEffect } from 'react';
 import * as Linking from 'expo-linking';
-import { Picker } from '@react-native-picker/picker';
-import { useThemeColor } from '@/hooks/useThemeColor';
 import * as FileSystem from 'expo-file-system';
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
-import FloorballSvg from '@/components/ui/FloorballSvg';
-import FootballSvg from '@/components/ui/FootballSvg';
 import { LAYOUT } from '@/constants/layout';
 import { ThemedText } from '@/components/ThemedText';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import HockeySvg from '@/components/ui/HockeySvg';
 import { useTranslation } from '@/hooks/useTranslation';
-import BandySvg from '@/components/ui/BandySvg';
 import { SportSelector } from '@/components/SportSelector';
+import { sportsConfig } from '@/constants/sports';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -111,26 +106,8 @@ export default function HomeScreen() {
 
   const availableWidth = Dimensions.get('window').width;
 
-  const courtConfig = {
-    floorball: {
-      Svg: FloorballSvg,
-      aspectRatio: 484 / 908,
-    },
-    football: {
-      Svg: FootballSvg,
-      aspectRatio: 549 / 800,
-    },
-    hockey: {
-      Svg: HockeySvg,
-      aspectRatio: 427 / 846,
-    },
-    bandy: {
-      Svg: BandySvg, 
-      aspectRatio: 549 / 840,
-    },
-  };
 
-  const { Svg, aspectRatio } = courtConfig[selectedSport];
+  const { Svg, aspectRatio } = sportsConfig[selectedSport];
 
   // Calculate dimensions to fill the screen while maintaining aspect ratio
   const screenRatio = availableWidth / availableHeight;

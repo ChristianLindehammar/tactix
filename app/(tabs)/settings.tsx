@@ -1,7 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { useSport } from '@/context/SportContext';
-import { useThemeColor } from '@/hooks/useThemeColor';
 
 import { Collapsible } from '@/components/Collapsible';
 import ParallaxScrollView from '@/components/ParallaxScrollView';

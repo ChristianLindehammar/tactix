@@ -3,10 +3,11 @@ import { Picker } from '@react-native-picker/picker';
 import { useSport } from '@/context/SportContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { sportsConfig, Sport } from '@/constants/sports';
 
 export function SportSelector() {
   const { selectedSport, setSelectedSport } = useSport();
-  const textColor = useThemeColor({}, 'text');
+  const textColor = useThemeColor({}, 'text') as string;
   const { t } = useTranslation();
 
   return (
@@ -15,10 +16,9 @@ export function SportSelector() {
       onValueChange={(itemValue) => setSelectedSport(itemValue)} 
       style={[styles.picker, { color: textColor }]}
     >
-      <Picker.Item label={t('floorball')} value='floorball' />
-      <Picker.Item label={t('soccer')} value='football' />
-      <Picker.Item label={t('hockey')} value='hockey' />
-      <Picker.Item label={t('bandy')} value='bandy' />
+      {(Object.keys(sportsConfig) as Sport[]).map((sport) => (
+        <Picker.Item key={sport} label={t(sport)} value={sport} />
+      ))}
     </Picker>
   );
 }

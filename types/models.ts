@@ -1,7 +1,5 @@
 import { useTranslation } from '@/hooks/useTranslation';
-
-export type Sport = 'floorball' | 'football' | 'hockey' | 'bandy';
-
+import { Sport } from '@/constants/sports';
 
 export interface Team {
   id: string;
@@ -15,18 +13,11 @@ export interface Team {
   sport: Sport
 }
 
-export enum PlayerPosition {
-  Goalkeeper = 'Goalkeeper',
-  Defender = 'Defender',
-  Center = 'Center',
-  Midfielder = 'Midfielder',
-  Forward = 'Forward',
-}
 
 export const usePlayerPositionTranslation = () => {
   const { t } = useTranslation();
   
-  const translatePosition = (position: PlayerPosition): string => {
+  const translatePosition = (position: string): string => {
     return t(`playerPositions.${position}`);
   };
 
@@ -36,7 +27,7 @@ export const usePlayerPositionTranslation = () => {
 export interface PlayerType {
   id: string;
   name: string;
-  position: PlayerPosition;
+  position: string; // changed from PlayerPosition
   courtPosition?: Position; 
 }
 
