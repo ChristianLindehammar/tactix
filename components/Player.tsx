@@ -21,46 +21,42 @@ interface PlayerProps {
 }
 
 export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
-  // Calculate scale factors
-  const scaleX = containerSize.width / LAYOUT.FLOORBALL_COURT.WIDTH;
-  const scaleY = containerSize.height / LAYOUT.FLOORBALL_COURT.HEIGHT;
-
-  // Initialize with scaled values
-  const translateX = useSharedValue(courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
-  const translateY = useSharedValue(courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
+  const translateX = useSharedValue(courtPosition.x * containerSize.width);
+  const translateY = useSharedValue(courtPosition.y * containerSize.height);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
 
-  // Update when container size or position changes
   React.useEffect(() => {
-    translateX.value = courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX;
-    translateY.value = courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY;
+    translateX.value = courtPosition.x * containerSize.width;
+    translateY.value = courtPosition.y * containerSize.height;
   }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
 
   const { selectedSport } = useSport();
   const { positions, positionColors = {} } = sportsConfig[selectedSport ?? 'soccer'];
   const safePosition = positions.includes(position) ? position : positions[0];
 
+  const MARKER_SIZE = 60;
+  const halfMarker = MARKER_SIZE / 2;
+
   const panGesture = Gesture.Pan()
-    .onStart((event) => {
-      offsetX.value = translateX.value - event.absoluteX;
-      offsetY.value = translateY.value - event.absoluteY;
+    .onStart(() => {
+      offsetX.value = translateX.value;
+      offsetY.value = translateY.value;
     })
     .onUpdate((event) => {
-      translateX.value = event.absoluteX + offsetX.value;
-      translateY.value = event.absoluteY + offsetY.value;
+      translateX.value = offsetX.value + event.translationX;
+      translateY.value = offsetY.value + event.translationY;
     })
     .onEnd(() => {
-      // Convert back to ratio based on original dimensions
-      const newX = translateX.value / (LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
-      const newY = translateY.value / (LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
+      const newX = translateX.value / containerSize.width;
+      const newY = translateY.value / containerSize.height;
       runOnJS(onDragEnd)({ x: newX, y: newY });
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
-      { translateX: translateX.value },
-      { translateY: translateY.value },
+      { translateX: translateX.value - halfMarker },
+      { translateY: translateY.value - halfMarker },
     ],
     backgroundColor: positionColors[safePosition] || 'white',
   }));

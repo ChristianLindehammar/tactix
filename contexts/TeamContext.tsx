@@ -119,43 +119,36 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const findFreePosition = (): Position => {
-    const playerSize = LAYOUT.PLAYER.SIZE;
-    const padding = 10;
-    const spacing = playerSize + padding;
+    const spacing = 0.1;
+    const padding = 0.05;
 
     const isPositionTaken = (pos: Position): boolean => {
       if (!selectedTeam) return false;
-      return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(
-        player => player.courtPosition && 
-                  Math.abs(player.courtPosition.x - pos.x) < (playerSize / LAYOUT.FLOORBALL_COURT.WIDTH) && 
-                  Math.abs(player.courtPosition.y - pos.y) < (playerSize / LAYOUT.FLOORBALL_COURT.HEIGHT)
-      );
+      return [...selectedTeam.startingPlayers, ...selectedTeam.benchPlayers].some(p => {
+        if (!p.courtPosition) return false;
+        const dx = p.courtPosition.x - pos.x;
+        const dy = p.courtPosition.y - pos.y;
+        // Check if positions are too close
+        return Math.sqrt(dx * dx + dy * dy) < spacing / 2;
+      });
     };
 
-    const maxColumns = Math.floor(LAYOUT.FLOORBALL_COURT.WIDTH / spacing);
-    
-    let column = 0;
-    let row = 0;
-    
-    while (row * spacing < LAYOUT.FLOORBALL_COURT.HEIGHT) {
-      while (column < maxColumns) {
-        const x = (padding + column * spacing) / LAYOUT.FLOORBALL_COURT.WIDTH;
-        const y = (padding + row * spacing) / LAYOUT.FLOORBALL_COURT.HEIGHT;
-        const pos = { x, y };
-        
-        if (!isPositionTaken(pos)) {
-          return pos;
+    const maxRows = Math.floor((1 - padding * 2) / spacing);
+
+    for (let row = 0; row < maxRows; row++) {
+      for (let col = 0; col < maxRows; col++) {
+        const x = padding + col * spacing;
+        const y = padding + row * spacing;
+        const candidate = { x, y };
+
+        if (!isPositionTaken(candidate)) {
+          return candidate;
         }
-        column++;
       }
-      column = 0;
-      row++;
     }
 
-    return {
-      x: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.WIDTH - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.WIDTH,
-      y: (padding + Math.random() * (LAYOUT.FLOORBALL_COURT.HEIGHT - playerSize - padding * 2)) / LAYOUT.FLOORBALL_COURT.HEIGHT
-    };
+    // Fallback if grid is full
+    return { x: 0.5, y: 0.5 };
   };
 
   const addPlayer = (name: string) => {
