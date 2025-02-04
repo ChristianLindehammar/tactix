@@ -11,51 +11,51 @@ const SvgComponent = (props: SvgProps) => (
   >
        <Path
       fill="#fff"
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M7.5 820.5v-801h534v801z"
     />
-    <Path stroke="red" strokeWidth={5} d="m10.005 418.5 529 1" />
+    <Path stroke="#de2f31" strokeWidth={5} d="m10.005 418.5 529 1" />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeDasharray="10 10"
       strokeWidth={5}
       d="M8 64.5h124M8 778.5h124M415 778.5h124M415 64.5h124"
     />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M287.5 2.5v17h-27v-17zM421.479 19.5A147.499 147.499 0 0 1 274 164.5a147.498 147.498 0 0 1-147.479-145h294.958Z"
     />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M206 190.5c23.472 0 42.5-19.028 42.5-42.5s-19.028-42.5-42.5-42.5-42.5 19.028-42.5 42.5 19.028 42.5 42.5 42.5ZM343 190.5c23.472 0 42.5-19.028 42.5-42.5s-19.028-42.5-42.5-42.5-42.5 19.028-42.5 42.5 19.028 42.5 42.5 42.5Z"
     />
     <Path
-      fill="red"
+      fill="#de2f31"
       d="M206 153a5 5 0 1 0-.001-10.001A5 5 0 0 0 206 153ZM343 153a5 5 0 1 0-.001-10.001A5 5 0 0 0 343 153ZM274 128a5 5 0 1 0-.001-10.001A5 5 0 0 0 274 128Z"
     />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M287.5 837.5v-17h-27v17zM378.298 718.702A147.499 147.499 0 0 1 421.479 820.5H126.521a147.499 147.499 0 0 1 251.777-101.798Z"
     />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M206 649.5c23.472 0 42.5 19.028 42.5 42.5s-19.028 42.5-42.5 42.5-42.5-19.028-42.5-42.5 19.028-42.5 42.5-42.5ZM343 649.5c23.472 0 42.5 19.028 42.5 42.5s-19.028 42.5-42.5 42.5-42.5-19.028-42.5-42.5 19.028-42.5 42.5-42.5Z"
     />
     <Path
-      fill="red"
+      fill="#de2f31"
       d="M206 687a5 5 0 1 1-.001 10.001A5 5 0 0 1 206 687ZM343 687a5 5 0 1 1-.001 10.001A5 5 0 0 1 343 687ZM274 712a5 5 0 1 1-.001 10.001A5 5 0 0 1 274 712Z"
     />
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={5}
       d="M274 377.5c23.472 0 42.5 19.028 42.5 42.5s-19.028 42.5-42.5 42.5-42.5-19.028-42.5-42.5 19.028-42.5 42.5-42.5Z"
     />
-    <Path fill="red" d="M274 414a5 5 0 1 1-.001 10.001A5 5 0 0 1 274 414Z" />
+    <Path fill="#de2f31" d="M274 414a5 5 0 1 1-.001 10.001A5 5 0 0 1 274 414Z" />
     <Mask
       id="a"
       width={20}
@@ -69,7 +69,7 @@ const SvgComponent = (props: SvgProps) => (
       <Path d="M20 22a10 10 0 0 1-10 10V22h10Z" />
     </Mask>
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={10}
       d="M20 22a10 10 0 0 1-10 10V22h10Z"
       mask="url(#a)"
@@ -87,7 +87,7 @@ const SvgComponent = (props: SvgProps) => (
       <Path d="M529 22a10.01 10.01 0 0 0 2.929 7.071A10.007 10.007 0 0 0 539 32V22h-10Z" />
     </Mask>
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={10}
       d="M529 22a10.01 10.01 0 0 0 2.929 7.071A10.007 10.007 0 0 0 539 32V22h-10Z"
       mask="url(#b)"
@@ -105,7 +105,7 @@ const SvgComponent = (props: SvgProps) => (
       <Path d="M20 818a10.002 10.002 0 0 0-10-10v10h10Z" />
     </Mask>
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={10}
       d="M20 818a10.002 10.002 0 0 0-10-10v10h10Z"
       mask="url(#c)"
@@ -123,7 +123,7 @@ const SvgComponent = (props: SvgProps) => (
       <Path d="M529 818a10.01 10.01 0 0 1 2.929-7.071A10.008 10.008 0 0 1 539 808v10h-10Z" />
     </Mask>
     <Path
-      stroke="red"
+      stroke="#de2f31"
       strokeWidth={10}
       d="M529 818a10.01 10.01 0 0 1 2.929-7.071A10.008 10.008 0 0 1 539 808v10h-10Z"
       mask="url(#d)"

@@ -68,7 +68,13 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
   return (
     <GestureDetector gesture={panGesture}>
       <Animated.View style={[styles.player, animatedStyle]}>
-        <Text style={styles.playerName}>{name.slice(0, 8)}</Text>
+        <Text 
+          numberOfLines={2} 
+          ellipsizeMode="tail" 
+          style={styles.playerName}
+        >
+          {name}
+        </Text>
       </Animated.View>
     </GestureDetector>
   );
@@ -85,11 +91,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 2,
     borderColor: 'black',
+    padding: 4,
   },
   playerName: {
     color: '#000',
     fontWeight: 'bold',
     fontSize: 14,
     textAlign: 'center',
+    width: '90%',
   },
 });
