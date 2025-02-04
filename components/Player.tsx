@@ -22,19 +22,19 @@ interface PlayerProps {
 
 export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
   // Calculate scale factors
-  const scaleX = containerSize.width / LAYOUT.FLOORBALL_COURT.WIDTH;
-  const scaleY = containerSize.height / LAYOUT.FLOORBALL_COURT.HEIGHT;
+  const scaleX = containerSize.width / LAYOUT.UNIVERSAL_COURT_WIDTH;
+  const scaleY = containerSize.height / LAYOUT.UNIVERSAL_COURT_HEIGHT;
 
   // Initialize with scaled values
-  const translateX = useSharedValue(courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
-  const translateY = useSharedValue(courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
+  const translateX = useSharedValue(courtPosition.x * scaleX);
+  const translateY = useSharedValue(courtPosition.y * scaleY);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
 
   // Update when container size or position changes
   React.useEffect(() => {
-    translateX.value = courtPosition.x * LAYOUT.FLOORBALL_COURT.WIDTH * scaleX;
-    translateY.value = courtPosition.y * LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY;
+    translateX.value = courtPosition.x * scaleX;
+    translateY.value = courtPosition.y * scaleY;
   }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
 
   const { selectedSport } = useSport();
@@ -51,9 +51,9 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
       translateY.value = event.absoluteY + offsetY.value;
     })
     .onEnd(() => {
-      // Convert back to ratio based on original dimensions
-      const newX = translateX.value / (LAYOUT.FLOORBALL_COURT.WIDTH * scaleX);
-      const newY = translateY.value / (LAYOUT.FLOORBALL_COURT.HEIGHT * scaleY);
+      // Convert back to universal coordinate system
+      const newX = translateX.value / scaleX;
+      const newY = translateY.value / scaleY;
       runOnJS(onDragEnd)({ x: newX, y: newY });
     });
 

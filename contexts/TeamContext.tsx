@@ -107,13 +107,17 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const updatePlayerPosition = (playerId: string, position: { x: number; y: number }) => {
+    const universalPosition = {
+      x: position.x / LAYOUT.UNIVERSAL_COURT_WIDTH,
+      y: position.y / LAYOUT.UNIVERSAL_COURT_HEIGHT,
+    };
     updateTeamInTeams(currentTeam => ({
       ...currentTeam,
       startingPlayers: currentTeam.startingPlayers.map(player =>
-        player.id === playerId ? { ...player, courtPosition: position } : player
+        player.id === playerId ? { ...player, courtPosition: universalPosition } : player
       ),
       benchPlayers: currentTeam.benchPlayers.map(player =>
-        player.id === playerId ? { ...player, courtPosition: position } : player
+        player.id === playerId ? { ...player, courtPosition: universalPosition } : player
       )
     }));
   };
@@ -165,7 +169,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const newPlayer: PlayerType = {
       id: Date.now().toString(),
       name: name,
-      courtPosition: position,
+      courtPosition: {
+        x: position.x * LAYOUT.UNIVERSAL_COURT_WIDTH,
+        y: position.y * LAYOUT.UNIVERSAL_COURT_HEIGHT,
+      },
       position: defaultPosition,
     };
     
@@ -290,7 +297,24 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       if (!teamToExport) return;
   
       const sanitizedName = sanitizeFileName(teamToExport.name);
-      const fileContent = JSON.stringify(teamToExport, null, 2);
+      const teamToExportWithUniversalPositions = {
+        ...teamToExport,
+        startingPlayers: teamToExport.startingPlayers.map(player => ({
+          ...player,
+          courtPosition: {
+            x: player.courtPosition?.x ?? 0,
+            y: player.courtPosition?.y ?? 0,
+          }
+        })),
+        benchPlayers: teamToExport.benchPlayers.map(player => ({
+          ...player,
+          courtPosition: {
+            x: player.courtPosition?.x ?? 0,
+            y: player.courtPosition?.y ?? 0,
+          }
+        }))
+      };
+      const fileContent = JSON.stringify(teamToExportWithUniversalPositions, null, 2);
   
       if (Platform.OS === "android") {
         Alert.alert(
@@ -391,7 +415,24 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     try {
       const contents = await FileSystem.readAsStringAsync(fileUri);
       const parsed: Team = JSON.parse(contents);
-      await importTeam(parsed);
+      const parsedWithUniversalPositions = {
+        ...parsed,
+        startingPlayers: parsed.startingPlayers.map(player => ({
+          ...player,
+          courtPosition: {
+            x: player.courtPosition?.x ?? 0,
+            y: player.courtPosition?.y ?? 0,
+          }
+        })),
+        benchPlayers: parsed.benchPlayers.map(player => ({
+          ...player,
+          courtPosition: {
+            x: player.courtPosition?.x ?? 0,
+            y: player.courtPosition?.y ?? 0,
+          }
+        }))
+      };
+      await importTeam(parsedWithUniversalPositions);
     } catch (err) {
       console.error('Error importing team file:', err);
     }
