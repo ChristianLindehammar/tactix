@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Player } from './Player';
 import { PlayerType } from '@/types/models';
+import { LAYOUT } from '@/constants/layout';
 
 interface Props {
   availableHeight: number;
@@ -30,7 +31,11 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
                 name={player.name}
                 position={player.position}
                 courtPosition={player.courtPosition}
-                onDragEnd={(pos) => onDragEnd(player.id, pos)}
+                onDragEnd={(pos) => {
+                  const universalX = pos.x / availableWidth * LAYOUT.UNIVERSAL_COURT_WIDTH;
+                  const universalY = pos.y / availableHeight * LAYOUT.UNIVERSAL_COURT_HEIGHT;
+                  onDragEnd(player.id, { x: universalX, y: universalY });
+                }}
                 containerSize={{ width: availableWidth, height: availableHeight }}
               />
             );

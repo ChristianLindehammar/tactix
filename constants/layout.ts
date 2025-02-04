@@ -1,11 +1,13 @@
 import { Platform } from 'react-native';
 
 export const LAYOUT = {
+  UNIVERSAL_COURT_WIDTH: 1000,  // Universal width for the court
+  UNIVERSAL_COURT_HEIGHT: 2000, // Universal height for the court
   FLOORBALL_COURT: {
-    CENTER_X: 242,  // Center X coordinate of the court SVG
-    CENTER_Y: 453,  // Center Y coordinate of the court SVG
-    WIDTH: 484,     // Total width of the court SVG
-    HEIGHT: 908     // Total height of the court SVG
+    CENTER_X: 500,  // Center X coordinate of the court in universal system
+    CENTER_Y: 1000, // Center Y coordinate of the court in universal system
+    WIDTH: 1000,    // Total width of the court in universal system
+    HEIGHT: 2000    // Total height of the court in universal system
   },
   PLAYER: {
     SIZE: 40,       // Player marker size
