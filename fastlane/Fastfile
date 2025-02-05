@@ -4,6 +4,8 @@ before_all do
   ensure_git_branch
   ensure_git_status_clean
   git_pull
+  sh "rm -rf ios android"
+  sh "npx expo prebuild"
 end
 
 platform :ios do
@@ -56,38 +58,16 @@ platform :android do
   lane :beta do
     setup_ci if ENV['CI']
 
-    # Clean the project first
-    gradle(
-      task: 'clean',
-      project_dir: 'android/'
-    )
-
-    # Get the latest version code from internal track
-    previous_build_number = google_play_track_version_codes(track: "internal")[0]
-    current_build_number = previous_build_number + 1
-
-    # Build the release bundle with detailed logging
-    gradle(
-      task: 'bundle',
-      build_type: 'Release',
-      project_dir: 'android/',
-      properties: {
-      "android.injected.version.code" => current_build_number,
-      "org.gradle.jvmargs" => "-Xmx4096m",
-      "android.injected.signing.store.file" => "keystore.jks",
-      "android.injected.signing.store.password" => ENV["ANDROID_KEYSTORE_PASSWORD"],
-      "android.injected.signing.key.alias" => "coachmate",
-      "android.injected.signing.key.password" => ENV["ANDROID_KEY_PASSWORD"],
-      },
-      print_command: true,
-      flags: "--stacktrace --info"
-    )
+    # Replace gradle build with EAS build
+    result = sh("eas build --platform android --local")
+    aab_path_match = result.match(/You can find the build artifacts in (.*\.aab)/)
+    aab_path = aab_path_match ? aab_path_match[1] : "./myapp.aab"
 
     # Upload to Play Store Internal Testing
     upload_to_play_store(
-      track: 'internal',
+      track: 'closed',
       skip_upload_apk: true,
-      aab: "#{lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]}",
+      aab: aab_path,
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true,
