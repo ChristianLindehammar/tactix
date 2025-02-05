@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
   playerName: {
     color: '#000',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 11,
     textAlign: 'center',
-    width: '90%',
+    width: '95%',
   },
 });
