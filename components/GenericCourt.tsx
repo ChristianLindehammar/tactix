@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Player } from './Player';
@@ -14,6 +14,13 @@ interface Props {
 }
 
 export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
+  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
+  
+  const handleDragEnd = (playerId: string, pos: { x: number; y: number }) => {
+    setSelectedPlayerId(null);
+    onDragEnd(playerId, pos);
+  };
+
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
       <View style={[styles.container, { width: availableWidth, height: availableHeight }]}>
@@ -30,8 +37,9 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
                 name={player.name}
                 position={player.position}
                 courtPosition={player.courtPosition}
-                onDragEnd={(pos) => onDragEnd(player.id, pos)}
+                onDragEnd={(pos) => handleDragEnd(player.id, pos)}
                 containerSize={{ width: availableWidth, height: availableHeight }}
+                isSelected={player.id === selectedPlayerId}
               />
             );
           })}
