@@ -11,9 +11,14 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
-  const announcementBgColor = useThemeColor({}, 'announcement.background');
-  const announcementBorderColor = useThemeColor({}, 'announcement.border');
-  const announcementIconColor = useThemeColor({}, 'announcement.icon');
+  const bgColorValue = useThemeColor({}, 'announcement.background');
+  const borderColorValue = useThemeColor({}, 'announcement.border');
+  const iconColorValue = useThemeColor({}, 'announcement.icon');
+  
+  // Ensure we have string color values
+  const announcementBgColor = typeof bgColorValue === 'string' ? bgColorValue : '#FFFFFF';
+  const announcementBorderColor = typeof borderColorValue === 'string' ? borderColorValue : '#DDDDDD';
+  const announcementIconColor = typeof iconColorValue === 'string' ? iconColorValue : '#000000';
   
   // Use your actual landing page URL here
   const landingPageUrl = 'https://lindehammar-konsult.se/coachmate-testing';
@@ -31,7 +36,7 @@ export default function SettingsScreen() {
       {/* Android tester announcement */}
       <TouchableOpacity onPress={handleOpenTestingPage} activeOpacity={0.8}>
         <ThemedView style={[styles.announcementContainer, { backgroundColor: announcementBgColor, borderColor: announcementBorderColor }]}>
-          <IconSymbol name="smartphone" size={24} style={[styles.announcementIcon, { color: announcementIconColor }]} />
+          <IconSymbol name="smartphone" size={24} color={announcementIconColor} style={styles.announcementIcon} />
           <ThemedView style={styles.announcementTextContainer}>
             <ThemedText style={styles.announcementTitle}>Android Testers Needed!</ThemedText>
             <ThemedText style={styles.announcementBody}>
@@ -83,7 +88,7 @@ const styles = StyleSheet.create({
   // Fixed announcement styles without inline theme colors
   announcementContainer: {
     flexDirection: 'row',
-    padding: 16,
+    padding: 8,
     marginVertical: 16,
     borderRadius: 8,
     borderWidth: 1,
@@ -99,8 +104,10 @@ const styles = StyleSheet.create({
   announcementTitle: {
     fontWeight: 'bold',
     marginBottom: 4,
+    margin: 8,
   },
   announcementBody: {
     fontSize: 14,
+    margin: 8,
   },
 });

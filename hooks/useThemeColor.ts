@@ -8,7 +8,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
-  colorName: keyof typeof Colors.light & keyof typeof Colors.dark
+  colorName: string
 ) {
   const theme = useColorScheme() ?? 'light';
   const colorFromProps = props[theme];
@@ -16,6 +16,13 @@ export function useThemeColor(
   if (colorFromProps) {
     return colorFromProps;
   } else {
-    return Colors[theme][colorName];
+    // Handle nested properties with dot notation
+    if (colorName.includes('.')) {
+      const [parent, child] = colorName.split('.');
+      const parentValue = Colors[theme][parent as keyof typeof Colors[typeof theme]];
+      return (parentValue as Record<string, string>)[child];
+    }
+    // Original case for top-level properties
+    return Colors[theme][colorName as keyof typeof Colors[typeof theme]];
   }
 }
