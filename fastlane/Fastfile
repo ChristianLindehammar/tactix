@@ -21,6 +21,16 @@ before_all do
   Dir.chdir(fastlane_dir)
 end
 
+# Create a new lane at the top level to run both iOS and Android builds
+desc "Build and deploy both iOS and Android"
+lane :deploy_all do
+  # First run the iOS beta lane
+  ios_beta
+  
+  # Then run the Android beta lane
+  android_beta
+end
+
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
@@ -62,7 +72,11 @@ platform :ios do
       api_key: api_key,
       skip_waiting_for_build_processing: true
     )
-
+  end
+  
+  # Make the lane accessible outside the platform scope
+  lane :ios_beta do
+    beta
   end
 end
 
@@ -86,5 +100,10 @@ platform :android do
       skip_upload_screenshots: true,
       release_status: 'draft'
     )
+  end
+  
+  # Make the lane accessible outside the platform scope
+  lane :android_beta do
+    beta
   end
 end
