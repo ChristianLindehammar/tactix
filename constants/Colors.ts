@@ -25,6 +25,11 @@ export const Colors = {
     },
     buttonEnabled: '#0097B2',
     buttonDisabled: '#CCC',
+    announcement: {
+      background: '#e3f2fd',
+      border: '#bbdefb',
+      icon: '#1976d2',
+    },
   },
   dark: {
     text: '#ECEDEE',
@@ -44,5 +49,10 @@ export const Colors = {
     },
     buttonEnabled: '#444D51',
     buttonDisabled: '#3A4045',
+    announcement: {
+      background: '#263238',
+      border: '#455a64',
+      icon: '#64b5f6',
+    },
   },
 };
