@@ -1,6 +1,6 @@
 import { Position } from '@/types/models';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
   useAnimatedStyle,
@@ -9,7 +9,6 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
-import { LAYOUT } from '@/constants/layout';
 
 interface PlayerProps {
   id: string;
@@ -21,6 +20,9 @@ interface PlayerProps {
 }
 
 export function Player({ id, name, position, courtPosition, onDragEnd, containerSize }: PlayerProps) {
+  const MARKER_SIZE = 40;
+  const halfMarker = MARKER_SIZE / 2;
+  
   const translateX = useSharedValue(courtPosition.x * containerSize.width);
   const translateY = useSharedValue(courtPosition.y * containerSize.height);
   const offsetX = useSharedValue(0);
@@ -34,9 +36,6 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
   const { selectedSport } = useSport();
   const { positions, positionColors = {} } = sportsConfig[selectedSport ?? 'soccer'];
   const safePosition = positions.includes(position) ? position : positions[0];
-
-  const MARKER_SIZE = 60;
-  const halfMarker = MARKER_SIZE / 2;
 
   const panGesture = Gesture.Pan()
     .onStart(() => {
@@ -58,42 +57,52 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
       { translateX: translateX.value - halfMarker },
       { translateY: translateY.value - halfMarker },
     ],
-    backgroundColor: positionColors[safePosition] || 'white',
   }));
 
   return (
     <GestureDetector gesture={panGesture}>
-      <Animated.View style={[styles.player, animatedStyle]}>
-        <Text 
-          numberOfLines={2} 
-          ellipsizeMode="tail" 
-          style={styles.playerName}
-        >
-          {name}
-        </Text>
+      <Animated.View style={[animatedStyle, styles.playerContainer]}>
+        <View style={[styles.playerMarker, { backgroundColor: positionColors[safePosition] || 'white' }]} />
+        <View style={styles.nameBox}>
+          <Text 
+            numberOfLines={2} 
+            ellipsizeMode="tail" 
+            style={styles.playerName}
+          >
+            {name}
+          </Text>
+        </View>
       </Animated.View>
     </GestureDetector>
   );
 }
 
 const styles = StyleSheet.create({
-  player: {
-    position: 'absolute',
-    width: 60,
-    height: 60,
-    backgroundColor: 'white',
-    borderRadius: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
+  playerMarker: {
+    width: 40, 
+    height: 40,
+    borderRadius: 20, 
     borderWidth: 2,
     borderColor: 'black',
-    padding: 4,
+  },
+  nameBox: {
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 4,
+    maxWidth: 70,
+    alignSelf: 'center',
   },
   playerName: {
     color: '#000',
     fontWeight: 'bold',
     fontSize: 11,
     textAlign: 'center',
-    width: '95%',
+    flexWrap: 'wrap', 
+  },
+  playerContainer: {
+    alignItems: 'center',
   },
 });
