@@ -8,25 +8,27 @@ before_all do
   # Store current directory
   fastlane_dir = Dir.pwd
   
-  # Navigate to project root directory (one level up from fastlane directory)
-  Dir.chdir("..")
-  
-  # Remove iOS and Android directories from project root
-  sh "rm -rf ios android"
-  
-  # Run expo prebuild from project root
-  sh "npx expo prebuild"
-  
-  # Return to fastlane directory
-  Dir.chdir(fastlane_dir)
+  begin
+    # Navigate to project root directory (one level up from fastlane directory)
+    Dir.chdir("..")
+    
+    # Remove iOS and Android directories from project root
+    sh "rm -rf ios android"
+    
+    # Run expo prebuild from project root
+    sh "npx expo prebuild"
+  ensure
+    # Always return to fastlane directory, even if an error occurs
+    Dir.chdir(fastlane_dir)
+  end
 end
 
 # Create a new lane at the top level to run both iOS and Android builds
 desc "Build and deploy both iOS and Android"
 lane :deploy_all do
   # Use the full namespace to access platform-specific lanes
-  ios beta
-  android beta
+  ios :beta
+  android :beta
 end
 
 platform :ios do
