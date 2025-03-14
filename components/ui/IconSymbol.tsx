@@ -16,6 +16,8 @@ const MAPPING: Record<string, IconMapping> = {
   'sportscourt.fill': { type: 'custom', icon: CourtIconSvg },
   'person.3.fill': { type: 'ionicon', icon: 'people' },
   'gear': { type: 'ionicon', icon: 'settings' },
+  'share': { type: 'ionicon', icon: 'share-outline' },
+  'smartphone': { type: 'ionicon', icon: 'phone-portrait-outline' },
 } as const;
 
 export type IconSymbolName = keyof typeof MAPPING;

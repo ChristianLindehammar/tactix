@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, Linking } from 'react-native';
+import { StyleSheet, TouchableOpacity, Linking, Share } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -8,12 +8,14 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useTranslation } from '@/hooks/useTranslation';
 import { SportSelector } from '@/components/SportSelector';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
   const bgColorValue = useThemeColor({}, 'announcement.background');
   const borderColorValue = useThemeColor({}, 'announcement.border');
   const iconColorValue = useThemeColor({}, 'announcement.icon');
+  const background = useThemeColor({}, 'background');
   
   // Ensure we have string color values
   const announcementBgColor = typeof bgColorValue === 'string' ? bgColorValue : '#FFFFFF';
@@ -27,24 +29,40 @@ export default function SettingsScreen() {
     Linking.openURL(landingPageUrl);
   };
 
+  // New share handler
+  const handleShareTestingPage = async () => {
+    try {
+      await Share.share({
+        message: `Check out our Android testing program: ${landingPageUrl}`,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <ParallaxScrollView headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }} headerImage={<IconSymbol size={310} color='#808080' name='gear' style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type='title'>{t('settings')}</ThemedText>
       </ThemedView>
       
-      {/* Android tester announcement */}
-      <TouchableOpacity onPress={handleOpenTestingPage} activeOpacity={0.8}>
-        <ThemedView style={[styles.announcementContainer, { backgroundColor: announcementBgColor, borderColor: announcementBorderColor }]}>
-          <IconSymbol name="smartphone" size={24} color={announcementIconColor} style={styles.announcementIcon} />
+      {/* Combined Android tester announcement with link and share */}
+      <ThemedView style={[styles.announcementContainer, { backgroundColor: announcementBgColor, borderColor: announcementBorderColor, flexDirection: 'row', alignItems: 'center' }]}>
+        <TouchableOpacity onPress={handleOpenTestingPage} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+          <IconSymbol name="smartphone" size={24} color={announcementIconColor} />
           <ThemedView style={styles.announcementTextContainer}>
             <ThemedText style={styles.announcementTitle}>Android Testers Needed!</ThemedText>
             <ThemedText style={styles.announcementBody}>
               We're looking for users to help test our Android version. Tap here to join our testing program and provide feedback.
             </ThemedText>
           </ThemedView>
-        </ThemedView>
-      </TouchableOpacity>
+        </TouchableOpacity>
+        <TouchableOpacity 
+          onPress={handleShareTestingPage} 
+          style={styles.shareButton}>
+         <MaterialIcons size={24} name="share" color={announcementIconColor}  />
+        </TouchableOpacity>
+      </ThemedView>
       
       <Collapsible title={t('aboutApp')}>
         <ThemedText style={{ marginBottom: 8 }}>{t('aboutTheApp')}</ThemedText>
@@ -95,9 +113,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 12,
   },
-  announcementIcon: {
-    // Color will be applied dynamically
-  },
   announcementTextContainer: {
     flex: 1,
   },
@@ -109,5 +124,14 @@ const styles = StyleSheet.create({
   announcementBody: {
     fontSize: 14,
     margin: 8,
+  },
+  shareButton: {
+    padding: 10,
+    borderRadius: 20,
+    marginLeft: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,           // Adding a border to make the button more visible
+    borderColor: 'rgba(0,0,0,0.1)', // Light border for definition
   },
 });
