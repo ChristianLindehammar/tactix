@@ -33,7 +33,7 @@ export default function SettingsScreen() {
   const handleShareTestingPage = async () => {
     try {
       await Share.share({
-        message: `Check out our Android testing program: ${landingPageUrl}`,
+        message: `${t('checkOutAndroidTestingProgram')}: ${landingPageUrl}`,
       });
     } catch (error) {
       console.log(error);
@@ -51,9 +51,9 @@ export default function SettingsScreen() {
         <TouchableOpacity onPress={handleOpenTestingPage} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <IconSymbol name="smartphone" size={24} color={announcementIconColor} />
           <ThemedView style={styles.announcementTextContainer}>
-            <ThemedText style={styles.announcementTitle}>Android Testers Needed!</ThemedText>
+            <ThemedText style={styles.announcementTitle}>{t('androidTestersNeeded')}</ThemedText>
             <ThemedText style={styles.announcementBody}>
-              We're looking for users to help test our Android version. Tap here to join our testing program and provide feedback.
+              {t('androidTestingProgramDescription')}
             </ThemedText>
           </ThemedView>
         </TouchableOpacity>

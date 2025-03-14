@@ -89,4 +89,9 @@ export default {
   teamRemoveConfirm: 'Haluatko varmasti poistaa joukkueen "{{teamName}}"?',
   invalidFile: 'Virheellinen tiedosto',
   selectCoachmateFile: 'Valitse .coachmate tiedosto',
+
+  // Android Testing Program
+  androidTestersNeeded: 'Android-testaajia tarvitaan!',
+  androidTestingProgramDescription: 'Etsimme käyttäjiä, jotka voivat auttaa testaamaan Android-versiotamme. Napauta tästä liittyäksesi testiohjelmaamme ja antaaksesi palautetta.',
+  checkOutAndroidTestingProgram: 'Tutustu Android-testiohjelmaamme',
 };
