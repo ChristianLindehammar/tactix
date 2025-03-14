@@ -9,6 +9,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 interface PlayerProps {
   id: string;
@@ -59,15 +60,25 @@ export function Player({ id, name, position, courtPosition, onDragEnd, container
     ],
   }));
 
+  const nameBoxBackgroundColor = useThemeColor({}, 'background');
+  const nameBoxBorderColor = useThemeColor({}, 'border');
+  const textColor = useThemeColor({}, 'text');
+
   return (
     <GestureDetector gesture={panGesture}>
       <Animated.View style={[animatedStyle, styles.playerContainer]}>
         <View style={[styles.playerMarker, { backgroundColor: positionColors[safePosition] || 'white' }]} />
-        <View style={styles.nameBox}>
+        <View style={[
+          styles.nameBox, 
+          { 
+            backgroundColor: typeof nameBoxBackgroundColor === 'string' ? nameBoxBackgroundColor : 'white',
+            borderColor: typeof nameBoxBorderColor === 'string' ? nameBoxBorderColor : 'black'
+          }
+        ]}>
           <Text 
             numberOfLines={2} 
             ellipsizeMode="tail" 
-            style={styles.playerName}
+            style={[styles.playerName, { color: typeof textColor === 'string' ? textColor : '#000' }]}
           >
             {name}
           </Text>
@@ -88,15 +99,12 @@ const styles = StyleSheet.create({
   nameBox: {
     paddingHorizontal: 4,
     paddingVertical: 2,
-    backgroundColor: 'white',
     borderWidth: 1,
-    borderColor: 'black',
     borderRadius: 4,
     maxWidth: 70,
     alignSelf: 'center',
   },
   playerName: {
-    color: '#000',
     fontWeight: 'bold',
     fontSize: 11,
     textAlign: 'center',
