@@ -4,8 +4,21 @@ before_all do
   ensure_git_branch
   ensure_git_status_clean
   git_pull
+  
+  # Store current directory
+  fastlane_dir = Dir.pwd
+  
+  # Navigate to project root directory (one level up from fastlane directory)
+  Dir.chdir("..")
+  
+  # Remove iOS and Android directories from project root
   sh "rm -rf ios android"
+  
+  # Run expo prebuild from project root
   sh "npx expo prebuild"
+  
+  # Return to fastlane directory
+  Dir.chdir(fastlane_dir)
 end
 
 platform :ios do
