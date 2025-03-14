@@ -93,14 +93,28 @@ export default function TeamScreen() {
   const handleReorder = ({ from, to }: ReorderableListReorderEvent) => {
     const newData = reorderItems(listData, from, to);
     const benchHeaderIndex = newData.findIndex((item: any) => item.id === 'bench-header');
+    
+    // Get the court and bench players from the reordered data
     const courtPlayers = newData
       .slice(0, benchHeaderIndex)
       .filter((item): item is PlayerType & { type: string } => item.type === 'player')
-      .map((p) => ({ ...p }));
+      .map((p) => ({ ...p })); // We don't need the validation here anymore
+    
     const benchPlayers = newData
       .slice(benchHeaderIndex + 1)
       .filter((item): item is PlayerType & { type: string } => item.type === 'player')
-      .map((p) => ({ ...p }));
+      .map((p) => {
+        // Only check if the player was moved from court to bench
+        const wasOnCourt = team?.startingPlayers.some(courtPlayer => courtPlayer.id === p.id);
+        
+        // If player was moved from court to bench, reset position
+        if (wasOnCourt) {
+          return { ...p, courtPosition: { x: 0.5, y: 0.5 } };
+        }
+        
+        return { ...p };
+      });
+      
     setPlayers(courtPlayers, benchPlayers);
   };
 

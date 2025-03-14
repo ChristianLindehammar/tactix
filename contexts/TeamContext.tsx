@@ -183,10 +183,37 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const setPlayers = (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => {
     setTeams(prevTeams => prevTeams.map(team => {
       if (team.id === selectedTeamId) {
+        // Process players that need positions assigned (marked with null courtPosition)
+        const processedCourtPlayers = courtPlayers.map(player => {
+          // If player has no position or invalid position, find a free one
+          if (!player.courtPosition || 
+              player.courtPosition.x < 0 || player.courtPosition.x > 1 || 
+              player.courtPosition.y < 0 || player.courtPosition.y > 1) {
+            return {
+              ...player,
+              courtPosition: findFreePosition()
+            };
+          }
+          return player;
+        });
+        
+        // Also validate bench players' positions in case they're loaded with errors
+        const processedBenchPlayers = benchPlayers.map(player => {
+          if (player.courtPosition &&
+             (player.courtPosition.x < 0 || player.courtPosition.x > 1 || 
+              player.courtPosition.y < 0 || player.courtPosition.y > 1)) {
+            return {
+              ...player,
+              courtPosition: { x: 0.5, y: 0.5 }  // Standard reset for bench players
+            };
+          }
+          return player;
+        });
+        
         return {
           ...team,
-          startingPlayers: courtPlayers,
-          benchPlayers: benchPlayers,
+          startingPlayers: processedCourtPlayers,
+          benchPlayers: processedBenchPlayers,
         };
       }
       return team;
