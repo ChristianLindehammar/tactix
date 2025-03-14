@@ -24,11 +24,9 @@ end
 # Create a new lane at the top level to run both iOS and Android builds
 desc "Build and deploy both iOS and Android"
 lane :deploy_all do
-  # First run the iOS beta lane
-  ios_beta
-  
-  # Then run the Android beta lane
-  android_beta
+  # Use the full namespace to access platform-specific lanes
+  ios beta
+  android beta
 end
 
 platform :ios do

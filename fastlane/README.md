@@ -13,6 +13,17 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
+### deploy_all
+
+```sh
+[bundle exec] fastlane deploy_all
+```
+
+Build and deploy both iOS and Android
+
+----
+
+
 ## iOS
 
 ### ios beta
@@ -22,6 +33,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 ```
 
 Push a new beta build to TestFlight
+
+### ios ios_beta
+
+```sh
+[bundle exec] fastlane ios ios_beta
+```
+
+
 
 ----
 
@@ -35,6 +54,14 @@ Push a new beta build to TestFlight
 ```
 
 Push a new beta build to Play Store Internal Testing
+
+### android android_beta
+
+```sh
+[bundle exec] fastlane android android_beta
+```
+
+
 
 ----
 
