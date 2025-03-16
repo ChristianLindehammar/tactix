@@ -29,11 +29,11 @@ export default function SettingsScreen() {
     Linking.openURL(landingPageUrl);
   };
 
-  // New share handler
+  // Share handler
   const handleShareTestingPage = async () => {
     try {
       await Share.share({
-        message: `${t('checkOutAndroidTestingProgram')}: ${landingPageUrl}`,
+        message: `${t('checkOutBetaTestingProgram')}: ${landingPageUrl}`,
       });
     } catch (error) {
       console.log(error);
@@ -46,14 +46,14 @@ export default function SettingsScreen() {
         <ThemedText type='title'>{t('settings')}</ThemedText>
       </ThemedView>
       
-      {/* Combined Android tester announcement with link and share */}
+      {/* Beta tester announcement with link and share */}
       <ThemedView style={[styles.announcementContainer, { backgroundColor: announcementBgColor, borderColor: announcementBorderColor, flexDirection: 'row', alignItems: 'center' }]}>
         <TouchableOpacity onPress={handleOpenTestingPage} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <IconSymbol name="smartphone" size={24} color={announcementIconColor} />
           <ThemedView style={styles.announcementTextContainer}>
-            <ThemedText style={styles.announcementTitle}>{t('androidTestersNeeded')}</ThemedText>
+            <ThemedText style={styles.announcementTitle}>{t('betaTestersNeeded')}</ThemedText>
             <ThemedText style={styles.announcementBody}>
-              {t('androidTestingProgramDescription')}
+              {t('betaTestingProgramDescription')}
             </ThemedText>
           </ThemedView>
         </TouchableOpacity>

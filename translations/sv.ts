@@ -90,8 +90,8 @@ export default {
   invalidFile: 'Ogiltig fil',
   selectCoachmateFile: 'Vänligen välj en .coachmate fil',
 
-  // Android Testing Program
-  androidTestersNeeded: 'Android-testare behövs!',
-  androidTestingProgramDescription: 'Vi söker användare som kan hjälpa till att testa vår Android-version. Tryck här för att gå med i vårt testprogram och ge feedback.',
-  checkOutAndroidTestingProgram: 'Kolla in vårt Android-testprogram',
+  // Beta Testing Program - updated to be platform-agnostic
+  betaTestersNeeded: 'Beta-testare behövs!',
+  betaTestingProgramDescription: 'Vi söker användare som kan hjälpa till att testa vår nya version. Tryck här för att gå med i vårt testprogram och ge feedback.',
+  checkOutBetaTestingProgram: 'Kolla in vårt beta-testprogram',
 };

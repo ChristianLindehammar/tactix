@@ -15,9 +15,10 @@ export default {
   bandy: 'Bandy',
   basketball: 'Basketball',
 
-  androidTestersNeeded: 'Android Testers Needed!',
-  androidTestingProgramDescription: 'We\'re looking for users to help test our Android version. Tap here to join our testing program and provide feedback.',
-  checkOutAndroidTestingProgram: 'Check out our Android testing program',
+  // Beta Testing Program - updated to be platform-agnostic
+  betaTestersNeeded: 'Beta Testers Needed!',
+  betaTestingProgramDescription: 'We\'re looking for users to help test our upcoming version. Tap here to join our testing program and provide feedback.',
+  checkOutBetaTestingProgram: 'Check out our beta testing program',
 
   // Home Screen
   welcomeToCoachMate: 'Welcome to CoachMate!',
