@@ -55,7 +55,7 @@ export default function HomeScreen() {
           await FileSystem.deleteAsync(fileUri, { idempotent: true });
         }
 
-        router.replace('/(tabs)/team');
+        router.replace('/team');
       } catch (error) {
         console.error('Error handling file:', error);
         Alert.alert(t('error'), t('failedToImportTeamFile'));
