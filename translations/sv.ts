@@ -85,6 +85,8 @@ export default {
 
   //Alerts
   error: 'Fel',
+  success: 'Framgång',
+  teamImportSuccessful: 'Lag "{{teamName}}" importerades!',
   failedToImportTeamFile: 'Misslyckades med att importera lagfil',
   teamRemoveConfirm: 'Är du säker på att du vill ta bort "{{teamName}}"?',
   invalidFile: 'Ogiltig fil',

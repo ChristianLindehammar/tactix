@@ -48,14 +48,19 @@ export default function HomeScreen() {
           throw new Error('Invalid file type. Only .coachmate files are supported.');
         }
 
-        await importTeamFromFile(fileUri);
+        const importedTeam = await importTeamFromFile(fileUri);
 
         // Clean up temp file if created
         if (fileUri !== url) {
           await FileSystem.deleteAsync(fileUri, { idempotent: true });
         }
 
-        router.replace('/team');
+        // Show success alert with team name
+        Alert.alert(
+          t('success'),
+          t('teamImportSuccessful', { teamName: importedTeam.name }),
+          [{ text: t('ok'), onPress: () => router.replace('/team') }]
+        );
       } catch (error) {
         console.error('Error handling file:', error);
         Alert.alert(t('error'), t('failedToImportTeamFile'));

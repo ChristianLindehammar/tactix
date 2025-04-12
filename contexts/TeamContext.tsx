@@ -26,7 +26,7 @@ interface TeamContextProps {
   deletePlayer: (playerId: string) => void;
   exportTeam: (teamId: string) => void;
   importTeam: (importedTeam: Team) => void;
-  importTeamFromFile: (fileUri: string) => Promise<void>;
+  importTeamFromFile: (fileUri: string) => Promise<Team>;
   setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
 }
 
@@ -36,7 +36,9 @@ const TEAMS_STORAGE_KEY = 'teams';
 const SELECTED_TEAM_KEY = 'selectedTeamId';
 
 const getValidPosition = (position: string, sport: string): string => {
-  const availablePositions = sportsConfig[sport].positions;
+  // Make sure the sport exists in sportsConfig, fallback to 'soccer' if not
+  const safeSport = sport in sportsConfig ? sport : 'soccer';
+  const availablePositions = sportsConfig[safeSport as keyof typeof sportsConfig].positions;
   return availablePositions.includes(position) ? position : availablePositions[0];
 };
 
@@ -55,11 +57,11 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         
         if (storedTeams) {
           setTeams(storedTeams);
-          if (storedSelectedId && storedTeams.some(t => t.id === storedSelectedId)) {
-            setSelectedTeamId(storedSelectedId);
-          } else if (storedTeams.length > 0) {
+            if (storedSelectedId && storedTeams.some((t: Team) => t.id === storedSelectedId)) {
+            setSelectedTeamId(storedSelectedId as string);
+            } else if (storedTeams.length > 0) {
             setSelectedTeamId(storedTeams[0].id);
-          }
+            }
         }
       } catch (error) {
         console.error('Error loading teams:', error);
@@ -407,13 +409,15 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setSelectedTeamId(now);
   };
 
-  const importTeamFromFile = async (fileUri: string) => {
+  const importTeamFromFile = async (fileUri: string): Promise<Team> => {
     try {
       const contents = await FileSystem.readAsStringAsync(fileUri);
       const parsed: Team = JSON.parse(contents);
       await importTeam(parsed);
+      return parsed;
     } catch (err) {
       console.error('Error importing team file:', err);
+      throw new Error('Failed to import team file');
     }
   };
 

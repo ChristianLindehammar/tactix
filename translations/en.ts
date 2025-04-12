@@ -88,6 +88,8 @@ export default {
 
   //Alerts
   error: 'Error',
+  success: 'Success',
+  teamImportSuccessful: 'Team "{{teamName}}" imported successfully!',
   failedToImportTeamFile: 'Failed to import team file',
   teamRemoveConfirm: 'Are you sure you want to remove "{{teamName}}"?',
   invalidFile: 'Invalid File',

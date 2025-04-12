@@ -85,6 +85,8 @@ export default {
 
   //Alerts
   error: 'Virhe',
+  success: 'Onnistui',
+  teamImportSuccessful: 'Joukkue "{{teamName}}" tuotu onnistuneesti!',
   failedToImportTeamFile: 'Joukkueen tiedoston tuonti epäonnistui',
   teamRemoveConfirm: 'Haluatko varmasti poistaa joukkueen "{{teamName}}"?',
   invalidFile: 'Virheellinen tiedosto',
