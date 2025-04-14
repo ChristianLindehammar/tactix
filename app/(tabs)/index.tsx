@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as Linking from 'expo-linking';
 import * as FileSystem from 'expo-file-system';
 
@@ -21,15 +21,18 @@ export default function HomeScreen() {
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
   const { selectedSport } = useSport();
   const { t } = useTranslation();
-
+  const [isProcessingFile, setIsProcessingFile] = useState(false);
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
       try {
-        if (!url || !url.startsWith('file://')) {
+        // Skip navigation URLs - only process file:// or content:// URLs
+        if (!url || (!url.startsWith('file://') && !url.startsWith('content://'))) {
           return;
         }
-
+        
+        // Set processing state to prevent component updates during file handling
+        setIsProcessingFile(true);
         console.log('Handling URL:', url);
         let fileUri = url;
 
@@ -59,18 +62,31 @@ export default function HomeScreen() {
         Alert.alert(
           t('success'),
           t('teamImportSuccessful', { teamName: importedTeam.name }),
-          [{ text: t('ok'), onPress: () => router.replace('/team') }]
+          [{ 
+            text: t('ok'), 
+            onPress: () => {
+              setIsProcessingFile(false);
+              router.replace('/team');
+            }
+          }]
         );
       } catch (error) {
         console.error('Error handling file:', error);
-        Alert.alert(t('error'), t('failedToImportTeamFile'));
+        Alert.alert(
+          t('error'), 
+          t('failedToImportTeamFile'),
+          [{ 
+            text: t('ok'), 
+            onPress: () => setIsProcessingFile(false)
+          }]
+        );
       }
     };
 
     // Handle both cold and warm starts
     const checkInitialURL = async () => {
       const initialUrl = await Linking.getInitialURL();
-      if (initialUrl) {
+      if (initialUrl && (initialUrl.startsWith('file://') || initialUrl.startsWith('content://'))) {
         await handleOpenURL({ url: initialUrl });
       }
     };
