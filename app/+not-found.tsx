@@ -1,13 +1,34 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { Link, Stack, usePathname } from 'expo-router';
+import { StyleSheet, ActivityIndicator } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
+import { router } from 'expo-router';
 
 export default function NotFoundScreen() {
   const { t } = useTranslation();
+  const pathname = usePathname();
+  
+  // Check if this is a file URL and redirect to home if it is
+  const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
+  
+  useEffect(() => {
+    if (isFileUrl) {
+      // Redirect to home if this is a file URL
+      router.replace('/');
+    }
+  }, [isFileUrl]);
+  
+  // Show loading indicator if handling a file URL
+  if (isFileUrl) {
+    return (
+      <ThemedView style={styles.container}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </ThemedView>
+    );
+  }
 
   return (
     <>
@@ -32,5 +53,9 @@ const styles = StyleSheet.create({
   link: {
     marginTop: 15,
     paddingVertical: 15,
+  },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 16,
   },
 });

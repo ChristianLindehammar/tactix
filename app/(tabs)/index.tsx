@@ -1,5 +1,5 @@
-import { StyleSheet, View, Dimensions, Pressable, Platform, Alert } from 'react-native';
-import { router } from 'expo-router';
+import { StyleSheet, View, Dimensions, Pressable, Platform, Alert, ActivityIndicator } from 'react-native';
+import { router, usePathname, useSegments } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/contexts/TeamContext';
 import { useSport } from '@/context/SportContext';
@@ -22,6 +22,18 @@ export default function HomeScreen() {
   const { selectedSport } = useSport();
   const { t } = useTranslation();
   const [isProcessingFile, setIsProcessingFile] = useState(false);
+  const pathname = usePathname();
+  const segments = useSegments();
+
+  // Check if the current URL is a file URL that needs handling
+  const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
+  
+  // Set processing flag on initial render if we detect file URL
+  useEffect(() => {
+    if (isFileUrl) {
+      setIsProcessingFile(true);
+    }
+  }, []);
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
@@ -33,6 +45,12 @@ export default function HomeScreen() {
         
         // Set processing state to prevent component updates during file handling
         setIsProcessingFile(true);
+        
+        // Redirect immediately to home to prevent "not found" page from showing
+        if (pathname !== '/') {
+          router.replace('/');
+        }
+        
         console.log('Handling URL:', url);
         let fileUri = url;
 
@@ -77,7 +95,10 @@ export default function HomeScreen() {
           t('failedToImportTeamFile'),
           [{ 
             text: t('ok'), 
-            onPress: () => setIsProcessingFile(false)
+            onPress: () => {
+              setIsProcessingFile(false);
+              router.replace('/');
+            }
           }]
         );
       }
@@ -94,7 +115,16 @@ export default function HomeScreen() {
 
     const subscription = Linking.addEventListener('url', handleOpenURL);
     return () => subscription.remove();
-  }, []);
+  }, [pathname]);
+
+  // Show loading state during file processing or when viewing a file URL directly
+  if (isProcessingFile || isFileUrl) {
+    return (
+      <ThemedView style={[styles.container, styles.centerContent]}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </ThemedView>
+    );
+  }
 
   if (!selectedSport) {
     return (
@@ -209,5 +239,10 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     width: '100%',
     height: 150, // Add fixed height for better vertical centering
+  },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
