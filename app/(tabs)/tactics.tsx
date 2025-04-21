@@ -380,7 +380,16 @@ export default function TacticsScreen() {
                 onPress={() => {
                   Alert.alert(t('clearAll'), t('removeAllMarkers'), [
                     { text: t('cancel'), style: 'cancel' },
-                    { text: t('ok'), onPress: () => setMarkers(markers => markers.filter(m => m.type === 'ball')) },
+                    { 
+                      text: t('ok'), 
+                      onPress: () => {
+                        // Keep the ball marker but reset its position to center
+                        setMarkers(markers => markers
+                          .filter(m => m.type === 'ball')
+                          .map(m => ({ ...m, x: 0.5, y: 0.5 }))
+                        );
+                      }
+                    },
                   ]);
                 }}
                 accessibilityLabel={t('clearAll')}
