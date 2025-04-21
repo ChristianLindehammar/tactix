@@ -45,18 +45,18 @@ export default function TabLayout() {
           title: t('team'),
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.3.fill" color={color} />,
         }}/>
-        <Tabs.Screen
-        name="settings"
-        options={{
-          title: t('settings'),
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear" color={color} />,
-        }}
-      />
       <Tabs.Screen
         name="tactics"
         options={{
           title: t('tactics'),
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="lightbulb" color={color} />, // Use a lightbulb or similar icon for tactics
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: t('settings'),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear" color={color} />,
         }}
       />
     </Tabs>
