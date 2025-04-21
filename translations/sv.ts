@@ -37,6 +37,9 @@ export default {
   enterPlayerName: 'Ange spelarens namn',
   addPlayer: 'Lägg till spelare',
   renamePlayer: 'Byt namn på spelare',
+  movePlayerToBench: 'Flytta till bänken',
+  movePlayerToBenchConfirm: 'Flytta {{playerName}} till bänken?',
+  move: 'Flytta',
 
   playerPositions: {
     Goalkeeper: 'Målvakt',

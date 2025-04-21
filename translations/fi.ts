@@ -37,6 +37,9 @@ export default {
   enterPlayerName: 'Syötä pelaajan nimi',
   addPlayer: 'Lisää pelaaja',
   renamePlayer: 'Nimeä pelaaja uudelleen',
+  movePlayerToBench: 'Siirrä vaihtopenkille',
+  movePlayerToBenchConfirm: 'Siirretäänkö {{playerName}} vaihtopenkille?',
+  move: 'Siirrä',
 
   playerPositions: {
     Goalkeeper: 'Maalivahti',

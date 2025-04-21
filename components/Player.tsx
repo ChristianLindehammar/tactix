@@ -1,6 +1,6 @@
 import { Position } from '@/types/models';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Alert, Vibration } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
   useAnimatedStyle,
@@ -11,6 +11,8 @@ import Animated, {
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTeam } from '@/contexts/TeamContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PlayerProps {
   id: string;
@@ -20,6 +22,7 @@ interface PlayerProps {
   onDragEnd: (position: Position) => void;
   containerSize: { width: number; height: number };
   isSelected?: boolean;
+  isOnCourt?: boolean;
 }
 
 export function Player({ 
@@ -29,7 +32,8 @@ export function Player({
   courtPosition, 
   onDragEnd, 
   containerSize,
-  isSelected = false 
+  isSelected = false,
+  isOnCourt = true 
 }: PlayerProps) {
   const MARKER_SIZE = 40;
   const halfMarker = MARKER_SIZE / 2;
@@ -40,7 +44,10 @@ export function Player({
   const offsetY = useSharedValue(0);
   const scale = useSharedValue(1);
   const zIndex = useSharedValue(1);
-  const [isActive, setIsActive] = React.useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const { movePlayerToBench } = useTeam();
+  const { t } = useTranslation();
+  const [isLongPress, setIsLongPress] = useState(false);
 
   React.useEffect(() => {
     translateX.value = courtPosition.x * containerSize.width;
@@ -55,6 +62,37 @@ export function Player({
   const { selectedSport } = useSport();
   const { positions, positionColors = {} } = sportsConfig[selectedSport ?? 'soccer'];
   const safePosition = positions.includes(position) ? position : positions[0];
+
+  const handleLongPress = () => {
+    if (!isOnCourt) return; // Only allow bench removal for players on court
+    
+    Vibration.vibrate(100); // Short vibration for feedback
+    
+    Alert.alert(
+      t('movePlayerToBench') || 'Move to Bench',
+      t('movePlayerToBenchConfirm', { playerName: name }) || `Move ${name} to the bench?`,
+      [
+        {
+          text: t('cancel') || 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: t('move') || 'Move',
+          onPress: () => movePlayerToBench(id)
+        }
+      ]
+    );
+  };
+
+  const longPressGesture = Gesture.LongPress()
+    .minDuration(800) // Trigger after 800ms
+    .onStart(() => {
+      runOnJS(setIsLongPress)(true);
+      runOnJS(handleLongPress)();
+    })
+    .onFinalize(() => {
+      runOnJS(setIsLongPress)(false);
+    });
 
   const panGesture = Gesture.Pan()
     .hitSlop({ top: 10, bottom: 10, left: 10, right: 10 })
@@ -77,6 +115,11 @@ export function Player({
       runOnJS(setIsActive)(false);
     });
 
+  // Combine gestures, but make long press only work when on court
+  const combinedGesture = isOnCourt 
+    ? Gesture.Exclusive(longPressGesture, panGesture)
+    : panGesture;
+
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
       { translateX: translateX.value - halfMarker },
@@ -91,14 +134,14 @@ export function Player({
   const textColor = useThemeColor({}, 'text');
 
   return (
-    <GestureDetector gesture={panGesture}>
+    <GestureDetector gesture={combinedGesture}>
       <Animated.View style={[animatedStyle, styles.playerContainer]}>
         <View 
           style={[
             styles.playerMarker, 
             { 
               backgroundColor: positionColors[safePosition] || 'white',
-              borderWidth: isActive ? 3 : 2, // Make border thicker when active
+              borderWidth: isActive || isLongPress ? 3 : 2, // Make border thicker when active
             }
           ]} 
         />

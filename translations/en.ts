@@ -39,6 +39,9 @@ export default {
   courtBenchSeparator: 'Court / Bench Separator',
   enterPlayerName: 'Enter player name',
   addPlayer: 'Add Player',
+  movePlayerToBench: 'Move to Bench',
+  movePlayerToBenchConfirm: 'Move {{playerName}} to the bench?',
+  move: 'Move',
 
   playerPositions: {
     Goalkeeper: 'Goalkeeper',
