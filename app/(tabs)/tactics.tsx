@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, View, TouchableOpacity, Text, Alert, PanResponder, Animated, Dimensions, Pressable } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from '@/components/ThemedText';
@@ -70,8 +70,8 @@ export default function TacticsScreen() {
   const [markers, setMarkers] = useState<Marker[]>([]);
   const [addingType, setAddingType] = useState<Marker['type'] | null | 'menu'>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
-  const [dragPos, setDragPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [dragOffset, setDragOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [lastAddedMarkerId, setLastAddedMarkerId] = useState<string | null>(null);
   const courtRef = useRef<View>(null);
 
   // Convert absolute to relative coordinates
@@ -90,24 +90,29 @@ export default function TacticsScreen() {
     };
   };
 
-  // Add marker at tap location
+  // Add marker at tap location with improved touch handling
   const handleCourtPress = (event: any) => {
+    // Reset isDragging when user taps the court (not a marker)
+    setIsDragging(false);
+    
     if (!addingType || addingType === 'menu') return;
+    
+    // Always get fresh tap coordinates directly from the event
     const { locationX, locationY } = event.nativeEvent;
     
     const centeredX = locationX / finalDimensions.width;
     const centeredY = locationY / finalDimensions.height;
     
     if (centeredX >= 0 && centeredX <= 1 && centeredY >= 0 && centeredY <= 1) {
-      setMarkers(markers => [
-        ...markers,
-        {
-          id: Date.now().toString() + Math.random().toString(36).slice(2),
-          type: addingType,
-          x: centeredX,
-          y: centeredY,
-        },
-      ]);
+      // Create a new marker at the tap location
+      const newMarker = {
+        id: Date.now().toString() + Math.random().toString(36).slice(2),
+        type: addingType,
+        x: centeredX,
+        y: centeredY,
+      };
+      
+      setMarkers(currentMarkers => [...currentMarkers, newMarker]);
     }
   };
 
@@ -149,6 +154,20 @@ export default function TacticsScreen() {
     })
   ).current;
 
+  // Handler for when a marker starts being dragged
+  const handleDragStart = (id: string) => {
+    setIsDragging(true);
+    setAddingType(null);
+    setDraggingId(id);
+  };
+  
+  // Add an effect to reset isDragging if no marker is being dragged
+  useEffect(() => {
+    if (!draggingId) {
+      setIsDragging(false);
+    }
+  }, [draggingId]);
+
   if (!selectedSport || !Svg) {
     return (
       <ThemedView style={styles.centerContent}>
@@ -171,21 +190,51 @@ export default function TacticsScreen() {
             {/* Left side - Add Player/Opponent buttons - more compact */}
             <View style={styles.addButtonsContainer}>
               <TouchableOpacity 
-                style={[styles.markerTypeButton, { backgroundColor: buttonBgColor }]} 
-                onPress={() => setAddingType('player')}
+                style={[
+                  styles.markerTypeButton, 
+                  { backgroundColor: buttonBgColor },
+                  addingType === 'player' && styles.activeButton
+                ]} 
+                onPress={() => {
+                  // Toggle button state - if already adding this type, turn it off
+                  setAddingType(current => current === 'player' ? null : 'player');
+                }}
                 accessibilityLabel={t('player')}
               >
-                <MaterialIcons name="add" size={20} color="#1976D2" />
-                <MaterialIcons name="person" size={24} color="#1976D2" />
+                <MaterialIcons 
+                  name={addingType === 'player' ? 'close' : 'add'} 
+                  size={20} 
+                  color="#1976D2" 
+                />
+                <MaterialIcons 
+                  name="person" 
+                  size={24} 
+                  color="#1976D2" 
+                />
               </TouchableOpacity>
               
               <TouchableOpacity 
-                style={[styles.markerTypeButton, { backgroundColor: buttonBgColor }]} 
-                onPress={() => setAddingType('opponent')}
+                style={[
+                  styles.markerTypeButton, 
+                  { backgroundColor: buttonBgColor },
+                  addingType === 'opponent' && styles.activeButton
+                ]} 
+                onPress={() => {
+                  // Toggle button state - if already adding this type, turn it off
+                  setAddingType(current => current === 'opponent' ? null : 'opponent');
+                }}
                 accessibilityLabel={t('opponent')}
               >
-                <MaterialIcons name="add" size={20} color="#D32F2F" />
-                <MaterialIcons name="person" size={24} color="#D32F2F" />
+                <MaterialIcons 
+                  name={addingType === 'opponent' ? 'close' : 'add'} 
+                  size={20} 
+                  color="#D32F2F" 
+                />
+                <MaterialIcons 
+                  name="person" 
+                  size={24} 
+                  color="#D32F2F" 
+                />
               </TouchableOpacity>
             </View>
             
@@ -216,6 +265,7 @@ export default function TacticsScreen() {
             }} 
             ref={courtRef}
             onTouchStart={addingType && addingType !== 'menu' ? handleCourtPress : undefined}
+            pointerEvents="box-none" // This allows touch events to pass through to children when they're not handled here
           >
             {Svg && (
               <GenericCourt
@@ -237,20 +287,22 @@ export default function TacticsScreen() {
                 containerSize={finalDimensions}
                 onDragEnd={(id, newX, newY) => {
                   setMarkers(markers => markers.map(m => m.id === id ? { ...m, x: newX, y: newY } : m));
+                  setDraggingId(null);
+                  // Allow adding markers again after drag is complete
+                  setTimeout(() => {
+                    setIsDragging(false);
+                  }, 100);
                 }}
+                onDragStart={handleDragStart}
                 zIndex={draggingId === marker.id ? 3 : 2}
               >
                 <TouchableOpacity
                   activeOpacity={0.8}
                   onLongPress={() => {
-                    Alert.alert('Delete Marker', 'Remove this marker?', [
-                      { text: 'Cancel', style: 'cancel' },
-                      { text: 'Delete', style: 'destructive', onPress: () => setMarkers(markers => markers.filter(m => m.id !== marker.id)) },
+                    Alert.alert(t('delete'), t('removeAllMarkers').replace('all', ''), [
+                      { text: t('cancel'), style: 'cancel' },
+                      { text: t('delete'), style: 'destructive', onPress: () => setMarkers(markers => markers.filter(m => m.id !== marker.id)) },
                     ]);
-                  }}
-                  onPressIn={e => {
-                    setAddingType(null);
-                    setDraggingId(marker.id);
                   }}
                   style={{
                     width: 40,
@@ -330,6 +382,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 8,
     paddingHorizontal: 10,
+    borderWidth: 2,  // Always have a border of 2px
+    borderColor: 'transparent', // Transparent by default
+  },
+  activeButton: {
+    borderColor: '#4CAF50', // Only change the border color when active
+    backgroundColor: 'rgba(76, 175, 80, 0.1)',
   },
   clearButton: {
     backgroundColor: '#D32F2F',

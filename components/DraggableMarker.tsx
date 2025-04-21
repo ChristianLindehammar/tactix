@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, runOnJS, withSpring } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -11,6 +11,7 @@ interface DraggableMarkerProps {
   onDragEnd: (id: string, x: number, y: number) => void;
   children: React.ReactNode;
   zIndex?: number;
+  onDragStart?: (id: string) => void;
 }
 
 export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
@@ -21,6 +22,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   onDragEnd,
   children,
   zIndex = 2,
+  onDragStart,
 }) => {
   const MARKER_SIZE = 40;
   const halfMarker = MARKER_SIZE / 2;
@@ -30,13 +32,22 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   const offsetY = useSharedValue(0);
   const scale = useSharedValue(1);
 
-  React.useEffect(() => {
+  // Update position when props change
+  useEffect(() => {
     translateX.value = x * containerSize.width;
     translateY.value = y * containerSize.height;
   }, [x, y, containerSize.width, containerSize.height]);
 
+  // Create a single pan gesture - simplified from previous version
   const panGesture = Gesture.Pan()
-    .hitSlop({ top: 10, bottom: 10, left: 10, right: 10 })
+    .hitSlop(20) // Larger hit area for better touch detection
+    .activateAfterLongPress(0) // Activate immediately, no delay
+    .onBegin(() => {
+      // Immediately notify parent that drag has started
+      if (onDragStart) {
+        runOnJS(onDragStart)(id);
+      }
+    })
     .onStart(() => {
       offsetX.value = translateX.value;
       offsetY.value = translateY.value;
