@@ -5,6 +5,7 @@ export default {
   settings: 'Asetukset',
   team: 'Joukkue',
   playGround: 'Pelikenttä',
+  tactics: 'Taktiikka',
   
   // Settings Screen
   aboutTheApp: 'Työkalu urheiluvalmentajille joukkueharjoitusten suunnitteluun, taktiikan hallintaan ja pelistrategioiden kehittämiseen.',
@@ -56,6 +57,14 @@ export default {
     PowerForward: 'PF',
     Center: 'C'
   },
+
+  // Tactics Screen
+  players: 'Pelaajat',
+  player: 'Pelaaja',
+  opponents: 'Vastustajat',
+  opponent: 'Vastustaja',
+  clearAll: 'Tyhjennä kaikki',
+  removeAllMarkers: 'Poista kaikki merkit?',
 
   // Not Found Screen
   screenNotExist: "Tätä näyttöä ei ole olemassa.",

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Text, Alert, PanResponder, Animated, Dimensions, Pressable } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
+import { ThemedText } from '@/components/ThemedText';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
 import { LAYOUT } from '@/constants/layout';
@@ -8,6 +9,9 @@ import { GenericCourt } from '@/components/GenericCourt';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { DraggableMarker } from '@/components/DraggableMarker';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // Marker type
 interface Marker {
@@ -23,7 +27,12 @@ const MARKER_TYPES = [
   { type: 'ball', color: '#FFA000', icon: 'sports-soccer' },
 ];
 
-function getMarkerIcon(type, selectedSport) {
+interface MarkerIconProps {
+  type: 'player' | 'opponent' | 'ball';
+  selectedSport: string | null | undefined;
+}
+
+function getMarkerIcon(type: MarkerIconProps['type'], selectedSport: MarkerIconProps['selectedSport']): string {
   if (type === 'ball') {
     switch (selectedSport) {
       case 'floorball': return 'sports-hockey';
@@ -39,9 +48,17 @@ function getMarkerIcon(type, selectedSport) {
 export default function TacticsScreen() {
   const { selectedSport } = useSport();
   const { Svg, aspectRatio } = selectedSport ? sportsConfig[selectedSport] : { Svg: undefined, aspectRatio: 1 };
+  const insets = useSafeAreaInsets();
+  const { t } = useTranslation();
+  
+  // Use theme colors
+  const backgroundColor = useThemeColor({}, 'background');
+  const textColor = useThemeColor({}, 'text');
+  const cardColor = useThemeColor({}, 'card');
+  const tintColor = useThemeColor({}, 'tint');
+  const buttonBgColor = useThemeColor({}, 'secondaryBackground');
 
   // Responsive court sizing
-  const insets = { top: 0, bottom: 0 };
   const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
   const availableWidth = Dimensions.get('window').width;
   const screenRatio = availableWidth / availableHeight;
@@ -145,21 +162,48 @@ export default function TacticsScreen() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
-        {/* Marker selection rows at the top */}
-        <View style={styles.markerSelectionContainer}>
-          <View style={styles.markerRow}>
-            <Text style={styles.markerRowLabel}>Players</Text>
-            <TouchableOpacity style={styles.markerTypeButton} onPress={() => setAddingType('player')}>
-              <MaterialIcons name="person" size={28} color="#1976D2" />
-              <Text style={{ color: '#1976D2', marginLeft: 8 }}>Player</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.markerRow}>
-            <Text style={styles.markerRowLabel}>Opponents</Text>
-            <TouchableOpacity style={styles.markerTypeButton} onPress={() => setAddingType('opponent')}>
-              <MaterialIcons name="person" size={28} color="#D32F2F" />
-              <Text style={{ color: '#D32F2F', marginLeft: 8 }}>Opponent</Text>
-            </TouchableOpacity>
+        {/* Marker selection rows at the top with safe area insets */}
+        <View style={[
+          styles.markerSelectionContainer, 
+          { paddingTop: Math.max(insets.top, 24), backgroundColor: backgroundColor }
+        ]}>
+          <View style={styles.controlsContainer}>
+            {/* Left side - Add Player/Opponent buttons - more compact */}
+            <View style={styles.addButtonsContainer}>
+              <TouchableOpacity 
+                style={[styles.markerTypeButton, { backgroundColor: buttonBgColor }]} 
+                onPress={() => setAddingType('player')}
+                accessibilityLabel={t('player')}
+              >
+                <MaterialIcons name="add" size={20} color="#1976D2" />
+                <MaterialIcons name="person" size={24} color="#1976D2" />
+              </TouchableOpacity>
+              
+              <TouchableOpacity 
+                style={[styles.markerTypeButton, { backgroundColor: buttonBgColor }]} 
+                onPress={() => setAddingType('opponent')}
+                accessibilityLabel={t('opponent')}
+              >
+                <MaterialIcons name="add" size={20} color="#D32F2F" />
+                <MaterialIcons name="person" size={24} color="#D32F2F" />
+              </TouchableOpacity>
+            </View>
+            
+            {/* Right side - Clear All button - more compact */}
+            {markers.length > 1 && (
+              <TouchableOpacity 
+                style={styles.clearButton} 
+                onPress={() => {
+                  Alert.alert(t('clearAll'), t('removeAllMarkers'), [
+                    { text: t('cancel'), style: 'cancel' },
+                    { text: t('ok'), onPress: () => setMarkers(markers => markers.filter(m => m.type === 'ball')) },
+                  ]);
+                }}
+                accessibilityLabel={t('clearAll')}
+              >
+                <MaterialIcons name="delete-sweep" size={24} color="#fff" />
+              </TouchableOpacity>
+            )}
           </View>
         </View>
         
@@ -236,18 +280,6 @@ export default function TacticsScreen() {
             ))}
           </View>
         </View>
-        
-        {markers.length > 1 && (
-          <TouchableOpacity style={styles.clearButton} onPress={() => {
-            Alert.alert('Clear All', 'Remove all markers?', [
-              { text: 'Cancel', style: 'cancel' },
-              { text: 'OK', onPress: () => setMarkers(markers => markers.filter(m => m.type === 'ball')) },
-            ]);
-          }}>
-            <MaterialIcons name="delete-sweep" size={24} color="#fff" />
-            <Text style={{ color: '#fff', marginLeft: 8 }}>Clear All</Text>
-          </TouchableOpacity>
-        )}
       </ThemedView>
     </GestureHandlerRootView>
   );
@@ -278,42 +310,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   markerSelectionContainer: {
-    paddingTop: 24,
     paddingBottom: 8,
-    backgroundColor: 'rgba(255,255,255,0.95)',
     zIndex: 30,
   },
-  markerRow: {
+  controlsContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 4,
     paddingHorizontal: 16,
+    paddingVertical: 8,
   },
-  markerRowLabel: {
-    fontWeight: 'bold',
-    marginRight: 12,
-    fontSize: 16,
-    color: '#333',
-    width: 90,
+  addButtonsContainer: {
+    flexDirection: 'row',
+    gap: 8,
   },
   markerTypeButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f0f4fa',
     borderRadius: 20,
-    paddingVertical: 6,
-    paddingHorizontal: 14,
-    marginRight: 12,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
   },
   clearButton: {
-    position: 'absolute',
-    left: 24,
-    bottom: LAYOUT.TAB_BAR_HEIGHT + 24,
     backgroundColor: '#D32F2F',
-    flexDirection: 'row',
     alignItems: 'center',
-    padding: 12,
-    borderRadius: 24,
+    justifyContent: 'center',
+    padding: 8,
+    borderRadius: 20,
+    width: 40,
+    height: 40,
     zIndex: 10,
   },
 });

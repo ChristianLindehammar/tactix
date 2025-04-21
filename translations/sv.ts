@@ -5,6 +5,7 @@ export default {
   settings: 'Inställningar',
   team: 'Lag',
   playGround: 'Spelplan',
+  tactics: 'Taktik',
   
   // Settings Screen
   aboutTheApp: 'Ett verktyg för sporttränare att planera laguppställningar, hantera taktik och utveckla spelstrategier.',
@@ -96,4 +97,12 @@ export default {
   betaTestersNeeded: 'Beta-testare behövs!',
   betaTestingProgramDescription: 'Vi söker användare som kan hjälpa till att testa vår nya version. Tryck här för att gå med i vårt testprogram och ge feedback.',
   checkOutBetaTestingProgram: 'Kolla in vårt beta-testprogram',
+
+  // Tactics Screen
+  players: 'Spelare',
+  player: 'Spelare',
+  opponents: 'Motståndare',
+  opponent: 'Motståndare',
+  clearAll: 'Rensa alla',
+  removeAllMarkers: 'Ta bort alla markörer?',
 };

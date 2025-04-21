@@ -3,6 +3,7 @@ export default {
   settings: 'Settings',
   team: 'Team',
   playGround: 'Play Ground',
+  tactics: 'Tactics',
   
   // Settings Screen
   aboutTheApp: 'A tool for sports coaches to plan team training, manage tactics, and develop game strategies.',
@@ -94,4 +95,12 @@ export default {
   teamRemoveConfirm: 'Are you sure you want to remove "{{teamName}}"?',
   invalidFile: 'Invalid File',
   selectCoachmateFile: 'Please select a .coachmate file',
+
+  // Tactics Screen
+  players: 'Players',
+  player: 'Player',
+  opponents: 'Opponents',
+  opponent: 'Opponent',
+  clearAll: 'Clear All',
+  removeAllMarkers: 'Remove all markers?',
 };
