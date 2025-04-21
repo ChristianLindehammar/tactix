@@ -68,6 +68,11 @@ export default {
   opponent: 'Vastustaja',
   clearAll: 'Tyhjennä kaikki',
   removeAllMarkers: 'Poista kaikki merkit?',
+  
+  // Tactics Tooltips
+  tacticsAddTooltip: 'Napauta pelaaja- tai vastustajapainiketta ja sitten kenttää lisätäksesi merkin',
+  tacticsMoveTooltip: 'Vedä merkkejä siirtääksesi niitä kentällä',
+  tacticsDeleteTooltip: 'Pidä merkki painettuna poistaaksesi sen',
 
   // Not Found Screen
   screenNotExist: "Tätä näyttöä ei ole olemassa.",

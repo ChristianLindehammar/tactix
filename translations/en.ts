@@ -106,4 +106,9 @@ export default {
   opponent: 'Opponent',
   clearAll: 'Clear All',
   removeAllMarkers: 'Remove all markers?',
+  
+  // Tactics Tooltips
+  tacticsAddTooltip: 'Tap the player or opponent button, then tap the court to add a marker',
+  tacticsMoveTooltip: 'Drag markers to reposition them on the court',
+  tacticsDeleteTooltip: 'Long press on a marker to delete it',
 };

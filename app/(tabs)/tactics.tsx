@@ -12,6 +12,9 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { TooltipModal } from '@/components/TooltipModal';
+import { DragHintOverlay } from '@/components/DragHintOverlay';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Marker type
 interface Marker {
@@ -75,6 +78,14 @@ export default function TacticsScreen() {
   const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const courtRef = useRef<View>(null);
+  
+  // Tooltip system
+  const [showAddTooltip, setShowAddTooltip] = useState(false);
+  const [showMoveTooltip, setShowMoveTooltip] = useState(false);
+  const [showDeleteTooltip, setShowDeleteTooltip] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
+  const [showDragHint, setShowDragHint] = useState(false);
+  const playerBtnRef = useRef<TouchableOpacity>(null);
 
   // Convert absolute to relative coordinates
   const getRelativeCoords = (absX: number, absY: number) => {
@@ -90,6 +101,110 @@ export default function TacticsScreen() {
       x: relX * finalDimensions.width,
       y: relY * finalDimensions.height,
     };
+  };
+
+  // Check if we should show tooltips to a new user
+  useEffect(() => {
+    const checkFirstTimeUser = async () => {
+      try {
+        const hasSeenTacticsTooltips = await AsyncStorage.getItem('tacticsTooltipsShown');
+        
+        if (hasSeenTacticsTooltips !== 'true' && selectedSport) {
+          setTimeout(() => {
+            if (playerBtnRef.current) {
+              playerBtnRef.current.measure((x, y, width, height, pageX, pageY) => {
+                setTooltipPosition({
+                  x: pageX + width / 2,
+                  y: pageY + height + 10,
+                });
+                setShowAddTooltip(true);
+              });
+            }
+          }, 1000);
+        }
+      } catch (error) {
+        console.error('Error checking first time user status:', error);
+      }
+    };
+    
+    checkFirstTimeUser();
+  }, [selectedSport]);
+
+  // Handle closing tooltips and showing the next one in sequence
+  const handleAddTooltipClose = async () => {
+    setShowAddTooltip(false);
+    
+    // Wait for a moment before showing the next tooltip
+    setTimeout(() => {
+      if (markers.length > 0) {
+        const firstMarker = markers.find(m => m.type === 'player') || markers[0];
+        if (firstMarker) {
+          const coords = getAbsoluteCoords(firstMarker.x, firstMarker.y);
+          setTooltipPosition({
+            x: coords.x + 20,
+            y: coords.y + 20,
+          });
+          setShowMoveTooltip(true);
+        }
+      }
+    }, 500);
+  };
+
+  const handleMoveTooltipClose = () => {
+    setShowMoveTooltip(false);
+    
+    // Wait for a moment before showing the next tooltip
+    setTimeout(() => {
+      if (markers.length > 0) {
+        const playerMarker = markers.find(m => m.type === 'player');
+        if (playerMarker) {
+          const coords = getAbsoluteCoords(playerMarker.x, playerMarker.y);
+          setTooltipPosition({
+            x: coords.x + 20,
+            y: coords.y + 20,
+          });
+          setShowDeleteTooltip(true);
+        }
+      }
+    }, 500);
+  };
+
+  const handleDeleteTooltipClose = async () => {
+    setShowDeleteTooltip(false);
+    
+    // Mark tooltips as shown so they don't appear again
+    try {
+      await AsyncStorage.setItem('tacticsTooltipsShown', 'true');
+      
+      // After tooltips are done, show the drag hint if we have enough markers
+      if (markers.length >= 2) {
+        checkAndShowDragHint();
+      }
+    } catch (error) {
+      console.error('Error saving tooltip shown status:', error);
+    }
+  };
+
+  // Check if we should show the drag hint demonstration
+  const checkAndShowDragHint = async () => {
+    try {
+      const hasShownTacticsDragHint = await AsyncStorage.getItem('tacticsDragHintShown');
+      if (!hasShownTacticsDragHint && markers.length >= 2) {
+        setShowDragHint(true);
+      }
+    } catch (error) {
+      console.error('Error checking drag hint status:', error);
+    }
+  };
+
+  // Handle when the drag hint demo is finished
+  const handleDragHintFinish = async () => {
+    setShowDragHint(false);
+    try {
+      await AsyncStorage.setItem('tacticsDragHintShown', 'true');
+    } catch (error) {
+      console.error('Error saving drag hint status:', error);
+    }
   };
 
   // Add marker at tap location with improved touch handling
@@ -115,6 +230,11 @@ export default function TacticsScreen() {
       };
       
       setMarkers(currentMarkers => [...currentMarkers, newMarker]);
+      
+      // Check if we should show the move tooltip after adding a marker
+      if (showAddTooltip) {
+        handleAddTooltipClose();
+      }
     }
   };
 
@@ -161,6 +281,11 @@ export default function TacticsScreen() {
     setIsDragging(true);
     setAddingType(null);
     setDraggingId(id);
+    
+    // If showing move tooltip, close it after the user has tried dragging
+    if (showMoveTooltip) {
+      handleMoveTooltipClose();
+    }
   };
   
   // Add an effect to reset isDragging if no marker is being dragged
@@ -199,6 +324,7 @@ export default function TacticsScreen() {
             {/* Left side - Add Player/Opponent buttons - more compact */}
             <View style={styles.addButtonsContainer}>
               <TouchableOpacity 
+                ref={playerBtnRef}
                 style={[
                   styles.markerTypeButton, 
                   { backgroundColor: buttonBgColor as string },
@@ -322,6 +448,11 @@ export default function TacticsScreen() {
                           if (draggingId === marker.id) {
                             setDraggingId(null);
                           }
+                          
+                          // If showing delete tooltip, close it after user has tried deleting
+                          if (showDeleteTooltip) {
+                            handleDeleteTooltipClose();
+                          }
                         }
                       },
                     ]
@@ -359,6 +490,34 @@ export default function TacticsScreen() {
             ))}
           </View>
         </View>
+        
+        {/* Tooltips */}
+        <TooltipModal
+          visible={showAddTooltip}
+          onClose={handleAddTooltipClose}
+          message={t('tacticsAddTooltip') || "Tap the player or opponent button, then tap the court to add a marker"}
+          position={tooltipPosition}
+        />
+        
+        <TooltipModal
+          visible={showMoveTooltip}
+          onClose={handleMoveTooltipClose}
+          message={t('tacticsMoveTooltip') || "Drag markers to reposition them on the court"}
+          position={tooltipPosition}
+        />
+        
+        <TooltipModal
+          visible={showDeleteTooltip}
+          onClose={handleDeleteTooltipClose}
+          message={t('tacticsDeleteTooltip') || "Long press on a marker to delete it"}
+          position={tooltipPosition}
+        />
+        
+        {/* Drag hint overlay */}
+        <DragHintOverlay 
+          visible={showDragHint} 
+          onFinish={handleDragHintFinish} 
+        />
       </ThemedView>
     </GestureHandlerRootView>
   );
