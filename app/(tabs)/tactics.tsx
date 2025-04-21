@@ -294,16 +294,34 @@ export default function TacticsScreen() {
                   }, 100);
                 }}
                 onDragStart={handleDragStart}
+                onLongPress={() => {
+                  // Don't allow deleting the ball marker
+                  if (marker.type === 'ball') return;
+                  
+                  // Show delete confirmation
+                  Alert.alert(
+                    t('delete'), 
+                    t('removeAllMarkers').replace('all', ''), 
+                    [
+                      { text: t('cancel'), style: 'cancel' },
+                      { 
+                        text: t('delete'), 
+                        style: 'destructive', 
+                        onPress: () => {
+                          setMarkers(markers => markers.filter(m => m.id !== marker.id));
+                          // Cancel dragging mode if active
+                          if (draggingId === marker.id) {
+                            setDraggingId(null);
+                          }
+                        }
+                      },
+                    ]
+                  );
+                }}
                 zIndex={draggingId === marker.id ? 3 : 2}
               >
                 <TouchableOpacity
                   activeOpacity={0.8}
-                  onLongPress={() => {
-                    Alert.alert(t('delete'), t('removeAllMarkers').replace('all', ''), [
-                      { text: t('cancel'), style: 'cancel' },
-                      { text: t('delete'), style: 'destructive', onPress: () => setMarkers(markers => markers.filter(m => m.id !== marker.id)) },
-                    ]);
-                  }}
                   style={{
                     width: 40,
                     height: 40,

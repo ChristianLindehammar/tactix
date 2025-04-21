@@ -12,6 +12,7 @@ interface DraggableMarkerProps {
   children: React.ReactNode;
   zIndex?: number;
   onDragStart?: (id: string) => void;
+  onLongPress?: () => void;
 }
 
 export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
@@ -23,6 +24,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   children,
   zIndex = 2,
   onDragStart,
+  onLongPress,
 }) => {
   const MARKER_SIZE = 40;
   const halfMarker = MARKER_SIZE / 2;
@@ -38,10 +40,20 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
     translateY.value = y * containerSize.height;
   }, [x, y, containerSize.width, containerSize.height]);
 
-  // Create a single pan gesture - simplified from previous version
+  // Long press gesture for deletion
+  const longPressGesture = Gesture.LongPress()
+    .minDuration(500)
+    .onStart(() => {
+      if (onLongPress) {
+        runOnJS(onLongPress)();
+      }
+    });
+
+  // Pan gesture for dragging
   const panGesture = Gesture.Pan()
-    .hitSlop(20) // Larger hit area for better touch detection
-    .activateAfterLongPress(0) // Activate immediately, no delay
+    .hitSlop(20)
+    // Add a slight delay to allow long press to be detected first
+    .activateAfterLongPress(50)
     .onBegin(() => {
       // Immediately notify parent that drag has started
       if (onDragStart) {
@@ -67,6 +79,12 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
       scale.value = withSpring(1);
     });
 
+  // Combine gestures, with long press having priority
+  const combinedGestures = Gesture.Exclusive(
+    longPressGesture,
+    panGesture
+  );
+
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
       { translateX: translateX.value - halfMarker },
@@ -78,7 +96,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   }));
 
   return (
-    <GestureDetector gesture={panGesture}>
+    <GestureDetector gesture={combinedGestures}>
       <Animated.View style={[animatedStyle, styles.marker]}>{children}</Animated.View>
     </GestureDetector>
   );
