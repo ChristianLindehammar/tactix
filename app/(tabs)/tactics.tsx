@@ -20,7 +20,7 @@ interface Marker {
 const MARKER_TYPES = [
   { type: 'player', color: '#1976D2', icon: 'person' },
   { type: 'opponent', color: '#D32F2F', icon: 'person' },
-  { type: 'ball', color: '#FFA000', icon: 'sports-soccer' }, // Use sport-specific icon if desired
+  { type: 'ball', color: '#FFA000', icon: 'sports-soccer' },
 ];
 
 function getMarkerIcon(type, selectedSport) {
@@ -40,8 +40,8 @@ export default function TacticsScreen() {
   const { selectedSport } = useSport();
   const { Svg, aspectRatio } = selectedSport ? sportsConfig[selectedSport] : { Svg: undefined, aspectRatio: 1 };
 
-  // Responsive court sizing (like playground)
-  const insets = { top: 0, bottom: 0 }; // Replace with useSafeAreaInsets if needed
+  // Responsive court sizing
+  const insets = { top: 0, bottom: 0 };
   const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
   const availableWidth = Dimensions.get('window').width;
   const screenRatio = availableWidth / availableHeight;
@@ -64,6 +64,7 @@ export default function TacticsScreen() {
       y: absY / finalDimensions.height,
     };
   };
+  
   // Convert relative to absolute coordinates
   const getAbsoluteCoords = (relX: number, relY: number) => {
     return {
@@ -72,62 +73,24 @@ export default function TacticsScreen() {
     };
   };
 
-  // Add marker at tap location with detailed logging for debugging
+  // Add marker at tap location
   const handleCourtPress = (event: any) => {
     if (!addingType || addingType === 'menu') return;
-    const { locationX, locationY, pageX, pageY } = event.nativeEvent;
+    const { locationX, locationY } = event.nativeEvent;
     
-    console.log('=== DEBUG: Marker Placement ===');
-    console.log('Raw tap coordinates:', { locationX, locationY, pageX, pageY });
-    console.log('Court dimensions:', finalDimensions);
-    console.log('LAYOUT.COURT_PADDING:', LAYOUT.COURT_PADDING);
+    const centeredX = locationX / finalDimensions.width;
+    const centeredY = locationY / finalDimensions.height;
     
-    // Try different approaches to fix the offset
-    
-    // Approach 1: Simple relative coordinates (likely has offset)
-    const simple = {
-      x: locationX / finalDimensions.width,
-      y: locationY / finalDimensions.height
-    };
-    
-    // Approach 2: Subtract padding (what we've been trying)
-    const padding = LAYOUT.COURT_PADDING;
-    const withPadding = {
-      x: (locationX - padding) / finalDimensions.width,
-      y: (locationY - padding) / finalDimensions.height
-    };
-    
-    // Approach 3: Halve the padding (testing if padding is applied differently)
-    const halfPadding = {
-      x: (locationX - padding/2) / finalDimensions.width,
-      y: (locationY - padding/2) / finalDimensions.height
-    };
-    
-    console.log('Calculated relative positions:');
-    console.log('Simple:', simple);
-    console.log('With padding subtracted:', withPadding);
-    console.log('With half padding subtracted:', halfPadding);
-    
-    // For testing, let's use approach 3 (half padding)
-    const relX = halfPadding.x;
-    const relY = halfPadding.y;
-    
-    console.log('Final relative position:', { relX, relY });
-    
-    // Only add if within court boundaries (0-1)
-    if (relX >= 0 && relX <= 1 && relY >= 0 && relY <= 1) {
+    if (centeredX >= 0 && centeredX <= 1 && centeredY >= 0 && centeredY <= 1) {
       setMarkers(markers => [
         ...markers,
         {
           id: Date.now().toString() + Math.random().toString(36).slice(2),
           type: addingType,
-          x: relX,
-          y: relY,
+          x: centeredX,
+          y: centeredY,
         },
       ]);
-      console.log('Marker added at:', { relX, relY });
-    } else {
-      console.log('Marker not added: position out of bounds');
     }
   };
 
@@ -199,9 +162,8 @@ export default function TacticsScreen() {
             </TouchableOpacity>
           </View>
         </View>
-        {/* Court container - REMOVE PADDING FROM THIS VIEW */}
+        
         <View style={styles.courtContainerOuter}>
-          {/* Inner view with the exact court dimensions and no padding */}
           <View 
             style={{
               width: finalDimensions.width, 
@@ -221,7 +183,7 @@ export default function TacticsScreen() {
                 aspectRatio={aspectRatio}
               />
             )}
-            {/* Render markers absolutely over the court using DraggableMarker */}
+            
             {markers.map(marker => (
               <DraggableMarker
                 key={marker.id}
@@ -250,11 +212,18 @@ export default function TacticsScreen() {
                     width: 40,
                     height: 40,
                     borderRadius: 20,
-                    backgroundColor: marker.type === 'player' ? '#1976D2' : marker.type === 'opponent' ? '#D32F2F' : 'transparent',
+                    backgroundColor: marker.type === 'player' ? '#1976D2' : marker.type === 'opponent' ? '#D32F2F' : 'white',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    borderWidth: marker.type === 'ball' ? 0 : 2,
-                    borderColor: '#fff',
+                    borderWidth: 2,
+                    borderColor: marker.type === 'ball' ? '#FFA000' : '#fff',
+                    ...(marker.type === 'ball' ? {
+                      shadowColor: '#000',
+                      shadowOffset: { width: 0, height: 2 },
+                      shadowOpacity: 0.3,
+                      shadowRadius: 3,
+                      elevation: 5,
+                    } : {}),
                   }}
                 >
                   <MaterialIcons
@@ -267,6 +236,7 @@ export default function TacticsScreen() {
             ))}
           </View>
         </View>
+        
         {markers.length > 1 && (
           <TouchableOpacity style={styles.clearButton} onPress={() => {
             Alert.alert('Clear All', 'Remove all markers?', [
@@ -293,7 +263,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // Remove padding from courtContainer - we now have a separate outer container with padding
   courtContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -339,7 +308,7 @@ const styles = StyleSheet.create({
   clearButton: {
     position: 'absolute',
     left: 24,
-    bottom: LAYOUT.TAB_BAR_HEIGHT + 24, // Move clear button above the tab bar
+    bottom: LAYOUT.TAB_BAR_HEIGHT + 24,
     backgroundColor: '#D32F2F',
     flexDirection: 'row',
     alignItems: 'center',
