@@ -29,6 +29,7 @@ interface TeamContextProps {
   importTeamFromFile: (fileUri: string) => Promise<Team>;
   setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
   movePlayerToBench: (playerId: string) => void;
+  movePlayerToCourt: (playerId: string) => void;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -440,6 +441,24 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     });
   };
 
+  // Move player from bench to court
+  const movePlayerToCourt = (playerId: string) => {
+    updateTeamInTeams(currentTeam => {
+      // Find the player on the bench
+      const playerToMove = currentTeam.benchPlayers.find(p => p.id === playerId);
+      
+      // If player not found on bench, do nothing
+      if (!playerToMove) return currentTeam;
+      
+      // Remove player from bench and add to starting players
+      return {
+        ...currentTeam,
+        benchPlayers: currentTeam.benchPlayers.filter(p => p.id !== playerId),
+        startingPlayers: [...currentTeam.startingPlayers, playerToMove]
+      };
+    });
+  };
+
   if (isLoading) {
     return null;
   }
@@ -462,6 +481,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       importTeamFromFile,
       setPlayers,
       movePlayerToBench,
+      movePlayerToCourt,
     }}>
       {children}
     </TeamContext.Provider>

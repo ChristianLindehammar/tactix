@@ -24,7 +24,7 @@ import { TooltipModal } from '@/components/TooltipModal';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, setPlayers } = useTeam();
+  const { team, teams, addPlayer, setPlayers, movePlayerToBench, movePlayerToCourt } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
   const benchHeaderRef = useRef<View>(null);
@@ -94,28 +94,28 @@ export default function TeamScreen() {
     const newData = reorderItems(listData, from, to);
     const benchHeaderIndex = newData.findIndex((item: any) => item.id === 'bench-header');
     
-    // Get the court and bench players from the reordered data
+    // Extract player data from reordered list
     const courtPlayers = newData
       .slice(0, benchHeaderIndex)
-      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
-      .map((p) => ({ ...p })); // We don't need the validation here anymore
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player');
     
     const benchPlayers = newData
       .slice(benchHeaderIndex + 1)
-      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
-      .map((p) => {
-        // Only check if the player was moved from court to bench
-        const wasOnCourt = team?.startingPlayers.some(courtPlayer => courtPlayer.id === p.id);
-        
-        // If player was moved from court to bench, reset position
-        if (wasOnCourt) {
-          return { ...p, courtPosition: { x: 0.5, y: 0.5 } };
-        }
-        
-        return { ...p };
-      });
-      
-    setPlayers(courtPlayers, benchPlayers);
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player');
+    
+    // Find players that moved from court to bench
+    const movedToBench = team?.startingPlayers.filter(
+      courtPlayer => !courtPlayers.some(p => p.id === courtPlayer.id)
+    );
+    
+    // Find players that moved from bench to court
+    const movedToCourt = team?.benchPlayers.filter(
+      benchPlayer => !benchPlayers.some(p => p.id === benchPlayer.id)
+    );
+    
+    // Apply moves using context functions
+    movedToBench?.forEach(player => movePlayerToBench(player.id));
+    movedToCourt?.forEach(player => movePlayerToCourt(player.id));
   };
 
   const renderItem = useCallback(
