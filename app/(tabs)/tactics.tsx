@@ -72,6 +72,8 @@ export default function TacticsScreen() {
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [lastAddedMarkerId, setLastAddedMarkerId] = useState<string | null>(null);
+  const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const courtRef = useRef<View>(null);
 
   // Convert absolute to relative coordinates
@@ -172,7 +174,14 @@ export default function TacticsScreen() {
     return (
       <ThemedView style={styles.centerContent}>
         <View style={styles.noSportContainer}>
-          <GenericCourt availableHeight={300} availableWidth={300} CourtSvg={() => null} aspectRatio={1} playerPositions={[]} />
+          <GenericCourt 
+            availableHeight={300} 
+            availableWidth={300} 
+            CourtSvg={() => null} 
+            aspectRatio={1} 
+            playerPositions={[]}
+            onDragEnd={() => {}} 
+          />
         </View>
       </ThemedView>
     );
@@ -184,7 +193,7 @@ export default function TacticsScreen() {
         {/* Marker selection rows at the top with safe area insets */}
         <View style={[
           styles.markerSelectionContainer, 
-          { paddingTop: Math.max(insets.top, 24), backgroundColor: backgroundColor }
+          { paddingTop: Math.max(insets.top, 24), backgroundColor: backgroundColor as string }
         ]}>
           <View style={styles.controlsContainer}>
             {/* Left side - Add Player/Opponent buttons - more compact */}
@@ -192,7 +201,7 @@ export default function TacticsScreen() {
               <TouchableOpacity 
                 style={[
                   styles.markerTypeButton, 
-                  { backgroundColor: buttonBgColor },
+                  { backgroundColor: buttonBgColor as string },
                   addingType === 'player' && styles.activeButton
                 ]} 
                 onPress={() => {
@@ -216,7 +225,7 @@ export default function TacticsScreen() {
               <TouchableOpacity 
                 style={[
                   styles.markerTypeButton, 
-                  { backgroundColor: buttonBgColor },
+                  { backgroundColor: buttonBgColor as string },
                   addingType === 'opponent' && styles.activeButton
                 ]} 
                 onPress={() => {
@@ -256,7 +265,7 @@ export default function TacticsScreen() {
           </View>
         </View>
         
-        <View style={styles.courtContainerOuter}>
+        <View style={[styles.courtContainerOuter, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
           <View 
             style={{
               width: finalDimensions.width, 
@@ -341,7 +350,7 @@ export default function TacticsScreen() {
                   }}
                 >
                   <MaterialIcons
-                    name={getMarkerIcon(marker.type, selectedSport)}
+                    name={getMarkerIcon(marker.type, selectedSport) as any}
                     size={marker.type === 'ball' ? 24 : 28}
                     color={marker.type === 'ball' ? '#FFA000' : '#fff'}
                   />
@@ -364,6 +373,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 12,
   },
   courtContainer: {
     flex: 1,
