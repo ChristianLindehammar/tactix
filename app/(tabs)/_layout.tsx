@@ -52,6 +52,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="tactics"
+        options={{
+          title: t('tactics'),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="lightbulb" color={color} />, // Use a lightbulb or similar icon for tactics
+        }}
+      />
     </Tabs>
   );
 }

@@ -6,6 +6,7 @@ import { useSport } from '@/context/SportContext';
 import { useEffect, useState } from 'react';
 import * as Linking from 'expo-linking';
 import * as FileSystem from 'expo-file-system';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
@@ -175,18 +176,20 @@ export default function HomeScreen() {
         };
 
   return (
-    <ThemedView style={styles.container}>
-      <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
-        <GenericCourt
-          availableHeight={finalDimensions.height}
-          availableWidth={finalDimensions.width}
-          playerPositions={team?.startingPlayers ?? []}
-          onDragEnd={updatePlayerPosition}
-          CourtSvg={Svg}
-          aspectRatio={aspectRatio}
-        />
-      </View>
-    </ThemedView>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemedView style={styles.container}>
+        <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+          <GenericCourt
+            availableHeight={finalDimensions.height}
+            availableWidth={finalDimensions.width}
+            playerPositions={team?.startingPlayers ?? []}
+            onDragEnd={updatePlayerPosition}
+            CourtSvg={Svg}
+            aspectRatio={aspectRatio}
+          />
+        </View>
+      </ThemedView>
+    </GestureHandlerRootView>
   );
 }
 
