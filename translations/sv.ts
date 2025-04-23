@@ -33,6 +33,8 @@ export default {
   importTeam: "Importera lag",
   startingPlayers: 'Startspelare',
   benchPlayers: 'Avbytare',
+  bench: 'Bänk', // Added
+  noPlayersOnBench: 'Inga spelare på bänken', // Added
   courtBenchSeparator: 'Plan / Bänk separator',
   enterPlayerName: 'Ange spelarnamn',
   addPlayer: 'Lägg till spelare',

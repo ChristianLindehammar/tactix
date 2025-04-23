@@ -33,6 +33,8 @@ export default {
   importTeam: "Tuo joukkue",
   startingPlayers: 'Aloittavat pelaajat',
   benchPlayers: 'Vaihtopelaajat',
+  bench: 'Penkki', // Added
+  noPlayersOnBench: 'Ei pelaajia penkillä', // Added
   courtBenchSeparator: 'Kenttä / Penkki erotin',
   enterPlayerName: 'Syötä pelaajan nimi',
   addPlayer: 'Lisää pelaaja',

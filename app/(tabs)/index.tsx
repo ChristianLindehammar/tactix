@@ -16,6 +16,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useTranslation } from '@/hooks/useTranslation';
 import { SportSelector } from '@/components/SportSelector';
 import { sportsConfig } from '@/constants/sports';
+import { BenchPanel } from '@/components/BenchPanel'; // Import the new component
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -188,6 +189,8 @@ export default function HomeScreen() {
             aspectRatio={aspectRatio}
           />
         </View>
+        {/* Add the BenchPanel here */}
+        {team && <BenchPanel />} 
       </ThemedView>
     </GestureHandlerRootView>
   );

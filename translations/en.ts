@@ -36,6 +36,8 @@ export default {
   importTeam: "Import Team",
   startingPlayers: 'Starting Players',
   benchPlayers: 'Bench Players',
+  bench: 'Bench', // Added
+  noPlayersOnBench: 'No players on the bench', // Added
   courtBenchSeparator: 'Court / Bench Separator',
   enterPlayerName: 'Enter player name',
   addPlayer: 'Add Player',

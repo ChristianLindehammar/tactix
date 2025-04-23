@@ -18,11 +18,13 @@ interface PlayerProps {
   id: string;
   name: string;
   position: string;
-  courtPosition: Position;
-  onDragEnd: (position: Position) => void;
-  containerSize: { width: number; height: number };
+  courtPosition?: Position | null; // Make optional for bench players initially
+  onDragEnd?: (position: Position) => void; // Optional for bench
+  containerSize?: { width: number; height: number }; // Optional for bench
   isSelected?: boolean;
-  isOnCourt?: boolean;
+  isOnCourt?: boolean; // Flag to differentiate court vs bench rendering/behavior
+  onPress?: (id: string) => void; // Add onPress for bench interaction
+  displayMode?: 'court' | 'bench'; // Explicit display mode
 }
 
 export function Player({ 
@@ -31,15 +33,21 @@ export function Player({
   position, 
   courtPosition, 
   onDragEnd, 
-  containerSize,
+  containerSize = { width: 0, height: 0 }, // Default size if not on court
   isSelected = false,
-  isOnCourt = true 
+  isOnCourt = true, // Default to true if not specified
+  onPress,
+  displayMode = 'court' // Default to court display
 }: PlayerProps) {
-  const MARKER_SIZE = 40;
+  const MARKER_SIZE = displayMode === 'bench' ? 35 : 40; // Smaller marker for bench
   const halfMarker = MARKER_SIZE / 2;
   
-  const translateX = useSharedValue(courtPosition.x * containerSize.width);
-  const translateY = useSharedValue(courtPosition.y * containerSize.height);
+  // Use default position (0,0) if not provided (e.g., for bench)
+  const initialX = courtPosition ? courtPosition.x * containerSize.width : 0;
+  const initialY = courtPosition ? courtPosition.y * containerSize.height : 0;
+
+  const translateX = useSharedValue(initialX);
+  const translateY = useSharedValue(initialY);
   const offsetX = useSharedValue(0);
   const offsetY = useSharedValue(0);
   const scale = useSharedValue(1);
@@ -49,15 +57,19 @@ export function Player({
   const { t } = useTranslation();
   const [isLongPress, setIsLongPress] = useState(false);
 
+  // Update position only if it's a court player and props change
   React.useEffect(() => {
-    translateX.value = courtPosition.x * containerSize.width;
-    translateY.value = courtPosition.y * containerSize.height;
-  }, [containerSize.width, containerSize.height, courtPosition.x, courtPosition.y]);
+    if (isOnCourt && courtPosition) {
+      translateX.value = courtPosition.x * containerSize.width;
+      translateY.value = courtPosition.y * containerSize.height;
+    }
+  }, [isOnCourt, containerSize.width, containerSize.height, courtPosition?.x, courtPosition?.y]);
 
   React.useEffect(() => {
     zIndex.value = isSelected || isActive ? 10 : 1;
-    scale.value = withSpring(isSelected || isActive ? 1.1 : 1);
-  }, [isSelected, isActive, zIndex, scale]);
+    // Don't scale up bench players on interaction
+    scale.value = withSpring(isOnCourt && (isSelected || isActive) ? 1.1 : 1); 
+  }, [isSelected, isActive, zIndex, scale, isOnCourt]);
 
   const { selectedSport } = useSport();
   const { positions, positionColors = {} } = sportsConfig[selectedSport ?? 'soccer'];
@@ -84,6 +96,12 @@ export function Player({
     );
   };
 
+  const handleTap = () => {
+    if (onPress) {
+      onPress(id);
+    }
+  };
+
   const longPressGesture = Gesture.LongPress()
     .minDuration(800) // Trigger after 800ms
     .onStart(() => {
@@ -96,6 +114,7 @@ export function Player({
 
   const panGesture = Gesture.Pan()
     .hitSlop({ top: 10, bottom: 10, left: 10, right: 10 })
+    .enabled(isOnCourt) // Only allow panning for court players
     .onStart(() => {
       offsetX.value = translateX.value;
       offsetY.value = translateY.value;
@@ -108,30 +127,40 @@ export function Player({
     .onEnd(() => {
       const newX = translateX.value / containerSize.width;
       const newY = translateY.value / containerSize.height;
-      runOnJS(onDragEnd)({ x: newX, y: newY });
+      if (onDragEnd) {
+         runOnJS(onDragEnd)({ x: newX, y: newY });
+      }
       runOnJS(setIsActive)(false);
     })
     .onFinalize(() => {
       runOnJS(setIsActive)(false);
     });
+    
+  const tapGesture = Gesture.Tap().onEnd(() => {
+    runOnJS(handleTap)();
+  });
 
-  // Combine gestures, but make long press only work when on court
+  // Combine gestures based on context
   const combinedGesture = isOnCourt 
-    ? Gesture.Exclusive(longPressGesture, panGesture)
-    : panGesture;
+    ? Gesture.Exclusive(longPressGesture, panGesture) // Court: Long press or Pan
+    : tapGesture; // Bench: Tap only
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
-      { translateX: translateX.value - halfMarker },
-      { translateY: translateY.value - halfMarker },
+      // Center the marker based on its own size if not on court
+      { translateX: isOnCourt ? translateX.value - halfMarker : 0 }, 
+      { translateY: isOnCourt ? translateY.value - halfMarker : 0 },
       { scale: scale.value },
     ],
+    // Use absolute positioning only for court players
+    position: isOnCourt ? 'absolute' : 'relative', 
     zIndex: zIndex.value,
   }));
 
   const nameBoxBackgroundColor = useThemeColor({}, 'background');
   const nameBoxBorderColor = useThemeColor({}, 'border');
   const textColor = useThemeColor({}, 'text');
+  const markerBorderColor = useThemeColor({}, 'text'); // Use text color for border for contrast
 
   return (
     <GestureDetector gesture={combinedGesture}>
@@ -140,26 +169,43 @@ export function Player({
           style={[
             styles.playerMarker, 
             { 
+              width: MARKER_SIZE,
+              height: MARKER_SIZE,
+              borderRadius: MARKER_SIZE / 2,
               backgroundColor: positionColors[safePosition] || 'white',
+              borderColor: typeof markerBorderColor === 'string' ? markerBorderColor : 'black',
               borderWidth: isActive || isLongPress ? 3 : 2, // Make border thicker when active
             }
           ]} 
         />
-        <View style={[
-          styles.nameBox, 
-          { 
-            backgroundColor: typeof nameBoxBackgroundColor === 'string' ? nameBoxBackgroundColor : 'white',
-            borderColor: typeof nameBoxBorderColor === 'string' ? nameBoxBorderColor : 'black'
-          }
-        ]}>
-          <Text 
-            numberOfLines={2} 
-            ellipsizeMode="tail" 
-            style={[styles.playerName, { color: typeof textColor === 'string' ? textColor : '#000' }]}
-          >
-            {name}
-          </Text>
-        </View>
+        {/* Only show name box for court players or if explicitly set */}
+        {displayMode === 'court' && (
+          <View style={[
+            styles.nameBox, 
+            { 
+              backgroundColor: typeof nameBoxBackgroundColor === 'string' ? nameBoxBackgroundColor : 'white',
+              borderColor: typeof nameBoxBorderColor === 'string' ? nameBoxBorderColor : 'black'
+            }
+          ]}>
+            <Text 
+              numberOfLines={2} 
+              ellipsizeMode="tail" 
+              style={[styles.playerName, { color: typeof textColor === 'string' ? textColor : '#000' }]}
+            >
+              {name}
+            </Text>
+          </View>
+        )}
+         {/* Optionally show name below bench player */}
+         {displayMode === 'bench' && (
+             <Text 
+                numberOfLines={1} 
+                ellipsizeMode="tail" 
+                style={[styles.benchPlayerName, { color: typeof textColor === 'string' ? textColor : '#000' }]}
+             >
+                {name}
+             </Text>
+         )}
       </Animated.View>
     </GestureDetector>
   );
@@ -167,11 +213,8 @@ export function Player({
 
 const styles = StyleSheet.create({
   playerMarker: {
-    width: 40, 
-    height: 40,
-    borderRadius: 20, 
+    // Size set dynamically
     borderWidth: 2,
-    borderColor: 'black',
   },
   nameBox: {
     paddingHorizontal: 4,
@@ -188,9 +231,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flexWrap: 'wrap', 
   },
+   benchPlayerName: {
+    fontSize: 10,
+    textAlign: 'center',
+    marginTop: 2,
+    maxWidth: 50, // Limit width for bench names
+  },
   playerContainer: {
     alignItems: 'center',
-    position: 'absolute',
+    // position: 'absolute', // Applied conditionally in animatedStyle
     backgroundColor: 'transparent',
   },
 });
