@@ -1,4 +1,4 @@
-import React, { createContext, useState, PropsWithChildren, useContext, useEffect } from 'react';
+import React, { createContext, useState, PropsWithChildren, useContext, useEffect, useRef } from 'react';
 import { Team, PlayerType, Position } from '@/types/models';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
 import * as FileSystem from 'expo-file-system';
@@ -6,10 +6,13 @@ import * as Sharing from 'expo-sharing';
 import { useSport } from '@/context/SportContext';
 import { Platform, Alert } from 'react-native';
 import { useTranslation } from '@/hooks/useTranslation';
-import { sportsConfig } from '@/constants/sports';
+import { sportsConfig, Sport } from '@/constants/sports';
 
 const FILE_EXTENSION = '.coachmate';
 const FILE_MIME_TYPE = 'application/coachmate';
+
+// New storage key for sport-specific team selections
+const SPORT_TEAM_SELECTIONS_KEY = 'sportTeamSelections';
 
 interface TeamContextProps {
   team?: Team;
@@ -50,20 +53,38 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const { selectedSport, setSelectedSport } = useSport();
   const { t } = useTranslation();
-
+  
+  // Store sport-specific team selections - used to remember selected team per sport
+  const [sportTeamSelections, setSportTeamSelections] = useState<Record<Sport, string>>({} as Record<Sport, string>);
+  
+  // Load stored data on initial mount
   useEffect(() => {
     const loadData = async () => {
       try {
         const storedTeams = await getItem(TEAMS_STORAGE_KEY);
         const storedSelectedId = await getItem(SELECTED_TEAM_KEY);
+        const storedSportTeamSelections = await getItem(SPORT_TEAM_SELECTIONS_KEY) || {};
         
         if (storedTeams) {
           setTeams(storedTeams);
-            if (storedSelectedId && storedTeams.some((t: Team) => t.id === storedSelectedId)) {
-            setSelectedTeamId(storedSelectedId as string);
-            } else if (storedTeams.length > 0) {
-            setSelectedTeamId(storedTeams[0].id);
+          
+          if (selectedSport && storedSportTeamSelections[selectedSport as Sport]) {
+            // If we have a stored team for the current sport, use that
+            const sportSpecificTeamId = storedSportTeamSelections[selectedSport as Sport];
+            if (storedTeams.some((t: Team) => t.id === sportSpecificTeamId && t.sport === selectedSport)) {
+              setSelectedTeamId(sportSpecificTeamId);
+            } else if (storedTeams.some((t: Team) => t.sport === selectedSport)) {
+              // Find first team for this sport
+              const firstTeam = storedTeams.find((t: Team) => t.sport === selectedSport);
+              setSelectedTeamId(firstTeam?.id || '');
             }
+          } else if (storedSelectedId && storedTeams.some((t: Team) => t.id === storedSelectedId)) {
+            setSelectedTeamId(storedSelectedId as string);
+          } else if (storedTeams.length > 0) {
+            setSelectedTeamId(storedTeams[0].id);
+          }
+          
+          setSportTeamSelections(storedSportTeamSelections);
         }
       } catch (error) {
         console.error('Error loading teams:', error);
@@ -72,25 +93,55 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       }
     };
     loadData();
-  }, []);
+  }, [selectedSport]);
 
+  // Persist teams when they change
   useEffect(() => {
     if (!isLoading) {
       setItem(TEAMS_STORAGE_KEY, teams);
     }
   }, [teams, isLoading]);
 
+  // Persist selected team ID
   useEffect(() => {
     if (!isLoading) {
       setItem(SELECTED_TEAM_KEY, selectedTeamId);
     }
   }, [selectedTeamId, isLoading]);
-
+  
+  // Persist sport-team selections
   useEffect(() => {
     if (!isLoading) {
+      setItem(SPORT_TEAM_SELECTIONS_KEY, sportTeamSelections);
+    }
+  }, [sportTeamSelections, isLoading]);
+
+  // When selected team changes, update the sport-team mapping
+  useEffect(() => {
+    if (selectedTeamId && selectedSport && !isLoading) {
+      // Only update if there's an actual team selected
+      if (teams.some(team => team.id === selectedTeamId && team.sport === selectedSport)) {
+        setSportTeamSelections(prev => ({
+          ...prev,
+          [selectedSport]: selectedTeamId
+        }));
+      }
+    }
+  }, [selectedTeamId, selectedSport, teams, isLoading]);
+
+  // When sport changes, select the previously used team for that sport, if available
+  useEffect(() => {
+    if (!isLoading && selectedSport) {
+      const previousTeamForSport = sportTeamSelections[selectedSport as Sport];
       const teamsInSport = teams.filter(team => team.sport === selectedSport);
+      
       if (teamsInSport.length > 0) {
-        if (!teamsInSport.some(team => team.id === selectedTeamId)) {
+        // If we have a stored preference for this sport and the team still exists
+        if (previousTeamForSport && teamsInSport.some(team => team.id === previousTeamForSport)) {
+          setSelectedTeamId(previousTeamForSport);
+        } 
+        // Otherwise if the current selection is invalid for this sport, select the first team
+        else if (!teamsInSport.some(team => team.id === selectedTeamId)) {
           setSelectedTeamId(teamsInSport[0].id);
         }
       } else {
@@ -98,7 +149,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       }
     }
   }, [selectedSport, teams, isLoading]);
-
+  
   const filteredTeams = teams.filter(team => team.sport === selectedSport);
   const selectedTeam = filteredTeams.find(t => t.id === selectedTeamId);
 

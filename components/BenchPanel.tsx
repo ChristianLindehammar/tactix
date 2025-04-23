@@ -9,9 +9,11 @@ import { useThemeColor } from '@/hooks/useThemeColor'; // Import theme hook
 import { useTranslation } from '@/hooks/useTranslation';
 import { useDrag } from '@/contexts/DragContext';
 import { LayoutRectangle } from 'react-native';
+import { useSport } from '@/context/SportContext';
 
-const PANEL_HEIGHT_COLLAPSED = 60;
-const PANEL_HEIGHT_EXPANDED = 130; // Adjusted height for Player component
+// Use a single consistent height for all sports
+const PANEL_HEIGHT_COLLAPSED = 35; // Reduced from 40 to 35 for all sports
+const PANEL_HEIGHT_EXPANDED = 130; // Kept the same for expanded mode
 
 interface BenchPanelProps {
   courtLayout: LayoutRectangle | null;
@@ -22,6 +24,7 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation();
   const { startDrag, endDrag } = useDrag(); // Get drag functions from context
+  const { selectedSport } = useSport(); // Get current sport
 
   // Theme colors
   const backgroundColor = useThemeColor({}, 'menuBackground') as string;
@@ -85,7 +88,10 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
         }
       ]}
     >
-      <Pressable onPress={() => setIsExpanded(!isExpanded)} style={styles.toggleButton}>
+      <Pressable 
+        onPress={() => setIsExpanded(!isExpanded)} 
+        style={styles.toggleButton}
+      >
         <IconSymbol name={isExpanded ? 'chevron.down' : 'chevron.up'} size={20} color={iconColor} />
         <ThemedText style={[styles.panelTitle, { color: textColor }]}>
            {t('bench')} ({benchPlayers.length})
@@ -139,20 +145,22 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     borderTopWidth: 1,
-    paddingVertical: 5,
+    paddingVertical: 2, // Reduced from 5 to 2 for less vertical space
     overflow: 'hidden', 
   },
   toggleButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingBottom: 5,
-    paddingTop: 5, // Add padding top for balance
+    justifyContent: 'center', // Center horizontally
+    width: '100%', // Ensure full width to center content
+    paddingBottom: 2,
+    paddingTop: 2,
   },
   panelTitle: {
     marginLeft: 8,
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14, // Slightly smaller font for compact display
+    textAlign: 'center', // Center text
   },
   scrollViewContent: {
     paddingHorizontal: 10,

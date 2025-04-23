@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
-import { Sport } from '@/constants/sports';
+import { Sport, sportsConfig } from '@/constants/sports';
 
 interface SportContextType {
   selectedSport: Sport | null;
@@ -17,13 +17,22 @@ export function SportProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const loadInitialSport = async () => {
-      const saved = await getItem(STORAGE_KEY);
-      if (saved === 'floorball' || saved === 'football' || saved === 'hockey' || saved === 'bandy') {
-        setSelectedSport(saved as Sport);
-      } else {
-        setSelectedSport(null);
+      try {
+        const saved = await getItem(STORAGE_KEY);
+        // Check if the saved value is a valid sport by checking if it exists in sportsConfig
+        if (saved && Object.keys(sportsConfig).includes(saved as string)) {
+          setSelectedSport(saved as Sport);
+        } else {
+          // Default to soccer if nothing valid is saved
+          setSelectedSport('soccer');
+        }
+      } catch (error) {
+        console.error('Error loading sport from storage:', error);
+        // Default to soccer if there's an error
+        setSelectedSport('soccer');
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
     loadInitialSport();
   }, []);

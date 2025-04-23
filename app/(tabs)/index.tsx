@@ -22,6 +22,9 @@ import { DragProvider, useDrag } from '@/contexts/DragContext'; // Import DragPr
 import { Player } from '@/components/Player'; // Import Player for the ghost element
 import { LayoutRectangle } from 'react-native';
 
+// Import the panel height constant directly since it's needed for layout calculation
+const PANEL_HEIGHT_COLLAPSED = 35; // Must match the value in BenchPanel.tsx
+
 // Export the wrapped component
 export default function HomeScreen() {
   return (
@@ -227,9 +230,20 @@ function HomeScreenContent() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
+        <View style={{ height: insets.top + 10 }} />
+        
+        {/* Court container with adjusted positioning */}
         <View 
-          style={[{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: LAYOUT.COURT_PADDING, paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]} 
-          onLayout={onCourtLayout} // Capture court layout
+          style={[
+            styles.courtContainer,
+            { 
+              flex: 0.88, 
+              marginBottom: PANEL_HEIGHT_COLLAPSED + 5,
+              paddingTop: 0,
+              paddingBottom: 0,
+            }
+          ]} 
+          onLayout={onCourtLayout}
         >
           <GenericCourt
             availableHeight={finalDimensions.height}
@@ -240,6 +254,8 @@ function HomeScreenContent() {
             aspectRatio={aspectRatio}
           />
         </View>
+        
+        {/* Bottom spacer to push court up slightly */}
         
         {/* Render BenchPanel, passing courtLayout */}
         <BenchPanel courtLayout={courtLayout} />
