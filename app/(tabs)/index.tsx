@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import * as Linking from 'expo-linking';
 import * as FileSystem from 'expo-file-system';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle } from 'react-native-reanimated'; // Import Animated
 
 import { ThemedView } from '@/components/ThemedView';
 import { GenericCourt } from '@/components/GenericCourt';
@@ -17,25 +18,48 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { SportSelector } from '@/components/SportSelector';
 import { sportsConfig } from '@/constants/sports';
 import { BenchPanel } from '@/components/BenchPanel'; // Import the new component
+import { DragProvider, useDrag } from '@/contexts/DragContext'; // Import DragProvider and useDrag
+import { Player } from '@/components/Player'; // Import Player for the ghost element
+import { LayoutRectangle } from 'react-native';
 
+// Export the wrapped component
 export default function HomeScreen() {
+  return (
+    <DragProvider>
+      <HomeScreenContent />
+    </DragProvider>
+  );
+}
+
+// Main component content moved here
+function HomeScreenContent() {
+  // IMPORTANT: All hooks must be called at the top level, 
+  // in the same order, on every render
+  
+  // Context hooks
   const insets = useSafeAreaInsets();
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
   const { selectedSport } = useSport();
   const { t } = useTranslation();
+  const { draggedItem, dragPosition, isDragging } = useDrag();
+
+  // State hooks - must be called unconditionally
   const [isProcessingFile, setIsProcessingFile] = useState(false);
+  const [courtLayout, setCourtLayout] = useState<LayoutRectangle | null>(null);
+  
+  // Router hooks
   const pathname = usePathname();
   const segments = useSegments();
-
+  
   // Check if the current URL is a file URL that needs handling
   const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
   
-  // Set processing flag on initial render if we detect file URL
+  // Effects
   useEffect(() => {
     if (isFileUrl) {
       setIsProcessingFile(true);
     }
-  }, []);
+  }, [isFileUrl]);
 
   useEffect(() => {
     const handleOpenURL = async ({ url }: { url: string }) => {
@@ -117,9 +141,36 @@ export default function HomeScreen() {
 
     const subscription = Linking.addEventListener('url', handleOpenURL);
     return () => subscription.remove();
-  }, [pathname]);
+  }, [pathname, t, router, importTeamFromFile, setIsProcessingFile]);
 
-  // Show loading state during file processing or when viewing a file URL directly
+  // Ghost player style based on drag position - define this unconditionally
+  const ghostPlayerStyle = useAnimatedStyle(() => {
+    if (!dragPosition) {
+      return {
+        position: 'absolute',
+        left: -1000, // Off-screen when not dragging
+        top: -1000,
+        opacity: 0,
+      };
+    }
+
+    const markerSize = 40; // Size of the marker
+    return {
+      position: 'absolute',
+      left: dragPosition.x - markerSize / 2, // Center horizontally
+      top: dragPosition.y - markerSize / 2, // Center vertically
+      opacity: 0.9,
+      zIndex: 999,
+    };
+  });
+
+  // Handle layout of the court container - define this function unconditionally
+  const onCourtLayout = (event: any) => {
+    const layout = event.nativeEvent.layout;
+    setCourtLayout(layout);
+  };
+
+  // Early returns for different states
   if (isProcessingFile || isFileUrl) {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
@@ -155,14 +206,10 @@ export default function HomeScreen() {
     );
   }
 
+  // Calculate dimensions
   const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
-
   const availableWidth = Dimensions.get('window').width;
-
-
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
-
-  // Calculate dimensions to fill the screen while maintaining aspect ratio
   const screenRatio = availableWidth / availableHeight;
 
   const finalDimensions =
@@ -176,10 +223,14 @@ export default function HomeScreen() {
           height: availableWidth / aspectRatio,
         };
 
+  // Main render
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
-        <View style={[styles.courtContainer, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+        <View 
+          style={[{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: LAYOUT.COURT_PADDING, paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]} 
+          onLayout={onCourtLayout} // Capture court layout
+        >
           <GenericCourt
             availableHeight={finalDimensions.height}
             availableWidth={finalDimensions.width}
@@ -189,8 +240,25 @@ export default function HomeScreen() {
             aspectRatio={aspectRatio}
           />
         </View>
-        {/* Add the BenchPanel here */}
-        {team && <BenchPanel />} 
+        
+        {/* Render BenchPanel, passing courtLayout */}
+        <BenchPanel courtLayout={courtLayout} />
+
+        {/* Render the ghost Player when dragging from bench */}
+        {isDragging && draggedItem && dragPosition && (
+          <Animated.View style={ghostPlayerStyle} pointerEvents="none">
+            <Player
+              id={draggedItem.player.id + '-ghost'} // Unique key for ghost
+              name={draggedItem.player.name}
+              position={draggedItem.player.position}
+              displayMode="court" // Render like a court player
+              ghostMode={true} // Enable ghost styling
+              isOnCourt={false} // Not technically on court
+              courtPosition={{ x: 0, y: 0 }} // Dummy values not used for positioning
+              containerSize={{ width: 0, height: 0 }} // Dummy values not used for positioning
+            />
+          </Animated.View>
+        )}
       </ThemedView>
     </GestureHandlerRootView>
   );

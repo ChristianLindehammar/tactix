@@ -13,18 +13,21 @@ import { sportsConfig } from '@/constants/sports';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTeam } from '@/contexts/TeamContext';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useDrag } from '@/contexts/DragContext'; // Import useDrag
 
 interface PlayerProps {
   id: string;
   name: string;
   position: string;
   courtPosition?: Position | null; // Make optional for bench players initially
-  onDragEnd?: (position: Position) => void; // Optional for bench
+  onDragEnd?: ((position: Position) => void) | (() => void); // Updated to handle both signatures
   containerSize?: { width: number; height: number }; // Optional for bench
   isSelected?: boolean;
   isOnCourt?: boolean; // Flag to differentiate court vs bench rendering/behavior
   onPress?: (id: string) => void; // Add onPress for bench interaction
   displayMode?: 'court' | 'bench'; // Explicit display mode
+  onDragStart?: (initialPosition: { x: number; y: number }) => void; // Add drag handlers from BenchPanel
+  ghostMode?: boolean; // Add prop for ghost mode (when following finger)
 }
 
 export function Player({ 
@@ -32,12 +35,14 @@ export function Player({
   name, 
   position, 
   courtPosition, 
-  onDragEnd, 
-  containerSize = { width: 0, height: 0 }, // Default size if not on court
+  onDragEnd,
+  containerSize = { width: 0, height: 0 },
   isSelected = false,
-  isOnCourt = true, // Default to true if not specified
+  isOnCourt = true, 
   onPress,
-  displayMode = 'court' // Default to court display
+  displayMode = 'court',
+  onDragStart,
+  ghostMode = false,
 }: PlayerProps) {
   const MARKER_SIZE = displayMode === 'bench' ? 35 : 40; // Smaller marker for bench
   const halfMarker = MARKER_SIZE / 2;
@@ -56,6 +61,7 @@ export function Player({
   const { movePlayerToBench } = useTeam();
   const { t } = useTranslation();
   const [isLongPress, setIsLongPress] = useState(false);
+  const { updateDragPosition, draggedItem, isDragging } = useDrag(); // Get update function and drag context values
 
   // Update position only if it's a court player and props change
   React.useEffect(() => {
@@ -96,11 +102,31 @@ export function Player({
     );
   };
 
+  // Helper functions to safely handle drag end events
+  const handleCourtDragEnd = (position: Position) => {
+    if (onDragEnd) {
+      // We know onDragEnd for court players accepts a position parameter
+      (onDragEnd as (position: Position) => void)(position);
+    }
+  };
+
+  const handleBenchDragEnd = () => {
+    if (onDragEnd) {
+      // We know onDragEnd for bench players doesn't need a parameter
+      (onDragEnd as () => void)();
+    }
+  };
+
   const handleTap = () => {
     if (onPress) {
       onPress(id);
     }
   };
+
+  // Define all gesture handlers first
+  const tapGesture = Gesture.Tap().onEnd(() => {
+    runOnJS(handleTap)();
+  });
 
   const longPressGesture = Gesture.LongPress()
     .minDuration(800) // Trigger after 800ms
@@ -113,49 +139,88 @@ export function Player({
     });
 
   const panGesture = Gesture.Pan()
-    .hitSlop({ top: 10, bottom: 10, left: 10, right: 10 })
-    .enabled(isOnCourt) // Only allow panning for court players
-    .onStart(() => {
-      offsetX.value = translateX.value;
-      offsetY.value = translateY.value;
-      runOnJS(setIsActive)(true);
+    .hitSlop({ top: -10, bottom: -10, left: -10, right: -10 }) // Adjust hitSlop if needed
+    .onStart((event) => {
+      if (isOnCourt) {
+        offsetX.value = translateX.value;
+        offsetY.value = translateY.value;
+        runOnJS(setIsActive)(true);
+      } else if (onDragStart) {
+        // Use absolute coordinates for starting bench drag
+        runOnJS(onDragStart)({ x: event.absoluteX, y: event.absoluteY });
+      }
     })
     .onUpdate((event) => {
-      translateX.value = offsetX.value + event.translationX;
-      translateY.value = offsetY.value + event.translationY;
-    })
-    .onEnd(() => {
-      const newX = translateX.value / containerSize.width;
-      const newY = translateY.value / containerSize.height;
-      if (onDragEnd) {
-         runOnJS(onDragEnd)({ x: newX, y: newY });
+      if (isOnCourt) {
+        translateX.value = offsetX.value + event.translationX;
+        translateY.value = offsetY.value + event.translationY;
+      } else {
+        // Update global drag position using absolute coordinates
+        runOnJS(updateDragPosition)({ x: event.absoluteX, y: event.absoluteY });
       }
-      runOnJS(setIsActive)(false);
+    })
+    .onEnd((event) => {
+      if (isOnCourt) {
+        // Calculate the new position as a proportion of the container
+        const newX = translateX.value / containerSize.width;
+        const newY = translateY.value / containerSize.height;
+        
+        // Ensure the position is clamped within valid bounds
+        const clampedX = Math.max(0, Math.min(1, newX));
+        const clampedY = Math.max(0, Math.min(1, newY));
+        
+        // For court players: use a simpler approach that doesn't require casting
+        if (onDragEnd) {
+          const position = { x: clampedX, y: clampedY };
+          runOnJS(setIsActive)(false);
+          // Call onDragEnd directly without intermediate function
+          runOnJS(handleCourtDragEnd)(position);
+        } else {
+          runOnJS(setIsActive)(false);
+        }
+      } else {
+        // For bench players: just call onDragEnd with no parameters
+        if (onDragEnd) {
+          runOnJS(handleBenchDragEnd)();
+        }
+      }
     })
     .onFinalize(() => {
-      runOnJS(setIsActive)(false);
+      if (isOnCourt) {
+        runOnJS(setIsActive)(false);
+      }
     });
     
-  const tapGesture = Gesture.Tap().onEnd(() => {
-    runOnJS(handleTap)();
+  // Create combined gesture with proper typing
+  const combinedGesture = isOnCourt 
+    ? Gesture.Exclusive(longPressGesture, panGesture, tapGesture)
+    : Gesture.Exclusive(panGesture, tapGesture);
+
+  // Define the animated style
+  const animatedStyle = useAnimatedStyle(() => {
+    // Check if this specific player is being dragged from the bench
+    const isBeingDraggedFromBench = !isOnCourt && isDragging && draggedItem?.player.id === id;
+    
+    return {
+      opacity: isBeingDraggedFromBench ? 0 : 1, // Hide original when dragged
+      transform: [
+        // Center the marker based on its own size if not on court
+        { translateX: isOnCourt ? translateX.value - halfMarker : 0 }, 
+        { translateY: isOnCourt ? translateY.value - halfMarker : 0 },
+        { scale: scale.value },
+      ],
+      // Use absolute positioning only for court players
+      position: isOnCourt ? 'absolute' as const : 'relative' as const, 
+      zIndex: zIndex.value,
+    };
   });
 
-  // Combine gestures based on context
-  const combinedGesture = isOnCourt 
-    ? Gesture.Exclusive(longPressGesture, panGesture) // Court: Long press or Pan
-    : tapGesture; // Bench: Tap only
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      // Center the marker based on its own size if not on court
-      { translateX: isOnCourt ? translateX.value - halfMarker : 0 }, 
-      { translateY: isOnCourt ? translateY.value - halfMarker : 0 },
-      { scale: scale.value },
-    ],
-    // Use absolute positioning only for court players
-    position: isOnCourt ? 'absolute' : 'relative', 
-    zIndex: zIndex.value,
-  }));
+  // Apply ghost styling when in ghost mode
+  const combinedStyles = [
+    animatedStyle, 
+    styles.playerContainer,
+    ghostMode ? styles.ghostPlayer : undefined
+  ];
 
   const nameBoxBackgroundColor = useThemeColor({}, 'background');
   const nameBoxBorderColor = useThemeColor({}, 'border');
@@ -164,7 +229,7 @@ export function Player({
 
   return (
     <GestureDetector gesture={combinedGesture}>
-      <Animated.View style={[animatedStyle, styles.playerContainer]}>
+      <Animated.View style={combinedStyles}>
         <View 
           style={[
             styles.playerMarker, 
@@ -241,5 +306,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // position: 'absolute', // Applied conditionally in animatedStyle
     backgroundColor: 'transparent',
+  },
+  ghostPlayer: {
+    opacity: 0.7, // Slightly transparent
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
 });

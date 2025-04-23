@@ -7,28 +7,71 @@ import { IconSymbol } from './ui/IconSymbol';
 import { LAYOUT } from '@/constants/layout';
 import { useThemeColor } from '@/hooks/useThemeColor'; // Import theme hook
 import { useTranslation } from '@/hooks/useTranslation';
+import { useDrag } from '@/contexts/DragContext';
+import { LayoutRectangle } from 'react-native';
 
 const PANEL_HEIGHT_COLLAPSED = 60;
 const PANEL_HEIGHT_EXPANDED = 130; // Adjusted height for Player component
 
-export const BenchPanel = () => {
-  const { team, movePlayerToCourt } = useTeam();
+interface BenchPanelProps {
+  courtLayout: LayoutRectangle | null;
+}
+
+export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
+  const { team, movePlayerToCourt, updatePlayerPosition } = useTeam();
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation();
+  const { startDrag, endDrag } = useDrag(); // Get drag functions from context
 
   // Theme colors
-  const backgroundColor = useThemeColor({}, 'menuBackground');
-  const borderColor = useThemeColor({}, 'border');
-  const textColor = useThemeColor({}, 'text');
-  const iconColor = useThemeColor({}, 'icon');
+  const backgroundColor = useThemeColor({}, 'menuBackground') as string;
+  const borderColor = useThemeColor({}, 'border') as string;
+  const textColor = useThemeColor({}, 'text') as string;
+  const iconColor = useThemeColor({}, 'icon') as string;
 
   const benchPlayers = team?.benchPlayers ?? [];
 
-  const handlePlayerPress = (playerId: string) => {
-    // Move player to court when tapped on the bench
-    movePlayerToCourt(playerId); 
-    // Optionally collapse the panel after moving a player
-    // setIsExpanded(false); 
+  // Called by Player component when drag starts
+  const handlePlayerDragStart = (player: PlayerType, initialPosition: { x: number; y: number }) => {
+    startDrag(player, initialPosition);
+    // Optionally collapse the panel when drag starts
+    // setIsExpanded(false);
+  };
+
+  // Called by Player component when drag ends
+  const handlePlayerDragEnd = () => {
+    const { droppedPlayer, finalPosition } = endDrag();
+
+    if (droppedPlayer && finalPosition && courtLayout) {
+      // Check if dropped within court bounds
+      const courtX = courtLayout.x;
+      const courtY = courtLayout.y;
+      const courtWidth = courtLayout.width;
+      const courtHeight = courtLayout.height;
+
+      if (
+        finalPosition.x >= courtX &&
+        finalPosition.x <= courtX + courtWidth &&
+        finalPosition.y >= courtY &&
+        finalPosition.y <= courtY + courtHeight
+      ) {
+        // Calculate relative position within the court (0 to 1)
+        const relativeX = (finalPosition.x - courtX) / courtWidth;
+        const relativeY = (finalPosition.y - courtY) / courtHeight;
+        const clampedX = Math.max(0, Math.min(1, relativeX));
+        const clampedY = Math.max(0, Math.min(1, relativeY));
+
+        // Move player to court first (this assigns a default position)
+        movePlayerToCourt(droppedPlayer.id);
+        
+        // Then immediately update to the dropped position
+        // Use setTimeout to ensure the state update from movePlayerToCourt has likely processed
+        setTimeout(() => {
+            updatePlayerPosition(droppedPlayer.id, { x: clampedX, y: clampedY });
+        }, 0);
+
+      }
+    }
   };
 
   return (
@@ -67,7 +110,12 @@ export const BenchPanel = () => {
                   // containerSize={{ width: 0, height: 0 }} // Not needed for bench
                   isOnCourt={false} // Explicitly false
                   displayMode="bench" // Use bench display mode
-                  onPress={handlePlayerPress} // Handle tap
+                  // Remove onPress={handlePlayerPress}
+                  // Add drag handlers
+                  onDragStart={(initialPosition) => handlePlayerDragStart(player, initialPosition)}
+                  onDragEnd={handlePlayerDragEnd}
+                  // Pass courtLayout for potential internal checks (optional)
+                  // courtLayout={courtLayout} 
                 />
               </View>
             ))

@@ -1,6 +1,5 @@
 import React, { createContext, useState, PropsWithChildren, useContext, useEffect } from 'react';
 import { Team, PlayerType, Position } from '@/types/models';
-import { LAYOUT } from '@/constants/layout';
 import { getItem, setItem } from '../app/utils/AsyncStorage';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
@@ -30,6 +29,7 @@ interface TeamContextProps {
   setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
   movePlayerToBench: (playerId: string) => void;
   movePlayerToCourt: (playerId: string) => void;
+  findFreePosition: () => Position;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -432,11 +432,12 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       // If player not found on court, do nothing
       if (!playerToMove) return currentTeam;
       
-      // Remove player from starting players and add to bench
+      // Remove player from starting players and add to bench, clearing court position
       return {
         ...currentTeam,
         startingPlayers: currentTeam.startingPlayers.filter(p => p.id !== playerId),
-        benchPlayers: [...currentTeam.benchPlayers, playerToMove]
+        // Add player to bench and set courtPosition to undefined
+        benchPlayers: [...currentTeam.benchPlayers, { ...playerToMove, courtPosition: undefined }] 
       };
     });
   };
@@ -449,12 +450,16 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       
       // If player not found on bench, do nothing
       if (!playerToMove) return currentTeam;
+
+      // Find a free position for the player moving to court
+      const newPosition = findFreePosition(); 
       
-      // Remove player from bench and add to starting players
+      // Remove player from bench and add to starting players with the new position
       return {
         ...currentTeam,
         benchPlayers: currentTeam.benchPlayers.filter(p => p.id !== playerId),
-        startingPlayers: [...currentTeam.startingPlayers, playerToMove]
+        // Add player to court with an assigned courtPosition
+        startingPlayers: [...currentTeam.startingPlayers, { ...playerToMove, courtPosition: newPosition }] 
       };
     });
   };
@@ -482,6 +487,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       setPlayers,
       movePlayerToBench,
       movePlayerToCourt,
+      findFreePosition,
     }}>
       {children}
     </TeamContext.Provider>

@@ -24,7 +24,7 @@ import { TooltipModal } from '@/components/TooltipModal';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer, setPlayers, movePlayerToBench, movePlayerToCourt } = useTeam();
+  const { team, teams, addPlayer, setPlayers, findFreePosition } = useTeam();
   const [newPlayerName, setNewPlayerName] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
   const benchHeaderRef = useRef<View>(null);
@@ -91,31 +91,33 @@ export default function TeamScreen() {
   };
 
   const handleReorder = ({ from, to }: ReorderableListReorderEvent) => {
+    // Calculate the new visual order directly from the event
     const newData = reorderItems(listData, from, to);
+
+    // Find the separator index in the new order
     const benchHeaderIndex = newData.findIndex((item: any) => item.id === 'bench-header');
-    
-    // Extract player data from reordered list
-    const courtPlayers = newData
+
+    // Extract players based on their position relative to the separator in the new order
+    const newCourtPlayers = newData
       .slice(0, benchHeaderIndex)
-      .filter((item): item is PlayerType & { type: string } => item.type === 'player');
-    
-    const benchPlayers = newData
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
+      .map(player => ({
+          ...player,
+          // Ensure court players have a position; assign if missing
+          courtPosition: player.courtPosition && player.courtPosition.x >= 0 ? player.courtPosition : findFreePosition() 
+      }));
+
+    const newBenchPlayers = newData
       .slice(benchHeaderIndex + 1)
-      .filter((item): item is PlayerType & { type: string } => item.type === 'player');
-    
-    // Find players that moved from court to bench
-    const movedToBench = team?.startingPlayers.filter(
-      courtPlayer => !courtPlayers.some(p => p.id === courtPlayer.id)
-    );
-    
-    // Find players that moved from bench to court
-    const movedToCourt = team?.benchPlayers.filter(
-      benchPlayer => !benchPlayers.some(p => p.id === benchPlayer.id)
-    );
-    
-    // Apply moves using context functions
-    movedToBench?.forEach(player => movePlayerToBench(player.id));
-    movedToCourt?.forEach(player => movePlayerToCourt(player.id));
+      .filter((item): item is PlayerType & { type: string } => item.type === 'player')
+      // Ensure players moved to bench lose their specific court position
+      .map(player => ({
+          ...player,
+          courtPosition: undefined // Clear court position for bench players
+      }));
+
+    // Update the context with the complete new lists
+    setPlayers(newCourtPlayers, newBenchPlayers);
   };
 
   const renderItem = useCallback(
