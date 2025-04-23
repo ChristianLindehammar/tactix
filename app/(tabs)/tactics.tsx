@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Text, Alert, PanResponder, Animated, Dimensions, Pressable } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Dimensions } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
-import { ThemedText } from '@/components/ThemedText';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
 import { LAYOUT } from '@/constants/layout';
@@ -56,9 +55,6 @@ export default function TacticsScreen() {
   
   // Use theme colors
   const backgroundColor = useThemeColor({}, 'background');
-  const textColor = useThemeColor({}, 'text');
-  const cardColor = useThemeColor({}, 'card');
-  const tintColor = useThemeColor({}, 'tint');
   const buttonBgColor = useThemeColor({}, 'secondaryBackground');
 
   // Responsive court sizing
@@ -73,8 +69,6 @@ export default function TacticsScreen() {
   const [markers, setMarkers] = useState<Marker[]>([]);
   const [addingType, setAddingType] = useState<Marker['type'] | null | 'menu'>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [lastAddedMarkerId, setLastAddedMarkerId] = useState<string | null>(null);
   const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const courtRef = useRef<View>(null);
@@ -85,7 +79,7 @@ export default function TacticsScreen() {
   const [showDeleteTooltip, setShowDeleteTooltip] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
   const [showDragHint, setShowDragHint] = useState(false);
-  const playerBtnRef = useRef<TouchableOpacity>(null);
+  const playerBtnRef = useRef<React.ElementRef<typeof TouchableOpacity>>(null);
 
   // Convert absolute to relative coordinates
   const getRelativeCoords = (absX: number, absY: number) => {
@@ -112,13 +106,13 @@ export default function TacticsScreen() {
         if (hasSeenTacticsTooltips !== 'true' && selectedSport) {
           setTimeout(() => {
             if (playerBtnRef.current) {
-              playerBtnRef.current.measure((x, y, width, height, pageX, pageY) => {
+                playerBtnRef.current.measure((x: number, y: number, width: number, height: number, pageX: number, pageY: number): void => {
                 setTooltipPosition({
                   x: pageX + width / 2,
                   y: pageY + height + 10,
                 });
                 setShowAddTooltip(true);
-              });
+                });
             }
           }, 1000);
         }
@@ -210,7 +204,6 @@ export default function TacticsScreen() {
   // Add marker at tap location with improved touch handling
   const handleCourtPress = (event: any) => {
     // Reset isDragging when user taps the court (not a marker)
-    setIsDragging(false);
     
     if (!addingType || addingType === 'menu') return;
     
@@ -278,7 +271,6 @@ export default function TacticsScreen() {
 
   // Handler for when a marker starts being dragged
   const handleDragStart = (id: string) => {
-    setIsDragging(true);
     setAddingType(null);
     setDraggingId(id);
     
@@ -287,13 +279,7 @@ export default function TacticsScreen() {
       handleMoveTooltipClose();
     }
   };
-  
-  // Add an effect to reset isDragging if no marker is being dragged
-  useEffect(() => {
-    if (!draggingId) {
-      setIsDragging(false);
-    }
-  }, [draggingId]);
+
 
   if (!selectedSport || !Svg) {
     return (
@@ -432,10 +418,6 @@ export default function TacticsScreen() {
                 onDragEnd={(id, newX, newY) => {
                   setMarkers(markers => markers.map(m => m.id === id ? { ...m, x: newX, y: newY } : m));
                   setDraggingId(null);
-                  // Allow adding markers again after drag is complete
-                  setTimeout(() => {
-                    setIsDragging(false);
-                  }, 100);
                 }}
                 onDragStart={handleDragStart}
                 onLongPress={() => {

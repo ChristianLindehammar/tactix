@@ -10,6 +10,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { useDrag } from '@/contexts/DragContext';
 import { LayoutRectangle } from 'react-native';
 import { useSport } from '@/context/SportContext';
+import { PlayerType } from '@/types/models';
 
 // Use a single consistent height for all sports
 const PANEL_HEIGHT_COLLAPSED = 35; // Reduced from 40 to 35 for all sports
