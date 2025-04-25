@@ -13,6 +13,8 @@ interface DragContextProps {
   startDrag: (player: PlayerType, initialPosition: Position) => void;
   updateDragPosition: (position: Position) => void;
   endDrag: () => { droppedPlayer: PlayerType | null; finalPosition: Position | null };
+  lastDrop: { droppedPlayer: PlayerType | null; finalPosition: Position | null } | null;
+  clearLastDrop: () => void;
 }
 
 const DragContext = createContext<DragContextProps | undefined>(undefined);
@@ -20,6 +22,7 @@ const DragContext = createContext<DragContextProps | undefined>(undefined);
 export const DragProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [draggedItem, setDraggedItem] = useState<{ player: PlayerType; initialPosition: Position } | null>(null);
   const [dragPosition, setDragPosition] = useState<Position | null>(null);
+  const [lastDrop, setLastDrop] = useState<{ droppedPlayer: PlayerType | null; finalPosition: Position | null } | null>(null);
 
   const startDrag = useCallback((player: PlayerType, initialPosition: Position) => {
     setDraggedItem({ player, initialPosition });
@@ -33,15 +36,19 @@ export const DragProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const endDrag = useCallback(() => {
     const droppedPlayer = draggedItem?.player ?? null;
     const finalPosition = dragPosition;
+    const dropData = { droppedPlayer, finalPosition };
+    setLastDrop(dropData);
     setDraggedItem(null);
     setDragPosition(null);
-    return { droppedPlayer, finalPosition };
+    return dropData;
   }, [draggedItem, dragPosition]);
+
+  const clearLastDrop = useCallback(() => setLastDrop(null), []);
 
   const isDragging = !!draggedItem;
 
   return (
-    <DragContext.Provider value={{ draggedItem, dragPosition, isDragging, startDrag, updateDragPosition, endDrag }}>
+    <DragContext.Provider value={{ draggedItem, dragPosition, isDragging, startDrag, updateDragPosition, endDrag, lastDrop, clearLastDrop }}>
       {children}
     </DragContext.Provider>
   );

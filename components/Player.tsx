@@ -61,7 +61,10 @@ export function Player({
   const { movePlayerToBench } = useTeam();
   const { t } = useTranslation();
   const [isLongPress, setIsLongPress] = useState(false);
-  const { updateDragPosition, draggedItem, isDragging } = useDrag(); // Get update function and drag context values
+  const { startDrag, updateDragPosition, endDrag, draggedItem, isDragging } = useDrag(); // Get update function and drag context values
+
+  // Build a PlayerType object for drag context
+  const playerData: PlayerType = { id, name, position, courtPosition };
 
   // Update position only if it's a court player and props change
   React.useEffect(() => {
@@ -145,7 +148,13 @@ export function Player({
         offsetX.value = translateX.value;
         offsetY.value = translateY.value;
         runOnJS(setIsActive)(true);
+        
+        // For court players, we'll start tracking dragging when they start moving
+        // This allows us to detect when they're dropped on the bench
+        runOnJS(startDrag)(playerData, { x: event.absoluteX, y: event.absoluteY });
       } else if (onDragStart) {
+        // Only track bench players in the drag context
+        runOnJS(startDrag)(playerData, { x: event.absoluteX, y: event.absoluteY });
         // Use absolute coordinates for starting bench drag
         runOnJS(onDragStart)({ x: event.absoluteX, y: event.absoluteY });
       }
@@ -154,13 +163,19 @@ export function Player({
       if (isOnCourt) {
         translateX.value = offsetX.value + event.translationX;
         translateY.value = offsetY.value + event.translationY;
+        // Update global drag position for court players too when they're being dragged
+        // This is needed to detect drops on the bench area
+        runOnJS(updateDragPosition)({ x: event.absoluteX, y: event.absoluteY });
       } else {
-        // Update global drag position using absolute coordinates
+        // Only update global drag position for bench players
         runOnJS(updateDragPosition)({ x: event.absoluteX, y: event.absoluteY });
       }
     })
     .onEnd((event) => {
       if (isOnCourt) {
+        // Signal drag end to context for court players too
+        runOnJS(endDrag)();
+        
         // Calculate the new position as a proportion of the container
         const newX = translateX.value / containerSize.width;
         const newY = translateY.value / containerSize.height;
@@ -179,6 +194,8 @@ export function Player({
           runOnJS(setIsActive)(false);
         }
       } else {
+        // Only signal drag end to context for bench players
+        runOnJS(endDrag)();
         // For bench players: just call onDragEnd with no parameters
         if (onDragEnd) {
           runOnJS(handleBenchDragEnd)();

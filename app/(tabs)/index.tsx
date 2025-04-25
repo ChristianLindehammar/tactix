@@ -262,18 +262,21 @@ function HomeScreenContent() {
 
         {/* Render the ghost Player when dragging from bench */}
         {isDragging && draggedItem && dragPosition && (
-          <Animated.View style={ghostPlayerStyle} pointerEvents="none">
-            <Player
-              id={draggedItem.player.id + '-ghost'} // Unique key for ghost
-              name={draggedItem.player.name}
-              position={draggedItem.player.position}
-              displayMode="court" // Render like a court player
-              ghostMode={true} // Enable ghost styling
-              isOnCourt={false} // Not technically on court
-              courtPosition={{ x: 0, y: 0 }} // Dummy values not used for positioning
-              containerSize={{ width: 0, height: 0 }} // Dummy values not used for positioning
-            />
-          </Animated.View>
+          <>
+            {/* Show ghost marker for bench players - they're the only ones with draggedItem when bench player is dragging */}
+            <Animated.View style={ghostPlayerStyle} pointerEvents="none">
+              <Player
+                id={draggedItem.player.id + '-ghost'} // Unique key for ghost
+                name={draggedItem.player.name}
+                position={draggedItem.player.position}
+                displayMode="court" // Render like a court player
+                ghostMode={true} // Enable ghost styling
+                isOnCourt={false} // Not technically on court
+                courtPosition={{ x: 0, y: 0 }} // Dummy values not used for positioning
+                containerSize={{ width: 0, height: 0 }} // Dummy values not used for positioning
+              />
+            </Animated.View>
+          </>
         )}
       </ThemedView>
     </GestureHandlerRootView>
