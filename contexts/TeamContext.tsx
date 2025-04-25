@@ -31,7 +31,7 @@ interface TeamContextProps {
   importTeamFromFile: (fileUri: string) => Promise<Team>;
   setPlayers: (courtPlayers: PlayerType[], benchPlayers: PlayerType[]) => void;
   movePlayerToBench: (playerId: string) => void;
-  movePlayerToCourt: (playerId: string) => void;
+  movePlayerToCourt: (playerId: string, targetPosition?: Position) => void;
   findFreePosition: () => Position;
 }
 
@@ -494,7 +494,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   // Move player from bench to court
-  const movePlayerToCourt = (playerId: string) => {
+  const movePlayerToCourt = (playerId: string, targetPosition?: Position) => {
     updateTeamInTeams(currentTeam => {
       // Find the player on the bench
       const playerToMove = currentTeam.benchPlayers.find(p => p.id === playerId);
@@ -502,8 +502,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       // If player not found on bench, do nothing
       if (!playerToMove) return currentTeam;
 
-      // Find a free position for the player moving to court
-      const newPosition = findFreePosition(); 
+      // Use provided position if available, otherwise find a free position
+      const newPosition = targetPosition || findFreePosition(); 
       
       // Remove player from bench and add to starting players with the new position
       return {

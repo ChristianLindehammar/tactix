@@ -91,11 +91,8 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
         const clampedX = Math.max(0, Math.min(1, relativeX));
         const clampedY = Math.max(0, Math.min(1, relativeY));
         
-        // Move player to court then update position
-        movePlayerToCourt(draggedItem.player.id);
-        setTimeout(() => {
-          updatePlayerPosition(draggedItem.player.id, { x: clampedX, y: clampedY });
-        }, 0);
+        // Move player to court with the target position in a single operation
+        movePlayerToCourt(draggedItem.player.id, { x: clampedX, y: clampedY });
       }
     }
   };
