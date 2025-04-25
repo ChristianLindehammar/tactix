@@ -1,5 +1,5 @@
 import * as React from "react"
-import Svg, { SvgProps, Circle } from "react-native-svg"
+import Svg, { SvgProps, Circle, G } from "react-native-svg"
 import { memo } from "react"
 
 const SvgComponent = (props: SvgProps) => (
@@ -11,16 +11,27 @@ const SvgComponent = (props: SvgProps) => (
     fill="none"
     {...props}
   >
-    <Circle cx={12} cy={12} r={10} fill="#FFFFFF" stroke="#000" strokeWidth={0.75} />
-    <Circle cx={16.5} cy={12} r={1.8} fill="#000" />
-    <Circle cx={12} cy={12} r={1.8} fill="#000" />
-    <Circle cx={7.5} cy={12} r={1.8} fill="#000" />
-    <Circle cx={12} cy={16.5} r={1.8} fill="#000" />
-    <Circle cx={12} cy={7.5} r={1.8} fill="#000" />
-    <Circle cx={16.5} cy={7.5} r={1.8} fill="#000" />
-    <Circle cx={7.5} cy={7.5} r={1.8} fill="#000" />
-    <Circle cx={7.5} cy={16.5} r={1.8} fill="#000" />
-    <Circle cx={16.5} cy={16.5} r={1.8} fill="#000" />
+    {/* Main ball outline */}
+    <Circle cx={12} cy={12} r={10} fill="#FFFFFF" stroke="#000" strokeWidth={1} />
+    
+    {/* Center pattern of holes */}
+    <Circle cx={12} cy={12} r={2.2} fill="#000" />
+    
+    {/* Surrounding holes in a circular pattern */}
+    <G>
+      <Circle cx={12} cy={6.8} r={1.8} fill="#000" />
+      <Circle cx={17.2} cy={12} r={1.8} fill="#000" />
+      <Circle cx={12} cy={17.2} r={1.8} fill="#000" />
+      <Circle cx={6.8} cy={12} r={1.8} fill="#000" />
+    </G>
+    
+    {/* Corner holes */}
+    <G>
+      <Circle cx={8} cy={8} r={1.5} fill="#000" />
+      <Circle cx={16} cy={8} r={1.5} fill="#000" />
+      <Circle cx={16} cy={16} r={1.5} fill="#000" />
+      <Circle cx={8} cy={16} r={1.5} fill="#000" />
+    </G>
   </Svg>
 )
 

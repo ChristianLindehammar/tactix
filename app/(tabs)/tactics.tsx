@@ -309,7 +309,7 @@ export default function TacticsScreen() {
         {/* Marker selection rows at the top with safe area insets */}
         <View style={[
           styles.markerSelectionContainer, 
-          { paddingTop: Math.max(insets.top, 24), backgroundColor: backgroundColor as string }
+          { paddingTop: Math.max(insets.top, 8), backgroundColor: backgroundColor as string }
         ]}>
           <View style={styles.controlsContainer}>
             {/* Left side - Add Player/Opponent buttons - more compact */}
@@ -329,12 +329,12 @@ export default function TacticsScreen() {
               >
                 <MaterialIcons 
                   name={addingType === 'player' ? 'close' : 'add'} 
-                  size={20} 
+                  size={18} 
                   color="#1976D2" 
                 />
                 <MaterialIcons 
                   name="person" 
-                  size={24} 
+                  size={22} 
                   color="#1976D2" 
                 />
               </TouchableOpacity>
@@ -353,12 +353,12 @@ export default function TacticsScreen() {
               >
                 <MaterialIcons 
                   name={addingType === 'opponent' ? 'close' : 'add'} 
-                  size={20} 
+                  size={18} 
                   color="#D32F2F" 
                 />
                 <MaterialIcons 
                   name="person" 
-                  size={24} 
+                  size={22} 
                   color="#D32F2F" 
                 />
               </TouchableOpacity>
@@ -385,7 +385,7 @@ export default function TacticsScreen() {
                 }}
                 accessibilityLabel={t('clearAll')}
               >
-                <MaterialIcons name="delete-sweep" size={24} color="#fff" />
+                <MaterialIcons name="delete-sweep" size={22} color="#fff" />
               </TouchableOpacity>
             )}
           </View>
@@ -569,7 +569,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   markerSelectionContainer: {
-    paddingBottom: 8,
+    paddingBottom: 4,
     zIndex: 30,
   },
   controlsContainer: {
@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 8,
+    paddingVertical: 6,
   },
   addButtonsContainer: {
     flexDirection: 'row',
@@ -586,10 +586,10 @@ const styles = StyleSheet.create({
   markerTypeButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 20,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
-    borderWidth: 2,  // Always have a border of 2px
+    borderRadius: 16,
+    paddingVertical: 5,
+    paddingHorizontal: 8,
+    borderWidth: 1.5,  // Slightly thinner border
     borderColor: 'transparent', // Transparent by default
   },
   activeButton: {
@@ -600,10 +600,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#D32F2F',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 8,
-    borderRadius: 20,
-    width: 40,
-    height: 40,
+    padding: 6,
+    borderRadius: 16,
+    width: 34,
+    height: 34,
     zIndex: 10,
   },
 });
