@@ -14,6 +14,11 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { TooltipModal } from '@/components/TooltipModal';
 import { DragHintOverlay } from '@/components/DragHintOverlay';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// Import our custom ball SVGs
+import FloorballBallSvg from '@/components/ui/FloorballBallSvg';
+import HockeyBallSvg from '@/components/ui/HockeyBallSvg';
+import BandyBallSvg from '@/components/ui/BandyBallSvg';
+import { SportBall } from '@/components/SportBall';
 
 // Marker type
 interface Marker {
@@ -394,6 +399,7 @@ export default function TacticsScreen() {
               position: 'relative',
             }} 
             ref={courtRef}
+            onPress={addingType && addingType !== 'menu' ? handleCourtPress : undefined}
             onTouchStart={addingType && addingType !== 'menu' ? handleCourtPress : undefined}
             pointerEvents="box-none" // This allows touch events to pass through to children when they're not handled here
           >
@@ -451,32 +457,55 @@ export default function TacticsScreen() {
                 }}
                 zIndex={draggingId === marker.id ? 3 : 2}
               >
-                <TouchableOpacity
-                  activeOpacity={0.8}
-                  style={{
+                {marker.type === 'ball' ? (
+                  <View style={{
                     width: 40,
                     height: 40,
-                    borderRadius: 20,
-                    backgroundColor: marker.type === 'player' ? '#1976D2' : marker.type === 'opponent' ? '#D32F2F' : 'white',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    borderRadius: 20,
+                    backgroundColor: '#fff',
                     borderWidth: 2,
-                    borderColor: marker.type === 'ball' ? '#FFA000' : '#fff',
-                    ...(marker.type === 'ball' ? {
-                      shadowColor: '#000',
-                      shadowOffset: { width: 0, height: 2 },
-                      shadowOpacity: 0.3,
-                      shadowRadius: 3,
-                      elevation: 5,
-                    } : {}),
-                  }}
-                >
-                  <MaterialIcons
-                    name={getMarkerIcon(marker.type, selectedSport) as any}
-                    size={marker.type === 'ball' ? 24 : 28}
-                    color={marker.type === 'ball' ? '#FFA000' : '#fff'}
-                  />
-                </TouchableOpacity>
+                    borderColor: '#FFA000',
+                    shadowColor: '#000',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.3,
+                    shadowRadius: 3,
+                    elevation: 5,
+                  }}>
+                    {selectedSport === 'soccer' ? (
+                      <MaterialIcons
+                        name="sports-soccer"
+                        size={24}
+                        color="#FFA000"
+                      />
+                    ) : (
+                      <View style={{ width: 24, height: 24 }}>
+                        <SportBall sport={selectedSport} size={24} />
+                      </View>
+                    )}
+                  </View>
+                ) : (
+                  <TouchableOpacity
+                    activeOpacity={0.8}
+                    style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: 20,
+                      backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderWidth: 2,
+                      borderColor: '#fff',
+                    }}
+                  >
+                    <MaterialIcons
+                      name="person"
+                      size={28}
+                      color="#fff"
+                    />
+                  </TouchableOpacity>
+                )}
               </DraggableMarker>
             ))}
           </View>
