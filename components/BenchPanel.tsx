@@ -11,53 +11,44 @@ import { useDrag } from '@/contexts/DragContext';
 import { useSport } from '@/context/SportContext';
 import { PlayerType } from '@/types/models';
 
-// Panel heights
 const PANEL_HEIGHT_COLLAPSED = 35;
 const PANEL_HEIGHT_EXPANDED = 130;
 
-// ScrollIndicator component to show animated dots for scrolling
 const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: { 
   scrollX: Animated.Value, 
   contentWidth: number,
   containerWidth: number
 }) => {
-  // Only show indicator when content is wider than container
   if (contentWidth <= containerWidth) return null;
   
   const dotColor = useThemeColor({}, 'primary') as string || '#4169E1';
   
-  // Calculate max scroll position
   const maxScroll = Math.max(0, contentWidth - containerWidth);
   
-  // Generate animations for each dot
-  // First and last dots have special behavior to ensure they're expanded at the edges
   const dotAnimations = Array(6).fill(0).map((_, index) => {
     if (index === 0) {
-      // First dot - expanded at the beginning (0 position)
       return scrollX.interpolate({
         inputRange: [0, maxScroll * 0.2],
-        outputRange: [2.5, 1],  // Start expanded, then shrink
+        outputRange: [2.5, 1],
         extrapolate: 'clamp',
       });
     }
     
     if (index === 5) {
-      // Last dot - expanded at the end (max position)
       return scrollX.interpolate({
         inputRange: [maxScroll * 0.8, maxScroll],
-        outputRange: [1, 2.5],  // Start normal, then expand
+        outputRange: [1, 2.5],
         extrapolate: 'clamp',
       });
     }
     
-    // Middle dots - expand when scrolled to their position
     return scrollX.interpolate({
       inputRange: [
         Math.max(0, (index - 1) * maxScroll / 5),
         index * maxScroll / 5,
         Math.min(maxScroll, (index + 1) * maxScroll / 5)
       ],
-      outputRange: [1, 2.5, 1],  // Normal, expanded, normal
+      outputRange: [1, 2.5, 1],
       extrapolate: 'clamp',
     });
   });
@@ -99,7 +90,6 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
 
-  // Theme colors
   const backgroundColor = useThemeColor({}, 'menuBackground') as string;
   const borderColor = useThemeColor({}, 'border') as string;
   const textColor = useThemeColor({}, 'text') as string;
@@ -107,8 +97,6 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
 
   const benchPlayers = team?.benchPlayers ?? [];
 
-
-  // Handle dropping court players onto bench
   useEffect(() => {
     if (lastDrop && lastDrop.droppedPlayer && lastDrop.finalPosition) {
       const isCourtPlayer = team?.startingPlayers.some(p => p.id === lastDrop.droppedPlayer?.id);
@@ -128,12 +116,10 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
     }
   }, [lastDrop, team?.startingPlayers]);
 
-  // Start drag for bench player
   const handlePlayerDragStart = (player: PlayerType, initialPosition: { x: number; y: number }) => {
     startDrag(player, initialPosition);
   };
 
-  // Handle bench player dropped on court
   const handlePlayerDragEnd = () => {
     const { finalPosition } = endDrag();
     
@@ -144,13 +130,11 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
         finalPosition.x >= courtX && finalPosition.x <= courtX + courtWidth &&
         finalPosition.y >= courtY && finalPosition.y <= courtY + courtHeight
       ) {
-        // Calculate relative position within the court
         const relativeX = (finalPosition.x - courtX) / courtWidth;
         const relativeY = (finalPosition.y - courtY) / courtHeight;
         const clampedX = Math.max(0, Math.min(1, relativeX));
         const clampedY = Math.max(0, Math.min(1, relativeY));
         
-        // Move player to court with the target position in a single operation
         movePlayerToCourt(draggedItem.player.id, { x: clampedX, y: clampedY });
       }
     }
@@ -222,7 +206,6 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
             </ScrollView>
           </View>
           
-          {/* Show scroll indicator when content is wider than container - moved closer to players */}
           {benchPlayers.length > 3 && contentWidth > containerWidth && (
             <ScrollIndicator 
               scrollX={scrollX} 
