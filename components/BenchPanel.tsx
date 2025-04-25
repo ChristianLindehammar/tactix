@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, Pressable } from 'react-native';
+import React, { useRef, useEffect, useState } from 'react';
+import { View, StyleSheet, ScrollView, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated } from 'react-native';
 import { useTeam } from '@/contexts/TeamContext';
 import { Player } from './Player'; 
 import { ThemedText } from './ThemedText';
@@ -10,24 +10,94 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { useDrag } from '@/contexts/DragContext';
 import { useSport } from '@/context/SportContext';
 import { PlayerType } from '@/types/models';
-import { LayoutRectangle } from 'react-native';
 
 // Panel heights
 const PANEL_HEIGHT_COLLAPSED = 35;
 const PANEL_HEIGHT_EXPANDED = 130;
+
+// ScrollIndicator component to show animated dots for scrolling
+const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: { 
+  scrollX: Animated.Value, 
+  contentWidth: number,
+  containerWidth: number
+}) => {
+  // Only show indicator when content is wider than container
+  if (contentWidth <= containerWidth) return null;
+  
+  const dotColor = useThemeColor({}, 'primary') as string || '#4169E1';
+  
+  // Calculate max scroll position
+  const maxScroll = Math.max(0, contentWidth - containerWidth);
+  
+  // Generate animations for each dot
+  // First and last dots have special behavior to ensure they're expanded at the edges
+  const dotAnimations = Array(6).fill(0).map((_, index) => {
+    if (index === 0) {
+      // First dot - expanded at the beginning (0 position)
+      return scrollX.interpolate({
+        inputRange: [0, maxScroll * 0.2],
+        outputRange: [2.5, 1],  // Start expanded, then shrink
+        extrapolate: 'clamp',
+      });
+    }
+    
+    if (index === 5) {
+      // Last dot - expanded at the end (max position)
+      return scrollX.interpolate({
+        inputRange: [maxScroll * 0.8, maxScroll],
+        outputRange: [1, 2.5],  // Start normal, then expand
+        extrapolate: 'clamp',
+      });
+    }
+    
+    // Middle dots - expand when scrolled to their position
+    return scrollX.interpolate({
+      inputRange: [
+        Math.max(0, (index - 1) * maxScroll / 5),
+        index * maxScroll / 5,
+        Math.min(maxScroll, (index + 1) * maxScroll / 5)
+      ],
+      outputRange: [1, 2.5, 1],  // Normal, expanded, normal
+      extrapolate: 'clamp',
+    });
+  });
+  
+  return (
+    <View style={styles.indicatorContainer}>
+      <View style={styles.dotsContainer}>
+        {dotAnimations.map((animation, index) => (
+          <Animated.View 
+            key={index}
+            style={[
+              styles.dot, 
+              { 
+                backgroundColor: dotColor,
+                transform: [{ scaleX: animation }] 
+              }
+            ]} 
+          />
+        ))}
+      </View>
+    </View>
+  );
+};
 
 interface BenchPanelProps {
   courtLayout: LayoutRectangle | null;
 }
 
 export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
-  const { team, movePlayerToCourt, updatePlayerPosition, movePlayerToBench } = useTeam();
+  const { team, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const { t } = useTranslation();
   const { startDrag, isDragging, lastDrop, clearLastDrop, draggedItem, endDrag } = useDrag();
   const { selectedSport } = useSport();
   const prevDraggingRef = useRef(isDragging);
   const panelRef = useRef<View>(null);
+  const scrollViewRef = useRef<ScrollView>(null);
+  const [contentWidth, setContentWidth] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const scrollX = useRef(new Animated.Value(0)).current;
 
   // Theme colors
   const backgroundColor = useThemeColor({}, 'menuBackground') as string;
@@ -37,17 +107,6 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
 
   const benchPlayers = team?.benchPlayers ?? [];
 
-  // Auto-expand panel when dragging court players
-  useEffect(() => {
-    if (isDragging && !prevDraggingRef.current) {
-      const isCourtPlayer = team?.startingPlayers.some(p => p.id === draggedItem?.player.id);
-      if (isCourtPlayer) {
-        setIsExpanded(true);
-      }
-    }
-    
-    prevDraggingRef.current = isDragging;
-  }, [isDragging, draggedItem, team?.startingPlayers]);
 
   // Handle dropping court players onto bench
   useEffect(() => {
@@ -97,6 +156,11 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
     }
   };
 
+  const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const offsetX = event.nativeEvent.contentOffset.x;
+    scrollX.setValue(offsetX);
+  };
+
   return (
     <View 
       ref={panelRef}
@@ -120,33 +184,53 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
       </Pressable>
       
       {isExpanded && (
-        <ScrollView 
-          horizontal 
-          showsHorizontalScrollIndicator={false} 
-          contentContainerStyle={styles.scrollViewContent}
-        >
-          {benchPlayers.length > 0 ? (
-            benchPlayers.map((player) => (
-              <View key={player.id} style={styles.playerWrapper}>
-                <Player
-                  id={player.id}
-                  name={player.name}
-                  position={player.position}
-                  isOnCourt={false}
-                  displayMode="bench"
-                  onDragStart={(initialPosition) => handlePlayerDragStart(player, initialPosition)}
-                  onDragEnd={handlePlayerDragEnd}
-                />
-              </View>
-            ))
-          ) : (
-            <View style={styles.noPlayersContainer}>
-              <ThemedText style={[styles.noPlayersText, { color: iconColor }]}>
-                {t('noPlayersOnBench')}
-              </ThemedText>
-            </View>
+        <View style={styles.expandedContentContainer}>
+          <View 
+            style={styles.scrollContainer}
+            onLayout={(e) => setContainerWidth(e.nativeEvent.layout.width)}
+          >
+            <ScrollView 
+              ref={scrollViewRef}
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.scrollViewContent}
+              onScroll={handleScroll}
+              scrollEventThrottle={16}
+              onContentSizeChange={(width) => setContentWidth(width)}
+            >
+              {benchPlayers.length > 0 ? (
+                benchPlayers.map((player) => (
+                  <View key={player.id} style={styles.playerWrapper}>
+                    <Player
+                      id={player.id}
+                      name={player.name}
+                      position={player.position}
+                      isOnCourt={false}
+                      displayMode="bench"
+                      onDragStart={(initialPosition) => handlePlayerDragStart(player, initialPosition)}
+                      onDragEnd={handlePlayerDragEnd}
+                    />
+                  </View>
+                ))
+              ) : (
+                <View style={styles.noPlayersContainer}>
+                  <ThemedText style={[styles.noPlayersText, { color: iconColor }]}>
+                    {t('noPlayersOnBench')}
+                  </ThemedText>
+                </View>
+              )}
+            </ScrollView>
+          </View>
+          
+          {/* Show scroll indicator when content is wider than container - moved closer to players */}
+          {benchPlayers.length > 3 && contentWidth > containerWidth && (
+            <ScrollIndicator 
+              scrollX={scrollX} 
+              contentWidth={contentWidth} 
+              containerWidth={containerWidth} 
+            />
           )}
-        </ScrollView>
+        </View>
       )}
     </View>
   );
@@ -160,7 +244,7 @@ const styles = StyleSheet.create({
     right: 0,
     borderTopWidth: 1,
     paddingVertical: 2,
-    overflow: 'hidden', 
+    overflow: 'hidden',
   },
   toggleButton: {
     flexDirection: 'row',
@@ -176,16 +260,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
   },
-  scrollViewContent: {
-    paddingHorizontal: 10,
+  playersContainer: {
+    flex: 1,
+    padding: 10,
+  },
+  playersWrapper: {
+    flexDirection: 'row',
+    flexWrap: 'wrap', 
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    paddingBottom: 10,
-    minHeight: PANEL_HEIGHT_EXPANDED - PANEL_HEIGHT_COLLAPSED,
   },
   playerWrapper: {
     alignItems: 'center',
-    marginHorizontal: 8,
-    paddingTop: 5,
+    marginHorizontal: 6,
+    marginBottom: 10,
   },
   noPlayersContainer: {
     flex: 1,
@@ -195,5 +283,37 @@ const styles = StyleSheet.create({
   },
   noPlayersText: {
     fontStyle: 'italic',
+  },
+  expandedContentContainer: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  scrollContainer: {
+    flex: 1,
+  },
+  scrollViewContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    minHeight: PANEL_HEIGHT_EXPANDED - PANEL_HEIGHT_COLLAPSED - 20,
+  },
+  indicatorContainer: {
+    height: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -5,
+  },
+  dotsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 10,
+  },
+  dot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginHorizontal: 2,
   },
 });
