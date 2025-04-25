@@ -210,7 +210,7 @@ function HomeScreenContent() {
   }
 
   // Calculate dimensions
-  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
+  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED;
   const availableWidth = Dimensions.get('window').width;
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
   const screenRatio = availableWidth / availableHeight;
@@ -232,15 +232,12 @@ function HomeScreenContent() {
       <ThemedView style={styles.container}>
         <View style={{ height: insets.top + 10 }} />
         
-        {/* Court container with adjusted positioning */}
+        {/* Court container with better centering */}
         <View 
           style={[
             styles.courtContainer,
-            { 
-              flex: 0.88, 
-              marginBottom: PANEL_HEIGHT_COLLAPSED + 5,
-              paddingTop: 0,
-              paddingBottom: 0,
+            {
+              paddingBottom: PANEL_HEIGHT_COLLAPSED + 60, // Increased padding to prevent court from hiding behind bench panel
             }
           ]} 
           onLayout={onCourtLayout}
@@ -255,9 +252,10 @@ function HomeScreenContent() {
           />
         </View>
         
-        {/* Bottom spacer to push court up slightly */}
+        {/* Reserve minimal space for the BenchPanel */}
+        <View style={{ height: PANEL_HEIGHT_COLLAPSED }} />
         
-        {/* Render BenchPanel, passing courtLayout */}
+        {/* BenchPanel will position itself absolutely */}
         <BenchPanel courtLayout={courtLayout} />
 
         {/* Render the ghost Player when dragging from bench */}
