@@ -1,5 +1,5 @@
-import React from 'react';
-import { Modal, Pressable, StyleSheet, View, Dimensions } from 'react-native';
+import React, { useEffect } from 'react';
+import { Modal, Pressable, StyleSheet, View, Dimensions, Platform } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 
@@ -11,6 +11,7 @@ interface TooltipModalProps {
     x: number;
     y: number;
   };
+  autoCloseTimeout?: number;
 }
 
 export const TooltipModal: React.FC<TooltipModalProps> = ({
@@ -18,17 +19,36 @@ export const TooltipModal: React.FC<TooltipModalProps> = ({
   onClose,
   message,
   position,
+  autoCloseTimeout = 3000,
 }) => {
-  const backgroundColor = useThemeColor({}, 'background');
+  const backgroundColor = useThemeColor({}, 'background') as string;
   const screenWidth = Dimensions.get('window').width;
+  const screenHeight = Dimensions.get('window').height;
 
+  // Auto-close tooltip after timeout
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (visible) {
+      timer = setTimeout(() => {
+        onClose();
+      }, autoCloseTimeout);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [visible, onClose, autoCloseTimeout]);
   const tooltipPosition = position ? {
     position: 'absolute' as const,
     top: position.y,
     left: Math.max(20, Math.min(position.x - 150, screenWidth - 320)),
   } : {
-    alignSelf: 'center',
-    marginTop: '50%',
+    alignSelf: 'center' as const,
+    marginTop: screenHeight * 0.5,
+  };
+
+  // Android requires explicit handling of touch events
+  const handlePress = () => {
+    onClose();
   };
 
   return (
@@ -37,9 +57,18 @@ export const TooltipModal: React.FC<TooltipModalProps> = ({
       visible={visible}
       animationType="fade"
       onRequestClose={onClose}
+      hardwareAccelerated={Platform.OS === 'android'} // Improve performance on Android
     >
-      <Pressable style={styles.tooltipOverlay} onPress={onClose}>
-        <View style={[styles.tooltipContainer, tooltipPosition]}>
+      <Pressable 
+        style={styles.tooltipOverlay} 
+        onPress={handlePress}
+        android_disableSound={true} // Disable sound feedback on Android
+      >
+        <View 
+          style={[styles.tooltipContainer, tooltipPosition]}
+          // Prevent press events from propagating through this view on Android
+          pointerEvents={Platform.OS === 'android' ? 'box-none' : 'auto'}
+        >
           <View style={[styles.arrow, { borderBottomColor: backgroundColor }]} />
           <View style={[styles.tooltip, { backgroundColor }]}>
             <ThemedText style={styles.tooltipText}>{message}</ThemedText>

@@ -66,3 +66,16 @@ export const getAllItems = async () => {
     return {};
   }
 };
+
+// Create a default export with all AsyncStorage functions
+const AsyncStorageUtils = {
+  setItem,
+  getItem,
+  removeItem,
+  mergeItem,
+  clear,
+  getAllKeys,
+  getAllItems
+};
+
+export default AsyncStorageUtils;

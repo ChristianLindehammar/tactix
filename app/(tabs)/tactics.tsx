@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Dimensions } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Dimensions, Platform } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
