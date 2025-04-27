@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { View, StyleSheet, ScrollView, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated } from 'react-native';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { View, StyleSheet, ScrollView, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated, Platform, LayoutRectangle } from 'react-native';
 import { useTeam } from '@/contexts/TeamContext';
 import { Player } from './Player'; 
 import { ThemedText } from './ThemedText';
@@ -81,14 +81,14 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
   const { team, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const { t } = useTranslation();
-  const { startDrag, isDragging, lastDrop, clearLastDrop, draggedItem, endDrag } = useDrag();
-  const { selectedSport } = useSport();
+  const { startDrag, isDragging, lastDrop, clearLastDrop, draggedItem, endDrag, dragPosition } = useDrag();
   const prevDraggingRef = useRef(isDragging);
   const panelRef = useRef<View>(null);
   const scrollViewRef = useRef<ScrollView>(null);
   const [contentWidth, setContentWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
+  const [panelLayout, setPanelLayout] = useState<{x: number, y: number, width: number, height: number} | null>(null);
 
   const backgroundColor = useThemeColor({}, 'menuBackground') as string;
   const borderColor = useThemeColor({}, 'border') as string;
@@ -97,24 +97,52 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
 
   const benchPlayers = team?.benchPlayers ?? [];
 
+  // Track panel position for more reliable drop detection
+  const measurePanel = useCallback(() => {
+    if (panelRef.current) {
+      panelRef.current.measureInWindow((x, y, width, height) => {
+        setPanelLayout({ x, y, width, height });
+      });
+    }
+  }, []);
+
+  // Re-measure panel when it's expanded/collapsed
+  useEffect(() => {
+    measurePanel();
+  }, [isExpanded, measurePanel]);
+
+  // Check for drop events
   useEffect(() => {
     if (lastDrop && lastDrop.droppedPlayer && lastDrop.finalPosition) {
       const isCourtPlayer = team?.startingPlayers.some(p => p.id === lastDrop.droppedPlayer?.id);
       
-      if (panelRef.current && isCourtPlayer) {
-        panelRef.current.measureInWindow((x, y, width, height) => {
-          const dropPos = lastDrop.finalPosition!;
-          if (
-            dropPos.x >= x && dropPos.x <= x + width &&
-            dropPos.y >= y && dropPos.y <= y + height
-          ) {
-            movePlayerToBench(lastDrop.droppedPlayer!.id);
-          }
-        });
+      if (panelLayout && isCourtPlayer) {
+        const dropPos = lastDrop.finalPosition;
+        
+        // Add extra padding for touch target on Android
+        const padding = Platform.OS === 'android' ? 20 : 0;
+        
+        if (
+          dropPos.x >= panelLayout.x - padding && 
+          dropPos.x <= panelLayout.x + panelLayout.width + padding &&
+          dropPos.y >= panelLayout.y - padding && 
+          dropPos.y <= panelLayout.y + panelLayout.height + padding
+        ) {
+          movePlayerToBench(lastDrop.droppedPlayer.id);
+        }
       }
       clearLastDrop();
     }
-  }, [lastDrop, team?.startingPlayers]);
+  }, [lastDrop, team?.startingPlayers, panelLayout, movePlayerToBench, clearLastDrop]);
+
+  // Track drag state changes and re-measure panel when needed
+  useEffect(() => {
+    if (isDragging && !prevDraggingRef.current) {
+      // Drag just started, measure panel
+      measurePanel();
+    }
+    prevDraggingRef.current = isDragging;
+  }, [isDragging, measurePanel]);
 
   const handlePlayerDragStart = (player: PlayerType, initialPosition: { x: number; y: number }) => {
     startDrag(player, initialPosition);
