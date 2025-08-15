@@ -17,7 +17,6 @@ export const ThemedButton: FC<PropsWithChildren<ThemedButtonProps>> = ({
   children,
 }) => {
   const tintColor = useThemeColor({}, 'tint');
-  const borderColor = useThemeColor({}, 'borderColor');
   const isDarkTheme = tintColor === '#fff'; // quick check or use some theme logic
   const buttonBg = disabled
     ? (isDarkTheme ? Colors.dark.buttonDisabled : Colors.light.buttonDisabled)

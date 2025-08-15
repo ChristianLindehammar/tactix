@@ -399,7 +399,6 @@ export default function TacticsScreen() {
               position: 'relative',
             }} 
             ref={courtRef}
-            onPress={addingType && addingType !== 'menu' ? handleCourtPress : undefined}
             onTouchStart={addingType && addingType !== 'menu' ? handleCourtPress : undefined}
             pointerEvents="box-none" // This allows touch events to pass through to children when they're not handled here
           >

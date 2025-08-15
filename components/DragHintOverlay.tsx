@@ -15,7 +15,7 @@ export const DragHintOverlay: React.FC<DragHintOverlayProps> = ({
 }) => {
   const translateY = useRef(new Animated.Value(0)).current;
   const opacity = useRef(new Animated.Value(0)).current;
-  const animationRef = useRef<Animated.CompositeAnimation>();
+  const animationRef = useRef<Animated.CompositeAnimation | null>(null);
   const [keyboardVisible, setKeyboardVisible] = useState(false);
   const { t } = useTranslation();
   

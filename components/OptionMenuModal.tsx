@@ -12,31 +12,36 @@ interface OptionMenuModalProps {
   position: { top: number; left: number };
 }
 
-export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({
-  visible, onClose, onRename, onDelete, position,
-}) => {
-  const menuBackground = useThemeColor({}, 'menuBackground');
+export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({ visible, onClose, onRename, onDelete, position }) => {
+  const themeColor = useThemeColor({}, 'menuBackground');
+  const menuBackground = typeof themeColor === 'string' ? themeColor : themeColor?.background;
   const { t } = useTranslation();
 
   return (
     <Modal visible={visible} transparent onRequestClose={onClose}>
-      <TouchableOpacity style={styles.overlay} onPress={onClose}>
+      <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
         <View style={[styles.container, { top: position.top - 30, left: position.left - 200 }]}>
           <View style={[styles.menuBox, { backgroundColor: menuBackground }]}>
-            <TouchableOpacity style={styles.menuItem} onPress={() => { onRename(); onClose(); }}>
-              <ThemedText style={styles.menuItemText}>
-                {t('rename')}
-              </ThemedText>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                onRename();
+                onClose();
+              }}>
+              <ThemedText style={styles.menuItemText}>{t('rename')}</ThemedText>
             </TouchableOpacity>
             <View style={styles.menuItemBorder} />
-            <TouchableOpacity style={styles.menuItem} onPress={() => { onDelete(); onClose(); }}>
-              <ThemedText style={styles.menuItemText}>
-                {t('delete')}
-              </ThemedText>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                onDelete();
+                onClose();
+              }}>
+              <ThemedText style={styles.menuItemText}>{t('delete')}</ThemedText>
             </TouchableOpacity>
           </View>
         </View>
-      </TouchableOpacity>
+      </View>
     </Modal>
   );
 };

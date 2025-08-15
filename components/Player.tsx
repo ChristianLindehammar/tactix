@@ -64,7 +64,7 @@ export function Player({
   const { startDrag, updateDragPosition, endDrag } = useDrag();
 
   // PlayerType object for drag context
-  const playerData = { id, name, position, courtPosition };
+  const playerData = { id, name, position, courtPosition: courtPosition ?? undefined };
 
   // Update position when props change for court players
   React.useEffect(() => {

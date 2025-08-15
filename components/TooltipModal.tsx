@@ -26,17 +26,17 @@ export const TooltipModal: React.FC<TooltipModalProps> = ({
   const screenHeight = Dimensions.get('window').height;
 
   // Auto-close tooltip after timeout
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (visible) {
-      timer = setTimeout(() => {
-        onClose();
-      }, autoCloseTimeout);
-    }
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  }, [visible, onClose, autoCloseTimeout]);
+    useEffect(() => {
+      let timer: ReturnType<typeof setTimeout> | undefined;
+      if (visible) {
+        timer = setTimeout(() => {
+          onClose();
+        }, autoCloseTimeout);
+      }
+      return () => {
+        if (timer) clearTimeout(timer);
+      };
+    }, [visible, onClose, autoCloseTimeout]);
   const tooltipPosition = position ? {
     position: 'absolute' as const,
     top: position.y,

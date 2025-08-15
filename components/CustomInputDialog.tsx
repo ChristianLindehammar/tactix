@@ -31,11 +31,11 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
         <ThemedView style={styles.dialog}>
           <ThemedText style={styles.title}>{title}</ThemedText>
           <TextInput
-            style={[styles.input, { color: textColor, borderColor: textColor }]}
+            style={[styles.input, { color: String(textColor), borderColor: String(textColor) }]}
             value={value}
             onChangeText={setValue}
             autoFocus
-            placeholderTextColor={textColor}
+            placeholderTextColor={typeof textColor === 'string' ? textColor : undefined}
           />
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.button} onPress={onCancel}>
