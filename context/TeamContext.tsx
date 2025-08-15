@@ -9,6 +9,7 @@ import { findFreePosition, getValidPosition, validatePlayerPosition, exportTeamT
 interface TeamContextProps {
   team?: Team;
   teams: Team[];
+  error?: { message: string; code?: string; timestamp: number } | null;
   updatePlayerPosition: (playerId: string, position: { x: number; y: number }) => void;
   addPlayer: (name: string) => void;
   setPlayerType: (playerId: string, position: string) => void;
@@ -40,7 +41,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setSelectedTeamId,
     isLoading,
     filteredTeams,
-    selectedTeam
+    selectedTeam,
+    error
   } = useTeamData(selectedSport || 'soccer');
 
   const updateTeamInTeams = (updater: (team: Team) => Team) => {
@@ -252,6 +254,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     <TeamContext.Provider value={{ 
       team: selectedTeam, 
       teams: filteredTeams,
+      error,
       updatePlayerPosition, 
       addPlayer, 
       setPlayerType,  
