@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, Alert, View, useWindowDimensions } from 'react-native';
 import { PlayerType, usePlayerPositionTranslation } from '@/types/models';
-import { useTeam } from '@/contexts/TeamContext';
+import { useTeam } from '@/context/TeamContext';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useTheme } from '@react-navigation/native';
 import { useThemeColor } from '@/hooks/useThemeColor';

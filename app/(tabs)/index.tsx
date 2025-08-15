@@ -1,7 +1,7 @@
 import { StyleSheet, View, Dimensions, Pressable, Platform, Alert, ActivityIndicator } from 'react-native';
 import { router, usePathname, useSegments } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTeam } from '@/contexts/TeamContext';
+import { useTeam } from '@/context/TeamContext';
 import { useSport } from '@/context/SportContext';
 import { useEffect, useState } from 'react';
 import * as Linking from 'expo-linking';
@@ -18,7 +18,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { SportSelector } from '@/components/SportSelector';
 import { sportsConfig } from '@/constants/sports';
 import { BenchPanel } from '@/components/BenchPanel';
-import { DragProvider, useDrag } from '@/contexts/DragContext';
+import { DragProvider, useDrag } from '@/context/DragContext';
 import { Player } from '@/components/Player';
 import { LayoutRectangle } from 'react-native';
 

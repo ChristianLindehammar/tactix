@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { View, StyleSheet, ScrollView, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated, Platform, LayoutRectangle } from 'react-native';
-import { useTeam } from '@/contexts/TeamContext';
+import { useTeam } from '@/context/TeamContext';
 import { Player } from './Player'; 
 import { ThemedText } from './ThemedText';
 import { IconSymbol } from './ui/IconSymbol';
 import { LAYOUT } from '@/constants/layout';
 import { useThemeColor } from '@/hooks/useThemeColor'; 
 import { useTranslation } from '@/hooks/useTranslation';
-import { useDrag } from '@/contexts/DragContext';
+import { useDrag } from '@/context/DragContext';
 import { useSport } from '@/context/SportContext';
 import { PlayerType } from '@/types/models';
 

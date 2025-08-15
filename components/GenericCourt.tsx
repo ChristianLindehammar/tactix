@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Player } from './Player';
 import { PlayerType } from '@/types/models';
-import { useTeam } from '@/contexts/TeamContext';
+import { useTeam } from '@/context/TeamContext';
 
 interface Props {
   availableHeight: number;

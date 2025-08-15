@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useCallback } from 'react';
 import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { TeamProvider } from '@/contexts/TeamContext';
+import { TeamProvider } from '@/context/TeamContext';
 import { SportProvider } from '@/context/SportContext';
 import { View } from 'react-native';
 

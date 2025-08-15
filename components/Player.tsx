@@ -11,9 +11,9 @@ import Animated, {
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { useTeam } from '@/contexts/TeamContext';
+import { useTeam } from '@/context/TeamContext';
 import { useTranslation } from '@/hooks/useTranslation';
-import { useDrag } from '@/contexts/DragContext';
+import { useDrag } from '@/context/DragContext';
 
 interface PlayerProps {
   id: string;
