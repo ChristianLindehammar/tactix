@@ -84,7 +84,7 @@ export default function SettingsScreen() {
             borderColor: cardBorderColor as string,
           }]}>
             <SettingsListItem
-              icon="sports"
+              icon="sports-soccer"
               title={t('sportSelection')}
               route="/settings/sport"
               isFirst={true}

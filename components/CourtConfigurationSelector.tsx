@@ -25,7 +25,6 @@ export const CourtConfigurationSelector: React.FC = () => {
   const [showRenameDialog, setShowRenameDialog] = useState(false);
 
   if (!team || !team.configurations || team.configurations.length === 0) {
-    console.log('[CourtConfigSelector] No team or configurations');
     return null;
   }
 
@@ -33,19 +32,9 @@ export const CourtConfigurationSelector: React.FC = () => {
   const currentIndex = team.configurations.findIndex(c => c.id === team.selectedConfigurationId);
   const activeConfig = team.configurations[currentIndex];
 
-  console.log('[CourtConfigSelector] Render:', {
-    configCount,
-    currentIndex,
-    selectedConfigurationId: team.selectedConfigurationId,
-    activeConfigName: activeConfig?.name,
-    allConfigIds: team.configurations.map(c => ({ id: c.id, name: c.name })),
-  });
-
   const handleCreate = (name: string) => {
-    console.log('[CourtConfigSelector] handleCreate called with name:', name);
     if (name.trim()) {
       createConfiguration(name.trim());
-      console.log('[CourtConfigSelector] createConfiguration called');
       // createConfiguration already selects the new configuration automatically
     }
     setShowCreateDialog(false);
@@ -59,7 +48,6 @@ export const CourtConfigurationSelector: React.FC = () => {
   };
 
   const handleLongPress = () => {
-    console.log('[CourtConfigSelector] handleLongPress - configCount:', configCount);
     // Show options menu for rename and delete only
     Alert.alert(
       t('configurationOptions') || 'Configuration Options',
@@ -75,7 +63,6 @@ export const CourtConfigurationSelector: React.FC = () => {
             // Re-check config count before showing delete confirmation
             // (in case configurations changed since menu was opened)
             if (!team.configurations || team.configurations.length <= 1) {
-              console.log('[CourtConfigSelector] Delete prevented - only 1 configuration remains');
               Alert.alert(
                 t('error') || 'Error',
                 'Cannot delete the last configuration.',
@@ -93,7 +80,6 @@ export const CourtConfigurationSelector: React.FC = () => {
                   text: t('delete') || 'Delete',
                   style: 'destructive',
                   onPress: () => {
-                    console.log('[CourtConfigSelector] Delete confirmed for config:', activeConfig?.id);
                     if (activeConfig) {
                       deleteConfiguration(activeConfig.id);
                     }
@@ -118,18 +104,6 @@ export const CourtConfigurationSelector: React.FC = () => {
   // Show plus button when viewing the last configuration (so users can always add more)
   const showPlusButton = currentIndex === configCount - 1;
 
-  console.log('[CourtConfigSelector] Button visibility:', {
-    showLeftArrow,
-    showRightArrow,
-    showPlusButton,
-    calculation: {
-      'configCount > 1': configCount > 1,
-      'currentIndex > 0': currentIndex > 0,
-      'currentIndex < configCount - 1': currentIndex < configCount - 1,
-      'currentIndex === configCount - 1': currentIndex === configCount - 1,
-    }
-  });
-
   return (
     <>
       <View style={[styles.container, { backgroundColor: backgroundColor as string }]}>
@@ -137,7 +111,6 @@ export const CourtConfigurationSelector: React.FC = () => {
         {showLeftArrow ? (
           <TouchableOpacity
             onPress={() => {
-              console.log('[CourtConfigSelector] Left arrow pressed');
               switchToPreviousConfiguration();
             }}
             style={styles.arrowButton}
@@ -168,7 +141,6 @@ export const CourtConfigurationSelector: React.FC = () => {
         {showPlusButton ? (
           <TouchableOpacity
             onPress={() => {
-              console.log('[CourtConfigSelector] Plus button pressed');
               setShowCreateDialog(true);
             }}
             style={styles.arrowButton}
@@ -182,7 +154,6 @@ export const CourtConfigurationSelector: React.FC = () => {
         ) : showRightArrow ? (
           <TouchableOpacity
             onPress={() => {
-              console.log('[CourtConfigSelector] Right arrow pressed');
               switchToNextConfiguration();
             }}
             style={styles.arrowButton}

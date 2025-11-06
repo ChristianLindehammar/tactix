@@ -48,10 +48,6 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
       }
     });
     
-    // Log if we fixed any positions for debugging
-    if (hasInvalidPositions) {
-      console.log('Fixed invalid player positions');
-    }
   }, [playerPositions.length]); // Only run when the number of players changes
 
   // Filter players with valid positions for rendering

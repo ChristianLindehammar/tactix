@@ -3,12 +3,8 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { ThemedText } from '@/components/ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { Sport, sportsConfig } from '@/constants/sports';
-import BandyBallSvg from '@/components/ui/BandyBallSvg';
-import BasketballBallSvg from '@/components/ui/BasketballBallSvg';
-import FloorballBallSvg from '@/components/ui/FloorballBallSvg';
-import FootballSvg from '@/components/ui/FootballSvg';
-import HockeyBallSvg from '@/components/ui/HockeyBallSvg';
+import { Sport } from '@/constants/sports';
+import { SportBall } from '@/components/SportBall';
 
 interface SportListItemProps {
   sport: Sport;
@@ -18,19 +14,9 @@ interface SportListItemProps {
   onPress: (sport: Sport) => void;
 }
 
-const sportBallIcons = {
-  floorball: FloorballBallSvg,
-  soccer: FootballSvg,
-  hockey: HockeyBallSvg,
-  bandy: BandyBallSvg,
-  basketball: BasketballBallSvg,
-};
-
 export function SportListItem({ sport, label, isSelected, isLast, onPress }: SportListItemProps) {
   const tintColor = useThemeColor({}, 'tint');
   const separatorColor = useThemeColor({}, 'borderColor');
-
-  const SportIcon = sportBallIcons[sport];
 
   return (
     <TouchableOpacity 
@@ -46,7 +32,7 @@ export function SportListItem({ sport, label, isSelected, isLast, onPress }: Spo
         }
       ]}>
         <View style={styles.iconContainer}>
-          <SportIcon width={28} height={28} />
+          <SportBall sport={sport} size={28} />
         </View>
         <ThemedText style={styles.title}>{label}</ThemedText>
         {isSelected && (

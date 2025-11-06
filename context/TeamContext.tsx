@@ -43,7 +43,6 @@ export const TeamContext = createContext<TeamContextProps | undefined>(undefined
 const ensureTeamHasConfigurations = (team: Team): Team => {
   if (!team.configurations || team.configurations.length === 0) {
     // Migrate from old format: create a default configuration with current player positions
-    console.log('[TeamContext] Migrating team from old format (no configurations):', team.name);
     const playerPositions: Record<string, Position> = {};
 
     [...team.startingPlayers, ...team.benchPlayers].forEach(player => {
@@ -58,8 +57,6 @@ const ensureTeamHasConfigurations = (team: Team): Team => {
       playerPositions,
     };
 
-    console.log('[TeamContext] Created default configuration with', Object.keys(playerPositions).length, 'player positions');
-
     return {
       ...team,
       configurations: [defaultConfig],
@@ -69,7 +66,6 @@ const ensureTeamHasConfigurations = (team: Team): Team => {
 
   // Ensure selectedConfigurationId is valid
   if (!team.selectedConfigurationId || !team.configurations.find(c => c.id === team.selectedConfigurationId)) {
-    console.log('[TeamContext] Fixing invalid selectedConfigurationId for team:', team.name);
     return {
       ...team,
       selectedConfigurationId: team.configurations[0].id,
@@ -136,7 +132,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   // Auto-migrate old teams (without configurations) when they're loaded
   React.useEffect(() => {
     if (selectedTeam && (!selectedTeam.configurations || selectedTeam.configurations.length === 0)) {
-      console.log('[TeamContext] Auto-migrating old team format on load');
       // Trigger migration by updating the team
       updateTeamInTeams(currentTeam => ensureTeamHasConfigurations(currentTeam));
     }
@@ -352,11 +347,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   // Configuration management functions
   const createConfiguration = (name: string) => {
-    console.log('[TeamContext] createConfiguration called with name:', name);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
-      console.log('[TeamContext] Before create - configs:', teamWithConfigs.configurations?.map(c => ({ id: c.id, name: c.name })));
-      console.log('[TeamContext] Before create - selectedConfigurationId:', teamWithConfigs.selectedConfigurationId);
 
       // Copy current player positions as a starting point for the new configuration
       const currentPlayerPositions: Record<string, Position> = {};
@@ -378,29 +370,17 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         configurations: [...teamWithConfigs.configurations!, newConfig],
         selectedConfigurationId: newConfig.id,
       };
-
-      console.log('[TeamContext] After create - configs:', updatedTeam.configurations.map(c => ({ id: c.id, name: c.name })));
-      console.log('[TeamContext] After create - selectedConfigurationId:', updatedTeam.selectedConfigurationId);
-      console.log('[TeamContext] New config ID:', newConfig.id);
-      console.log('[TeamContext] New config player positions:', Object.keys(currentPlayerPositions).length, 'players');
-
       return updatedTeam;
     });
   };
 
   const selectConfiguration = (configId: string) => {
-    console.log('[TeamContext] selectConfiguration called with configId:', configId);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
-      console.log('[TeamContext] selectConfiguration - before:', {
-        selectedConfigurationId: teamWithConfigs.selectedConfigurationId,
-        requestedConfigId: configId,
-      });
 
       const config = teamWithConfigs.configurations!.find(c => c.id === configId);
 
       if (!config) {
-        console.log('[TeamContext] selectConfiguration - config not found!');
         return teamWithConfigs;
       }
 
@@ -437,12 +417,6 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         benchPlayers: updatedBenchPlayers,
       };
 
-      console.log('[TeamContext] selectConfiguration - after:', {
-        selectedConfigurationId: updatedTeam.selectedConfigurationId,
-        startingPlayersCount: updatedStartingPlayers.length,
-        benchPlayersCount: updatedBenchPlayers.length,
-      });
-
       return updatedTeam;
     });
   };
@@ -461,14 +435,11 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const deleteConfiguration = (configId: string) => {
-    console.log('[TeamContext] deleteConfiguration called with configId:', configId);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
-      console.log('[TeamContext] deleteConfiguration - current config count:', teamWithConfigs.configurations!.length);
 
       // Don't allow deleting the last configuration
       if (teamWithConfigs.configurations!.length <= 1) {
-        console.log('[TeamContext] deleteConfiguration - prevented: cannot delete last configuration');
         return teamWithConfigs;
       }
 
@@ -476,19 +447,12 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
       // Safety check: ensure we have at least one configuration remaining
       if (updatedConfigs.length === 0) {
-        console.log('[TeamContext] deleteConfiguration - prevented: would result in zero configurations');
         return teamWithConfigs;
       }
 
       const newSelectedId = teamWithConfigs.selectedConfigurationId === configId
         ? updatedConfigs[0].id
         : teamWithConfigs.selectedConfigurationId;
-
-      console.log('[TeamContext] deleteConfiguration - success:', {
-        deletedConfigId: configId,
-        remainingCount: updatedConfigs.length,
-        newSelectedId,
-      });
 
       return {
         ...teamWithConfigs,
@@ -505,9 +469,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const switchToNextConfiguration = () => {
-    console.log('[TeamContext] switchToNextConfiguration called');
     if (!selectedTeam) {
-      console.log('[TeamContext] No selectedTeam, returning');
       return;
     }
     const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
@@ -515,37 +477,18 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
     const nextIndex = (currentIndex + 1) % configs.length;
 
-    console.log('[TeamContext] switchToNextConfiguration:', {
-      currentIndex,
-      nextIndex,
-      configCount: configs.length,
-      currentConfigId: teamWithConfigs.selectedConfigurationId,
-      nextConfigId: configs[nextIndex].id,
-      allConfigs: configs.map(c => ({ id: c.id, name: c.name })),
-    });
 
     selectConfiguration(configs[nextIndex].id);
   };
 
   const switchToPreviousConfiguration = () => {
-    console.log('[TeamContext] switchToPreviousConfiguration called');
     if (!selectedTeam) {
-      console.log('[TeamContext] No selectedTeam, returning');
       return;
     }
     const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
     const configs = teamWithConfigs.configurations!;
     const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
     const prevIndex = (currentIndex - 1 + configs.length) % configs.length;
-
-    console.log('[TeamContext] switchToPreviousConfiguration:', {
-      currentIndex,
-      prevIndex,
-      configCount: configs.length,
-      currentConfigId: teamWithConfigs.selectedConfigurationId,
-      prevConfigId: configs[prevIndex].id,
-      allConfigs: configs.map(c => ({ id: c.id, name: c.name })),
-    });
 
     selectConfiguration(configs[prevIndex].id);
   };
