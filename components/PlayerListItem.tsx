@@ -1,17 +1,17 @@
-import React, { useMemo, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Alert, View, useWindowDimensions } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 import { PlayerType, usePlayerPositionTranslation } from '@/types/models';
-import { useTeam } from '@/context/TeamContext';
-import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import { useTheme } from '@react-navigation/native';
-import { useThemeColor } from '@/hooks/useThemeColor';
-import { useSport } from '@/context/SportContext';
-import { OptionMenuModal } from './OptionMenuModal';
+import React, { useMemo, useState } from 'react';
+
 import { CustomInputDialog } from './CustomInputDialog';
 import { Ionicons } from '@expo/vector-icons';
-import { useReorderableDrag } from 'react-native-reorderable-list';
-import { useTranslation } from '@/hooks/useTranslation';
+import { OptionMenuModal } from './OptionMenuModal';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { sportsConfig } from '@/constants/sports';
+import { useSport } from '@/context/SportContext';
+import { useTeam } from '@/context/TeamContext';
+import { useTheme } from '@react-navigation/native';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PlayerListItemProps {
   player: PlayerType;
@@ -28,7 +28,6 @@ export const PlayerListItem = React.memo(
     const [modalVisible, setModalVisible] = useState(false);
     const [renameDialogVisible, setRenameDialogVisible] = useState(false);
     const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-    const drag = useReorderableDrag();
     const { t } = useTranslation();
     const { width } = useWindowDimensions();
     const isLargeDevice = width >= 768; // iPad mini width is 768px
@@ -79,7 +78,7 @@ export const PlayerListItem = React.memo(
     const safeIndex = positions.indexOf(player.position) >= 0 ? positions.indexOf(player.position) : 0;
 
     return (
-      <TouchableOpacity onLongPress={drag} style={[styles.container, { backgroundColor: positionColors?.[player.position] || '#f0f0f0' }]}>
+      <View style={[styles.container, { backgroundColor: positionColors?.[player.position] || '#f0f0f0' }]}>
         <View style={styles.headerRow}>
           <Text>{player.name}</Text>
           <TouchableOpacity onPress={handleOptionsPress}>
@@ -101,7 +100,7 @@ export const PlayerListItem = React.memo(
           }}
           style={[styles.segmentedControl, { backgroundColor: colors.card }]}
         />
-      </TouchableOpacity>
+      </View>
     );
   },
   (prevProps, nextProps) => {
