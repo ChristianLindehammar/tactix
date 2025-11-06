@@ -404,17 +404,31 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         return teamWithConfigs;
       }
 
-      // Update player positions from the selected configuration
-      // IMPORTANT: Do NOT use fallback to player.courtPosition - each config must be independent
-      const updatedStartingPlayers = teamWithConfigs.startingPlayers.map(player => ({
-        ...player,
-        courtPosition: config.playerPositions[player.id] || undefined,
-      }));
+      // Get all players from the team (master roster)
+      const allPlayers = [...teamWithConfigs.startingPlayers, ...teamWithConfigs.benchPlayers];
 
-      const updatedBenchPlayers = teamWithConfigs.benchPlayers.map(player => ({
-        ...player,
-        courtPosition: config.playerPositions[player.id] || undefined,
-      }));
+      // Split players based on whether they have a position in this configuration
+      // Players in playerPositions = on court (starting players)
+      // Players NOT in playerPositions = on bench
+      const updatedStartingPlayers: PlayerType[] = [];
+      const updatedBenchPlayers: PlayerType[] = [];
+
+      allPlayers.forEach(player => {
+        const positionInConfig = config.playerPositions[player.id];
+        if (positionInConfig) {
+          // Player is on court in this configuration
+          updatedStartingPlayers.push({
+            ...player,
+            courtPosition: positionInConfig,
+          });
+        } else {
+          // Player is on bench in this configuration
+          updatedBenchPlayers.push({
+            ...player,
+            courtPosition: undefined,
+          });
+        }
+      });
 
       const updatedTeam = {
         ...teamWithConfigs,
@@ -425,7 +439,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
       console.log('[TeamContext] selectConfiguration - after:', {
         selectedConfigurationId: updatedTeam.selectedConfigurationId,
-        playersWithPositions: updatedStartingPlayers.filter(p => p.courtPosition).length,
+        startingPlayersCount: updatedStartingPlayers.length,
+        benchPlayersCount: updatedBenchPlayers.length,
       });
 
       return updatedTeam;
