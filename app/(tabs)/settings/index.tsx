@@ -1,4 +1,4 @@
-import { Linking, ScrollView, Share, StyleSheet, TouchableOpacity } from 'react-native';
+import { Linking, Platform, ScrollView, Share, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -78,7 +78,7 @@ export default function SettingsScreen() {
           </ThemedView>
 
           {/* Settings List - Grouped Card */}
-          <ThemedView style={[styles.settingsCard, { backgroundColor: menuBackground as string }]}>
+          <View style={[styles.settingsCard, { backgroundColor: menuBackground as string }]}>
             <SettingsListItem
               icon="sports"
               title={t('sportSelection')}
@@ -91,7 +91,7 @@ export default function SettingsScreen() {
               route="/settings/about"
               isLast={true}
             />
-          </ThemedView>
+          </View>
         </ThemedView>
       </ScrollView>
     </SafeAreaView>
@@ -153,6 +153,16 @@ const styles = StyleSheet.create({
     marginTop: 8,
     borderRadius: 12,
     overflow: 'hidden',
+    // iOS shadow
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    // Android elevation
+    elevation: 3,
   },
 });
 

@@ -2,7 +2,6 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 import { router } from 'expo-router';
 import { useThemeColor } from '@/hooks/useThemeColor';
 
@@ -31,17 +30,17 @@ export function SettingsListItem({ icon, title, route, onPress, isFirst, isLast 
 
   return (
     <TouchableOpacity onPress={handlePress} activeOpacity={0.7}>
-      <ThemedView style={[
+      <View style={[
         styles.container,
-        { borderBottomColor: borderColor },
+        { borderBottomColor: borderColor as string },
         isLast && styles.lastItem
       ]}>
-        <View style={[styles.iconContainer, { backgroundColor: tintColor }]}>
+        <View style={[styles.iconContainer, { backgroundColor: tintColor as string }]}>
           <MaterialIcons name={icon} size={24} color={backgroundColor as string} />
         </View>
         <ThemedText style={[styles.title, { color: textColor }]}>{title}</ThemedText>
         <MaterialIcons name="chevron-right" size={24} color={textColor as string} style={styles.chevron} />
-      </ThemedView>
+      </View>
     </TouchableOpacity>
   );
 }
