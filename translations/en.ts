@@ -40,6 +40,7 @@ export default {
   benchPlayers: 'Bench Players',
   bench: 'Bench', // Added
   noPlayersOnBench: 'No players on the bench', // Added
+  noPlayersYet: 'No players yet. Add your first player above!',
   courtBenchSeparator: 'Court / Bench Separator',
   enterPlayerName: 'Enter player name',
   addPlayer: 'Add Player',
@@ -90,7 +91,6 @@ export default {
   dragHint: 'Drag and hold players up and down to reorder them',
 
   // Collapsible Sections
-  aboutApp: 'About the app',
   generalSettings: 'General settings',
   thirdPartyLibs: '3rd party libraries',
 

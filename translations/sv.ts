@@ -37,6 +37,7 @@ export default {
   benchPlayers: 'Avbytare',
   bench: 'Bänk', // Added
   noPlayersOnBench: 'Inga spelare på bänken', // Added
+  noPlayersYet: 'Inga spelare ännu. Lägg till din första spelare ovan!',
   courtBenchSeparator: 'Plan / Bänk separator',
   enterPlayerName: 'Ange spelarnamn',
   addPlayer: 'Lägg till spelare',

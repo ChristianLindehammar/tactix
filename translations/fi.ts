@@ -37,6 +37,7 @@ export default {
   benchPlayers: 'Vaihtopelaajat',
   bench: 'Penkki', // Added
   noPlayersOnBench: 'Ei pelaajia penkillä', // Added
+  noPlayersYet: 'Ei vielä pelaajia. Lisää ensimmäinen pelaajasi yllä!',
   courtBenchSeparator: 'Kenttä / Penkki erotin',
   enterPlayerName: 'Syötä pelaajan nimi',
   addPlayer: 'Lisää pelaaja',

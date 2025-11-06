@@ -30,8 +30,11 @@ export default function TeamScreen() {
   const textInputRef = useRef<TextInput>(null);
   const { t } = useTranslation();
 
+  // Get all players combined
+  const allPlayers = [...(team?.startingPlayers ?? []), ...(team?.benchPlayers ?? [])];
+
   useEffect(() => {
-    if (teams.length > 0 && team && team.startingPlayers.length === 0 && team.benchPlayers.length === 0) {
+    if (teams.length > 0 && team && allPlayers.length === 0) {
       setTimeout(() => {
         if (textInputRef.current) {
           textInputRef.current.measure((_x, _y, width, height, pageX, pageY) => {
@@ -49,7 +52,7 @@ export default function TeamScreen() {
         clearTimeout(timer);
       };
     }
-  }, [teams, team]);
+  }, [teams, team, allPlayers.length]);
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim() !== '') {
@@ -80,15 +83,14 @@ export default function TeamScreen() {
             </ThemedView>
 
             <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
-              <ThemedText style={styles.headerText}>{t('startingPlayers')}</ThemedText>
-              {team?.startingPlayers.map((player) => (
-                <PlayerListItem key={player.id} player={player} isOnCourt={true} />
-              ))}
-
-              <ThemedText style={styles.headerText}>{t('benchPlayers')}</ThemedText>
-              {team?.benchPlayers.map((player) => (
-                <PlayerListItem key={player.id} player={player} isOnCourt={false} />
-              ))}
+              <ThemedText style={styles.headerText}>{t('players')}</ThemedText>
+              {allPlayers.length === 0 ? (
+                <ThemedText style={styles.emptyText}>{t('noPlayersYet')}</ThemedText>
+              ) : (
+                allPlayers.map((player) => (
+                  <PlayerListItem key={player.id} player={player} isOnCourt={false} />
+                ))
+              )}
               <View style={styles.listFooter} />
             </ScrollView>
           </ThemedView>
@@ -142,6 +144,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 16,
     fontSize: 16,
+  },
+  emptyText: {
+    textAlign: 'center',
+    padding: 16,
+    fontSize: 14,
+    opacity: 0.6,
   },
   teamName: {
     textAlign: 'center',
