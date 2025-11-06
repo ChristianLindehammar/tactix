@@ -322,8 +322,9 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       console.log('[TeamContext] Before create - configs:', teamWithConfigs.configurations?.map(c => ({ id: c.id, name: c.name })));
       console.log('[TeamContext] Before create - selectedConfigurationId:', teamWithConfigs.selectedConfigurationId);
 
+      // Generate unique ID using timestamp + random string to avoid collisions
       const newConfig: CourtConfiguration = {
-        id: Date.now().toString(),
+        id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 9),
         name,
         playerPositions: {}, // Start with empty positions
       };
@@ -336,6 +337,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
       console.log('[TeamContext] After create - configs:', updatedTeam.configurations.map(c => ({ id: c.id, name: c.name })));
       console.log('[TeamContext] After create - selectedConfigurationId:', updatedTeam.selectedConfigurationId);
+      console.log('[TeamContext] New config ID:', newConfig.id);
 
       return updatedTeam;
     });
