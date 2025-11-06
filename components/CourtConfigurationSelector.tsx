@@ -1,5 +1,5 @@
+import { Alert, StyleSheet, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import { CustomInputDialog } from './CustomInputDialog';
 import { IconSymbol } from './ui/IconSymbol';
@@ -9,26 +9,78 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export const CourtConfigurationSelector: React.FC = () => {
-  const { team, switchToPreviousConfiguration, switchToNextConfiguration, createConfiguration, getActiveConfiguration } = useTeam();
+  const {
+    team,
+    switchToPreviousConfiguration,
+    switchToNextConfiguration,
+    createConfiguration,
+    renameConfiguration,
+    deleteConfiguration
+  } = useTeam();
   const { t } = useTranslation();
   const backgroundColor = useThemeColor({}, 'cardBackground');
   const tintColor = useThemeColor({}, 'tint');
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showRenameDialog, setShowRenameDialog] = useState(false);
 
   if (!team || !team.configurations || team.configurations.length === 0) {
     return null;
   }
 
-  const activeConfig = getActiveConfiguration();
   const configCount = team.configurations.length;
-  const currentIndex = team.configurations.findIndex(c => c.id === activeConfig?.id);
+  const currentIndex = team.configurations.findIndex(c => c.id === team.selectedConfigurationId);
+  const activeConfig = team.configurations[currentIndex];
 
   const handleCreate = (name: string) => {
     if (name.trim()) {
       createConfiguration(name.trim());
+      // createConfiguration already selects the new configuration automatically
     }
     setShowCreateDialog(false);
+  };
+
+  const handleRename = (name: string) => {
+    if (name.trim() && activeConfig) {
+      renameConfiguration(activeConfig.id, name.trim());
+    }
+    setShowRenameDialog(false);
+  };
+
+  const handleLongPress = () => {
+    // Show options menu for rename and delete only
+    Alert.alert(
+      t('configurationOptions') || 'Configuration Options',
+      '',
+      [
+        {
+          text: t('rename') || 'Rename',
+          onPress: () => setShowRenameDialog(true),
+        },
+        configCount > 1 && {
+          text: t('delete') || 'Delete',
+          onPress: () => {
+            Alert.alert(
+              t('confirmDelete') || 'Confirm Delete',
+              t('deleteConfigurationConfirm') || `Are you sure you want to delete "${activeConfig?.name}"?`,
+              [
+                { text: t('cancel') || 'Cancel', style: 'cancel' },
+                {
+                  text: t('delete') || 'Delete',
+                  style: 'destructive',
+                  onPress: () => activeConfig && deleteConfiguration(activeConfig.id),
+                },
+              ]
+            );
+          },
+          style: 'destructive' as const,
+        },
+        {
+          text: t('cancel') || 'Cancel',
+          style: 'cancel',
+        },
+      ].filter(Boolean) as any
+    );
   };
 
   // Determine which buttons to show
@@ -55,12 +107,17 @@ export const CourtConfigurationSelector: React.FC = () => {
           <View style={styles.arrowButton} />
         )}
 
-        {/* Configuration name */}
-        <View style={styles.nameContainer}>
+        {/* Configuration name - long press for rename/delete */}
+        <TouchableOpacity
+          onPress={() => {}}
+          onLongPress={handleLongPress}
+          delayLongPress={500}
+          style={styles.nameContainer}
+        >
           <ThemedText style={styles.nameText}>
             {activeConfig?.name || 'Configuration'}
           </ThemedText>
-        </View>
+        </TouchableOpacity>
 
         {/* Right side: either right arrow, plus button, or empty space */}
         {showPlusButton ? (
@@ -96,6 +153,14 @@ export const CourtConfigurationSelector: React.FC = () => {
         onCancel={() => setShowCreateDialog(false)}
         onSubmit={handleCreate}
         initialValue=""
+      />
+
+      <CustomInputDialog
+        visible={showRenameDialog}
+        title={t('renameConfiguration') || 'Rename Configuration'}
+        onCancel={() => setShowRenameDialog(false)}
+        onSubmit={handleRename}
+        initialValue={activeConfig?.name || ''}
       />
     </>
   );
