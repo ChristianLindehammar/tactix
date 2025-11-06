@@ -21,53 +21,52 @@ const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: {
 }) => {
   if (contentWidth <= containerWidth) return null;
   
-  const dotColor = useThemeColor({}, 'primary') as string || '#4169E1';
+  const primaryColor = useThemeColor({}, 'primary') as string || '#4169E1';
+  const inactiveColor = useThemeColor({}, 'icon') as string || '#888888';
   
   const maxScroll = Math.max(0, contentWidth - containerWidth);
-  
-  const dotAnimations = Array(6).fill(0).map((_, index) => {
-    if (index === 0) {
-      return scrollX.interpolate({
-        inputRange: [0, maxScroll * 0.2],
-        outputRange: [2.5, 1],
-        extrapolate: 'clamp',
-      });
-    }
-    
-    if (index === 5) {
-      return scrollX.interpolate({
-        inputRange: [maxScroll * 0.8, maxScroll],
-        outputRange: [1, 2.5],
-        extrapolate: 'clamp',
-      });
-    }
-    
-    return scrollX.interpolate({
-      inputRange: [
-        Math.max(0, (index - 1) * maxScroll / 5),
-        index * maxScroll / 5,
-        Math.min(maxScroll, (index + 1) * maxScroll / 5)
-      ],
-      outputRange: [1, 2.5, 1],
-      extrapolate: 'clamp',
-    });
-  });
+  const numberOfDots = 5;
   
   return (
     <View style={styles.indicatorContainer}>
+      {/* Background line */}
+      <View style={[styles.indicatorLine, { backgroundColor: inactiveColor }]} />
+      
+      {/* Dots */}
       <View style={styles.dotsContainer}>
-        {dotAnimations.map((animation, index) => (
-          <Animated.View 
-            key={index}
-            style={[
-              styles.dot, 
-              { 
-                backgroundColor: dotColor,
-                transform: [{ scaleX: animation }] 
-              }
-            ]} 
-          />
-        ))}
+        {Array(numberOfDots).fill(0).map((_, index) => {
+          const inputRange = [
+            (index - 1) * maxScroll / (numberOfDots - 1),
+            index * maxScroll / (numberOfDots - 1),
+            (index + 1) * maxScroll / (numberOfDots - 1)
+          ].map(val => Math.max(0, Math.min(maxScroll, val)));
+          
+          const scale = scrollX.interpolate({
+            inputRange,
+            outputRange: [0.6, 1.4, 0.6],
+            extrapolate: 'clamp',
+          });
+          
+          const opacity = scrollX.interpolate({
+            inputRange,
+            outputRange: [0.3, 1, 0.3],
+            extrapolate: 'clamp',
+          });
+          
+          return (
+            <Animated.View 
+              key={index}
+              style={[
+                styles.indicatorDot,
+                { 
+                  backgroundColor: primaryColor,
+                  transform: [{ scale }],
+                  opacity,
+                }
+              ]} 
+            />
+          );
+        })}
       </View>
     </View>
   );
@@ -314,17 +313,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: -5,
+    position: 'relative',
+  },
+  indicatorLine: {
+    position: 'absolute',
+    height: 1,
+    width: 50,
+    opacity: 0.4,
   },
   dotsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    height: 10,
+    justifyContent: 'space-between',
+    width: 50,
+    zIndex: 1,
   },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginHorizontal: 2,
+  indicatorDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
   },
 });
