@@ -1,10 +1,11 @@
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { SportSelector } from '@/components/SportSelector';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { useTranslation } from '@/hooks/useTranslation';
-import { SportSelector } from '@/components/SportSelector';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function SportSelectionScreen() {
   const { t } = useTranslation();
@@ -29,16 +30,20 @@ export default function SportSelectionScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 16,
+    paddingHorizontal: 0,
     paddingTop: 24,
   },
   section: {
     marginBottom: 24,
   },
   description: {
-    fontSize: 16,
-    marginBottom: 16,
-    lineHeight: 24,
+    fontSize: 14,
+    marginBottom: 8,
+    lineHeight: 20,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    opacity: 0.6,
+    paddingHorizontal: 16,
   },
 });
 

@@ -1,34 +1,59 @@
-import { StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import { Sport, sportsConfig } from '@/constants/sports';
+import { StyleSheet, View } from 'react-native';
+
+import { SportListItem } from '@/components/SportListItem';
 import { useSport } from '@/context/SportContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
-import { sportsConfig, Sport } from '@/constants/sports';
 
 export function SportSelector() {
   const { selectedSport, setSelectedSport } = useSport();
-  const textColor = useThemeColor({}, 'text') as string;
+  const menuBackground = useThemeColor({}, 'menuBackground');
+  const cardBorderColor = useThemeColor({}, 'borderColor');
   const { t } = useTranslation();
 
+  const sports = Object.keys(sportsConfig) as Sport[];
+
+  const handleSportSelect = (sport: Sport) => {
+    setSelectedSport(sport);
+  };
+
   return (
-    <Picker 
-      selectedValue={selectedSport} 
-      onValueChange={(itemValue) => setSelectedSport(itemValue)} 
-      style={[styles.picker, { color: textColor }]}
-    >
-      {(Object.keys(sportsConfig) as Sport[]).map((sport) => (
-        <Picker.Item key={sport} label={t(sport)} value={sport} />
+    <View style={[styles.card, {
+      backgroundColor: menuBackground as string,
+      borderColor: cardBorderColor as string,
+    }]}>
+      {sports.map((sport, index) => (
+        <SportListItem
+          key={sport}
+          sport={sport}
+          label={t(sport)}
+          isSelected={selectedSport === sport}
+          isLast={index === sports.length - 1}
+          onPress={handleSportSelect}
+        />
       ))}
-    </Picker>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  picker: {
-    marginTop: 8,
-    marginBottom: 16,
-    maxWidth: 300,
-    alignSelf: 'flex-start',
-    width: '100%',
+  card: {
+    marginHorizontal: 16,
+    marginTop: 16,
+    borderRadius: 12,
+    overflow: 'hidden',
+    // iOS-style subtle border
+    borderWidth: 1,
+    // iOS shadow
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+    // Android elevation
+    elevation: 2,
   },
 });
