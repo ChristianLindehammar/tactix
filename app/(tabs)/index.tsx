@@ -1,28 +1,31 @@
-import { StyleSheet, View, Dimensions, Pressable, Platform, Alert, ActivityIndicator } from 'react-native';
-import { router, usePathname } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTeam } from '@/context/TeamContext';
-import { useSport } from '@/context/SportContext';
-import { useEffect, useState } from 'react';
-import * as Linking from 'expo-linking';
 import * as FileSystem from 'expo-file-system';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import Animated, { useAnimatedStyle } from 'react-native-reanimated';
+import * as Linking from 'expo-linking';
 
-import { ThemedView } from '@/components/ThemedView';
-import { GenericCourt } from '@/components/GenericCourt';
-import { LAYOUT } from '@/constants/layout';
-import { ThemedText } from '@/components/ThemedText';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { useTranslation } from '@/hooks/useTranslation';
-import { SportSelector } from '@/components/SportSelector';
-import { sportsConfig } from '@/constants/sports';
-import { BenchPanel } from '@/components/BenchPanel';
+import { ActivityIndicator, Alert, Dimensions, Platform, Pressable, StyleSheet, View } from 'react-native';
+import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 import { DragProvider, useDrag } from '@/context/DragContext';
-import { Player } from '@/components/Player';
+import { router, usePathname } from 'expo-router';
+import { useEffect, useState } from 'react';
+
+import { BenchPanel } from '@/components/BenchPanel';
+import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelector';
+import { GenericCourt } from '@/components/GenericCourt';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { LAYOUT } from '@/constants/layout';
 import { LayoutRectangle } from 'react-native';
+import { Player } from '@/components/Player';
+import { SportSelector } from '@/components/SportSelector';
+import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
+import { sportsConfig } from '@/constants/sports';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useSport } from '@/context/SportContext';
+import { useTeam } from '@/context/TeamContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const PANEL_HEIGHT_COLLAPSED = 35;
+const CONFIGURATION_SELECTOR_HEIGHT = 50;
 
 export default function HomeScreen() {
   return (
@@ -186,7 +189,7 @@ function HomeScreenContent() {
     );
   }
 
-  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED;
+  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED - CONFIGURATION_SELECTOR_HEIGHT;
   const availableWidth = Dimensions.get('window').width;
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
   const screenRatio = availableWidth / availableHeight;
@@ -206,14 +209,16 @@ function HomeScreenContent() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
         <View style={{ height: insets.top + 10 }} />
-        
-        <View 
+
+        <CourtConfigurationSelector />
+
+        <View
           style={[
             styles.courtContainer,
             {
               paddingBottom: PANEL_HEIGHT_COLLAPSED + 60,
             }
-          ]} 
+          ]}
           onLayout={onCourtLayout}
         >
           <GenericCourt
@@ -225,9 +230,9 @@ function HomeScreenContent() {
             aspectRatio={aspectRatio}
           />
         </View>
-        
+
         <View style={{ height: PANEL_HEIGHT_COLLAPSED }} />
-        
+
         <BenchPanel courtLayout={courtLayout} />
 
         {isDragging && draggedItem && dragPosition && (

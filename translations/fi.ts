@@ -117,4 +117,12 @@ export default {
   betaTestersNeeded: 'Beta-testaajia tarvitaan!',
   betaTestingProgramDescription: 'Etsimme käyttäjiä, jotka voivat auttaa testaamaan uutta versiomme. Napauta tästä liittyäksesi testiohjelmaamme ja antaaksesi palautetta.',
   checkOutBetaTestingProgram: 'Tutustu beta-testiohjelmaamme',
+
+  // Court Configuration
+  configurationOptions: 'Konfiguraatiovaihtoehdot',
+  createNew: 'Luo uusi',
+  createConfiguration: 'Luo konfiguraatio',
+  renameConfiguration: 'Nimeä konfiguraatio uudelleen',
+  deleteConfigurationConfirm: 'Haluatko varmasti poistaa tämän konfiguraation?',
+  confirmDelete: 'Vahvista poisto',
 };

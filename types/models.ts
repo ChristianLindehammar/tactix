@@ -1,5 +1,11 @@
-import { useTranslation } from '@/hooks/useTranslation';
 import { Sport } from '@/constants/sports';
+import { useTranslation } from '@/hooks/useTranslation';
+
+export interface CourtConfiguration {
+  id: string;
+  name: string;
+  playerPositions: Record<string, Position>; // Maps player ID to their position in this configuration
+}
 
 export interface Team {
   id: string;
@@ -10,7 +16,10 @@ export interface Team {
   sharedWith: string[];
   lastEdited: number;
   editedBy: string;
-  sport: Sport
+  sport: Sport;
+  // New fields for multi-configuration support
+  configurations?: CourtConfiguration[];
+  selectedConfigurationId?: string;
 }
 
 

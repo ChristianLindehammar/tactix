@@ -117,4 +117,12 @@ export default {
   tacticsAddTooltip: 'Tryck på spelare- eller motståndarknappen och sedan på planen för att lägga till en markör',
   tacticsMoveTooltip: 'Dra markörerna för att flytta dem på planen',
   tacticsDeleteTooltip: 'Tryck och håll på en markör för att ta bort den',
+
+  // Court Configuration
+  configurationOptions: 'Konfigurationsalternativ',
+  createNew: 'Skapa ny',
+  createConfiguration: 'Skapa konfiguration',
+  renameConfiguration: 'Byt namn på konfiguration',
+  deleteConfigurationConfirm: 'Är du säker på att du vill ta bort denna konfiguration?',
+  confirmDelete: 'Bekräfta borttagning',
 };

@@ -115,4 +115,12 @@ export default {
   tacticsAddTooltip: 'Tap the player or opponent button, then tap the court to add a marker',
   tacticsMoveTooltip: 'Drag markers to reposition them on the court',
   tacticsDeleteTooltip: 'Long press on a marker to delete it',
+
+  // Court Configuration
+  configurationOptions: 'Configuration Options',
+  createNew: 'Create New',
+  createConfiguration: 'Create Configuration',
+  renameConfiguration: 'Rename Configuration',
+  deleteConfigurationConfirm: 'Are you sure you want to delete this configuration?',
+  confirmDelete: 'Confirm Delete',
 };
