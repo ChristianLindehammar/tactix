@@ -43,6 +43,7 @@ export const TeamContext = createContext<TeamContextProps | undefined>(undefined
 const ensureTeamHasConfigurations = (team: Team): Team => {
   if (!team.configurations || team.configurations.length === 0) {
     // Migrate from old format: create a default configuration with current player positions
+    console.log('[TeamContext] Migrating team from old format (no configurations):', team.name);
     const playerPositions: Record<string, Position> = {};
 
     [...team.startingPlayers, ...team.benchPlayers].forEach(player => {
@@ -52,10 +53,12 @@ const ensureTeamHasConfigurations = (team: Team): Team => {
     });
 
     const defaultConfig: CourtConfiguration = {
-      id: Date.now().toString(),
+      id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 9),
       name: 'Standard',
       playerPositions,
     };
+
+    console.log('[TeamContext] Created default configuration with', Object.keys(playerPositions).length, 'player positions');
 
     return {
       ...team,
@@ -66,6 +69,7 @@ const ensureTeamHasConfigurations = (team: Team): Team => {
 
   // Ensure selectedConfigurationId is valid
   if (!team.selectedConfigurationId || !team.configurations.find(c => c.id === team.selectedConfigurationId)) {
+    console.log('[TeamContext] Fixing invalid selectedConfigurationId for team:', team.name);
     return {
       ...team,
       selectedConfigurationId: team.configurations[0].id,
@@ -128,6 +132,15 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       };
     });
   };
+
+  // Auto-migrate old teams (without configurations) when they're loaded
+  React.useEffect(() => {
+    if (selectedTeam && (!selectedTeam.configurations || selectedTeam.configurations.length === 0)) {
+      console.log('[TeamContext] Auto-migrating old team format on load');
+      // Trigger migration by updating the team
+      updateTeamInTeams(currentTeam => ensureTeamHasConfigurations(currentTeam));
+    }
+  }, [selectedTeam?.id]); // Only run when team changes
 
   const findFreePositionForTeam = (): Position => {
     return findFreePosition(getCurrentPlayers());

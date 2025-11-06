@@ -115,7 +115,8 @@ export const CourtConfigurationSelector: React.FC = () => {
   // Determine which buttons to show
   const showLeftArrow = configCount > 1 && currentIndex > 0;
   const showRightArrow = configCount > 1 && currentIndex < configCount - 1;
-  const showPlusButton = configCount === 1;
+  // Show plus button when viewing the last configuration (so users can always add more)
+  const showPlusButton = currentIndex === configCount - 1;
 
   console.log('[CourtConfigSelector] Button visibility:', {
     showLeftArrow,
@@ -125,6 +126,7 @@ export const CourtConfigurationSelector: React.FC = () => {
       'configCount > 1': configCount > 1,
       'currentIndex > 0': currentIndex > 0,
       'currentIndex < configCount - 1': currentIndex < configCount - 1,
+      'currentIndex === configCount - 1': currentIndex === configCount - 1,
     }
   });
 
