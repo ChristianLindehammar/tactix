@@ -316,28 +316,46 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   // Configuration management functions
   const createConfiguration = (name: string) => {
+    console.log('[TeamContext] createConfiguration called with name:', name);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      console.log('[TeamContext] Before create - configs:', teamWithConfigs.configurations?.map(c => ({ id: c.id, name: c.name })));
+      console.log('[TeamContext] Before create - selectedConfigurationId:', teamWithConfigs.selectedConfigurationId);
+
       const newConfig: CourtConfiguration = {
         id: Date.now().toString(),
         name,
         playerPositions: {}, // Start with empty positions
       };
 
-      return {
+      const updatedTeam = {
         ...teamWithConfigs,
         configurations: [...teamWithConfigs.configurations!, newConfig],
         selectedConfigurationId: newConfig.id,
       };
+
+      console.log('[TeamContext] After create - configs:', updatedTeam.configurations.map(c => ({ id: c.id, name: c.name })));
+      console.log('[TeamContext] After create - selectedConfigurationId:', updatedTeam.selectedConfigurationId);
+
+      return updatedTeam;
     });
   };
 
   const selectConfiguration = (configId: string) => {
+    console.log('[TeamContext] selectConfiguration called with configId:', configId);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      console.log('[TeamContext] selectConfiguration - before:', {
+        selectedConfigurationId: teamWithConfigs.selectedConfigurationId,
+        requestedConfigId: configId,
+      });
+
       const config = teamWithConfigs.configurations!.find(c => c.id === configId);
 
-      if (!config) return teamWithConfigs;
+      if (!config) {
+        console.log('[TeamContext] selectConfiguration - config not found!');
+        return teamWithConfigs;
+      }
 
       // Update player positions from the selected configuration
       const updatedStartingPlayers = teamWithConfigs.startingPlayers.map(player => ({
@@ -350,12 +368,18 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
         courtPosition: config.playerPositions[player.id] || player.courtPosition,
       }));
 
-      return {
+      const updatedTeam = {
         ...teamWithConfigs,
         selectedConfigurationId: configId,
         startingPlayers: updatedStartingPlayers,
         benchPlayers: updatedBenchPlayers,
       };
+
+      console.log('[TeamContext] selectConfiguration - after:', {
+        selectedConfigurationId: updatedTeam.selectedConfigurationId,
+      });
+
+      return updatedTeam;
     });
   };
 
@@ -373,16 +397,34 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const deleteConfiguration = (configId: string) => {
+    console.log('[TeamContext] deleteConfiguration called with configId:', configId);
     updateTeamInTeams(currentTeam => {
       const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      console.log('[TeamContext] deleteConfiguration - current config count:', teamWithConfigs.configurations!.length);
 
       // Don't allow deleting the last configuration
-      if (teamWithConfigs.configurations!.length <= 1) return teamWithConfigs;
+      if (teamWithConfigs.configurations!.length <= 1) {
+        console.log('[TeamContext] deleteConfiguration - prevented: cannot delete last configuration');
+        return teamWithConfigs;
+      }
 
       const updatedConfigs = teamWithConfigs.configurations!.filter(c => c.id !== configId);
+
+      // Safety check: ensure we have at least one configuration remaining
+      if (updatedConfigs.length === 0) {
+        console.log('[TeamContext] deleteConfiguration - prevented: would result in zero configurations');
+        return teamWithConfigs;
+      }
+
       const newSelectedId = teamWithConfigs.selectedConfigurationId === configId
         ? updatedConfigs[0].id
         : teamWithConfigs.selectedConfigurationId;
+
+      console.log('[TeamContext] deleteConfiguration - success:', {
+        deletedConfigId: configId,
+        remainingCount: updatedConfigs.length,
+        newSelectedId,
+      });
 
       return {
         ...teamWithConfigs,
@@ -399,20 +441,48 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const switchToNextConfiguration = () => {
-    if (!selectedTeam) return;
+    console.log('[TeamContext] switchToNextConfiguration called');
+    if (!selectedTeam) {
+      console.log('[TeamContext] No selectedTeam, returning');
+      return;
+    }
     const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
     const configs = teamWithConfigs.configurations!;
     const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
     const nextIndex = (currentIndex + 1) % configs.length;
+
+    console.log('[TeamContext] switchToNextConfiguration:', {
+      currentIndex,
+      nextIndex,
+      configCount: configs.length,
+      currentConfigId: teamWithConfigs.selectedConfigurationId,
+      nextConfigId: configs[nextIndex].id,
+      allConfigs: configs.map(c => ({ id: c.id, name: c.name })),
+    });
+
     selectConfiguration(configs[nextIndex].id);
   };
 
   const switchToPreviousConfiguration = () => {
-    if (!selectedTeam) return;
+    console.log('[TeamContext] switchToPreviousConfiguration called');
+    if (!selectedTeam) {
+      console.log('[TeamContext] No selectedTeam, returning');
+      return;
+    }
     const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
     const configs = teamWithConfigs.configurations!;
     const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
     const prevIndex = (currentIndex - 1 + configs.length) % configs.length;
+
+    console.log('[TeamContext] switchToPreviousConfiguration:', {
+      currentIndex,
+      prevIndex,
+      configCount: configs.length,
+      currentConfigId: teamWithConfigs.selectedConfigurationId,
+      prevConfigId: configs[prevIndex].id,
+      allConfigs: configs.map(c => ({ id: c.id, name: c.name })),
+    });
+
     selectConfiguration(configs[prevIndex].id);
   };
 

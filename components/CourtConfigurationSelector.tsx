@@ -25,6 +25,7 @@ export const CourtConfigurationSelector: React.FC = () => {
   const [showRenameDialog, setShowRenameDialog] = useState(false);
 
   if (!team || !team.configurations || team.configurations.length === 0) {
+    console.log('[CourtConfigSelector] No team or configurations');
     return null;
   }
 
@@ -32,9 +33,19 @@ export const CourtConfigurationSelector: React.FC = () => {
   const currentIndex = team.configurations.findIndex(c => c.id === team.selectedConfigurationId);
   const activeConfig = team.configurations[currentIndex];
 
+  console.log('[CourtConfigSelector] Render:', {
+    configCount,
+    currentIndex,
+    selectedConfigurationId: team.selectedConfigurationId,
+    activeConfigName: activeConfig?.name,
+    allConfigIds: team.configurations.map(c => ({ id: c.id, name: c.name })),
+  });
+
   const handleCreate = (name: string) => {
+    console.log('[CourtConfigSelector] handleCreate called with name:', name);
     if (name.trim()) {
       createConfiguration(name.trim());
+      console.log('[CourtConfigSelector] createConfiguration called');
       // createConfiguration already selects the new configuration automatically
     }
     setShowCreateDialog(false);
@@ -48,6 +59,7 @@ export const CourtConfigurationSelector: React.FC = () => {
   };
 
   const handleLongPress = () => {
+    console.log('[CourtConfigSelector] handleLongPress - configCount:', configCount);
     // Show options menu for rename and delete only
     Alert.alert(
       t('configurationOptions') || 'Configuration Options',
@@ -60,6 +72,18 @@ export const CourtConfigurationSelector: React.FC = () => {
         configCount > 1 && {
           text: t('delete') || 'Delete',
           onPress: () => {
+            // Re-check config count before showing delete confirmation
+            // (in case configurations changed since menu was opened)
+            if (!team.configurations || team.configurations.length <= 1) {
+              console.log('[CourtConfigSelector] Delete prevented - only 1 configuration remains');
+              Alert.alert(
+                t('error') || 'Error',
+                'Cannot delete the last configuration.',
+                [{ text: 'OK' }]
+              );
+              return;
+            }
+
             Alert.alert(
               t('confirmDelete') || 'Confirm Delete',
               t('deleteConfigurationConfirm') || `Are you sure you want to delete "${activeConfig?.name}"?`,
@@ -68,7 +92,12 @@ export const CourtConfigurationSelector: React.FC = () => {
                 {
                   text: t('delete') || 'Delete',
                   style: 'destructive',
-                  onPress: () => activeConfig && deleteConfiguration(activeConfig.id),
+                  onPress: () => {
+                    console.log('[CourtConfigSelector] Delete confirmed for config:', activeConfig?.id);
+                    if (activeConfig) {
+                      deleteConfiguration(activeConfig.id);
+                    }
+                  },
                 },
               ]
             );
@@ -88,13 +117,27 @@ export const CourtConfigurationSelector: React.FC = () => {
   const showRightArrow = configCount > 1 && currentIndex < configCount - 1;
   const showPlusButton = configCount === 1;
 
+  console.log('[CourtConfigSelector] Button visibility:', {
+    showLeftArrow,
+    showRightArrow,
+    showPlusButton,
+    calculation: {
+      'configCount > 1': configCount > 1,
+      'currentIndex > 0': currentIndex > 0,
+      'currentIndex < configCount - 1': currentIndex < configCount - 1,
+    }
+  });
+
   return (
     <>
       <View style={[styles.container, { backgroundColor: backgroundColor as string }]}>
         {/* Left arrow - only show when not on first config */}
         {showLeftArrow ? (
           <TouchableOpacity
-            onPress={switchToPreviousConfiguration}
+            onPress={() => {
+              console.log('[CourtConfigSelector] Left arrow pressed');
+              switchToPreviousConfiguration();
+            }}
             style={styles.arrowButton}
           >
             <IconSymbol
@@ -122,7 +165,10 @@ export const CourtConfigurationSelector: React.FC = () => {
         {/* Right side: either right arrow, plus button, or empty space */}
         {showPlusButton ? (
           <TouchableOpacity
-            onPress={() => setShowCreateDialog(true)}
+            onPress={() => {
+              console.log('[CourtConfigSelector] Plus button pressed');
+              setShowCreateDialog(true);
+            }}
             style={styles.arrowButton}
           >
             <IconSymbol
@@ -133,7 +179,10 @@ export const CourtConfigurationSelector: React.FC = () => {
           </TouchableOpacity>
         ) : showRightArrow ? (
           <TouchableOpacity
-            onPress={switchToNextConfiguration}
+            onPress={() => {
+              console.log('[CourtConfigSelector] Right arrow pressed');
+              switchToNextConfiguration();
+            }}
             style={styles.arrowButton}
           >
             <IconSymbol
