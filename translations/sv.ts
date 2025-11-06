@@ -1,5 +1,3 @@
-import { addPlayer } from '@/services/firebase';
-
 export default {  
   // Navigation
   settings: 'Inställningar',
@@ -8,7 +6,7 @@ export default {
   tactics: 'Taktik',
   
   // Settings Screen
-  sportSelection: 'Sportval',
+  sportSelection: 'Välj sport',
   aboutApp: 'Om appen',
   aboutTheApp: 'Ett verktyg för idrottstränare att planera lagträningar, hantera taktiker och utveckla spelstrategier.',
   copyright: '© 2025 CoachMate, Christian Lindehammar.',
@@ -88,7 +86,6 @@ export default {
   dragHint: 'Tryck och dra spelare upp och ner för att ändra deras ordning',
 
   // Collapsible Sections
-  aboutApp: 'Om appen',
   generalSettings: 'Allmänna inställningar',
   thirdPartyLibs: 'Tredjepartsbibliotek',
 

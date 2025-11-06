@@ -1,5 +1,3 @@
-import { addPlayer } from '@/services/firebase';
-
 export default {  
   // Navigation
   settings: 'Asetukset',
@@ -101,7 +99,6 @@ export default {
   dragHint: 'Pidä ja vedä pelaajia ylös ja alas muuttaaksesi heidän järjestystään',
 
   // Collapsible Sections
-  aboutApp: 'Tietoa sovelluksesta',
   generalSettings: 'Yleiset asetukset',
   thirdPartyLibs: 'Kolmannen osapuolen kirjastot',
 

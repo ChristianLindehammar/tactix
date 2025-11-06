@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DragProvider, useDrag } from '@/context/DragContext';
 import { router, usePathname } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
+import { debugTranslations } from '@/utils/debugTranslations';
 
 import { BenchPanel } from '@/components/BenchPanel';
 import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelector';
@@ -53,6 +54,13 @@ function HomeScreenContent() {
   const pathname = usePathname();
   
   const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
+  
+  // Debug translations on mount
+  useEffect(() => {
+    if (__DEV__) {
+      debugTranslations();
+    }
+  }, []);
   
   useEffect(() => {
     if (isFileUrl) {
