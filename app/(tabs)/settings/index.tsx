@@ -16,6 +16,7 @@ export default function SettingsScreen() {
   const iconColorValue = useThemeColor({}, 'announcement.icon');
   const background = useThemeColor({}, 'background');
   const menuBackground = useThemeColor({}, 'menuBackground');
+  const cardBorderColor = useThemeColor({}, 'borderColor');
 
   // Ensure we have string color values
   const announcementBgColor = typeof bgColorValue === 'string' ? bgColorValue : '#FFFFFF';
@@ -41,8 +42,8 @@ export default function SettingsScreen() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-      <ScrollView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: background as string }} edges={['top']}>
+      <ScrollView style={{ flex: 1, backgroundColor: background as string }}>
         <ThemedView style={styles.container}>
           {/* Header */}
           <ThemedView style={styles.headerContainer}>
@@ -78,7 +79,10 @@ export default function SettingsScreen() {
           </ThemedView>
 
           {/* Settings List - Grouped Card */}
-          <View style={[styles.settingsCard, { backgroundColor: menuBackground as string }]}>
+          <View style={[styles.settingsCard, { 
+            backgroundColor: menuBackground as string,
+            borderColor: cardBorderColor as string,
+          }]}>
             <SettingsListItem
               icon="sports"
               title={t('sportSelection')}
@@ -151,18 +155,21 @@ const styles = StyleSheet.create({
   settingsCard: {
     marginHorizontal: 16,
     marginTop: 8,
+    marginBottom: 24,
     borderRadius: 12,
     overflow: 'hidden',
+    // iOS-style subtle border
+    borderWidth: 1,
     // iOS shadow
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 1,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
     // Android elevation
-    elevation: 3,
+    elevation: 2,
   },
 });
 

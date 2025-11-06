@@ -18,7 +18,7 @@ export function SettingsListItem({ icon, title, route, onPress, isFirst, isLast 
   const backgroundColor = useThemeColor({}, 'background');
   const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
-  const borderColor = useThemeColor({}, 'borderColor');
+  const separatorColor = useThemeColor({}, 'borderColor');
 
   const handlePress = () => {
     if (onPress) {
@@ -29,16 +29,18 @@ export function SettingsListItem({ icon, title, route, onPress, isFirst, isLast 
   };
 
   return (
-    <TouchableOpacity onPress={handlePress} activeOpacity={0.7}>
+    <TouchableOpacity onPress={handlePress} activeOpacity={0.7} style={{ backgroundColor: 'transparent' }}>
       <View style={[
         styles.container,
-        { borderBottomColor: borderColor as string },
-        isLast && styles.lastItem
+        !isLast && { 
+          borderBottomWidth: StyleSheet.hairlineWidth,
+          borderBottomColor: separatorColor as string 
+        }
       ]}>
         <View style={[styles.iconContainer, { backgroundColor: tintColor as string }]}>
           <MaterialIcons name={icon} size={24} color={backgroundColor as string} />
         </View>
-        <ThemedText style={[styles.title, { color: textColor }]}>{title}</ThemedText>
+        <ThemedText style={styles.title}>{title}</ThemedText>
         <MaterialIcons name="chevron-right" size={24} color={textColor as string} style={styles.chevron} />
       </View>
     </TouchableOpacity>
@@ -49,12 +51,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 16,
+    paddingVertical: 12,
     paddingHorizontal: 16,
-    borderBottomWidth: 0.5,
-  },
-  lastItem: {
-    borderBottomWidth: 0,
   },
   iconContainer: {
     width: 40,

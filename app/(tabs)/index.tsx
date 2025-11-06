@@ -1,5 +1,5 @@
 import { StyleSheet, View, Dimensions, Pressable, Platform, Alert, ActivityIndicator } from 'react-native';
-import { router, usePathname, useSegments } from 'expo-router';
+import { router, usePathname } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTeam } from '@/context/TeamContext';
 import { useSport } from '@/context/SportContext';
@@ -43,7 +43,6 @@ function HomeScreenContent() {
   const [courtLayout, setCourtLayout] = useState<LayoutRectangle | null>(null);
   
   const pathname = usePathname();
-  const segments = useSegments();
   
   const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
   
