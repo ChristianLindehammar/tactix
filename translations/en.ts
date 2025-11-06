@@ -2,7 +2,7 @@ export default {
   // Navigation
   settings: 'Settings',
   team: 'Team',
-  playGround: 'Play Ground',
+  playGround: 'Playing field',
   tactics: 'Tactics',
   
   // Settings Screen
