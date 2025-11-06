@@ -3,9 +3,10 @@ import * as Linking from 'expo-linking';
 
 import { ActivityIndicator, Alert, Dimensions, Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DragProvider, useDrag } from '@/context/DragContext';
 import { router, usePathname } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { BenchPanel } from '@/components/BenchPanel';
 import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelector';
@@ -18,6 +19,7 @@ import { Player } from '@/components/Player';
 import { SportSelector } from '@/components/SportSelector';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { TooltipModal } from '@/components/TooltipModal';
 import { sportsConfig } from '@/constants/sports';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSport } from '@/context/SportContext';
@@ -44,6 +46,9 @@ function HomeScreenContent() {
 
   const [isProcessingFile, setIsProcessingFile] = useState(false);
   const [courtLayout, setCourtLayout] = useState<LayoutRectangle | null>(null);
+  const [showConfigurationTooltip, setShowConfigurationTooltip] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
+  const configurationSelectorRef = useRef<View>(null);
   
   const pathname = usePathname();
   
@@ -129,6 +134,47 @@ function HomeScreenContent() {
     return () => subscription.remove();
   }, [pathname, t, router, importTeamFromFile, setIsProcessingFile]);
 
+  // Show tooltip for CourtConfigurationSelector
+  useEffect(() => {
+    const checkAndShowTooltip = async () => {
+      try {
+        const hasSeenConfigTooltip = await AsyncStorage.getItem('configurationTooltipShown');
+        if (hasSeenConfigTooltip === 'true') {
+          return;
+        }
+
+        if (team && selectedSport && configurationSelectorRef.current) {
+          setTimeout(() => {
+            if (configurationSelectorRef.current) {
+              configurationSelectorRef.current.measure((_x, _y, width, height, pageX, pageY) => {
+                setTooltipPosition({
+                  x: pageX + width / 2,
+                  y: pageY + height + 10,
+                });
+                setShowConfigurationTooltip(true);
+              });
+            }
+          }, 1000); // Small delay to ensure layout is complete
+        }
+      } catch (error) {
+        console.error('Error checking configuration tooltip status:', error);
+      }
+    };
+
+    checkAndShowTooltip();
+  }, [team, selectedSport]);
+
+  const handleConfigurationTooltipClose = async () => {
+    setShowConfigurationTooltip(false);
+    
+    // Mark tooltip as shown so it doesn't appear again
+    try {
+      await AsyncStorage.setItem('configurationTooltipShown', 'true');
+    } catch (error) {
+      console.error('Error saving tooltip shown status:', error);
+    }
+  };
+
   const ghostPlayerStyle = useAnimatedStyle(() => {
     if (!dragPosition) {
       return {
@@ -210,7 +256,16 @@ function HomeScreenContent() {
       <ThemedView style={styles.container}>
         <View style={{ height: insets.top + 10 }} />
 
-        <CourtConfigurationSelector />
+        <View ref={configurationSelectorRef} collapsable={false}>
+          <CourtConfigurationSelector />
+        </View>
+
+        <TooltipModal
+          visible={showConfigurationTooltip}
+          onClose={handleConfigurationTooltipClose}
+          message={t('configurationTooltipMessage') || 'Switch between different team configurations. Long press to rename or delete.'}
+          position={tooltipPosition}
+        />
 
         <View
           style={[

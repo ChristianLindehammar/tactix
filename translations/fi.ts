@@ -126,4 +126,5 @@ export default {
   renameConfiguration: 'Nimeä konfiguraatio uudelleen',
   deleteConfigurationConfirm: 'Haluatko varmasti poistaa tämän konfiguraation?',
   confirmDelete: 'Vahvista poisto',
+  configurationTooltipMessage: 'Vaihda joukkueen eri konfiguraatioiden välillä. Paina pitkään nimeämistä tai poistamista varten.',
 };

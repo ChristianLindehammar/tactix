@@ -123,4 +123,5 @@ export default {
   renameConfiguration: 'Rename Configuration',
   deleteConfigurationConfirm: 'Are you sure you want to delete this configuration?',
   confirmDelete: 'Confirm Delete',
+  configurationTooltipMessage: 'Switch between different team configurations. Long press to rename or delete.',
 };

@@ -126,4 +126,5 @@ export default {
   renameConfiguration: 'Byt namn på konfiguration',
   deleteConfigurationConfirm: 'Är du säker på att du vill ta bort denna konfiguration?',
   confirmDelete: 'Bekräfta borttagning',
+  configurationTooltipMessage: 'Växla mellan olika lagkonfigurationer. Tryck länge för att byta namn eller ta bort.',
 };
