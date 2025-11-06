@@ -1,6 +1,8 @@
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
-import { Platform, Alert } from 'react-native';
+
+import { Alert, Platform } from 'react-native';
+
 import { Team } from '@/types/models';
 
 const FILE_EXTENSION = '.coachmate';

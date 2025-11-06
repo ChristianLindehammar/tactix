@@ -472,17 +472,9 @@ export default function TacticsScreen() {
                     shadowRadius: 3,
                     elevation: 5,
                   }}>
-                    {selectedSport === 'soccer' ? (
-                      <MaterialIcons
-                        name="sports-soccer"
-                        size={24}
-                        color="#FFA000"
-                      />
-                    ) : (
-                      <View style={{ width: 24, height: 24 }}>
-                        <SportBall sport={selectedSport} size={24} />
-                      </View>
-                    )}
+                    <View style={{ width: 24, height: 24 }}>
+                      <SportBall sport={selectedSport} size={24} color="#FFA000" />
+                    </View>
                   </View>
                 ) : (
                   <TouchableOpacity

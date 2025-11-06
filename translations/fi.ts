@@ -1,5 +1,3 @@
-import { addPlayer } from '@/services/firebase';
-
 export default {  
   // Navigation
   settings: 'Asetukset',
@@ -8,6 +6,8 @@ export default {
   tactics: 'Taktiikka',
   
   // Settings Screen
+  sportSelection: 'Urheilulajin valinta',
+  aboutApp: 'Tietoa sovelluksesta',
   aboutTheApp: 'Työkalu urheiluvalmentajille joukkueharjoitusten suunnitteluun, taktiikan hallintaan ja pelistrategioiden kehittämiseen.',
   copyright: '© 2025 CoachMate, Christian Lindehammar.',
   thirdPartyLibraries: 'Tämä sovellus käyttää useita avoimen lähdekoodin kirjastoja:',
@@ -35,6 +35,7 @@ export default {
   benchPlayers: 'Vaihtopelaajat',
   bench: 'Penkki', // Added
   noPlayersOnBench: 'Ei pelaajia penkillä', // Added
+  noPlayersYet: 'Ei vielä pelaajia. Lisää ensimmäinen pelaajasi yllä!',
   courtBenchSeparator: 'Kenttä / Penkki erotin',
   enterPlayerName: 'Syötä pelaajan nimi',
   addPlayer: 'Lisää pelaaja',
@@ -98,7 +99,6 @@ export default {
   dragHint: 'Pidä ja vedä pelaajia ylös ja alas muuttaaksesi heidän järjestystään',
 
   // Collapsible Sections
-  aboutApp: 'Tietoa sovelluksesta',
   generalSettings: 'Yleiset asetukset',
   thirdPartyLibs: 'Kolmannen osapuolen kirjastot',
 
@@ -115,4 +115,13 @@ export default {
   betaTestersNeeded: 'Beta-testaajia tarvitaan!',
   betaTestingProgramDescription: 'Etsimme käyttäjiä, jotka voivat auttaa testaamaan uutta versiomme. Napauta tästä liittyäksesi testiohjelmaamme ja antaaksesi palautetta.',
   checkOutBetaTestingProgram: 'Tutustu beta-testiohjelmaamme',
+
+  // Court Configuration
+  configurationOptions: 'Konfiguraatiovaihtoehdot',
+  createNew: 'Luo uusi',
+  createConfiguration: 'Luo konfiguraatio',
+  renameConfiguration: 'Nimeä konfiguraatio uudelleen',
+  deleteConfigurationConfirm: 'Haluatko varmasti poistaa tämän konfiguraation?',
+  confirmDelete: 'Vahvista poisto',
+  configurationTooltipMessage: 'Vaihda joukkueen eri konfiguraatioiden välillä. Paina pitkään nimeämistä tai poistamista varten.',
 };

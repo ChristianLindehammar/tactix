@@ -1,10 +1,11 @@
-import React, { createContext, PropsWithChildren, useContext } from 'react';
-import { Team, PlayerType, Position } from '@/types/models';
-import { useSport } from '@/context/SportContext';
-import { useTranslation } from '@/hooks/useTranslation';
+import { CourtConfiguration, PlayerType, Position, Team } from '@/types/models';
+import React, { PropsWithChildren, createContext, useContext } from 'react';
+import { exportTeamToFile, findFreePosition, getValidPosition, importTeamFromFile, validatePlayerPosition } from './utils';
+
 import { sportsConfig } from '@/constants/sports';
+import { useSport } from '@/context/SportContext';
 import { useTeamData } from './hooks/useTeamData';
-import { findFreePosition, getValidPosition, validatePlayerPosition, exportTeamToFile, importTeamFromFile } from './utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface TeamContextProps {
   team?: Team;
@@ -26,9 +27,53 @@ interface TeamContextProps {
   movePlayerToBench: (playerId: string) => void;
   movePlayerToCourt: (playerId: string, targetPosition?: Position) => void;
   findFreePosition: () => Position;
+  // Configuration management
+  createConfiguration: (name: string) => void;
+  selectConfiguration: (configId: string) => void;
+  renameConfiguration: (configId: string, newName: string) => void;
+  deleteConfiguration: (configId: string) => void;
+  getActiveConfiguration: () => CourtConfiguration | undefined;
+  switchToNextConfiguration: () => void;
+  switchToPreviousConfiguration: () => void;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
+
+// Helper function to ensure team has configurations (migration from old format)
+const ensureTeamHasConfigurations = (team: Team): Team => {
+  if (!team.configurations || team.configurations.length === 0) {
+    // Migrate from old format: create a default configuration with current player positions
+    const playerPositions: Record<string, Position> = {};
+
+    [...team.startingPlayers, ...team.benchPlayers].forEach(player => {
+      if (player.courtPosition) {
+        playerPositions[player.id] = player.courtPosition;
+      }
+    });
+
+    const defaultConfig: CourtConfiguration = {
+      id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 9),
+      name: 'Standard',
+      playerPositions,
+    };
+
+    return {
+      ...team,
+      configurations: [defaultConfig],
+      selectedConfigurationId: defaultConfig.id,
+    };
+  }
+
+  // Ensure selectedConfigurationId is valid
+  if (!team.selectedConfigurationId || !team.configurations.find(c => c.id === team.selectedConfigurationId)) {
+    return {
+      ...team,
+      selectedConfigurationId: team.configurations[0].id,
+    };
+  }
+
+  return team;
+};
 
 export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const { selectedSport, setSelectedSport } = useSport();
@@ -59,16 +104,38 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const updatePlayerPosition = (playerId: string, position: { x: number; y: number }) => {
-    updateTeamInTeams(currentTeam => ({
-      ...currentTeam,
-      startingPlayers: currentTeam.startingPlayers.map(player =>
-        player.id === playerId ? { ...player, courtPosition: position } : player
-      ),
-      benchPlayers: currentTeam.benchPlayers.map(player =>
-        player.id === playerId ? { ...player, courtPosition: position } : player
-      )
-    }));
+    updateTeamInTeams(currentTeam => {
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      const activeConfigId = teamWithConfigs.selectedConfigurationId!;
+
+      // Update position in the active configuration
+      const updatedConfigurations = teamWithConfigs.configurations!.map(config =>
+        config.id === activeConfigId
+          ? { ...config, playerPositions: { ...config.playerPositions, [playerId]: position } }
+          : config
+      );
+
+      // Also update the player's courtPosition for backward compatibility
+      return {
+        ...teamWithConfigs,
+        configurations: updatedConfigurations,
+        startingPlayers: teamWithConfigs.startingPlayers.map(player =>
+          player.id === playerId ? { ...player, courtPosition: position } : player
+        ),
+        benchPlayers: teamWithConfigs.benchPlayers.map(player =>
+          player.id === playerId ? { ...player, courtPosition: position } : player
+        )
+      };
+    });
   };
+
+  // Auto-migrate old teams (without configurations) when they're loaded
+  React.useEffect(() => {
+    if (selectedTeam && (!selectedTeam.configurations || selectedTeam.configurations.length === 0)) {
+      // Trigger migration by updating the team
+      updateTeamInTeams(currentTeam => ensureTeamHasConfigurations(currentTeam));
+    }
+  }, [selectedTeam?.id]); // Only run when team changes
 
   const findFreePositionForTeam = (): Position => {
     return findFreePosition(getCurrentPlayers());
@@ -128,6 +195,12 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const createTeam = (name: string) => {
     const now = Date.now();
+    const defaultConfig: CourtConfiguration = {
+      id: now.toString() + '-config',
+      name: 'Standard',
+      playerPositions: {},
+    };
+
     const newTeam: Team = {
       id: now.toString(),
       name,
@@ -138,6 +211,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       lastEdited: now,
       editedBy: 'user1',
       sport: selectedSport || 'soccer',
+      configurations: [defaultConfig],
+      selectedConfigurationId: defaultConfig.id,
     };
     setTeams(prev => [...prev, newTeam]);
     setSelectedTeamId(newTeam.id);
@@ -205,10 +280,11 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     while (teams.some(t => t.name === finalName)) {
       finalName = `${importedTeam.name} (${counter++})`;
     }
-    
+
     const now = Date.now().toString();
-    const newTeam = { ...importedTeam, id: now, name: finalName };
-    setTeams(prev => [...prev, newTeam]);
+    // Ensure the imported team has configurations (migration from old format)
+    const migratedTeam = ensureTeamHasConfigurations({ ...importedTeam, id: now, name: finalName });
+    setTeams(prev => [...prev, migratedTeam]);
     setSelectedTeamId(now);
   };
 
@@ -220,30 +296,201 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const movePlayerToBench = (playerId: string) => {
     updateTeamInTeams(currentTeam => {
-      const playerToMove = currentTeam.startingPlayers.find(p => p.id === playerId);
-      if (!playerToMove) return currentTeam;
-      
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      const playerToMove = teamWithConfigs.startingPlayers.find(p => p.id === playerId);
+      if (!playerToMove) return teamWithConfigs;
+
+      const activeConfigId = teamWithConfigs.selectedConfigurationId!;
+
+      // Remove player position from active configuration
+      const updatedConfigurations = teamWithConfigs.configurations!.map(config => {
+        if (config.id === activeConfigId) {
+          const { [playerId]: removed, ...remainingPositions } = config.playerPositions;
+          return { ...config, playerPositions: remainingPositions };
+        }
+        return config;
+      });
+
       return {
-        ...currentTeam,
-        startingPlayers: currentTeam.startingPlayers.filter(p => p.id !== playerId),
-        benchPlayers: [...currentTeam.benchPlayers, { ...playerToMove, courtPosition: undefined }]
+        ...teamWithConfigs,
+        configurations: updatedConfigurations,
+        startingPlayers: teamWithConfigs.startingPlayers.filter(p => p.id !== playerId),
+        benchPlayers: [...teamWithConfigs.benchPlayers, { ...playerToMove, courtPosition: undefined }]
       };
     });
   };
 
   const movePlayerToCourt = (playerId: string, targetPosition?: Position) => {
     updateTeamInTeams(currentTeam => {
-      const playerToMove = currentTeam.benchPlayers.find(p => p.id === playerId);
-      if (!playerToMove) return currentTeam;
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+      const playerToMove = teamWithConfigs.benchPlayers.find(p => p.id === playerId);
+      if (!playerToMove) return teamWithConfigs;
 
       const newPosition = targetPosition || findFreePositionForTeam();
-      
+      const activeConfigId = teamWithConfigs.selectedConfigurationId!;
+
+      // Add player position to active configuration
+      const updatedConfigurations = teamWithConfigs.configurations!.map(config =>
+        config.id === activeConfigId
+          ? { ...config, playerPositions: { ...config.playerPositions, [playerId]: newPosition } }
+          : config
+      );
+
       return {
-        ...currentTeam,
-        benchPlayers: currentTeam.benchPlayers.filter(p => p.id !== playerId),
-        startingPlayers: [...currentTeam.startingPlayers, { ...playerToMove, courtPosition: newPosition }]
+        ...teamWithConfigs,
+        configurations: updatedConfigurations,
+        benchPlayers: teamWithConfigs.benchPlayers.filter(p => p.id !== playerId),
+        startingPlayers: [...teamWithConfigs.startingPlayers, { ...playerToMove, courtPosition: newPosition }]
       };
     });
+  };
+
+  // Configuration management functions
+  const createConfiguration = (name: string) => {
+    updateTeamInTeams(currentTeam => {
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+
+      // Copy current player positions as a starting point for the new configuration
+      const currentPlayerPositions: Record<string, Position> = {};
+      [...teamWithConfigs.startingPlayers, ...teamWithConfigs.benchPlayers].forEach(player => {
+        if (player.courtPosition) {
+          currentPlayerPositions[player.id] = { ...player.courtPosition };
+        }
+      });
+
+      // Generate unique ID using timestamp + random string to avoid collisions
+      const newConfig: CourtConfiguration = {
+        id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 9),
+        name,
+        playerPositions: currentPlayerPositions, // Start with copy of current positions
+      };
+
+      const updatedTeam = {
+        ...teamWithConfigs,
+        configurations: [...teamWithConfigs.configurations!, newConfig],
+        selectedConfigurationId: newConfig.id,
+      };
+      return updatedTeam;
+    });
+  };
+
+  const selectConfiguration = (configId: string) => {
+    updateTeamInTeams(currentTeam => {
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+
+      const config = teamWithConfigs.configurations!.find(c => c.id === configId);
+
+      if (!config) {
+        return teamWithConfigs;
+      }
+
+      // Get all players from the team (master roster)
+      const allPlayers = [...teamWithConfigs.startingPlayers, ...teamWithConfigs.benchPlayers];
+
+      // Split players based on whether they have a position in this configuration
+      // Players in playerPositions = on court (starting players)
+      // Players NOT in playerPositions = on bench
+      const updatedStartingPlayers: PlayerType[] = [];
+      const updatedBenchPlayers: PlayerType[] = [];
+
+      allPlayers.forEach(player => {
+        const positionInConfig = config.playerPositions[player.id];
+        if (positionInConfig) {
+          // Player is on court in this configuration
+          updatedStartingPlayers.push({
+            ...player,
+            courtPosition: positionInConfig,
+          });
+        } else {
+          // Player is on bench in this configuration
+          updatedBenchPlayers.push({
+            ...player,
+            courtPosition: undefined,
+          });
+        }
+      });
+
+      const updatedTeam = {
+        ...teamWithConfigs,
+        selectedConfigurationId: configId,
+        startingPlayers: updatedStartingPlayers,
+        benchPlayers: updatedBenchPlayers,
+      };
+
+      return updatedTeam;
+    });
+  };
+
+  const renameConfiguration = (configId: string, newName: string) => {
+    updateTeamInTeams(currentTeam => {
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+
+      return {
+        ...teamWithConfigs,
+        configurations: teamWithConfigs.configurations!.map(config =>
+          config.id === configId ? { ...config, name: newName } : config
+        ),
+      };
+    });
+  };
+
+  const deleteConfiguration = (configId: string) => {
+    updateTeamInTeams(currentTeam => {
+      const teamWithConfigs = ensureTeamHasConfigurations(currentTeam);
+
+      // Don't allow deleting the last configuration
+      if (teamWithConfigs.configurations!.length <= 1) {
+        return teamWithConfigs;
+      }
+
+      const updatedConfigs = teamWithConfigs.configurations!.filter(c => c.id !== configId);
+
+      // Safety check: ensure we have at least one configuration remaining
+      if (updatedConfigs.length === 0) {
+        return teamWithConfigs;
+      }
+
+      const newSelectedId = teamWithConfigs.selectedConfigurationId === configId
+        ? updatedConfigs[0].id
+        : teamWithConfigs.selectedConfigurationId;
+
+      return {
+        ...teamWithConfigs,
+        configurations: updatedConfigs,
+        selectedConfigurationId: newSelectedId,
+      };
+    });
+  };
+
+  const getActiveConfiguration = (): CourtConfiguration | undefined => {
+    if (!selectedTeam) return undefined;
+    const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
+    return teamWithConfigs.configurations!.find(c => c.id === teamWithConfigs.selectedConfigurationId);
+  };
+
+  const switchToNextConfiguration = () => {
+    if (!selectedTeam) {
+      return;
+    }
+    const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
+    const configs = teamWithConfigs.configurations!;
+    const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
+    const nextIndex = (currentIndex + 1) % configs.length;
+
+
+    selectConfiguration(configs[nextIndex].id);
+  };
+
+  const switchToPreviousConfiguration = () => {
+    if (!selectedTeam) {
+      return;
+    }
+    const teamWithConfigs = ensureTeamHasConfigurations(selectedTeam);
+    const configs = teamWithConfigs.configurations!;
+    const currentIndex = configs.findIndex(c => c.id === teamWithConfigs.selectedConfigurationId);
+    const prevIndex = (currentIndex - 1 + configs.length) % configs.length;
+
+    selectConfiguration(configs[prevIndex].id);
   };
 
   if (isLoading) {
@@ -251,13 +498,13 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   }
 
   return (
-    <TeamContext.Provider value={{ 
-      team: selectedTeam, 
+    <TeamContext.Provider value={{
+      team: selectedTeam ? ensureTeamHasConfigurations(selectedTeam) : undefined,
       teams: filteredTeams,
       error,
-      updatePlayerPosition, 
-      addPlayer, 
-      setPlayerType,  
+      updatePlayerPosition,
+      addPlayer,
+      setPlayerType,
       createTeam,
       selectTeam,
       removeTeam,
@@ -271,6 +518,13 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       movePlayerToBench,
       movePlayerToCourt,
       findFreePosition: findFreePositionForTeam,
+      createConfiguration,
+      selectConfiguration,
+      renameConfiguration,
+      deleteConfiguration,
+      getActiveConfiguration,
+      switchToNextConfiguration,
+      switchToPreviousConfiguration,
     }}>
       {children}
     </TeamContext.Provider>

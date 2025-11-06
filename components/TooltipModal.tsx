@@ -19,7 +19,7 @@ export const TooltipModal: React.FC<TooltipModalProps> = ({
   onClose,
   message,
   position,
-  autoCloseTimeout = 3000,
+  autoCloseTimeout = 5000,
 }) => {
   const backgroundColor = useThemeColor({}, 'background') as string;
   const screenWidth = Dimensions.get('window').width;

@@ -1,5 +1,5 @@
 import { I18n } from 'i18n-js';
-import * as Localization from 'expo-localization';
+import { getLocales } from 'expo-localization';
 import en from './en';
 import fi from './fi';
 import sv from './sv';
@@ -10,22 +10,40 @@ const i18n = new I18n({
   sv
 });
 
-try {
-  // Get device locale, strip region code, fallback to 'en'
-  const locale = (Localization.locale?.split('-')[0] || 'en').toLowerCase();
-  
-  if (Object.keys(i18n.translations).includes(locale)) {
-    i18n.locale = locale;
-  } else {
-    i18n.locale = 'en';
-  }
-} catch (error) {
-  console.warn('Locale detection failed, defaulting to en:', error);
-  i18n.locale = 'en';
-}
-
-// Ensure fallbacks
+// Set defaults first
 i18n.defaultLocale = 'en';
 i18n.enableFallback = true;
+
+// Get device language and set locale
+const getDeviceLanguage = () => {
+  try {
+    const locales = getLocales();
+    
+    // Get the first locale's language code
+    if (locales && locales.length > 0) {
+      const languageCode = locales[0].languageCode;
+      
+      if (languageCode) {
+        const normalizedCode = languageCode.toLowerCase();
+        
+        // Check if we have translations for this language
+        const supportedLanguages = Object.keys(i18n.translations);
+        
+        if (supportedLanguages.includes(normalizedCode)) {
+          console.log(`Setting locale to device language: ${normalizedCode}`);
+          return normalizedCode;
+        }
+      }
+    }
+    
+    console.log('Device language not supported, defaulting to English');
+    return 'en';
+  } catch (error) {
+    console.warn('Failed to detect device language, defaulting to English:', error);
+    return 'en';
+  }
+};
+
+i18n.locale = getDeviceLanguage();
 
 export default i18n;

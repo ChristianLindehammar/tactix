@@ -1,5 +1,3 @@
-import { addPlayer } from '@/services/firebase';
-
 export default {  
   // Navigation
   settings: 'Inställningar',
@@ -8,6 +6,8 @@ export default {
   tactics: 'Taktik',
   
   // Settings Screen
+  sportSelection: 'Välj sport',
+  aboutApp: 'Om appen',
   aboutTheApp: 'Ett verktyg för idrottstränare att planera lagträningar, hantera taktiker och utveckla spelstrategier.',
   copyright: '© 2025 CoachMate, Christian Lindehammar.',
   thirdPartyLibraries: 'Denna app använder flera öppen källkod-bibliotek:',
@@ -35,6 +35,7 @@ export default {
   benchPlayers: 'Avbytare',
   bench: 'Bänk', // Added
   noPlayersOnBench: 'Inga spelare på bänken', // Added
+  noPlayersYet: 'Inga spelare ännu. Lägg till din första spelare ovan!',
   courtBenchSeparator: 'Plan / Bänk separator',
   enterPlayerName: 'Ange spelarnamn',
   addPlayer: 'Lägg till spelare',
@@ -85,7 +86,6 @@ export default {
   dragHint: 'Tryck och dra spelare upp och ner för att ändra deras ordning',
 
   // Collapsible Sections
-  aboutApp: 'Om appen',
   generalSettings: 'Allmänna inställningar',
   thirdPartyLibs: 'Tredjepartsbibliotek',
 
@@ -115,4 +115,13 @@ export default {
   tacticsAddTooltip: 'Tryck på spelare- eller motståndarknappen och sedan på planen för att lägga till en markör',
   tacticsMoveTooltip: 'Dra markörerna för att flytta dem på planen',
   tacticsDeleteTooltip: 'Tryck och håll på en markör för att ta bort den',
+
+  // Court Configuration
+  configurationOptions: 'Konfigurationsalternativ',
+  createNew: 'Skapa ny',
+  createConfiguration: 'Skapa konfiguration',
+  renameConfiguration: 'Byt namn på konfiguration',
+  deleteConfigurationConfirm: 'Är du säker på att du vill ta bort denna konfiguration?',
+  confirmDelete: 'Bekräfta borttagning',
+  configurationTooltipMessage: 'Växla mellan olika lagkonfigurationer. Tryck länge för att byta namn eller ta bort.',
 };

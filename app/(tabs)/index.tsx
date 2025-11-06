@@ -1,28 +1,34 @@
-import { StyleSheet, View, Dimensions, Pressable, Platform, Alert, ActivityIndicator } from 'react-native';
-import { router, usePathname, useSegments } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTeam } from '@/context/TeamContext';
-import { useSport } from '@/context/SportContext';
-import { useEffect, useState } from 'react';
+import * as FileSystem from 'expo-file-system/legacy';
 import * as Linking from 'expo-linking';
-import * as FileSystem from 'expo-file-system';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 
-import { ThemedView } from '@/components/ThemedView';
-import { GenericCourt } from '@/components/GenericCourt';
-import { LAYOUT } from '@/constants/layout';
-import { ThemedText } from '@/components/ThemedText';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { useTranslation } from '@/hooks/useTranslation';
-import { SportSelector } from '@/components/SportSelector';
-import { sportsConfig } from '@/constants/sports';
-import { BenchPanel } from '@/components/BenchPanel';
+import { ActivityIndicator, Alert, Dimensions, Platform, Pressable, StyleSheet, View } from 'react-native';
+import Animated, { useAnimatedStyle } from 'react-native-reanimated';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DragProvider, useDrag } from '@/context/DragContext';
-import { Player } from '@/components/Player';
+import { router, usePathname } from 'expo-router';
+import { useEffect, useRef, useState } from 'react';
+import { debugTranslations } from '@/utils/debugTranslations';
+
+import { BenchPanel } from '@/components/BenchPanel';
+import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelector';
+import { GenericCourt } from '@/components/GenericCourt';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { LAYOUT } from '@/constants/layout';
 import { LayoutRectangle } from 'react-native';
+import { Player } from '@/components/Player';
+import { SportSelector } from '@/components/SportSelector';
+import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
+import { TooltipModal } from '@/components/TooltipModal';
+import { sportsConfig } from '@/constants/sports';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useSport } from '@/context/SportContext';
+import { useTeam } from '@/context/TeamContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const PANEL_HEIGHT_COLLAPSED = 35;
+const CONFIGURATION_SELECTOR_HEIGHT = 40;
 
 export default function HomeScreen() {
   return (
@@ -41,11 +47,20 @@ function HomeScreenContent() {
 
   const [isProcessingFile, setIsProcessingFile] = useState(false);
   const [courtLayout, setCourtLayout] = useState<LayoutRectangle | null>(null);
+  const [showConfigurationTooltip, setShowConfigurationTooltip] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
+  const configurationSelectorRef = useRef<View>(null);
   
   const pathname = usePathname();
-  const segments = useSegments();
   
   const isFileUrl = pathname && (pathname.startsWith('file:') || pathname.startsWith('content:'));
+  
+  // Debug translations on mount
+  useEffect(() => {
+    if (__DEV__) {
+      debugTranslations();
+    }
+  }, []);
   
   useEffect(() => {
     if (isFileUrl) {
@@ -127,6 +142,47 @@ function HomeScreenContent() {
     return () => subscription.remove();
   }, [pathname, t, router, importTeamFromFile, setIsProcessingFile]);
 
+  // Show tooltip for CourtConfigurationSelector
+  useEffect(() => {
+    const checkAndShowTooltip = async () => {
+      try {
+        const hasSeenConfigTooltip = await AsyncStorage.getItem('configurationTooltipShown');
+        if (hasSeenConfigTooltip === 'true') {
+          return;
+        }
+
+        if (team && selectedSport && configurationSelectorRef.current) {
+          setTimeout(() => {
+            if (configurationSelectorRef.current) {
+              configurationSelectorRef.current.measure((_x, _y, width, height, pageX, pageY) => {
+                setTooltipPosition({
+                  x: pageX + width / 2,
+                  y: pageY + height + 10,
+                });
+                setShowConfigurationTooltip(true);
+              });
+            }
+          }, 1000); // Small delay to ensure layout is complete
+        }
+      } catch (error) {
+        console.error('Error checking configuration tooltip status:', error);
+      }
+    };
+
+    checkAndShowTooltip();
+  }, [team, selectedSport]);
+
+  const handleConfigurationTooltipClose = async () => {
+    setShowConfigurationTooltip(false);
+    
+    // Mark tooltip as shown so it doesn't appear again
+    try {
+      await AsyncStorage.setItem('configurationTooltipShown', 'true');
+    } catch (error) {
+      console.error('Error saving tooltip shown status:', error);
+    }
+  };
+
   const ghostPlayerStyle = useAnimatedStyle(() => {
     if (!dragPosition) {
       return {
@@ -187,7 +243,7 @@ function HomeScreenContent() {
     );
   }
 
-  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED;
+  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED - CONFIGURATION_SELECTOR_HEIGHT;
   const availableWidth = Dimensions.get('window').width;
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
   const screenRatio = availableWidth / availableHeight;
@@ -207,14 +263,25 @@ function HomeScreenContent() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
         <View style={{ height: insets.top + 10 }} />
-        
-        <View 
+
+        <View ref={configurationSelectorRef} collapsable={false}>
+          <CourtConfigurationSelector />
+        </View>
+
+        <TooltipModal
+          visible={showConfigurationTooltip}
+          onClose={handleConfigurationTooltipClose}
+          message={t('configurationTooltipMessage') || 'Switch between different team configurations. Long press to rename or delete.'}
+          position={tooltipPosition}
+        />
+
+        <View
           style={[
             styles.courtContainer,
             {
               paddingBottom: PANEL_HEIGHT_COLLAPSED + 60,
             }
-          ]} 
+          ]}
           onLayout={onCourtLayout}
         >
           <GenericCourt
@@ -226,9 +293,9 @@ function HomeScreenContent() {
             aspectRatio={aspectRatio}
           />
         </View>
-        
+
         <View style={{ height: PANEL_HEIGHT_COLLAPSED }} />
-        
+
         <BenchPanel courtLayout={courtLayout} />
 
         {isDragging && draggedItem && dragPosition && (

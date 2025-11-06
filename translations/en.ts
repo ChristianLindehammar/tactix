@@ -2,10 +2,12 @@ export default {
   // Navigation
   settings: 'Settings',
   team: 'Team',
-  playGround: 'Play Ground',
+  playGround: 'Playing field',
   tactics: 'Tactics',
   
   // Settings Screen
+  sportSelection: 'Sport Selection',
+  aboutApp: 'About the app',
   aboutTheApp: 'A tool for sports coaches to plan team training, manage tactics, and develop game strategies.',
   copyright: '© 2025 CoachMate by Christian Lindehammar. All rights reserved.',
   thirdPartyLibraries: 'This app uses several open-source libraries:',
@@ -38,6 +40,7 @@ export default {
   benchPlayers: 'Bench Players',
   bench: 'Bench', // Added
   noPlayersOnBench: 'No players on the bench', // Added
+  noPlayersYet: 'No players yet. Add your first player above!',
   courtBenchSeparator: 'Court / Bench Separator',
   enterPlayerName: 'Enter player name',
   addPlayer: 'Add Player',
@@ -88,7 +91,6 @@ export default {
   dragHint: 'Drag and hold players up and down to reorder them',
 
   // Collapsible Sections
-  aboutApp: 'About the app',
   generalSettings: 'General settings',
   thirdPartyLibs: '3rd party libraries',
 
@@ -113,4 +115,13 @@ export default {
   tacticsAddTooltip: 'Tap the player or opponent button, then tap the court to add a marker',
   tacticsMoveTooltip: 'Drag markers to reposition them on the court',
   tacticsDeleteTooltip: 'Long press on a marker to delete it',
+
+  // Court Configuration
+  configurationOptions: 'Configuration Options',
+  createNew: 'Create New',
+  createConfiguration: 'Create Configuration',
+  renameConfiguration: 'Rename Configuration',
+  deleteConfigurationConfirm: 'Are you sure you want to delete this configuration?',
+  confirmDelete: 'Confirm Delete',
+  configurationTooltipMessage: 'Switch between different team configurations. Long press to rename or delete.',
 };

@@ -5,13 +5,15 @@ import FloorballBallSvg from './ui/FloorballBallSvg';
 import BandyBallSvg from './ui/BandyBallSvg';
 import HockeyBallSvg from './ui/HockeyBallSvg';
 import BasketballBallSvg from './ui/BasketballBallSvg';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 interface SportBallProps extends SvgProps {
   sport?: string;  // Optional override for the current sport
   size?: number;   // Optional size override
+  color?: string;  // Optional color override for Material Icons
 }
 
-export const SportBall: React.FC<SportBallProps> = ({ sport, size, ...props }) => {
+export const SportBall: React.FC<SportBallProps> = ({ sport, size, color, ...props }) => {
   // Use sport from context if not explicitly provided
   const { selectedSport } = useSport();
   const activeSport = sport || selectedSport || 'soccer';
@@ -25,6 +27,14 @@ export const SportBall: React.FC<SportBallProps> = ({ sport, size, ...props }) =
 
   // Render the appropriate ball based on sport
   switch (activeSport) {
+    case 'soccer':
+      return (
+        <MaterialIcons
+          name="sports-soccer"
+          size={size || 24}
+          color={color || '#FFA000'}
+        />
+      );
     case 'floorball':
       return <FloorballBallSvg {...ballProps} />;
     case 'bandy':
@@ -35,8 +45,14 @@ export const SportBall: React.FC<SportBallProps> = ({ sport, size, ...props }) =
       return <BasketballBallSvg {...ballProps} />;
     // Add cases for other sports if needed
     default:
-      // Default to FloorballBall or you could add a default ball icon
-      return <FloorballBallSvg {...ballProps} />;
+      // Default to soccer ball
+      return (
+        <MaterialIcons
+          name="sports-soccer"
+          size={size || 24}
+          color={color || '#FFA000'}
+        />
+      );
   }
 };
 

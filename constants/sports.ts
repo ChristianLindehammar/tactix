@@ -23,10 +23,10 @@ export const sportsConfig: SportsConfiguration = {
     aspectRatio: 484 / 908,
     positions: ['Goalkeeper', 'Defender', 'Center', 'Forward'],
     positionColors: {
-      Goalkeeper: '#5eaec3',
-      Defender: '#a7d0dc',
-      Center: '#8b8b8b',
-      Forward: '#9aadb3',
+      Goalkeeper: '#5eaec3',  // Soft teal (base color)
+      Defender: '#8b9dc3',    // Muted periwinkle blue
+      Center: '#c3a08b',      // Warm terracotta
+      Forward: '#88b894',     // Sage green
     },
   },
   soccer: {
@@ -34,10 +34,10 @@ export const sportsConfig: SportsConfiguration = {
     aspectRatio: 549 / 800,
     positions: ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'],
     positionColors: {
-      Goalkeeper: '#5eaec3',
-      Defender: '#a7d0dc',
-      Midfielder: '#8b8b8b',
-      Forward: '#9aadb3',
+      Goalkeeper: '#5eaec3',  // Soft teal (base color)
+      Defender: '#8b9dc3',    // Muted periwinkle blue
+      Midfielder: '#c3a08b',  // Warm terracotta
+      Forward: '#88b894',     // Sage green
     },
   },
   hockey: {
@@ -45,10 +45,10 @@ export const sportsConfig: SportsConfiguration = {
     aspectRatio: 427 / 846,
     positions: ['Goalkeeper', 'Defender', 'Center', 'Forward'],
     positionColors: {
-      Goalkeeper: '#5eaec3',
-      Defender: '#a7d0dc',
-      Center: '#8b8b8b',
-      Forward: '#9aadb3',
+      Goalkeeper: '#5eaec3',  // Soft teal (base color)
+      Defender: '#8b9dc3',    // Muted periwinkle blue
+      Center: '#c3a08b',      // Warm terracotta
+      Forward: '#88b894',     // Sage green
     },
   },
   bandy: {
@@ -56,10 +56,10 @@ export const sportsConfig: SportsConfiguration = {
     aspectRatio: 549 / 840,
     positions: ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'],
     positionColors: {
-      Goalkeeper: '#5eaec3',
-      Defender: '#a7d0dc',
-      Midfielder: '#8b8b8b',
-      Forward: '#9aadb3',
+      Goalkeeper: '#5eaec3',  // Soft teal (base color)
+      Defender: '#8b9dc3',    // Muted periwinkle blue
+      Midfielder: '#c3a08b',  // Warm terracotta
+      Forward: '#88b894',     // Sage green
     },
   },
   basketball: {
@@ -67,11 +67,11 @@ export const sportsConfig: SportsConfiguration = {
     aspectRatio: 429 / 803,
     positions: ['PointGuard', 'ShootingGuard', 'SmallForward', 'PowerForward', 'Center'],
     positionColors: {
-      PointGuard: '#5eaec3',
-      ShootingGuard: '#a7d0dc',
-      SmallForward: '#8b8b8b',
-      PowerForward: '#9aadb3',
-      Center: '#b5c9c1',
+      PointGuard: '#5eaec3',      // Soft teal (base color)
+      ShootingGuard: '#8b9dc3',   // Muted periwinkle blue
+      SmallForward: '#c3a08b',    // Warm terracotta
+      PowerForward: '#88b894',    // Sage green
+      Center: '#b89dab',          // Dusty mauve
     },
   },
 };
