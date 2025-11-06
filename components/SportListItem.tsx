@@ -4,6 +4,11 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { ThemedText } from '@/components/ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { Sport, sportsConfig } from '@/constants/sports';
+import BandyBallSvg from '@/components/ui/BandyBallSvg';
+import BasketballBallSvg from '@/components/ui/BasketballBallSvg';
+import FloorballBallSvg from '@/components/ui/FloorballBallSvg';
+import FootballSvg from '@/components/ui/FootballSvg';
+import HockeyBallSvg from '@/components/ui/HockeyBallSvg';
 
 interface SportListItemProps {
   sport: Sport;
@@ -13,12 +18,19 @@ interface SportListItemProps {
   onPress: (sport: Sport) => void;
 }
 
+const sportBallIcons = {
+  floorball: FloorballBallSvg,
+  soccer: FootballSvg,
+  hockey: HockeyBallSvg,
+  bandy: BandyBallSvg,
+  basketball: BasketballBallSvg,
+};
+
 export function SportListItem({ sport, label, isSelected, isLast, onPress }: SportListItemProps) {
-  const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
   const separatorColor = useThemeColor({}, 'borderColor');
 
-  const SportIcon = sportsConfig[sport].Svg;
+  const SportIcon = sportBallIcons[sport];
 
   return (
     <TouchableOpacity 
