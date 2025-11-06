@@ -8,6 +8,8 @@ export default {
   tactics: 'Taktiikka',
   
   // Settings Screen
+  sportSelection: 'Urheilulajin valinta',
+  aboutApp: 'Tietoa sovelluksesta',
   aboutTheApp: 'Työkalu urheiluvalmentajille joukkueharjoitusten suunnitteluun, taktiikan hallintaan ja pelistrategioiden kehittämiseen.',
   copyright: '© 2025 CoachMate, Christian Lindehammar.',
   thirdPartyLibraries: 'Tämä sovellus käyttää useita avoimen lähdekoodin kirjastoja:',

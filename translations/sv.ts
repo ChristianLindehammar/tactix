@@ -8,6 +8,8 @@ export default {
   tactics: 'Taktik',
   
   // Settings Screen
+  sportSelection: 'Sportval',
+  aboutApp: 'Om appen',
   aboutTheApp: 'Ett verktyg för idrottstränare att planera lagträningar, hantera taktiker och utveckla spelstrategier.',
   copyright: '© 2025 CoachMate, Christian Lindehammar.',
   thirdPartyLibraries: 'Denna app använder flera öppen källkod-bibliotek:',

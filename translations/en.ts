@@ -6,6 +6,8 @@ export default {
   tactics: 'Tactics',
   
   // Settings Screen
+  sportSelection: 'Sport Selection',
+  aboutApp: 'About the app',
   aboutTheApp: 'A tool for sports coaches to plan team training, manage tactics, and develop game strategies.',
   copyright: '© 2025 CoachMate by Christian Lindehammar. All rights reserved.',
   thirdPartyLibraries: 'This app uses several open-source libraries:',
