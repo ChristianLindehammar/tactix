@@ -1,22 +1,25 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
+
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { useThemeColor } from '@/hooks/useThemeColor';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { router } from 'expo-router';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 interface SettingsListItemProps {
   icon: keyof typeof MaterialIcons.glyphMap;
   title: string;
   route?: string;
   onPress?: () => void;
+  isFirst?: boolean;
+  isLast?: boolean;
 }
 
-export function SettingsListItem({ icon, title, route, onPress }: SettingsListItemProps) {
+export function SettingsListItem({ icon, title, route, onPress, isFirst, isLast }: SettingsListItemProps) {
   const backgroundColor = useThemeColor({}, 'background');
   const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
-  const borderColor = useThemeColor({}, 'icon');
+  const borderColor = useThemeColor({}, 'borderColor');
 
   const handlePress = () => {
     if (onPress) {
@@ -28,7 +31,11 @@ export function SettingsListItem({ icon, title, route, onPress }: SettingsListIt
 
   return (
     <TouchableOpacity onPress={handlePress} activeOpacity={0.7}>
-      <ThemedView style={[styles.container, { borderBottomColor: borderColor }]}>
+      <ThemedView style={[
+        styles.container,
+        { borderBottomColor: borderColor },
+        isLast && styles.lastItem
+      ]}>
         <View style={[styles.iconContainer, { backgroundColor: tintColor }]}>
           <MaterialIcons name={icon} size={24} color={backgroundColor as string} />
         </View>
@@ -46,7 +53,9 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 16,
     borderBottomWidth: 0.5,
-    borderBottomColor: 'rgba(0,0,0,0.1)',
+  },
+  lastItem: {
+    borderBottomWidth: 0,
   },
   iconContainer: {
     width: 40,

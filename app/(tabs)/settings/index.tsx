@@ -1,12 +1,13 @@
-import { StyleSheet, TouchableOpacity, Linking, Share, ScrollView } from 'react-native';
+import { Linking, ScrollView, Share, StyleSheet, TouchableOpacity } from 'react-native';
+
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { SettingsListItem } from '@/components/SettingsListItem';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { useTranslation } from '@/hooks/useTranslation';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SettingsListItem } from '@/components/SettingsListItem';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
@@ -14,7 +15,8 @@ export default function SettingsScreen() {
   const borderColorValue = useThemeColor({}, 'announcement.border');
   const iconColorValue = useThemeColor({}, 'announcement.icon');
   const background = useThemeColor({}, 'background');
-  
+  const menuBackground = useThemeColor({}, 'menuBackground');
+
   // Ensure we have string color values
   const announcementBgColor = typeof bgColorValue === 'string' ? bgColorValue : '#FFFFFF';
   const announcementBorderColor = typeof borderColorValue === 'string' ? borderColorValue : '#DDDDDD';
@@ -75,17 +77,19 @@ export default function SettingsScreen() {
             </TouchableOpacity>
           </ThemedView>
 
-          {/* Settings List */}
-          <ThemedView style={styles.settingsList}>
+          {/* Settings List - Grouped Card */}
+          <ThemedView style={[styles.settingsCard, { backgroundColor: menuBackground as string }]}>
             <SettingsListItem
               icon="sports"
               title={t('sportSelection')}
               route="/settings/sport"
+              isFirst={true}
             />
             <SettingsListItem
               icon="info"
               title={t('aboutApp')}
               route="/settings/about"
+              isLast={true}
             />
           </ThemedView>
         </ThemedView>
@@ -144,8 +148,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0.1)',
   },
-  settingsList: {
+  settingsCard: {
+    marginHorizontal: 16,
     marginTop: 8,
+    borderRadius: 12,
+    overflow: 'hidden',
   },
 });
 
