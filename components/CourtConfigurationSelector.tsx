@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { ThemedText } from './ThemedText';
-import { IconSymbol } from './ui/IconSymbol';
-import { useThemeColor } from '@/hooks/useThemeColor';
-import { useTeam } from '@/context/TeamContext';
-import { useTranslation } from '@/hooks/useTranslation';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+
 import { CustomInputDialog } from './CustomInputDialog';
+import { IconSymbol } from './ui/IconSymbol';
+import { ThemedText } from './ThemedText';
+import { useTeam } from '@/context/TeamContext';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import { useTranslation } from '@/hooks/useTranslation';
 
-interface CourtConfigurationSelectorProps {
-  onLongPress?: () => void;
-}
-
-export const CourtConfigurationSelector: React.FC<CourtConfigurationSelectorProps> = ({ onLongPress }) => {
-  const { team, switchToPreviousConfiguration, switchToNextConfiguration, createConfiguration, renameConfiguration, deleteConfiguration, getActiveConfiguration } = useTeam();
+export const CourtConfigurationSelector: React.FC = () => {
+  const { team, switchToPreviousConfiguration, switchToNextConfiguration, createConfiguration, getActiveConfiguration } = useTeam();
   const { t } = useTranslation();
   const backgroundColor = useThemeColor({}, 'cardBackground');
-  const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
-  
-  const [showRenameDialog, setShowRenameDialog] = useState(false);
+
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   if (!team || !team.configurations || team.configurations.length === 0) {
@@ -27,50 +22,7 @@ export const CourtConfigurationSelector: React.FC<CourtConfigurationSelectorProp
 
   const activeConfig = getActiveConfiguration();
   const configCount = team.configurations.length;
-
-  const handleLongPress = () => {
-    if (onLongPress) {
-      onLongPress();
-    } else {
-      // Show options menu
-      Alert.alert(
-        t('configurationOptions') || 'Configuration Options',
-        '',
-        [
-          {
-            text: t('createNew') || 'Create New',
-            onPress: () => setShowCreateDialog(true),
-          },
-          {
-            text: t('rename') || 'Rename',
-            onPress: () => setShowRenameDialog(true),
-          },
-          configCount > 1 && {
-            text: t('delete') || 'Delete',
-            onPress: () => {
-              Alert.alert(
-                t('confirmDelete') || 'Confirm Delete',
-                t('deleteConfigurationConfirm') || `Are you sure you want to delete "${activeConfig?.name}"?`,
-                [
-                  { text: t('cancel') || 'Cancel', style: 'cancel' },
-                  {
-                    text: t('delete') || 'Delete',
-                    style: 'destructive',
-                    onPress: () => activeConfig && deleteConfiguration(activeConfig.id),
-                  },
-                ]
-              );
-            },
-            style: 'destructive' as const,
-          },
-          {
-            text: t('cancel') || 'Cancel',
-            style: 'cancel',
-          },
-        ].filter(Boolean) as any
-      );
-    }
-  };
+  const currentIndex = team.configurations.findIndex(c => c.id === activeConfig?.id);
 
   const handleCreate = (name: string) => {
     if (name.trim()) {
@@ -79,50 +31,63 @@ export const CourtConfigurationSelector: React.FC<CourtConfigurationSelectorProp
     setShowCreateDialog(false);
   };
 
-  const handleRename = (name: string) => {
-    if (name.trim() && activeConfig) {
-      renameConfiguration(activeConfig.id, name.trim());
-    }
-    setShowRenameDialog(false);
-  };
+  // Determine which buttons to show
+  const showLeftArrow = configCount > 1 && currentIndex > 0;
+  const showRightArrow = configCount > 1 && currentIndex < configCount - 1;
+  const showPlusButton = configCount === 1;
 
   return (
     <>
       <View style={[styles.container, { backgroundColor: backgroundColor as string }]}>
-        <TouchableOpacity
-          onPress={switchToPreviousConfiguration}
-          style={styles.arrowButton}
-          disabled={configCount <= 1}
-        >
-          <IconSymbol
-            name="chevron.left"
-            size={24}
-            color={configCount > 1 ? (tintColor as string) : '#999'}
-          />
-        </TouchableOpacity>
+        {/* Left arrow - only show when not on first config */}
+        {showLeftArrow ? (
+          <TouchableOpacity
+            onPress={switchToPreviousConfiguration}
+            style={styles.arrowButton}
+          >
+            <IconSymbol
+              name="chevron.left"
+              size={20}
+              color={tintColor as string}
+            />
+          </TouchableOpacity>
+        ) : (
+          <View style={styles.arrowButton} />
+        )}
 
-        <TouchableOpacity
-          onPress={() => {}}
-          onLongPress={handleLongPress}
-          delayLongPress={500}
-          style={styles.nameContainer}
-        >
+        {/* Configuration name */}
+        <View style={styles.nameContainer}>
           <ThemedText style={styles.nameText}>
             {activeConfig?.name || 'Configuration'}
           </ThemedText>
-        </TouchableOpacity>
+        </View>
 
-        <TouchableOpacity
-          onPress={switchToNextConfiguration}
-          style={styles.arrowButton}
-          disabled={configCount <= 1}
-        >
-          <IconSymbol
-            name="chevron.right"
-            size={24}
-            color={configCount > 1 ? (tintColor as string) : '#999'}
-          />
-        </TouchableOpacity>
+        {/* Right side: either right arrow, plus button, or empty space */}
+        {showPlusButton ? (
+          <TouchableOpacity
+            onPress={() => setShowCreateDialog(true)}
+            style={styles.arrowButton}
+          >
+            <IconSymbol
+              name="plus.circle.fill"
+              size={20}
+              color={tintColor as string}
+            />
+          </TouchableOpacity>
+        ) : showRightArrow ? (
+          <TouchableOpacity
+            onPress={switchToNextConfiguration}
+            style={styles.arrowButton}
+          >
+            <IconSymbol
+              name="chevron.right"
+              size={20}
+              color={tintColor as string}
+            />
+          </TouchableOpacity>
+        ) : (
+          <View style={styles.arrowButton} />
+        )}
       </View>
 
       <CustomInputDialog
@@ -131,14 +96,6 @@ export const CourtConfigurationSelector: React.FC<CourtConfigurationSelectorProp
         onCancel={() => setShowCreateDialog(false)}
         onSubmit={handleCreate}
         initialValue=""
-      />
-
-      <CustomInputDialog
-        visible={showRenameDialog}
-        title={t('renameConfiguration') || 'Rename Configuration'}
-        onCancel={() => setShowRenameDialog(false)}
-        onSubmit={handleRename}
-        initialValue={activeConfig?.name || ''}
       />
     </>
   );
@@ -149,29 +106,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 6,
     marginHorizontal: 16,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 1,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
-    elevation: 3,
+    shadowOpacity: 0.08,
+    shadowRadius: 2,
+    elevation: 2,
   },
   arrowButton: {
-    padding: 8,
+    padding: 6,
+    minWidth: 32,
   },
   nameContainer: {
     flex: 1,
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: 12,
   },
   nameText: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
 });

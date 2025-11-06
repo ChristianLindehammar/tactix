@@ -25,7 +25,7 @@ import { useTeam } from '@/context/TeamContext';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const PANEL_HEIGHT_COLLAPSED = 35;
-const CONFIGURATION_SELECTOR_HEIGHT = 50;
+const CONFIGURATION_SELECTOR_HEIGHT = 40;
 
 export default function HomeScreen() {
   return (
