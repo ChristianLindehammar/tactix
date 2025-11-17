@@ -3,3 +3,5 @@ export { useTeamData } from './useTeamData';
 export { useDebouncedPersistence } from './useDebouncedPersistence';
 export { useErrorHandler } from './useErrorHandler';
 export { useTeamState } from './useTeamState';
+export { useTeamManagement } from './useTeamManagement';
+export { usePlayerManagement } from './usePlayerManagement';

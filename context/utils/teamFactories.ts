@@ -7,6 +7,7 @@ import {
   DEFAULT_COURT_POSITION,
   MIN_POSITION_VALUE,
   MAX_POSITION_VALUE,
+  CONFIGURATION_ID_SUFFIX,
 } from '../constants/teamDefaults';
 
 /**
@@ -51,4 +52,33 @@ export const createNewPlayer = (name: string, timestamp: number): PlayerType => 
 export const validatePosition = (position: Position): Position => ({
   x: Math.max(MIN_POSITION_VALUE, Math.min(MAX_POSITION_VALUE, position.x)),
   y: Math.max(MIN_POSITION_VALUE, Math.min(MAX_POSITION_VALUE, position.y)),
+});
+
+/**
+ * Generates a unique ID for configurations using timestamp and random string
+ */
+export const generateConfigurationId = (): string => {
+  return Date.now().toString() + '-' + Math.random().toString(36).slice(2, 9);
+};
+
+/**
+ * Extracts current player positions from a team's players
+ */
+export const extractPlayerPositions = (players: PlayerType[]): Record<string, Position> => {
+  const positions: Record<string, Position> = {};
+  players.forEach(player => {
+    if (player.courtPosition) {
+      positions[player.id] = { ...player.courtPosition };
+    }
+  });
+  return positions;
+};
+
+/**
+ * Creates a new configuration with given name and player positions
+ */
+export const createNewConfiguration = (name: string, playerPositions: Record<string, Position> = {}): CourtConfiguration => ({
+  id: generateConfigurationId(),
+  name,
+  playerPositions,
 });

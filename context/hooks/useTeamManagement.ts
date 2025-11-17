@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 import { Team } from '@/types/models';
 import { createNewTeam } from '../utils/teamFactories';
 
@@ -15,10 +15,12 @@ export const useTeamManagement = ({
   selectedTeamId,
   setSelectedTeamId,
 }: UseTeamManagementProps) => {
+  const idCounterRef = useRef(0);
+
   const createTeam = useCallback((name: string) => {
     if (!name.trim()) return; // Validate input
 
-    const now = Date.now();
+    const now = Date.now() + idCounterRef.current++;
     const newTeam = createNewTeam(name, now);
 
     setTeams(prev => [...prev, newTeam]);
@@ -30,11 +32,20 @@ export const useTeamManagement = ({
   }, [setSelectedTeamId]);
 
   const removeTeam = useCallback((teamId: string) => {
-    setTeams(prev => prev.filter(team => team.id !== teamId));
+    setTeams(prev => {
+      const updated = prev.filter(team => team.id !== teamId);
+      return updated;
+    });
+
+    // Auto-select another team if we're removing the selected one
     if (selectedTeamId === teamId) {
-      setSelectedTeamId('');
+      setSelectedTeamId(prevId => {
+        // Use functional update to get the latest teams
+        const currentTeams = teams.filter(t => t.id !== teamId);
+        return currentTeams.length > 0 ? currentTeams[0].id : '';
+      });
     }
-  }, [selectedTeamId, setTeams, setSelectedTeamId]);
+  }, [teams, selectedTeamId, setTeams, setSelectedTeamId]);
 
   const renameTeam = useCallback((teamId: string, newName: string) => {
     if (!newName.trim()) return; // Validate input
