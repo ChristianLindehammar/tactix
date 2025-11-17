@@ -1,5 +1,6 @@
+import { Modal, StyleSheet, TouchableOpacity, View } from 'react-native';
+
 import React from 'react';
-import { View, Modal, Button, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -19,9 +20,16 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({ visible, onClo
 
   return (
     <Modal visible={visible} transparent onRequestClose={onClose}>
-      <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
+      <View style={styles.overlay}>
+        {/* Full-screen invisible overlay to close when tapping outside the menu */}
+        <TouchableOpacity
+          style={StyleSheet.absoluteFill}
+          activeOpacity={1}
+          onPress={onClose}
+        />
+
         <View style={[styles.container, { top: position.top - 30, left: position.left - 200 }]}>
-          <View style={[styles.menuBox, { backgroundColor: menuBackground }]}>
+          <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
             <TouchableOpacity
               style={styles.menuItem}
               onPress={() => {
