@@ -1,14 +1,16 @@
-import { Team, PlayerType, Position, CourtConfiguration } from '@/types/models';
 import {
-  DEFAULT_SPORT,
-  DEFAULT_POSITION_TYPE,
-  DEFAULT_USER_ID,
+  CONFIGURATION_ID_SUFFIX,
   DEFAULT_CONFIGURATION_NAME,
   DEFAULT_COURT_POSITION,
-  MIN_POSITION_VALUE,
+  DEFAULT_POSITION_TYPE,
+  DEFAULT_SPORT,
+  DEFAULT_USER_ID,
   MAX_POSITION_VALUE,
-  CONFIGURATION_ID_SUFFIX,
+  MIN_POSITION_VALUE,
 } from '../constants/teamDefaults';
+import { CourtConfiguration, PlayerType, Position, Team } from '@/types/models';
+
+import { Sport } from '@/constants/sports';
 
 /**
  * Creates a default configuration for a team
@@ -22,7 +24,7 @@ export const createDefaultConfiguration = (timestamp: number): CourtConfiguratio
 /**
  * Creates a new team with default values
  */
-export const createNewTeam = (name: string, timestamp: number): Team => ({
+export const createNewTeam = (name: string, timestamp: number, sport: Sport = DEFAULT_SPORT): Team => ({
   id: timestamp.toString(),
   name: name.trim(),
   startingPlayers: [],
@@ -31,7 +33,7 @@ export const createNewTeam = (name: string, timestamp: number): Team => ({
   sharedWith: [],
   lastEdited: timestamp,
   editedBy: DEFAULT_USER_ID,
-  sport: DEFAULT_SPORT,
+  sport,
   configurations: [createDefaultConfiguration(timestamp)],
   selectedConfigurationId: `${timestamp}-config`,
 });
@@ -40,7 +42,7 @@ export const createNewTeam = (name: string, timestamp: number): Team => ({
  * Creates a new player with default values
  */
 export const createNewPlayer = (name: string, timestamp: number): PlayerType => ({
-  id: timestamp.toString(),
+  id: `${timestamp}-${Math.random().toString(36).slice(2, 9)}`,
   name: name.trim(),
   courtPosition: DEFAULT_COURT_POSITION,
   position: DEFAULT_POSITION_TYPE,

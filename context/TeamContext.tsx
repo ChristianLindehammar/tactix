@@ -1,22 +1,22 @@
-import React, { createContext, useContext, PropsWithChildren, useState, useCallback } from 'react';
-import { Team, PlayerType, Position, CourtConfiguration } from '@/types/models';
+import { CourtConfiguration, PlayerType, Position, Team } from '@/types/models';
 import {
   DEFAULT_COURT_POSITION,
-  POSITION_SPACING,
-  POSITION_PADDING,
   MIN_CONFIGURATIONS,
+  POSITION_PADDING,
+  POSITION_SPACING,
 } from './constants/teamDefaults';
-import { useTeamManagement } from './hooks/useTeamManagement';
-import { usePlayerManagement } from './hooks/usePlayerManagement';
-import { TeamContextProps, TeamContextError } from './types/teamContext';
+import React, { PropsWithChildren, createContext, useCallback, useContext } from 'react';
 import {
   createNewConfiguration,
   extractPlayerPositions,
 } from './utils/teamFactories';
 import { exportTeamToFile, importTeamFromFile as importTeamFromFileUtil } from './utils';
+
+import { TeamContextProps } from './types/teamContext';
+import { usePlayerManagement } from './hooks/usePlayerManagement';
 import { useSport } from '@/context/SportContext';
-
-
+import { useTeamData } from './hooks/useTeamData';
+import { useTeamManagement } from './hooks/useTeamManagement';
 
 // Create the context
 const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -34,16 +34,19 @@ export const useTeam = (): TeamContextProps => {
 
 // Provider component - implementing minimal functionality to pass tests
 export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  // State management
-  const [teams, setTeams] = useState<Team[]>([]);
-  const [selectedTeamId, setSelectedTeamId] = useState<string>('');
-  const [error, setError] = useState<TeamContextError | null>(null);
+  // Sport context for current sport and updating sport when importing teams
+  const { selectedSport, setSelectedSport } = useSport();
 
-  // Sport context for updating sport when importing teams
-  const { setSelectedSport } = useSport();
-
-  // Get currently selected team
-  const selectedTeam = teams.find(team => team.id === selectedTeamId);
+  // Sport-aware team data with persistence and per-sport selection
+  const {
+    teams: allTeams,
+    setTeams,
+    selectedTeamId,
+    setSelectedTeamId,
+    filteredTeams,
+    selectedTeam,
+    error,
+  } = useTeamData(selectedSport ?? 'soccer');
 
   // Use extracted hooks for team and player management
   const {
@@ -52,7 +55,13 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     removeTeam,
     renameTeam,
     updateTeam,
-  } = useTeamManagement({ teams, setTeams, selectedTeamId, setSelectedTeamId });
+  } = useTeamManagement({
+    teams: allTeams,
+    setTeams,
+    selectedTeamId,
+    setSelectedTeamId,
+    selectedSport: selectedSport ?? 'soccer',
+  });
 
   const {
     addPlayer,
@@ -113,11 +122,11 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
    * @param teamId - The ID of the team to export
    */
   const exportTeam = useCallback(async (teamId: string) => {
-    const teamToExport = teams.find(t => t.id === teamId);
+    const teamToExport = allTeams.find(t => t.id === teamId);
     if (!teamToExport) return;
 
     await exportTeamToFile(teamToExport, (key: string) => key);
-  }, [teams]);
+  }, [allTeams]);
 
   /**
    * Imports a team, ensuring it has configurations and a unique name.
@@ -158,7 +167,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     // Make name unique
     let finalName = teamToImport.name;
     let counter = 1;
-    while (teams.some(t => t.name === finalName)) {
+    while (allTeams.some(team => team.name === finalName)) {
       finalName = `${teamToImport.name} (${counter++})`;
     }
 
@@ -167,7 +176,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     setTeams(prev => [...prev, newTeam]);
     setSelectedTeamId(now);
-  }, [teams, setTeams, setSelectedTeamId, setSelectedSport]);
+  }, [allTeams, setTeams, setSelectedTeamId, setSelectedSport]);
 
   const importTeamFromFile = useCallback(async (fileUri: string): Promise<Team> => {
     const parsed = await importTeamFromFileUtil(fileUri);
@@ -321,7 +330,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const contextValue: TeamContextProps = {
     // State
     team: selectedTeam,
-    teams,
+    teams: filteredTeams,
     error,
 
     // Team management operations

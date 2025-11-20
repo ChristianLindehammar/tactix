@@ -14,13 +14,15 @@ import { act, render, renderHook } from '@testing-library/react-native';
 import { exportTeamToFile, importTeamFromFile } from '../utils';
 
 import React from 'react';
+import { Sport } from '@/constants/sports';
 
 // Mock dependencies
+let mockSelectedSport: Sport = 'soccer';
 const mockSetSelectedSport = jest.fn();
 
 jest.mock('@/context/SportContext', () => ({
   useSport: () => ({
-    selectedSport: 'soccer',
+    selectedSport: mockSelectedSport,
     setSelectedSport: mockSetSelectedSport,
   }),
 }));
@@ -97,9 +99,15 @@ const createTestConfiguration = (result: any, configName = 'Test Config') => {
 
 describe('TeamContext - Comprehensive Test Suite', () => {
   const renderHookWithProvider = <T,>(hook: () => T) => {
-    return renderHook(hook, {
+    const { result, rerender: baseRerender, ...rest } = renderHook(hook, {
       wrapper: ({ children }) => <TeamProvider>{children}</TeamProvider>,
     });
+
+    // Expose a parameterless rerender helper so tests can force a re-render
+    // when external mocks (like selectedSport) change.
+    const rerender = () => baseRerender({} as any);
+
+    return { result, rerender, ...rest };
   };
 
   // ============================================================================
@@ -1611,8 +1619,77 @@ describe('TeamContext - Comprehensive Test Suite', () => {
 
       expect(mockSetSelectedSport).toHaveBeenCalledWith('basketball');
     });
+
+  // ============================================================================
+  // 7. SPORT-SPECIFIC BEHAVIOR
+  // ============================================================================
+  describe('7. Sport-Specific Behavior', () => {
+    beforeEach(() => {
+      // Reset mocked sport before each test
+      mockSelectedSport = 'soccer';
+    });
+
+    it('creates teams with the current sport set on the team', () => {
+      const { result, rerender } = renderHookWithProvider(() => useTeam());
+
+      // Initially mocked sport is 'soccer'
+      act(() => {
+        result.current.createTeam('Soccer Team');
+      });
+
+      expect(result.current.teams).toHaveLength(1);
+      expect(result.current.teams[0].sport).toBe('soccer');
+
+      // Switch sport and re-render
+      mockSelectedSport = 'floorball';
+      rerender();
+
+      act(() => {
+        result.current.createTeam('Floorball Team');
+      });
+
+      // In floorball mode, only floorball teams are visible
+      expect(result.current.teams).toHaveLength(1);
+      expect(result.current.teams[0].name).toBe('Floorball Team');
+      expect(result.current.teams[0].sport).toBe('floorball');
+    });
+
+    it('filters visible teams by selected sport when switching between sports', () => {
+      const { result, rerender } = renderHookWithProvider(() => useTeam());
+
+      // Create a team while in soccer mode
+      act(() => {
+        result.current.createTeam('Soccer Team');
+      });
+
+      expect(result.current.teams).toHaveLength(1);
+      expect(result.current.teams[0].name).toBe('Soccer Team');
+      expect(result.current.teams[0].sport).toBe('soccer');
+
+      // Switch to floorball and create a floorball team
+      mockSelectedSport = 'floorball';
+      rerender();
+
+      act(() => {
+        result.current.createTeam('Floorball Team');
+      });
+
+      // In floorball mode, only the floorball team should be visible
+      expect(result.current.teams).toHaveLength(1);
+      expect(result.current.teams[0].name).toBe('Floorball Team');
+      expect(result.current.teams[0].sport).toBe('floorball');
+
+      // Switch back to soccer and ensure only the soccer team is visible
+      mockSelectedSport = 'soccer';
+      rerender();
+
+      expect(result.current.teams).toHaveLength(1);
+      expect(result.current.teams[0].name).toBe('Soccer Team');
+      expect(result.current.teams[0].sport).toBe('soccer');
+    });
   });
 
+  });
 });
 
 

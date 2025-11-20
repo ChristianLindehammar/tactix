@@ -1,4 +1,7 @@
 import { useCallback, useRef } from 'react';
+
+import { DEFAULT_SPORT } from '../constants/teamDefaults';
+import { Sport } from '@/constants/sports';
 import { Team } from '@/types/models';
 import { createNewTeam } from '../utils/teamFactories';
 
@@ -7,6 +10,7 @@ interface UseTeamManagementProps {
   setTeams: React.Dispatch<React.SetStateAction<Team[]>>;
   selectedTeamId: string;
   setSelectedTeamId: React.Dispatch<React.SetStateAction<string>>;
+  selectedSport: Sport | null;
 }
 
 export const useTeamManagement = ({
@@ -14,6 +18,7 @@ export const useTeamManagement = ({
   setTeams,
   selectedTeamId,
   setSelectedTeamId,
+  selectedSport,
 }: UseTeamManagementProps) => {
   const idCounterRef = useRef(0);
 
@@ -21,11 +26,11 @@ export const useTeamManagement = ({
     if (!name.trim()) return; // Validate input
 
     const now = Date.now() + idCounterRef.current++;
-    const newTeam = createNewTeam(name, now);
+    const newTeam = createNewTeam(name, now, selectedSport ?? DEFAULT_SPORT);
 
     setTeams(prev => [...prev, newTeam]);
     setSelectedTeamId(newTeam.id);
-  }, [setTeams, setSelectedTeamId]);
+  }, [selectedSport, setTeams, setSelectedTeamId]);
 
   const selectTeam = useCallback((teamId: string) => {
     setSelectedTeamId(teamId);

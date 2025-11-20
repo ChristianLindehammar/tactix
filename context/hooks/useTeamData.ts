@@ -1,7 +1,8 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Team } from '@/types/models';
-import { Sport } from '@/constants/sports';
 import { loadTeamData, saveTeamData, selectTeamForSport, updateSportTeamSelection } from '../utils';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+
+import { Sport } from '@/constants/sports';
+import { Team } from '@/types/models';
 import { useDebouncedPersistence } from './useDebouncedPersistence';
 import { useErrorHandler } from './useErrorHandler';
 
@@ -39,17 +40,48 @@ export const useTeamData = (selectedSport: string) => {
     const loadData = async () => {
       try {
         const data = await loadTeamData();
-        setTeams(data.teams);
-        setSportTeamSelections(data.sportTeamSelections);
-        
-        // Select appropriate team for current sport
-        const teamId = selectTeamForSport(
+
+        // Merge stored teams with any in-memory teams that may have been created
+        // before hydration completes (e.g. during tests or very fast user actions).
+        setTeams(prevTeams => {
+          const storedTeams = data.teams || [];
+
+          if (prevTeams.length === 0) {
+            return storedTeams;
+          }
+
+          if (storedTeams.length === 0) {
+            return prevTeams;
+          }
+
+          const existingIds = new Set(prevTeams.map(team => team.id));
+          const merged = [...prevTeams];
+
+          for (const team of storedTeams) {
+            if (!existingIds.has(team.id)) {
+              merged.push(team);
+            }
+          }
+
+          return merged;
+        });
+
+        // Merge sport-team selections, giving precedence to any mappings that
+        // were already set in memory.
+        setSportTeamSelections(prevSelections => ({
+          ...(data.sportTeamSelections || {}),
+          ...prevSelections,
+        }));
+
+        // Only apply stored selection if nothing has selected a team yet.
+        const teamIdFromStorage = selectTeamForSport(
           data.teams,
           selectedSport,
           data.sportTeamSelections,
           data.selectedTeamId
         );
-        setSelectedTeamId(teamId);
+
+        setSelectedTeamId(prevSelectedId => prevSelectedId || teamIdFromStorage);
       } catch (error) {
         handleError(error as Error);
       } finally {
