@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Modal, Button, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, Modal, Pressable, StyleSheet, TouchableOpacity } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -19,9 +19,9 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({ visible, onClo
 
   return (
     <Modal visible={visible} transparent onRequestClose={onClose}>
-      <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
+      <Pressable style={styles.overlay} onPress={onClose}>
         <View style={[styles.container, { top: position.top - 30, left: position.left - 200 }]}>
-          <View style={[styles.menuBox, { backgroundColor: menuBackground }]}>
+          <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
             <TouchableOpacity
               style={styles.menuItem}
               onPress={() => {
@@ -41,7 +41,7 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({ visible, onClo
             </TouchableOpacity>
           </View>
         </View>
-      </View>
+      </Pressable>
     </Modal>
   );
 };
