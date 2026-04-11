@@ -1,29 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Modal, View, TextInput, StyleSheet, TouchableOpacity, Platform, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { Colors } from '@/constants/Colors';
 import { useTranslation } from '@/hooks/useTranslation';
+import { parseBulkPlayerInput, ParsedPlayer } from '@/context/utils/parseBulkPlayerInput';
 
-interface CustomInputDialogProps {
+interface ImportPlayersDialogProps {
   visible: boolean;
-  title: string;
   onCancel: () => void;
-  onSubmit: (value: string) => void;
-  initialValue?: string;
+  onImport: (players: ParsedPlayer[]) => void;
 }
 
-export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
+export const ImportPlayersDialog: React.FC<ImportPlayersDialogProps> = ({
   visible,
-  title,
   onCancel,
-  onSubmit,
-  initialValue = ''
+  onImport,
 }) => {
-  const [value, setValue] = useState(initialValue);
+  const [text, setText] = useState('');
   const textColor = useThemeColor({}, 'text');
   const { t } = useTranslation();
+
+  const parsed = useMemo(() => parseBulkPlayerInput(text), [text]);
+
+  const handleImport = () => {
+    if (parsed.length > 0) {
+      onImport(parsed);
+      setText('');
+    }
+  };
+
+  const handleCancel = () => {
+    setText('');
+    onCancel();
+  };
 
   return (
     <Modal visible={visible} transparent animationType="fade" hardwareAccelerated={Platform.OS === 'android'}>
@@ -34,27 +45,35 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.overlay}>
             <ThemedView style={styles.dialog}>
-              <ThemedText style={styles.title}>{title}</ThemedText>
+              <ThemedText style={styles.title}>{t('importPlayers')}</ThemedText>
               <TextInput
                 style={[styles.input, { color: String(textColor), borderColor: String(textColor) }]}
-                value={value}
-                onChangeText={setValue}
+                value={text}
+                onChangeText={setText}
+                multiline
+                numberOfLines={8}
+                placeholder={t('importPlayersPlaceholder')}
+                placeholderTextColor={typeof textColor === 'string' ? textColor + '80' : undefined}
                 autoFocus
-                placeholderTextColor={typeof textColor === 'string' ? textColor : undefined}
+                textAlignVertical="top"
               />
+              <ThemedText style={styles.preview}>
+                {text.trim().length > 0
+                  ? parsed.length > 0
+                    ? t('importPlayersPreview', { count: parsed.length })
+                    : t('importPlayersEmpty')
+                  : ''}
+              </ThemedText>
               <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button} onPress={onCancel}>
-                  <ThemedText>
-                   { t('cancel')}
-                  </ThemedText>
+                <TouchableOpacity style={styles.button} onPress={handleCancel}>
+                  <ThemedText>{t('cancel')}</ThemedText>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={[styles.button, { backgroundColor: Colors.light.tint }]}
-                  onPress={() => value.trim() && onSubmit(value.trim())}
+                  style={[styles.button, { backgroundColor: parsed.length > 0 ? Colors.light.tint : '#ccc' }]}
+                  onPress={handleImport}
+                  disabled={parsed.length === 0}
                 >
-                  <ThemedText style={{ color: '#fff' }}>
-                    { t('ok')}
-                  </ThemedText>
+                  <ThemedText style={{ color: '#fff' }}>{t('import')}</ThemedText>
                 </TouchableOpacity>
               </View>
             </ThemedView>
@@ -73,7 +92,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   dialog: {
-    width: '80%',
+    width: '85%',
     borderRadius: 8,
     padding: 16,
     elevation: 5,
@@ -85,13 +104,20 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '500',
-    marginBottom: 16,
+    marginBottom: 12,
   },
   input: {
     borderWidth: 1,
     borderRadius: 4,
     padding: 8,
-    marginBottom: 16,
+    marginBottom: 8,
+    minHeight: 150,
+    fontSize: 14,
+  },
+  preview: {
+    fontSize: 13,
+    marginBottom: 12,
+    opacity: 0.7,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -102,6 +128,6 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 4,
     minWidth: 64,
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });

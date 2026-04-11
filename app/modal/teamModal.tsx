@@ -7,20 +7,25 @@ import * as DocumentPicker from 'expo-document-picker';
 import { useNavigation } from '@react-navigation/native';
 import { ThemedText } from '@/components/ThemedText';
 import { CustomInputDialog } from '@/components/CustomInputDialog';
+import { ImportPlayersDialog } from '@/components/ImportPlayersDialog';
 import { useTranslation } from '@/hooks/useTranslation';
+import { ParsedPlayer } from '@/context/utils/parseBulkPlayerInput';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TeamModal() {
   const navigation = useNavigation();
-  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile } = useTeam();
+  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile, addPlayers } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
   const [showRenameTeam, setShowRenameTeam] = useState(false);
+  const [showImportPlayers, setShowImportPlayers] = useState(false);
 
   const backgroundColor = useThemeColor({}, 'background');
   const textColor = useThemeColor({}, 'text');
   const tintColor = useThemeColor({}, 'tint');
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
   
 
   const handleCreateTeamConfirm = (teamName: string) => {
@@ -60,8 +65,9 @@ export default function TeamModal() {
   const handleImportTeam = async () => {
     try {
       const result = await DocumentPicker.getDocumentAsync({
-        type: '*/*',
+        type: ['application/octet-stream', 'application/json', '*/*'],
         copyToCacheDirectory: true,
+        multiple: false,
       });
       if (!result.canceled && result.assets?.[0]) {
         const file = result.assets[0];
@@ -72,10 +78,28 @@ export default function TeamModal() {
         await importTeamFromFile(file.uri);
         navigation.goBack();
       }
-    } catch (error) {
-      Alert.alert(t('error'), t('failedToImportTeamFile'));
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : '';
+      const translationKey = [
+        'fileReadError',
+        'fileParseError',
+        'invalidTeamFormat',
+        'missingTeamName',
+        'missingStartingPlayers',
+        'missingBenchPlayers',
+        'missingTeamSport',
+      ].includes(errorMessage)
+        ? errorMessage
+        : 'failedToImportTeamFile';
+      Alert.alert(t('error'), t(translationKey));
       console.error('Import team error:', error);
     }
+  };
+
+  const handleImportPlayers = (parsed: ParsedPlayer[]) => {
+    addPlayers(parsed);
+    setShowImportPlayers(false);
+    navigation.goBack();
   };
 
   const handleClose = () => {
@@ -83,6 +107,7 @@ export default function TeamModal() {
     setShowSelectTeam(false);
     setShowRemoveTeam(false);
     setShowRenameTeam(false);
+    setShowImportPlayers(false);
     navigation.goBack();
   };
 
@@ -123,12 +148,18 @@ export default function TeamModal() {
       onPress: handleImportTeam,
       visible: true,
     },
+    {
+      icon: 'people',
+      title: t('importPlayers'),
+      onPress: () => setShowImportPlayers(true),
+      visible: !!team,
+    },
   ];
 
   return (
     <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' }}>
       <TouchableOpacity style={{ flex: 1 }} activeOpacity={1} onPress={handleClose} />
-      <View style={[styles.sheetContainer, { backgroundColor }]}>
+      <View style={[styles.sheetContainer, { backgroundColor, paddingBottom: 16 + insets.bottom }]}>
         {!showSelectTeam && !showRemoveTeam && (
           <>
             {mainMenuItems
@@ -185,6 +216,12 @@ export default function TeamModal() {
           onCancel={() => setShowRenameTeam(false)}
           onSubmit={handleRenameTeam}
           initialValue={team?.name}
+        />
+
+        <ImportPlayersDialog
+          visible={showImportPlayers}
+          onCancel={() => setShowImportPlayers(false)}
+          onImport={handleImportPlayers}
         />
       </View>
     </View>

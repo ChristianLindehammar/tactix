@@ -11,6 +11,7 @@ interface SportConfig {
   aspectRatio: number;
   positions: string[];
   positionColors?: Record<string, string>;
+  arrowColor?: string;
 }
 
 export type SportsConfiguration = {
@@ -55,6 +56,7 @@ export const sportsConfig: SportsConfiguration = {
     Svg: BandySvg, 
     aspectRatio: 549 / 840,
     positions: ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'],
+    arrowColor: '#555555',
     positionColors: {
       Goalkeeper: '#5eaec3',  // Soft teal (base color)
       Defender: '#8b9dc3',    // Muted periwinkle blue

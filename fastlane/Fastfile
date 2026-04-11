@@ -1,109 +1,225 @@
 default_platform(:ios)
 
-before_all do
-  ensure_git_branch
-  ensure_git_status_clean
-  git_pull
-  
-  # Store current directory
-  fastlane_dir = Dir.pwd
-  
-  begin
-    # Navigate to project root directory (one level up from fastlane directory)
-    Dir.chdir("..")
-    
-    # Remove iOS and Android directories from project root
+# ---------------------------------------------------------------------------
+# Private: expo prebuild (called once per deploy_all, or at start of each
+# individual platform lane when run standalone)
+# ---------------------------------------------------------------------------
+private_lane :prebuild do |options|
+  platform = options[:platform] || :all
+  project_root = File.expand_path("..", __dir__)
+  Dir.chdir(project_root) do
     sh "rm -rf ios android"
-    
-    # Run expo prebuild from project root
-    sh "npx expo prebuild"
-  ensure
-    # Always return to fastlane directory, even if an error occurs
-    Dir.chdir(fastlane_dir)
+    # Pass --platform to skip the other platform's native generation & pod install
+    if platform == :android
+      sh "npx expo prebuild --non-interactive --platform android"
+    elsif platform == :ios
+      sh "npx expo prebuild --non-interactive --platform ios"
+    else
+      sh "npx expo prebuild --non-interactive"
+    end
   end
+
+  # expo prebuild regenerates android/app/build.gradle each time, resetting the
+  # release signingConfig to use the debug keystore.  Patch it here so the
+  # Fastlane-supplied RELEASE_* Gradle properties are wired up for release builds.
+  build_gradle = File.join(project_root, "android/app/build.gradle")
+  content = File.read(build_gradle)
+
+  # Inject a release signingConfig block inside signingConfigs { } if not already present.
+  # Match the closing of the debug block + closing brace of signingConfigs { } exactly as
+  # expo generates it (4-space indent per level).
+  release_signing_entry = [
+    "        release {",
+    "            storeFile file(RELEASE_STORE_FILE)",
+    "            storePassword RELEASE_STORE_PASSWORD",
+    "            keyAlias RELEASE_KEY_ALIAS",
+    "            keyPassword RELEASE_KEY_PASSWORD",
+    "        }",
+  ].join("\n")
+
+  if content.include?("RELEASE_STORE_FILE")
+    UI.message("release signingConfig already present — skipping injection")
+  elsif content.include?("    signingConfigs {")
+    # Insert the release block just before the closing } of signingConfigs
+    # The pattern is: end of debug block `        }\n    }` → insert before `    }`
+    content = content.sub(
+      /(        \}\n)(    \}\n)(    buildTypes)/,
+      "\\1#{release_signing_entry}\n\\2\\3"
+    )
+    if content.include?("RELEASE_STORE_FILE")
+      UI.success("Injected release signingConfig into android/app/build.gradle")
+    else
+      UI.error("Failed to inject release signingConfig — check indentation in build.gradle")
+    end
+  else
+    UI.error("signingConfigs block not found in build.gradle")
+  end
+
+  # Point the release buildType at signingConfigs.release instead of signingConfigs.debug
+  content = content.sub(
+    /(release \{[^}]*?)signingConfig signingConfigs\.debug/m,
+    "\\1signingConfig signingConfigs.release"
+  )
+
+  File.write(build_gradle, content)
 end
 
-# Create a new lane at the top level to run both iOS and Android builds
-desc "Build and deploy both iOS and Android"
+# ---------------------------------------------------------------------------
+# Private: iOS build + TestFlight upload (no prebuild)
+# ---------------------------------------------------------------------------
+private_lane :build_and_upload_ios do
+  setup_ci if ENV['CI']
+
+  match(type: "appstore", readonly: true)
+
+  api_key = app_store_connect_api_key(
+    key_id: "9KF34Z7C3A",
+    issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
+    key_filepath: File.expand_path("./AuthKey_9KF34Z7C3A.p8", __dir__),
+    duration: 1200
+  )
+
+  increment_build_number(
+    build_number: latest_testflight_build_number(api_key: api_key) + 1,
+    xcodeproj: "ios/CoachMate.xcodeproj"
+  )
+
+  sh "mkdir -p ios/build"
+  build_ios_app(
+    workspace: "ios/CoachMate.xcworkspace",
+    scheme: "CoachMate",
+    export_method: "app-store",
+    output_directory: "ios/build",
+    output_name: "CoachMate.ipa",
+    xcargs: "CODE_SIGN_STYLE=Manual " \
+            "CODE_SIGN_IDENTITY=\"Apple Distribution\" " \
+            "PROVISIONING_PROFILE_SPECIFIER=\"match AppStore com.lindehammar-konsult.coachmate\""
+  )
+
+  upload_to_testflight(
+    api_key: api_key,
+    ipa: "ios/build/CoachMate.ipa",
+    skip_waiting_for_build_processing: true
+  )
+end
+
+# ---------------------------------------------------------------------------
+# Private: Android build + Play Store upload (no prebuild)
+# ---------------------------------------------------------------------------
+private_lane :build_and_upload_android do
+  setup_ci if ENV['CI']
+
+  keystore_path  = File.expand_path("keystore.jks", __dir__)
+  store_password = ENV['ANDROID_STORE_PASSWORD'] || UI.password("Enter keystore password:")
+  key_alias      = ENV['ANDROID_KEY_ALIAS']      || UI.input("Enter key alias:")
+  key_password   = ENV['ANDROID_KEY_PASSWORD']   || UI.password("Enter key password:")
+
+  # Get the latest version code across ALL Play Store tracks and increment.
+  # Querying only 'internal' misses codes uploaded to alpha/beta/production or
+  # previously rejected drafts, which can still cause "version code already used" errors.
+  json_key_path = File.expand_path("play-store-credentials.json", __dir__)
+  all_codes = []
+  %w[internal alpha beta production].each do |track|
+    begin
+      codes = google_play_track_version_codes(
+        track: track,
+        json_key: json_key_path
+      )
+      all_codes.concat(codes) if codes
+    rescue => e
+      UI.message("No version codes found for track '#{track}': #{e.message}")
+    end
+  end
+  latest_code = all_codes.max || 0
+  # Enforce a minimum floor: the previously published production build had versionCode 20.
+  # Play Store requires strictly increasing codes, so we must never go below 21.
+  minimum_version_code = 21
+  latest_code = [latest_code, minimum_version_code - 1].max
+  # Use +2 as a one-time safety buffer: a prior run may have successfully uploaded
+  # versionCode (latest+1) to the Play Store server-side while Fastlane reported a
+  # local error, leaving a "ghost" code that doesn't appear in track API queries.
+  # Once a clean upload succeeds the API will return the new max and +2 produces
+  # the correct next value (skipping at most one code per session).
+  new_version_code = latest_code + 2
+  UI.message("Setting versionCode to #{new_version_code} (highest across all tracks: #{latest_code})")
+
+  increment_version_code(
+    gradle_file_path: "android/app/build.gradle",
+    version_code: new_version_code
+  )
+
+  gradle(
+    task: "bundle",
+    build_type: "Release",
+    project_dir: "android/",
+    properties: {
+      "RELEASE_STORE_FILE"     => keystore_path,
+      "RELEASE_STORE_PASSWORD" => store_password,
+      "RELEASE_KEY_ALIAS"      => key_alias,
+      "RELEASE_KEY_PASSWORD"   => key_password,
+    }
+  )
+
+  aab_path = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
+  UI.message("Built AAB at: #{aab_path}")
+
+  # Collect all existing version codes across tracks so Google Play can map
+  # upgrade paths from every previously-released code to the new one.
+  retain_codes = []
+  %w[internal alpha beta production].each do |track|
+    begin
+      codes = google_play_track_version_codes(
+        track: track,
+        json_key: json_key_path
+      )
+      retain_codes.concat(codes) if codes
+    rescue => e
+      UI.message("No version codes for retain check on track '#{track}': #{e.message}")
+    end
+  end
+  retain_codes = retain_codes.uniq.sort
+  UI.message("Retaining existing version codes: #{retain_codes.inspect}")
+
+  upload_to_play_store(
+    track: 'internal',
+    aab: aab_path,
+    skip_upload_apk: true,
+    skip_upload_metadata: true,
+    skip_upload_images: true,
+    skip_upload_screenshots: true,
+    release_status: 'draft',
+    version_codes_to_retain: retain_codes
+  )
+end
+
+# ---------------------------------------------------------------------------
+# Top-level: build & deploy both platforms in one command
+# ---------------------------------------------------------------------------
+desc "Prebuild, then build and deploy both iOS (TestFlight) and Android (Play Store internal)"
 lane :deploy_all do
-  # Use the full namespace to access platform-specific lanes
-  ios :beta
-  android :beta
+  prebuild
+  build_and_upload_ios
+  build_and_upload_android
 end
 
+# ---------------------------------------------------------------------------
+# iOS standalone
+# ---------------------------------------------------------------------------
 platform :ios do
-  desc "Push a new beta build to TestFlight"
+  desc "Build and upload a new beta build to TestFlight"
   lane :beta do
-    setup_ci if ENV['CI']
-    
-    # Sync certificates
-    match(type: "appstore", readonly: true)
-
-     # Add debug statements
-     puts "Current directory: #{Dir.pwd}"
-     puts "File exists: #{File.exist?('./AuthKey_9KF34Z7C3A.p8')}"
-    
-    # Increment build number
-    increment_build_number(
-      build_number: latest_testflight_build_number + 1,
-      xcodeproj: "ios/coachmate.xcodeproj"
-    )
-    
-    # Create build directory
-    sh "mkdir -p ios/build"
-    
-    # Build your iOS app
-    build_ios_app(
-      workspace: "ios/coachmate.xcworkspace",
-      scheme: "coachmate",
-      export_method: "app-store",
-      output_directory: "ios/build",
-      output_name: "coachmate.ipa"
-    )
-
-    api_key = app_store_connect_api_key(
-      key_id: "9KF34Z7C3A",
-      issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
-      key_filepath: File.expand_path("./AuthKey_9KF34Z7C3A.p8"),
-      duration: 1200
-    )
-
-    upload_to_testflight(
-      api_key: api_key,
-      skip_waiting_for_build_processing: true
-    )
-  end
-  
-  # Make the lane accessible outside the platform scope
-  lane :ios_beta do
-    beta
+    prebuild(platform: :ios)
+    build_and_upload_ios
   end
 end
 
+# ---------------------------------------------------------------------------
+# Android standalone
+# ---------------------------------------------------------------------------
 platform :android do
-  desc "Push a new beta build to Play Store Internal Testing"
+  desc "Build AAB and upload to Play Store internal testing"
   lane :beta do
-    setup_ci if ENV['CI']
-
-    # Replace gradle build with EAS build
-    result = sh("eas build --platform android --local")
-    aab_path_match = result.match(/You can find the build artifacts in (.*\.aab)/)
-    aab_path = aab_path_match ? aab_path_match[1] : "./myapp.aab"
-
-    # Upload to Play Store Internal Testing
-    upload_to_play_store(
-      track: 'closed_test',
-      skip_upload_apk: true,
-      aab: aab_path,
-      skip_upload_metadata: true,
-      skip_upload_images: true,
-      skip_upload_screenshots: true,
-      release_status: 'draft'
-    )
-  end
-  
-  # Make the lane accessible outside the platform scope
-  lane :android_beta do
-    beta
+    prebuild(platform: :android)
+    build_and_upload_android
   end
 end

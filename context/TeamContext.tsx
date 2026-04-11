@@ -6,6 +6,7 @@ import { sportsConfig } from '@/constants/sports';
 import { useSport } from '@/context/SportContext';
 import { useTeamData } from './hooks/useTeamData';
 import { useTranslation } from '@/hooks/useTranslation';
+import { ParsedPlayer, createPlayersFromParsed } from './utils/parseBulkPlayerInput';
 
 interface TeamContextProps {
   team?: Team;
@@ -20,6 +21,7 @@ interface TeamContextProps {
   renameTeam: (teamId: string, newName: string) => void;
   renamePlayer: (playerId: string, newName: string) => void;
   deletePlayer: (playerId: string) => void;
+  addPlayers: (parsed: ParsedPlayer[]) => void;
   exportTeam: (teamId: string) => void;
   importTeam: (importedTeam: Team) => void;
   importTeamFromFile: (fileUri: string) => Promise<Team>;
@@ -259,6 +261,18 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       startingPlayers: team.startingPlayers.filter(p => p.id !== playerId),
       benchPlayers: team.benchPlayers.filter(p => p.id !== playerId),
     }));
+  };
+
+  const addPlayers = (parsed: ParsedPlayer[]) => {
+    const defaultPosition = sportsConfig[selectedSport || 'soccer'].positions[0];
+    updateTeamInTeams(currentTeam => {
+      const existingPlayers = [...currentTeam.startingPlayers, ...currentTeam.benchPlayers];
+      const newPlayers = createPlayersFromParsed(parsed, existingPlayers, defaultPosition);
+      return {
+        ...currentTeam,
+        benchPlayers: [...currentTeam.benchPlayers, ...newPlayers],
+      };
+    });
   };
 
   const exportTeam = async (teamId: string) => {
@@ -511,6 +525,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       renameTeam,
       renamePlayer,
       deletePlayer,
+      addPlayers,
       exportTeam,
       importTeam,
       importTeamFromFile: importTeamFromFileHandler,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, runOnJS, withSpring } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 
@@ -53,7 +53,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   const panGesture = Gesture.Pan()
     .hitSlop(20)
     // Add a slight delay to allow long press to be detected first
-    .activateAfterLongPress(50)
+    .activateAfterLongPress(Platform.OS === 'android' ? 150 : 50)
     .onBegin(() => {
       // Immediately notify parent that drag has started
       if (onDragStart) {

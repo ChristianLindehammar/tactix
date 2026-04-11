@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Dimensions, Platform } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Platform } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
-import { LAYOUT } from '@/constants/layout';
 import { GenericCourt } from '@/components/GenericCourt';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { DraggableMarker } from '@/components/DraggableMarker';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -19,60 +19,49 @@ import FloorballBallSvg from '@/components/ui/FloorballBallSvg';
 import HockeyBallSvg from '@/components/ui/HockeyBallSvg';
 import BandyBallSvg from '@/components/ui/BandyBallSvg';
 import { SportBall } from '@/components/SportBall';
+import { ArrowMarker } from '@/components/ArrowMarker';
+import { ConeSvg } from '@/components/ui/ConeSvg';
+import { TacticsMarker, TacticsMarkerType, createTacticsMarker, createArrowMarker, getMarkerIcon } from '@/types/tacticsMarker';
 
-// Marker type
-interface Marker {
-  id: string;
-  type: 'player' | 'opponent' | 'ball';
-  x: number; // relative (0-1)
-  y: number; // relative (0-1)
-}
-
-const MARKER_TYPES = [
-  { type: 'player', color: '#1976D2', icon: 'person' },
-  { type: 'opponent', color: '#D32F2F', icon: 'person' },
-  { type: 'ball', color: '#FFA000', icon: 'sports-soccer' },
-];
-
-interface MarkerIconProps {
-  type: 'player' | 'opponent' | 'ball';
-  selectedSport: string | null | undefined;
-}
-
-function getMarkerIcon(type: MarkerIconProps['type'], selectedSport: MarkerIconProps['selectedSport']): string {
-  if (type === 'ball') {
-    switch (selectedSport) {
-      case 'floorball': return 'sports-hockey';
-      case 'bandy': return 'sports-hockey';
-      case 'hockey': return 'sports-hockey';
-      case 'basketball': return 'sports-basketball';
-      default: return 'sports-soccer';
-    }
-  }
-  return 'person';
+function getMarkerTypes(arrowColor: string): { type: TacticsMarkerType; color: string; icon: string }[] {
+  return [
+    { type: 'player', color: '#1976D2', icon: 'person' },
+    { type: 'opponent', color: '#D32F2F', icon: 'person' },
+    { type: 'cone', color: '#FF6D00', icon: 'change-history' },
+    { type: 'arrow-solid', color: arrowColor, icon: 'arrow-forward' },
+    { type: 'arrow-dashed', color: arrowColor, icon: 'arrow-forward' },
+  ];
 }
 
 export default function TacticsScreen() {
   const { selectedSport } = useSport();
-  const { Svg, aspectRatio } = selectedSport ? sportsConfig[selectedSport] : { Svg: undefined, aspectRatio: 1 };
+  const { Svg, aspectRatio, arrowColor: sportArrowColor } = selectedSport ? sportsConfig[selectedSport] : { Svg: undefined, aspectRatio: 1, arrowColor: undefined };
   const insets = useSafeAreaInsets();
+  const tabBarHeight = useBottomTabBarHeight();
   const { t } = useTranslation();
   
   // Use theme colors
   const backgroundColor = useThemeColor({}, 'background');
   const buttonBgColor = useThemeColor({}, 'secondaryBackground');
+  const textColor = useThemeColor({}, 'text') as string;
+  const arrowColor = sportArrowColor ?? textColor;
+  const markerTypes = getMarkerTypes(textColor);
 
-  // Responsive court sizing
-  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT;
-  const availableWidth = Dimensions.get('window').width;
-  const screenRatio = availableWidth / availableHeight;
+  // Measure the actual court container to size the court precisely
+  const [courtContainerSize, setCourtContainerSize] = useState({ width: 0, height: 0 });
+
+  const availableHeight = courtContainerSize.height;
+  const availableWidth = courtContainerSize.width;
+  const screenRatio = availableWidth > 0 && availableHeight > 0 ? availableWidth / availableHeight : 1;
   const finalDimensions =
-    screenRatio > aspectRatio
-      ? { width: availableHeight * aspectRatio, height: availableHeight }
-      : { width: availableWidth, height: availableWidth / aspectRatio };
+    availableWidth > 0 && availableHeight > 0
+      ? screenRatio > aspectRatio
+        ? { width: availableHeight * aspectRatio, height: availableHeight }
+        : { width: availableWidth, height: availableWidth / aspectRatio }
+      : { width: 0, height: 0 };
 
-  const [markers, setMarkers] = useState<Marker[]>([]);
-  const [addingType, setAddingType] = useState<Marker['type'] | null | 'menu'>(null);
+  const [markers, setMarkers] = useState<TacticsMarker[]>([]);
+  const [addingType, setAddingType] = useState<TacticsMarkerType | null | 'menu'>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
@@ -219,16 +208,22 @@ export default function TacticsScreen() {
     const centeredY = locationY / finalDimensions.height;
     
     if (centeredX >= 0 && centeredX <= 1 && centeredY >= 0 && centeredY <= 1) {
-      // Create a new marker at the tap location
-      const newMarker = {
-        id: Date.now().toString() + Math.random().toString(36).slice(2),
-        type: addingType,
-        x: centeredX,
-        y: centeredY,
-      };
-      
+      let newMarker: TacticsMarker;
+      if (addingType === 'arrow-solid' || addingType === 'arrow-dashed') {
+        // Place arrow with a default length pointing downward
+        const endY = Math.min(centeredY + 0.15, 1);
+        newMarker = createArrowMarker(addingType, centeredX, centeredY, centeredX, endY);
+      } else {
+        newMarker = createTacticsMarker(addingType, centeredX, centeredY);
+      }
+
       setMarkers(currentMarkers => [...currentMarkers, newMarker]);
-      
+
+      // Arrows are typically placed one at a time, deselect after placement
+      if (addingType === 'arrow-solid' || addingType === 'arrow-dashed') {
+        setAddingType(null);
+      }
+
       // Check if we should show the move tooltip after adding a marker
       if (showAddTooltip) {
         handleAddTooltipClose();
@@ -239,15 +234,7 @@ export default function TacticsScreen() {
   // Ensure ball marker is always present in the center
   React.useEffect(() => {
     if (!markers.some(m => m.type === 'ball')) {
-      setMarkers((prev) => [
-        ...prev,
-        {
-          id: 'ball',
-          type: 'ball',
-          x: 0.5,
-          y: 0.5,
-        },
-      ]);
+      setMarkers((prev) => [...prev, createTacticsMarker('ball', 0.5, 0.5)]);
     }
   }, [markers]);
 
@@ -307,61 +294,44 @@ export default function TacticsScreen() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
         {/* Marker selection rows at the top with safe area insets */}
-        <View style={[
-          styles.markerSelectionContainer, 
-          { paddingTop: Math.max(insets.top, 8), backgroundColor: backgroundColor as string }
-        ]}>
+        <View
+          style={[
+            styles.markerSelectionContainer,
+            { paddingTop: Math.max(insets.top, 8), backgroundColor: backgroundColor as string }
+          ]}
+        >
           <View style={styles.controlsContainer}>
-            {/* Left side - Add Player/Opponent buttons - more compact */}
+            {/* Left side - Add marker buttons */}
             <View style={styles.addButtonsContainer}>
-              <TouchableOpacity 
-                ref={playerBtnRef}
-                style={[
-                  styles.markerTypeButton, 
-                  { backgroundColor: buttonBgColor as string },
-                  addingType === 'player' && styles.activeButton
-                ]} 
-                onPress={() => {
-                  // Toggle button state - if already adding this type, turn it off
-                  setAddingType(current => current === 'player' ? null : 'player');
-                }}
-                accessibilityLabel={t('player')}
-              >
-                <MaterialIcons 
-                  name={addingType === 'player' ? 'close' : 'add'} 
-                  size={18} 
-                  color="#1976D2" 
-                />
-                <MaterialIcons 
-                  name="person" 
-                  size={22} 
-                  color="#1976D2" 
-                />
-              </TouchableOpacity>
-              
-              <TouchableOpacity 
-                style={[
-                  styles.markerTypeButton, 
-                  { backgroundColor: buttonBgColor as string },
-                  addingType === 'opponent' && styles.activeButton
-                ]} 
-                onPress={() => {
-                  // Toggle button state - if already adding this type, turn it off
-                  setAddingType(current => current === 'opponent' ? null : 'opponent');
-                }}
-                accessibilityLabel={t('opponent')}
-              >
-                <MaterialIcons 
-                  name={addingType === 'opponent' ? 'close' : 'add'} 
-                  size={18} 
-                  color="#D32F2F" 
-                />
-                <MaterialIcons 
-                  name="person" 
-                  size={22} 
-                  color="#D32F2F" 
-                />
-              </TouchableOpacity>
+              {markerTypes.map((mt, index) => (
+                <TouchableOpacity
+                  key={mt.type}
+                  ref={index === 0 ? playerBtnRef : undefined}
+                  style={[
+                    styles.markerTypeButton,
+                    { backgroundColor: buttonBgColor as string },
+                    addingType === mt.type && styles.activeButton,
+                  ]}
+                  onPress={() => setAddingType(current => current === mt.type ? null : mt.type)}
+                  accessibilityLabel={mt.type}
+                >
+                  <MaterialIcons
+                    name={addingType === mt.type ? 'close' : 'add'}
+                    size={16}
+                    color={mt.color}
+                  />
+                  {mt.type === 'cone' ? (
+                    <ConeSvg size={20} />
+                  ) : (
+                    <MaterialIcons
+                      name={mt.icon as any}
+                      size={20}
+                      color={mt.color}
+                      style={mt.type === 'arrow-dashed' ? { opacity: 0.5 } : undefined}
+                    />
+                  )}
+                </TouchableOpacity>
+              ))}
             </View>
             
             {/* Right side - Clear All button - more compact */}
@@ -391,7 +361,15 @@ export default function TacticsScreen() {
           </View>
         </View>
         
-        <View style={[styles.courtContainerOuter, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+        <View
+          style={[styles.courtContainerOuter, { paddingBottom: Platform.OS === 'ios' ? tabBarHeight : 0 }]}
+          onLayout={(e) => {
+            const { width, height } = e.nativeEvent.layout;
+            // Subtract iOS tab bar padding from measured height since it's included in the layout
+            const effectiveHeight = Platform.OS === 'ios' ? height - tabBarHeight : height;
+            setCourtContainerSize({ width, height: effectiveHeight });
+          }}
+        >
           <View 
             style={{
               width: finalDimensions.width, 
@@ -413,7 +391,46 @@ export default function TacticsScreen() {
               />
             )}
             
-            {markers.map(marker => (
+            {/* Render arrow markers */}
+            {markers
+              .filter(m => m.type === 'arrow-solid' || m.type === 'arrow-dashed')
+              .map(marker => (
+                <ArrowMarker
+                  key={marker.id}
+                  id={marker.id}
+                  x={marker.x}
+                  y={marker.y}
+                  endX={marker.endX ?? marker.x}
+                  endY={marker.endY ?? marker.y + 0.15}
+                  dashed={marker.type === 'arrow-dashed'}
+                  containerSize={finalDimensions}
+                  color={arrowColor}
+                  onDragEnd={(id, newX, newY, newEndX, newEndY) => {
+                    setMarkers(prev => prev.map(m =>
+                      m.id === id ? { ...m, x: newX, y: newY, endX: newEndX, endY: newEndY } : m
+                    ));
+                  }}
+                  onLongPress={() => {
+                    Alert.alert(
+                      t('delete'),
+                      t('deleteMarkerConfirm'),
+                      [
+                        { text: t('cancel'), style: 'cancel' },
+                        {
+                          text: t('delete'),
+                          style: 'destructive',
+                          onPress: () => setMarkers(prev => prev.filter(m => m.id !== marker.id)),
+                        },
+                      ]
+                    );
+                  }}
+                />
+              ))}
+
+            {/* Render point markers (player, opponent, ball, cone) */}
+            {markers
+              .filter(m => m.type !== 'arrow-solid' && m.type !== 'arrow-dashed')
+              .map(marker => (
               <DraggableMarker
                 key={marker.id}
                 id={marker.id}
@@ -428,24 +445,20 @@ export default function TacticsScreen() {
                 onLongPress={() => {
                   // Don't allow deleting the ball marker
                   if (marker.type === 'ball') return;
-                  
-                  // Show delete confirmation
+
                   Alert.alert(
-                    t('delete'), 
-                    t('removeAllMarkers').replace('all', ''), 
+                    t('delete'),
+                    t('deleteMarkerConfirm'),
                     [
                       { text: t('cancel'), style: 'cancel' },
-                      { 
-                        text: t('delete'), 
-                        style: 'destructive', 
+                      {
+                        text: t('delete'),
+                        style: 'destructive',
                         onPress: () => {
                           setMarkers(markers => markers.filter(m => m.id !== marker.id));
-                          // Cancel dragging mode if active
                           if (draggingId === marker.id) {
                             setDraggingId(null);
                           }
-                          
-                          // If showing delete tooltip, close it after user has tried deleting
                           if (showDeleteTooltip) {
                             handleDeleteTooltipClose();
                           }
@@ -458,43 +471,30 @@ export default function TacticsScreen() {
               >
                 {marker.type === 'ball' ? (
                   <View style={{
-                    width: 40,
-                    height: 40,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: 20,
-                    backgroundColor: '#fff',
-                    borderWidth: 2,
-                    borderColor: '#FFA000',
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.3,
-                    shadowRadius: 3,
-                    elevation: 5,
+                    width: 40, height: 40, justifyContent: 'center', alignItems: 'center',
+                    borderRadius: 20, backgroundColor: '#fff', borderWidth: 2, borderColor: '#FFA000',
+                    shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 3, elevation: 5,
                   }}>
                     <View style={{ width: 24, height: 24 }}>
                       <SportBall sport={selectedSport} size={24} color="#FFA000" />
                     </View>
                   </View>
+                ) : marker.type === 'cone' ? (
+                  <View style={{
+                    width: 36, height: 36, justifyContent: 'center', alignItems: 'center',
+                  }}>
+                    <ConeSvg size={32} />
+                  </View>
                 ) : (
                   <TouchableOpacity
                     activeOpacity={0.8}
                     style={{
-                      width: 40,
-                      height: 40,
-                      borderRadius: 20,
+                      width: 40, height: 40, borderRadius: 20,
                       backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      borderWidth: 2,
-                      borderColor: '#fff',
+                      justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderColor: '#fff',
                     }}
                   >
-                    <MaterialIcons
-                      name="person"
-                      size={28}
-                      color="#fff"
-                    />
+                    <MaterialIcons name="person" size={28} color="#fff" />
                   </TouchableOpacity>
                 )}
               </DraggableMarker>
@@ -543,7 +543,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 12,
   },
   courtContainer: {
     flex: 1,

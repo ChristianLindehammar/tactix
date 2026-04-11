@@ -11,8 +11,7 @@ export const LAYOUT = {
     OFFSET: 40,
     MAX_TRIES: 5
   },
-  TAB_BAR_HEIGHT: Platform.OS === 'ios' 
-    ? (isIpad ? 65 : 80) 
-    : 30,
-  COURT_PADDING: Platform.OS === 'ios' ? 40 : 70
+  TAB_BAR_HEIGHT: Platform.OS === 'ios'
+    ? (isIpad ? 65 : 80)
+    : 70
 };

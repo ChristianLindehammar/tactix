@@ -3,7 +3,7 @@ import { Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 're
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Ionicons } from '@expo/vector-icons';
-import { LAYOUT } from '@/constants/layout';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThemedButton } from '@/components/ThemedButton';
@@ -25,6 +25,7 @@ export default function TeamScreen() {
   const [showTooltip, setShowTooltip] = useState(false);
   const textColor = useThemeColor({}, 'text') as string;
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const tabBarHeight = useBottomTabBarHeight();
 
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
   const textInputRef = useRef<TextInput>(null);
@@ -63,14 +64,14 @@ export default function TeamScreen() {
 
   return (
     <ThemedView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1 }} edges={['top']}>
         {teams.length === 0 ? (
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
             <ThemedText>{t('noTeamsExist')}</ThemedText>
             <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>{t('createTeam')}</ThemedButton>
           </View>
         ) : (
-          <ThemedView style={[styles.container, { paddingBottom: LAYOUT.TAB_BAR_HEIGHT }]}>
+          <ThemedView style={[styles.container, { paddingBottom: Platform.OS === 'ios' ? tabBarHeight : 0 }]}>
             <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
 
             <TooltipModal visible={showTooltip} onClose={() => setShowTooltip(false)} message={t('startByAddingPlayers')} position={tooltipPosition} />
@@ -96,7 +97,7 @@ export default function TeamScreen() {
           </ThemedView>
         )}
       </SafeAreaView>
-      <Pressable style={styles.fab} onPress={() => navigation.navigate('modal/teamModal')}>
+      <Pressable style={[styles.fab, { bottom: (Platform.OS === 'ios' ? tabBarHeight : 0) + 16 }]} onPress={() => navigation.navigate('modal/teamModal')}>
         <Ionicons name='people-outline' size={28} color='white' />
       </Pressable>
     </ThemedView>
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    paddingBottom: 80,
+    paddingBottom: 0,
   },
   listFooter: {
     paddingBottom: 80,
@@ -160,7 +161,6 @@ const styles = StyleSheet.create({
   fab: {
     position: 'absolute',
     right: 16,
-    bottom: Platform.OS === 'android' ? 30 : 100,
     backgroundColor: '#0097B2',
     width: 56,
     height: 56,

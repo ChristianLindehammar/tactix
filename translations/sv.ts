@@ -40,6 +40,11 @@ export default {
   enterPlayerName: 'Ange spelarnamn',
   addPlayer: 'Lägg till spelare',
   renamePlayer: 'Byt namn på spelare',
+  importPlayers: 'Importera spelare',
+  importPlayersPlaceholder: 'Klistra in spelarnamn här, ett per rad...',
+  importPlayersPreview: '{{count}} spelare kommer att läggas till',
+  importPlayersEmpty: 'Inga spelare hittades i den inklistrade texten',
+  import: 'Importera',
   movePlayerToBench: 'Flytta till bänken',
   movePlayerToBenchConfirm: 'Flytta {{playerName}} till bänken?',
   move: 'Flytta',
@@ -89,11 +94,22 @@ export default {
   generalSettings: 'Allmänna inställningar',
   thirdPartyLibs: 'Tredjepartsbibliotek',
 
+  // Export/Import actions
+  saveToFiles: 'Spara till filer',
+  share: 'Dela',
+
   //Alerts
   error: 'Fel',
   success: 'Lyckat',
   teamImportSuccessful: 'Lag "{{teamName}}" importerades framgångsrikt!',
   failedToImportTeamFile: 'Misslyckades med att importera lagfil',
+  fileReadError: 'Kunde inte läsa filen. Den kan vara skadad eller otillgänglig.',
+  fileParseError: 'Filen innehåller inte giltig data. Den kan vara skadad.',
+  invalidTeamFormat: 'Filen är inte en giltig lagfil.',
+  missingTeamName: 'Lagfilen saknar ett lagnamn.',
+  missingStartingPlayers: 'Lagfilen saknar spelardata.',
+  missingBenchPlayers: 'Lagfilen saknar avbytardata.',
+  missingTeamSport: 'Lagfilen saknar sportinformation.',
   teamRemoveConfirm: 'Är du säker på att du vill ta bort laget "{{teamName}}"?',
   invalidFile: 'Ogiltig fil',
   selectCoachmateFile: 'Välj en .coachmate fil',
@@ -108,8 +124,12 @@ export default {
   player: 'Spelare',
   opponents: 'Motståndare',
   opponent: 'Motståndare',
+  cone: 'Kon',
+  arrowSolid: 'Pil (heldragen)',
+  arrowDashed: 'Pil (streckad)',
   clearAll: 'Rensa alla',
   removeAllMarkers: 'Ta bort alla markörer?',
+  deleteMarkerConfirm: 'Ta bort denna markör?',
   
   // Tactics Tooltips
   tacticsAddTooltip: 'Tryck på spelare- eller motståndarknappen och sedan på planen för att lägga till en markör',

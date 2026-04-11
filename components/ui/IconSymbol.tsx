@@ -12,9 +12,11 @@ type IconMapping = {
 
 const MAPPING: Record<string, IconMapping> = {
   'arrow.right.circle.fill': { type: 'ionicon', icon: 'arrow-forward-circle' },
+  'chevron.left': { type: 'ionicon', icon: 'chevron-back' },
   'chevron.right': { type: 'ionicon', icon: 'chevron-forward' },
   'chevron.up': { type: 'ionicon', icon: 'chevron-up' },
   'chevron.down': { type: 'ionicon', icon: 'chevron-down' },
+  'plus.circle.fill': { type: 'ionicon', icon: 'add-circle' },
   'lightbulb': { type: 'ionicon', icon: 'bulb-outline' },
   'sportscourt.fill': { type: 'custom', icon: CourtIconSvg },
   'person.3.fill': { type: 'ionicon', icon: 'people' },

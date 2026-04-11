@@ -40,6 +40,11 @@ export default {
   enterPlayerName: 'Syötä pelaajan nimi',
   addPlayer: 'Lisää pelaaja',
   renamePlayer: 'Nimeä pelaaja uudelleen',
+  importPlayers: 'Tuo pelaajia',
+  importPlayersPlaceholder: 'Liitä pelaajien nimet tähän, yksi per rivi...',
+  importPlayersPreview: '{{count}} pelaajaa lisätään',
+  importPlayersEmpty: 'Liitetystä tekstistä ei löytynyt pelaajia',
+  import: 'Tuo',
   movePlayerToBench: 'Siirrä vaihtopenkille',
   movePlayerToBenchConfirm: 'Siirretäänkö {{playerName}} vaihtopenkille?',
   move: 'Siirrä',
@@ -69,8 +74,12 @@ export default {
   player: 'Pelaaja',
   opponents: 'Vastustajat',
   opponent: 'Vastustaja',
+  cone: 'Kartio',
+  arrowSolid: 'Nuoli (yhtenäinen)',
+  arrowDashed: 'Nuoli (katkoviiva)',
   clearAll: 'Tyhjennä kaikki',
   removeAllMarkers: 'Poista kaikki merkit?',
+  deleteMarkerConfirm: 'Poista tämä merkki?',
   
   // Tactics Tooltips
   tacticsAddTooltip: 'Napauta pelaaja- tai vastustajapainiketta ja sitten kenttää lisätäksesi merkin',
@@ -102,11 +111,22 @@ export default {
   generalSettings: 'Yleiset asetukset',
   thirdPartyLibs: 'Kolmannen osapuolen kirjastot',
 
+  // Export/Import actions
+  saveToFiles: 'Tallenna tiedostoihin',
+  share: 'Jaa',
+
   //Alerts
   error: 'Virhe',
   success: 'Onnistui',
   teamImportSuccessful: 'Joukkue "{{teamName}}" tuotu onnistuneesti!',
   failedToImportTeamFile: 'Joukkueen tiedoston tuonti epäonnistui',
+  fileReadError: 'Tiedostoa ei voitu lukea. Se voi olla vioittunut tai saavuttamaton.',
+  fileParseError: 'Tiedosto ei sisällä kelvollista dataa. Se voi olla vioittunut.',
+  invalidTeamFormat: 'Tiedosto ei ole kelvollinen joukkuetiedosto.',
+  missingTeamName: 'Joukkuetiedostosta puuttuu joukkueen nimi.',
+  missingStartingPlayers: 'Joukkuetiedostosta puuttuu pelaajadata.',
+  missingBenchPlayers: 'Joukkuetiedostosta puuttuu vaihtopelaajadata.',
+  missingTeamSport: 'Joukkuetiedostosta puuttuu lajitiedot.',
   teamRemoveConfirm: 'Haluatko varmasti poistaa joukkueen "{{teamName}}"?',
   invalidFile: 'Virheellinen tiedosto',
   selectCoachmateFile: 'Valitse .coachmate tiedosto',

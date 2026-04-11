@@ -4,8 +4,7 @@ import { useTeam } from '@/context/TeamContext';
 import { Player } from './Player'; 
 import { ThemedText } from './ThemedText';
 import { IconSymbol } from './ui/IconSymbol';
-import { LAYOUT } from '@/constants/layout';
-import { useThemeColor } from '@/hooks/useThemeColor'; 
+import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useDrag } from '@/context/DragContext';
 import { useSport } from '@/context/SportContext';
@@ -19,10 +18,10 @@ const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: {
   contentWidth: number,
   containerWidth: number
 }) => {
-  if (contentWidth <= containerWidth) return null;
-  
   const primaryColor = useThemeColor({}, 'primary') as string || '#4169E1';
   const inactiveColor = useThemeColor({}, 'icon') as string || '#888888';
+
+  if (contentWidth <= containerWidth) return null;
   
   const maxScroll = Math.max(0, contentWidth - containerWidth);
   const numberOfDots = 5;
@@ -74,9 +73,10 @@ const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: {
 
 interface BenchPanelProps {
   courtLayout: LayoutRectangle | null;
+  tabBarHeight: number;
 }
 
-export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
+export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeight }) => {
   const { team, movePlayerToCourt, movePlayerToBench } = useTeam();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const { t } = useTranslation();
@@ -177,8 +177,9 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
       ref={panelRef}
       style={[
         styles.panelContainer, 
-        { 
+        {
           height: isExpanded ? PANEL_HEIGHT_EXPANDED : PANEL_HEIGHT_COLLAPSED,
+          bottom: Platform.OS === 'ios' ? tabBarHeight : 0,
           backgroundColor: backgroundColor,
           borderTopColor: borderColor,
         }
@@ -249,7 +250,7 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout }) => {
 const styles = StyleSheet.create({
   panelContainer: {
     position: 'absolute',
-    bottom: LAYOUT.TAB_BAR_HEIGHT,
+    bottom: 0,
     left: 0,
     right: 0,
     borderTopWidth: 1,

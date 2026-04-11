@@ -8,10 +8,12 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
@@ -26,8 +28,8 @@ export default function TabLayout() {
             position: 'absolute',
           },
           android: {
-            height: 70,
-            paddingTop: 10,
+            height: 60 + insets.bottom,
+            paddingBottom: insets.bottom,
           },
           default: {},
         }),

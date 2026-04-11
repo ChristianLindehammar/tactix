@@ -86,6 +86,11 @@ export default {
   failedToExportTeam: 'Failed to export team',
   sharingNotAvailable: 'Sharing is not available on this device',
   renamePlayer: 'Rename Player',
+  importPlayers: 'Import Players',
+  importPlayersPlaceholder: 'Paste player names here, one per line...',
+  importPlayersPreview: '{{count}} player(s) will be added',
+  importPlayersEmpty: 'No players found in the pasted text',
+  import: 'Import',
 
   // Drag Hint
   dragHint: 'Drag and hold players up and down to reorder them',
@@ -94,11 +99,22 @@ export default {
   generalSettings: 'General settings',
   thirdPartyLibs: '3rd party libraries',
 
+  // Export/Import actions
+  saveToFiles: 'Save to Files',
+  share: 'Share',
+
   //Alerts
   error: 'Error',
   success: 'Success',
   teamImportSuccessful: 'Team "{{teamName}}" imported successfully!',
   failedToImportTeamFile: 'Failed to import team file',
+  fileReadError: 'Could not read the file. It may be corrupted or inaccessible.',
+  fileParseError: 'The file does not contain valid data. It may be corrupted.',
+  invalidTeamFormat: 'The file is not a valid team file.',
+  missingTeamName: 'The team file is missing a team name.',
+  missingStartingPlayers: 'The team file is missing player data.',
+  missingBenchPlayers: 'The team file is missing bench player data.',
+  missingTeamSport: 'The team file is missing sport information.',
   teamRemoveConfirm: 'Are you sure you want to remove "{{teamName}}"?',
   invalidFile: 'Invalid File',
   selectCoachmateFile: 'Please select a .coachmate file',
@@ -108,8 +124,12 @@ export default {
   player: 'Player',
   opponents: 'Opponents',
   opponent: 'Opponent',
+  cone: 'Cone',
+  arrowSolid: 'Arrow (solid)',
+  arrowDashed: 'Arrow (dashed)',
   clearAll: 'Clear All',
   removeAllMarkers: 'Remove all markers?',
+  deleteMarkerConfirm: 'Remove this marker?',
   
   // Tactics Tooltips
   tacticsAddTooltip: 'Tap the player or opponent button, then tap the court to add a marker',

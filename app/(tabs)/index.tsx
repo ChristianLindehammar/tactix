@@ -14,7 +14,7 @@ import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelec
 import { GenericCourt } from '@/components/GenericCourt';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { LAYOUT } from '@/constants/layout';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { LayoutRectangle } from 'react-native';
 import { Player } from '@/components/Player';
 import { SportSelector } from '@/components/SportSelector';
@@ -40,6 +40,7 @@ export default function HomeScreen() {
 
 function HomeScreenContent() {
   const insets = useSafeAreaInsets();
+  const tabBarHeight = useBottomTabBarHeight();
   const { team, updatePlayerPosition, importTeamFromFile } = useTeam();
   const { selectedSport } = useSport();
   const { t } = useTranslation();
@@ -47,6 +48,7 @@ function HomeScreenContent() {
 
   const [isProcessingFile, setIsProcessingFile] = useState(false);
   const [courtLayout, setCourtLayout] = useState<LayoutRectangle | null>(null);
+  const [courtContainerSize, setCourtContainerSize] = useState({ width: 0, height: 0 });
   const [showConfigurationTooltip, setShowConfigurationTooltip] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
   const configurationSelectorRef = useRef<View>(null);
@@ -74,32 +76,39 @@ function HomeScreenContent() {
         if (!url || (!url.startsWith('file://') && !url.startsWith('content://'))) {
           return;
         }
-        
+
         setIsProcessingFile(true);
-        
+
         if (pathname !== '/') {
           router.replace('/');
         }
-        
+
         console.log('Handling URL:', url);
         let fileUri = url;
+        let isTempFile = false;
 
+        // For content:// URIs (common on Android from file managers, email, cloud storage),
+        // copy to a temp file since we can't read content URIs directly with FileSystem.
         if (Platform.OS === 'android' && url.startsWith('content://')) {
-          const tempFile = `${FileSystem.cacheDirectory}temp.coachmate`;
+          const tempFile = `${FileSystem.cacheDirectory}temp_import.coachmate`;
           await FileSystem.copyAsync({
             from: url,
             to: tempFile
           });
           fileUri = tempFile;
+          isTempFile = true;
         }
 
-        if (!fileUri.toLowerCase().endsWith('.coachmate')) {
-          throw new Error('Invalid file type. Only .coachmate files are supported.');
+        // For file:// URIs, verify the extension. For content:// URIs (copied to temp),
+        // we skip this check since the original URI doesn't contain the extension.
+        // The JSON validation in importTeamFromFile will catch invalid files.
+        if (!isTempFile && !fileUri.toLowerCase().endsWith('.coachmate')) {
+          throw new Error('invalidFile');
         }
 
         const importedTeam = await importTeamFromFile(fileUri);
 
-        if (fileUri !== url) {
+        if (isTempFile) {
           await FileSystem.deleteAsync(fileUri, { idempotent: true });
         }
 
@@ -114,13 +123,19 @@ function HomeScreenContent() {
             }
           }]
         );
-      } catch (error) {
+      } catch (error: unknown) {
         console.error('Error handling file:', error);
+        const errorMessage = error instanceof Error ? error.message : '';
+        const translationKey = [
+          'fileReadError', 'fileParseError', 'invalidTeamFormat',
+          'missingTeamName', 'missingStartingPlayers',
+          'missingBenchPlayers', 'missingTeamSport',
+        ].includes(errorMessage) ? errorMessage : 'failedToImportTeamFile';
         Alert.alert(
-          t('error'), 
-          t('failedToImportTeamFile'),
-          [{ 
-            text: t('ok'), 
+          t('error'),
+          t(translationKey),
+          [{
+            text: t('ok'),
             onPress: () => {
               setIsProcessingFile(false);
               router.replace('/');
@@ -205,7 +220,13 @@ function HomeScreenContent() {
 
   const onCourtLayout = (event: any) => {
     const layout = event.nativeEvent.layout;
+    // For BenchPanel drop detection, we provide the layout of the court container.
     setCourtLayout(layout);
+    // For sizing the court itself, we don't subtract padding anymore as it is removed.
+    setCourtContainerSize({
+      width: layout.width,
+      height: layout.height,
+    });
   };
 
   if (isProcessingFile || isFileUrl) {
@@ -243,8 +264,12 @@ function HomeScreenContent() {
     );
   }
 
-  const availableHeight = Dimensions.get('window').height - insets.top - insets.bottom - LAYOUT.TAB_BAR_HEIGHT - PANEL_HEIGHT_COLLAPSED - CONFIGURATION_SELECTOR_HEIGHT;
-  const availableWidth = Dimensions.get('window').width;
+  // On iOS the tab bar is position:absolute (overlays content), so subtract it.
+  // On Android the tab bar is in normal flow, content area already excludes it.
+  const tabBarOffset = Platform.OS === 'ios' ? tabBarHeight : 0;
+  // Get exact dimensions from the container layout, defaulting to window dimensions
+  const availableWidth = courtContainerSize.width > 0 ? courtContainerSize.width : Dimensions.get('window').width;
+  const availableHeight = courtContainerSize.height > 0 ? courtContainerSize.height : Dimensions.get('window').height - insets.top - 10 - CONFIGURATION_SELECTOR_HEIGHT - PANEL_HEIGHT_COLLAPSED - tabBarOffset;
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
   const screenRatio = availableWidth / availableHeight;
 
@@ -262,7 +287,7 @@ function HomeScreenContent() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemedView style={styles.container}>
-        <View style={{ height: insets.top + 10 }} />
+        <View style={{ height: insets.top }} />
 
         <View ref={configurationSelectorRef} collapsable={false}>
           <CourtConfigurationSelector />
@@ -276,12 +301,7 @@ function HomeScreenContent() {
         />
 
         <View
-          style={[
-            styles.courtContainer,
-            {
-              paddingBottom: PANEL_HEIGHT_COLLAPSED + 60,
-            }
-          ]}
+          style={styles.courtContainer}
           onLayout={onCourtLayout}
         >
           <GenericCourt
@@ -294,9 +314,9 @@ function HomeScreenContent() {
           />
         </View>
 
-        <View style={{ height: PANEL_HEIGHT_COLLAPSED }} />
+        <View style={{ height: PANEL_HEIGHT_COLLAPSED + tabBarOffset }} />
 
-        <BenchPanel courtLayout={courtLayout} />
+        <BenchPanel courtLayout={courtLayout} tabBarHeight={tabBarHeight} />
 
         {isDragging && draggedItem && dragPosition && (
           <>
@@ -344,7 +364,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: LAYOUT.COURT_PADDING,
   },
   sportSelectorContainer: {
     padding: 20,

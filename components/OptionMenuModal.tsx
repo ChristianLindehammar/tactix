@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Modal, Pressable, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Modal, Pressable, StyleSheet, TouchableOpacity, Platform, useWindowDimensions } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -16,11 +16,18 @@ export const OptionMenuModal: React.FC<OptionMenuModalProps> = ({ visible, onClo
   const themeColor = useThemeColor({}, 'menuBackground');
   const menuBackground = typeof themeColor === 'string' ? themeColor : themeColor?.background;
   const { t } = useTranslation();
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+
+  const menuWidth = 200;
+  const menuHeight = 80; // approximate height of two menu items
+  const margin = 8;
+  const clampedLeft = Math.max(margin, Math.min(position.left - menuWidth, screenWidth - menuWidth - margin));
+  const clampedTop = Math.max(margin, Math.min(position.top - 30, screenHeight - menuHeight - margin));
 
   return (
-    <Modal visible={visible} transparent onRequestClose={onClose}>
+    <Modal visible={visible} transparent onRequestClose={onClose} hardwareAccelerated={Platform.OS === 'android'}>
       <Pressable style={styles.overlay} onPress={onClose}>
-        <View style={[styles.container, { top: position.top - 30, left: position.left - 200 }]}>
+        <View style={[styles.container, { top: clampedTop, left: clampedLeft }]}>
           <View style={[styles.menuBox, { backgroundColor: menuBackground as string }]}>
             <TouchableOpacity
               style={styles.menuItem}
