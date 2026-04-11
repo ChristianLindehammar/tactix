@@ -131,9 +131,9 @@ private_lane :build_and_upload_android do
     end
   end
   latest_code = all_codes.max || 0
-  # Enforce a minimum floor: the previously published production build had versionCode 20.
-  # Play Store requires strictly increasing codes, so we must never go below 21.
-  minimum_version_code = 21
+  # Enforce a minimum floor: versionCode 22 is already used (iOS + Android 1.3.1 build).
+  # Play Store requires strictly increasing codes, so we must never go below 23.
+  minimum_version_code = 23
   latest_code = [latest_code, minimum_version_code - 1].max
   # Use +2 as a one-time safety buffer: a prior run may have successfully uploaded
   # versionCode (latest+1) to the Play Store server-side while Fastlane reported a
