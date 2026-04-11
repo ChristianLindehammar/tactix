@@ -85,6 +85,25 @@ describe('parseBulkPlayerInput', () => {
     ]);
   });
 
+  it('should strip surrounding quotes added by Android smart keyboard', () => {
+    const input = '"John Doe"\n"Jane Smith"';
+    const result = parseBulkPlayerInput(input);
+    expect(result).toEqual([
+      { name: 'John Doe', number: undefined },
+      { name: 'Jane Smith', number: undefined },
+    ]);
+  });
+
+  it('should accept single-word names (first name only)', () => {
+    const input = 'John\nJane\nAlex';
+    const result = parseBulkPlayerInput(input);
+    expect(result).toEqual([
+      { name: 'John', number: undefined },
+      { name: 'Jane', number: undefined },
+      { name: 'Alex', number: undefined },
+    ]);
+  });
+
   it('should strip bullet prefixes', () => {
     const input = '\u2022 John Doe\n- Jane Smith\n* Alex Brown';
     const result = parseBulkPlayerInput(input);
