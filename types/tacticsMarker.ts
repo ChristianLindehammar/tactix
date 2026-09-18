@@ -39,6 +39,28 @@ export function createArrowMarker(
   };
 }
 
+const COURT_CENTER_X = 0.5;
+const COURT_CENTER_Y = 0.5;
+
+const isBall = (marker: TacticsMarker) => marker.type === 'ball';
+
+const createCenteredBall = () => createTacticsMarker('ball', COURT_CENTER_X, COURT_CENTER_Y);
+
+export function canDeleteMarker(markers: TacticsMarker[], id: string): boolean {
+  const marker = markers.find(m => m.id === id);
+  if (!marker || !isBall(marker)) return true;
+  return markers.filter(isBall).length > 1;
+}
+
+export function ensureAtLeastOneBall(markers: TacticsMarker[]): TacticsMarker[] {
+  if (markers.some(isBall)) return markers;
+  return [...markers, createCenteredBall()];
+}
+
+export function clearAllMarkers(): TacticsMarker[] {
+  return [createCenteredBall()];
+}
+
 export function getMarkerIcon(type: TacticsMarkerType, selectedSport: string | null | undefined): string {
   if (type === 'cone') return 'change-history';
   if (type === 'arrow-solid' || type === 'arrow-dashed') return 'arrow-forward';

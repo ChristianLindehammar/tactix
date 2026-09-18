@@ -21,12 +21,13 @@ import BandyBallSvg from '@/components/ui/BandyBallSvg';
 import { SportBall } from '@/components/SportBall';
 import { ArrowMarker } from '@/components/ArrowMarker';
 import { ConeSvg } from '@/components/ui/ConeSvg';
-import { TacticsMarker, TacticsMarkerType, createTacticsMarker, createArrowMarker, getMarkerIcon } from '@/types/tacticsMarker';
+import { TacticsMarker, TacticsMarkerType, createTacticsMarker, createArrowMarker, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers } from '@/types/tacticsMarker';
 
-function getMarkerTypes(arrowColor: string): { type: TacticsMarkerType; color: string; icon: string }[] {
+function getMarkerTypes(arrowColor: string, selectedSport: string | null | undefined): { type: TacticsMarkerType; color: string; icon: string }[] {
   return [
     { type: 'player', color: '#1976D2', icon: 'person' },
     { type: 'opponent', color: '#D32F2F', icon: 'person' },
+    { type: 'ball', color: '#FFA000', icon: getMarkerIcon('ball', selectedSport) },
     { type: 'cone', color: '#FF6D00', icon: 'change-history' },
     { type: 'arrow-solid', color: arrowColor, icon: 'arrow-forward' },
     { type: 'arrow-dashed', color: arrowColor, icon: 'arrow-forward' },
@@ -45,7 +46,7 @@ export default function TacticsScreen() {
   const buttonBgColor = useThemeColor({}, 'secondaryBackground');
   const textColor = useThemeColor({}, 'text') as string;
   const arrowColor = sportArrowColor ?? textColor;
-  const markerTypes = getMarkerTypes(textColor);
+  const markerTypes = getMarkerTypes(textColor, selectedSport);
 
   // Measure the actual court container to size the court precisely
   const [courtContainerSize, setCourtContainerSize] = useState({ width: 0, height: 0 });
@@ -231,11 +232,9 @@ export default function TacticsScreen() {
     }
   };
 
-  // Ensure ball marker is always present in the center
+  // Ensure at least one ball marker is always present
   React.useEffect(() => {
-    if (!markers.some(m => m.type === 'ball')) {
-      setMarkers((prev) => [...prev, createTacticsMarker('ball', 0.5, 0.5)]);
-    }
+    setMarkers(ensureAtLeastOneBall);
   }, [markers]);
 
   // PanResponder for drag-and-drop
@@ -322,6 +321,8 @@ export default function TacticsScreen() {
                   />
                   {mt.type === 'cone' ? (
                     <ConeSvg size={20} />
+                  ) : mt.type === 'ball' ? (
+                    <SportBall sport={selectedSport} size={20} color={mt.color} />
                   ) : (
                     <MaterialIcons
                       name={mt.icon as any}
@@ -344,11 +345,8 @@ export default function TacticsScreen() {
                     { 
                       text: t('ok'), 
                       onPress: () => {
-                        // Keep the ball marker but reset its position to center
-                        setMarkers(markers => markers
-                          .filter(m => m.type === 'ball')
-                          .map(m => ({ ...m, x: 0.5, y: 0.5 }))
-                        );
+                        // Keep a single ball marker, centered
+                        setMarkers(clearAllMarkers());
                       }
                     },
                   ]);
@@ -443,8 +441,8 @@ export default function TacticsScreen() {
                 }}
                 onDragStart={handleDragStart}
                 onLongPress={() => {
-                  // Don't allow deleting the ball marker
-                  if (marker.type === 'ball') return;
+                  // Don't allow deleting the last remaining ball marker
+                  if (!canDeleteMarker(markers, marker.id)) return;
 
                   Alert.alert(
                     t('delete'),
