@@ -11,7 +11,7 @@ interface SportConfig {
   aspectRatio: number;
   positions: string[];
   positionColors?: Record<string, string>;
-  arrowColor?: string;
+  arrowColor: string;
 }
 
 export type SportsConfiguration = {
@@ -23,6 +23,7 @@ export const sportsConfig: SportsConfiguration = {
     Svg: FloorballSvg,
     aspectRatio: 484 / 908,
     positions: ['Goalkeeper', 'Defender', 'Center', 'Forward'],
+    arrowColor: '#FFFFFF',
     positionColors: {
       Goalkeeper: '#5eaec3',  // Soft teal (base color)
       Defender: '#8b9dc3',    // Muted periwinkle blue
@@ -34,6 +35,7 @@ export const sportsConfig: SportsConfiguration = {
     Svg: FootballSvg,
     aspectRatio: 549 / 800,
     positions: ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'],
+    arrowColor: '#FFFFFF',
     positionColors: {
       Goalkeeper: '#5eaec3',  // Soft teal (base color)
       Defender: '#8b9dc3',    // Muted periwinkle blue
@@ -45,6 +47,7 @@ export const sportsConfig: SportsConfiguration = {
     Svg: HockeySvg,
     aspectRatio: 427 / 846,
     positions: ['Goalkeeper', 'Defender', 'Center', 'Forward'],
+    arrowColor: '#555555',
     positionColors: {
       Goalkeeper: '#5eaec3',  // Soft teal (base color)
       Defender: '#8b9dc3',    // Muted periwinkle blue
@@ -65,9 +68,10 @@ export const sportsConfig: SportsConfiguration = {
     },
   },
   basketball: {
-    Svg: BasketballSvg, 
+    Svg: BasketballSvg,
     aspectRatio: 429 / 803,
     positions: ['PointGuard', 'ShootingGuard', 'SmallForward', 'PowerForward', 'Center'],
+    arrowColor: '#FFFFFF',
     positionColors: {
       PointGuard: '#5eaec3',      // Soft teal (base color)
       ShootingGuard: '#8b9dc3',   // Muted periwinkle blue
