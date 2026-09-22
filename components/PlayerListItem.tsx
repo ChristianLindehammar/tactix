@@ -9,7 +9,7 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
 import { sportsConfig } from '@/constants/sports';
 import { useSport } from '@/context/SportContext';
 import { useTeam } from '@/context/TeamContext';
-import { useTheme } from '@react-navigation/native';
+import { useTheme } from "expo-router/react-navigation";
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -163,3 +163,5 @@ const styles = StyleSheet.create({
     borderTopColor: '#eee',
   },
 });
+
+PlayerListItem.displayName = 'PlayerListItem';

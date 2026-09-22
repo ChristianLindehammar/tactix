@@ -1,7 +1,7 @@
 import * as FileSystem from 'expo-file-system/legacy';
 import * as Linking from 'expo-linking';
 
-import { ActivityIndicator, Alert, Dimensions, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Dimensions, LayoutRectangle, Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DragProvider, useDrag } from '@/context/DragContext';
@@ -14,8 +14,7 @@ import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelec
 import { GenericCourt } from '@/components/GenericCourt';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
-import { LayoutRectangle } from 'react-native';
+import { useBottomTabBarHeight } from "expo-router/js-tabs";
 import { Player } from '@/components/Player';
 import { SportSelector } from '@/components/SportSelector';
 import { ThemedText } from '@/components/ThemedText';

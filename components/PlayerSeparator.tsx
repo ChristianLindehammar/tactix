@@ -14,6 +14,8 @@ export const PlayerSeparator = forwardRef<View>((props, ref) => {
   );
 });
 
+PlayerSeparator.displayName = 'PlayerSeparator';
+
 const styles = StyleSheet.create({
   container: {
     padding: 16,

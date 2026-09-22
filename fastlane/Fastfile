@@ -9,13 +9,15 @@ private_lane :prebuild do |options|
   project_root = File.expand_path("..", __dir__)
   Dir.chdir(project_root) do
     sh "rm -rf ios android"
-    # Pass --platform to skip the other platform's native generation & pod install
+    # Pass --platform to skip the other platform's native generation & pod install.
+    # --no-install skips the automatic pod install so the Podfile can be patched
+    # with a min deployment target before running pod install ourselves below.
     if platform == :android
-      sh "npx expo prebuild --non-interactive --platform android"
+      sh "npx expo prebuild --non-interactive --no-install --platform android"
     elsif platform == :ios
-      sh "npx expo prebuild --non-interactive --platform ios"
+      sh "npx expo prebuild --non-interactive --no-install --platform ios"
     else
-      sh "npx expo prebuild --non-interactive"
+      sh "npx expo prebuild --non-interactive --no-install"
     end
   end
 
@@ -23,8 +25,15 @@ private_lane :prebuild do |options|
   # release signingConfig to use the debug keystore.  Patch it here so the
   # Fastlane-supplied RELEASE_* Gradle properties are wired up for release builds.
   build_gradle = File.join(project_root, "android/app/build.gradle")
-  content = File.read(build_gradle)
+  if File.exist?(build_gradle)
+    content = File.read(build_gradle)
+    patch_signed_gradle = true
+  else
+    UI.message("android/app/build.gradle not found — skipping signing patch (iOS-only run)")
+    patch_signed_gradle = false
+  end
 
+  if patch_signed_gradle
   # Inject a release signingConfig block inside signingConfigs { } if not already present.
   # Match the closing of the debug block + closing brace of signingConfigs { } exactly as
   # expo generates it (4-space indent per level).
@@ -64,6 +73,18 @@ private_lane :prebuild do |options|
   )
 
   File.write(build_gradle, content)
+  end
+
+  # Install CocoaPods dependencies. The Podfile's post_install hook already
+  # raises every pod's IPHONEOS_DEPLOYMENT_TARGET to >= 15.0 (required by
+  # Xcode 26+), via the with-min-ios-deployment-target config plugin in
+  # app.json — so pods are only installed here.
+  podfile = File.join(project_root, "ios/Podfile")
+  if File.exist?(podfile)
+    Dir.chdir(File.join(project_root, "ios")) do
+      sh "bundle exec pod install"
+    end
+  end
 end
 
 # ---------------------------------------------------------------------------

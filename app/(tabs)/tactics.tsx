@@ -5,7 +5,7 @@ import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
 import { GenericCourt } from '@/components/GenericCourt';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { useBottomTabBarHeight } from "expo-router/js-tabs";
 import { DraggableMarker } from '@/components/DraggableMarker';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

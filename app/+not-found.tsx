@@ -1,11 +1,10 @@
-import { Link, Stack, usePathname } from 'expo-router';
+import { Link, Stack, usePathname , router } from 'expo-router';
 import { StyleSheet, ActivityIndicator } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import React, { useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { router } from 'expo-router';
 
 export default function NotFoundScreen() {
   const { t } = useTranslation();

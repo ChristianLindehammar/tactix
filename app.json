@@ -102,6 +102,8 @@
     },
     "plugins": [
       "expo-router",
+      "./plugins/with-min-ios-deployment-target",
+      "./plugins/with-ios-scene-lifecycle",
       [
         "expo-splash-screen",
         {
@@ -113,7 +115,8 @@
       "expo-font",
       "expo-localization",
       "expo-web-browser",
-      "expo-sharing"
+      "expo-sharing",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true

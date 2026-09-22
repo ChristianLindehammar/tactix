@@ -1,9 +1,9 @@
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from "expo-router/react-navigation";
 import { Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Ionicons } from '@expo/vector-icons';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { useBottomTabBarHeight } from "expo-router/js-tabs";
 import { PlayerListItem } from '@/components/PlayerListItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThemedButton } from '@/components/ThemedButton';

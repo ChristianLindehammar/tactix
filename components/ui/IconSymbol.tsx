@@ -2,7 +2,7 @@
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
-import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
+import { OpaqueColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import CourtIconSvg from './CourtIconSvg';
 
 type IconMapping = {
@@ -59,6 +59,6 @@ export function IconSymbol({
     name={mapping.icon as React.ComponentProps<typeof Ionicons>['name']} 
     size={size} 
     color={color} 
-    style={style}
+    style={style as StyleProp<TextStyle>}
   />;
 }

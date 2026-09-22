@@ -4,7 +4,7 @@ import { useTeam } from '@/context/TeamContext';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "expo-router/react-navigation";
 import { ThemedText } from '@/components/ThemedText';
 import { CustomInputDialog } from '@/components/CustomInputDialog';
 import { ImportPlayersDialog } from '@/components/ImportPlayersDialog';
