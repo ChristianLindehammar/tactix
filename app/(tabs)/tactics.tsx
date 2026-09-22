@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Platform } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert, PanResponder, Platform, useWindowDimensions } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
 import { useSport } from '@/context/SportContext';
 import { sportsConfig } from '@/constants/sports';
@@ -22,6 +22,7 @@ import { SportBall } from '@/components/SportBall';
 import { ArrowMarker } from '@/components/ArrowMarker';
 import { ConeSvg } from '@/components/ui/ConeSvg';
 import { TacticsMarker, TacticsMarkerType, createTacticsMarker, createArrowMarker, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers } from '@/types/tacticsMarker';
+import { getToolbarLayout } from '@/utils/toolbarLayout';
 
 function getMarkerTypes(arrowColor: string, selectedSport: string | null | undefined): { type: TacticsMarkerType; color: string; icon: string }[] {
   return [
@@ -47,6 +48,14 @@ export default function TacticsScreen() {
   const textColor = useThemeColor({}, 'text') as string;
   const arrowColor = sportArrowColor ?? textColor;
   const markerTypes = getMarkerTypes(textColor, selectedSport);
+
+  // Size the toolbar so every control fits on one row, whatever the screen width
+  const { width: windowWidth } = useWindowDimensions();
+  const toolbarLayout = getToolbarLayout({
+    windowWidth: windowWidth - insets.left - insets.right,
+    buttonCount: markerTypes.length,
+    hasClearButton: true,
+  });
 
   // Measure the actual court container to size the court precisely
   const [courtContainerSize, setCourtContainerSize] = useState({ width: 0, height: 0 });
@@ -299,16 +308,24 @@ export default function TacticsScreen() {
             { paddingTop: Math.max(insets.top, 8), backgroundColor: backgroundColor as string }
           ]}
         >
-          <View style={styles.controlsContainer}>
+          <View
+            style={[
+              styles.controlsContainer,
+              { paddingHorizontal: toolbarLayout.containerPaddingHorizontal },
+            ]}
+          >
             {/* Left side - Add marker buttons */}
-            <View style={styles.addButtonsContainer}>
+            <View style={[styles.addButtonsContainer, { gap: toolbarLayout.gap }]}>
               {markerTypes.map((mt, index) => (
                 <TouchableOpacity
                   key={mt.type}
                   ref={index === 0 ? playerBtnRef : undefined}
                   style={[
                     styles.markerTypeButton,
-                    { backgroundColor: buttonBgColor as string },
+                    {
+                      backgroundColor: buttonBgColor as string,
+                      paddingHorizontal: toolbarLayout.buttonPaddingHorizontal,
+                    },
                     addingType === mt.type && styles.activeButton,
                   ]}
                   onPress={() => setAddingType(current => current === mt.type ? null : mt.type)}
@@ -316,17 +333,17 @@ export default function TacticsScreen() {
                 >
                   <MaterialIcons
                     name={addingType === mt.type ? 'close' : 'add'}
-                    size={16}
+                    size={toolbarLayout.addIconSize}
                     color={mt.color}
                   />
                   {mt.type === 'cone' ? (
-                    <ConeSvg size={20} />
+                    <ConeSvg size={toolbarLayout.markerIconSize} />
                   ) : mt.type === 'ball' ? (
-                    <SportBall sport={selectedSport} size={20} color={mt.color} />
+                    <SportBall sport={selectedSport} size={toolbarLayout.markerIconSize} color={mt.color} />
                   ) : (
                     <MaterialIcons
                       name={mt.icon as any}
-                      size={20}
+                      size={toolbarLayout.markerIconSize}
                       color={mt.color}
                       style={mt.type === 'arrow-dashed' ? { opacity: 0.5 } : undefined}
                     />
@@ -334,11 +351,18 @@ export default function TacticsScreen() {
                 </TouchableOpacity>
               ))}
             </View>
-            
+
             {/* Right side - Clear All button - more compact */}
             {markers.length > 1 && (
-              <TouchableOpacity 
-                style={styles.clearButton} 
+              <TouchableOpacity
+                style={[
+                  styles.clearButton,
+                  {
+                    width: toolbarLayout.clearButtonSize,
+                    height: toolbarLayout.clearButtonSize,
+                    borderRadius: toolbarLayout.clearButtonSize / 2,
+                  },
+                ]}
                 onPress={() => {
                   Alert.alert(t('clearAll'), t('removeAllMarkers'), [
                     { text: t('cancel'), style: 'cancel' },
@@ -353,7 +377,7 @@ export default function TacticsScreen() {
                 }}
                 accessibilityLabel={t('clearAll')}
               >
-                <MaterialIcons name="delete-sweep" size={22} color="#fff" />
+                <MaterialIcons name="delete-sweep" size={toolbarLayout.markerIconSize} color="#fff" />
               </TouchableOpacity>
             )}
           </View>
@@ -562,21 +586,22 @@ const styles = StyleSheet.create({
   },
   controlsContainer: {
     flexDirection: 'row',
+    flexWrap: 'nowrap',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 16,
     paddingVertical: 6,
   },
   addButtonsContainer: {
     flexDirection: 'row',
-    gap: 8,
+    flexWrap: 'nowrap',
+    flexShrink: 1,
   },
   markerTypeButton: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 16,
     paddingVertical: 5,
-    paddingHorizontal: 8,
     borderWidth: 1.5,  // Slightly thinner border
     borderColor: 'transparent', // Transparent by default
   },
@@ -588,10 +613,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D32F2F',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 6,
-    borderRadius: 16,
-    width: 34,
-    height: 34,
+    flexShrink: 0,
     zIndex: 10,
   },
 });
