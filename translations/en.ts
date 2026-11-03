@@ -206,6 +206,15 @@ export default {
     invalidNumber: 'Enter a whole number above 0',
     belowMinimum: 'Must not be below the minimum',
   },
+  filters: 'Filters',
+  filtersWithCount: 'Filters ({{count}})',
+  minRatingOption: '{{stars}}★ and up',
+  exerciseSorts: {
+    updated: 'Latest updated',
+    rating: 'Highest rated',
+    title: 'Title A–Z',
+    difficulty: 'Difficulty',
+  },
   focusTags: {
     passing: 'Passing',
     shooting: 'Shooting',

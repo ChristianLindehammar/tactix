@@ -13,11 +13,13 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Exercises tab: library, filters, detail, editor, translations | Done (`a022127`) |
 | Rating, cloning, ownership, unsaved-changes warning, drill markers | Done (`639405f`) |
 | iOS check | Done, on the `iPhone 17 Pro` simulator |
-| Dark mode and remaining device checks | **Next** |
+| Dark mode on iOS, exercise screens only | Done |
+| Library sorting and minimum rating | Done |
+| Remaining device checks | **Next** |
 | RevenueCat and paywall | Not started; see open decisions |
 | Accounts, backend, sync | Not started |
 
-Last run: 245 tests in 18 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 255 tests in 18 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -38,6 +40,7 @@ Last run: 245 tests in 18 suites passing. `tsc` reports errors in older files su
 - **Frames:** `frames` is an array from the start, so multi-step drills won't need a migration. The UI only uses the first frame so far.
 - **Storage:** one AsyncStorage key per exercise (`exercise:<id>`), found by prefix, with no index. Deletes are soft (`deletedAt`) so they can sync later.
 - **Ownership:** `ownerId` comes from a local ID until accounts exist. Only the owner can edit or delete, and the repository enforces it as well as the UI. A null owner means nobody can edit.
+- **Sorting and minimum rating:** the library sorts by latest updated (default), highest rated, title or difficulty, with the latest edit first within a tie. The minimum rating hides unrated exercises. Both use your own stars, as there are no averages until a backend exists. Clear filters resets the minimum rating but not the sort. Filter chips sit in a panel that's closed by default, opened with a Filter button that shows how many are active. Sort stays visible beside the button, and search and player count stay visible and aren't counted.
 - **Ratings:** one record per user and exercise, stored apart from the exercise (`exercise-rating:<userId>:<exerciseId>`). A cleared rating stays as `stars: null` so it can sync.
 - **Clone:** creates a new exercise you own, with `clonedFromId` pointing at the source. Ratings are not copied.
 - **Arrow names:** solid is Run and dashed is Pass, confirmed by Christian. Coaches' conventions differ, but swapping would only change the displayed names in `translations/`.
@@ -80,17 +83,14 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
 ## Next steps
 
 1. **Remaining device checks:**
-    - Dark mode.
     - Tactics tab after the board changes.
     - Hockey and bandy, including goal marker contrast on white ice.
-    - Filters.
     - Cloning someone else's exercise.
 2. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Export and import through `.coachmate` files, adding a `kind` field and treating files without one as teams.
 - Multi-step drills using `frames`.
-- A library filter or sort by rating.
 - Accounts, moving local exercises to the signed-in user, and sync.
 
 ## Found during the iOS check, not fixed

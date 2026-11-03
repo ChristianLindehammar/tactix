@@ -86,6 +86,58 @@ describe('filterExercises', () => {
     });
   });
 
+  describe('minimum rating', () => {
+    it('keeps exercises rated at least the minimum and hides unrated ones', () => {
+      const great = buildExercise({ id: 'great' });
+      const exact = buildExercise({ id: 'exact' });
+      const poor = buildExercise({ id: 'poor' });
+      const unrated = buildExercise({ id: 'unrated' });
+
+      const result = filterExercises([great, exact, poor, unrated], {
+        minRating: 4,
+        ratings: { great: 5, exact: 4, poor: 3 },
+      });
+
+      expect(ids(result).sort()).toEqual(['exact', 'great']);
+    });
+  });
+
+  describe('sorting', () => {
+    it('puts the easiest first and the latest edit first within a level', () => {
+      const elite = buildExercise({ id: 'elite', difficulty: 5, updatedAt: '2026-09-01T00:00:00.000Z' });
+      const olderEasy = buildExercise({ id: 'olderEasy', difficulty: 1, updatedAt: '2026-01-01T00:00:00.000Z' });
+      const newerEasy = buildExercise({ id: 'newerEasy', difficulty: 1, updatedAt: '2026-06-01T00:00:00.000Z' });
+
+      const result = filterExercises([elite, olderEasy, newerEasy], { sort: 'difficulty' });
+
+      expect(ids(result)).toEqual(['newerEasy', 'olderEasy', 'elite']);
+    });
+
+    it('sorts titles by the rules of the language', () => {
+      const exercises = ['Öppen yta', 'Zon', 'Ärlig', 'anfall'].map(title =>
+        buildExercise({ id: title, title }),
+      );
+
+      const result = filterExercises(exercises, { sort: 'title', locale: 'sv' });
+
+      expect(ids(result)).toEqual(['anfall', 'Zon', 'Ärlig', 'Öppen yta']);
+    });
+
+    it('puts the highest rated first, unrated last, and the latest edit first within a tie', () => {
+      const unrated = buildExercise({ id: 'unrated', updatedAt: '2026-09-01T00:00:00.000Z' });
+      const low = buildExercise({ id: 'low', updatedAt: '2026-08-01T00:00:00.000Z' });
+      const olderTop = buildExercise({ id: 'olderTop', updatedAt: '2026-01-01T00:00:00.000Z' });
+      const newerTop = buildExercise({ id: 'newerTop', updatedAt: '2026-06-01T00:00:00.000Z' });
+
+      const result = filterExercises([unrated, low, olderTop, newerTop], {
+        sort: 'rating',
+        ratings: { low: 2, olderTop: 5, newerTop: 5 },
+      });
+
+      expect(ids(result)).toEqual(['newerTop', 'olderTop', 'low', 'unrated']);
+    });
+  });
+
   it('applies every filter together', () => {
     const match = buildExercise({ id: 'match', sport: 'hockey', difficulty: 3 });
     const wrongSport = buildExercise({ id: 'wrongSport', sport: 'bandy', difficulty: 3 });

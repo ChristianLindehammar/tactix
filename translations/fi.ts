@@ -206,6 +206,15 @@ export default {
     invalidNumber: 'Anna kokonaisluku, joka on suurempi kuin 0',
     belowMinimum: 'Ei saa olla pienempi kuin vähimmäismäärä',
   },
+  filters: 'Suodattimet',
+  filtersWithCount: 'Suodattimet ({{count}})',
+  minRatingOption: '{{stars}}★ tai enemmän',
+  exerciseSorts: {
+    updated: 'Viimeksi muokattu',
+    rating: 'Paras arvosana',
+    title: 'Otsikko A–Ö',
+    difficulty: 'Vaikeustaso',
+  },
   focusTags: {
     passing: 'Syötöt',
     shooting: 'Laukaukset',

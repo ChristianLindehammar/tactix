@@ -11,8 +11,9 @@ interface FilterChipProps {
   testID?: string;
 }
 
+const SELECTED_COLOR = '#0097B2';
+
 export const FilterChip = ({ label, selected, onPress, testID }: FilterChipProps) => {
-  const tint = useThemeColor({ light: '#0097B2', dark: '#444D51' }, 'tint') as string;
   const background = useThemeColor({}, 'menuBackground') as string;
   const border = useThemeColor({}, 'borderColor') as string;
 
@@ -25,7 +26,7 @@ export const FilterChip = ({ label, selected, onPress, testID }: FilterChipProps
       accessibilityState={{ selected }}
       style={[
         styles.chip,
-        { backgroundColor: selected ? tint : background, borderColor: selected ? tint : border },
+        { backgroundColor: selected ? SELECTED_COLOR : background, borderColor: selected ? SELECTED_COLOR : border },
       ]}
     >
       <ThemedText style={[styles.label, selected && styles.selectedLabel]}>{label}</ThemedText>

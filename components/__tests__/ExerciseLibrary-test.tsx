@@ -61,7 +61,7 @@ describe('exercise library', () => {
     renderExerciseScreen(<ExerciseLibraryScreen />);
 
     expect(await screen.findByText('Advanced · Game · 15 min · 6–12 players')).toBeTruthy();
-    expect(screen.getAllByText('Defence').length).toBeGreaterThan(1);
+    expect(screen.getByText('Defence')).toBeTruthy();
   });
 
   it('shows your rating on rated exercises only', async () => {
@@ -95,6 +95,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
+      fireEvent.press(screen.getByTestId('toggle-filters'));
       fireEvent.press(screen.getByTestId('filter-focus-defence'));
 
       expect(screen.getByText('Defending drill')).toBeTruthy();
@@ -105,6 +106,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
+      fireEvent.press(screen.getByTestId('toggle-filters'));
       fireEvent.press(screen.getByTestId('filter-difficulty-1'));
 
       expect(screen.getByText('Passing drill')).toBeTruthy();
@@ -115,6 +117,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
+      fireEvent.press(screen.getByTestId('toggle-filters'));
       fireEvent.press(screen.getByTestId('filter-phase-cooldown'));
 
       expect(screen.getByText('No exercises match your filters.')).toBeTruthy();
@@ -141,15 +144,107 @@ describe('exercise library', () => {
       expect(screen.queryByText('Passing drill')).toBeNull();
     });
 
+    it('narrows the list to a minimum rating, and clears it with the other filters', async () => {
+      await saved({ id: 'a', title: 'Top drill' });
+      await saved({ id: 'b', title: 'Weak drill' });
+      await saved({ id: 'c', title: 'Unrated drill' });
+      await ratingRepository.setMine('a', 5);
+      await ratingRepository.setMine('b', 2);
+
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Top drill');
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      fireEvent.press(screen.getByTestId('filter-rating-4'));
+
+      expect(screen.getByText('Top drill')).toBeTruthy();
+      expect(screen.queryByText('Weak drill')).toBeNull();
+      expect(screen.queryByText('Unrated drill')).toBeNull();
+
+      fireEvent.press(screen.getByText('Clear filters'));
+
+      expect(screen.getByText('Weak drill')).toBeTruthy();
+      expect(screen.getByText('Unrated drill')).toBeTruthy();
+    });
+
     it('brings everything back when filters are cleared', async () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
+      fireEvent.press(screen.getByTestId('toggle-filters'));
       fireEvent.press(screen.getByTestId('filter-focus-defence'));
 
       fireEvent.press(screen.getByText('Clear filters'));
 
       expect(screen.getByText('Passing drill')).toBeTruthy();
       expect(screen.getByText('Defending drill')).toBeTruthy();
+    });
+  });
+
+  describe('filter panel', () => {
+    it('keeps the filters out of the way until they are asked for', async () => {
+      await saved({ title: 'Passing drill' });
+
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Passing drill');
+      expect(screen.queryByTestId('filter-focus-passing')).toBeNull();
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      expect(screen.getByTestId('filter-focus-passing')).toBeTruthy();
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      expect(screen.queryByTestId('filter-focus-passing')).toBeNull();
+    });
+
+    it('keeps filters working and counted while the panel is closed', async () => {
+      await saved({ id: 'a', title: 'Passing drill', focus: ['passing'], difficulty: 1 });
+      await saved({ id: 'b', title: 'Defending drill', focus: ['defence'], difficulty: 1 });
+
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Passing drill');
+      expect(screen.getByText('Filters')).toBeTruthy();
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      fireEvent.press(screen.getByTestId('filter-focus-passing'));
+      fireEvent.press(screen.getByTestId('filter-difficulty-1'));
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+
+      expect(screen.getByText('Filters (2)')).toBeTruthy();
+      expect(screen.queryByText('Defending drill')).toBeNull();
+
+      fireEvent.press(screen.getByText('Clear filters'));
+
+      expect(screen.getByText('Filters')).toBeTruthy();
+      expect(screen.getByText('Defending drill')).toBeTruthy();
+    });
+
+    it('stays out of the way of sorting, which is always available', async () => {
+      await saved({ title: 'Passing drill' });
+
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Passing drill');
+
+      expect(screen.getByTestId('sort-rating')).toBeTruthy();
+    });
+  });
+
+  describe('sorting', () => {
+    const titlesInOrder = () =>
+      screen.getAllByText(/ drill$/).map(element => element.props.children);
+
+    it('reorders the list when a sort option is pressed, and back again', async () => {
+      await saved({ id: 'a', title: 'Older top drill', updatedAt: '2026-01-01T00:00:00.000Z' });
+      await saved({ id: 'b', title: 'Newer unrated drill', updatedAt: '2026-06-01T00:00:00.000Z' });
+      await ratingRepository.setMine('a', 5);
+
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Older top drill');
+      expect(titlesInOrder()).toEqual(['Newer unrated drill', 'Older top drill']);
+
+      fireEvent.press(screen.getByTestId('sort-rating'));
+      expect(titlesInOrder()).toEqual(['Older top drill', 'Newer unrated drill']);
+
+      fireEvent.press(screen.getByTestId('sort-updated'));
+      expect(titlesInOrder()).toEqual(['Newer unrated drill', 'Older top drill']);
     });
   });
 

@@ -24,15 +24,17 @@ import {
   RatingStars,
 } from '@/types/exercise';
 import { describeExercise } from '@/utils/describeExercise';
-import { filterExercises } from '@/utils/filterExercises';
+import { EXERCISE_SORTS, ExerciseSort, filterExercises } from '@/utils/filterExercises';
 
 const toggled = <T,>(list: T[], item: T) =>
   list.includes(item) ? list.filter(existing => existing !== item) : [...list, item];
 
+const MIN_RATING_OPTIONS: RatingStars[] = [3, 4, 5];
+
 export default function ExerciseLibraryScreen() {
   const { selectedSport } = useSport();
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const tabBarHeight = useBottomTabBarHeight();
 
   const background = useThemeColor({}, 'background') as string;
@@ -49,6 +51,9 @@ export default function ExerciseLibraryScreen() {
   const [focus, setFocus] = useState<FocusTag[]>([]);
   const [difficulties, setDifficulties] = useState<ExerciseDifficulty[]>([]);
   const [phase, setPhase] = useState<ExercisePhase | undefined>();
+  const [minRating, setMinRating] = useState<RatingStars | undefined>();
+  const [sort, setSort] = useState<ExerciseSort>('updated');
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const load = useCallback(async () => {
     try {
@@ -76,7 +81,8 @@ export default function ExerciseLibraryScreen() {
     parsedPlayerCount !== undefined ||
     focus.length > 0 ||
     difficulties.length > 0 ||
-    phase !== undefined;
+    phase !== undefined ||
+    minRating !== undefined;
 
   const forSport = useMemo(
     () => filterExercises(exercises ?? [], { sport: selectedSport ?? undefined }),
@@ -88,7 +94,14 @@ export default function ExerciseLibraryScreen() {
     focus,
     difficulties,
     phase,
+    minRating,
+    ratings,
+    sort,
+    locale,
   });
+
+  const activeFilterCount =
+    focus.length + difficulties.length + (phase ? 1 : 0) + (minRating ? 1 : 0);
 
   const clearFilters = () => {
     setSearch('');
@@ -96,6 +109,7 @@ export default function ExerciseLibraryScreen() {
     setFocus([]);
     setDifficulties([]);
     setPhase(undefined);
+    setMinRating(undefined);
   };
 
   const inputStyle = [styles.input, { borderColor: border, color: textColor }];
@@ -189,59 +203,107 @@ export default function ExerciseLibraryScreen() {
         />
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.chipScroll}
-        contentContainerStyle={styles.chipRow}
-        keyboardShouldPersistTaps="handled"
-      >
-        {FOCUS_TAGS.map(tag => (
-          <FilterChip
-            key={tag}
-            label={t(`focusTags.${tag}`)}
-            testID={`filter-focus-${tag}`}
-            selected={focus.includes(tag)}
-            onPress={() => setFocus(current => toggled(current, tag))}
-          />
-        ))}
-      </ScrollView>
+      <View style={styles.controlRow}>
+        <FilterChip
+          label={activeFilterCount > 0 ? t('filtersWithCount', { count: activeFilterCount }) : t('filters')}
+          testID="toggle-filters"
+          selected={filtersOpen}
+          onPress={() => setFiltersOpen(current => !current)}
+        />
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.sortScroll}
+          contentContainerStyle={styles.sortChips}
+          keyboardShouldPersistTaps="handled"
+        >
+          {EXERCISE_SORTS.map(option => (
+            <FilterChip
+              key={option}
+              label={t(`exerciseSorts.${option}`)}
+              testID={`sort-${option}`}
+              selected={sort === option}
+              onPress={() => setSort(option)}
+            />
+          ))}
+        </ScrollView>
+      </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.chipScroll}
-        contentContainerStyle={styles.chipRow}
-        keyboardShouldPersistTaps="handled"
-      >
-        {EXERCISE_DIFFICULTIES.map(level => (
-          <FilterChip
-            key={level}
-            label={t(`difficultyLevels.${level}`)}
-            testID={`filter-difficulty-${level}`}
-            selected={difficulties.includes(level)}
-            onPress={() => setDifficulties(current => toggled(current, level))}
-          />
-        ))}
-      </ScrollView>
+      {filtersOpen && (
+        <>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chipScroll}
+          contentContainerStyle={styles.chipRow}
+          keyboardShouldPersistTaps="handled"
+        >
+          {FOCUS_TAGS.map(tag => (
+            <FilterChip
+              key={tag}
+              label={t(`focusTags.${tag}`)}
+              testID={`filter-focus-${tag}`}
+              selected={focus.includes(tag)}
+              onPress={() => setFocus(current => toggled(current, tag))}
+            />
+          ))}
+        </ScrollView>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.chipScroll}
-        contentContainerStyle={styles.chipRow}
-        keyboardShouldPersistTaps="handled"
-      >
-        {EXERCISE_PHASES.map(option => (
-          <FilterChip
-            key={option}
-            label={t(`exercisePhases.${option}`)}
-            testID={`filter-phase-${option}`}
-            selected={phase === option}
-            onPress={() => setPhase(current => (current === option ? undefined : option))}
-          />
-        ))}
-      </ScrollView>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chipScroll}
+          contentContainerStyle={styles.chipRow}
+          keyboardShouldPersistTaps="handled"
+        >
+          {EXERCISE_DIFFICULTIES.map(level => (
+            <FilterChip
+              key={level}
+              label={t(`difficultyLevels.${level}`)}
+              testID={`filter-difficulty-${level}`}
+              selected={difficulties.includes(level)}
+              onPress={() => setDifficulties(current => toggled(current, level))}
+            />
+          ))}
+        </ScrollView>
+
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chipScroll}
+          contentContainerStyle={styles.chipRow}
+          keyboardShouldPersistTaps="handled"
+        >
+          {EXERCISE_PHASES.map(option => (
+            <FilterChip
+              key={option}
+              label={t(`exercisePhases.${option}`)}
+              testID={`filter-phase-${option}`}
+              selected={phase === option}
+              onPress={() => setPhase(current => (current === option ? undefined : option))}
+            />
+          ))}
+        </ScrollView>
+
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chipScroll}
+          contentContainerStyle={styles.chipRow}
+          keyboardShouldPersistTaps="handled"
+        >
+          {MIN_RATING_OPTIONS.map(stars => (
+            <FilterChip
+              key={stars}
+              label={t('minRatingOption', { stars })}
+              testID={`filter-rating-${stars}`}
+              selected={minRating === stars}
+              onPress={() => setMinRating(current => (current === stars ? undefined : stars))}
+            />
+          ))}
+        </ScrollView>
+        </>
+      )}
 
       {hasFilters && (
         <Pressable onPress={clearFilters} style={styles.clearFilters} hitSlop={8}>
@@ -292,6 +354,21 @@ const styles = StyleSheet.create({
   chipRow: {
     gap: 8,
     paddingHorizontal: 16,
+  },
+  controlRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingLeft: 16,
+    marginBottom: 8,
+  },
+  sortScroll: {
+    flexGrow: 0,
+    flexShrink: 1,
+  },
+  sortChips: {
+    gap: 8,
+    paddingRight: 16,
   },
   clearFilters: {
     paddingHorizontal: 16,

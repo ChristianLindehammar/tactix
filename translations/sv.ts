@@ -206,6 +206,15 @@ export default {
     invalidNumber: 'Ange ett heltal större än 0',
     belowMinimum: 'Får inte vara lägre än minimum',
   },
+  filters: 'Filter',
+  filtersWithCount: 'Filter ({{count}})',
+  minRatingOption: '{{stars}}★ och uppåt',
+  exerciseSorts: {
+    updated: 'Senast ändrad',
+    rating: 'Högst betyg',
+    title: 'Titel A–Ö',
+    difficulty: 'Svårighetsgrad',
+  },
   focusTags: {
     passing: 'Passningar',
     shooting: 'Skott',
