@@ -2,7 +2,7 @@
 
 Last updated 2026-11-03. Branch: `feature/exercise-designer`, pushed, no PR yet.
 
-CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature that lets coaches design, tag, rate and find training exercises per sport. The feature works on Android, but it has no paywall yet and has never run on iOS.
+CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature that lets coaches design, tag, rate and find training exercises per sport. The feature works on Android and iOS, but it has no paywall yet.
 
 ## Where things stand
 
@@ -12,11 +12,12 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Exercise format, validation, local storage | Done (`92fb074`) |
 | Exercises tab: library, filters, detail, editor, translations | Done (`a022127`) |
 | Rating, cloning, ownership, unsaved-changes warning, drill markers | Done (`639405f`) |
-| iOS and dark mode check | **Next** |
+| iOS check | Done, on the `iPhone 17 Pro` simulator |
+| Dark mode and remaining device checks | **Next** |
 | RevenueCat and paywall | Not started; see open decisions |
 | Accounts, backend, sync | Not started |
 
-Last run: 244 tests in 18 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 245 tests in 18 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -39,6 +40,7 @@ Last run: 244 tests in 18 suites passing. `tsc` reports errors in older files su
 - **Ownership:** `ownerId` comes from a local ID until accounts exist. Only the owner can edit or delete, and the repository enforces it as well as the UI. A null owner means nobody can edit.
 - **Ratings:** one record per user and exercise, stored apart from the exercise (`exercise-rating:<userId>:<exerciseId>`). A cleared rating stays as `stars: null` so it can sync.
 - **Clone:** creates a new exercise you own, with `clonedFromId` pointing at the source. Ratings are not copied.
+- **Arrow names:** solid is Run and dashed is Pass, confirmed by Christian. Coaches' conventions differ, but swapping would only change the displayed names in `translations/`.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
 - **Backend (later):** Postgres, for example Supabase, because the filters combine several fields. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
 
@@ -50,7 +52,15 @@ Last run: 244 tests in 18 suites passing. `tsc` reports errors in older files su
 - **Don't range-check marker coordinates.** Dragging doesn't clamp, so markers can legitimately sit slightly off-court.
 - **Scripted drags:** `adb input motionevent` is slow enough to pass the 500ms long-press and open the Delete dialog. Use `adb shell input draganddrop` instead.
 - **Dev Tools button:** the floating gear covers the library's add button. Drag it out of the way; it doesn't exist in production.
-- **Disk space:** only about 14 GB was free, and native builds use a lot.
+- **Disk space:** only about 14 GB was free at one point, and native builds use a lot.
+- **Dev Tools gear on iOS:** it blocks taps around it, well beyond its visible circle, and it can swallow a left-edge swipe. If a tap in the top-left does nothing, move the gear before suspecting the app.
+- **No Simulator.app:** Xcode 27 replaced it with Device Hub, at `/Applications/Xcode.app/Contents/Applications/DeviceHub.app`. `open -a Simulator` fails.
+- **Driving iOS with MobileBuildMCP:** it's added locally with UI automation enabled in the git-excluded `.mobilebuildmcp/config.yaml`.
+    - Call `session_set_defaults` with the simulator ID after each reconnect.
+    - Focus a text field before typing. Otherwise keys reach the React Native dev shortcuts, where `i` toggles the element inspector.
+    - `Redigera skiss`, `Spara`, the board tools and the court aren't listed as tap targets. Get their refs with `wait_for_ui` by label or test ID, then use `touch`.
+    - It can't see inside the label dialog, so use `key_sequence` to type there.
+    - Its `swipe-from-left-edge` preset doesn't trigger the iOS back gesture, so test back-swipes by hand.
 
 ## Running it
 
@@ -58,6 +68,7 @@ Last run: 244 tests in 18 suites passing. `tsc` reports errors in older files su
 npx jest --watchAll=false
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 npx expo run:android --device CoachMate_Dev
+npx expo run:ios --device "iPhone 17 Pro"
 ```
 
 `expo-crypto` is a native dependency, so older dev builds need rebuilding. To test another coach's exercise, there's no import yet, so seed one into `catalystLocalStorage` in `databases/RKStorage` using `adb shell run-as com.lindehammarkonsult.coachmate sqlite3`. `CoachMate_Dev` already holds test data, including a seeded `exercise:seed-theirs`.
@@ -68,14 +79,13 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
 
 ## Next steps
 
-1. **iOS check.** There's no `ios/` folder, so this needs a prebuild, and `ios/` isn't git-ignored: don't commit it by accident. Check the tab bar spacing (`bottomInset`), back-swipe with the unsaved-changes warning, and nested modals (the label dialog inside the diagram modal).
-2. **Remaining device checks:**
+1. **Remaining device checks:**
     - Dark mode.
     - Tactics tab after the board changes.
     - Hockey and bandy, including goal marker contrast on white ice.
     - Filters.
     - Cloning someone else's exercise.
-3. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
+2. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Export and import through `.coachmate` files, adding a `kind` field and treating files without one as teams.
@@ -83,10 +93,14 @@ Later:
 - A library filter or sort by rating.
 - Accounts, moving local exercises to the signed-in user, and sync.
 
+## Found during the iOS check, not fixed
+
+- **Label limit:** the dialog says 3 characters but accepts 5, then cuts the label to 3 on save without warning.
+- **Screen readers:** `Redigera skiss`, `Spara` and the board tools aren't exposed as buttons, so VoiceOver users may not find them.
+
 ## Open decisions for Christian
 
 - **Pricing:** one-time purchase or annual plan. I recommended one-time until sync exists, because a subscription is hard to justify while everything stays on the device.
-- **Arrow names:** solid is Run and dashed is Pass in exercises. Conventions differ, and swapping only changes the displayed name.
 - **Saving tactics:** should saved plain tactics be free? I suggested a few for free.
 - **Exercise library:** whether to offer a shared or curated one. I suggested curated first, since publishing by coaches needs moderation.
 - **Difficulty scale:** currently 1–5. Three levels might rate more consistently if a shared library comes soon.

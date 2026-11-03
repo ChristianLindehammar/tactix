@@ -169,6 +169,17 @@ describe('TacticsBoard', () => {
       expect(onChange.mock.lastCall?.[0].find(m => m.id === player.id)?.label).toBe('ABC');
     });
 
+    it('does not autocorrect a label while it is typed', async () => {
+      await renderBoard({ value: [ball, player], enableLabels: true });
+
+      fireEvent.press(screen.getByTestId(`marker-${player.id}`));
+
+      expect(await screen.findByLabelText('Label (up to 3 characters)')).toHaveProp(
+        'autoCorrect',
+        false,
+      );
+    });
+
     it('removes the label when it is emptied', async () => {
       const labelled = { ...player, label: '7' };
       const { onChange } = await renderBoard({ value: [ball, labelled], enableLabels: true });

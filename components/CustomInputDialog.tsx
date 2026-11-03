@@ -15,6 +15,7 @@ interface CustomInputDialogProps {
   /** Lets the user submit an empty value, such as to clear something. */
   allowEmpty?: boolean;
   maxLength?: number;
+  autoCorrect?: boolean;
 }
 
 export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
@@ -25,6 +26,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
   initialValue = '',
   allowEmpty = false,
   maxLength,
+  autoCorrect,
 }) => {
   const [value, setValue] = useState(initialValue);
   const textColor = useThemeColor({}, 'text');
@@ -44,6 +46,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
                 style={[styles.input, { color: String(textColor), borderColor: String(textColor) }]}
                 accessibilityLabel={title}
                 maxLength={maxLength}
+                autoCorrect={autoCorrect}
                 value={value}
                 onChangeText={setValue}
                 autoFocus

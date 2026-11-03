@@ -439,6 +439,7 @@ export function TacticsBoard({
           title={t('markerLabel')}
           initialValue={value.find(marker => marker.id === labellingId)?.label ?? ''}
           maxLength={MAX_LABEL_LENGTH + 2}
+          autoCorrect={false}
           allowEmpty
           onCancel={() => setLabellingId(null)}
           onSubmit={applyLabel}
