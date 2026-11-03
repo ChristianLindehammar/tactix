@@ -18,6 +18,7 @@ const MAPPING: Record<string, IconMapping> = {
   'chevron.down': { type: 'ionicon', icon: 'chevron-down' },
   'plus.circle.fill': { type: 'ionicon', icon: 'add-circle' },
   'lightbulb': { type: 'ionicon', icon: 'bulb-outline' },
+  'list.bullet.clipboard': { type: 'ionicon', icon: 'clipboard-outline' },
   'sportscourt.fill': { type: 'custom', icon: CourtIconSvg },
   'person.3.fill': { type: 'ionicon', icon: 'people' },
   'gear': { type: 'ionicon', icon: 'settings' },

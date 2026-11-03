@@ -79,3 +79,5 @@ export function createLocalExerciseRepository(): ExerciseRepository {
     },
   };
 }
+
+export const exerciseRepository = createLocalExerciseRepository();

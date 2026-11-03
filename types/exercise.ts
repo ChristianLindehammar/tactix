@@ -3,7 +3,8 @@ import { TACTICS_MARKER_TYPES, TacticsMarker } from '@/types/tacticsMarker';
 
 export const EXERCISE_SCHEMA_VERSION = 1;
 
-export type ExerciseDifficulty = 1 | 2 | 3 | 4 | 5;
+export const EXERCISE_DIFFICULTIES = [1, 2, 3, 4, 5] as const;
+export type ExerciseDifficulty = (typeof EXERCISE_DIFFICULTIES)[number];
 
 export const EXERCISE_PHASES = ['warmup', 'main', 'game', 'cooldown'] as const;
 export type ExercisePhase = (typeof EXERCISE_PHASES)[number];
