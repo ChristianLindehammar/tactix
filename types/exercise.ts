@@ -33,7 +33,10 @@ export interface ExerciseFrame {
 export interface Exercise {
   schemaVersion: typeof EXERCISE_SCHEMA_VERSION;
   id: string;
+  /** The only user who may change this exercise. Null means no user does. */
   ownerId: string | null;
+  /** The exercise this one was cloned from. */
+  clonedFromId: string | null;
   sport: Sport;
   title: string;
   description: string;
@@ -51,6 +54,29 @@ export interface Exercise {
   updatedAt: string;
   deletedAt: string | null;
 }
+
+export const RATING_STARS = [1, 2, 3, 4, 5] as const;
+export type RatingStars = (typeof RATING_STARS)[number];
+
+/** One user's rating of one exercise, stored apart from the exercise. */
+export interface ExerciseRating {
+  exerciseId: string;
+  userId: string;
+  /** Null once the user has cleared their rating. */
+  stars: RatingStars | null;
+  updatedAt: string;
+}
+
+export const isRatingStars = (value: unknown): value is RatingStars =>
+  typeof value === 'number' && Number.isInteger(value) && value >= 1 && value <= 5;
+
+export const isExerciseRating = (data: unknown): data is ExerciseRating =>
+  typeof data === 'object' &&
+  data !== null &&
+  typeof (data as ExerciseRating).exerciseId === 'string' &&
+  typeof (data as ExerciseRating).userId === 'string' &&
+  ((data as ExerciseRating).stars === null || isRatingStars((data as ExerciseRating).stars)) &&
+  typeof (data as ExerciseRating).updatedAt === 'string';
 
 export type ExerciseParseErrorCode =
   | 'invalidFormat'
@@ -114,7 +140,10 @@ function parseMarker(data: unknown): TacticsMarker {
     return fail('invalidMarker');
   }
 
+  if (data.label !== undefined && typeof data.label !== 'string') return fail('invalidMarker');
+
   const marker: TacticsMarker = { id: data.id, type: data.type, x: data.x, y: data.y };
+  if (data.label !== undefined) marker.label = data.label;
   if (data.type !== 'arrow-solid' && data.type !== 'arrow-dashed') return marker;
 
   if (!isCoordinate(data.endX) || !isCoordinate(data.endY)) return fail('invalidMarker');
@@ -139,6 +168,7 @@ export function parseExercise(data: unknown): Exercise {
   const {
     id,
     ownerId,
+    clonedFromId,
     sport,
     title,
     description,
@@ -159,6 +189,7 @@ export function parseExercise(data: unknown): Exercise {
 
   if (!isNonEmptyText(id)) return fail('invalidId');
   if (ownerId !== null && !isNonEmptyText(ownerId)) return fail('invalidId');
+  if (clonedFromId !== null && !isNonEmptyText(clonedFromId)) return fail('invalidId');
   if (!includes(Object.keys(sportsConfig) as Sport[], sport)) return fail('invalidSport');
   if (!isNonEmptyText(title)) return fail('invalidTitle');
   if (
@@ -188,6 +219,7 @@ export function parseExercise(data: unknown): Exercise {
     schemaVersion: EXERCISE_SCHEMA_VERSION,
     id,
     ownerId: ownerId as string | null,
+    clonedFromId: clonedFromId as string | null,
     sport,
     title,
     description,

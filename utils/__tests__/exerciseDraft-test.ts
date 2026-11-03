@@ -3,7 +3,7 @@ import { buildExercise } from '@/test-utils/exerciseFixture';
 import { parseExercise } from '@/types/exercise';
 
 const NOW = '2026-11-03T12:00:00.000Z';
-const context = { sport: 'hockey', locale: 'sv', now: NOW } as const;
+const context = { sport: 'hockey', locale: 'sv', now: NOW, ownerId: 'me' } as const;
 
 const validDraft = (overrides: Partial<ExerciseDraft> = {}): ExerciseDraft => ({
   ...createDraft(),
@@ -37,7 +37,8 @@ describe('a new exercise from a draft', () => {
       createdAt: NOW,
       updatedAt: NOW,
       deletedAt: null,
-      ownerId: null,
+      ownerId: 'me',
+      clonedFromId: null,
     });
   });
 
@@ -103,6 +104,7 @@ describe('editing an existing exercise', () => {
   const existing = buildExercise({
     id: 'keep-me',
     ownerId: 'owner-1',
+    clonedFromId: 'source-1',
     sport: 'bandy',
     locale: 'fi',
     createdAt: '2026-01-01T00:00:00.000Z',

@@ -1,33 +1,18 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import { createLocalExerciseRepository, ExerciseStorageError } from '../exerciseRepository';
+import {
+  createLocalExerciseRepository,
+  ExerciseOwnershipError,
+  ExerciseStorageError,
+} from '../exerciseRepository';
+import { buildExercise } from '@/test-utils/exerciseFixture';
 import { Exercise, ExerciseParseError } from '@/types/exercise';
 
-const exercise = (overrides: Partial<Exercise> = {}): Exercise => ({
-  schemaVersion: 1,
-  id: 'exercise-1',
-  ownerId: null,
-  sport: 'floorball',
-  title: 'Triangle passing',
-  description: '',
-  coachingPoints: [],
-  locale: 'en',
-  difficulty: 2,
-  focus: ['passing'],
-  customTags: [],
-  phase: 'warmup',
-  durationMinutes: 10,
-  minPlayers: 6,
-  maxPlayers: 12,
-  frames: [{ id: 'frame-1', markers: [{ id: 'a', type: 'cone', x: 0.5, y: 0.5 }] }],
-  createdAt: '2026-11-03T10:00:00.000Z',
-  updatedAt: '2026-11-03T10:00:00.000Z',
-  deletedAt: null,
-  ...overrides,
-});
+const exercise = (overrides: Partial<Exercise> = {}) =>
+  buildExercise({ ownerId: 'me', ...overrides });
 
 describe('local exercise repository', () => {
-  const repository = createLocalExerciseRepository();
+  const repository = createLocalExerciseRepository({ getCurrentUserId: async () => 'me' });
 
   beforeEach(async () => {
     await AsyncStorage.clear();
@@ -104,6 +89,51 @@ describe('local exercise repository', () => {
       ExerciseParseError,
     );
     expect(await repository.list()).toEqual([]);
+  });
+
+  describe('ownership', () => {
+    const others = exercise({ id: 'theirs', ownerId: 'someone-else', title: 'Their drill' });
+
+    beforeEach(() => repository.save(others));
+
+    it('accepts an exercise from someone else the first time, as an import would', async () => {
+      expect(await repository.get('theirs')).toEqual(others);
+    });
+
+    it('refuses to overwrite an exercise owned by someone else', async () => {
+      await expect(repository.save({ ...others, title: 'Hijacked' })).rejects.toBeInstanceOf(
+        ExerciseOwnershipError,
+      );
+
+      expect((await repository.get('theirs'))?.title).toBe('Their drill');
+    });
+
+    it('refuses to take over an exercise by changing its owner', async () => {
+      await expect(repository.save({ ...others, ownerId: 'me' })).rejects.toBeInstanceOf(
+        ExerciseOwnershipError,
+      );
+    });
+
+    it('refuses to delete an exercise owned by someone else', async () => {
+      await expect(repository.remove('theirs')).rejects.toBeInstanceOf(ExerciseOwnershipError);
+
+      expect(await repository.get('theirs')).not.toBeNull();
+    });
+
+    it('treats an exercise without an owner as not yours', async () => {
+      await repository.save(exercise({ id: 'shared', ownerId: null }));
+
+      await expect(repository.remove('shared')).rejects.toBeInstanceOf(ExerciseOwnershipError);
+    });
+
+    it('still lets you edit and delete your own', async () => {
+      await repository.save(exercise({ id: 'mine' }));
+      await repository.save(exercise({ id: 'mine', title: 'Renamed' }));
+      expect((await repository.get('mine'))?.title).toBe('Renamed');
+
+      await repository.remove('mine');
+      expect(await repository.get('mine')).toBeNull();
+    });
   });
 
   it('skips a corrupt stored exercise and still lists the rest', async () => {

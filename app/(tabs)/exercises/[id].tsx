@@ -9,8 +9,12 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { StarRating } from '@/components/StarRating';
+import { getCurrentUserId } from '@/services/currentUser';
+import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
-import { Exercise } from '@/types/exercise';
+import { Exercise, RatingStars } from '@/types/exercise';
+import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
 
 const noop = () => {};
@@ -24,17 +28,20 @@ export default function ExerciseDetailScreen() {
 
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'notFound' | 'failed'>('loading');
-  const [deleteFailed, setDeleteFailed] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
+  const [rating, setRating] = useState<RatingStars | null>(null);
+  const [failure, setFailure] = useState<string | null>(null);
 
   // Reloads on return from the editor, so edits show straight away
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      exerciseRepository
-        .get(id)
-        .then(found => {
+      Promise.all([exerciseRepository.get(id), getCurrentUserId(), ratingRepository.getMine(id)])
+        .then(([found, me, myRating]) => {
           if (!active) return;
           setExercise(found);
+          setUserId(me);
+          setRating(myRating);
           setStatus(found ? 'ready' : 'notFound');
         })
         .catch(() => {
@@ -53,16 +60,42 @@ export default function ExerciseDetailScreen() {
         text: t('delete'),
         style: 'destructive',
         onPress: async () => {
-          setDeleteFailed(false);
+          setFailure(null);
           try {
             await exerciseRepository.remove(id);
             router.back();
           } catch {
-            setDeleteFailed(true);
+            setFailure(t('exerciseDeleteFailed'));
           }
         },
       },
     ]);
+
+  const rate = async (stars: RatingStars | null) => {
+    setFailure(null);
+    try {
+      await ratingRepository.setMine(id, stars);
+      setRating(stars);
+    } catch {
+      setFailure(t('ratingSaveFailed'));
+    }
+  };
+
+  const clone = async () => {
+    if (!exercise || !userId) return;
+    setFailure(null);
+    try {
+      const copy = cloneExercise(exercise, {
+        ownerId: userId,
+        now: new Date().toISOString(),
+        title: t('cloneTitle', { title: exercise.title }),
+      });
+      await exerciseRepository.save(copy);
+      router.push({ pathname: '/exercises/edit', params: { id: copy.id } });
+    } catch {
+      setFailure(t('exerciseCloneFailed'));
+    }
+  };
 
   if (status !== 'ready' || !exercise) {
     return (
@@ -92,6 +125,11 @@ export default function ExerciseDetailScreen() {
           readOnly
           requireBall={false}
         />
+      </View>
+
+      <View style={styles.section}>
+        <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>
+        <StarRating value={rating} onChange={rate} />
       </View>
 
       {exercise.focus.length > 0 && (
@@ -124,16 +162,21 @@ export default function ExerciseDetailScreen() {
         </View>
       )}
 
-      {deleteFailed && <ThemedText style={styles.error}>{t('exerciseDeleteFailed')}</ThemedText>}
+      {failure && <ThemedText style={styles.error}>{failure}</ThemedText>}
 
-      <ThemedButton
-        onPress={() => router.push({ pathname: '/exercises/edit', params: { id: exercise.id } })}
-      >
-        {t('edit')}
-      </ThemedButton>
-      <ThemedButton onPress={confirmDelete} style={styles.deleteButton}>
-        {t('delete')}
-      </ThemedButton>
+      {exercise.ownerId === userId && (
+        <ThemedButton
+          onPress={() => router.push({ pathname: '/exercises/edit', params: { id: exercise.id } })}
+        >
+          {t('edit')}
+        </ThemedButton>
+      )}
+      <ThemedButton onPress={clone}>{t('clone')}</ThemedButton>
+      {exercise.ownerId === userId && (
+        <ThemedButton onPress={confirmDelete} style={styles.deleteButton}>
+          {t('delete')}
+        </ThemedButton>
+      )}
     </ScrollView>
   );
 }

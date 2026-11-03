@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import { getCurrentUserId } from '@/services/currentUser';
 import { Exercise, parseExercise } from '@/types/exercise';
 
 const KEY_PREFIX = 'exercise:';
@@ -22,7 +23,15 @@ export class ExerciseStorageError extends Error {
   }
 }
 
-const storage = async <T>(operation: () => Promise<T>): Promise<T> => {
+/** Only an exercise's owner may change or delete it. Others can clone it instead. */
+export class ExerciseOwnershipError extends Error {
+  constructor() {
+    super('exerciseNotOwned');
+    this.name = 'ExerciseOwnershipError';
+  }
+}
+
+export const withStorageErrors = async <T>(operation: () => Promise<T>): Promise<T> => {
   try {
     return await operation();
   } catch (error) {
@@ -41,14 +50,25 @@ const readStored = (key: string, json: string | null): Exercise | null => {
   }
 };
 
-export function createLocalExerciseRepository(): ExerciseRepository {
+interface LocalRepositoryOptions {
+  getCurrentUserId: () => Promise<string>;
+}
+
+export function createLocalExerciseRepository(
+  options: LocalRepositoryOptions = { getCurrentUserId },
+): ExerciseRepository {
+  const assertOwned = async (exercise: Exercise) => {
+    const me = await withStorageErrors(options.getCurrentUserId);
+    if (exercise.ownerId !== me) throw new ExerciseOwnershipError();
+  };
+
   const readAny = async (id: string) => {
     const key = keyFor(id);
-    return readStored(key, await storage(() => AsyncStorage.getItem(key)));
+    return readStored(key, await withStorageErrors(() => AsyncStorage.getItem(key)));
   };
 
   const listIncludingDeleted = async () => {
-    const entries = await storage(async () => {
+    const entries = await withStorageErrors(async () => {
       const keys = await AsyncStorage.getAllKeys();
       return AsyncStorage.multiGet(keys.filter(key => key.startsWith(KEY_PREFIX)));
     });
@@ -60,7 +80,9 @@ export function createLocalExerciseRepository(): ExerciseRepository {
   const save = async (exercise: Exercise) => {
     // Never store what could not be read back
     const valid = parseExercise(exercise);
-    await storage(() => AsyncStorage.setItem(keyFor(valid.id), JSON.stringify(valid)));
+    const stored = await readAny(valid.id);
+    if (stored) await assertOwned(stored);
+    await withStorageErrors(() => AsyncStorage.setItem(keyFor(valid.id), JSON.stringify(valid)));
   };
 
   return {
@@ -74,6 +96,7 @@ export function createLocalExerciseRepository(): ExerciseRepository {
     remove: async id => {
       const exercise = await readAny(id);
       if (!exercise) return;
+      await assertOwned(exercise);
       const now = new Date().toISOString();
       await save({ ...exercise, deletedAt: now, updatedAt: now });
     },

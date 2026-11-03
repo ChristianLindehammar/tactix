@@ -12,6 +12,9 @@ interface CustomInputDialogProps {
   onCancel: () => void;
   onSubmit: (value: string) => void;
   initialValue?: string;
+  /** Lets the user submit an empty value, such as to clear something. */
+  allowEmpty?: boolean;
+  maxLength?: number;
 }
 
 export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
@@ -19,7 +22,9 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
   title,
   onCancel,
   onSubmit,
-  initialValue = ''
+  initialValue = '',
+  allowEmpty = false,
+  maxLength,
 }) => {
   const [value, setValue] = useState(initialValue);
   const textColor = useThemeColor({}, 'text');
@@ -37,6 +42,8 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
               <ThemedText style={styles.title}>{title}</ThemedText>
               <TextInput
                 style={[styles.input, { color: String(textColor), borderColor: String(textColor) }]}
+                accessibilityLabel={title}
+                maxLength={maxLength}
                 value={value}
                 onChangeText={setValue}
                 autoFocus
@@ -50,7 +57,7 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={[styles.button, { backgroundColor: Colors.light.tint }]}
-                  onPress={() => value.trim() && onSubmit(value.trim())}
+                  onPress={() => (allowEmpty || value.trim()) && onSubmit(value.trim())}
                 >
                   <ThemedText style={{ color: '#fff' }}>
                     { t('ok')}

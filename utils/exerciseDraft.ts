@@ -38,6 +38,7 @@ export interface DraftContext {
   sport: Sport;
   locale: string;
   now: string;
+  ownerId: string;
 }
 
 export const createDraft = (): ExerciseDraft => ({
@@ -70,6 +71,9 @@ export const draftFromExercise = (exercise: Exercise): ExerciseDraft => ({
   markers: exercise.frames[0].markers,
 });
 
+export const isDraftChanged = (baseline: ExerciseDraft, draft: ExerciseDraft) =>
+  JSON.stringify(baseline) !== JSON.stringify(draft);
+
 const splitList = (text: string, separator: string) =>
   text
     .split(separator)
@@ -85,7 +89,7 @@ const parseCount = (text: string): number | null | undefined => {
 
 export function draftToExercise(
   draft: ExerciseDraft,
-  { sport, locale, now }: DraftContext,
+  { sport, locale, now, ownerId }: DraftContext,
   existing?: Exercise,
 ): DraftResult {
   const title = draft.title.trim();
@@ -118,7 +122,8 @@ export function draftToExercise(
     exercise: {
       schemaVersion: EXERCISE_SCHEMA_VERSION,
       id: existing?.id ?? randomUUID(),
-      ownerId: existing?.ownerId ?? null,
+      ownerId: existing ? existing.ownerId : ownerId,
+      clonedFromId: existing?.clonedFromId ?? null,
       sport: existing?.sport ?? sport,
       locale: existing?.locale ?? locale,
       title,

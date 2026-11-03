@@ -1,19 +1,30 @@
 import * as React from 'react';
+import { Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
 
 import ExerciseEditorScreen from '@/app/(tabs)/exercises/edit';
+import { getCurrentUserId } from '@/services/currentUser';
 import { exerciseRepository } from '@/services/exerciseRepository';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
 
 const mockBack = jest.fn();
+const mockDispatch = jest.fn();
 let mockParams: { id?: string } = {};
+let mockPreventRemove: { enabled: boolean; callback: (event: { data: { action: unknown } }) => void };
 
 jest.mock('expo-router', () => ({
   useRouter: () => ({ back: mockBack }),
   useLocalSearchParams: () => mockParams,
+  useNavigation: () => ({ dispatch: mockDispatch }),
   Stack: { Screen: () => null },
+}));
+// The navigator is the boundary: leaving the screen is its job, deciding whether to warn is ours
+jest.mock('expo-router/react-navigation', () => ({
+  usePreventRemove: (enabled: boolean, callback: typeof mockPreventRemove.callback) => {
+    mockPreventRemove = { enabled, callback };
+  },
 }));
 
 const pressSave = async () => {
@@ -25,6 +36,7 @@ describe('exercise editor', () => {
   beforeEach(async () => {
     await AsyncStorage.clear();
     mockBack.mockClear();
+    mockDispatch.mockClear();
     mockParams = {};
     jest.restoreAllMocks();
   });
@@ -36,10 +48,10 @@ describe('exercise editor', () => {
       fireEvent.changeText(await screen.findByLabelText('Title'), 'Breakout');
       fireEvent.changeText(screen.getByLabelText('Duration (minutes)'), '15');
       fireEvent.changeText(screen.getByLabelText('Min players'), '6');
-      fireEvent.press(screen.getByLabelText('difficulty-5'));
-      fireEvent.press(screen.getByLabelText('focus-defence'));
-      fireEvent.press(screen.getByLabelText('focus-transition'));
-      fireEvent.press(screen.getByLabelText('phase-game'));
+      fireEvent.press(screen.getByTestId('difficulty-5'));
+      fireEvent.press(screen.getByTestId('focus-defence'));
+      fireEvent.press(screen.getByTestId('focus-transition'));
+      fireEvent.press(screen.getByTestId('phase-game'));
       await pressSave();
 
       const [saved] = await exerciseRepository.list();
@@ -60,8 +72,8 @@ describe('exercise editor', () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       fireEvent.changeText(await screen.findByLabelText('Title'), 'Breakout');
-      fireEvent.press(screen.getByLabelText('focus-defence'));
-      fireEvent.press(screen.getByLabelText('focus-defence'));
+      fireEvent.press(screen.getByTestId('focus-defence'));
+      fireEvent.press(screen.getByTestId('focus-defence'));
       await pressSave();
 
       const [saved] = await exerciseRepository.list();
@@ -116,27 +128,42 @@ describe('exercise editor', () => {
       expect(saved.frames[0].markers).toEqual([]);
     });
 
+    it('offers drill markers, tool hints and labels in the diagram editor', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+
+      fireEvent.press(await screen.findByText('Edit diagram'));
+      fireEvent.press(screen.getByLabelText('arrow-dashed'));
+
+      expect(screen.getByLabelText('coach')).toBeTruthy();
+      expect(screen.getByLabelText('goal')).toBeTruthy();
+      expect(screen.getByText('Pass: tap the court to place it')).toBeTruthy();
+    });
+
     it('opens the diagram editor and closes it again', async () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       fireEvent.press(await screen.findByText('Edit diagram'));
       expect(screen.getByLabelText('cone')).toBeTruthy();
 
-      fireEvent.press(screen.getByLabelText('close-diagram'));
+      fireEvent.press(screen.getByTestId('close-diagram'));
       expect(screen.queryByLabelText('cone')).toBeNull();
     });
   });
 
   describe('editing an exercise', () => {
-    const existing = buildExercise({
-      id: 'existing',
-      sport: 'hockey',
-      title: 'Original',
-      durationMinutes: 20,
-      createdAt: '2026-01-01T00:00:00.000Z',
-    });
+    const buildExisting = async () =>
+      buildExercise({
+        id: 'existing',
+        ownerId: await getCurrentUserId(),
+        sport: 'hockey',
+        title: 'Original',
+        durationMinutes: 20,
+        createdAt: '2026-01-01T00:00:00.000Z',
+      });
+    let existing: Awaited<ReturnType<typeof buildExisting>>;
 
     beforeEach(async () => {
+      existing = await buildExisting();
       await exerciseRepository.save(existing);
       mockParams = { id: 'existing' };
     });
@@ -165,12 +192,109 @@ describe('exercise editor', () => {
       expect(Date.parse(all[0].updatedAt)).toBeGreaterThan(Date.parse(existing.updatedAt));
     });
 
+    it("refuses to open someone else's exercise", async () => {
+      await exerciseRepository.save(
+        buildExercise({ id: 'theirs', ownerId: 'someone-else', title: 'Their drill' }),
+      );
+      mockParams = { id: 'theirs' };
+
+      renderExerciseScreen(<ExerciseEditorScreen />);
+
+      expect(await screen.findByText('Only the owner can edit this exercise.')).toBeTruthy();
+      expect(screen.queryByText('Save')).toBeNull();
+    });
+
     it('says so when the exercise no longer exists', async () => {
       mockParams = { id: 'missing' };
 
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       await waitFor(() => expect(screen.getByText('This exercise no longer exists.')).toBeTruthy());
+    });
+  });
+
+  describe('leaving with unsaved changes', () => {
+    const editTitle = async () =>
+      fireEvent.changeText(await screen.findByLabelText('Title'), 'Breakout');
+
+    it('lets you leave freely when nothing has changed', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await screen.findByLabelText('Title');
+
+      expect(mockPreventRemove.enabled).toBe(false);
+    });
+
+    it('asks first once something has changed', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await editTitle();
+
+      expect(mockPreventRemove.enabled).toBe(true);
+    });
+
+    it('does not count loading a saved exercise as a change', async () => {
+      await exerciseRepository.save(
+        buildExercise({ id: 'mine', ownerId: await getCurrentUserId(), title: 'Mine' }),
+      );
+      mockParams = { id: 'mine' };
+
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await screen.findByLabelText('Title');
+
+      expect(mockPreventRemove.enabled).toBe(false);
+    });
+
+    it('leaves only when you choose to discard', async () => {
+      const alert = jest.spyOn(Alert, 'alert');
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await editTitle();
+      const action = { type: 'GO_BACK' };
+
+      mockPreventRemove.callback({ data: { action } });
+      const buttons = alert.mock.lastCall?.[2];
+      buttons?.find(button => button.text === 'Keep editing')?.onPress?.();
+      expect(mockDispatch).not.toHaveBeenCalled();
+
+      buttons?.find(button => button.text === 'Discard')?.onPress?.();
+      expect(mockDispatch).toHaveBeenCalledWith(action);
+    });
+
+    it('leaves without asking after a successful save', async () => {
+      const alert = jest.spyOn(Alert, 'alert');
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await editTitle();
+      const action = { type: 'GO_BACK' };
+
+      await pressSave();
+      expect(mockBack).toHaveBeenCalledTimes(1);
+
+      // Navigation reports the exit to the still-armed warning, which must let it through
+      mockPreventRemove.callback({ data: { action } });
+
+      expect(alert).not.toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalledWith(action);
+    });
+
+    it('keeps the warning armed while leaving, since changing it mid-exit crashes Android', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await editTitle();
+
+      await pressSave();
+
+      expect(mockPreventRemove.enabled).toBe(true);
+    });
+
+    it('still asks after a failed save', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+      await editTitle();
+      jest.spyOn(AsyncStorage, 'setItem').mockRejectedValueOnce(new Error('disk full'));
+
+      await pressSave();
+      const alert = jest.spyOn(Alert, 'alert');
+
+      mockPreventRemove.callback({ data: { action: { type: 'GO_BACK' } } });
+
+      expect(alert).toHaveBeenCalledTimes(1);
+      expect(mockDispatch).not.toHaveBeenCalled();
     });
   });
 });

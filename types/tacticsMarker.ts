@@ -1,6 +1,15 @@
 import { randomUUID } from 'expo-crypto';
 
-export const TACTICS_MARKER_TYPES = ['player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed'] as const;
+export const TACTICS_MARKER_TYPES = [
+  'player',
+  'opponent',
+  'ball',
+  'cone',
+  'arrow-solid',
+  'arrow-dashed',
+  'coach',
+  'goal',
+] as const;
 
 export type TacticsMarkerType = (typeof TACTICS_MARKER_TYPES)[number];
 
@@ -11,6 +20,8 @@ export interface TacticsMarker {
   y: number;
   endX?: number;
   endY?: number;
+  /** Short text shown on a player or opponent, such as a shirt number. */
+  label?: string;
 }
 
 export function createTacticsMarker(type: TacticsMarkerType, x: number, y: number): TacticsMarker {

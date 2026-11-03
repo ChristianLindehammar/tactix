@@ -8,10 +8,10 @@ interface FilterChipProps {
   label: string;
   selected: boolean;
   onPress: () => void;
-  accessibilityLabel?: string;
+  testID?: string;
 }
 
-export const FilterChip = ({ label, selected, onPress, accessibilityLabel }: FilterChipProps) => {
+export const FilterChip = ({ label, selected, onPress, testID }: FilterChipProps) => {
   const tint = useThemeColor({ light: '#0097B2', dark: '#444D51' }, 'tint') as string;
   const background = useThemeColor({}, 'menuBackground') as string;
   const border = useThemeColor({}, 'borderColor') as string;
@@ -20,7 +20,8 @@ export const FilterChip = ({ label, selected, onPress, accessibilityLabel }: Fil
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={accessibilityLabel ?? label}
+      accessibilityLabel={label}
+      testID={testID}
       accessibilityState={{ selected }}
       style={[
         styles.chip,

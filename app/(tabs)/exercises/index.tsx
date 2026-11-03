@@ -11,6 +11,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { useSport } from '@/context/SportContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
 import {
   Exercise,
@@ -20,6 +21,7 @@ import {
   ExercisePhase,
   FOCUS_TAGS,
   FocusTag,
+  RatingStars,
 } from '@/types/exercise';
 import { describeExercise } from '@/utils/describeExercise';
 import { filterExercises } from '@/utils/filterExercises';
@@ -40,6 +42,7 @@ export default function ExerciseLibraryScreen() {
   const tint = useThemeColor({}, 'tint') as string;
 
   const [exercises, setExercises] = useState<Exercise[] | null>(null);
+  const [ratings, setRatings] = useState<Record<string, RatingStars>>({});
   const [loadFailed, setLoadFailed] = useState(false);
   const [search, setSearch] = useState('');
   const [playerCount, setPlayerCount] = useState('');
@@ -49,7 +52,12 @@ export default function ExerciseLibraryScreen() {
 
   const load = useCallback(async () => {
     try {
-      setExercises(await exerciseRepository.list());
+      const [loaded, myRatings] = await Promise.all([
+        exerciseRepository.list(),
+        ratingRepository.listMine(),
+      ]);
+      setExercises(loaded);
+      setRatings(myRatings);
       setLoadFailed(false);
     } catch {
       setLoadFailed(true);
@@ -130,7 +138,12 @@ export default function ExerciseLibraryScreen() {
             onPress={() => router.push(`/exercises/${item.id}`)}
             style={[styles.card, { backgroundColor: cardBackground, borderColor: border }]}
           >
-            <ThemedText type="defaultSemiBold">{item.title}</ThemedText>
+            <View style={styles.cardTitle}>
+              <ThemedText type="defaultSemiBold" style={styles.cardTitleText}>
+                {item.title}
+              </ThemedText>
+              {ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
+            </View>
             <ThemedText style={styles.cardDetail}>{describeExercise(item, t)}</ThemedText>
             {item.focus.length > 0 && (
               <ThemedText style={styles.cardDetail}>
@@ -187,7 +200,7 @@ export default function ExerciseLibraryScreen() {
           <FilterChip
             key={tag}
             label={t(`focusTags.${tag}`)}
-            accessibilityLabel={`filter-focus-${tag}`}
+            testID={`filter-focus-${tag}`}
             selected={focus.includes(tag)}
             onPress={() => setFocus(current => toggled(current, tag))}
           />
@@ -205,16 +218,25 @@ export default function ExerciseLibraryScreen() {
           <FilterChip
             key={level}
             label={t(`difficultyLevels.${level}`)}
-            accessibilityLabel={`filter-difficulty-${level}`}
+            testID={`filter-difficulty-${level}`}
             selected={difficulties.includes(level)}
             onPress={() => setDifficulties(current => toggled(current, level))}
           />
         ))}
+      </ScrollView>
+
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.chipScroll}
+        contentContainerStyle={styles.chipRow}
+        keyboardShouldPersistTaps="handled"
+      >
         {EXERCISE_PHASES.map(option => (
           <FilterChip
             key={option}
             label={t(`exercisePhases.${option}`)}
-            accessibilityLabel={`filter-phase-${option}`}
+            testID={`filter-phase-${option}`}
             selected={phase === option}
             onPress={() => setPhase(current => (current === option ? undefined : option))}
           />
@@ -291,6 +313,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 14,
     gap: 4,
+  },
+  cardTitle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 8,
+  },
+  cardTitleText: {
+    flex: 1,
   },
   cardDetail: {
     fontSize: 14,

@@ -4,6 +4,7 @@ export const buildExercise = (overrides: Partial<Exercise> = {}): Exercise => ({
   schemaVersion: 1,
   id: 'exercise-1',
   ownerId: null,
+  clonedFromId: null,
   sport: 'floorball',
   title: 'Triangle passing',
   description: '',

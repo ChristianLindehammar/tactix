@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
+  Alert,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -11,7 +12,8 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { Stack, useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
+import { usePreventRemove } from 'expo-router/react-navigation';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { FilterChip } from '@/components/FilterChip';
@@ -22,14 +24,17 @@ import { ThemedView } from '@/components/ThemedView';
 import { useSport } from '@/context/SportContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { getCurrentUserId } from '@/services/currentUser';
 import { exerciseRepository } from '@/services/exerciseRepository';
 import { Exercise, EXERCISE_DIFFICULTIES, EXERCISE_PHASES, FOCUS_TAGS } from '@/types/exercise';
+import { TACTICS_MARKER_TYPES } from '@/types/tacticsMarker';
 import {
   createDraft,
   draftFromExercise,
   DraftErrors,
   draftToExercise,
   ExerciseDraft,
+  isDraftChanged,
 } from '@/utils/exerciseDraft';
 
 interface FieldProps extends TextInputProps {
@@ -66,31 +71,41 @@ export default function ExerciseEditorScreen() {
   const { id } = useLocalSearchParams<{ id?: string }>();
   const { selectedSport } = useSport();
   const router = useRouter();
+  const navigation = useNavigation();
   const { t, locale } = useTranslation();
   const insets = useSafeAreaInsets();
   const background = useThemeColor({}, 'background') as string;
 
   const [existing, setExisting] = useState<Exercise | null>(null);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'notFound'>(id ? 'loading' : 'ready');
+  const [status, setStatus] = useState<'loading' | 'ready' | 'notFound' | 'notOwned'>(
+    id ? 'loading' : 'ready',
+  );
   const [draft, setDraft] = useState<ExerciseDraft>(createDraft);
+  const [baseline, setBaseline] = useState<ExerciseDraft>(draft);
   const [errors, setErrors] = useState<DraftErrors>({});
   const [saveFailed, setSaveFailed] = useState(false);
   const [diagramOpen, setDiagramOpen] = useState(false);
   const saving = useRef(false);
+  const saved = useRef(false);
 
   useEffect(() => {
     if (!id) return;
     let active = true;
-    exerciseRepository
-      .get(id)
-      .then(found => {
+    Promise.all([exerciseRepository.get(id), getCurrentUserId()])
+      .then(([found, me]) => {
         if (!active) return;
         if (!found) {
           setStatus('notFound');
           return;
         }
+        if (found.ownerId !== me) {
+          setStatus('notOwned');
+          return;
+        }
+        const loaded = draftFromExercise(found);
         setExisting(found);
-        setDraft(draftFromExercise(found));
+        setDraft(loaded);
+        setBaseline(loaded);
         setStatus('ready');
       })
       .catch(() => {
@@ -101,31 +116,45 @@ export default function ExerciseEditorScreen() {
     };
   }, [id]);
 
+  // The warning stays armed on our own exit and lets it through. Turning it off first would
+  // update the native header while the screen is popped, which crashes on Android.
+  usePreventRemove(isDraftChanged(baseline, draft), ({ data }) => {
+    if (saved.current) {
+      navigation.dispatch(data.action);
+      return;
+    }
+    Alert.alert(t('unsavedChangesTitle'), t('unsavedChangesMessage'), [
+      { text: t('keepEditing'), style: 'cancel' },
+      { text: t('discard'), style: 'destructive', onPress: () => navigation.dispatch(data.action) },
+    ]);
+  });
+
   const sport = existing?.sport ?? selectedSport;
   const update = (change: Partial<ExerciseDraft>) => setDraft(current => ({ ...current, ...change }));
 
   const save = async () => {
     if (saving.current || !sport) return;
-
-    const result = draftToExercise(
-      draft,
-      { sport, locale, now: new Date().toISOString() },
-      existing ?? undefined,
-    );
-    if (!result.ok) {
-      setErrors(result.errors);
-      return;
-    }
-
     saving.current = true;
-    setErrors({});
     setSaveFailed(false);
+
     try {
+      const result = draftToExercise(
+        draft,
+        { sport, locale, now: new Date().toISOString(), ownerId: await getCurrentUserId() },
+        existing ?? undefined,
+      );
+      if (!result.ok) {
+        setErrors(result.errors);
+        saving.current = false;
+        return;
+      }
+
+      setErrors({});
       await exerciseRepository.save(result.exercise);
+      saved.current = true;
       router.back();
     } catch {
       setSaveFailed(true);
-    } finally {
       saving.current = false;
     }
   };
@@ -140,6 +169,7 @@ export default function ExerciseEditorScreen() {
       <ThemedView style={styles.message}>
         <Stack.Screen options={{ title }} />
         {status === 'notFound' && <ThemedText>{t('exerciseNotFound')}</ThemedText>}
+        {status === 'notOwned' && <ThemedText>{t('exerciseNotEditable')}</ThemedText>}
       </ThemedView>
     );
   }
@@ -182,7 +212,7 @@ export default function ExerciseEditorScreen() {
               <FilterChip
                 key={level}
                 label={t(`difficultyLevels.${level}`)}
-                accessibilityLabel={`difficulty-${level}`}
+                testID={`difficulty-${level}`}
                 selected={draft.difficulty === level}
                 onPress={() => update({ difficulty: level })}
               />
@@ -197,7 +227,7 @@ export default function ExerciseEditorScreen() {
               <FilterChip
                 key={tag}
                 label={t(`focusTags.${tag}`)}
-                accessibilityLabel={`focus-${tag}`}
+                testID={`focus-${tag}`}
                 selected={draft.focus.includes(tag)}
                 onPress={() =>
                   update({
@@ -218,7 +248,7 @@ export default function ExerciseEditorScreen() {
               <FilterChip
                 key={phase}
                 label={t(`exercisePhases.${phase}`)}
-                accessibilityLabel={`phase-${phase}`}
+                testID={`phase-${phase}`}
                 selected={draft.phase === phase}
                 onPress={() => update({ phase })}
               />
@@ -288,11 +318,14 @@ export default function ExerciseEditorScreen() {
             value={draft.markers}
             onChange={markers => update({ markers })}
             requireBall={false}
+            allowedMarkerTypes={[...TACTICS_MARKER_TYPES]}
+            showToolHints
+            enableLabels
           />
           <Pressable
             onPress={() => setDiagramOpen(false)}
             accessibilityRole="button"
-            accessibilityLabel="close-diagram"
+            testID="close-diagram"
             style={[styles.closeDiagram, { paddingBottom: insets.bottom + 12 }]}
           >
             <ThemedText type="link">{t('ok')}</ThemedText>

@@ -3,6 +3,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { fireEvent, screen, waitFor } from '@testing-library/react-native';
 
 import ExerciseLibraryScreen from '@/app/(tabs)/exercises/index';
+import { getCurrentUserId } from '@/services/currentUser';
+import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
@@ -18,8 +20,10 @@ jest.mock('expo-router', () => {
 });
 jest.mock('expo-router/js-tabs', () => ({ useBottomTabBarHeight: () => 0 }));
 
-const saved = (overrides: Parameters<typeof buildExercise>[0]) =>
-  exerciseRepository.save(buildExercise({ sport: 'soccer', ...overrides }));
+const saved = async (overrides: Parameters<typeof buildExercise>[0]) =>
+  exerciseRepository.save(
+    buildExercise({ ownerId: await getCurrentUserId(), sport: 'soccer', ...overrides }),
+  );
 
 describe('exercise library', () => {
   beforeEach(async () => {
@@ -60,6 +64,17 @@ describe('exercise library', () => {
     expect(screen.getAllByText('Defence').length).toBeGreaterThan(1);
   });
 
+  it('shows your rating on rated exercises only', async () => {
+    await saved({ id: 'rated', title: 'Rated drill' });
+    await saved({ id: 'unrated', title: 'Unrated drill' });
+    await ratingRepository.setMine('rated', 4);
+
+    renderExerciseScreen(<ExerciseLibraryScreen />);
+    await screen.findByText('Rated drill');
+
+    expect(screen.getAllByText('★ 4')).toHaveLength(1);
+  });
+
   it('does not show deleted exercises', async () => {
     await saved({ title: 'Gone' });
     await exerciseRepository.remove('exercise-1');
@@ -80,7 +95,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
-      fireEvent.press(screen.getByLabelText('filter-focus-defence'));
+      fireEvent.press(screen.getByTestId('filter-focus-defence'));
 
       expect(screen.getByText('Defending drill')).toBeTruthy();
       expect(screen.queryByText('Passing drill')).toBeNull();
@@ -90,7 +105,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
-      fireEvent.press(screen.getByLabelText('filter-difficulty-1'));
+      fireEvent.press(screen.getByTestId('filter-difficulty-1'));
 
       expect(screen.getByText('Passing drill')).toBeTruthy();
       expect(screen.queryByText('Defending drill')).toBeNull();
@@ -100,7 +115,7 @@ describe('exercise library', () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
 
-      fireEvent.press(screen.getByLabelText('filter-phase-cooldown'));
+      fireEvent.press(screen.getByTestId('filter-phase-cooldown'));
 
       expect(screen.getByText('No exercises match your filters.')).toBeTruthy();
     });
@@ -129,7 +144,7 @@ describe('exercise library', () => {
     it('brings everything back when filters are cleared', async () => {
       renderExerciseScreen(<ExerciseLibraryScreen />);
       await screen.findByText('Passing drill');
-      fireEvent.press(screen.getByLabelText('filter-focus-defence'));
+      fireEvent.press(screen.getByTestId('filter-focus-defence'));
 
       fireEvent.press(screen.getByText('Clear filters'));
 

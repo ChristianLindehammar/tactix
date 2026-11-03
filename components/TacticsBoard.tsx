@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Alert, StyleSheet, TouchableOpacity, useWindowDimensions, View } from 'react-native';
+import {
+  Alert,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  useWindowDimensions,
+  View,
+} from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -9,6 +16,9 @@ import { CourtSurface } from '@/components/CourtSurface';
 import { DraggableMarker } from '@/components/DraggableMarker';
 import { SportBall } from '@/components/SportBall';
 import { ConeSvg } from '@/components/ui/ConeSvg';
+import { CustomInputDialog } from '@/components/CustomInputDialog';
+import { GoalSvg } from '@/components/ui/GoalSvg';
+import { ThemedText } from '@/components/ThemedText';
 import { Sport, sportsConfig } from '@/constants/sports';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -33,8 +43,12 @@ export interface TacticsBoardProps {
   sport: Sport;
   value: TacticsMarker[];
   onChange: (markers: TacticsMarker[]) => void;
-  /** Toolbar options; every marker type when omitted. */
+  /** Toolbar options; the original six tactics markers when omitted. */
   allowedMarkerTypes?: TacticsMarkerType[];
+  /** Names the selected tool under the toolbar. */
+  showToolHints?: boolean;
+  /** Pressing a player or opponent lets the user give it a short label. */
+  enableLabels?: boolean;
   /** Display only: no toolbar, no touches, and the markers never change. */
   readOnly?: boolean;
   /** Keep at least one ball on the board. Turn off for drills without a ball. */
@@ -47,6 +61,20 @@ export interface TacticsBoardProps {
   onMarkerDragStart?: () => void;
   onCourtSizeChange?: (size: CourtSize) => void;
 }
+
+const DEFAULT_MARKER_TYPES: TacticsMarkerType[] = [
+  'player',
+  'opponent',
+  'ball',
+  'cone',
+  'arrow-solid',
+  'arrow-dashed',
+];
+const MAX_VISIBLE_TOOLS = DEFAULT_MARKER_TYPES.length;
+const MAX_LABEL_LENGTH = 3;
+const COACH_COLOR = '#2E7D32';
+// Below this width full-size markers would crowd the diagram
+const FULL_SIZE_COURT_WIDTH = 320;
 
 const isArrow = (type: TacticsMarkerType): type is 'arrow-solid' | 'arrow-dashed' =>
   type === 'arrow-solid' || type === 'arrow-dashed';
@@ -62,6 +90,8 @@ function getMarkerTypes(
     { type: 'cone', color: '#FF6D00', icon: 'change-history' },
     { type: 'arrow-solid', color: arrowColor, icon: 'arrow-forward' },
     { type: 'arrow-dashed', color: arrowColor, icon: 'arrow-forward' },
+    { type: 'coach', color: COACH_COLOR, icon: 'sports' },
+    { type: 'goal', color: arrowColor, icon: 'sports-score' },
   ];
 }
 
@@ -69,7 +99,9 @@ export function TacticsBoard({
   sport,
   value,
   onChange,
-  allowedMarkerTypes,
+  allowedMarkerTypes = DEFAULT_MARKER_TYPES,
+  showToolHints = false,
+  enableLabels = false,
   readOnly = false,
   requireBall = true,
   bottomInset = 0,
@@ -88,13 +120,14 @@ export function TacticsBoard({
   const buttonBgColor = useThemeColor({}, 'secondaryBackground') as string;
   const textColor = useThemeColor({}, 'text') as string;
 
-  const markerTypes = getMarkerTypes(textColor, sport).filter(
-    mt => !allowedMarkerTypes || allowedMarkerTypes.includes(mt.type),
+  const markerTypes = getMarkerTypes(textColor, sport).filter(mt =>
+    allowedMarkerTypes.includes(mt.type),
   );
+  const toolbarScrolls = markerTypes.length > MAX_VISIBLE_TOOLS;
   // Size the toolbar so every control fits on one row, whatever the screen width
   const toolbarLayout = getToolbarLayout({
     windowWidth: windowWidth - insets.left - insets.right,
-    buttonCount: markerTypes.length,
+    buttonCount: Math.min(markerTypes.length, MAX_VISIBLE_TOOLS),
     hasClearButton: true,
   });
 
@@ -115,6 +148,7 @@ export function TacticsBoard({
 
   const [addingType, setAddingType] = useState<TacticsMarkerType | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [labellingId, setLabellingId] = useState<string | null>(null);
 
   // Gestures and alerts can fire before the host re-renders with the new value
   const latest = useRef(value);
@@ -160,6 +194,57 @@ export function TacticsBoard({
     onMarkerDragStart?.();
   };
 
+  const applyLabel = (text: string) => {
+    const label = text.trim().slice(0, MAX_LABEL_LENGTH);
+    update(markers =>
+      markers.map(marker => {
+        if (marker.id !== labellingId) return marker;
+        const { label: _previous, ...unlabelled } = marker;
+        return label ? { ...unlabelled, label } : unlabelled;
+      }),
+    );
+    setLabellingId(null);
+  };
+
+  const markerScale = readOnly ? Math.min(1, court.width / FULL_SIZE_COURT_WIDTH) : 1;
+
+  const renderTool = (mt: (typeof markerTypes)[number], index: number) => (
+    <TouchableOpacity
+      key={mt.type}
+      ref={index === 0 ? firstToolRef : undefined}
+      style={[
+        styles.markerTypeButton,
+        {
+          backgroundColor: buttonBgColor,
+          paddingHorizontal: toolbarLayout.buttonPaddingHorizontal,
+        },
+        addingType === mt.type && styles.activeButton,
+      ]}
+      onPress={() => setAddingType(current => (current === mt.type ? null : mt.type))}
+      accessibilityLabel={mt.type}
+    >
+      <MaterialIcons
+        name={addingType === mt.type ? 'close' : 'add'}
+        size={toolbarLayout.addIconSize}
+        color={mt.color}
+      />
+      {mt.type === 'cone' ? (
+        <ConeSvg size={toolbarLayout.markerIconSize} />
+      ) : mt.type === 'ball' ? (
+        <SportBall sport={sport} size={toolbarLayout.markerIconSize} color={mt.color} />
+      ) : mt.type === 'goal' ? (
+        <GoalSvg size={toolbarLayout.markerIconSize} color={mt.color} />
+      ) : (
+        <MaterialIcons
+          name={mt.icon as any}
+          size={toolbarLayout.markerIconSize}
+          color={mt.color}
+          style={mt.type === 'arrow-dashed' ? { opacity: 0.5 } : undefined}
+        />
+      )}
+    </TouchableOpacity>
+  );
+
   const confirmDelete = (onConfirm: () => void) =>
     Alert.alert(t('delete'), t('deleteMarkerConfirm'), [
       { text: t('cancel'), style: 'cancel' },
@@ -181,42 +266,20 @@ export function TacticsBoard({
               { paddingHorizontal: toolbarLayout.containerPaddingHorizontal },
             ]}
           >
-            <View style={[styles.addButtonsContainer, { gap: toolbarLayout.gap }]}>
-              {markerTypes.map((mt, index) => (
-                <TouchableOpacity
-                  key={mt.type}
-                  ref={index === 0 ? firstToolRef : undefined}
-                  style={[
-                    styles.markerTypeButton,
-                    {
-                      backgroundColor: buttonBgColor,
-                      paddingHorizontal: toolbarLayout.buttonPaddingHorizontal,
-                    },
-                    addingType === mt.type && styles.activeButton,
-                  ]}
-                  onPress={() => setAddingType(current => (current === mt.type ? null : mt.type))}
-                  accessibilityLabel={mt.type}
-                >
-                  <MaterialIcons
-                    name={addingType === mt.type ? 'close' : 'add'}
-                    size={toolbarLayout.addIconSize}
-                    color={mt.color}
-                  />
-                  {mt.type === 'cone' ? (
-                    <ConeSvg size={toolbarLayout.markerIconSize} />
-                  ) : mt.type === 'ball' ? (
-                    <SportBall sport={sport} size={toolbarLayout.markerIconSize} color={mt.color} />
-                  ) : (
-                    <MaterialIcons
-                      name={mt.icon as any}
-                      size={toolbarLayout.markerIconSize}
-                      color={mt.color}
-                      style={mt.type === 'arrow-dashed' ? { opacity: 0.5 } : undefined}
-                    />
-                  )}
-                </TouchableOpacity>
-              ))}
-            </View>
+            {toolbarScrolls ? (
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                style={styles.toolScroll}
+                contentContainerStyle={{ gap: toolbarLayout.gap }}
+              >
+                {markerTypes.map(renderTool)}
+              </ScrollView>
+            ) : (
+              <View style={[styles.addButtonsContainer, { gap: toolbarLayout.gap }]}>
+                {markerTypes.map(renderTool)}
+              </View>
+            )}
 
             {value.length > (requireBall ? 1 : 0) && (
               <TouchableOpacity
@@ -244,6 +307,16 @@ export function TacticsBoard({
               </TouchableOpacity>
             )}
           </View>
+          {/* The row keeps its height when empty, so choosing a tool doesn't resize the court */}
+          {showToolHints && (
+            <View style={styles.toolHintRow}>
+              {addingType && (
+                <ThemedText style={styles.toolHint}>
+                  {t('placeMarkerHint', { name: t(`markerNames.${addingType}`) })}
+                </ThemedText>
+              )}
+            </View>
+          )}
         </View>
       )}
 
@@ -316,31 +389,61 @@ export function TacticsBoard({
                 }}
                 zIndex={draggingId === marker.id ? 3 : 2}
               >
-                {marker.type === 'ball' ? (
-                  <View style={styles.ballMarker}>
-                    <View style={styles.ballIcon}>
-                      <SportBall sport={sport} size={24} color="#FFA000" />
+                <View style={{ transform: [{ scale: markerScale }] }}>
+                  {marker.type === 'ball' ? (
+                    <View style={styles.ballMarker}>
+                      <View style={styles.ballIcon}>
+                        <SportBall sport={sport} size={24} color="#FFA000" />
+                      </View>
                     </View>
-                  </View>
-                ) : marker.type === 'cone' ? (
-                  <View style={styles.coneMarker}>
-                    <ConeSvg size={32} />
-                  </View>
-                ) : (
-                  <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={[
-                      styles.personMarker,
-                      { backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F' },
-                    ]}
-                  >
-                    <MaterialIcons name="person" size={28} color="#fff" />
-                  </TouchableOpacity>
-                )}
+                  ) : marker.type === 'cone' ? (
+                    <View style={styles.coneMarker}>
+                      <ConeSvg size={32} />
+                    </View>
+                  ) : marker.type === 'goal' ? (
+                    <View style={styles.coneMarker}>
+                      <GoalSvg size={36} color={arrowColor} />
+                    </View>
+                  ) : marker.type === 'coach' ? (
+                    <View style={[styles.personMarker, { backgroundColor: COACH_COLOR }]}>
+                      <MaterialIcons name="sports" size={24} color="#fff" />
+                    </View>
+                  ) : (
+                    <TouchableOpacity
+                      testID={`marker-${marker.id}`}
+                      activeOpacity={0.8}
+                      accessibilityLabel={marker.label ?? t(`markerNames.${marker.type}`)}
+                      onPress={enableLabels ? () => setLabellingId(marker.id) : undefined}
+                      style={[
+                        styles.personMarker,
+                        { backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F' },
+                      ]}
+                    >
+                      {marker.label ? (
+                        <ThemedText style={styles.markerLabel}>{marker.label}</ThemedText>
+                      ) : (
+                        <MaterialIcons name="person" size={28} color="#fff" />
+                      )}
+                    </TouchableOpacity>
+                  )}
+                </View>
               </DraggableMarker>
             ))}
         </View>
       </View>
+
+      {labellingId && (
+        <CustomInputDialog
+          key={labellingId}
+          visible
+          title={t('markerLabel')}
+          initialValue={value.find(marker => marker.id === labellingId)?.label ?? ''}
+          maxLength={MAX_LABEL_LENGTH + 2}
+          allowEmpty
+          onCancel={() => setLabellingId(null)}
+          onSubmit={applyLabel}
+        />
+      )}
     </GestureHandlerRootView>
   );
 }
@@ -414,6 +517,24 @@ const styles = StyleSheet.create({
     height: 36,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  toolScroll: {
+    flexShrink: 1,
+  },
+  toolHintRow: {
+    height: 20,
+    justifyContent: 'center',
+  },
+  toolHint: {
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: 'center',
+  },
+  markerLabel: {
+    color: '#fff',
+    fontSize: 14,
+    lineHeight: 18,
+    fontWeight: '700',
   },
   personMarker: {
     width: 40,

@@ -4,6 +4,7 @@ const validExercise = () => ({
   schemaVersion: 1,
   id: '3f2b8c1e-7a44-4d21-9c55-0e1f2a3b4c5d',
   ownerId: null,
+  clonedFromId: null,
   sport: 'floorball',
   title: 'Triangle passing',
   description: 'Pass and follow your pass.',
@@ -56,6 +57,7 @@ describe('parseExercise', () => {
 
   it.each([
     ['a missing id', { id: undefined }, 'invalidId'],
+    ['a clone source that is not an id', { clonedFromId: 5 }, 'invalidId'],
     ['an unknown sport', { sport: 'cricket' }, 'invalidSport'],
     ['an empty title', { title: '   ' }, 'invalidTitle'],
     ['non-text coaching points', { coachingPoints: [1] }, 'invalidText'],
@@ -84,6 +86,24 @@ describe('parseExercise', () => {
     ['an arrow without an end', { id: 'a', type: 'arrow-solid', x: 0.5, y: 0.5 }],
   ])('rejects %s', (_name, marker) => {
     expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
+  });
+
+  it('rejects a label that is not text', () => {
+    const marker = { id: 'a', type: 'player', x: 0.5, y: 0.5, label: 7 };
+
+    expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
+  });
+
+  it('keeps a marker label', () => {
+    const marker = { id: 'a', type: 'player', x: 0.5, y: 0.5, label: '10' };
+
+    expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
+  });
+
+  it.each([['coach'], ['goal']])('accepts a %s marker', type => {
+    const marker = { id: 'a', type, x: 0.5, y: 0.5 };
+
+    expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
   });
 
   it('accepts a marker dragged slightly off the court', () => {

@@ -91,6 +91,109 @@ describe('TacticsBoard', () => {
     });
   });
 
+  describe('marker choices', () => {
+    it('keeps the tactics toolbar to its original six markers by default', async () => {
+      await renderBoard();
+
+      ['player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed'].forEach(type =>
+        expect(screen.getByLabelText(type)).toBeTruthy(),
+      );
+      expect(screen.queryByLabelText('coach')).toBeNull();
+      expect(screen.queryByLabelText('goal')).toBeNull();
+    });
+
+    it.each([['coach'], ['goal']] as const)('can place a %s when allowed', async type => {
+      const { onChange } = await renderBoard({ allowedMarkerTypes: [type] });
+
+      fireEvent.press(screen.getByLabelText(type));
+      tapCourt(100, 100);
+
+      expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe(type);
+    });
+  });
+
+  describe('tool hints', () => {
+    it.each([
+      ['arrow-solid', 'Run: tap the court to place it'],
+      ['arrow-dashed', 'Pass: tap the court to place it'],
+      ['coach', 'Coach: tap the court to place it'],
+    ])('names the selected %s', async (type, hint) => {
+      await renderBoard({
+        showToolHints: true,
+        allowedMarkerTypes: ['arrow-solid', 'arrow-dashed', 'coach'],
+      });
+
+      fireEvent.press(screen.getByLabelText(type));
+
+      expect(screen.getByText(hint)).toBeTruthy();
+    });
+
+    it('shows no hint until a tool is selected', async () => {
+      await renderBoard({ showToolHints: true });
+
+      expect(screen.queryByText(/tap the court/)).toBeNull();
+    });
+
+    it('stays off unless asked for, so the tactics screen is unchanged', async () => {
+      await renderBoard();
+
+      fireEvent.press(screen.getByLabelText('arrow-solid'));
+
+      expect(screen.queryByText(/tap the court/)).toBeNull();
+    });
+  });
+
+  describe('player labels', () => {
+    const player = createTacticsMarker('player', 0.3, 0.3);
+    const labelPlayer = async (text: string) => {
+      fireEvent.press(screen.getByTestId(`marker-${player.id}`));
+      fireEvent.changeText(await screen.findByLabelText('Label (up to 3 characters)'), text);
+      fireEvent.press(screen.getByText('OK'));
+    };
+
+    it('saves a label on the pressed player', async () => {
+      const { onChange } = await renderBoard({ value: [ball, player], enableLabels: true });
+
+      await labelPlayer('10');
+
+      const next = onChange.mock.lastCall?.[0];
+      expect(next?.find(m => m.id === player.id)?.label).toBe('10');
+      expect(next?.find(m => m.id === ball.id)?.label).toBeUndefined();
+    });
+
+    it('keeps a label to three characters, without surrounding spaces', async () => {
+      const { onChange } = await renderBoard({ value: [ball, player], enableLabels: true });
+
+      await labelPlayer('  ABCDE ');
+
+      expect(onChange.mock.lastCall?.[0].find(m => m.id === player.id)?.label).toBe('ABC');
+    });
+
+    it('removes the label when it is emptied', async () => {
+      const labelled = { ...player, label: '7' };
+      const { onChange } = await renderBoard({ value: [ball, labelled], enableLabels: true });
+
+      await labelPlayer('  ');
+
+      const updated = onChange.mock.lastCall?.[0].find(m => m.id === player.id);
+      expect(updated && 'label' in updated).toBe(false);
+    });
+
+    it('shows the label on the marker', async () => {
+      await renderBoard({ value: [ball, { ...player, label: '7' }] });
+
+      expect(screen.getByText('7')).toBeTruthy();
+    });
+
+    it('does nothing on press unless labels are enabled', async () => {
+      await renderBoard({ value: [ball, player] });
+
+      fireEvent.press(screen.getByTestId(`marker-${player.id}`));
+
+      expect(screen.queryByLabelText('Label (up to 3 characters)')).toBeNull();
+    });
+  });
+
   describe('read-only mode', () => {
     it('hides the toolbar', async () => {
       await renderBoard({ readOnly: true });
