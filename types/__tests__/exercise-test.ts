@@ -1,0 +1,110 @@
+import { ExerciseParseError, parseExercise } from '../exercise';
+
+const validExercise = () => ({
+  schemaVersion: 1,
+  id: '3f2b8c1e-7a44-4d21-9c55-0e1f2a3b4c5d',
+  ownerId: null,
+  sport: 'floorball',
+  title: 'Triangle passing',
+  description: 'Pass and follow your pass.',
+  coachingPoints: ['Keep your head up'],
+  locale: 'sv',
+  difficulty: 2,
+  focus: ['passing'],
+  customTags: ['u12'],
+  phase: 'warmup',
+  durationMinutes: 10,
+  minPlayers: 6,
+  maxPlayers: 12,
+  frames: [
+    {
+      id: 'frame-1',
+      note: 'Start here',
+      markers: [
+        { id: 'a', type: 'player', x: 0.25, y: 0.5 },
+        { id: 'b', type: 'arrow-dashed', x: 0.25, y: 0.5, endX: 0.75, endY: 0.5 },
+      ],
+    },
+  ],
+  createdAt: '2026-11-03T10:00:00.000Z',
+  updatedAt: '2026-11-03T10:00:00.000Z',
+  deletedAt: null,
+});
+
+const errorCodeFor = (data: unknown): string | undefined => {
+  try {
+    parseExercise(data);
+    return undefined;
+  } catch (error) {
+    if (error instanceof ExerciseParseError) return error.code;
+    throw error;
+  }
+};
+
+describe('parseExercise', () => {
+  it('returns a valid exercise with all its content intact', () => {
+    expect(parseExercise(validExercise())).toEqual(validExercise());
+  });
+
+  it.each([[null], ['text'], [42], [[]]])('rejects %j as not an exercise', data => {
+    expect(errorCodeFor(data)).toBe('invalidFormat');
+  });
+
+  it('rejects an exercise from a newer app version', () => {
+    expect(errorCodeFor({ ...validExercise(), schemaVersion: 2 })).toBe('unsupportedVersion');
+  });
+
+  it.each([
+    ['a missing id', { id: undefined }, 'invalidId'],
+    ['an unknown sport', { sport: 'cricket' }, 'invalidSport'],
+    ['an empty title', { title: '   ' }, 'invalidTitle'],
+    ['non-text coaching points', { coachingPoints: [1] }, 'invalidText'],
+    ['a difficulty below the scale', { difficulty: 0 }, 'invalidDifficulty'],
+    ['a difficulty above the scale', { difficulty: 6 }, 'invalidDifficulty'],
+    ['a fractional difficulty', { difficulty: 2.5 }, 'invalidDifficulty'],
+    ['focus that is not a list', { focus: 'passing' }, 'invalidFocus'],
+    ['an unknown phase', { phase: 'nap' }, 'invalidPhase'],
+    ['a negative duration', { durationMinutes: -5 }, 'invalidCount'],
+    ['more minimum than maximum players', { minPlayers: 12, maxPlayers: 6 }, 'invalidCount'],
+    ['no frames', { frames: [] }, 'invalidFrames'],
+    ['an unparseable date', { updatedAt: 'yesterday' }, 'invalidDate'],
+  ])('rejects %s', (_name, change, code) => {
+    expect(errorCodeFor({ ...validExercise(), ...change })).toBe(code);
+  });
+
+  const withMarker = (marker: object) => ({
+    ...validExercise(),
+    frames: [{ id: 'frame-1', markers: [marker] }],
+  });
+
+  it.each([
+    ['an unknown marker type', { id: 'a', type: 'dragon', x: 0.5, y: 0.5 }],
+    ['a marker without a position', { id: 'a', type: 'cone', x: 0.5 }],
+    ['a marker at a non-number position', { id: 'a', type: 'cone', x: 'left', y: 0.5 }],
+    ['an arrow without an end', { id: 'a', type: 'arrow-solid', x: 0.5, y: 0.5 }],
+  ])('rejects %s', (_name, marker) => {
+    expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
+  });
+
+  it('accepts a marker dragged slightly off the court', () => {
+    const marker = { id: 'a', type: 'cone', x: -0.02, y: 1.03 };
+
+    expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
+  });
+
+  it('accepts unset duration and player counts', () => {
+    const open = { durationMinutes: null, minPlayers: null, maxPlayers: null };
+
+    expect(parseExercise({ ...validExercise(), ...open })).toMatchObject(open);
+  });
+
+  it('ignores focus tags it does not know, so newer files still open', () => {
+    const parsed = parseExercise({ ...validExercise(), focus: ['passing', 'telepathy'] });
+
+    expect(parsed.focus).toEqual(['passing']);
+  });
+
+  it('drops fields that are not part of the format', () => {
+    expect(parseExercise({ ...validExercise(), isAdmin: true })).toEqual(validExercise());
+  });
+});
