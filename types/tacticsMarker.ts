@@ -1,4 +1,8 @@
-export type TacticsMarkerType = 'player' | 'opponent' | 'ball' | 'cone' | 'arrow-solid' | 'arrow-dashed';
+import { randomUUID } from 'expo-crypto';
+
+export const TACTICS_MARKER_TYPES = ['player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed'] as const;
+
+export type TacticsMarkerType = (typeof TACTICS_MARKER_TYPES)[number];
 
 export interface TacticsMarker {
   id: string;
@@ -9,12 +13,9 @@ export interface TacticsMarker {
   endY?: number;
 }
 
-let nextId = 0;
-
 export function createTacticsMarker(type: TacticsMarkerType, x: number, y: number): TacticsMarker {
-  nextId += 1;
   return {
-    id: `marker-${nextId}`,
+    id: randomUUID(),
     type,
     x,
     y,
@@ -28,9 +29,8 @@ export function createArrowMarker(
   endX: number,
   endY: number,
 ): TacticsMarker {
-  nextId += 1;
   return {
-    id: `marker-${nextId}`,
+    id: randomUUID(),
     type,
     x,
     y,

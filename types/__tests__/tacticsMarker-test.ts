@@ -23,6 +23,29 @@ describe('createTacticsMarker', () => {
   });
 });
 
+describe('marker IDs', () => {
+  const UUID_V4 = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+  // Reloading the module is what an app restart does to module-level state
+  const createAfterRestart = () => {
+    let id = '';
+    jest.isolateModules(() => {
+      const fresh = require('../tacticsMarker');
+      id = fresh.createTacticsMarker('cone', 0.5, 0.5).id;
+    });
+    return id;
+  };
+
+  it('does not reuse an ID after the app restarts', () => {
+    expect(createAfterRestart()).not.toBe(createAfterRestart());
+  });
+
+  it('gives point and arrow markers UUIDs', () => {
+    expect(createTacticsMarker('cone', 0.5, 0.5).id).toMatch(UUID_V4);
+    expect(createArrowMarker('arrow-solid', 0.1, 0.1, 0.2, 0.2).id).toMatch(UUID_V4);
+  });
+});
+
 describe('createArrowMarker', () => {
   it('creates a solid arrow marker with start and end positions', () => {
     const arrow = createArrowMarker('arrow-solid', 0.2, 0.3, 0.6, 0.7);

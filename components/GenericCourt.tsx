@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { CourtSurface } from './CourtSurface';
 import { Player } from './Player';
 import { PlayerType } from '@/types/models';
 import { useTeam } from '@/context/TeamContext';
@@ -66,25 +67,22 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
 
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
-      <View style={[styles.container, { width: availableWidth, height: availableHeight }]}>
-        <CourtSvg width={availableWidth} height={availableHeight} />
-        <View style={StyleSheet.absoluteFill}>
-          {validatedPlayers.map((player) => {
-            return (
-              <Player
-                key={player.id}
-                id={player.id}
-                name={player.name}
-                position={player.position}
-                courtPosition={player.courtPosition!}
-                onDragEnd={(pos) => handleDragEnd(player.id, pos)}
-                containerSize={{ width: availableWidth, height: availableHeight }}
-                isSelected={player.id === selectedPlayerId}
-              />
-            );
-          })}
-        </View>
-      </View>
+      <CourtSurface width={availableWidth} height={availableHeight} CourtSvg={CourtSvg}>
+        {validatedPlayers.map((player) => {
+          return (
+            <Player
+              key={player.id}
+              id={player.id}
+              name={player.name}
+              position={player.position}
+              courtPosition={player.courtPosition!}
+              onDragEnd={(pos) => handleDragEnd(player.id, pos)}
+              containerSize={{ width: availableWidth, height: availableHeight }}
+              isSelected={player.id === selectedPlayerId}
+            />
+          );
+        })}
+      </CourtSurface>
     </GestureHandlerRootView>
   );
 };
@@ -94,13 +92,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  container: {
-    position: 'relative',
-    borderRadius: 8,
-    overflow: 'hidden',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   player: {
     position: 'absolute',
