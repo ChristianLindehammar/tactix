@@ -17,7 +17,8 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Library sorting and minimum rating | Done |
 | Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
 | RevenueCat and paywall | **Next**; see open decisions |
-| Accounts, backend, sync | Not started |
+| Backend: Flask API on MariaDB, in `backend/` | First slice built and tested locally: registering an install, saving and fetching an exercise. Not deployed, and the app doesn't call it yet |
+| Listing, ratings, app sync, sign-in | Not started |
 
 Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
@@ -47,7 +48,8 @@ Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files su
 - **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
-- **Backend (later):** Postgres, for example Supabase, because the filters combine several fields. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
+- **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It starts at `lindehammar-konsult.se/coachmate/`, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
+- **Identity on the server:** each install gets an anonymous token from `POST /devices`, and only its hash is stored. The server decides the owner and ignores `ownerId` from the app. Any valid token can read an exercise by ID, because the ID is what a share link carries. A coach who loses their phone loses access until sign-in exists. Christian didn't object when this was proposed, but hasn't explicitly confirmed it.
 
 ## Traps that already cost time
 
@@ -68,6 +70,7 @@ Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files su
     - Its `swipe-from-left-edge` preset doesn't trigger the iOS back gesture, so test back-swipes by hand.
     - It can only tap element centres, and its drags don't hold first, so they can't move board markers. Use Android for board checks, with `adb shell input tap` and `input draganddrop`.
 - **Gesture config in tests:** `getByGestureTestId` returns the gesture from the first render, so it can't show later changes. Test the marker and the board's `placing` prop separately, then check on a device.
+- **MariaDB and `mysql-connector-python`:** the connector's default collation is MySQL-only and MariaDB refuses it, so always set `collation` (`coachmate_api/config.py`).
 - **Android tab bar position:** it can shift between launches, so take a screenshot before using fixed tap coordinates.
 
 ## Running it
@@ -77,6 +80,9 @@ npx jest --watchAll=false
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 npx expo run:android --device CoachMate_Dev
 npx expo run:ios --device "iPhone 17 Pro"
+
+cd backend && ./scripts/test_db.sh   # second terminal: throwaway MariaDB on port 33306
+cd backend && .venv/bin/pytest       # 50 tests; setup and deployment are in backend/README.md
 ```
 
 `expo-crypto` is a native dependency, so older dev builds need rebuilding. To test another coach's exercise, there's no import yet, so seed one into `catalystLocalStorage` in `databases/RKStorage` using `adb shell run-as com.lindehammarkonsult.coachmate sqlite3`. `CoachMate_Dev` already holds test data, including a seeded `exercise:seed-theirs`.
@@ -91,12 +97,18 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - iOS: placing beside a marker, dragging, and the other board checks, which were only run on Android. These need testing by hand.
     - Floorball and basketball.
     - Dark mode: the puck in the toolbar, the bandy board and the editor form.
-2. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
+2. **Backend:**
+    - Deploy to `lindehammar-konsult.se/coachmate/`. Christian needs to create the database and say how files reach the server.
+    - Add a rate limit to `POST /devices` before the app ships with this address. It's open, so anyone could fill the `users` table.
+    - Add listing, filters, ratings and average ratings.
+    - Sync from the app through `ExerciseRepository`, keeping local storage for offline use. Decide what happens when two devices edit the same exercise. Today the last save wins, even if it's older. Local exercises will need moving from the local `ownerId` to the server's. The server limits titles to 200 characters, and the app's editor has no limit yet.
+    - `backend/coachmate_api/validation.py` repeats the rules in `types/exercise.ts`, so change both together.
+3. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Sharing exercises by link, once they're in the database.
 - Multi-step drills using `frames`.
-- Accounts, moving local exercises to the signed-in user, and sync.
+- Sign-in with Apple or Google, moving anonymous exercises to the signed-in user.
 
 ## Found during device checks, not fixed
 
