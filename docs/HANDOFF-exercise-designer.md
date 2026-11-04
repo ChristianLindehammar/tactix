@@ -1,6 +1,6 @@
 # Handoff: premium exercise designer
 
-Last updated 2026-11-03. Branch: `feature/exercise-designer`, pushed, no PR yet.
+Last updated 2026-11-04. Branch: `feature/exercise-designer`, pushed, no PR yet.
 
 CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature that lets coaches design, tag, rate and find training exercises per sport. The feature works on Android and iOS, but it has no paywall yet.
 
@@ -15,11 +15,11 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | iOS check | Done, on the `iPhone 17 Pro` simulator |
 | Dark mode on iOS, exercise screens only | Done |
 | Library sorting and minimum rating | Done |
-| Remaining device checks | **Next** |
-| RevenueCat and paywall | Not started; see open decisions |
+| Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
+| RevenueCat and paywall | **Next**; see open decisions |
 | Accounts, backend, sync | Not started |
 
-Last run: 255 tests in 18 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 263 tests in 20 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -44,6 +44,8 @@ Last run: 255 tests in 18 suites passing. `tsc` reports errors in older files su
 - **Ratings:** one record per user and exercise, stored apart from the exercise (`exercise-rating:<userId>:<exerciseId>`). A cleared rating stays as `stars: null` so it can sync.
 - **Clone:** creates a new exercise you own, with `clonedFromId` pointing at the source. Ratings are not copied.
 - **Arrow names:** solid is Run and dashed is Pass, confirmed by Christian. Coaches' conventions differ, but swapping would only change the displayed names in `translations/`.
+- **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
+- **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
 - **Backend (later):** Postgres, for example Supabase, because the filters combine several fields. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
 
@@ -64,6 +66,9 @@ Last run: 255 tests in 18 suites passing. `tsc` reports errors in older files su
     - `Redigera skiss`, `Spara`, the board tools and the court aren't listed as tap targets. Get their refs with `wait_for_ui` by label or test ID, then use `touch`.
     - It can't see inside the label dialog, so use `key_sequence` to type there.
     - Its `swipe-from-left-edge` preset doesn't trigger the iOS back gesture, so test back-swipes by hand.
+    - It can only tap element centres, and its drags don't hold first, so they can't move board markers. Use Android for board checks, with `adb shell input tap` and `input draganddrop`.
+- **Gesture config in tests:** `getByGestureTestId` returns the gesture from the first render, so it can't show later changes. Test the marker and the board's `placing` prop separately, then check on a device.
+- **Android tab bar position:** it can shift between launches, so take a screenshot before using fixed tap coordinates.
 
 ## Running it
 
@@ -83,20 +88,21 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
 ## Next steps
 
 1. **Remaining device checks:**
-    - Tactics tab after the board changes.
-    - Hockey and bandy, including goal marker contrast on white ice.
-    - Cloning someone else's exercise.
+    - iOS: placing beside a marker, dragging, and the other board checks, which were only run on Android. These need testing by hand.
+    - Floorball and basketball.
+    - Dark mode: the puck in the toolbar, the bandy board and the editor form.
 2. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
-- Export and import through `.coachmate` files, adding a `kind` field and treating files without one as teams.
+- Sharing exercises by link, once they're in the database.
 - Multi-step drills using `frames`.
 - Accounts, moving local exercises to the signed-in user, and sync.
 
-## Found during the iOS check, not fixed
+## Found during device checks, not fixed
 
 - **Label limit:** the dialog says 3 characters but accepts 5, then cuts the label to 3 on save without warning.
 - **Screen readers:** `Redigera skiss`, `Spara` and the board tools aren't exposed as buttons, so VoiceOver users may not find them.
+- **Overlapping markers:** where touch areas overlap, the marker placed last takes the drag, even if you touch the centre of the one beneath it.
 
 ## Open decisions for Christian
 
@@ -104,5 +110,5 @@ Later:
 - **Saving tactics:** should saved plain tactics be free? I suggested a few for free.
 - **Exercise library:** whether to offer a shared or curated one. I suggested curated first, since publishing by coaches needs moderation.
 - **Difficulty scale:** currently 1–5. Three levels might rate more consistently if a shared library comes soon.
-- **Deleting others' exercises:** blocked for now, which Christian didn't explicitly ask for. It needs rethinking with import, so people can remove an imported copy.
+- **Deleting others' exercises:** blocked for now, which Christian didn't explicitly ask for. It needs rethinking with link sharing, so people can remove a shared copy.
 - **Translations:** Swedish and Finnish strings need review, Finnish especially.
