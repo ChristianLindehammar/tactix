@@ -149,6 +149,7 @@ export default function ExerciseLibraryScreen() {
         }
         renderItem={({ item }) => (
           <Pressable
+            accessibilityRole="button"
             onPress={() => router.push(`/exercises/${item.id}`)}
             style={[styles.card, { backgroundColor: cardBackground, borderColor: border }]}
           >
@@ -306,7 +307,12 @@ export default function ExerciseLibraryScreen() {
       )}
 
       {hasFilters && (
-        <Pressable onPress={clearFilters} style={styles.clearFilters} hitSlop={8}>
+        <Pressable
+          accessibilityRole="button"
+          onPress={clearFilters}
+          style={styles.clearFilters}
+          hitSlop={8}
+        >
           <ThemedText type="link">{t('clearFilters')}</ThemedText>
         </Pressable>
       )}

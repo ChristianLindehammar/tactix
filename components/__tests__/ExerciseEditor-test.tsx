@@ -132,10 +132,10 @@ describe('exercise editor', () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       fireEvent.press(await screen.findByText('Edit diagram'));
-      fireEvent.press(screen.getByLabelText('arrow-dashed'));
+      fireEvent.press(screen.getByLabelText('Pass'));
 
-      expect(screen.getByLabelText('coach')).toBeTruthy();
-      expect(screen.getByLabelText('goal')).toBeTruthy();
+      expect(screen.getByLabelText('Coach')).toBeTruthy();
+      expect(screen.getByLabelText('Goal')).toBeTruthy();
       expect(screen.getByText('Pass: tap the court to place it')).toBeTruthy();
     });
 
@@ -143,10 +143,10 @@ describe('exercise editor', () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       fireEvent.press(await screen.findByText('Edit diagram'));
-      expect(screen.getByLabelText('cone')).toBeTruthy();
+      expect(screen.getByLabelText('Cone')).toBeTruthy();
 
       fireEvent.press(screen.getByTestId('close-diagram'));
-      expect(screen.queryByLabelText('cone')).toBeNull();
+      expect(screen.queryByLabelText('Cone')).toBeNull();
     });
   });
 

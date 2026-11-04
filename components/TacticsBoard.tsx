@@ -221,7 +221,9 @@ export function TacticsBoard({
         addingType === mt.type && styles.activeButton,
       ]}
       onPress={() => setAddingType(current => (current === mt.type ? null : mt.type))}
-      accessibilityLabel={mt.type}
+      accessibilityRole="button"
+      accessibilityLabel={t(`markerNames.${mt.type}`)}
+      accessibilityState={{ selected: addingType === mt.type }}
     >
       <MaterialIcons
         name={addingType === mt.type ? 'close' : 'add'}
@@ -301,6 +303,7 @@ export function TacticsBoard({
                     },
                   ]);
                 }}
+                accessibilityRole="button"
                 accessibilityLabel={t('clearAll')}
               >
                 <MaterialIcons name="delete-sweep" size={toolbarLayout.markerIconSize} color="#fff" />
@@ -413,6 +416,7 @@ export function TacticsBoard({
                     <TouchableOpacity
                       testID={`marker-${marker.id}`}
                       activeOpacity={0.8}
+                      accessibilityRole={enableLabels ? 'button' : undefined}
                       accessibilityLabel={marker.label ?? t(`markerNames.${marker.type}`)}
                       onPress={enableLabels ? () => setLabellingId(marker.id) : undefined}
                       style={[
@@ -439,7 +443,7 @@ export function TacticsBoard({
           visible
           title={t('markerLabel')}
           initialValue={value.find(marker => marker.id === labellingId)?.label ?? ''}
-          maxLength={MAX_LABEL_LENGTH + 2}
+          maxLength={MAX_LABEL_LENGTH}
           autoCorrect={false}
           allowEmpty
           onCancel={() => setLabellingId(null)}

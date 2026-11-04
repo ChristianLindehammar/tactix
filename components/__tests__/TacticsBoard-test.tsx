@@ -47,7 +47,7 @@ describe('TacticsBoard', () => {
   it('adds the chosen marker where the court is tapped', async () => {
     const { onChange } = await renderBoard();
 
-    fireEvent.press(screen.getByLabelText('cone'));
+    fireEvent.press(screen.getByLabelText('Cone'));
     tapCourt(100, 218.59);
 
     expect(onChange).toHaveBeenCalledTimes(1);
@@ -61,10 +61,10 @@ describe('TacticsBoard', () => {
   it('offers only the allowed marker types in the toolbar', async () => {
     await renderBoard({ allowedMarkerTypes: ['cone', 'ball'] });
 
-    expect(screen.getByLabelText('cone')).toBeTruthy();
-    expect(screen.getByLabelText('ball')).toBeTruthy();
-    expect(screen.queryByLabelText('player')).toBeNull();
-    expect(screen.queryByLabelText('arrow-solid')).toBeNull();
+    expect(screen.getByLabelText('Cone')).toBeTruthy();
+    expect(screen.getByLabelText('Ball')).toBeTruthy();
+    expect(screen.queryByLabelText('Player')).toBeNull();
+    expect(screen.queryByLabelText('Run')).toBeNull();
   });
 
   describe('placing a marker next to another', () => {
@@ -100,10 +100,10 @@ describe('TacticsBoard', () => {
       const placing = () => screen.UNSAFE_getByType(DraggableMarker).props.placing;
       expect(placing()).toBe(false);
 
-      fireEvent.press(screen.getByLabelText('cone'));
+      fireEvent.press(screen.getByLabelText('Cone'));
       expect(placing()).toBe(true);
 
-      fireEvent.press(screen.getByLabelText('cone'));
+      fireEvent.press(screen.getByLabelText('Cone'));
       expect(placing()).toBe(false);
     });
   });
@@ -134,21 +134,49 @@ describe('TacticsBoard', () => {
     });
   });
 
+  describe('screen readers', () => {
+    it('announces each tool as a button with its translated name', async () => {
+      await renderBoard({ allowedMarkerTypes: ['cone', 'arrow-solid'] });
+
+      expect(screen.getByRole('button', { name: 'Cone' })).toBeTruthy();
+      expect(screen.getByRole('button', { name: 'Run' })).toBeTruthy();
+    });
+
+    it('announces which tool is selected', async () => {
+      await renderBoard();
+      expect(screen.queryByRole('button', { name: 'Cone', selected: true })).toBeNull();
+
+      fireEvent.press(screen.getByRole('button', { name: 'Cone' }));
+
+      expect(screen.getByRole('button', { name: 'Cone', selected: true })).toBeTruthy();
+      expect(screen.queryByRole('button', { name: 'Ball', selected: true })).toBeNull();
+    });
+
+    it('announces clear all as a button', async () => {
+      await renderBoard({ value: [ball, createTacticsMarker('cone', 0.2, 0.2)] });
+
+      expect(screen.getByRole('button', { name: 'Clear All' })).toBeTruthy();
+    });
+  });
+
   describe('marker choices', () => {
     it('keeps the tactics toolbar to its original six markers by default', async () => {
       await renderBoard();
 
-      ['player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed'].forEach(type =>
-        expect(screen.getByLabelText(type)).toBeTruthy(),
+      ['Player', 'Opponent', 'Ball', 'Cone', 'Run', 'Pass'].forEach(name =>
+        expect(screen.getByLabelText(name)).toBeTruthy(),
       );
-      expect(screen.queryByLabelText('coach')).toBeNull();
-      expect(screen.queryByLabelText('goal')).toBeNull();
+      expect(screen.queryByLabelText('Coach')).toBeNull();
+      expect(screen.queryByLabelText('Goal')).toBeNull();
     });
 
-    it.each([['coach'], ['goal']] as const)('can place a %s when allowed', async type => {
+    it.each([
+      ['coach', 'Coach'],
+      ['goal', 'Goal'],
+    ] as const)('can place a %s when allowed', async (type, name) => {
       const { onChange } = await renderBoard({ allowedMarkerTypes: [type] });
 
-      fireEvent.press(screen.getByLabelText(type));
+      fireEvent.press(screen.getByLabelText(name));
       tapCourt(100, 100);
 
       expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe(type);
@@ -160,13 +188,13 @@ describe('TacticsBoard', () => {
       ['arrow-solid', 'Run: tap the court to place it'],
       ['arrow-dashed', 'Pass: tap the court to place it'],
       ['coach', 'Coach: tap the court to place it'],
-    ])('names the selected %s', async (type, hint) => {
+    ])('names the selected %s', async (_type, hint) => {
       await renderBoard({
         showToolHints: true,
         allowedMarkerTypes: ['arrow-solid', 'arrow-dashed', 'coach'],
       });
 
-      fireEvent.press(screen.getByLabelText(type));
+      fireEvent.press(screen.getByLabelText(hint.split(':')[0]));
 
       expect(screen.getByText(hint)).toBeTruthy();
     });
@@ -180,7 +208,7 @@ describe('TacticsBoard', () => {
     it('stays off unless asked for, so the tactics screen is unchanged', async () => {
       await renderBoard();
 
-      fireEvent.press(screen.getByLabelText('arrow-solid'));
+      fireEvent.press(screen.getByLabelText('Run'));
 
       expect(screen.queryByText(/tap the court/)).toBeNull();
     });
@@ -223,6 +251,39 @@ describe('TacticsBoard', () => {
       );
     });
 
+    it('stops typing at the three characters the dialog promises', async () => {
+      await renderBoard({ value: [ball, player], enableLabels: true });
+
+      fireEvent.press(screen.getByTestId(`marker-${player.id}`));
+
+      expect(await screen.findByLabelText('Label (up to 3 characters)')).toHaveProp('maxLength', 3);
+    });
+
+    it('announces a player as a button only when pressing it does something', async () => {
+      const seven = { ...player, label: '7' };
+      const { unmount } = render(
+        <SafeAreaProvider initialMetrics={SAFE_AREA}>
+          <SportProvider>
+            <TacticsBoard sport="soccer" value={[ball, seven]} onChange={jest.fn()} enableLabels />
+          </SportProvider>
+        </SafeAreaProvider>,
+      );
+      expect(await screen.findByRole('button', { name: '7' })).toBeTruthy();
+      unmount();
+
+      await renderBoard({ value: [ball, seven] });
+      expect(screen.queryByRole('button', { name: '7' })).toBeNull();
+    });
+
+    it('announces the dialog actions as buttons', async () => {
+      await renderBoard({ value: [ball, player], enableLabels: true });
+
+      fireEvent.press(screen.getByTestId(`marker-${player.id}`));
+
+      expect(await screen.findByRole('button', { name: 'OK' })).toBeTruthy();
+      expect(screen.getByRole('button', { name: 'Cancel' })).toBeTruthy();
+    });
+
     it('removes the label when it is emptied', async () => {
       const labelled = { ...player, label: '7' };
       const { onChange } = await renderBoard({ value: [ball, labelled], enableLabels: true });
@@ -252,7 +313,7 @@ describe('TacticsBoard', () => {
     it('hides the toolbar', async () => {
       await renderBoard({ readOnly: true });
 
-      expect(screen.queryByLabelText('player')).toBeNull();
+      expect(screen.queryByLabelText('Player')).toBeNull();
     });
 
     it('never changes the markers, even without a ball', async () => {

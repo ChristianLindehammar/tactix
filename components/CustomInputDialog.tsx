@@ -53,12 +53,13 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
                 placeholderTextColor={typeof textColor === 'string' ? textColor : undefined}
               />
               <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button} onPress={onCancel}>
+                <TouchableOpacity style={styles.button} accessibilityRole="button" onPress={onCancel}>
                   <ThemedText>
                    { t('cancel')}
                   </ThemedText>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  accessibilityRole="button"
                   style={[styles.button, { backgroundColor: Colors.light.tint }]}
                   onPress={() => (allowEmpty || value.trim()) && onSubmit(value.trim())}
                 >

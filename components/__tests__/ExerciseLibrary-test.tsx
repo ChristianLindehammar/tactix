@@ -262,6 +262,19 @@ describe('exercise library', () => {
     expect(await screen.findByText('Safe drill')).toBeTruthy();
   });
 
+  it('announces exercises and clear filters as buttons', async () => {
+    await saved({ title: 'Open me' });
+    renderExerciseScreen(<ExerciseLibraryScreen />);
+    await screen.findByText('Open me');
+
+    expect(screen.getByRole('button', { name: /Open me/ })).toBeTruthy();
+
+    fireEvent.press(screen.getByTestId('toggle-filters'));
+    fireEvent.press(screen.getByTestId('filter-focus-defence'));
+
+    expect(screen.getByRole('button', { name: 'Clear filters' })).toBeTruthy();
+  });
+
   it('opens an exercise when it is pressed', async () => {
     await saved({ id: 'abc', title: 'Open me' });
     renderExerciseScreen(<ExerciseLibraryScreen />);

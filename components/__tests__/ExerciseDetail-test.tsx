@@ -65,7 +65,7 @@ describe('exercise detail', () => {
     renderExerciseScreen(<ExerciseDetailScreen />);
     await screen.findByText('Triangle passing');
 
-    expect(screen.queryByLabelText('cone')).toBeNull();
+    expect(screen.queryByLabelText('Cone')).toBeNull();
     expect(screen.getByTestId('tactics-board-court').props.pointerEvents).toBe('none');
   });
 
