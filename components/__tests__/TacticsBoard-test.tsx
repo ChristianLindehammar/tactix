@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Alert } from 'react-native';
 import { fireEvent, render, screen } from '@testing-library/react-native';
+import { getByGestureTestId } from 'react-native-gesture-handler/jest-utils';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { DraggableMarker } from '../DraggableMarker';
 import { TacticsBoard } from '../TacticsBoard';
 import { SportProvider } from '@/context/SportContext';
 import { createTacticsMarker, TacticsMarker } from '@/types/tacticsMarker';
@@ -63,6 +65,47 @@ describe('TacticsBoard', () => {
     expect(screen.getByLabelText('ball')).toBeTruthy();
     expect(screen.queryByLabelText('player')).toBeNull();
     expect(screen.queryByLabelText('arrow-solid')).toBeNull();
+  });
+
+  describe('placing a marker next to another', () => {
+    const renderMarker = (placing: boolean) =>
+      render(
+        <DraggableMarker
+          id={ball.id}
+          x={0.5}
+          y={0.5}
+          containerSize={COURT}
+          onDragEnd={jest.fn()}
+          placing={placing}
+        >
+          <></>
+        </DraggableMarker>,
+      );
+    const touchArea = () => getByGestureTestId(`marker-drag-${ball.id}`).config.hitSlop;
+
+    it('gives a marker a generous touch area for dragging', () => {
+      renderMarker(false);
+
+      expect(touchArea()).toBe(20);
+    });
+
+    it('leaves the space around a marker free while placing', () => {
+      renderMarker(true);
+
+      expect(touchArea()).toBe(0);
+    });
+
+    it('tells markers when a tool is selected, and when it is put away', async () => {
+      await renderBoard();
+      const placing = () => screen.UNSAFE_getByType(DraggableMarker).props.placing;
+      expect(placing()).toBe(false);
+
+      fireEvent.press(screen.getByLabelText('cone'));
+      expect(placing()).toBe(true);
+
+      fireEvent.press(screen.getByLabelText('cone'));
+      expect(placing()).toBe(false);
+    });
   });
 
   describe('ball rule', () => {

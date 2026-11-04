@@ -13,6 +13,8 @@ interface DraggableMarkerProps {
   zIndex?: number;
   onDragStart?: (id: string) => void;
   onLongPress?: () => void;
+  /** A tool is selected, so taps around the marker should reach the court. */
+  placing?: boolean;
 }
 
 export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
@@ -25,6 +27,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   zIndex = 2,
   onDragStart,
   onLongPress,
+  placing = false,
 }) => {
   const MARKER_SIZE = 40;
   const halfMarker = MARKER_SIZE / 2;
@@ -51,7 +54,8 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
 
   // Pan gesture for dragging
   const panGesture = Gesture.Pan()
-    .hitSlop(20)
+    .withTestId(`marker-drag-${id}`)
+    .hitSlop(placing ? 0 : 20)
     // Add a slight delay to allow long press to be detected first
     .activateAfterLongPress(Platform.OS === 'android' ? 150 : 50)
     .onBegin(() => {

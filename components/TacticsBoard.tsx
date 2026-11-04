@@ -377,6 +377,7 @@ export function TacticsBoard({
                   setDraggingId(null);
                 }}
                 onDragStart={handleDragStart}
+                placing={addingType !== null}
                 onLongPress={() => {
                   // Don't allow deleting the last remaining ball marker
                   if (requireBall && !canDeleteMarker(latest.current, marker.id)) return;
