@@ -19,7 +19,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | RevenueCat and paywall | **Next**; see open decisions |
 | Accounts, backend, sync | Not started |
 
-Last run: 263 tests in 20 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -63,8 +63,8 @@ Last run: 263 tests in 20 suites passing. `tsc` reports errors in older files su
 - **Driving iOS with MobileBuildMCP:** it's added locally with UI automation enabled in the git-excluded `.mobilebuildmcp/config.yaml`.
     - Call `session_set_defaults` with the simulator ID after each reconnect.
     - Focus a text field before typing. Otherwise keys reach the React Native dev shortcuts, where `i` toggles the element inspector.
-    - `Redigera skiss`, `Spara`, the board tools and the court aren't listed as tap targets. Get their refs with `wait_for_ui` by label or test ID, then use `touch`.
-    - It can't see inside the label dialog, so use `key_sequence` to type there.
+    - The court and board markers aren't listed as tap targets. Get their refs with `wait_for_ui` by label or test ID, then use `touch`.
+    - A `touch` on a player didn't open the label dialog: down+up together did nothing, and separate down and up calls opened the Delete dialog as a long press. Use Android for label checks. Don't send keys until the dialog is open, or they reach the React Native dev shortcuts.
     - Its `swipe-from-left-edge` preset doesn't trigger the iOS back gesture, so test back-swipes by hand.
     - It can only tap element centres, and its drags don't hold first, so they can't move board markers. Use Android for board checks, with `adb shell input tap` and `input draganddrop`.
 - **Gesture config in tests:** `getByGestureTestId` returns the gesture from the first render, so it can't show later changes. Test the marker and the board's `placing` prop separately, then check on a device.
@@ -100,8 +100,7 @@ Later:
 
 ## Found during device checks, not fixed
 
-- **Label limit:** the dialog says 3 characters but accepts 5, then cuts the label to 3 on save without warning.
-- **Screen readers:** `Redigera skiss`, `Spara` and the board tools aren't exposed as buttons, so VoiceOver users may not find them.
+- **Screen readers on the board:** tools, buttons and labellable players are now announced as buttons, with translated tool names. Placing and dragging markers still needs touches on the court, so a screen reader user can't build a diagram. Nothing has been tried with VoiceOver or TalkBack themselves, only the accessibility tree.
 - **Overlapping markers:** where touch areas overlap, the marker placed last takes the drag, even if you touch the centre of the one beneath it.
 
 ## Open decisions for Christian
