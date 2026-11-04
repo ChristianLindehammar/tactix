@@ -22,11 +22,29 @@ def db_config():
     """A freshly migrated database for each test. Start it with scripts/test_db.sh."""
     server = mysql.connector.connect(**SERVER)
     cursor = server.cursor()
+    # Fail fast rather than hang if a connection from an earlier test is still open
+    cursor.execute('SET lock_wait_timeout = 5')
     cursor.execute(f'DROP DATABASE IF EXISTS {DB_NAME}')
     cursor.execute(f'CREATE DATABASE {DB_NAME} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci')
     server.close()
     migrate(DB_CONFIG)
     return DB_CONFIG
+
+
+@pytest.fixture()
+def rows(db_config):
+    """Runs a query directly, for facts the API deliberately doesn't expose."""
+
+    def _rows(sql):
+        connection = mysql.connector.connect(**db_config)
+        try:
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            return cursor.fetchall()
+        finally:
+            connection.close()
+
+    return _rows
 
 
 @pytest.fixture()

@@ -8,6 +8,7 @@ from functools import wraps
 from flask import Blueprint, g, jsonify, request
 
 from .db import get_db, query_one
+from .rate_limit import client_address, rate_limited
 
 bp = Blueprint('auth', __name__)
 
@@ -17,6 +18,7 @@ def _hash(token):
 
 
 @bp.post('/devices')
+@rate_limited('devices', client_address)
 def register_device():
     user_id = str(uuid.uuid4())
     token = secrets.token_urlsafe(32)

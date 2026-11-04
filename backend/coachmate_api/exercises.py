@@ -1,28 +1,24 @@
 import json
 
+import mysql.connector
 from flask import Blueprint, g, jsonify, request
 
 from .auth import require_user
-from .db import get_db, query_one
+from .db import get_db, query_all, query_one
+from .listing import InvalidFilter, build_listing
+from .rate_limit import current_user, rate_limited
 from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise
 
 bp = Blueprint('exercises', __name__)
+
+DUPLICATE_KEY = 1062
 
 
 def _format_date(value):
     return None if value is None else value.strftime('%Y-%m-%dT%H:%M:%S.') + f'{value.microsecond // 1000:03d}Z'
 
 
-def _load_exercise(exercise_id):
-    row = query_one('SELECT * FROM exercises WHERE id = %s', (exercise_id,))
-    if row is None:
-        return None
-
-    cursor = get_db().cursor()
-    cursor.execute('SELECT tag FROM exercise_focus WHERE exercise_id = %s ORDER BY position', (exercise_id,))
-    focus = [tag for (tag,) in cursor.fetchall()]
-    cursor.close()
-
+def _to_exercise(row, focus):
     return {
         'schemaVersion': row['schema_version'],
         'id': row['id'],
@@ -45,6 +41,27 @@ def _load_exercise(exercise_id):
         'updatedAt': _format_date(row['updated_at']),
         'deletedAt': _format_date(row['deleted_at']),
     }
+
+
+def _focus_by_exercise(exercise_ids):
+    if not exercise_ids:
+        return {}
+    placeholders = ', '.join(['%s'] * len(exercise_ids))
+    focus = {}
+    for exercise_id, tag in query_all(
+        f'SELECT exercise_id, tag FROM exercise_focus WHERE exercise_id IN ({placeholders}) ORDER BY position',
+        exercise_ids,
+        dictionary=False,
+    ):
+        focus.setdefault(exercise_id, []).append(tag)
+    return focus
+
+
+def _load_exercise(exercise_id):
+    row = query_one('SELECT * FROM exercises WHERE id = %s', (exercise_id,))
+    if row is None:
+        return None
+    return _to_exercise(row, _focus_by_exercise([exercise_id]).get(exercise_id, []))
 
 
 def _write_exercise(exercise, owner_id, exists):
@@ -86,8 +103,27 @@ def _write_exercise(exercise, owner_id, exists):
     cursor.close()
 
 
+@bp.get('/exercises')
+@require_user
+def list_exercises():
+    """The caller's own exercises. Browsing other coaches' exercises isn't offered."""
+    try:
+        where, params, order, limit, offset = build_listing(request.args, g.user_id)
+    except InvalidFilter:
+        return jsonify({'error': 'invalidFilter'}), 400
+
+    total = query_one(f'SELECT COUNT(*) AS total FROM exercises e WHERE {where}', params)['total']
+    rows = query_all(
+        f'SELECT e.* FROM exercises e WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
+        [*params, limit, offset],
+    )
+    focus = _focus_by_exercise([row['id'] for row in rows])
+    return jsonify({'exercises': [_to_exercise(row, focus.get(row['id'], [])) for row in rows], 'total': total})
+
+
 @bp.put('/exercises/<exercise_id>')
 @require_user
+@rate_limited('saves', current_user)
 def save_exercise(exercise_id):
     try:
         exercise = parse_exercise(request.get_json(silent=True))
@@ -96,13 +132,21 @@ def save_exercise(exercise_id):
     if exercise['id'] != exercise_id.lower():
         return jsonify({'error': 'invalidId'}), 400
 
-    # Locks the row, so two saves can't both pass the ownership check
-    existing = query_one('SELECT owner_id FROM exercises WHERE id = %s FOR UPDATE', (exercise['id'],))
-    if existing and existing['owner_id'] != g.user_id:
-        return jsonify({'error': 'exerciseNotOwned'}), 403
+    for last_attempt in (False, True):
+        # Locks the row if it exists, so two saves can't both pass the ownership check
+        existing = query_one('SELECT owner_id FROM exercises WHERE id = %s FOR UPDATE', (exercise['id'],))
+        if existing and existing['owner_id'] != g.user_id:
+            return jsonify({'error': 'exerciseNotOwned'}), 403
+        try:
+            _write_exercise(exercise, g.user_id, exists=existing is not None)
+            get_db().commit()
+            break
+        except mysql.connector.IntegrityError as error:
+            # Someone else created this id just after the check, so check again who owns it
+            get_db().rollback()
+            if last_attempt or error.errno != DUPLICATE_KEY:
+                raise
 
-    _write_exercise(exercise, g.user_id, exists=existing is not None)
-    get_db().commit()
     return jsonify(_load_exercise(exercise['id']))
 
 
