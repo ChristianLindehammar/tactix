@@ -1,0 +1,37 @@
+import logging
+
+import mysql.connector
+from flask import Flask, jsonify
+
+from . import auth, exercises
+from .db import close_db, query_one
+
+logger = logging.getLogger('coachmate')
+
+MAX_REQUEST_BYTES = 1024 * 1024
+
+
+def create_app(db_config):
+    app = Flask(__name__)
+    app.config['DB'] = db_config
+    app.config['MAX_CONTENT_LENGTH'] = MAX_REQUEST_BYTES
+    app.teardown_appcontext(close_db)
+    app.register_blueprint(auth.bp)
+    app.register_blueprint(exercises.bp)
+
+    @app.get('/health')
+    def health():
+        query_one('SELECT 1')
+        return jsonify({'status': 'ok'})
+
+    @app.errorhandler(413)
+    def too_large(_error):
+        return jsonify({'error': 'tooLarge'}), 413
+
+    # An outage must not look like missing data: the app shows this as a load failure
+    @app.errorhandler(mysql.connector.Error)
+    def database_unavailable(error):
+        logger.error('Database error: %s', error)
+        return jsonify({'error': 'serviceUnavailable'}), 503
+
+    return app
