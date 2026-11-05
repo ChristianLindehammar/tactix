@@ -1,4 +1,4 @@
-import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers } from '../tacticsMarker';
+import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers, withArrowCurve } from '../tacticsMarker';
 
 describe('createTacticsMarker', () => {
   it('creates a cone marker with the given position', () => {
@@ -120,5 +120,17 @@ describe('clearAllMarkers', () => {
     expect(result[0].type).toBe('ball');
     expect(result[0].x).toBe(0.5);
     expect(result[0].y).toBe(0.5);
+  });
+});
+
+describe('withArrowCurve', () => {
+  const arrow = createArrowMarker('arrow-solid', 0, 0, 1, 1);
+
+  it('stores the curve on the arrow', () => {
+    expect(withArrowCurve(arrow, { bend: 0.1, waves: 3 })).toEqual({ ...arrow, bend: 0.1, waves: 3 });
+  });
+
+  it('removes the curve when the arrow goes back to straight', () => {
+    expect(withArrowCurve({ ...arrow, bend: 0.1, waves: 3 }, undefined)).toEqual(arrow);
   });
 });

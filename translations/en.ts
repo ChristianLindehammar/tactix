@@ -148,6 +148,8 @@ export default {
   // Exercises
   markerLabel: 'Label (up to 3 characters)',
   placeMarkerHint: '{{name}}: tap the court to place it',
+  curveArrowHint: "Drag an arrow's middle dot to curve it",
+  curveArrowDragHint: 'Toward the start for more waves',
   markerNames: {
     player: 'Player',
     opponent: 'Opponent',

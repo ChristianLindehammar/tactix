@@ -31,6 +31,7 @@ import {
   getMarkerIcon,
   TacticsMarker,
   TacticsMarkerType,
+  withArrowCurve,
 } from '@/types/tacticsMarker';
 import { getToolbarLayout } from '@/utils/toolbarLayout';
 
@@ -49,6 +50,8 @@ export interface TacticsBoardProps {
   showToolHints?: boolean;
   /** Pressing a player or opponent lets the user give it a short label. */
   enableLabels?: boolean;
+  /** Gives each arrow a middle dot that curves it into an arc or a wave. */
+  enableCurves?: boolean;
   /** Display only: no toolbar, no touches, and the markers never change. */
   readOnly?: boolean;
   /** Keep at least one ball on the board. Turn off for drills without a ball. */
@@ -102,6 +105,7 @@ export function TacticsBoard({
   allowedMarkerTypes = DEFAULT_MARKER_TYPES,
   showToolHints = false,
   enableLabels = false,
+  enableCurves = false,
   readOnly = false,
   requireBall = true,
   bottomInset = 0,
@@ -149,6 +153,7 @@ export function TacticsBoard({
   const [addingType, setAddingType] = useState<TacticsMarkerType | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [labellingId, setLabellingId] = useState<string | null>(null);
+  const [curving, setCurving] = useState(false);
 
   // Gestures and alerts can fire before the host re-renders with the new value
   const latest = useRef(value);
@@ -205,6 +210,14 @@ export function TacticsBoard({
     );
     setLabellingId(null);
   };
+
+  const toolHint = addingType
+    ? t('placeMarkerHint', { name: t(`markerNames.${addingType}`) })
+    : curving
+      ? t('curveArrowDragHint')
+      : enableCurves && value.some(marker => isArrow(marker.type))
+        ? t('curveArrowHint')
+        : null;
 
   const markerScale = readOnly ? Math.min(1, court.width / FULL_SIZE_COURT_WIDTH) : 1;
 
@@ -313,11 +326,7 @@ export function TacticsBoard({
           {/* The row keeps its height when empty, so choosing a tool doesn't resize the court */}
           {showToolHints && (
             <View style={styles.toolHintRow}>
-              {addingType && (
-                <ThemedText style={styles.toolHint}>
-                  {t('placeMarkerHint', { name: t(`markerNames.${addingType}`) })}
-                </ThemedText>
-              )}
+              {toolHint && <ThemedText style={styles.toolHint}>{toolHint}</ThemedText>}
             </View>
           )}
         </View>
@@ -351,6 +360,18 @@ export function TacticsBoard({
                 endX={marker.endX ?? marker.x}
                 endY={marker.endY ?? marker.y + 0.15}
                 dashed={marker.type === 'arrow-dashed'}
+                curve={
+                  marker.bend !== undefined && marker.waves !== undefined
+                    ? { bend: marker.bend, waves: marker.waves }
+                    : undefined
+                }
+                curveEditable={enableCurves && !readOnly && !addingType}
+                onCurvingChange={setCurving}
+                onCurveEnd={(id, curve) => {
+                  update(markers =>
+                    markers.map(m => (m.id === id ? withArrowCurve(m, curve) : m)),
+                  );
+                }}
                 containerSize={court}
                 color={arrowColor}
                 onDragEnd={(id, newX, newY, newEndX, newEndY) => {
@@ -391,7 +412,8 @@ export function TacticsBoard({
                     onMarkerDeleted?.();
                   });
                 }}
-                zIndex={draggingId === marker.id ? 3 : 2}
+                // Arrows sit at 1. A row of cones would otherwise cover the ends of an arrow through it
+                zIndex={draggingId === marker.id ? 3 : enableCurves && marker.type === 'cone' ? 0 : 2}
               >
                 <View style={{ transform: [{ scale: markerScale }] }}>
                   {marker.type === 'ball' ? (

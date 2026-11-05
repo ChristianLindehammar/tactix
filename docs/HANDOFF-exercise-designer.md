@@ -24,8 +24,9 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Apple and Google sign-in | Built. Google checked on Android (`CoachMate_Google` emulator) against the live server, and the chooser appears after signing out. Google also works on Christian's iPhone against the live server. Apple on iOS and cancelling on both platforms still need confirming |
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
+| Curved arrows | Built and checked on Android (`CoachMate_Google`), in the exercise editor and on the Tactics board. The backend's validation is updated but not deployed, so the live server drops curves on upload. Not tried on iOS or with a real finger |
 
-Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 419 app tests in 29 suites and 211 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -37,6 +38,7 @@ Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` report
 | Accounts | `services/authSession.ts`, `services/account.ts`, `services/localAccountData.ts`, `components/AccountPanel.tsx`, `app/(tabs)/settings/account.tsx`, `backend/coachmate_api/accounts.py`, `provider_tokens.py`, `mail.py` |
 | Screens | `app/(tabs)/exercises/` (`index`, `[id]`, `edit`, `_layout`) |
 | Board | `components/TacticsBoard.tsx`, `components/CourtSurface.tsx` |
+| Arrow curves | `utils/arrowCurve.ts` (geometry and snapping), `components/ArrowMarker.tsx` |
 | Logic | `utils/exerciseDraft.ts`, `utils/filterExercises.ts`, `utils/cloneExercise.ts`, `utils/describeExercise.ts` |
 | Test helpers | `jest.setup.js`, `test-utils/` |
 
@@ -54,6 +56,8 @@ Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` report
 - **Arrow names:** solid is Run and dashed is Pass, confirmed by Christian. Coaches' conventions differ, but swapping would only change the displayed names in `translations/`.
 - **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
+- **Curved arrows:** an arrow's middle dot sits on the first hump's peak. Dragging it sideways sets the bend, and dragging it toward the start adds waves, with faint dots showing the snap positions. Humps are uniform with evenly spaced peaks, so an arrow starting half a cone gap before a row of cones, with one wave per cone, makes a slalom. Stored as `bend` (share of court width, signed, steps of 0.02, up to 0.5) and `waves` (1–8) on the arrow, and a straight arrow has neither. A wave count is only offered if the arrow has room for it. It's on through `enableCurves`, used by the exercise editor and the free Tactics board (Christian's choice on 2026-11-05). Tactics has no hint row, so nothing there explains the dot.
+- **Layers with curves on:** cones 0, arrows 1, other markers 2, dragged marker 3, curve dot 4. Cones sit below arrows because the touch margins of a row of cones otherwise cover the whole line, leaving an arrow's ends impossible to grab. Players stay on top so an arrow starting at a player doesn't block dragging the player.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
 - **Checking plans:** a RevenueCat webhook only says that something changed, as its events have no promised order. The server then asks RevenueCat for the current state and stores the end date on `users.plan_expires_at`. Saving needs an active plan, but a coach can always read their own exercises and delete ones already uploaded. The app must call `POST /me/plan/refresh` after signing in or buying, because RevenueCat's docs don't mention a webhook when a purchase made while signed out joins an account.
 - **Plan:** yearly and monthly subscriptions, both offered on the paywall (Christian added monthly on 2026-11-05; 199 kr and 29 kr were suggested as starting prices). When a coach's plan ends, they can't use the exercise feature.
@@ -86,6 +90,10 @@ Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` report
     - A `touch` on a player didn't open the label dialog: down+up together did nothing, and separate down and up calls opened the Delete dialog as a long press. Use Android for label checks. Don't send keys until the dialog is open, or they reach the React Native dev shortcuts.
     - Its `swipe-from-left-edge` preset doesn't trigger the iOS back gesture, so test back-swipes by hand.
     - It can only tap element centres, and its drags don't hold first, so they can't move board markers. Use Android for board checks, with `adb shell input tap` and `input draganddrop`.
+- **Pan translation starts at activation on Android,** not at touch down, so a handle positioned from `translationX` lags the finger. The curve dot uses `absoluteX` from `onBegin` instead. The arrow's end handles still use translation, so a fast drag ends short of the finger.
+- **Fast Refresh during a board check:** it can drop an unsaved exercise draft, and once stacked a read-only preview's cones in the court's top-left corner until the screen was reopened. Don't edit code in the middle of a scripted check, and reopen the screen before suspecting the app.
+- **Scripted board drags:** `adb shell input swipe x1 y1 x2 y2 900` moves arrow handles. A swipe with the same start and end point is a long press. In zsh, `read X Y <<< "$(...)"` splits values; `set -- $B` doesn't.
+- **Saving on a signed-in emulator uploads to the live server,** as `CoachMate_Google` is signed in and `API_BASE_URL` defaults to it. The dev build uses RevenueCat's Test Store (`test_` keys in `.env.local`), not the simulated store, and its test plans lapse quickly, so tap Renew and Test Valid Purchase if the Exercises tab is locked.
 - **Gesture config in tests:** `getByGestureTestId` returns the gesture from the first render, so it can't show later changes. Test the marker and the board's `placing` prop separately, then check on a device.
 - **MariaDB and `mysql-connector-python`:** the connector's default collation is MySQL-only and MariaDB refuses it, so always set `collation` (`coachmate_api/config.py`).
 - **Database locking:** connections use `READ COMMITTED` (`coachmate_api/db.py`). At MariaDB's default level, parallel saves of new exercises deadlocked and up to 10% failed with a 503. Keep `tests/test_concurrency.py` passing when changing writes, as ordinary tests run one request at a time and can't see this.
@@ -115,11 +123,13 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
 1. **Remaining device checks:**
     - iOS: placing beside a marker, dragging, and the other board checks, which were only run on Android. These need testing by hand.
     - Floorball and basketball.
+    - Curved arrows: iOS, and the feel of a real finger on Android.
     - Dark mode: the puck in the toolbar, the bandy board and the editor form.
 2. **Backend:**
     - Check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit. The check blocks your IP from asking for codes for up to an hour and needs a phone on mobile data, so it hasn't been run.
     - Add `scripts/backup_db.sh` to cron on the server before real coaches save anything, if that isn't done yet.
     - Clear test data from the live database before launch. Nothing there is real yet: it holds users and exercises from the live server check and `CoachMate_Dev`. To remove the check's leftovers but keep the emulator's user, delete exercise `d09005cf-7bcd-4504-9725-2396f07547be`, then rows in `api_tokens` and `users` whose user owns no exercises. Removing exercises in `CoachMate_Dev`'s account as well means it won't send them again, because of the `exercise-sync:` keys.
+    - Deploy the curve validation (`bend`, `waves`). Until then the live server drops them from uploads, and `exercise-sync:` keys stop unchanged exercises being re-sent, so curved exercises uploaded before the deploy stay straight there until edited. Test exercise "Slalom" (`2635589d-7070-4f78-a593-bfb0def5f4cd`) is on the live server from the curve check.
     - Add ratings and average ratings, then filtering and sorting by rating in `GET /exercises`.
     - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option. Browsing others' exercises waits for the exercise library decision.
     - Titles sort with `å`, `ä` and `ö` among `a` and `o` on the server, unlike Swedish sorting in the app.
@@ -144,6 +154,7 @@ Later:
 ## Found during device checks, not fixed
 
 - **Screen readers on the board:** tools, buttons and labellable players are now announced as buttons, with translated tool names. Placing and dragging markers still needs touches on the court, so a screen reader user can't build a diagram. Nothing has been tried with VoiceOver or TalkBack themselves, only the accessibility tree.
+- **Arrow ends over cones:** an arrow end now takes the touch over a cone beneath it, so that cone is only draggable from around the end's touch area. The curve dot does the same.
 - **Overlapping markers:** where touch areas overlap, the marker placed last takes the drag, even if you touch the centre of the one beneath it.
 
 ## Open decisions for Christian

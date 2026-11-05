@@ -94,6 +94,38 @@ describe('parseExercise', () => {
     expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
   });
 
+  it.each([
+    ['a bend without waves', { bend: 0.1 }],
+    ['waves without a bend', { waves: 2 }],
+    ['a bend that is not a number', { bend: 'wide', waves: 2 }],
+    ['a zero bend', { bend: 0, waves: 2 }],
+    ['a bend beyond the limit', { bend: 0.6, waves: 2 }],
+    ['a fractional wave count', { bend: 0.1, waves: 1.5 }],
+    ['no waves', { bend: 0.1, waves: 0 }],
+    ['too many waves', { bend: 0.1, waves: 9 }],
+  ])('rejects an arrow with %s', (_name, curve) => {
+    const marker = { id: 'a', type: 'arrow-solid', x: 0, y: 0, endX: 1, endY: 1, ...curve };
+
+    expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
+  });
+
+  it('keeps an arrow curve in either direction', () => {
+    const arrow = { id: 'a', type: 'arrow-dashed', x: 0, y: 0, endX: 1, endY: 1, bend: -0.1, waves: 3 };
+
+    expect(parseExercise(withMarker(arrow)).frames[0].markers[0]).toEqual(arrow);
+  });
+
+  it('ignores a curve on anything but an arrow', () => {
+    const cone = { id: 'a', type: 'cone', x: 0, y: 0, bend: 0.1, waves: 3 };
+
+    expect(parseExercise(withMarker(cone)).frames[0].markers[0]).toEqual({
+      id: 'a',
+      type: 'cone',
+      x: 0,
+      y: 0,
+    });
+  });
+
   it('keeps a marker label', () => {
     const marker = { id: 'a', type: 'player', x: 0.5, y: 0.5, label: '10' };
 

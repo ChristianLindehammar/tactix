@@ -7,7 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { DraggableMarker } from '../DraggableMarker';
 import { TacticsBoard } from '../TacticsBoard';
 import { SportProvider } from '@/context/SportContext';
-import { createTacticsMarker, TacticsMarker } from '@/types/tacticsMarker';
+import { createArrowMarker, createTacticsMarker, TacticsMarker } from '@/types/tacticsMarker';
 
 // A soccer court is 549:800, so this container fits a court of about 200 x 291.45
 const COURT = { width: 200, height: 400 };
@@ -180,6 +180,61 @@ describe('TacticsBoard', () => {
       tapCourt(100, 100);
 
       expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe(type);
+    });
+  });
+
+  describe('curving arrows', () => {
+    const arrow = createArrowMarker('arrow-solid', 0.2, 0.2, 0.8, 0.8);
+    const handle = `arrow-curve-handle-${arrow.id}`;
+
+    it('offers a curve handle on each arrow when turned on', async () => {
+      await renderBoard({ value: [arrow], enableCurves: true });
+
+      expect(screen.getByTestId(handle)).toBeTruthy();
+    });
+
+    it('stays off unless asked for', async () => {
+      await renderBoard({ value: [arrow] });
+
+      expect(screen.queryByTestId(handle)).toBeNull();
+    });
+
+    it('has no handle on a read-only diagram', async () => {
+      await renderBoard({ value: [arrow], enableCurves: true, readOnly: true });
+
+      expect(screen.queryByTestId(handle)).toBeNull();
+    });
+
+    it('moves the handle out of the way while placing a marker', async () => {
+      await renderBoard({
+        value: [arrow],
+        enableCurves: true,
+        allowedMarkerTypes: ['cone'],
+      });
+
+      fireEvent.press(screen.getByLabelText('Cone'));
+
+      expect(screen.queryByTestId(handle)).toBeNull();
+    });
+
+    it('has no handle on an arrow too short to grab its ends around it', async () => {
+      const short = createArrowMarker('arrow-solid', 0.5, 0.5, 0.52, 0.5);
+
+      await renderBoard({ value: [short], enableCurves: true });
+
+      expect(screen.queryByTestId(`arrow-curve-handle-${short.id}`)).toBeNull();
+    });
+
+    it('explains the handle once there is an arrow to curve', async () => {
+      await renderBoard({ value: [arrow], enableCurves: true, showToolHints: true });
+
+      expect(screen.getByText("Drag an arrow's middle dot to curve it")).toBeTruthy();
+    });
+
+    it('does not explain the handle without an arrow', async () => {
+      await renderBoard({ enableCurves: true, showToolHints: true });
+
+      expect(screen.queryByText("Drag an arrow's middle dot to curve it")).toBeNull();
     });
   });
 

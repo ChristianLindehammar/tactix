@@ -13,6 +13,8 @@ FOCUS_TAGS = {
 }
 MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'coach', 'goal'}
 ARROW_TYPES = {'arrow-solid', 'arrow-dashed'}
+MAX_ARROW_BEND = 0.5
+MAX_ARROW_WAVES = 8
 
 MAX_TITLE_LENGTH = 200
 MAX_LOCALE_LENGTH = 16
@@ -66,6 +68,17 @@ def parse_date(value):
     return parsed.astimezone(timezone.utc).replace(tzinfo=None)
 
 
+def _is_arrow_curve(bend, waves):
+    return (
+        _is_coordinate(bend)
+        and bend != 0
+        and abs(bend) <= MAX_ARROW_BEND
+        and isinstance(waves, int)
+        and not isinstance(waves, bool)
+        and 1 <= waves <= MAX_ARROW_WAVES
+    )
+
+
 def _parse_marker(data):
     if (
         not isinstance(data, dict)
@@ -83,7 +96,12 @@ def _parse_marker(data):
         return marker
     if not _is_coordinate(data.get('endX')) or not _is_coordinate(data.get('endY')):
         raise ExerciseParseError('invalidMarker')
-    return {**marker, 'endX': data['endX'], 'endY': data['endY']}
+    arrow = {**marker, 'endX': data['endX'], 'endY': data['endY']}
+    if 'bend' not in data and 'waves' not in data:
+        return arrow
+    if not _is_arrow_curve(data.get('bend'), data.get('waves')):
+        raise ExerciseParseError('invalidMarker')
+    return {**arrow, 'bend': data['bend'], 'waves': data['waves']}
 
 
 def _parse_frame(data):

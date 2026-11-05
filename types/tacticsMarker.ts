@@ -1,5 +1,7 @@
 import { randomUUID } from 'expo-crypto';
 
+import type { ArrowCurve } from '@/utils/arrowCurve';
+
 export const TACTICS_MARKER_TYPES = [
   'player',
   'opponent',
@@ -20,6 +22,10 @@ export interface TacticsMarker {
   y: number;
   endX?: number;
   endY?: number;
+  /** Arrows only, with waves: how far each hump reaches sideways, as a share of the court width. */
+  bend?: number;
+  /** Arrows only, with bend: how many humps the arrow has, alternating sides. */
+  waves?: number;
   /** Short text shown on a player or opponent, such as a shirt number. */
   label?: string;
 }
@@ -48,6 +54,12 @@ export function createArrowMarker(
     endX,
     endY,
   };
+}
+
+/** The arrow with this curve, or with no curve fields at all when it's straight. */
+export function withArrowCurve(marker: TacticsMarker, curve: ArrowCurve | undefined): TacticsMarker {
+  const { bend: _bend, waves: _waves, ...straight } = marker;
+  return curve ? { ...straight, ...curve } : straight;
 }
 
 const COURT_CENTER_X = 0.5;

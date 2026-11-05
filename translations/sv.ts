@@ -148,6 +148,8 @@ export default {
   // Exercises
   markerLabel: 'Etikett (högst 3 tecken)',
   placeMarkerHint: '{{name}}: tryck på planen för att placera',
+  curveArrowHint: 'Dra i pilens mittpunkt för att böja den',
+  curveArrowDragHint: 'Mot starten för fler vågor',
   markerNames: {
     player: 'Spelare',
     opponent: 'Motståndare',

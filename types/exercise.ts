@@ -1,5 +1,6 @@
 import { Sport, sportsConfig } from '@/constants/sports';
 import { TACTICS_MARKER_TYPES, TacticsMarker } from '@/types/tacticsMarker';
+import { MAX_BEND, MAX_WAVES } from '@/utils/arrowCurve';
 
 export const EXERCISE_SCHEMA_VERSION = 1;
 
@@ -131,6 +132,12 @@ const fail = (code: ExerciseParseErrorCode): never => {
   throw new ExerciseParseError(code);
 };
 
+const isBend = (value: unknown): value is number =>
+  typeof value === 'number' && value !== 0 && Math.abs(value) <= MAX_BEND;
+
+const isWaveCount = (value: unknown): value is number =>
+  typeof value === 'number' && Number.isInteger(value) && value >= 1 && value <= MAX_WAVES;
+
 // Positions are not range-checked: a marker can be dragged slightly off the court
 function parseMarker(data: unknown): TacticsMarker {
   if (
@@ -150,7 +157,11 @@ function parseMarker(data: unknown): TacticsMarker {
   if (data.type !== 'arrow-solid' && data.type !== 'arrow-dashed') return marker;
 
   if (!isCoordinate(data.endX) || !isCoordinate(data.endY)) return fail('invalidMarker');
-  return { ...marker, endX: data.endX, endY: data.endY };
+  const arrow: TacticsMarker = { ...marker, endX: data.endX, endY: data.endY };
+  if (data.bend === undefined && data.waves === undefined) return arrow;
+
+  if (!isBend(data.bend) || !isWaveCount(data.waves)) return fail('invalidMarker');
+  return { ...arrow, bend: data.bend, waves: data.waves };
 }
 
 function parseFrame(data: unknown): ExerciseFrame {

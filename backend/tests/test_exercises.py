@@ -28,7 +28,7 @@ def build_exercise(**overrides):
                 'note': 'Start',
                 'markers': [
                     {'id': 'a', 'type': 'player', 'x': 0.25, 'y': 0.5, 'label': '10'},
-                    {'id': 'b', 'type': 'arrow-solid', 'x': 1.02, 'y': -0.01, 'endX': 0.5, 'endY': 0.75},
+                    {'id': 'b', 'type': 'arrow-solid', 'x': 1.02, 'y': -0.01, 'endX': 0.5, 'endY': 0.75, 'bend': -0.1, 'waves': 3},
                 ],
             }
         ],
@@ -171,6 +171,21 @@ class TestValidation:
             ({'frames': [{'id': 'f'}]}, 'invalidFrames'),
             ({'frames': [{'id': 'f', 'markers': [{'id': 'a', 'type': 'dragon', 'x': 0, 'y': 0}]}]}, 'invalidMarker'),
             ({'frames': [{'id': 'f', 'markers': [{'id': 'a', 'type': 'arrow-solid', 'x': 0, 'y': 0}]}]}, 'invalidMarker'),
+            *(
+                ({'frames': [{'id': 'f', 'markers': [{'id': 'a', 'type': 'arrow-solid', 'x': 0, 'y': 0, 'endX': 1, 'endY': 1, **curve}]}]}, 'invalidMarker')
+                for curve in (
+                    {'bend': 0.1},
+                    {'waves': 2},
+                    {'bend': 'wide', 'waves': 2},
+                    {'bend': True, 'waves': 2},
+                    {'bend': 0, 'waves': 2},
+                    {'bend': 0.6, 'waves': 2},
+                    {'bend': 0.1, 'waves': 1.5},
+                    {'bend': 0.1, 'waves': True},
+                    {'bend': 0.1, 'waves': 0},
+                    {'bend': 0.1, 'waves': 9},
+                )
+            ),
             ({'createdAt': 'yesterday'}, 'invalidDate'),
             ({'updatedAt': '2026-11-03T10:00:00'}, 'invalidDate'),
             ({'deletedAt': 'soon'}, 'invalidDate'),

@@ -328,6 +328,7 @@ export default function ExerciseEditorScreen() {
             allowedMarkerTypes={[...TACTICS_MARKER_TYPES]}
             showToolHints
             enableLabels
+            enableCurves
           />
           <Pressable
             onPress={() => setDiagramOpen(false)}

@@ -148,6 +148,8 @@ export default {
   // Exercises
   markerLabel: 'Tunniste (enintään 3 merkkiä)',
   placeMarkerHint: '{{name}}: sijoita napauttamalla kenttää',
+  curveArrowHint: 'Taivuta nuolta vetämällä sen keskipistettä',
+  curveArrowDragHint: 'Kohti alkua saat lisää aaltoja',
   markerNames: {
     player: 'Pelaaja',
     opponent: 'Vastustaja',

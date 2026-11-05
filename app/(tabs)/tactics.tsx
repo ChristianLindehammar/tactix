@@ -174,6 +174,7 @@ export default function TacticsScreen() {
         sport={selectedSport}
         value={markers}
         onChange={setMarkers}
+        enableCurves
         bottomInset={Platform.OS === 'ios' ? tabBarHeight : 0}
         firstToolRef={playerBtnRef}
         onCourtSizeChange={setCourtSize}
