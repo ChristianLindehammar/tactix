@@ -40,7 +40,8 @@ const unavailableStore: PlanStore = {
 };
 
 const chooseStore = () => {
-  if (API_KEY) return createRevenueCatPlanStore(API_KEY);
+  // RevenueCat's test keys must never reach the app stores
+  if (API_KEY && (__DEV__ || !API_KEY.startsWith('test_'))) return createRevenueCatPlanStore(API_KEY);
   return __DEV__ ? createDevPlanStore() : unavailableStore;
 };
 
