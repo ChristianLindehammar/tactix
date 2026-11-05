@@ -42,6 +42,7 @@
         "LSSupportsOpeningDocumentsInPlace": true
       },
       "bundleIdentifier": "com.lindehammar-konsult.coachmate",
+      "usesAppleSignIn": true,
       "appleTeamId": "4H4Q7SQF95"
     },
     "android": {
@@ -117,7 +118,14 @@
       "expo-web-browser",
       "expo-sharing",
       "expo-status-bar",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-apple-authentication",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.949912506031-dfhrh88vbms4jhgsja4kpob34ojb1tap"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

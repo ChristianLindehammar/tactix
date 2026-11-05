@@ -244,6 +244,8 @@ export default {
   // Account
   account: 'Account',
   accountExplanation: 'Sign in to keep your exercises safe and reach them on your other devices. The app works without an account.',
+  accountContinueWithApple: 'Continue with Apple',
+  accountContinueWithGoogle: 'Continue with Google',
   accountEmail: 'Email address',
   accountSendCode: 'Send code',
   accountCode: '6-digit code',

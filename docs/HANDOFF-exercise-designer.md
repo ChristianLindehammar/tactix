@@ -21,7 +21,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
 | Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, committed in `56dfa1f`, **not deployed**. Off in release builds |
-| Apple and Google sign-in | Backend done and tested with locally signed tokens. App buttons not started: they need client IDs from Christian |
+| Apple and Google sign-in | Built. Google checked on Android (`CoachMate_Google` emulator) against the live server, and the chooser appears after signing out. Christian reports sign-in working on his iPhone. Apple and Google on iOS, and cancelling on both platforms, still need confirming |
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
@@ -64,12 +64,14 @@ Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` report
 - **Local data and accounts:** signing in moves exercises and ratings from the local ID to the account and queues them for upload. Signing out keeps them on the device, read-only until that coach signs back in, so a second coach on the same phone can't take them over. Deleting an account removes it and its exercises from the server, and the device's copies become editable local work again.
 
 - **Upload only, for now:** the device stays the source of truth, and saving never waits for the network. Chosen by Christian on 2026-11-05. Downloading and conflict rules are still to come, so a coach signing in on a second device sees nothing from the first yet. Exercises upload after each save or delete, at launch and when the app returns to the foreground. An `exercise-sync:<id>` key holds the `updatedAt` the server last answered for. Exercises deleted before they ever uploaded are never sent. Others' exercises aren't sent either.
-- **Upload stays off in release builds:** `EXERCISE_SYNC_ENABLED` in `constants/api.ts` is `__DEV__`, because `privacy-policy.html` promises that all data stays on the device. Chosen by Christian on 2026-11-05. Before turning it on, update the policy and the store privacy forms. They also need to say that deleted exercises stay on the server, because deletes are soft.
+- **Upload stays off in release builds:** `EXERCISE_SYNC_ENABLED` in `constants/api.ts` is `__DEV__`, chosen by Christian on 2026-11-05. `privacy-policy.html` was rewritten and published on 2026-11-05 and covers accounts, upload and RevenueCat. Before turning it on, update the App Store and Google Play privacy forms to match, including that deleted exercises stay on the server, because deletes are soft.
 
 ## Traps that already cost time
 
 - **Keep `usePreventRemove` armed when leaving the editor.** Turning it off in the same batch as `router.back()` crashes Android with `ScreenStackFragment added into a non-stack container`. The callback lets the exit through instead (`saved` ref in `edit.tsx`). Jest can't see this crash because navigation is faked, so check navigation changes on a device.
 - **Android builds fail under the default `JAVA_HOME`,** which points at JDK 25 (`react-native-worklets:configureCMakeDebug` fails). Use `export JAVA_HOME=/opt/homebrew/opt/openjdk@17`.
+- **Google sign-in needs Google Play services.** `CoachMate_Dev` has none, so use `CoachMate_Google`. Start it with `-gpu host`, as its window stayed gray with the default software graphics.
+- **`COCOAPODS_CDN_MAX_NUMBER_OF_RETRIES=40`** gets `pod install` past `Error in the HTTP2 framing layer` from the CDN.
 - **Don't uninstall the app from `Pixel_6_API_33`.** It holds a differently signed 1.4.0 build, and removing it would wipe that app's data. Use `CoachMate_Dev`, created for this work. `Spike_API33` is an automotive image and not useful.
 - **Don't range-check marker coordinates.** Dragging doesn't clamp, so markers can legitimately sit slightly off-court.
 - **Scripted drags:** `adb input motionevent` is slow enough to pass the 500ms long-press and open the Delete dialog. Use `adb shell input draganddrop` instead.
@@ -127,7 +129,9 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - `backend/coachmate_api/validation.py` repeats the rules in `types/exercise.ts`, so change both together.
 3. **Finish sign-in:**
     - Deploy the backend: install the new requirements, run `scripts/migrate.py`, and add the mail and client ID settings from `.env.example`. The app has to be updated with it, as `POST /devices` is gone.
-    - Add Apple and Google buttons in the app and on web. Google on phones has no nonce with the free library, so its tokens rely on signature, audience and expiry. Deleting an Apple account should also revoke its Apple token, which isn't built.
+    - Add Apple and Google buttons on web. The app has them: Apple on iOS only, Google on iOS and Android (`services/signInProviders.ts`, `constants/signIn.ts`). Google on phones has no nonce with the free library, so its tokens rely on signature, audience and expiry.
+    - Before release: add Google Android clients for the upload key and Play signing key, as the current one only matches the debug SHA-1. Build Apple token revocation on account deletion, which needs a Sign In with Apple `.p8` key on the server. Consider Apple's server-to-server notifications, as no endpoint exists yet.
+    - **RevenueCat pods on iOS:** `react-native-purchases` 11.x needs `PurchasesHybridCommon` versions that aren't on CocoaPods trunk because of a freeze from November 1 to 7, 2026. The iPhone build used a local edit to the git-ignored `ios/Podfile`, pointing `RevenueCat` 5.101.0 and `PurchasesHybridCommon` 20.4.0 at their GitHub podspecs, and `prebuild --clean` will lose it. Store builds need the published pods or a move back to 10.x, which RevenueCat advises for Expo. Trunk goes read-only on December 2, 2026.
     - Check on iOS, and check real mail delivery and spam filtering.
     - Downloading, so a second device or the web app can see a coach's exercises.
     - Review the Swedish and Finnish account texts and the code emails.

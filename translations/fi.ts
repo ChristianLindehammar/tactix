@@ -244,6 +244,8 @@ export default {
   // Account
   account: 'Tili',
   accountExplanation: 'Kirjaudu sisään, niin harjoituksesi pysyvät tallessa ja saat ne käyttöön muilla laitteillasi. Sovellus toimii ilman tiliä.',
+  accountContinueWithApple: 'Jatka Apple-tilillä',
+  accountContinueWithGoogle: 'Jatka Google-tilillä',
   accountEmail: 'Sähköpostiosoite',
   accountSendCode: 'Lähetä koodi',
   accountCode: '6-numeroinen koodi',

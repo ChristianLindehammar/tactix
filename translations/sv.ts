@@ -244,6 +244,8 @@ export default {
   // Account
   account: 'Konto',
   accountExplanation: 'Logga in för att ha dina övningar i säkerhet och nå dem på dina andra enheter. Appen fungerar utan konto.',
+  accountContinueWithApple: 'Fortsätt med Apple',
+  accountContinueWithGoogle: 'Fortsätt med Google',
   accountEmail: 'E-postadress',
   accountSendCode: 'Skicka kod',
   accountCode: '6-siffrig kod',

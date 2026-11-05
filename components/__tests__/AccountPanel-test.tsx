@@ -5,16 +5,17 @@ import * as React from 'react';
 import { AccountPanel } from '@/components/AccountPanel';
 import { createAuthSession } from '@/services/authSession';
 import { createUserIdentity } from '@/services/currentUser';
+import type { SignInProvider } from '@/services/signInProviders';
 import i18n from '@/translations/i18n';
 
 const json = (status: number, body: unknown = {}) =>
   new Response(status === 204 ? null : JSON.stringify(body), { status });
 
-const setup = () => {
+const setup = (providers: SignInProvider[] = []) => {
   const fetch = jest.fn(async (url: string, _init?: RequestInit) =>
     url.endsWith('/auth/email/start')
       ? json(202)
-      : url.endsWith('/auth/email/verify')
+      : url.endsWith('/auth/email/verify') || url.endsWith('/auth/provider')
         ? json(200, { userId: 'account-1', email: 'coach@example.com', token: 'secret' })
         : json(204),
   );
@@ -30,7 +31,7 @@ const setup = () => {
       clear: async () => void (token = null),
     },
   });
-  render(<AccountPanel session={session} />);
+  render(<AccountPanel session={session} providers={providers} />);
   return { session, fetch };
 };
 
@@ -178,4 +179,33 @@ describe('deleting the account', () => {
     expect(await screen.findByText(t('accountErrorUnavailable'))).toBeTruthy();
     expect(screen.getByRole('button', { name: t('accountSignOut') })).toBeTruthy();
   });
+});
+
+test('a coach signs in with Google, and the server gets the token', async () => {
+  const { fetch } = setup([{ id: 'google', signIn: async () => ({ idToken: 'google-token', nonce: null }) }]);
+
+  fireEvent.press(screen.getByRole('button', { name: t('accountContinueWithGoogle') }));
+
+  await screen.findByRole('button', { name: t('accountSignOut') });
+  const call = fetch.mock.calls.find(([url]) => url.endsWith('/auth/provider'))!;
+  expect(JSON.parse(call[1]!.body as string)).toEqual({ provider: 'google', idToken: 'google-token', nonce: null });
+});
+
+test('backing out of a provider sign-in is not an error', async () => {
+  const { fetch } = setup([{ id: 'apple', signIn: async () => null }]);
+
+  fireEvent.press(screen.getByRole('button', { name: t('accountContinueWithApple') }));
+
+  await waitFor(() => expect(screen.getByRole('button', { name: t('accountContinueWithApple') })).toBeEnabled());
+  expect(screen.queryByRole('alert')).toBeNull();
+  expect(fetch).not.toHaveBeenCalled();
+});
+
+test('a provider that fails shows an error and leaves the coach signed out', async () => {
+  const { session } = setup([{ id: 'google', signIn: () => Promise.reject(new Error('Play services missing')) }]);
+
+  fireEvent.press(screen.getByRole('button', { name: t('accountContinueWithGoogle') }));
+
+  expect(await screen.findByRole('alert')).toBeTruthy();
+  expect(session.getState().status).toBe('signedOut');
 });

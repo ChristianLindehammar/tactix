@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { ActivityIndicator, StyleSheet, TextInput, View } from 'react-native';
 
+import { ProviderSignInButton } from '@/components/ProviderSignInButton';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { AuthError, AuthErrorCode, AuthSession } from '@/services/authSession';
+import type { SignInProvider } from '@/services/signInProviders';
 
 const ERROR_KEYS: Record<AuthErrorCode, string> = {
   invalidEmail: 'accountErrorInvalidEmail',
@@ -16,7 +18,7 @@ const ERROR_KEYS: Record<AuthErrorCode, string> = {
   unavailable: 'accountErrorUnavailable',
 };
 
-export function AccountPanel({ session }: { session: AuthSession }) {
+export function AccountPanel({ session, providers }: { session: AuthSession; providers: SignInProvider[] }) {
   const { t, getCurrentLocale } = useTranslation();
   const state = React.useSyncExternalStore(session.subscribe, session.getState);
   const textColor = useThemeColor({}, 'text') as string;
@@ -135,6 +137,19 @@ export function AccountPanel({ session }: { session: AuthSession }) {
   return (
     <View style={styles.container}>
       <ThemedText>{t('accountExplanation')}</ThemedText>
+      {providers.map(provider => (
+        <ProviderSignInButton
+          key={provider.id}
+          id={provider.id}
+          disabled={busy}
+          onPress={() => attempt(async () => {
+            const token = await provider.signIn();
+            if (!token) return;
+            await session.signInWithProvider(provider.id, token.idToken, token.nonce);
+            reset();
+          })}
+        />
+      ))}
       <TextInput
         accessibilityLabel={t('accountEmail')}
         placeholder={t('accountEmail')}
