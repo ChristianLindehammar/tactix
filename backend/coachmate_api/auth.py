@@ -1,39 +1,44 @@
-"""Anonymous per-install identity. Only a hash of each token is stored."""
+"""Sessions. Only a hash of each token is stored."""
 import hashlib
-import secrets
-import uuid
-from datetime import datetime, timezone
 from functools import wraps
 
-from flask import Blueprint, g, jsonify, request
+from flask import g, jsonify, request
 
-from .db import get_db, query_one
-from .rate_limit import client_address, rate_limited
+from .db import query_one
 
-bp = Blueprint('auth', __name__)
+SESSION_COOKIE = 'coachmate_session'
+SESSION_COOKIE_DAYS = 90
+WEB_CLIENT_HEADER = 'X-CoachMate-Client'
 
 
-def _hash(token):
+def hash_token(token):
     return hashlib.sha256(token.encode('utf-8')).hexdigest()
 
 
-@bp.post('/devices')
-@rate_limited('devices', client_address)
-def register_device():
-    user_id = str(uuid.uuid4())
-    token = secrets.token_urlsafe(32)
-    now = datetime.now(timezone.utc).replace(tzinfo=None)
+def presented_token():
+    """The session token this request carries, or None. Apps send a header. The web app has a
+    cookie, which browsers attach by themselves, so changes must also carry a header that another
+    site's page can't add."""
+    scheme, _, token = request.headers.get('Authorization', '').partition(' ')
+    if scheme == 'Bearer' and token:
+        return token
+    cookie = request.cookies.get(SESSION_COOKIE)
+    if not cookie:
+        return None
+    if request.method not in ('GET', 'HEAD') and request.headers.get(WEB_CLIENT_HEADER) != 'web':
+        return None
+    return cookie
 
-    connection = get_db()
-    cursor = connection.cursor()
-    cursor.execute('INSERT INTO users (id, created_at) VALUES (%s, %s)', (user_id, now))
-    cursor.execute(
-        'INSERT INTO api_tokens (token_hash, user_id, created_at) VALUES (%s, %s, %s)',
-        (_hash(token), user_id, now),
+
+def set_session_cookie(response, token):
+    response.set_cookie(
+        SESSION_COOKIE, token, max_age=SESSION_COOKIE_DAYS * 86400,
+        path=request.script_root or '/', secure=True, httponly=True, samesite='Strict',
     )
-    connection.commit()
-    cursor.close()
-    return jsonify({'userId': user_id, 'token': token}), 201
+
+
+def clear_session_cookie(response):
+    response.delete_cookie(SESSION_COOKIE, path=request.script_root or '/', secure=True, httponly=True, samesite='Strict')
 
 
 def require_user(view):
@@ -41,12 +46,12 @@ def require_user(view):
 
     @wraps(view)
     def wrapper(*args, **kwargs):
-        scheme, _, token = request.headers.get('Authorization', '').partition(' ')
+        token = presented_token()
         row = None
-        if scheme == 'Bearer' and token:
+        if token:
             row = query_one(
                 'SELECT user_id FROM api_tokens WHERE token_hash = %s AND revoked_at IS NULL',
-                (_hash(token),),
+                (hash_token(token),),
             )
         if row is None:
             return jsonify({'error': 'unauthorized'}), 401

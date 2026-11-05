@@ -6,7 +6,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from coachmate_api import create_app
-from coachmate_api.config import db_config_from_env
+from coachmate_api.config import db_config_from_env, provider_audiences_from_env
+from coachmate_api.mail import smtp_sender_from_env
+from coachmate_api.provider_tokens import ProviderTokenVerifier, real_signing_keys
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / '.env')
@@ -21,7 +23,11 @@ logger.setLevel(logging.INFO)
 logger.addHandler(handler)
 logger.propagate = False
 
-app = create_app(db_config_from_env())
+app = create_app(
+    db_config_from_env(),
+    send_sign_in_code=smtp_sender_from_env(),
+    provider_verifier=ProviderTokenVerifier(provider_audiences_from_env(), real_signing_keys()),
+)
 
 if __name__ == '__main__':
     app.run(port=5000)

@@ -1,4 +1,5 @@
 import os
+import uuid
 
 import mysql.connector
 import pytest
@@ -49,16 +50,20 @@ def rows(db_config):
 
 @pytest.fixture()
 def client(db_config):
-    return create_app(db_config).test_client()
+    return create_app(db_config, send_sign_in_code=lambda *_: None).test_client()
 
 
 @pytest.fixture()
-def register(client):
-    """Registers a new install and returns the headers that identify it."""
+def register(client, db_config):
+    """Creates a signed-in coach and returns the headers that identify them."""
 
     def _register():
-        response = client.post('/devices')
-        assert response.status_code == 201
+        codes = []
+        api = create_app(db_config, send_sign_in_code=lambda _email, code, _locale: codes.append(code)).test_client()
+        email = f'{uuid.uuid4()}@example.com'
+        assert api.post('/auth/email/start', json={'email': email}).status_code == 202
+        response = api.post('/auth/email/verify', json={'email': email, 'code': codes[-1]})
+        assert response.status_code == 200
         return {'Authorization': f"Bearer {response.get_json()['token']}"}
 
     return _register

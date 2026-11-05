@@ -1,5 +1,4 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as SecureStore from 'expo-secure-store';
 
 import { createLocalExerciseRepository, createSyncedExerciseRepository } from '../exerciseRepository';
 import { createExerciseSync } from '../exerciseSync';
@@ -19,7 +18,14 @@ describe('synced exercise repository', () => {
   const build = () =>
     createSyncedExerciseRepository(
       local,
-      createExerciseSync({ baseUrl: BASE, fetch, local, getCurrentUserId }),
+      createExerciseSync({
+        baseUrl: BASE,
+        fetch,
+        local,
+        getCurrentUserId,
+        getAuthHeaders: async () => ({ Authorization: 'Bearer token' }),
+        onSessionRejected: () => undefined,
+      }),
     );
 
   const uploads = () =>
@@ -29,12 +35,7 @@ describe('synced exercise repository', () => {
 
   beforeEach(async () => {
     await AsyncStorage.clear();
-    await SecureStore.deleteItemAsync('apiDevice');
-    fetch = jest.fn(async (url: string) =>
-      url.endsWith('/devices')
-        ? new Response(JSON.stringify({ userId: 'server', token: 'token' }), { status: 201 })
-        : new Response('{}', { status: 200 }),
-    );
+    fetch = jest.fn(async () => new Response('{}', { status: 200 }));
   });
 
   it('uploads a saved exercise in the background', async () => {
@@ -52,11 +53,8 @@ describe('synced exercise repository', () => {
     await settle();
     expect(await repository.get('exercise-1')).toEqual(exercise());
 
-    fetch.mockImplementation(async (url: string) =>
-      url.endsWith('/devices')
-        ? new Response(JSON.stringify({ userId: 'server', token: 'token' }), { status: 201 })
-        : new Response('{}', { status: 200 }),
-    );
+    fetch.mockClear();
+    fetch.mockImplementation(async () => new Response('{}', { status: 200 }));
     await repository.save(exercise({ id: 'other' }));
     await settle();
 

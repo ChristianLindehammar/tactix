@@ -12,3 +12,12 @@ def db_config_from_env():
         # The connector's default collation is MySQL-only, and MariaDB refuses it
         'collation': 'utf8mb4_unicode_ci',
     }
+
+
+def _list_from_env(name):
+    return [value.strip() for value in os.getenv(name, '').split(',') if value.strip()]
+
+
+def provider_audiences_from_env():
+    """Which apps' tokens we accept. A provider with none set can't be used to sign in."""
+    return {'google': _list_from_env('GOOGLE_CLIENT_IDS'), 'apple': _list_from_env('APPLE_CLIENT_IDS')}

@@ -11,7 +11,7 @@ import { SportProvider } from '@/context/SportContext';
 import { AppState, View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { syncExercises } from '@/services/exerciseRepository';
+import { startAccountAndSync, syncExercises } from '@/services/exerciseRepository';
 
 // Prevent auto-hide of splash screen
 SplashScreen.preventAutoHideAsync();
@@ -23,7 +23,7 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    void syncExercises();
+    void startAccountAndSync();
     const subscription = AppState.addEventListener('change', state => {
       if (state === 'active') void syncExercises();
     });

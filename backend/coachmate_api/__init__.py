@@ -4,7 +4,7 @@ import time
 import mysql.connector
 from flask import Flask, jsonify
 
-from . import auth, exercises
+from . import accounts, exercises
 from .db import close_db, query_one
 from .rate_limit import DEFAULT_LIMITS
 
@@ -13,14 +13,16 @@ logger = logging.getLogger('coachmate')
 MAX_REQUEST_BYTES = 1024 * 1024
 
 
-def create_app(db_config, limits=None, clock=time.time):
+def create_app(db_config, limits=None, clock=time.time, send_sign_in_code=None, provider_verifier=None):
     app = Flask(__name__)
     app.config['DB'] = db_config
     app.config['MAX_CONTENT_LENGTH'] = MAX_REQUEST_BYTES
     app.config['RATE_LIMITS'] = limits or DEFAULT_LIMITS
     app.config['CLOCK'] = clock
+    app.config['SEND_SIGN_IN_CODE'] = send_sign_in_code
+    app.config['PROVIDER_VERIFIER'] = provider_verifier
     app.teardown_appcontext(close_db)
-    app.register_blueprint(auth.bp)
+    app.register_blueprint(accounts.bp)
     app.register_blueprint(exercises.bp)
 
     @app.get('/health')

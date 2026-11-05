@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { SettingsListItem } from '@/components/SettingsListItem';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { EXERCISE_SYNC_ENABLED } from '@/constants/api';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -35,6 +36,9 @@ export default function SettingsScreen() {
               route="/settings/sport"
               isFirst={true}
             />
+            {EXERCISE_SYNC_ENABLED ? (
+              <SettingsListItem icon="person" title={t('account')} route="/settings/account" />
+            ) : null}
             <SettingsListItem
               icon="info"
               title={t('aboutApp')}

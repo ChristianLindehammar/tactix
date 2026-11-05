@@ -19,9 +19,12 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | RevenueCat and paywall | **Next**; see open decisions |
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
-| Ratings on the server, downloading, sign-in | Not started |
+| Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, **not committed or deployed** when this was written. Off in release builds |
+| Apple and Google sign-in | Backend done and tested with locally signed tokens. App buttons not started: they need client IDs from Christian |
+| Web app | Not started. The backend's cookie session is ready for it |
+| Ratings on the server, downloading | Not started |
 
-Last run: 300 tests in 23 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 334 app tests in 25 suites and 181 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -30,6 +33,7 @@ Last run: 300 tests in 23 suites passing. `tsc` reports errors in older files su
 | Format and validation | `types/exercise.ts` (`parseExercise`, ratings), `types/tacticsMarker.ts` |
 | Storage | `services/exerciseRepository.ts`, `services/exerciseRatings.ts`, `services/currentUser.ts` |
 | Upload | `services/exerciseSync.ts`, `constants/api.ts` |
+| Accounts | `services/authSession.ts`, `services/account.ts`, `services/localAccountData.ts`, `components/AccountPanel.tsx`, `app/(tabs)/settings/account.tsx`, `backend/coachmate_api/accounts.py`, `provider_tokens.py`, `mail.py` |
 | Screens | `app/(tabs)/exercises/` (`index`, `[id]`, `edit`, `_layout`) |
 | Board | `components/TacticsBoard.tsx`, `components/CourtSurface.tsx` |
 | Logic | `utils/exerciseDraft.ts`, `utils/filterExercises.ts`, `utils/cloneExercise.ts`, `utils/describeExercise.ts` |
@@ -51,9 +55,11 @@ Last run: 300 tests in 23 suites passing. `tsc` reports errors in older files su
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
 - **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It runs at `lindehammar-konsult.se/coachmate/api`, leaving `/coachmate/` free for web pages such as the share link fallback, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
-- **Identity on the server:** each install gets an anonymous token from `POST /devices`, and only its hash is stored. The server decides the owner and ignores `ownerId` from the app. Any valid token can read an exercise by ID, because the ID is what a share link carries. A coach who loses their phone loses access until sign-in exists. Christian didn't object when this was proposed, but hasn't explicitly confirmed it.
+- **Sign-in:** Apple, Google and an emailed 6-digit code, chosen by Christian on 2026-11-05. An account is optional, and the app works fully on the device without one. Nothing uploads while signed out, so `POST /devices` and anonymous server users are gone. A verified email joins the account that address already has, whichever way it signed in. Hide My Email addresses therefore make a separate account.
+- **Sessions:** phones keep a token in `expo-secure-store`. The web app gets an HttpOnly cookie, which needs it served from the same origin as the API, such as `/coachmate/`. Only token hashes are stored, and tokens don't expire yet. The server decides the owner and ignores `ownerId` from the app. Any valid session can read an exercise by ID, for share links.
+- **Local data and accounts:** signing in moves exercises and ratings from the local ID to the account and queues them for upload. Signing out keeps them on the device, read-only until that coach signs back in, so a second coach on the same phone can't take them over. Deleting an account removes it and its exercises from the server, and the device's copies become editable local work again.
 
-- **Upload only, for now:** the device stays the source of truth, and saving never waits for the network. Chosen by Christian on 2026-11-05. Each install is its own user, so downloading and conflict rules wait for sign-in. Exercises upload after each save or delete, at launch and when the app returns to the foreground. An `exercise-sync:<id>` key holds the `updatedAt` the server last answered for. Exercises deleted before they ever uploaded are never sent. Others' exercises aren't sent either. The token is in `expo-secure-store`.
+- **Upload only, for now:** the device stays the source of truth, and saving never waits for the network. Chosen by Christian on 2026-11-05. Downloading and conflict rules are still to come, so a coach signing in on a second device sees nothing from the first yet. Exercises upload after each save or delete, at launch and when the app returns to the foreground. An `exercise-sync:<id>` key holds the `updatedAt` the server last answered for. Exercises deleted before they ever uploaded are never sent. Others' exercises aren't sent either.
 - **Upload stays off in release builds:** `EXERCISE_SYNC_ENABLED` in `constants/api.ts` is `__DEV__`, because `privay-policy.html` promises that all data stays on the device. Chosen by Christian on 2026-11-05. Before turning it on, update the policy and the store privacy forms. They also need to say that deleted exercises stay on the server, because deletes are soft.
 
 ## Traps that already cost time
@@ -78,6 +84,7 @@ Last run: 300 tests in 23 suites passing. `tsc` reports errors in older files su
 - **MariaDB and `mysql-connector-python`:** the connector's default collation is MySQL-only and MariaDB refuses it, so always set `collation` (`coachmate_api/config.py`).
 - **Database locking:** connections use `READ COMMITTED` (`coachmate_api/db.py`). At MariaDB's default level, parallel saves of new exercises deadlocked and up to 10% failed with a 503. Keep `tests/test_concurrency.py` passing when changing writes, as ordinary tests run one request at a time and can't see this.
 - **Android tab bar position:** it can shift between launches, so take a screenshot before using fixed tap coordinates.
+- **Testing sign-in without mail:** set `EXPO_PUBLIC_API_BASE_URL=http://10.0.2.2:5001` when starting Metro and run the API locally with a `send_sign_in_code` that writes the code to a file. Cold starts of the dev build are slow, so look at the screen before tapping. Blind taps once landed in Android's settings.
 
 ## Running it
 
@@ -88,7 +95,7 @@ npx expo run:android --device CoachMate_Dev
 npx expo run:ios --device "iPhone 17 Pro"
 
 cd backend && ./scripts/test_db.sh   # second terminal: throwaway MariaDB on port 33306
-cd backend && .venv/bin/pytest       # 106 tests; setup and deployment are in backend/README.md
+cd backend && .venv/bin/pytest       # setup and deployment are in backend/README.md
 ```
 
 `expo-crypto` is a native dependency, so older dev builds need rebuilding. To test another coach's exercise, there's no import yet, so seed one into `catalystLocalStorage` in `databases/RKStorage` using `adb shell run-as com.lindehammarkonsult.coachmate sqlite3`. `CoachMate_Dev` already holds test data, including a seeded `exercise:seed-theirs`.
@@ -104,22 +111,27 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Floorball and basketball.
     - Dark mode: the puck in the toolbar, the bandy board and the editor form.
 2. **Backend:**
-    - Check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit. The check blocks your IP from registering new installs for up to an hour and needs a phone on mobile data, so it hasn't been run.
+    - Check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit. The check blocks your IP from asking for codes for up to an hour and needs a phone on mobile data, so it hasn't been run.
     - Add `scripts/backup_db.sh` to cron on the server before real coaches save anything, if that isn't done yet.
     - Clear test data from the live database before launch. Nothing there is real yet: it holds users and exercises from the live server check and `CoachMate_Dev`. To remove the check's leftovers but keep the emulator's user, delete exercise `d09005cf-7bcd-4504-9725-2396f07547be`, then rows in `api_tokens` and `users` whose user owns no exercises. Removing exercises in `CoachMate_Dev`'s account as well means it won't send them again, because of the `exercise-sync:` keys.
     - Add ratings and average ratings, then filtering and sorting by rating in `GET /exercises`.
     - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option. Browsing others' exercises waits for the exercise library decision.
     - Titles sort with `å`, `ä` and `ö` among `a` and `o` on the server, unlike Swedish sorting in the app.
-    - Upload gaps: if the server stops accepting a token, the app registers again as a new user. Later edits to its older exercises are then refused with a 403 and stay only on the device. Clearing the server's tables has a similar effect, as the `exercise-sync:` keys stop the app sending unchanged exercises again. A 429 wait is only held in memory, and a refused upload only shows as a console warning.
-    - With sign-in or downloading: decide what happens when two devices edit the same exercise, where the last save currently wins, even if it's older. Move local exercises from the local `ownerId` to the server's.
+    - Upload gaps: clearing the server's tables stops unchanged exercises being sent again, because of the `exercise-sync:` keys. A 429 wait is only held in memory, and a refused upload only shows as a console warning.
+    - With downloading: decide what happens when two devices edit the same exercise, where the last save currently wins, even if it's older.
     - Check upload on iOS. It needs a rebuild for `expo-secure-store`.
     - `backend/coachmate_api/validation.py` repeats the rules in `types/exercise.ts`, so change both together.
-3. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
+3. **Finish sign-in:**
+    - Deploy the backend: install the new requirements, run `scripts/migrate.py`, and add the mail and client ID settings from `.env.example`. The app has to be updated with it, as `POST /devices` is gone.
+    - Add Apple and Google buttons in the app and on web. Google on phones has no nonce with the free library, so its tokens rely on signature, audience and expiry. Deleting an Apple account should also revoke its Apple token, which isn't built.
+    - Check on iOS, and check real mail delivery and spam filtering.
+    - Downloading, so a second device or the web app can see a coach's exercises.
+    - Review the Swedish and Finnish account texts and the code emails.
+4. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Sharing exercises by link, once they're in the database.
 - Multi-step drills using `frames`.
-- Sign-in with Apple or Google, moving anonymous exercises to the signed-in user.
 
 ## Found during device checks, not fixed
 

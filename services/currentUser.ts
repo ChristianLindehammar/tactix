@@ -4,8 +4,8 @@ import { randomUUID } from 'expo-crypto';
 const USER_ID_KEY = 'localUserId';
 
 /**
- * Identifies this install until accounts exist. Local exercises are owned by this id,
- * so signing in later can move them to the real user.
+ * Who owns what is created on this device: the account while signed in, otherwise a local id.
+ * Signing in moves the local id's work to the account.
  */
 export function createUserIdentity() {
   let pending: Promise<string> | null = null;
@@ -19,6 +19,11 @@ export function createUserIdentity() {
     return created;
   };
 
+  const setCurrentUserId = async (id: string) => {
+    await AsyncStorage.setItem(USER_ID_KEY, id);
+    pending = Promise.resolve(id);
+  };
+
   return {
     getCurrentUserId: () => {
       pending ??= loadOrCreate().catch(error => {
@@ -27,7 +32,17 @@ export function createUserIdentity() {
       });
       return pending;
     },
+    setCurrentUserId,
+    /** After signing out, new work belongs to nobody's account until the next sign-in. */
+    startNewLocalUser: async () => {
+      const id = randomUUID();
+      await setCurrentUserId(id);
+      return id;
+    },
   };
 }
 
-export const { getCurrentUserId } = createUserIdentity();
+export type UserIdentity = ReturnType<typeof createUserIdentity>;
+
+export const currentUser = createUserIdentity();
+export const { getCurrentUserId } = currentUser;

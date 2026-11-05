@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { API_BASE_URL, EXERCISE_SYNC_ENABLED } from '@/constants/api';
+import { authSession } from '@/services/account';
 import { getCurrentUserId } from '@/services/currentUser';
 import { createExerciseSync, ExerciseSync } from '@/services/exerciseSync';
 import { Exercise, parseExercise } from '@/types/exercise';
@@ -129,7 +130,16 @@ const exerciseSync = createExerciseSync({
   fetch: (...args) => fetch(...args),
   local: localExerciseRepository,
   getCurrentUserId,
+  getAuthHeaders: () => authSession.getAuthHeaders(),
+  onSessionRejected: () => authSession.handleSessionRejected(),
 });
+
+// Signing in has just queued everything for upload
+if (EXERCISE_SYNC_ENABLED) {
+  authSession.subscribe(() => {
+    if (authSession.getState().status === 'signedIn') void exerciseSync.syncNow();
+  });
+}
 
 export const exerciseRepository = EXERCISE_SYNC_ENABLED
   ? createSyncedExerciseRepository(localExerciseRepository, exerciseSync)
@@ -138,4 +148,16 @@ export const exerciseRepository = EXERCISE_SYNC_ENABLED
 /** Catches up on exercises saved earlier, or while offline. */
 export const syncExercises = async () => {
   if (EXERCISE_SYNC_ENABLED) await exerciseSync.syncNow();
+};
+
+let restoring: Promise<void> | null = null;
+
+/** Picks up the last session, then catches up on exercises saved while offline. */
+export const startAccountAndSync = async () => {
+  if (!EXERCISE_SYNC_ENABLED) return;
+  restoring ??= authSession.restore().catch(error => {
+    console.warn('Could not restore the session:', error);
+  });
+  await restoring;
+  await exerciseSync.syncNow();
 };

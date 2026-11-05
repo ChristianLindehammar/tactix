@@ -8,14 +8,23 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | Endpoint | Token | Description |
 |---|---|---|
 | `GET /health` | No | 200 if the database answers, otherwise 503 |
-| `POST /devices` | No | Registers an install. Returns `userId` and `token`, once |
+| `POST /auth/email/start` | No | Emails a 6-digit code. Takes `email` and optional `locale` (`en`, `sv`, `fi`) |
+| `POST /auth/email/verify` | No | Takes `email` and `code`. Returns `userId`, `email` and `token`, once |
+| `POST /auth/provider` | No | Takes `provider` (`apple` or `google`), `idToken` and `nonce`. Answers like verify |
+| `POST /auth/sign-out` | Yes | Ends this session only |
+| `GET /me` | Yes | Returns `userId` and `email` |
+| `DELETE /me` | Yes | Permanently deletes the account and its exercises |
 | `GET /exercises` | Yes | Lists your own exercises, leaving out deleted ones |
 | `PUT /exercises/<id>` | Yes | Creates or replaces an exercise. Only its owner can change it |
 | `GET /exercises/<id>` | Yes | Fetches an exercise. Any valid token can read by ID, for share links |
 
-Send the token as `Authorization: Bearer <token>`. Errors look like `{"error": "code"}`, using the
+Apps send the token as `Authorization: Bearer <token>`. The web app adds `"session": "cookie"` when
+signing in and gets an HttpOnly cookie instead of a token, and every change it makes must carry the
+header `X-CoachMate-Client: web`. It must be served from the same origin as the API, because the API
+allows no cross-origin requests. Errors look like `{"error": "code"}`, using the
 same codes as `parseExercise` in `types/exercise.ts`, plus `unauthorized`, `exerciseNotOwned`,
-`notFound`, `tooLarge`, `invalidFilter`, `rateLimited` and `serviceUnavailable`.
+`notFound`, `tooLarge`, `invalidFilter`, `invalidEmail`, `invalidCode`, `invalidProviderToken`,
+`rateLimited` and `serviceUnavailable`.
 
 ### Listing
 
@@ -38,8 +47,10 @@ alphabet, so Swedish `å`, `ä` and `ö` sort with `a` and `o`, unlike in the ap
 
 | What | Limit | Counted per |
 |---|---|---|
-| `POST /devices` | 20 an hour | IP address, or IPv6 /64 network |
-| `PUT /exercises/<id>` | 300 an hour | Install |
+| `POST /auth/email/start` | 5 an hour | Email address |
+| `POST /auth/email/start` | 30 an hour | IP address, or IPv6 /64 network |
+| `POST /auth/provider` | 60 an hour | IP address, or IPv6 /64 network |
+| `PUT /exercises/<id>` | 300 an hour | Coach |
 
 Going over answers 429 with a `Retry-After` header. Counts are kept in MariaDB because Passenger runs
 several processes. Reads aren't limited. Change the numbers in `coachmate_api/rate_limit.py`.
@@ -75,6 +86,7 @@ Needs Python 3.9 or newer and MariaDB 10.4 or newer.
 
 Limits use the address the web server passes on, and ignore `X-Forwarded-For` because anyone can
 forge it. If the host puts a proxy or CDN in front of Passenger, every coach would share one address,
-and 20 registrations an hour would block new installs for everyone. To check, call `POST /devices`
-21 times from one network, then once from another, such as a phone on mobile data. The second network
-should get a 201. If it gets a 429, the limiter needs a trusted-proxy setting.
+and 30 codes an hour would block sign-in for everyone. To check, call `POST /auth/email/start` 31 times
+from one network, with a different address you control each time, then once from another network, such
+as a phone on mobile data. The second network should get a 202. If it gets a 429, the limiter needs a
+trusted-proxy setting.

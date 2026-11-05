@@ -1,9 +1,12 @@
+import uuid
+
 import pytest
 
 from coachmate_api import create_app
+from coachmate_api.rate_limit import DEFAULT_LIMITS
 from tests.test_exercises import build_exercise, put
 
-LIMITS = {'devices': (2, 3600), 'saves': (2, 3600)}
+LIMITS = {**DEFAULT_LIMITS, 'emailCodes': (100, 3600), 'emailCodesPerAddress': (2, 3600), 'saves': (2, 3600)}
 
 
 class Clock:
@@ -21,17 +24,23 @@ def clock():
 
 @pytest.fixture()
 def limited(db_config, clock):
-    return create_app(db_config, limits=LIMITS, clock=clock).test_client()
+    return create_app(db_config, limits=LIMITS, clock=clock, send_sign_in_code=lambda *_: None).test_client()
 
 
 def register_from(client, address, **headers):
-    return client.post('/devices', environ_base={'REMOTE_ADDR': address}, headers=headers)
+    """Asks for a sign-in code for a new address each time, so only the IP limit applies."""
+    return client.post(
+        '/auth/email/start',
+        json={'email': f'{uuid.uuid4()}@example.com'},
+        environ_base={'REMOTE_ADDR': address},
+        headers=headers,
+    )
 
 
-class TestRegistering:
+class TestAskingForCodes:
     def test_stops_an_address_at_the_limit(self, limited):
-        assert register_from(limited, '203.0.113.5').status_code == 201
-        assert register_from(limited, '203.0.113.5').status_code == 201
+        assert register_from(limited, '203.0.113.5').status_code == 202
+        assert register_from(limited, '203.0.113.5').status_code == 202
 
         response = register_from(limited, '203.0.113.5')
 
@@ -47,17 +56,17 @@ class TestRegistering:
 
         assert response.headers['Retry-After'] == '3000'
 
-    def test_does_not_create_a_user_once_stopped(self, limited, rows):
+    def test_does_not_store_a_code_once_stopped(self, limited, rows):
         for _ in range(5):
             register_from(limited, '203.0.113.5')
 
-        assert rows('SELECT COUNT(*) FROM users') == [(2,)]
+        assert rows('SELECT COUNT(*) FROM sign_in_codes') == [(2,)]
 
     def test_leaves_other_addresses_alone(self, limited):
         for _ in range(3):
             register_from(limited, '203.0.113.5')
 
-        assert register_from(limited, '203.0.113.6').status_code == 201
+        assert register_from(limited, '203.0.113.6').status_code == 202
 
     def test_allows_more_in_the_next_window(self, limited, clock):
         for _ in range(3):
@@ -65,14 +74,14 @@ class TestRegistering:
 
         clock.now += 3600
 
-        assert register_from(limited, '203.0.113.5').status_code == 201
+        assert register_from(limited, '203.0.113.5').status_code == 202
 
     def test_treats_one_ipv6_network_as_one_address(self, limited):
         register_from(limited, '2001:db8:1:1::1')
         register_from(limited, '2001:db8:1:1::2')
 
         assert register_from(limited, '2001:db8:1:1::3').status_code == 429
-        assert register_from(limited, '2001:db8:1:2::1').status_code == 201
+        assert register_from(limited, '2001:db8:1:2::1').status_code == 202
 
     def test_counts_an_ipv4_address_the_same_in_ipv6_form(self, limited):
         register_from(limited, '203.0.113.5')
@@ -89,11 +98,11 @@ class TestRegistering:
         assert response.status_code == 429
 
     def test_has_a_limit_by_default(self, db_config):
-        client = create_app(db_config).test_client()
+        client = create_app(db_config, send_sign_in_code=lambda *_: None).test_client()
 
-        codes = [register_from(client, '203.0.113.5').status_code for _ in range(21)]
+        codes = [register_from(client, '203.0.113.5').status_code for _ in range(31)]
 
-        assert codes == [201] * 20 + [429]
+        assert codes == [202] * 30 + [429]
 
 
 class TestWhatIsKept:
@@ -108,16 +117,12 @@ class TestWhatIsKept:
 
         register_from(limited, '203.0.113.6')
 
-        assert len(rows('SELECT * FROM rate_limits')) == 1
+        assert rows('SELECT COUNT(DISTINCT window_start) FROM rate_limits') == [(1,)]
 
 
 class TestSaving:
-    def headers_from(self, client, address):
-        token = register_from(client, address).get_json()['token']
-        return {'Authorization': f'Bearer {token}'}
-
-    def test_stops_one_install_at_the_limit(self, limited):
-        me = self.headers_from(limited, '203.0.113.5')
+    def test_stops_one_coach_at_the_limit(self, limited, register):
+        me = register()
         put(limited, build_exercise(), me)
         put(limited, build_exercise(), me)
 
@@ -126,16 +131,16 @@ class TestSaving:
         assert response.status_code == 429
         assert response.get_json() == {'error': 'rateLimited'}
 
-    def test_leaves_other_installs_alone(self, limited):
-        me = self.headers_from(limited, '203.0.113.5')
-        other = self.headers_from(limited, '203.0.113.6')
+    def test_leaves_other_coaches_alone(self, limited, register):
+        me = register()
+        other = register()
         for _ in range(3):
             put(limited, build_exercise(), me)
 
         assert put(limited, build_exercise(), other).status_code == 200
 
-    def test_reading_is_not_limited(self, limited):
-        me = self.headers_from(limited, '203.0.113.5')
+    def test_reading_is_not_limited(self, limited, register):
+        me = register()
         exercise = build_exercise()
         put(limited, exercise, me)
 

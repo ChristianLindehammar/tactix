@@ -12,11 +12,14 @@ from .db import get_db
 
 logger = logging.getLogger('coachmate')
 
-# Requests per window, in seconds. A shared club or mobile network can put many coaches
-# behind one address, so registering allows more than a single install would ever need.
+# Requests per window, in seconds.
 DEFAULT_LIMITS = {
-    'devices': (20, 3600),
     'saves': (300, 3600),
+    # Per email: stops anyone filling a coach's inbox, and caps guesses at 25 an hour
+    'emailCodes': (5, 3600),
+    # Per IP address: stops anyone using us to mail strangers, while a club can share a network
+    'emailCodesPerAddress': (30, 3600),
+    'providerSignIns': (60, 3600),
 }
 
 

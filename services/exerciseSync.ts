@@ -1,10 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as SecureStore from 'expo-secure-store';
 
 import type { ExerciseRepository } from '@/services/exerciseRepository';
 import type { Exercise } from '@/types/exercise';
 
-const DEVICE_KEY = 'apiDevice';
 // Holds the updatedAt of the last version the server answered for, so a restart loses nothing
 const SETTLED_PREFIX = 'exercise-sync:';
 const REQUEST_TIMEOUT_MS = 20_000;
@@ -15,6 +13,9 @@ interface ExerciseSyncOptions {
   fetch: typeof globalThis.fetch;
   local: Pick<ExerciseRepository, 'listIncludingDeleted'>;
   getCurrentUserId: () => Promise<string>;
+  /** How to prove who the coach is, or null while signed out, when nothing is uploaded. */
+  getAuthHeaders: () => Promise<Record<string, string> | null>;
+  onSessionRejected: () => Promise<void> | void;
   now?: () => number;
 }
 
@@ -27,7 +28,7 @@ export interface ExerciseSync {
 }
 
 /**
- * Uploads this install's exercises. The device stays the source of truth, so nothing here can
+ * Uploads the signed-in coach's exercises. The device stays the source of truth, so nothing here can
  * change or lose local work, and every failure just leaves exercises queued.
  */
 export function createExerciseSync({
@@ -35,6 +36,8 @@ export function createExerciseSync({
   fetch,
   local,
   getCurrentUserId,
+  getAuthHeaders,
+  onSessionRejected,
   now = Date.now,
 }: ExerciseSyncOptions): ExerciseSync {
   let retryAt = 0;
@@ -70,22 +73,17 @@ export function createExerciseSync({
     }
   };
 
-  const register = async () => {
-    const response = await request('/devices', { method: 'POST' });
-    const { token } = response.ok ? await response.json() : ({} as { token?: unknown });
-    if (typeof token !== 'string' || !token) throw new SyncStopped('invalidRegistration');
-    await SecureStore.setItemAsync(DEVICE_KEY, token);
-    return token;
-  };
-
-  const upload = (exercise: Exercise, token: string) =>
+  const upload = (exercise: Exercise, authHeaders: Record<string, string>) =>
     request(`/exercises/${exercise.id}`, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      headers: { 'Content-Type': 'application/json', ...authHeaders },
       body: JSON.stringify(exercise),
     });
 
   const pass = async () => {
+    const authHeaders = await getAuthHeaders();
+    if (!authHeaders) return;
+
     const me = await getCurrentUserId();
     const exercises = (await local.listIncludingDeleted()).filter(e => e.ownerId === me);
     const settled = new Map(
@@ -99,17 +97,12 @@ export function createExerciseSync({
     });
     if (pending.length === 0) return;
 
-    let token = (await SecureStore.getItemAsync(DEVICE_KEY)) ?? (await register());
-    let registeredAgain = false;
-
     for (const exercise of pending) {
-      let response = await upload(exercise, token);
-      if (response.status === 401 && !registeredAgain) {
-        registeredAgain = true;
-        token = await register();
-        response = await upload(exercise, token);
+      const response = await upload(exercise, authHeaders);
+      if (response.status === 401) {
+        await onSessionRejected();
+        throw new SyncStopped('unauthorized');
       }
-      if (response.status === 401) throw new SyncStopped('unauthorized');
       if (!response.ok) {
         // Retrying can't help until the coach edits it, which gives it a new updatedAt
         console.warn(`Server refused exercise ${exercise.id}: ${response.status}`);

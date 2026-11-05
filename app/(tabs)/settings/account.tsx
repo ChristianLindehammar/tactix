@@ -1,0 +1,15 @@
+import { ScrollView } from 'react-native';
+
+import { AccountPanel } from '@/components/AccountPanel';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import { authSession } from '@/services/account';
+
+export default function AccountScreen() {
+  const background = useThemeColor({}, 'background') as string;
+
+  return (
+    <ScrollView style={{ flex: 1, backgroundColor: background }} keyboardShouldPersistTaps="handled">
+      <AccountPanel session={authSession} />
+    </ScrollView>
+  );
+}

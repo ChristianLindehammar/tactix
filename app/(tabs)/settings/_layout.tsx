@@ -34,6 +34,13 @@ export default function SettingsLayout() {
         }} 
       />
       <Stack.Screen 
+        name="account" 
+        options={{ 
+          title: t('account'),
+          headerShown: true,
+        }} 
+      />
+      <Stack.Screen 
         name="about" 
         options={{ 
           title: t('aboutApp'),

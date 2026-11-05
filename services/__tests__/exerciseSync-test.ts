@@ -1,5 +1,4 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as SecureStore from 'expo-secure-store';
 
 import { createExerciseSync } from '../exerciseSync';
 import { createLocalExerciseRepository } from '../exerciseRepository';
@@ -10,18 +9,12 @@ const BASE = 'https://api.test';
 const respond = (status: number, body: unknown = {}, headers: Record<string, string> = {}) =>
   new Response(JSON.stringify(body), { status, headers });
 
-/** A fake server: registers installs and answers saves with whatever the test chooses. */
+/** A fake server: answers saves with whatever the test chooses. */
 const fakeServer = () => {
   const saves: { id: string; body: Exercise; token: string | null }[] = [];
-  let registrations = 0;
   let answerSave: (id: string) => Response | Promise<Response> = () => respond(200);
-  let answerRegister: () => Response | Promise<Response> = () => {
-    registrations += 1;
-    return respond(201, { userId: `server-${registrations}`, token: `token-${registrations}` });
-  };
 
   const fetch = jest.fn(async (url: string, init: RequestInit = {}) => {
-    if (url === `${BASE}/devices` && init.method === 'POST') return answerRegister();
     const id = url.replace(`${BASE}/exercises/`, '');
     const answer = await answerSave(id);
     if (answer.ok) {
@@ -37,9 +30,7 @@ const fakeServer = () => {
   return {
     fetch: fetch as unknown as typeof globalThis.fetch,
     saves,
-    registrations: () => registrations,
     onSave: (answer: typeof answerSave) => (answerSave = answer),
-    onRegister: (answer: typeof answerRegister) => (answerRegister = answer),
   };
 };
 
@@ -50,6 +41,8 @@ describe('exercise sync', () => {
   const local = createLocalExerciseRepository({ getCurrentUserId: async () => 'me' });
   let server: ReturnType<typeof fakeServer>;
   let now: number;
+  let authHeaders: Record<string, string> | null;
+  let onSessionRejected: jest.Mock;
 
   const build = () =>
     createExerciseSync({
@@ -57,17 +50,20 @@ describe('exercise sync', () => {
       fetch: server.fetch,
       local,
       getCurrentUserId: async () => 'me',
+      getAuthHeaders: async () => authHeaders,
+      onSessionRejected,
       now: () => now,
     });
 
   beforeEach(async () => {
     await AsyncStorage.clear();
-    await SecureStore.deleteItemAsync('apiDevice');
     server = fakeServer();
+    authHeaders = { Authorization: 'Bearer token-1' };
+    onSessionRejected = jest.fn();
     now = 1_000_000;
   });
 
-  it('uploads an exercise that has not been uploaded, using a registered token', async () => {
+  it('uploads an exercise that has not been uploaded, using the session of the coach', async () => {
     await local.save(exercise());
 
     await build().syncNow();
@@ -78,15 +74,16 @@ describe('exercise sync', () => {
     expect(server.saves[0].token).toBe('Bearer token-1');
   });
 
-  it('registers once and keeps using the same token', async () => {
+  it('uploads nothing while signed out, and catches up after signing in', async () => {
     await local.save(exercise());
-    await build().syncNow();
+    authHeaders = null;
 
-    await local.save(exercise({ updatedAt: '2026-11-04T10:00:00.000Z' }));
     await build().syncNow();
+    expect(server.saves).toHaveLength(0);
 
-    expect(server.registrations()).toBe(1);
-    expect(server.saves.map(save => save.token)).toEqual(['Bearer token-1', 'Bearer token-1']);
+    authHeaders = { Authorization: 'Bearer token-1' };
+    await build().syncNow();
+    expect(server.saves).toHaveLength(1);
   });
 
   it('uploads each version once, and again after an edit', async () => {
@@ -161,30 +158,6 @@ describe('exercise sync', () => {
       expect(server.saves).toHaveLength(1);
     });
 
-    it('tries registering again later if it fails while offline', async () => {
-      await local.save(exercise());
-      const register = server.onRegister;
-      const sync = build();
-      register(offline);
-
-      await expect(sync.syncNow()).resolves.toBeUndefined();
-
-      register(() => respond(201, { userId: 'server-1', token: 'token-1' }));
-      await sync.syncNow();
-
-      expect(server.saves[0].token).toBe('Bearer token-1');
-    });
-
-    it('does not store a registration answer without a token', async () => {
-      await local.save(exercise());
-      server.onRegister(() => respond(201, { userId: 'server-1' }));
-
-      await expect(build().syncNow()).resolves.toBeUndefined();
-
-      expect(server.saves).toHaveLength(0);
-      expect(await SecureStore.getItemAsync('apiDevice')).toBeNull();
-    });
-
     it('keeps an exercise queued when the server is failing', async () => {
       await local.save(exercise());
       server.onSave(() => respond(503, { error: 'serviceUnavailable' }));
@@ -227,40 +200,16 @@ describe('exercise sync', () => {
       expect(puts).toHaveLength(1);
     });
 
-    it('waits when registering is rate limited', async () => {
-      await local.save(exercise());
-      server.onRegister(() => respond(429, { error: 'rateLimited' }, { 'Retry-After': '60' }));
-      const sync = build();
-      await sync.syncNow();
-      const calls = (server.fetch as jest.Mock).mock.calls.length;
-
-      await sync.syncNow();
-
-      expect((server.fetch as jest.Mock).mock.calls.length).toBe(calls);
-    });
-
-    it('registers again if the server no longer accepts the token', async () => {
-      await local.save(exercise());
-      await build().syncNow();
-      await local.save(exercise({ updatedAt: '2026-11-04T10:00:00.000Z' }));
-      server.onSave(() => {
-        const token = (server.fetch as jest.Mock).mock.lastCall?.[1].headers.Authorization;
-        return respond(token === 'Bearer token-1' ? 401 : 200);
-      });
-
-      await build().syncNow();
-
-      expect(server.registrations()).toBe(2);
-      expect(server.saves.at(-1)?.token).toBe('Bearer token-2');
-    });
-
-    it('registers only once in a sync if the new token is refused too', async () => {
+    it('reports a rejected session once and keeps the exercise queued', async () => {
       await local.save(exercise());
       server.onSave(() => respond(401, { error: 'unauthorized' }));
 
       await build().syncNow();
+      expect(onSessionRejected).toHaveBeenCalledTimes(1);
 
-      expect(server.registrations()).toBe(2);
+      server.onSave(() => respond(200));
+      await build().syncNow();
+      expect(server.saves).toHaveLength(1);
     });
 
     it.each([
@@ -330,7 +279,6 @@ describe('exercise sync', () => {
       await Promise.all([sync.syncNow(), sync.syncNow()]);
 
       expect(server.saves).toHaveLength(1);
-      expect(server.registrations()).toBe(1);
     });
 
     it('picks up an edit made while a sync is running', async () => {
