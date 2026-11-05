@@ -15,19 +15,23 @@ const toPlan = (info: CustomerInfo): StorePlan => {
   return { expiresAt: entitlement.expirationDate };
 };
 
-const annualPackage = async () => (await Purchases.getOfferings()).current?.annual ?? null;
-
 export function createRevenueCatPlanStore(apiKey: string): PlanStore {
   Purchases.configure({ apiKey });
 
   return {
     getPlan: async () => toPlan(await Purchases.getCustomerInfo()),
-    getPrice: async () => (await annualPackage())?.product.priceString ?? null,
-    purchase: async () => {
-      const annual = await annualPackage();
-      if (!annual) throw new Error('No annual plan is on offer');
+    getPrices: async () => {
+      const offering = (await Purchases.getOfferings()).current;
+      return {
+        annual: offering?.annual?.product.priceString ?? null,
+        monthly: offering?.monthly?.product.priceString ?? null,
+      };
+    },
+    purchase: async period => {
+      const offered = (await Purchases.getOfferings()).current?.[period];
+      if (!offered) throw new Error(`No ${period} plan is on offer`);
       try {
-        return toPlan((await Purchases.purchasePackage(annual)).customerInfo);
+        return toPlan((await Purchases.purchasePackage(offered)).customerInfo);
       } catch (error) {
         if ((error as { code?: string }).code === PURCHASES_ERROR_CODE.PURCHASE_CANCELLED_ERROR) return 'cancelled';
         throw error;

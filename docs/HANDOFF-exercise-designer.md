@@ -17,7 +17,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Library sorting and minimum rating | Done |
 | Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
 | Plans on the backend: RevenueCat webhook, plan refresh, uploads need a plan | Built and tested with a fake RevenueCat, committed in `c6eaa12`, **not deployed**. Deploying blocks uploads until RevenueCat is set up |
-| RevenueCat and paywall in the app | Plan service, paywall, locked screen, export and delete built with automated tests. **Not yet seen on a device.** The RevenueCat adapter (`services/revenueCatPlanStore.ts`) has no tests and has never run against RevenueCat. Without keys, dev builds use a simulated store and release builds stay locked |
+| RevenueCat and paywall in the app | Plan service, paywall with yearly and monthly plans, locked screen, export and delete built with automated tests. Paywall, simulated purchase and locked screen checked on Android; export and delete not tried on a device. The RevenueCat adapter (`services/revenueCatPlanStore.ts`) has no tests and has never run against RevenueCat. Without keys, dev builds use a simulated store and release builds stay locked |
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
 | Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, committed in `56dfa1f`, **not deployed**. Off in release builds |
@@ -25,7 +25,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
-Last run: 358 app tests in 27 suites and 200 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 363 app tests in 27 suites and 200 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -56,7 +56,7 @@ Last run: 358 app tests in 27 suites and 200 backend tests passing. `tsc` report
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
 - **Checking plans:** a RevenueCat webhook only says that something changed, as its events have no promised order. The server then asks RevenueCat for the current state and stores the end date on `users.plan_expires_at`. Saving needs an active plan, but a coach can always read their own exercises and delete ones already uploaded. The app must call `POST /me/plan/refresh` after signing in or buying, because RevenueCat's docs don't mention a webhook when a purchase made while signed out joins an account.
-- **Plan:** an annual subscription, chosen by Christian on 2026-11-05. When a coach's plan ends, they can't use the exercise feature.
+- **Plan:** yearly and monthly subscriptions, both offered on the paywall (Christian added monthly on 2026-11-05; 199 kr and 29 kr were suggested as starting prices). When a coach's plan ends, they can't use the exercise feature.
 - **Trial and lapsed plans:** a 14-day free trial through the stores, with no free exercises. When a plan ends, exercises stay stored and locked on the device and server, renewing brings them back, and a locked coach can still export or delete them. Agreed by Christian on 2026-11-05.
 - **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It runs at `lindehammar-konsult.se/coachmate/api`, leaving `/coachmate/` free for web pages such as the share link fallback, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
 - **Sign-in:** Apple, Google and an emailed 6-digit code, chosen by Christian on 2026-11-05. An account is optional, and the app works fully on the device without one. Nothing uploads while signed out, so `POST /devices` and anonymous server users are gone. A verified email joins the account that address already has, whichever way it signed in. Hide My Email addresses therefore make a separate account.

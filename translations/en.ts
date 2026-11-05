@@ -266,8 +266,11 @@ export default {
   accountErrorUnavailable: 'Something went wrong on the server. Please try again later.',
   // Plan
   planTitle: 'Design your own exercises',
-  planBenefits: 'Create, tag, rate and find exercises for every sport. Back them up and reach them on your other devices with a free account.',
-  planTrialPrice: '14 days free, then {{price}} a year. Cancel any time in your store settings.',
+  planBenefits: 'Create, tag, rate and find your own exercises for every sport.',
+  planTrialYear: '14 days free, then {{price}} a year. Cancel any time in your store settings.',
+  planTrialMonth: '14 days free, then {{price}} a month. Cancel any time in your store settings.',
+  planPerYear: '{{price}} a year',
+  planPerMonth: '{{price}} a month',
   planStartTrial: 'Start free trial',
   planRestore: 'Restore purchase',
   planErrorPurchase: 'The purchase did not go through. Please try again.',

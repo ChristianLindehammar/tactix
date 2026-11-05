@@ -12,12 +12,19 @@ export interface StorePlan {
   expiresAt: string | null;
 }
 
+export type PlanPeriod = 'annual' | 'monthly';
+
+/** Prices in the coach's own currency. Null if that plan isn't on offer or the store can't say right now. */
+export interface PlanPrices {
+  annual: string | null;
+  monthly: string | null;
+}
+
 export interface PlanStore {
   getPlan(): Promise<StorePlan>;
-  /** The yearly price in the coach's own currency, or null if the store can't say right now. */
-  getPrice(): Promise<string | null>;
+  getPrices(): Promise<PlanPrices>;
   /** 'cancelled' when the coach backed out of the store's own sheet. */
-  purchase(): Promise<StorePlan | 'cancelled'>;
+  purchase(period: PlanPeriod): Promise<StorePlan | 'cancelled'>;
   restore(): Promise<StorePlan>;
   logIn(userId: string): Promise<void>;
   logOut(): Promise<void>;
@@ -111,7 +118,7 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
 
   return {
     getState: () => state,
-    getPrice: () => store.getPrice(),
+    getPrices: () => store.getPrices(),
     subscribe: (listener: () => void) => {
       listeners.add(listener);
       return () => void listeners.delete(listener);
@@ -121,8 +128,8 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
       await adopt(await store.restore());
       await tellServer().catch(warnNotLinked);
     },
-    purchase: async () => {
-      const plan = await store.purchase();
+    purchase: async (period: PlanPeriod) => {
+      const plan = await store.purchase(period);
       if (plan === 'cancelled') return;
       await adopt(plan);
       await tellServer().catch(warnNotLinked);

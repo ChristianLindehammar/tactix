@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Text } from 'react-native';
 
 import { PlanGate } from '@/components/PlanGate';
-import { createPlanService, PlanStore, StorePlan } from '@/services/planService';
+import { createPlanService, PlanPeriod, PlanStore, StorePlan } from '@/services/planService';
 import i18n from '@/translations/i18n';
 
 const NEXT_YEAR = '2099-01-15T08:00:00.000Z';
@@ -15,8 +15,8 @@ const t = (key: string, options?: Record<string, unknown>) => i18n.t(key, option
 function setup(plan: StorePlan, { offline = false } = {}) {
   const store: jest.Mocked<PlanStore> = {
     getPlan: jest.fn(async () => plan),
-    getPrice: jest.fn(async () => '299 kr'),
-    purchase: jest.fn(async () => plan),
+    getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
+    purchase: jest.fn(async (_period: PlanPeriod) => plan),
     restore: jest.fn(async () => plan),
     logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
@@ -53,7 +53,7 @@ test('a paying coach sees their exercises', async () => {
 test('a coach who never had a plan sees the trial and its price instead of exercises', async () => {
   setup({ expiresAt: null });
 
-  expect(await screen.findByText(t('planTrialPrice', { price: '299 kr' }))).toBeTruthy();
+  expect(await screen.findByText(t('planTrialYear', { price: '199 kr' }))).toBeTruthy();
   expect(screen.getByRole('button', { name: t('planStartTrial') })).toBeTruthy();
   expect(screen.queryByText('the library')).toBeNull();
 });
@@ -133,4 +133,48 @@ test('restoring when nothing was bought says so', async () => {
   fireEvent.press(await screen.findByRole('button', { name: t('planRestore') }));
 
   expect(await screen.findByRole('alert')).toHaveTextContent(t('planNothingToRestore'));
+});
+
+test('a coach can see both plans and their prices', async () => {
+  setup({ expiresAt: null });
+
+  expect(await screen.findByRole('radio', { name: t('planPerYear', { price: '199 kr' }) })).toBeTruthy();
+  expect(screen.getByRole('radio', { name: t('planPerMonth', { price: '29 kr' }) })).toBeTruthy();
+});
+
+test('a coach who chooses monthly is told the monthly terms and buys monthly', async () => {
+  const { store } = setup({ expiresAt: null });
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  fireEvent.press(await screen.findByRole('radio', { name: t('planPerMonth', { price: '29 kr' }) }));
+
+  expect(screen.getByRole('radio', { name: t('planPerMonth', { price: '29 kr' }), selected: true })).toBeTruthy();
+  expect(screen.getByText(t('planTrialMonth', { price: '29 kr' }))).toBeTruthy();
+  fireEvent.press(screen.getByRole('button', { name: t('planStartTrial') }));
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+  expect(store.purchase).toHaveBeenCalledWith('monthly');
+});
+
+test('when only the monthly plan is on offer, that is the one a coach buys', async () => {
+  const { store } = setup({ expiresAt: null });
+  store.getPrices.mockResolvedValue({ annual: null, monthly: '29 kr' });
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  expect(await screen.findByText(t('planTrialMonth', { price: '29 kr' }))).toBeTruthy();
+  fireEvent.press(screen.getByRole('button', { name: t('planStartTrial') }));
+
+  await screen.findByText('the library');
+  expect(store.purchase).toHaveBeenCalledWith('monthly');
+});
+
+test('a coach whose plan ended can renew on either plan', async () => {
+  const { store } = setup({ expiresAt: LAST_YEAR });
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  fireEvent.press(await screen.findByRole('radio', { name: t('planPerMonth', { price: '29 kr' }) }));
+  fireEvent.press(screen.getByRole('button', { name: t('planRenew') }));
+
+  await screen.findByText('the library');
+  expect(store.purchase).toHaveBeenCalledWith('monthly');
 });

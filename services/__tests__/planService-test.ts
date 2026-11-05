@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { waitFor } from '@testing-library/react-native';
 
 import type { AuthState } from '@/services/authSession';
-import { createPlanService, PlanStore, StorePlan } from '@/services/planService';
+import { createPlanService, PlanPeriod, PlanStore, StorePlan } from '@/services/planService';
 
 const NOW = Date.parse('2027-01-15T08:00:00Z');
 const NEXT_YEAR = '2028-01-15T08:00:00.000Z';
@@ -31,9 +31,9 @@ const SIGNED_IN: AuthState = { status: 'signedIn', userId: 'account-1', email: '
 function setup(initial: StorePlan = { expiresAt: null }) {
   const store: jest.Mocked<PlanStore> = {
     getPlan: jest.fn(async () => initial),
-    purchase: jest.fn(async () => initial),
+    purchase: jest.fn(async (_period: PlanPeriod) => initial),
     restore: jest.fn(async () => initial),
-    getPrice: jest.fn(async () => '299 kr'),
+    getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
     logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
   };
@@ -87,7 +87,7 @@ test('buying gives the coach access and tells whoever is watching', async () => 
   const onChange = jest.fn();
   plans.subscribe(onChange);
 
-  await plans.purchase();
+  await plans.purchase('annual');
 
   expect(plans.getState()).toEqual({ status: 'active', expiresAt: NEXT_YEAR });
   expect(onChange).toHaveBeenCalledTimes(1);
@@ -98,7 +98,7 @@ test('changing their mind in the store leaves the coach as they were, with no er
   await plans.refresh();
   store.purchase.mockResolvedValue('cancelled');
 
-  await plans.purchase();
+  await plans.purchase('annual');
 
   expect(plans.getState()).toEqual({ status: 'none' });
 });
@@ -148,7 +148,7 @@ test('buying while signed in lets uploads start straight away', async () => {
   await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
   store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
 
-  await plans.purchase();
+  await plans.purchase('annual');
 
   expect(fetch).toHaveBeenCalledTimes(2);
 });
@@ -191,4 +191,14 @@ test('signing back in allows restoring again', async () => {
     await plans.restore();
     expect(store.restore).toHaveBeenCalled();
   });
+});
+
+test('a coach can buy the monthly plan', async () => {
+  const { plans, store } = setup();
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  await plans.purchase('monthly');
+
+  expect(store.purchase).toHaveBeenCalledWith('monthly');
+  expect(plans.getState()).toEqual({ status: 'active', expiresAt: NEXT_YEAR });
 });

@@ -14,13 +14,15 @@ const API_KEY = Platform.select({
 /** Lets dev builds show the paywall before the store products exist. Set EXPO_PUBLIC_DEV_PLAN=lapsed to see a plan that ended. */
 function createDevPlanStore(): PlanStore {
   const YEAR_MS = 365 * 86_400_000;
+  const MONTH_MS = 30 * 86_400_000;
   let plan: StorePlan = {
     expiresAt: process.env.EXPO_PUBLIC_DEV_PLAN === 'lapsed' ? new Date(Date.now() - YEAR_MS).toISOString() : null,
   };
   return {
     getPlan: async () => plan,
-    getPrice: async () => '299 kr',
-    purchase: async () => (plan = { expiresAt: new Date(Date.now() + YEAR_MS).toISOString() }),
+    getPrices: async () => ({ annual: '199 kr', monthly: '29 kr' }),
+    purchase: async period =>
+      (plan = { expiresAt: new Date(Date.now() + (period === 'annual' ? YEAR_MS : MONTH_MS)).toISOString() }),
     restore: async () => plan,
     logIn: async () => undefined,
     logOut: async () => undefined,
@@ -30,7 +32,7 @@ function createDevPlanStore(): PlanStore {
 /** A build without a key can't sell anything, so its exercises stay locked. */
 const unavailableStore: PlanStore = {
   getPlan: () => Promise.reject(new Error('No RevenueCat key in this build')),
-  getPrice: async () => null,
+  getPrices: async () => ({ annual: null, monthly: null }),
   purchase: () => Promise.reject(new Error('No RevenueCat key in this build')),
   restore: () => Promise.reject(new Error('No RevenueCat key in this build')),
   logIn: async () => undefined,

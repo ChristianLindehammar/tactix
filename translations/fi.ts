@@ -266,8 +266,11 @@ export default {
   accountErrorUnavailable: 'Palvelimella tapahtui virhe. Yritä myöhemmin uudelleen.',
   // Plan
   planTitle: 'Suunnittele omat harjoitteet',
-  planBenefits: 'Luo, merkitse, arvioi ja löydä harjoitteita kaikkiin lajeihin. Varmuuskopioi ne ja käytä niitä muilla laitteillasi maksuttomalla tilillä.',
-  planTrialPrice: '14 päivää ilmaiseksi, sen jälkeen {{price}} vuodessa. Voit perua milloin tahansa kaupan asetuksista.',
+  planBenefits: 'Luo, merkitse, arvioi ja löydä omat harjoituksesi kaikkiin lajeihin.',
+  planTrialYear: '14 päivää ilmaiseksi, sen jälkeen {{price}} vuodessa. Voit perua milloin tahansa kaupan asetuksista.',
+  planTrialMonth: '14 päivää ilmaiseksi, sen jälkeen {{price}} kuukaudessa. Voit perua milloin tahansa kaupan asetuksista.',
+  planPerYear: '{{price}} vuodessa',
+  planPerMonth: '{{price}} kuukaudessa',
   planStartTrial: 'Aloita ilmainen kokeilu',
   planRestore: 'Palauta osto',
   planErrorPurchase: 'Osto ei onnistunut. Yritä uudelleen.',

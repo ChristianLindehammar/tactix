@@ -266,8 +266,11 @@ export default {
   accountErrorUnavailable: 'Något gick fel på servern. Försök igen senare.',
   // Plan
   planTitle: 'Skapa egna övningar',
-  planBenefits: 'Skapa, tagga, betygsätt och hitta övningar för alla sporter. Säkerhetskopiera dem och nå dem på dina andra enheter med ett kostnadsfritt konto.',
-  planTrialPrice: '14 dagar gratis, sedan {{price}} per år. Avsluta när som helst i butikens inställningar.',
+  planBenefits: 'Skapa, tagga, betygsätt och hitta dina egna övningar för alla sporter.',
+  planTrialYear: '14 dagar gratis, sedan {{price}} per år. Avsluta när som helst i butikens inställningar.',
+  planTrialMonth: '14 dagar gratis, sedan {{price}} per månad. Avsluta när som helst i butikens inställningar.',
+  planPerYear: '{{price}} per år',
+  planPerMonth: '{{price}} per månad',
   planStartTrial: 'Starta gratis provperiod',
   planRestore: 'Återställ köp',
   planErrorPurchase: 'Köpet gick inte igenom. Försök igen.',

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
-import { createPlanService, PlanError } from '@/services/planService';
+import { createPlanService, PlanError, PlanPeriod, PlanPrices } from '@/services/planService';
 
 interface PlanGateProps {
   plans: ReturnType<typeof createPlanService>;
@@ -14,11 +14,19 @@ interface PlanGateProps {
   children: React.ReactNode;
 }
 
+const NO_PRICES: PlanPrices = { annual: null, monthly: null };
+const PERIODS: { period: PlanPeriod; labelKey: string }[] = [
+  { period: 'annual', labelKey: 'planPerYear' },
+  { period: 'monthly', labelKey: 'planPerMonth' },
+];
+
 export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGateProps) {
   const { t } = useTranslation();
   const state = React.useSyncExternalStore(plans.subscribe, plans.getState);
   const background = useThemeColor({}, 'background') as string;
-  const [price, setPrice] = React.useState<string | null>(null);
+  const border = useThemeColor({}, 'text') as string;
+  const [prices, setPrices] = React.useState<PlanPrices>(NO_PRICES);
+  const [picked, setPicked] = React.useState<PlanPeriod>('annual');
   const [busy, setBusy] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -29,7 +37,7 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
     setChecking(true);
     await plans.refresh();
     setChecking(false);
-    setPrice(await plans.getPrice().catch(() => null));
+    setPrices(await plans.getPrices().catch(() => NO_PRICES));
   }, [plans]);
 
   React.useEffect(() => {
@@ -60,6 +68,9 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
   }
 
   const lapsed = state.status === 'lapsed';
+  // The store may offer only one of them
+  const chosen: PlanPeriod = prices[picked] ? picked : picked === 'annual' ? 'monthly' : 'annual';
+  const price = prices[chosen];
 
   const restore = async () => {
     await plans.restore();
@@ -67,20 +78,47 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
   };
 
   return (
-    <ScrollView
-      style={{ backgroundColor: background }}
-      contentContainerStyle={styles.container}
-    >
+    <ScrollView style={{ backgroundColor: background }} contentContainerStyle={styles.container}>
       <ThemedText type="title">{t(lapsed ? 'planEndedTitle' : 'planTitle')}</ThemedText>
       <ThemedText>{t(lapsed ? 'planEndedBody' : 'planBenefits')}</ThemedText>
-      {price && !lapsed ? <ThemedText type="defaultSemiBold">{t('planTrialPrice', { price })}</ThemedText> : null}
+      <View accessibilityRole="radiogroup" style={styles.options}>
+        {PERIODS.map(({ period, labelKey }) => {
+          const optionPrice = prices[period];
+          if (!optionPrice) return null;
+          const selected = period === chosen;
+          return (
+            <Pressable
+              key={period}
+              accessibilityRole="radio"
+              accessibilityState={{ selected }}
+              disabled={busy}
+              onPress={() => setPicked(period)}
+              style={[styles.option, { borderColor: border }, selected && styles.selected]}
+            >
+              <ThemedText type={selected ? 'defaultSemiBold' : 'default'}>
+                {t(labelKey, { price: optionPrice })}
+              </ThemedText>
+            </Pressable>
+          );
+        })}
+      </View>
+      {price && !lapsed ? (
+        <ThemedText type="defaultSemiBold">
+          {t(chosen === 'annual' ? 'planTrialYear' : 'planTrialMonth', {
+            price,
+          })}
+        </ThemedText>
+      ) : null}
       {error ? (
         <ThemedText accessibilityRole="alert" style={styles.error}>
           {error}
         </ThemedText>
       ) : null}
       {busy ? <ActivityIndicator /> : null}
-      <ThemedButton disabled={!price || busy} onPress={() => attempt(plans.purchase, 'planErrorPurchase')}>
+      <ThemedButton
+        disabled={!price || busy}
+        onPress={() => attempt(() => plans.purchase(chosen), 'planErrorPurchase')}
+      >
         {t(lapsed ? 'planRenew' : 'planStartTrial')}
       </ThemedButton>
       <ThemedButton disabled={busy} onPress={() => attempt(restore, 'planErrorRestore')}>
@@ -119,6 +157,9 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
 const styles = StyleSheet.create({
   container: { flexGrow: 1, gap: 16, padding: 24, justifyContent: 'center' },
   spinner: { flex: 1 },
+  options: { gap: 8 },
+  option: { borderWidth: 1, borderRadius: 8, padding: 16 },
+  selected: { borderWidth: 3, padding: 14 },
   error: { color: '#c0392b' },
   destructive: { backgroundColor: '#c0392b' },
 });
