@@ -1,7 +1,7 @@
 # CoachMate API
 
 Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
-`https://lindehammar-konsult.se/coachmate/`. The address may change, so nothing here depends on it.
+`https://lindehammar-konsult.se/coachmate/api`. The address may change, so nothing here depends on it.
 
 ## Endpoints
 
@@ -67,8 +67,8 @@ Needs Python 3.9 or newer and MariaDB 10.4 or newer.
 2. Copy `backend/` to the server, without `.venv`, and install `requirements.txt` in the app's environment.
 3. Copy `.env.example` to `.env`, fill it in and run `chmod 600 .env`.
 4. Run `python scripts/migrate.py`. Repeat this on every deploy.
-5. Point Passenger at `passenger_wsgi.py`, mounted at `/coachmate`.
-6. Check that `https://lindehammar-konsult.se/coachmate/health` answers `{"status":"ok"}`.
+5. Point Passenger at `passenger_wsgi.py`, mounted at `/coachmate/api`.
+6. Check that `https://lindehammar-konsult.se/coachmate/api/health` answers `{"status":"ok"}`.
 7. Add `scripts/backup_db.sh` to cron.
 
 ## After deploying, check the limiter sees real addresses

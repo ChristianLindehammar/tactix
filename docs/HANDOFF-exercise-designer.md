@@ -17,10 +17,11 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Library sorting and minimum rating | Done |
 | Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
 | RevenueCat and paywall | **Next**; see open decisions |
-| Backend: Flask API on MariaDB, in `backend/` | Built and tested locally: registering an install, saving, fetching and listing exercises, rate limits. Not deployed, and the app doesn't call it yet |
-| Ratings on the server, app sync, sign-in | Not started |
+| Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
+| App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
+| Ratings on the server, downloading, sign-in | Not started |
 
-Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 300 tests in 23 suites passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -28,6 +29,7 @@ Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files su
 |---|---|
 | Format and validation | `types/exercise.ts` (`parseExercise`, ratings), `types/tacticsMarker.ts` |
 | Storage | `services/exerciseRepository.ts`, `services/exerciseRatings.ts`, `services/currentUser.ts` |
+| Upload | `services/exerciseSync.ts`, `constants/api.ts` |
 | Screens | `app/(tabs)/exercises/` (`index`, `[id]`, `edit`, `_layout`) |
 | Board | `components/TacticsBoard.tsx`, `components/CourtSurface.tsx` |
 | Logic | `utils/exerciseDraft.ts`, `utils/filterExercises.ts`, `utils/cloneExercise.ts`, `utils/describeExercise.ts` |
@@ -48,8 +50,11 @@ Last run: 272 tests in 21 suites passing. `tsc` reports errors in older files su
 - **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
-- **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It starts at `lindehammar-konsult.se/coachmate/`, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
+- **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It runs at `lindehammar-konsult.se/coachmate/api`, leaving `/coachmate/` free for web pages such as the share link fallback, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
 - **Identity on the server:** each install gets an anonymous token from `POST /devices`, and only its hash is stored. The server decides the owner and ignores `ownerId` from the app. Any valid token can read an exercise by ID, because the ID is what a share link carries. A coach who loses their phone loses access until sign-in exists. Christian didn't object when this was proposed, but hasn't explicitly confirmed it.
+
+- **Upload only, for now:** the device stays the source of truth, and saving never waits for the network. Chosen by Christian on 2026-11-05. Each install is its own user, so downloading and conflict rules wait for sign-in. Exercises upload after each save or delete, at launch and when the app returns to the foreground. An `exercise-sync:<id>` key holds the `updatedAt` the server last answered for. Exercises deleted before they ever uploaded are never sent. Others' exercises aren't sent either. The token is in `expo-secure-store`.
+- **Upload stays off in release builds:** `EXERCISE_SYNC_ENABLED` in `constants/api.ts` is `__DEV__`, because `privay-policy.html` promises that all data stays on the device. Chosen by Christian on 2026-11-05. Before turning it on, update the policy and the store privacy forms. They also need to say that deleted exercises stay on the server, because deletes are soft.
 
 ## Traps that already cost time
 
@@ -99,12 +104,13 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Floorball and basketball.
     - Dark mode: the puck in the toolbar, the bandy board and the editor form.
 2. **Backend:**
-    - Deploy to `lindehammar-konsult.se/coachmate/`. Christian needs to create the database and say how files reach the server.
     - After deploying, check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit.
     - Add ratings and average ratings, then filtering and sorting by rating in `GET /exercises`.
     - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option. Browsing others' exercises waits for the exercise library decision.
     - Titles sort with `å`, `ä` and `ö` among `a` and `o` on the server, unlike Swedish sorting in the app.
-    - Sync from the app through `ExerciseRepository`, keeping local storage for offline use. Decide what happens when two devices edit the same exercise. Today the last save wins, even if it's older. Local exercises will need moving from the local `ownerId` to the server's. The server limits titles to 200 characters, and the app's editor has no limit yet.
+    - Upload gaps: if the server stops accepting a token, the app registers again as a new user. Later edits to its older exercises are then refused with a 403 and stay only on the device. Clearing the server's tables has a similar effect, as the `exercise-sync:` keys stop the app sending unchanged exercises again. A 429 wait is only held in memory, and a refused upload only shows as a console warning.
+    - With sign-in or downloading: decide what happens when two devices edit the same exercise, where the last save currently wins, even if it's older. Move local exercises from the local `ownerId` to the server's.
+    - Check upload on iOS. It needs a rebuild for `expo-secure-store`.
     - `backend/coachmate_api/validation.py` repeats the rules in `types/exercise.ts`, so change both together.
 3. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
