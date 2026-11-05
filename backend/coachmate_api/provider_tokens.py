@@ -16,7 +16,8 @@ KEY_ADDRESSES = {
     'google': 'https://www.googleapis.com/oauth2/v3/certs',
     'apple': 'https://appleid.apple.com/auth/keys',
 }
-# Apple's sign-in takes a nonce on every platform. The free Google library can't set one on phones.
+# Apple's sign-in takes a nonce on every platform. The free Google library can't set one on phones,
+# and on iOS it adds its own that the app never sees, so there's nothing to compare with.
 NONCE_REQUIRED = {'apple'}
 
 
@@ -65,9 +66,8 @@ class ProviderTokenVerifier:
         except jwt.PyJWTError as error:
             raise InvalidProviderToken(type(error).__name__) from error
 
-        claimed_nonce = claims.get('nonce')
-        if provider in NONCE_REQUIRED or claimed_nonce is not None:
-            if not _nonce_matches(claimed_nonce, raw_nonce):
+        if provider in NONCE_REQUIRED or raw_nonce is not None:
+            if not _nonce_matches(claims.get('nonce'), raw_nonce):
                 raise InvalidProviderToken('nonceMismatch')
         return Identity(claims['sub'], _verified_email(claims))
 

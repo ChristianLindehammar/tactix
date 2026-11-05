@@ -99,6 +99,11 @@ def test_a_google_token_without_a_nonce_is_accepted(verifier):
     assert verifier.verify('google', sign(), None).subject == 'subject-1'
 
 
+def test_a_google_token_with_a_nonce_the_app_never_saw_is_accepted(verifier):
+    # Google's iOS library makes its own nonce and doesn't tell the app what it is
+    assert verifier.verify('google', sign(nonce='made-by-the-google-library'), None).subject == 'subject-1'
+
+
 def test_apple_marks_a_verified_email_with_a_string(verifier):
     assert verifier.verify('apple', apple_token(email_verified='true'), RAW_NONCE).email == 'coach@example.com'
 

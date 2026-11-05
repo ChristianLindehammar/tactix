@@ -21,7 +21,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
 | Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, committed in `56dfa1f`, **not deployed**. Off in release builds |
-| Apple and Google sign-in | Built. Google checked on Android (`CoachMate_Google` emulator) against the live server, and the chooser appears after signing out. Christian reports sign-in working on his iPhone. Apple and Google on iOS, and cancelling on both platforms, still need confirming |
+| Apple and Google sign-in | Built. Google checked on Android (`CoachMate_Google` emulator) against the live server, and the chooser appears after signing out. Google also works on Christian's iPhone against the live server. Apple on iOS and cancelling on both platforms still need confirming |
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
@@ -129,7 +129,7 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - `backend/coachmate_api/validation.py` repeats the rules in `types/exercise.ts`, so change both together.
 3. **Finish sign-in:**
     - Deploy the backend: install the new requirements, run `scripts/migrate.py`, and add the mail and client ID settings from `.env.example`. The app has to be updated with it, as `POST /devices` is gone.
-    - Add Apple and Google buttons on web. The app has them: Apple on iOS only, Google on iOS and Android (`services/signInProviders.ts`, `constants/signIn.ts`). Google on phones has no nonce with the free library, so its tokens rely on signature, audience and expiry.
+    - Add Apple and Google buttons on web. The app has them: Apple on iOS only, Google on iOS and Android (`services/signInProviders.ts`, `constants/signIn.ts`). Google on phones can't use our nonce with the free library: Android tokens have none, and on iOS the library adds its own that the app never sees. The server therefore checks a Google nonce only when the app sends one, and these tokens rely on signature, audience and expiry.
     - Before release: add Google Android clients for the upload key and Play signing key, as the current one only matches the debug SHA-1. Build Apple token revocation on account deletion, which needs a Sign In with Apple `.p8` key on the server. Consider Apple's server-to-server notifications, as no endpoint exists yet.
     - **RevenueCat pods on iOS:** `react-native-purchases` 11.x needs `PurchasesHybridCommon` versions that aren't on CocoaPods trunk because of a freeze from November 1 to 7, 2026. The iPhone build used a local edit to the git-ignored `ios/Podfile`, pointing `RevenueCat` 5.101.0 and `PurchasesHybridCommon` 20.4.0 at their GitHub podspecs, and `prebuild --clean` will lose it. Store builds need the published pods or a move back to 10.x, which RevenueCat advises for Expo. Trunk goes read-only on December 2, 2026.
     - Check on iOS, and check real mail delivery and spam filtering.
