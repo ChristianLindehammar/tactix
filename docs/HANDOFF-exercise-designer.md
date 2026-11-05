@@ -16,15 +16,16 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Dark mode on iOS, exercise screens only | Done |
 | Library sorting and minimum rating | Done |
 | Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
-| RevenueCat and paywall | **Next**; see open decisions |
+| Plans on the backend: RevenueCat webhook, plan refresh, uploads need a plan | Built and tested with a fake RevenueCat, **not committed or deployed** |
+| RevenueCat and paywall in the app | **Next**; test seams still to be confirmed |
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
-| Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, **not committed or deployed** when this was written. Off in release builds |
+| Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, committed in `56dfa1f`, **not deployed**. Off in release builds |
 | Apple and Google sign-in | Backend done and tested with locally signed tokens. App buttons not started: they need client IDs from Christian |
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
-Last run: 334 app tests in 25 suites and 181 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 334 app tests in 25 suites and 196 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -54,6 +55,9 @@ Last run: 334 app tests in 25 suites and 181 backend tests passing. `tsc` report
 - **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Payments:** RevenueCat with in-app purchases only. Apple and Google are the merchant of record, so no Stripe or Paddle.
+- **Checking plans:** a RevenueCat webhook only says that something changed, as its events have no promised order. The server then asks RevenueCat for the current state and stores the end date on `users.plan_expires_at`. Saving needs an active plan, but a coach can always read their own exercises and delete ones already uploaded. The app must call `POST /me/plan/refresh` after signing in or buying, because RevenueCat's docs don't mention a webhook when a purchase made while signed out joins an account.
+- **Plan:** an annual subscription, chosen by Christian on 2026-11-05. When a coach's plan ends, they can't use the exercise feature.
+- **Trial and lapsed plans:** a 14-day free trial through the stores, with no free exercises. When a plan ends, exercises stay stored and locked on the device and server, renewing brings them back, and a locked coach can still export or delete them. Agreed by Christian on 2026-11-05.
 - **Backend:** Flask on Phusion Passenger with MariaDB, following `DriveCal/meridian_payment_backend`, but split into modules, with tests, numbered migrations and real tokens. Chosen by Christian on 2026-11-04 instead of Postgres or Supabase. It runs at `lindehammar-konsult.se/coachmate/api`, leaving `/coachmate/` free for web pages such as the share link fallback, and that address can change. Redis isn't needed yet. The `coachmate-api` repo is an unused Express skeleton, so don't build on it. The existing Firebase code is dead: placeholder keys, not in `package.json`, nothing imports it. Delete it rather than build on it.
 - **Sign-in:** Apple, Google and an emailed 6-digit code, chosen by Christian on 2026-11-05. An account is optional, and the app works fully on the device without one. Nothing uploads while signed out, so `POST /devices` and anonymous server users are gone. A verified email joins the account that address already has, whichever way it signed in. Hide My Email addresses therefore make a separate account.
 - **Sessions:** phones keep a token in `expo-secure-store`. The web app gets an HttpOnly cookie, which needs it served from the same origin as the API, such as `/coachmate/`. Only token hashes are stored, and tokens don't expire yet. The server decides the owner and ignores `ownerId` from the app. Any valid session can read an exercise by ID, for share links.
@@ -127,7 +131,7 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Check on iOS, and check real mail delivery and spam filtering.
     - Downloading, so a second device or the web app can see a coach's exercises.
     - Review the Swedish and Finnish account texts and the code emails.
-4. **RevenueCat and paywall.** Proposed free tier: the tactics board as it is, plus about three saved exercises. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
+4. **RevenueCat and paywall.** The tactics board stays free. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Sharing exercises by link, once they're in the database.
@@ -140,7 +144,6 @@ Later:
 
 ## Open decisions for Christian
 
-- **Pricing:** one-time purchase or annual plan. I recommended one-time until sync exists, because a subscription is hard to justify while everything stays on the device.
 - **Saving tactics:** should saved plain tactics be free? I suggested a few for free.
 - **Exercise library:** whether to offer a shared or curated one. I suggested curated first, since publishing by coaches needs moderation.
 - **Difficulty scale:** currently 1–5. Three levels might rate more consistently if a shared library comes soon.

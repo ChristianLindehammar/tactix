@@ -20,6 +20,8 @@ DEFAULT_LIMITS = {
     # Per IP address: stops anyone using us to mail strangers, while a club can share a network
     'emailCodesPerAddress': (30, 3600),
     'providerSignIns': (60, 3600),
+    # Each one calls RevenueCat
+    'planRefreshes': (30, 3600),
 }
 
 

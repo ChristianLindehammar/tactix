@@ -6,6 +6,7 @@ from flask import Blueprint, g, jsonify, request
 from .auth import require_user
 from .db import get_db, query_all, query_one
 from .listing import InvalidFilter, build_listing
+from .plans import has_active_plan
 from .rate_limit import current_user, rate_limited
 from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise
 
@@ -137,6 +138,10 @@ def save_exercise(exercise_id):
         existing = query_one('SELECT owner_id FROM exercises WHERE id = %s FOR UPDATE', (exercise['id'],))
         if existing and existing['owner_id'] != g.user_id:
             return jsonify({'error': 'exerciseNotOwned'}), 403
+        # A coach whose plan has ended can still remove what they uploaded
+        removing_own = existing is not None and exercise['deletedAt'] is not None
+        if not removing_own and not has_active_plan(g.user_id):
+            return jsonify({'error': 'planRequired'}), 403
         try:
             _write_exercise(exercise, g.user_id, exists=existing is not None)
             get_db().commit()

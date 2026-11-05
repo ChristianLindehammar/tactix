@@ -12,7 +12,9 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | `POST /auth/email/verify` | No | Takes `email` and `code`. Returns `userId`, `email` and `token`, once |
 | `POST /auth/provider` | No | Takes `provider` (`apple` or `google`), `idToken` and `nonce`. Answers like verify |
 | `POST /auth/sign-out` | Yes | Ends this session only |
-| `GET /me` | Yes | Returns `userId` and `email` |
+| `GET /me` | Yes | Returns `userId`, `email` and `plan` (`active`, `expiresAt`) |
+| `POST /me/plan/refresh` | Yes | Asks RevenueCat for the coach's plan again and returns it. Limited to 30 an hour |
+| `POST /webhooks/revenuecat` | Webhook secret | RevenueCat says a plan changed, and the server asks it for the current state. Answers 503 so it retries if RevenueCat can't be reached |
 | `DELETE /me` | Yes | Permanently deletes the account and its exercises |
 | `GET /exercises` | Yes | Lists your own exercises, leaving out deleted ones |
 | `PUT /exercises/<id>` | Yes | Creates or replaces an exercise. Only its owner can change it |

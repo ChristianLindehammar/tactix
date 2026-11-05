@@ -12,6 +12,7 @@ from flask import Blueprint, current_app, g, jsonify, request
 from .auth import clear_session_cookie, hash_token, presented_token, require_user, set_session_cookie
 from .db import get_db, query_one
 from .provider_tokens import InvalidProviderToken, ProviderUnavailable
+from .plans import plan_of
 from .rate_limit import client_address, rate_limited
 
 logger = logging.getLogger('coachmate')
@@ -228,8 +229,8 @@ def sign_out():
 @bp.get('/me')
 @require_user
 def me():
-    row = query_one('SELECT id, email FROM users WHERE id = %s', (g.user_id,))
-    return jsonify({'userId': row['id'], 'email': row['email']})
+    row = query_one('SELECT id, email, plan_expires_at FROM users WHERE id = %s', (g.user_id,))
+    return jsonify({'userId': row['id'], 'email': row['email'], 'plan': plan_of(row['plan_expires_at'])})
 
 
 @bp.delete('/me')

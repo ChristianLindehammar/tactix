@@ -6,7 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from coachmate_api import create_app
-from coachmate_api.config import db_config_from_env, provider_audiences_from_env
+from coachmate_api.config import db_config_from_env, plan_source_from_env, provider_audiences_from_env
 from coachmate_api.mail import smtp_sender_from_env
 from coachmate_api.provider_tokens import ProviderTokenVerifier, real_signing_keys
 
@@ -27,6 +27,8 @@ app = create_app(
     db_config_from_env(),
     send_sign_in_code=smtp_sender_from_env(),
     provider_verifier=ProviderTokenVerifier(provider_audiences_from_env(), real_signing_keys()),
+    plan_source=plan_source_from_env(),
+    plan_webhook_secret=os.getenv('REVENUECAT_WEBHOOK_SECRET'),
 )
 
 if __name__ == '__main__':

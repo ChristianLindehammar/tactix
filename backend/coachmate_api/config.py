@@ -1,5 +1,7 @@
 import os
 
+from .plans import revenuecat_plan_source
+
 
 def db_config_from_env():
     return {
@@ -21,3 +23,9 @@ def _list_from_env(name):
 def provider_audiences_from_env():
     """Which apps' tokens we accept. A provider with none set can't be used to sign in."""
     return {'google': _list_from_env('GOOGLE_CLIENT_IDS'), 'apple': _list_from_env('APPLE_CLIENT_IDS')}
+
+
+def plan_source_from_env():
+    """Asks RevenueCat about coaches' plans. Without a key, plans can't be checked."""
+    api_key = os.getenv('REVENUECAT_SECRET_KEY')
+    return revenuecat_plan_source(api_key, os.getenv('REVENUECAT_ENTITLEMENT', 'premium')) if api_key else None

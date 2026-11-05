@@ -16,6 +16,15 @@ SERVER = {
 }
 DB_NAME = 'coachmate_test'
 DB_CONFIG = {**SERVER, 'database': DB_NAME}
+PAID_UNTIL = 4_102_444_800  # The year 2100
+
+
+def give_plan(db_config, email):
+    connection = mysql.connector.connect(**db_config)
+    cursor = connection.cursor()
+    cursor.execute('UPDATE users SET plan_expires_at = %s WHERE email = %s', (PAID_UNTIL, email))
+    connection.commit()
+    connection.close()
 
 
 @pytest.fixture()
@@ -55,15 +64,18 @@ def client(db_config):
 
 @pytest.fixture()
 def register(client, db_config):
-    """Creates a signed-in coach and returns the headers that identify them."""
+    """Creates a signed-in coach and returns the headers that identify them. They have a paid
+    plan unless the test says otherwise, as most tests are about something else."""
 
-    def _register():
+    def _register(paid=True):
         codes = []
         api = create_app(db_config, send_sign_in_code=lambda _email, code, _locale: codes.append(code)).test_client()
         email = f'{uuid.uuid4()}@example.com'
         assert api.post('/auth/email/start', json={'email': email}).status_code == 202
         response = api.post('/auth/email/verify', json={'email': email, 'code': codes[-1]})
         assert response.status_code == 200
+        if paid:
+            give_plan(db_config, email)
         return {'Authorization': f"Bearer {response.get_json()['token']}"}
 
     return _register

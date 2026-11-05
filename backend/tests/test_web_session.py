@@ -1,6 +1,7 @@
 import pytest
 
 from coachmate_api import create_app
+from tests.conftest import give_plan
 from tests.test_email_sign_in import Outbox
 from tests.test_exercises import build_exercise
 
@@ -17,6 +18,7 @@ def browser(db_config):
         '/auth/email/verify',
         json={'email': 'coach@example.com', 'code': outbox.last_code, 'session': 'cookie'},
     )
+    give_plan(db_config, 'coach@example.com')
     api.sign_in_response = response
     return api
 

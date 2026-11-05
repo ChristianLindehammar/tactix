@@ -2,6 +2,7 @@ import pytest
 
 from coachmate_api import create_app
 from coachmate_api.rate_limit import DEFAULT_LIMITS
+from tests.conftest import DB_CONFIG, give_plan
 from tests.test_exercises import build_exercise, put
 
 
@@ -54,7 +55,11 @@ def test_a_coach_signs_in_with_the_code_sent_to_their_email(api, outbox):
     token = signed_in.get_json()['token']
     me = api.get('/me', headers={'Authorization': f'Bearer {token}'})
     assert me.status_code == 200
-    assert me.get_json() == {'userId': signed_in.get_json()['userId'], 'email': 'coach@example.com'}
+    assert me.get_json() == {
+        'userId': signed_in.get_json()['userId'],
+        'email': 'coach@example.com',
+        'plan': {'active': False, 'expiresAt': None},
+    }
 
 
 def test_signing_in_again_reaches_the_same_account(api, outbox):
@@ -202,7 +207,9 @@ class TestSession:
 class TestDeletingAnAccount:
     def signed_in(self, api, outbox, email='coach@example.com'):
         request_code(api, email=email)
-        return {'Authorization': f"Bearer {verify(api, outbox.last_code, email=email).get_json()['token']}"}
+        token = verify(api, outbox.last_code, email=email).get_json()['token']
+        give_plan(DB_CONFIG, email)
+        return {'Authorization': f'Bearer {token}'}
 
     def test_removes_the_user_their_exercises_and_sessions(self, api, outbox, rows):
         coach = self.signed_in(api, outbox)
