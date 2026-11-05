@@ -1,6 +1,6 @@
 # Handoff: premium exercise designer
 
-Last updated 2026-11-04. Branch: `feature/exercise-designer`, pushed, no PR yet.
+Last updated 2026-11-05. Branch: `feature/exercise-designer`, pushed, no PR yet.
 
 CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature that lets coaches design, tag, rate and find training exercises per sport. The feature works on Android and iOS, but it has no paywall yet.
 
@@ -104,7 +104,9 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Floorball and basketball.
     - Dark mode: the puck in the toolbar, the bandy board and the editor form.
 2. **Backend:**
-    - After deploying, check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit.
+    - Check the rate limiter sees real addresses (steps in `backend/README.md`). If the host has a proxy in front of Passenger, every coach would share one limit. The check blocks your IP from registering new installs for up to an hour and needs a phone on mobile data, so it hasn't been run.
+    - Add `scripts/backup_db.sh` to cron on the server before real coaches save anything, if that isn't done yet.
+    - Clear test data from the live database before launch. Nothing there is real yet: it holds users and exercises from the live server check and `CoachMate_Dev`. To remove the check's leftovers but keep the emulator's user, delete exercise `d09005cf-7bcd-4504-9725-2396f07547be`, then rows in `api_tokens` and `users` whose user owns no exercises. Removing exercises in `CoachMate_Dev`'s account as well means it won't send them again, because of the `exercise-sync:` keys.
     - Add ratings and average ratings, then filtering and sorting by rating in `GET /exercises`.
     - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option. Browsing others' exercises waits for the exercise library decision.
     - Titles sort with `å`, `ä` and `ö` among `a` and `o` on the server, unlike Swedish sorting in the app.
