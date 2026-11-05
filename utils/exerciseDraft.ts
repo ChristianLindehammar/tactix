@@ -10,6 +10,13 @@ import {
 } from '@/types/exercise';
 import { TacticsMarker } from '@/types/tacticsMarker';
 
+/** One step of the diagram. A blank note is left out when saved. */
+export interface DraftStep {
+  id: string;
+  note: string;
+  markers: TacticsMarker[];
+}
+
 /** What the editor holds: free-text fields stay as typed until saved. */
 export interface ExerciseDraft {
   title: string;
@@ -22,7 +29,7 @@ export interface ExerciseDraft {
   difficulty: ExerciseDifficulty;
   focus: FocusTag[];
   phase: ExercisePhase;
-  markers: TacticsMarker[];
+  steps: DraftStep[];
 }
 
 export type DraftError = 'required' | 'invalidNumber' | 'belowMinimum';
@@ -52,7 +59,7 @@ export const createDraft = (): ExerciseDraft => ({
   difficulty: 3,
   focus: [],
   phase: 'main',
-  markers: [],
+  steps: [{ id: randomUUID(), note: '', markers: [] }],
 });
 
 const numberText = (value: number | null) => (value === null ? '' : String(value));
@@ -68,8 +75,28 @@ export const draftFromExercise = (exercise: Exercise): ExerciseDraft => ({
   difficulty: exercise.difficulty,
   focus: exercise.focus,
   phase: exercise.phase,
-  markers: exercise.frames[0].markers,
+  steps: exercise.frames.map(frame => ({
+    id: frame.id,
+    note: frame.note ?? '',
+    markers: frame.markers,
+  })),
 });
+
+/** A new step after `index`: the same markers in the same places, minus the arrows that moved them. */
+export function addStep(steps: DraftStep[], index: number): DraftStep[] {
+  const added: DraftStep = {
+    id: randomUUID(),
+    note: '',
+    markers: steps[index].markers.filter(
+      marker => marker.type !== 'arrow-solid' && marker.type !== 'arrow-dashed',
+    ),
+  };
+  return [...steps.slice(0, index + 1), added, ...steps.slice(index + 1)];
+}
+
+/** An exercise always keeps at least one step. */
+export const removeStep = (steps: DraftStep[], index: number): DraftStep[] =>
+  steps.length > 1 ? steps.filter((_, i) => i !== index) : steps;
 
 export const isDraftChanged = (baseline: ExerciseDraft, draft: ExerciseDraft) =>
   JSON.stringify(baseline) !== JSON.stringify(draft);
@@ -115,8 +142,6 @@ export function draftToExercise(
     return { ok: false, errors };
   }
 
-  const [firstFrame, ...otherFrames] = existing?.frames ?? [{ id: randomUUID(), markers: [] }];
-
   return {
     ok: true,
     exercise: {
@@ -136,7 +161,9 @@ export function draftToExercise(
       durationMinutes,
       minPlayers,
       maxPlayers,
-      frames: [{ ...firstFrame, markers: draft.markers }, ...otherFrames],
+      frames: draft.steps.map(({ id, note, markers }) =>
+        note.trim() ? { id, note, markers } : { id, markers },
+      ),
       createdAt: existing?.createdAt ?? now,
       updatedAt: now,
       deletedAt: null,

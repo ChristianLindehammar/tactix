@@ -1,4 +1,12 @@
-import { createDraft, draftFromExercise, draftToExercise, ExerciseDraft } from '../exerciseDraft';
+import {
+  addStep,
+  createDraft,
+  draftFromExercise,
+  draftToExercise,
+  DraftStep,
+  ExerciseDraft,
+  removeStep,
+} from '../exerciseDraft';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { parseExercise } from '@/types/exercise';
 
@@ -46,13 +54,31 @@ describe('a new exercise from a draft', () => {
     expect(save(validDraft()).id).not.toBe(save(validDraft()).id);
   });
 
-  it('puts the markers on a single frame', () => {
-    const markers = [{ id: 'm', type: 'cone', x: 0.1, y: 0.2 }] as ExerciseDraft['markers'];
-
-    const { frames } = save(validDraft({ markers }));
+  it('starts with one empty step', () => {
+    const { frames } = save(validDraft());
 
     expect(frames).toHaveLength(1);
-    expect(frames[0].markers).toEqual(markers);
+    expect(frames[0].markers).toEqual([]);
+  });
+
+  it('saves each step as a frame, in order, with its note', () => {
+    const steps: ExerciseDraft['steps'] = [
+      { id: 's1', note: 'Pass wide', markers: [{ id: 'm', type: 'cone', x: 0.1, y: 0.2 }] },
+      { id: 's2', note: 'Cross', markers: [{ id: 'm', type: 'cone', x: 0.3, y: 0.4 }] },
+    ];
+
+    const { frames } = save(validDraft({ steps }));
+
+    expect(frames).toEqual([
+      { id: 's1', note: 'Pass wide', markers: [{ id: 'm', type: 'cone', x: 0.1, y: 0.2 }] },
+      { id: 's2', note: 'Cross', markers: [{ id: 'm', type: 'cone', x: 0.3, y: 0.4 }] },
+    ]);
+  });
+
+  it('leaves out a blank step note', () => {
+    const steps: ExerciseDraft['steps'] = [{ id: 's1', note: '  ', markers: [] }];
+
+    expect(save(validDraft({ steps })).frames[0]).toEqual({ id: 's1', markers: [] });
   });
 
   it('trims the title', () => {
@@ -131,12 +157,46 @@ describe('editing an existing exercise', () => {
     expect(saved).toEqual({ ...existing, updatedAt: NOW });
   });
 
-  it('changes only the first frame markers', () => {
-    const markers = [{ id: 'b', type: 'ball', x: 0.2, y: 0.2 }] as ExerciseDraft['markers'];
+  it('drops a step that was removed', () => {
+    const draft = draftFromExercise(existing);
 
-    const { frames } = save({ ...draftFromExercise(existing), markers }, existing);
+    const { frames } = save({ ...draft, steps: draft.steps.slice(0, 1) }, existing);
 
-    expect(frames[0]).toEqual({ id: 'first', note: 'Start', markers });
-    expect(frames[1]).toEqual(existing.frames[1]);
+    expect(frames).toEqual([existing.frames[0]]);
+  });
+});
+
+describe('steps', () => {
+  const player = { id: 'p', type: 'player', x: 0.2, y: 0.8, label: '9' } as const;
+  const cone = { id: 'c', type: 'cone', x: 0.5, y: 0.5 } as const;
+  const run = { id: 'r', type: 'arrow-solid', x: 0.2, y: 0.8, endX: 0.2, endY: 0.3 } as const;
+  const pass = { id: 'q', type: 'arrow-dashed', x: 0.2, y: 0.8, endX: 0.6, endY: 0.3 } as const;
+  const steps: DraftStep[] = [
+    { id: 'one', note: 'Run', markers: [player, cone, run, pass] },
+    { id: 'two', note: 'Shoot', markers: [cone] },
+  ];
+
+  it('copies everything but the arrows into a new step after the one it came from', () => {
+    const next = addStep(steps, 0);
+
+    expect(next).toHaveLength(3);
+    expect(next[0]).toBe(steps[0]);
+    expect(next[1]).toEqual({ id: expect.any(String), note: '', markers: [player, cone] });
+    expect(next[2]).toBe(steps[1]);
+  });
+
+  it('gives a new step its own id but keeps the marker ids, so markers can be followed', () => {
+    const [, added] = addStep(steps, 0);
+
+    expect(added.id).not.toBe('one');
+    expect(added.markers.map(marker => marker.id)).toEqual(['p', 'c']);
+  });
+
+  it('removes a step and keeps the others in order', () => {
+    expect(removeStep(steps, 0)).toEqual([steps[1]]);
+  });
+
+  it('keeps the only step', () => {
+    expect(removeStep([steps[0]], 0)).toEqual([steps[0]]);
   });
 });

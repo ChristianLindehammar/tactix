@@ -150,6 +150,12 @@ export default {
   placeMarkerHint: '{{name}}: tryck på planen för att placera',
   curveArrowHint: 'Dra i pilens mittpunkt för att böja den',
   curveArrowDragHint: 'Mot starten för fler vågor',
+  stepNumber: 'Steg {{number}}',
+  addStep: 'Lägg till steg',
+  deleteStep: 'Ta bort steg',
+  deleteStepConfirm: 'Ta bort det här steget och dess markörer?',
+  stepNote: 'Anteckning för steget',
+  stepNotePlaceholder: 'Vad händer i det här steget?',
   markerNames: {
     player: 'Spelare',
     opponent: 'Motståndare',

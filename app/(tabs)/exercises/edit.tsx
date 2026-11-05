@@ -17,6 +17,7 @@ import { usePreventRemove } from 'expo-router/react-navigation';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { FilterChip } from '@/components/FilterChip';
+import { StepTabs } from '@/components/StepTabs';
 import { TacticsBoard } from '@/components/TacticsBoard';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
@@ -35,12 +36,15 @@ import {
 } from '@/types/exercise';
 import { TACTICS_MARKER_TYPES } from '@/types/tacticsMarker';
 import {
+  addStep,
   createDraft,
   draftFromExercise,
   DraftErrors,
   draftToExercise,
   ExerciseDraft,
+  DraftStep,
   isDraftChanged,
+  removeStep,
 } from '@/utils/exerciseDraft';
 
 interface FieldProps extends TextInputProps {
@@ -73,6 +77,23 @@ const Field = ({ label, hint, error, containerStyle, ...input }: FieldProps) => 
   );
 };
 
+const StepNote = ({ value, onChangeText }: { value: string; onChangeText: (note: string) => void }) => {
+  const { t } = useTranslation();
+  const border = useThemeColor({}, 'borderColor') as string;
+  const textColor = useThemeColor({}, 'text') as string;
+
+  return (
+    <TextInput
+      accessibilityLabel={t('stepNote')}
+      placeholder={t('stepNotePlaceholder')}
+      placeholderTextColor="#888"
+      value={value}
+      onChangeText={onChangeText}
+      style={[styles.input, { borderColor: border, color: textColor }]}
+    />
+  );
+};
+
 export default function ExerciseEditorScreen() {
   const { id } = useLocalSearchParams<{ id?: string }>();
   const { selectedSport } = useSport();
@@ -91,6 +112,7 @@ export default function ExerciseEditorScreen() {
   const [errors, setErrors] = useState<DraftErrors>({});
   const [saveFailed, setSaveFailed] = useState(false);
   const [diagramOpen, setDiagramOpen] = useState(false);
+  const [selectedStep, setStepIndex] = useState(0);
   const saving = useRef(false);
   const saved = useRef(false);
 
@@ -137,6 +159,35 @@ export default function ExerciseEditorScreen() {
 
   const sport = existing?.sport ?? selectedSport;
   const update = (change: Partial<ExerciseDraft>) => setDraft(current => ({ ...current, ...change }));
+
+  // Never past the last step, even if the draft is replaced by a shorter one
+  const stepIndex = Math.min(selectedStep, draft.steps.length - 1);
+  const step = draft.steps[stepIndex];
+  const updateStep = (change: Partial<DraftStep>) =>
+    setDraft(current => ({
+      ...current,
+      steps: current.steps.map((existingStep, index) =>
+        index === stepIndex ? { ...existingStep, ...change } : existingStep,
+      ),
+    }));
+
+  const addStepAfterCurrent = () => {
+    setDraft(current => ({ ...current, steps: addStep(current.steps, stepIndex) }));
+    setStepIndex(stepIndex + 1);
+  };
+
+  const deleteCurrentStep = () =>
+    Alert.alert(t('deleteStep'), t('deleteStepConfirm'), [
+      { text: t('cancel'), style: 'cancel' },
+      {
+        text: t('delete'),
+        style: 'destructive',
+        onPress: () => {
+          setDraft(current => ({ ...current, steps: removeStep(current.steps, stepIndex) }));
+          setStepIndex(Math.max(stepIndex - 1, 0));
+        },
+      },
+    ]);
 
   const save = async () => {
     if (saving.current || !sport) return;
@@ -200,15 +251,19 @@ export default function ExerciseEditorScreen() {
 
         <View style={styles.field}>
           <ThemedText type="defaultSemiBold">{t('diagram')}</ThemedText>
+          {draft.steps.length > 1 && (
+            <StepTabs count={draft.steps.length} selected={stepIndex} onSelect={setStepIndex} />
+          )}
           <View style={styles.preview}>
             <TacticsBoard
               sport={sport}
-              value={draft.markers}
-              onChange={markers => update({ markers })}
+              value={step.markers}
+              onChange={markers => updateStep({ markers })}
               readOnly
               requireBall={false}
             />
           </View>
+          {step.note.trim() !== '' && <ThemedText>{step.note}</ThemedText>}
           <ThemedButton onPress={() => setDiagramOpen(true)}>{t('editDiagram')}</ThemedButton>
         </View>
 
@@ -319,17 +374,34 @@ export default function ExerciseEditorScreen() {
       </ScrollView>
 
       <Modal visible={diagramOpen} animationType="slide" onRequestClose={() => setDiagramOpen(false)}>
-        <ThemedView style={styles.container}>
+        <KeyboardAvoidingView
+          testID="diagram-editor"
+          style={[styles.container, { backgroundColor: background }]}
+          // A modal on Android doesn't resize for the keyboard, which would cover the step note
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        >
           <TacticsBoard
+            key={step.id}
             sport={sport}
-            value={draft.markers}
-            onChange={markers => update({ markers })}
+            value={step.markers}
+            onChange={markers => updateStep({ markers })}
+            guideMarkers={stepIndex > 0 ? draft.steps[stepIndex - 1].markers : undefined}
             requireBall={false}
             allowedMarkerTypes={[...TACTICS_MARKER_TYPES]}
             showToolHints
             enableLabels
             enableCurves
           />
+          <View style={styles.stepControls}>
+            <StepTabs
+              count={draft.steps.length}
+              selected={stepIndex}
+              onSelect={setStepIndex}
+              onAdd={addStepAfterCurrent}
+              onDelete={deleteCurrentStep}
+            />
+            <StepNote value={step.note} onChangeText={note => updateStep({ note })} />
+          </View>
           <Pressable
             onPress={() => setDiagramOpen(false)}
             accessibilityRole="button"
@@ -338,7 +410,7 @@ export default function ExerciseEditorScreen() {
           >
             <ThemedText type="link">{t('ok')}</ThemedText>
           </Pressable>
-        </ThemedView>
+        </KeyboardAvoidingView>
       </Modal>
     </KeyboardAvoidingView>
   );
@@ -394,6 +466,11 @@ const styles = StyleSheet.create({
   },
   rowField: {
     flex: 1,
+  },
+  stepControls: {
+    paddingHorizontal: 16,
+    paddingTop: 8,
+    gap: 8,
   },
   closeDiagram: {
     alignItems: 'center',

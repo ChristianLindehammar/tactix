@@ -150,6 +150,12 @@ export default {
   placeMarkerHint: '{{name}}: sijoita napauttamalla kenttää',
   curveArrowHint: 'Taivuta nuolta vetämällä sen keskipistettä',
   curveArrowDragHint: 'Kohti alkua saat lisää aaltoja',
+  stepNumber: 'Vaihe {{number}}',
+  addStep: 'Lisää vaihe',
+  deleteStep: 'Poista vaihe',
+  deleteStepConfirm: 'Poistetaanko tämä vaihe merkkeineen?',
+  stepNote: 'Vaiheen muistiinpano',
+  stepNotePlaceholder: 'Mitä tässä vaiheessa tapahtuu?',
   markerNames: {
     player: 'Pelaaja',
     opponent: 'Vastustaja',

@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, View } from 'react-native';
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { StepTabs } from '@/components/StepTabs';
 import { TacticsBoard } from '@/components/TacticsBoard';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
@@ -31,6 +32,7 @@ export default function ExerciseDetailScreen() {
   const [userId, setUserId] = useState<string | null>(null);
   const [rating, setRating] = useState<RatingStars | null>(null);
   const [failure, setFailure] = useState<string | null>(null);
+  const [stepIndex, setStepIndex] = useState(0);
 
   // Reloads on return from the editor, so edits show straight away
   useFocusEffect(
@@ -107,6 +109,9 @@ export default function ExerciseDetailScreen() {
     );
   }
 
+  // The exercise may have reloaded with fewer steps
+  const step = exercise.frames[stepIndex] ?? exercise.frames[0];
+
   return (
     <ScrollView
       style={{ backgroundColor: background }}
@@ -117,15 +122,19 @@ export default function ExerciseDetailScreen() {
       <ThemedText type="title">{exercise.title}</ThemedText>
       <ThemedText style={styles.summary}>{describeExercise(exercise, t)}</ThemedText>
 
+      {exercise.frames.length > 1 && (
+        <StepTabs count={exercise.frames.length} selected={stepIndex} onSelect={setStepIndex} />
+      )}
       <View style={styles.diagram}>
         <TacticsBoard
           sport={exercise.sport}
-          value={exercise.frames[0].markers}
+          value={step.markers}
           onChange={noop}
           readOnly
           requireBall={false}
         />
       </View>
+      {step.note ? <ThemedText>{step.note}</ThemedText> : null}
 
       <View style={styles.section}>
         <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>

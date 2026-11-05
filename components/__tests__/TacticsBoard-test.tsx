@@ -371,6 +371,35 @@ describe('TacticsBoard', () => {
     });
   });
 
+  describe('previous step guide', () => {
+    const player = createTacticsMarker('player', 0.2, 0.8);
+    const run = createArrowMarker('arrow-solid', 0.2, 0.8, 0.2, 0.3);
+
+    it('draws the previous step out of reach behind the markers', async () => {
+      await renderBoard({ value: [ball, player], guideMarkers: [player, run] });
+
+      // Hidden from screen readers, which would otherwise announce every marker twice
+      const hidden = { includeHiddenElements: true };
+      const guide = screen.getByTestId('step-guide', hidden);
+      expect(guide.props.pointerEvents).toBe('none');
+      expect(guide.props.importantForAccessibility).toBe('no-hide-descendants');
+      expect(screen.getByTestId(`guide-marker-${player.id}`, hidden)).toBeTruthy();
+      expect(screen.getByTestId(`guide-marker-${run.id}`, hidden)).toBeTruthy();
+    });
+
+    it('leaves the current markers as the only ones to label', async () => {
+      await renderBoard({ value: [ball, player], guideMarkers: [player], enableLabels: true });
+
+      expect(screen.getAllByTestId(`marker-${player.id}`)).toHaveLength(1);
+    });
+
+    it('draws nothing without a previous step', async () => {
+      await renderBoard();
+
+      expect(screen.queryByTestId('step-guide', { includeHiddenElements: true })).toBeNull();
+    });
+  });
+
   describe('read-only mode', () => {
     it('hides the toolbar', async () => {
       await renderBoard({ readOnly: true });

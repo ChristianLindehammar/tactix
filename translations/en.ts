@@ -150,6 +150,12 @@ export default {
   placeMarkerHint: '{{name}}: tap the court to place it',
   curveArrowHint: "Drag an arrow's middle dot to curve it",
   curveArrowDragHint: 'Toward the start for more waves',
+  stepNumber: 'Step {{number}}',
+  addStep: 'Add step',
+  deleteStep: 'Delete step',
+  deleteStepConfirm: 'Delete this step and its markers?',
+  stepNote: 'Step note',
+  stepNotePlaceholder: 'What happens in this step?',
   markerNames: {
     player: 'Player',
     opponent: 'Opponent',

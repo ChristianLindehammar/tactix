@@ -25,8 +25,9 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 | Curved arrows | Built and checked on Android (`CoachMate_Google`), in the exercise editor and on the Tactics board. The backend's validation is updated but not deployed, so the live server drops curves on upload. Not tried on iOS or with a real finger |
+| Multi-step drills | Built and checked on Android (`CoachMate_Google`): adding a step, notes, the faint previous step, saving, and switching steps on the view screen. Deleting a step is only covered by tests. Not tried on iOS. Uses the existing `frames`, so the backend needs no change |
 
-Last run: 419 app tests in 29 suites and 211 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 440 app tests in 29 suites and 211 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 
@@ -47,7 +48,7 @@ Last run: 419 app tests in 29 suites and 211 backend tests passing. `tsc` report
 - **Placement:** exercises have their own tab and share the board component with Tactics. Free drawing on the Tactics board stays free.
 - **Format:** versioned JSON (`schemaVersion: 1`). Nothing has shipped, so the format can still change without a migration.
 - **Stable keys:** focus tags, phases and difficulty are stored as keys and translated on display.
-- **Frames:** `frames` is an array from the start, so multi-step drills won't need a migration. The UI only uses the first frame so far.
+- **Steps:** each frame in `frames` is a step, with an optional `note`. Numbered tabs (`components/StepTabs.tsx`) sit under the board in the diagram editor and above the diagram on the form and view screens, which show one step at a time. A new step goes after the selected one and copies its players, balls, cones and goals, keeping their marker IDs, but not its arrows, which described the last step's movement. While editing a later step, the previous one is drawn at 35% opacity behind it (`guideMarkers` on `TacticsBoard`), out of reach and hidden from screen readers. Deleting a step asks first, and the last step can't be deleted. There's no limit on the number of steps. Chosen by Christian on 2026-11-05.
 - **Storage:** one AsyncStorage key per exercise (`exercise:<id>`), found by prefix, with no index. Deletes are soft (`deletedAt`) so they can sync later.
 - **Ownership:** `ownerId` comes from a local ID until accounts exist. Only the owner can edit or delete, and the repository enforces it as well as the UI. A null owner means nobody can edit.
 - **Sorting and minimum rating:** the library sorts by latest updated (default), highest rated, title or difficulty, with the latest edit first within a tie. The minimum rating hides unrated exercises. Both use your own stars, as there are no averages until a backend exists. Clear filters resets the minimum rating but not the sort. Filter chips sit in a panel that's closed by default, opened with a Filter button that shows how many are active. Sort stays visible beside the button, and search and player count stay visible and aren't counted.
@@ -149,7 +150,7 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
 
 Later:
 - Sharing exercises by link, once they're in the database.
-- Multi-step drills using `frames`.
+- Animating between steps: markers keep their IDs from step to step, so they could slide into place.
 
 ## Found during device checks, not fixed
 

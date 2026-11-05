@@ -69,6 +69,47 @@ describe('exercise detail', () => {
     expect(screen.getByTestId('tactics-board-court').props.pointerEvents).toBe('none');
   });
 
+  describe('steps', () => {
+    beforeEach(async () => {
+      await exerciseRepository.save(
+        buildExercise({
+          id: 'steps',
+          sport: 'soccer',
+          frames: [
+            { id: 'one', note: 'Set up', markers: [{ id: 'c', type: 'cone', x: 0.5, y: 0.5 }] },
+            { id: 'two', note: 'Go', markers: [{ id: 'p', type: 'player', x: 0.5, y: 0.5 }] },
+          ],
+        }),
+      );
+      mockId = 'steps';
+    });
+
+    it('shows the first step and its note to begin with', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Set up')).toBeTruthy();
+      expect(screen.getByLabelText('Step 1').props.accessibilityState.selected).toBe(true);
+      expect(screen.queryByLabelText('Player')).toBeNull();
+    });
+
+    it('switches to another step and its note', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByLabelText('Step 2'));
+
+      expect(screen.getByText('Go')).toBeTruthy();
+      expect(screen.queryByText('Set up')).toBeNull();
+      expect(screen.getByLabelText('Player')).toBeTruthy();
+    });
+  });
+
+  it('shows no step tabs when there is only one step', async () => {
+    renderExerciseScreen(<ExerciseDetailScreen />);
+    await screen.findByText('Triangle passing');
+
+    expect(screen.queryByLabelText('Step 1')).toBeNull();
+  });
+
   it('opens the editor for this exercise', async () => {
     renderExerciseScreen(<ExerciseDetailScreen />);
 

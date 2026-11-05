@@ -52,6 +52,8 @@ export interface TacticsBoardProps {
   /** Gives each arrow a middle dot that curves it into an arc or a wave. */
   enableCurves?: boolean;
   /** Display only: no toolbar, no touches, and the markers never change. */
+  /** Drawn faintly behind the markers, out of reach, such as the previous step of a drill. */
+  guideMarkers?: TacticsMarker[];
   readOnly?: boolean;
   /** Keep at least one ball on the board. Turn off for drills without a ball. */
   requireBall?: boolean;
@@ -75,6 +77,8 @@ const DEFAULT_MARKER_TYPES: TacticsMarkerType[] = [
 const MAX_LABEL_LENGTH = 3;
 // Below this width full-size markers would crowd the diagram
 const FULL_SIZE_COURT_WIDTH = 320;
+
+const noop = () => {};
 
 const isArrow = (type: TacticsMarkerType): type is 'arrow-solid' | 'arrow-dashed' =>
   type === 'arrow-solid' || type === 'arrow-dashed';
@@ -102,6 +106,7 @@ export function TacticsBoard({
   showToolHints = false,
   enableLabels = false,
   enableCurves = false,
+  guideMarkers,
   readOnly = false,
   requireBall = true,
   bottomInset = 0,
@@ -255,6 +260,44 @@ export function TacticsBoard({
     </TouchableOpacity>
   );
 
+  const renderMarkerBody = (marker: TacticsMarker, interactive: boolean) => (
+    <View style={{ transform: [{ scale: markerScale }] }}>
+      {marker.type === 'ball' ? (
+        <View style={styles.ballMarker}>
+          <View style={styles.ballIcon}>
+            <SportBall sport={sport} size={24} color="#FFA000" />
+          </View>
+        </View>
+      ) : marker.type === 'cone' ? (
+        <View style={styles.coneMarker}>
+          <ConeSvg size={32} />
+        </View>
+      ) : marker.type === 'goal' ? (
+        <View style={styles.coneMarker}>
+          <GoalSvg size={36} color={arrowColor} />
+        </View>
+      ) : (
+        <TouchableOpacity
+          testID={interactive ? `marker-${marker.id}` : undefined}
+          activeOpacity={0.8}
+          accessibilityRole={interactive && enableLabels ? 'button' : undefined}
+          accessibilityLabel={marker.label ?? t(`markerNames.${marker.type}`)}
+          onPress={interactive && enableLabels ? () => setLabellingId(marker.id) : undefined}
+          style={[
+            styles.personMarker,
+            { backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F' },
+          ]}
+        >
+          {marker.label ? (
+            <ThemedText style={styles.markerLabel}>{marker.label}</ThemedText>
+          ) : (
+            <MaterialIcons name="person" size={28} color="#fff" />
+          )}
+        </TouchableOpacity>
+      )}
+    </View>
+  );
+
   const confirmDelete = (onConfirm: () => void) =>
     Alert.alert(t('delete'), t('deleteMarkerConfirm'), [
       { text: t('cancel'), style: 'cancel' },
@@ -333,6 +376,54 @@ export function TacticsBoard({
         >
           <CourtSurface width={court.width} height={court.height} CourtSvg={Svg} />
 
+          {guideMarkers && (
+            <View
+              testID="step-guide"
+              pointerEvents="none"
+              accessibilityElementsHidden
+              importantForAccessibility="no-hide-descendants"
+              style={[StyleSheet.absoluteFill, styles.guide]}
+            >
+              {guideMarkers.map(marker => (
+                <View
+                  key={marker.id}
+                  testID={`guide-marker-${marker.id}`}
+                  pointerEvents="none"
+                  style={StyleSheet.absoluteFill}
+                >
+                  {isArrow(marker.type) ? (
+                    <ArrowMarker
+                      id={marker.id}
+                      x={marker.x}
+                      y={marker.y}
+                      endX={marker.endX ?? marker.x}
+                      endY={marker.endY ?? marker.y + 0.15}
+                      dashed={marker.type === 'arrow-dashed'}
+                      curve={
+                        marker.bend !== undefined && marker.waves !== undefined
+                          ? { bend: marker.bend, waves: marker.waves }
+                          : undefined
+                      }
+                      containerSize={court}
+                      color={arrowColor}
+                      onDragEnd={noop}
+                    />
+                  ) : (
+                    <DraggableMarker
+                      id={marker.id}
+                      x={marker.x}
+                      y={marker.y}
+                      containerSize={court}
+                      onDragEnd={noop}
+                    >
+                      {renderMarkerBody(marker, false)}
+                    </DraggableMarker>
+                  )}
+                </View>
+              ))}
+            </View>
+          )}
+
           {value
             .filter(m => isArrow(m.type))
             .map(marker => (
@@ -399,41 +490,7 @@ export function TacticsBoard({
                 // Arrows sit at 1. A row of cones would otherwise cover the ends of an arrow through it
                 zIndex={draggingId === marker.id ? 3 : enableCurves && marker.type === 'cone' ? 0 : 2}
               >
-                <View style={{ transform: [{ scale: markerScale }] }}>
-                  {marker.type === 'ball' ? (
-                    <View style={styles.ballMarker}>
-                      <View style={styles.ballIcon}>
-                        <SportBall sport={sport} size={24} color="#FFA000" />
-                      </View>
-                    </View>
-                  ) : marker.type === 'cone' ? (
-                    <View style={styles.coneMarker}>
-                      <ConeSvg size={32} />
-                    </View>
-                  ) : marker.type === 'goal' ? (
-                    <View style={styles.coneMarker}>
-                      <GoalSvg size={36} color={arrowColor} />
-                    </View>
-                  ) : (
-                    <TouchableOpacity
-                      testID={`marker-${marker.id}`}
-                      activeOpacity={0.8}
-                      accessibilityRole={enableLabels ? 'button' : undefined}
-                      accessibilityLabel={marker.label ?? t(`markerNames.${marker.type}`)}
-                      onPress={enableLabels ? () => setLabellingId(marker.id) : undefined}
-                      style={[
-                        styles.personMarker,
-                        { backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F' },
-                      ]}
-                    >
-                      {marker.label ? (
-                        <ThemedText style={styles.markerLabel}>{marker.label}</ThemedText>
-                      ) : (
-                        <MaterialIcons name="person" size={28} color="#fff" />
-                      )}
-                    </TouchableOpacity>
-                  )}
-                </View>
+                {renderMarkerBody(marker, true)}
               </DraggableMarker>
             ))}
         </View>
@@ -493,6 +550,9 @@ const styles = StyleSheet.create({
   activeButton: {
     borderColor: '#4CAF50',
     backgroundColor: 'rgba(76, 175, 80, 0.1)',
+  },
+  guide: {
+    opacity: 0.35,
   },
   clearButton: {
     backgroundColor: '#D32F2F',

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 
 import ExerciseEditorScreen from '@/app/(tabs)/exercises/edit';
 import { getCurrentUserId } from '@/services/currentUser';
@@ -215,6 +215,70 @@ describe('exercise editor', () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 
       await waitFor(() => expect(screen.getByText('This exercise no longer exists.')).toBeTruthy());
+    });
+
+    describe('steps', () => {
+      const openDiagram = async () => {
+        renderExerciseScreen(<ExerciseEditorScreen />);
+        fireEvent.press(await screen.findByText('Edit diagram'));
+      };
+
+      it('adds a step that starts from the markers of the current one', async () => {
+        await openDiagram();
+
+        fireEvent.press(screen.getByLabelText('Add step'));
+        fireEvent.press(screen.getByTestId('close-diagram'));
+        await pressSave();
+
+        const [saved] = await exerciseRepository.list();
+        expect(saved.frames).toHaveLength(2);
+        expect(saved.frames[1].markers).toEqual(existing.frames[0].markers);
+        expect(saved.frames[1].id).not.toBe(existing.frames[0].id);
+      });
+
+      it('keeps a separate note for each step', async () => {
+        await openDiagram();
+
+        fireEvent.changeText(screen.getByLabelText('Step note'), 'Pass wide');
+        fireEvent.press(screen.getByLabelText('Add step'));
+        expect(screen.getByLabelText('Step note').props.value).toBe('');
+        fireEvent.changeText(screen.getByLabelText('Step note'), 'Cross');
+        fireEvent.press(within(screen.getByTestId('diagram-editor')).getByLabelText('Step 1'));
+        expect(screen.getByLabelText('Step note').props.value).toBe('Pass wide');
+        fireEvent.press(screen.getByTestId('close-diagram'));
+        await pressSave();
+
+        const [saved] = await exerciseRepository.list();
+        expect(saved.frames.map(frame => frame.note)).toEqual(['Pass wide', 'Cross']);
+      });
+
+      it('shows the previous step faintly behind a later one', async () => {
+        const hidden = { includeHiddenElements: true };
+        await openDiagram();
+        expect(screen.queryByTestId('step-guide', hidden)).toBeNull();
+
+        fireEvent.press(screen.getByLabelText('Add step'));
+
+        expect(screen.getByTestId('step-guide', hidden)).toBeTruthy();
+      });
+
+      it('deletes the shown step after asking, but never the only one', async () => {
+        const alert = jest.spyOn(Alert, 'alert');
+        await openDiagram();
+        expect(screen.queryByLabelText('Delete step')).toBeNull();
+
+        fireEvent.press(screen.getByLabelText('Add step'));
+        fireEvent.changeText(screen.getByLabelText('Step note'), 'Doomed');
+        fireEvent.press(screen.getByLabelText('Delete step'));
+        act(() => alert.mock.lastCall?.[2]?.find(button => button.text === 'Delete')?.onPress?.());
+
+        expect(screen.queryByLabelText('Step 2')).toBeNull();
+        expect(screen.getByLabelText('Step note').props.value).toBe('');
+        fireEvent.press(screen.getByTestId('close-diagram'));
+        await pressSave();
+        const [saved] = await exerciseRepository.list();
+        expect(saved.frames).toEqual(existing.frames);
+      });
     });
   });
 
