@@ -26,7 +26,13 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getCurrentUserId } from '@/services/currentUser';
 import { exerciseRepository } from '@/services/exerciseRepository';
-import { Exercise, EXERCISE_DIFFICULTIES, EXERCISE_PHASES, FOCUS_TAGS } from '@/types/exercise';
+import {
+  Exercise,
+  EXERCISE_DIFFICULTIES,
+  EXERCISE_PHASES,
+  FOCUS_TAGS,
+  MAX_TITLE_LENGTH,
+} from '@/types/exercise';
 import { TACTICS_MARKER_TYPES } from '@/types/tacticsMarker';
 import {
   createDraft,
@@ -187,6 +193,7 @@ export default function ExerciseEditorScreen() {
         <Field
           label={t('exerciseTitle')}
           value={draft.title}
+          maxLength={MAX_TITLE_LENGTH}
           onChangeText={value => update({ title: value })}
           error={errorText('title')}
         />

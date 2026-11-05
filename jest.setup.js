@@ -11,3 +11,18 @@ jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock
 jest.mock('@react-native-async-storage/async-storage', () =>
   require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
 );
+
+jest.mock('expo-secure-store', () => {
+  const stored = new Map();
+  return {
+    getItemAsync: async key => stored.get(key) ?? null,
+    setItemAsync: async (key, value) => void stored.set(key, value),
+    deleteItemAsync: async key => void stored.delete(key),
+  };
+});
+
+// Tests must never reach the live server. Sync tests build their own, with a fake fetch.
+jest.mock('./constants/api', () => ({
+  API_BASE_URL: 'https://api.test',
+  EXERCISE_SYNC_ENABLED: false,
+}));

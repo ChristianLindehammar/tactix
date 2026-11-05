@@ -42,6 +42,12 @@ describe('exercise editor', () => {
   });
 
   describe('creating an exercise', () => {
+    it('stops a title at the length the server accepts', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+
+      expect(await screen.findByLabelText('Title')).toHaveProp('maxLength', 200);
+    });
+
     it('saves what was entered for the selected sport and goes back', async () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 

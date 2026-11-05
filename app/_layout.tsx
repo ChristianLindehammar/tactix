@@ -3,14 +3,15 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { TeamProvider } from '@/context/TeamContext';
 import { SportProvider } from '@/context/SportContext';
-import { View } from 'react-native';
+import { AppState, View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { syncExercises } from '@/services/exerciseRepository';
 
 // Prevent auto-hide of splash screen
 SplashScreen.preventAutoHideAsync();
@@ -20,6 +21,14 @@ export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+
+  useEffect(() => {
+    void syncExercises();
+    const subscription = AppState.addEventListener('change', state => {
+      if (state === 'active') void syncExercises();
+    });
+    return () => subscription.remove();
+  }, []);
 
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded || fontError) {

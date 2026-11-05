@@ -3,6 +3,9 @@ import { TACTICS_MARKER_TYPES, TacticsMarker } from '@/types/tacticsMarker';
 
 export const EXERCISE_SCHEMA_VERSION = 1;
 
+/** The most the server accepts; backend/coachmate_api/validation.py has the same limit. */
+export const MAX_TITLE_LENGTH = 200;
+
 export const EXERCISE_DIFFICULTIES = [1, 2, 3, 4, 5] as const;
 export type ExerciseDifficulty = (typeof EXERCISE_DIFFICULTIES)[number];
 

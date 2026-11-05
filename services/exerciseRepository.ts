@@ -1,6 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import { API_BASE_URL, EXERCISE_SYNC_ENABLED } from '@/constants/api';
 import { getCurrentUserId } from '@/services/currentUser';
+import { createExerciseSync, ExerciseSync } from '@/services/exerciseSync';
 import { Exercise, parseExercise } from '@/types/exercise';
 
 const KEY_PREFIX = 'exercise:';
@@ -103,4 +105,37 @@ export function createLocalExerciseRepository(
   };
 }
 
-export const exerciseRepository = createLocalExerciseRepository();
+/** Saves on the device first, then uploads in the background so saving never waits or fails on the network. */
+export function createSyncedExerciseRepository(
+  local: ExerciseRepository,
+  sync: ExerciseSync,
+): ExerciseRepository {
+  return {
+    ...local,
+    save: async exercise => {
+      await local.save(exercise);
+      void sync.syncNow();
+    },
+    remove: async id => {
+      await local.remove(id);
+      void sync.syncNow();
+    },
+  };
+}
+
+const localExerciseRepository = createLocalExerciseRepository();
+const exerciseSync = createExerciseSync({
+  baseUrl: API_BASE_URL,
+  fetch: (...args) => fetch(...args),
+  local: localExerciseRepository,
+  getCurrentUserId,
+});
+
+export const exerciseRepository = EXERCISE_SYNC_ENABLED
+  ? createSyncedExerciseRepository(localExerciseRepository, exerciseSync)
+  : localExerciseRepository;
+
+/** Catches up on exercises saved earlier, or while offline. */
+export const syncExercises = async () => {
+  if (EXERCISE_SYNC_ENABLED) await exerciseSync.syncNow();
+};
