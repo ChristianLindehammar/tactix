@@ -16,8 +16,8 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Dark mode on iOS, exercise screens only | Done |
 | Library sorting and minimum rating | Done |
 | Device checks on Android | Done on `CoachMate_Dev`; iOS gaps listed under next steps |
-| Plans on the backend: RevenueCat webhook, plan refresh, uploads need a plan | Built and tested with a fake RevenueCat, **not committed or deployed** |
-| RevenueCat and paywall in the app | **Next**; test seams still to be confirmed |
+| Plans on the backend: RevenueCat webhook, plan refresh, uploads need a plan | Built and tested with a fake RevenueCat, committed in `c6eaa12`, **not deployed**. Deploying blocks uploads until RevenueCat is set up |
+| RevenueCat and paywall in the app | Plan service, paywall, locked screen, export and delete built with automated tests. **Not yet seen on a device.** The RevenueCat adapter (`services/revenueCatPlanStore.ts`) has no tests and has never run against RevenueCat. Without keys, dev builds use a simulated store and release builds stay locked |
 | Backend: Flask API on MariaDB, in `backend/` | Deployed at `lindehammar-konsult.se/coachmate/api`: registering an install, saving, fetching and listing exercises, rate limits. A check against the live server passed on 2026-11-05 |
 | App upload to the backend | Done in dev builds, checked on Android against the live server. Off in release builds until the privacy policy is updated |
 | Sign-in by email code: backend, app, Account screen | Built and checked on Android against a local API, committed in `56dfa1f`, **not deployed**. Off in release builds |
@@ -25,7 +25,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
-Last run: 334 app tests in 25 suites and 196 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 358 app tests in 27 suites and 196 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 

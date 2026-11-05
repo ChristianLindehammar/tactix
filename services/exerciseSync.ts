@@ -103,6 +103,11 @@ export function createExerciseSync({
         await onSessionRejected();
         throw new SyncStopped('unauthorized');
       }
+      if (response.status === 403) {
+        const { error } = await response.clone().json().catch(() => ({ error: null }));
+        // Nothing is wrong with the exercise, and it goes up once the coach has a plan
+        if (error === 'planRequired') throw new SyncStopped('planRequired');
+      }
       if (!response.ok) {
         // Retrying can't help until the coach edits it, which gives it a new updatedAt
         console.warn(`Server refused exercise ${exercise.id}: ${response.status}`);

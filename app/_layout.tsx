@@ -12,6 +12,8 @@ import { AppState, View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { startAccountAndSync, syncExercises } from '@/services/exerciseRepository';
+// Listens for sign-in, so it has to be loaded before the session is restored
+import '@/services/plans';
 
 // Prevent auto-hide of splash screen
 SplashScreen.preventAutoHideAsync();

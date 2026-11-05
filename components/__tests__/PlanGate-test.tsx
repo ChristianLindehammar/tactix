@@ -1,0 +1,136 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import * as React from 'react';
+import { Text } from 'react-native';
+
+import { PlanGate } from '@/components/PlanGate';
+import { createPlanService, PlanStore, StorePlan } from '@/services/planService';
+import i18n from '@/translations/i18n';
+
+const NEXT_YEAR = '2099-01-15T08:00:00.000Z';
+const LAST_YEAR = '2020-01-15T08:00:00.000Z';
+
+const t = (key: string, options?: Record<string, unknown>) => i18n.t(key, options);
+
+function setup(plan: StorePlan, { offline = false } = {}) {
+  const store: jest.Mocked<PlanStore> = {
+    getPlan: jest.fn(async () => plan),
+    getPrice: jest.fn(async () => '299 kr'),
+    purchase: jest.fn(async () => plan),
+    restore: jest.fn(async () => plan),
+    logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
+    logOut: jest.fn(async (): Promise<void> => undefined),
+  };
+  if (offline) store.getPlan.mockRejectedValue(new Error('offline'));
+  const plans = createPlanService({
+    store,
+    auth: {
+      getState: () => ({ status: 'signedOut' }),
+      subscribe: () => () => undefined,
+      getAuthHeaders: async () => null,
+    },
+    baseUrl: 'https://api.test',
+    fetch: jest.fn() as unknown as typeof globalThis.fetch,
+  });
+  const onExport = jest.fn(async () => undefined);
+  const onDeleteAll = jest.fn(async () => undefined);
+  render(
+    <PlanGate plans={plans} onExport={onExport} onDeleteAll={onDeleteAll}>
+      <Text>the library</Text>
+    </PlanGate>,
+  );
+  return { store, onExport, onDeleteAll };
+}
+
+beforeEach(() => AsyncStorage.clear());
+
+test('a paying coach sees their exercises', async () => {
+  setup({ expiresAt: NEXT_YEAR });
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+});
+
+test('a coach who never had a plan sees the trial and its price instead of exercises', async () => {
+  setup({ expiresAt: null });
+
+  expect(await screen.findByText(t('planTrialPrice', { price: '299 kr' }))).toBeTruthy();
+  expect(screen.getByRole('button', { name: t('planStartTrial') })).toBeTruthy();
+  expect(screen.queryByText('the library')).toBeNull();
+});
+
+test('starting the trial opens up the exercises', async () => {
+  const { store } = setup({ expiresAt: null });
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planStartTrial') }));
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+});
+
+test('a purchase that fails says so and leaves the exercises locked', async () => {
+  const { store } = setup({ expiresAt: null });
+  store.purchase.mockRejectedValue(new Error('store failed'));
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planStartTrial') }));
+
+  expect(await screen.findByRole('alert')).toHaveTextContent(t('planErrorPurchase'));
+  expect(screen.queryByText('the library')).toBeNull();
+});
+
+test('restoring brings back a plan bought earlier', async () => {
+  const { store } = setup({ expiresAt: null });
+  store.restore.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planRestore') }));
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+});
+
+test('a coach whose plan ended is told their exercises are safe, and can renew', async () => {
+  const { store } = setup({ expiresAt: LAST_YEAR });
+  store.purchase.mockResolvedValue({ expiresAt: NEXT_YEAR });
+
+  expect(await screen.findByText(t('planEndedTitle'))).toBeTruthy();
+  expect(screen.queryByText('the library')).toBeNull();
+  expect(screen.queryByRole('button', { name: t('planStartTrial') })).toBeNull();
+
+  fireEvent.press(screen.getByRole('button', { name: t('planRenew') }));
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+});
+
+test('a coach whose plan ended can still take their exercises with them', async () => {
+  const { onExport } = setup({ expiresAt: LAST_YEAR });
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planExport') }));
+
+  await waitFor(() => expect(onExport).toHaveBeenCalledTimes(1));
+});
+
+test('a coach whose plan ended can delete their exercises, after confirming', async () => {
+  const { onDeleteAll } = setup({ expiresAt: LAST_YEAR });
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planDeleteAll') }));
+  expect(onDeleteAll).not.toHaveBeenCalled();
+  fireEvent.press(await screen.findByRole('button', { name: t('planDeleteAllYes') }));
+
+  await waitFor(() => expect(onDeleteAll).toHaveBeenCalledTimes(1));
+});
+
+test('a coach is told if their plan could not be checked, and can try again', async () => {
+  const { store } = setup({ expiresAt: NEXT_YEAR }, { offline: true });
+
+  expect(await screen.findByRole('alert')).toHaveTextContent(t('planErrorCheck'));
+  store.getPlan.mockResolvedValue({ expiresAt: NEXT_YEAR });
+  fireEvent.press(screen.getByRole('button', { name: t('planTryAgain') }));
+
+  expect(await screen.findByText('the library')).toBeTruthy();
+});
+
+test('restoring when nothing was bought says so', async () => {
+  setup({ expiresAt: null });
+
+  fireEvent.press(await screen.findByRole('button', { name: t('planRestore') }));
+
+  expect(await screen.findByRole('alert')).toHaveTextContent(t('planNothingToRestore'));
+});

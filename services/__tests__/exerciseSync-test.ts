@@ -235,6 +235,18 @@ describe('exercise sync', () => {
       warn.mockRestore();
     });
 
+    it('uploads exercises once the coach has a plan, after being refused for not having one', async () => {
+      await local.save(exercise({ id: 'waiting' }));
+      server.onSave(() => respond(403, { error: 'planRequired' }));
+      const sync = build();
+      await sync.syncNow();
+      server.onSave(() => respond(200));
+
+      await sync.syncNow();
+
+      expect(server.saves.map(save => save.id)).toEqual(['waiting']);
+    });
+
     it('tries a refused exercise again once it has been edited', async () => {
       await local.save(exercise());
       const warn = jest.spyOn(console, 'warn').mockImplementation();

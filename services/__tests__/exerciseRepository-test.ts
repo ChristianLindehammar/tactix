@@ -5,6 +5,7 @@ import {
   ExerciseOwnershipError,
   ExerciseStorageError,
 } from '../exerciseRepository';
+import { deleteOwnExercises } from '@/services/exerciseData';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { Exercise, ExerciseParseError } from '@/types/exercise';
 
@@ -144,4 +145,14 @@ describe('local exercise repository', () => {
 
     expect((await repository.list()).map(e => e.id)).toEqual(['good']);
   });
+});
+
+test("deleting all of a coach's exercises leaves another coach's read-only ones alone", async () => {
+  const repository = createLocalExerciseRepository({ getCurrentUserId: async () => 'me' });
+  await repository.save(exercise({ id: 'mine' }));
+  await AsyncStorage.setItem('exercise:theirs', JSON.stringify(buildExercise({ id: 'theirs', ownerId: 'someone-else' })));
+
+  await deleteOwnExercises(repository, 'me');
+
+  expect((await repository.list()).map(({ id }) => id)).toEqual(['theirs']);
 });
