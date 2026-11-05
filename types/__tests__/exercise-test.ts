@@ -132,8 +132,8 @@ describe('parseExercise', () => {
     expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
   });
 
-  it.each([['coach'], ['goal']])('accepts a %s marker', type => {
-    const marker = { id: 'a', type, x: 0.5, y: 0.5 };
+  it('accepts a goal marker', () => {
+    const marker = { id: 'a', type: 'goal', x: 0.5, y: 0.5 };
 
     expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
   });

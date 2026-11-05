@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Alert,
-  ScrollView,
   StyleSheet,
   TouchableOpacity,
   useWindowDimensions,
@@ -73,9 +72,7 @@ const DEFAULT_MARKER_TYPES: TacticsMarkerType[] = [
   'arrow-solid',
   'arrow-dashed',
 ];
-const MAX_VISIBLE_TOOLS = DEFAULT_MARKER_TYPES.length;
 const MAX_LABEL_LENGTH = 3;
-const COACH_COLOR = '#2E7D32';
 // Below this width full-size markers would crowd the diagram
 const FULL_SIZE_COURT_WIDTH = 320;
 
@@ -93,7 +90,6 @@ function getMarkerTypes(
     { type: 'cone', color: '#FF6D00', icon: 'change-history' },
     { type: 'arrow-solid', color: arrowColor, icon: 'arrow-forward' },
     { type: 'arrow-dashed', color: arrowColor, icon: 'arrow-forward' },
-    { type: 'coach', color: COACH_COLOR, icon: 'sports' },
     { type: 'goal', color: arrowColor, icon: 'sports-score' },
   ];
 }
@@ -127,11 +123,10 @@ export function TacticsBoard({
   const markerTypes = getMarkerTypes(textColor, sport).filter(mt =>
     allowedMarkerTypes.includes(mt.type),
   );
-  const toolbarScrolls = markerTypes.length > MAX_VISIBLE_TOOLS;
   // Size the toolbar so every control fits on one row, whatever the screen width
   const toolbarLayout = getToolbarLayout({
     windowWidth: windowWidth - insets.left - insets.right,
-    buttonCount: Math.min(markerTypes.length, MAX_VISIBLE_TOOLS),
+    buttonCount: markerTypes.length,
     hasClearButton: true,
   });
 
@@ -281,20 +276,9 @@ export function TacticsBoard({
               { paddingHorizontal: toolbarLayout.containerPaddingHorizontal },
             ]}
           >
-            {toolbarScrolls ? (
-              <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                style={styles.toolScroll}
-                contentContainerStyle={{ gap: toolbarLayout.gap }}
-              >
-                {markerTypes.map(renderTool)}
-              </ScrollView>
-            ) : (
-              <View style={[styles.addButtonsContainer, { gap: toolbarLayout.gap }]}>
-                {markerTypes.map(renderTool)}
-              </View>
-            )}
+            <View style={[styles.addButtonsContainer, { gap: toolbarLayout.gap }]}>
+              {markerTypes.map(renderTool)}
+            </View>
 
             {value.length > (requireBall ? 1 : 0) && (
               <TouchableOpacity
@@ -430,10 +414,6 @@ export function TacticsBoard({
                     <View style={styles.coneMarker}>
                       <GoalSvg size={36} color={arrowColor} />
                     </View>
-                  ) : marker.type === 'coach' ? (
-                    <View style={[styles.personMarker, { backgroundColor: COACH_COLOR }]}>
-                      <MaterialIcons name="sports" size={24} color="#fff" />
-                    </View>
                   ) : (
                     <TouchableOpacity
                       testID={`marker-${marker.id}`}
@@ -545,9 +525,6 @@ const styles = StyleSheet.create({
     height: 36,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  toolScroll: {
-    flexShrink: 1,
   },
   toolHintRow: {
     height: 20,

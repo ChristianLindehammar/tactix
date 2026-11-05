@@ -7,7 +7,12 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { DraggableMarker } from '../DraggableMarker';
 import { TacticsBoard } from '../TacticsBoard';
 import { SportProvider } from '@/context/SportContext';
-import { createArrowMarker, createTacticsMarker, TacticsMarker } from '@/types/tacticsMarker';
+import {
+  createArrowMarker,
+  createTacticsMarker,
+  TACTICS_MARKER_TYPES,
+  TacticsMarker,
+} from '@/types/tacticsMarker';
 
 // A soccer court is 549:800, so this container fits a court of about 200 x 291.45
 const COURT = { width: 200, height: 400 };
@@ -166,20 +171,22 @@ describe('TacticsBoard', () => {
       ['Player', 'Opponent', 'Ball', 'Cone', 'Run', 'Pass'].forEach(name =>
         expect(screen.getByLabelText(name)).toBeTruthy(),
       );
-      expect(screen.queryByLabelText('Coach')).toBeNull();
       expect(screen.queryByLabelText('Goal')).toBeNull();
     });
 
-    it.each([
-      ['coach', 'Coach'],
-      ['goal', 'Goal'],
-    ] as const)('can place a %s when allowed', async (type, name) => {
-      const { onChange } = await renderBoard({ allowedMarkerTypes: [type] });
+    it('can place a goal when allowed', async () => {
+      const { onChange } = await renderBoard({ allowedMarkerTypes: ['goal'] });
 
-      fireEvent.press(screen.getByLabelText(name));
+      fireEvent.press(screen.getByLabelText('Goal'));
       tapCourt(100, 100);
 
-      expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe(type);
+      expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe('goal');
+    });
+
+    it('no longer offers a coach marker, even with every marker allowed', async () => {
+      await renderBoard({ allowedMarkerTypes: [...TACTICS_MARKER_TYPES] });
+
+      expect(screen.queryByLabelText('Coach')).toBeNull();
     });
   });
 
@@ -242,11 +249,11 @@ describe('TacticsBoard', () => {
     it.each([
       ['arrow-solid', 'Run: tap the court to place it'],
       ['arrow-dashed', 'Pass: tap the court to place it'],
-      ['coach', 'Coach: tap the court to place it'],
+      ['goal', 'Goal: tap the court to place it'],
     ])('names the selected %s', async (_type, hint) => {
       await renderBoard({
         showToolHints: true,
-        allowedMarkerTypes: ['arrow-solid', 'arrow-dashed', 'coach'],
+        allowedMarkerTypes: ['arrow-solid', 'arrow-dashed', 'goal'],
       });
 
       fireEvent.press(screen.getByLabelText(hint.split(':')[0]));

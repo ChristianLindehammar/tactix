@@ -155,7 +155,6 @@ export default {
     opponent: 'Opponent',
     ball: 'Ball',
     cone: 'Cone',
-    coach: 'Coach',
     goal: 'Goal',
     'arrow-solid': 'Run',
     'arrow-dashed': 'Pass',

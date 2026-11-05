@@ -9,7 +9,6 @@ export const TACTICS_MARKER_TYPES = [
   'cone',
   'arrow-solid',
   'arrow-dashed',
-  'coach',
   'goal',
 ] as const;
 

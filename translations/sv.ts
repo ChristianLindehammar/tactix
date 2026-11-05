@@ -155,7 +155,6 @@ export default {
     opponent: 'Motståndare',
     ball: 'Boll',
     cone: 'Kon',
-    coach: 'Tränare',
     goal: 'Mål',
     'arrow-solid': 'Löpning',
     'arrow-dashed': 'Passning',

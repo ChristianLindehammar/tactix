@@ -29,4 +29,13 @@ describe('getToolbarLayout', () => {
       expect(measureToolbarWidth(layout, 6, true)).toBeLessThanOrEqual(windowWidth);
     },
   );
+
+  it.each([320, 360, 375, 390, 412, 428])(
+    'fits the exercise toolbar with its seven markers on a %ipx wide screen',
+    (windowWidth) => {
+      const layout = getToolbarLayout({ windowWidth, buttonCount: 7, hasClearButton: true });
+
+      expect(measureToolbarWidth(layout, 7, true)).toBeLessThanOrEqual(windowWidth);
+    },
+  );
 });

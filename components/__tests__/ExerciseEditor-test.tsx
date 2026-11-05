@@ -140,7 +140,6 @@ describe('exercise editor', () => {
       fireEvent.press(await screen.findByText('Edit diagram'));
       fireEvent.press(screen.getByLabelText('Pass'));
 
-      expect(screen.getByLabelText('Coach')).toBeTruthy();
       expect(screen.getByLabelText('Goal')).toBeTruthy();
       expect(screen.getByText('Pass: tap the court to place it')).toBeTruthy();
     });

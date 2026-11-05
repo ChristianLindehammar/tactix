@@ -155,7 +155,6 @@ export default {
     opponent: 'Vastustaja',
     ball: 'Pallo',
     cone: 'Tötsä',
-    coach: 'Valmentaja',
     goal: 'Maali',
     'arrow-solid': 'Juoksu',
     'arrow-dashed': 'Syöttö',

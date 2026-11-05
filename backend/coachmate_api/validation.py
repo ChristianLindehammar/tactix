@@ -11,7 +11,7 @@ FOCUS_TAGS = {
     'passing', 'shooting', 'ballControl', 'defence', 'attack', 'transition',
     'positioning', 'setPieces', 'goalkeeping', 'conditioning',
 }
-MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'coach', 'goal'}
+MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'goal'}
 ARROW_TYPES = {'arrow-solid', 'arrow-dashed'}
 MAX_ARROW_BEND = 0.5
 MAX_ARROW_WAVES = 8
