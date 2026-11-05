@@ -33,7 +33,7 @@ def outbox():
 
 @pytest.fixture()
 def api(db_config, verifier, outbox):
-    return create_app(db_config, send_sign_in_code=outbox, provider_verifier=verifier).test_client()
+    return create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=outbox, provider_verifier=verifier).test_client()
 
 
 def sign_in(api, token='token', provider='google', **extra):

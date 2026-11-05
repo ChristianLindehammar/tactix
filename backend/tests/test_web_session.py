@@ -12,7 +12,7 @@ WEB = {'X-CoachMate-Client': 'web'}
 def browser(db_config):
     """Keeps cookies between requests, like a browser."""
     outbox = Outbox()
-    api = create_app(db_config, send_sign_in_code=outbox).test_client()
+    api = create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
     api.post('/auth/email/start', json={'email': 'coach@example.com'})
     response = api.post(
         '/auth/email/verify',
@@ -37,7 +37,7 @@ def test_a_web_sign_in_gets_a_cookie_that_scripts_cannot_read(browser):
 
 def test_the_cookie_covers_only_this_app_where_it_is_mounted(db_config):
     outbox = Outbox()
-    api = create_app(db_config, send_sign_in_code=outbox).test_client()
+    api = create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
     mounted = {'SCRIPT_NAME': '/coachmate/api'}
     api.post('/auth/email/start', json={'email': 'coach@example.com'}, environ_overrides=mounted)
 

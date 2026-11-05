@@ -21,7 +21,7 @@ def api(db_config, store):
     return create_app(
         db_config,
         clock=lambda: NOW,
-        send_sign_in_code=lambda *_: None,
+        sign_in_code_key='test-key', send_sign_in_code=lambda *_: None,
         plan_source=store.get,
         plan_webhook_secret=WEBHOOK_SECRET,
     ).test_client()

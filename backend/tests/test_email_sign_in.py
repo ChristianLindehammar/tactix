@@ -33,7 +33,7 @@ def outbox():
 
 @pytest.fixture()
 def api(db_config, outbox):
-    return create_app(db_config, send_sign_in_code=outbox).test_client()
+    return create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
 
 
 def request_code(api, email='coach@example.com', locale='sv'):
@@ -104,7 +104,7 @@ def test_a_code_works_only_once(api, outbox):
 
 def test_a_code_stops_working_after_ten_minutes(db_config, outbox):
     clock = Clock()
-    api = create_app(db_config, clock=clock, send_sign_in_code=outbox).test_client()
+    api = create_app(db_config, clock=clock, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
     request_code(api)
 
     clock.now += 601
@@ -158,7 +158,7 @@ def test_a_failure_to_send_is_reported_without_leaking_the_code(db_config, caplo
     def broken(_email, code, _locale):
         raise OSError(f'smtp refused {code}')
 
-    api = create_app(db_config, send_sign_in_code=broken).test_client()
+    api = create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=broken).test_client()
 
     response = request_code(api)
 
@@ -169,7 +169,7 @@ def test_a_failure_to_send_is_reported_without_leaking_the_code(db_config, caplo
 
 def test_an_address_cannot_request_endless_codes(db_config, outbox):
     limits = {**DEFAULT_LIMITS, 'emailCodes': (2, 3600), 'emailCodesPerAddress': (100, 3600)}
-    api = create_app(db_config, limits=limits, send_sign_in_code=outbox).test_client()
+    api = create_app(db_config, limits=limits, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
 
     assert request_code(api).status_code == 202
     assert request_code(api).status_code == 202
@@ -179,7 +179,7 @@ def test_an_address_cannot_request_endless_codes(db_config, outbox):
 
 def test_one_network_cannot_mail_many_people_without_limit(db_config, outbox):
     limits = {**DEFAULT_LIMITS, 'emailCodes': (100, 3600), 'emailCodesPerAddress': (2, 3600)}
-    api = create_app(db_config, limits=limits, send_sign_in_code=outbox).test_client()
+    api = create_app(db_config, limits=limits, sign_in_code_key='test-key', send_sign_in_code=outbox).test_client()
 
     codes = [request_code(api, email=f'c{n}@example.com').status_code for n in range(3)]
 
@@ -245,3 +245,41 @@ class TestDeletingAnAccount:
 
     def test_needs_a_session(self, api):
         assert api.delete('/me').status_code == 401
+
+
+def test_a_code_is_refused_by_a_server_with_a_different_key(db_config, outbox):
+    # What's stored depends on the key, so a copy of the database alone can't reveal a code
+    first = create_app(db_config, sign_in_code_key='first-key', send_sign_in_code=outbox).test_client()
+    second = create_app(db_config, sign_in_code_key='second-key', send_sign_in_code=outbox).test_client()
+    assert request_code(first).status_code == 202
+
+    assert verify(second, outbox.last_code).status_code == 400
+
+
+def test_without_a_key_no_code_is_sent(db_config, outbox):
+    api = create_app(db_config, send_sign_in_code=outbox).test_client()
+
+    response = request_code(api)
+
+    assert response.status_code == 503
+    assert response.get_json() == {'error': 'serviceUnavailable'}
+    assert outbox.sent == []
+
+
+def test_without_a_key_a_code_is_refused(db_config, outbox):
+    api = create_app(db_config, send_sign_in_code=outbox).test_client()
+
+    response = verify(api, '123456')
+
+    assert response.status_code == 400
+    assert response.get_json() == {'error': 'invalidCode'}
+
+
+def test_a_coach_can_delete_their_account_without_a_key(db_config, api, outbox):
+    assert request_code(api).status_code == 202
+    token = verify(api, outbox.last_code).get_json()['token']
+    keyless = create_app(db_config, send_sign_in_code=outbox).test_client()
+
+    response = keyless.delete('/me', headers={'Authorization': f'Bearer {token}'})
+
+    assert response.status_code == 204

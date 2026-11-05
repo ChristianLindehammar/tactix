@@ -1,5 +1,6 @@
 """Accounts: signing in with an emailed code, Apple or Google, and what a signed-in coach can do."""
 import hashlib
+import hmac
 import logging
 import re
 import secrets
@@ -26,7 +27,9 @@ EMAIL_PATTERN = re.compile(r'[^\s@]+@[^\s@.]+(\.[^\s@.]+)+')
 
 
 def _digest(*parts):
-    return hashlib.sha256(':'.join(parts).encode('utf-8')).hexdigest()
+    # Keyed, because six digits are quick to guess: a copy of the database alone must not reveal a code
+    key = current_app.config['SIGN_IN_CODE_KEY'].encode('utf-8')
+    return hmac.new(key, ':'.join(parts).encode('utf-8'), hashlib.sha256).hexdigest()
 
 
 def _utcnow():
@@ -109,6 +112,9 @@ def start_email_sign_in():
     email = _normalized_email(body.get('email'))
     if email is None:
         return jsonify({'error': 'invalidEmail'}), 400
+    if not current_app.config['SIGN_IN_CODE_KEY']:
+        logger.error('SIGN_IN_CODE_KEY is not set, so sign-in codes cannot be sent')
+        return jsonify({'error': 'serviceUnavailable'}), 503
 
     code = f'{secrets.randbelow(1_000_000):06d}'
     connection = get_db()
@@ -135,7 +141,7 @@ def start_email_sign_in():
 def verify_email_sign_in():
     body = request.get_json(silent=True) or {}
     email, code = _normalized_email(body.get('email')), body.get('code')
-    if email is None or not isinstance(code, str):
+    if email is None or not isinstance(code, str) or not current_app.config['SIGN_IN_CODE_KEY']:
         return _invalid_code()
 
     email_hash = _digest(email)
@@ -242,7 +248,8 @@ def delete_account():
     cursor = connection.cursor()
     cursor.execute('SELECT email FROM users WHERE id = %s', (g.user_id,))
     email = cursor.fetchone()[0]
-    if email:
+    # Without the key, the row can't be found. It holds nothing readable and gets cleared when it expires
+    if email and current_app.config['SIGN_IN_CODE_KEY']:
         cursor.execute('DELETE FROM sign_in_codes WHERE email_hash = %s', (_digest(email),))
     cursor.execute('DELETE FROM exercises WHERE owner_id = %s', (g.user_id,))
     cursor.execute('DELETE FROM api_tokens WHERE user_id = %s', (g.user_id,))

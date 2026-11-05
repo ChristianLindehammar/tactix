@@ -24,7 +24,7 @@ def clock():
 
 @pytest.fixture()
 def limited(db_config, clock):
-    return create_app(db_config, limits=LIMITS, clock=clock, send_sign_in_code=lambda *_: None).test_client()
+    return create_app(db_config, limits=LIMITS, clock=clock, sign_in_code_key='test-key', send_sign_in_code=lambda *_: None).test_client()
 
 
 def register_from(client, address, **headers):
@@ -98,7 +98,7 @@ class TestAskingForCodes:
         assert response.status_code == 429
 
     def test_has_a_limit_by_default(self, db_config):
-        client = create_app(db_config, send_sign_in_code=lambda *_: None).test_client()
+        client = create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=lambda *_: None).test_client()
 
         codes = [register_from(client, '203.0.113.5').status_code for _ in range(31)]
 

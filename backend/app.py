@@ -29,6 +29,7 @@ app = create_app(
     provider_verifier=ProviderTokenVerifier(provider_audiences_from_env(), real_signing_keys()),
     plan_source=plan_source_from_env(),
     plan_webhook_secret=os.getenv('REVENUECAT_WEBHOOK_SECRET'),
+    sign_in_code_key=os.getenv('SIGN_IN_CODE_KEY'),
 )
 
 if __name__ == '__main__':

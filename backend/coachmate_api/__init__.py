@@ -14,7 +14,7 @@ MAX_REQUEST_BYTES = 1024 * 1024
 
 
 def create_app(db_config, limits=None, clock=time.time, send_sign_in_code=None, provider_verifier=None,
-               plan_source=None, plan_webhook_secret=None):
+               plan_source=None, plan_webhook_secret=None, sign_in_code_key=None):
     app = Flask(__name__)
     app.config['DB'] = db_config
     app.config['MAX_CONTENT_LENGTH'] = MAX_REQUEST_BYTES
@@ -24,6 +24,7 @@ def create_app(db_config, limits=None, clock=time.time, send_sign_in_code=None, 
     app.config['PROVIDER_VERIFIER'] = provider_verifier
     app.config['PLAN_SOURCE'] = plan_source
     app.config['PLAN_WEBHOOK_SECRET'] = plan_webhook_secret
+    app.config['SIGN_IN_CODE_KEY'] = sign_in_code_key
     app.teardown_appcontext(close_db)
     app.register_blueprint(accounts.bp)
     app.register_blueprint(exercises.bp)

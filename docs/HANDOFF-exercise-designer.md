@@ -25,7 +25,7 @@ CoachMate (Expo 57, React Native 0.86, expo-router) is getting a paid feature th
 | Web app | Not started. The backend's cookie session is ready for it |
 | Ratings on the server, downloading | Not started |
 
-Last run: 358 app tests in 27 suites and 196 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
+Last run: 358 app tests in 27 suites and 200 backend tests passing. `tsc` reports errors in older files such as `hooks/useThemeColor.ts`, but none in this feature's files.
 
 ## Where the code is
 

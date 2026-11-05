@@ -21,7 +21,7 @@ class Outbox:
 def test_parallel_code_requests_are_counted_exactly(db_config):
     """Passenger runs several processes, so counts must hold across separate connections."""
     limits = {**LIMITS, 'emailCodesPerAddress': (25, 3600)}
-    app = create_app(db_config, limits=limits, send_sign_in_code=Outbox())
+    app = create_app(db_config, limits=limits, sign_in_code_key='test-key', send_sign_in_code=Outbox())
 
     def start(number):
         return app.test_client().post('/auth/email/start', json={'email': f'c{number}@example.com'}).status_code
@@ -34,7 +34,7 @@ def test_parallel_code_requests_are_counted_exactly(db_config):
 
 def test_a_code_used_in_parallel_works_once(db_config):
     outbox = Outbox()
-    app = create_app(db_config, limits=LIMITS, send_sign_in_code=outbox)
+    app = create_app(db_config, limits=LIMITS, sign_in_code_key='test-key', send_sign_in_code=outbox)
     app.test_client().post('/auth/email/start', json={'email': 'coach@example.com'})
     body = {'email': 'coach@example.com', 'code': outbox.codes['coach@example.com']}
 

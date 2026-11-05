@@ -59,7 +59,7 @@ def rows(db_config):
 
 @pytest.fixture()
 def client(db_config):
-    return create_app(db_config, send_sign_in_code=lambda *_: None).test_client()
+    return create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=lambda *_: None).test_client()
 
 
 @pytest.fixture()
@@ -69,7 +69,7 @@ def register(client, db_config):
 
     def _register(paid=True):
         codes = []
-        api = create_app(db_config, send_sign_in_code=lambda _email, code, _locale: codes.append(code)).test_client()
+        api = create_app(db_config, sign_in_code_key='test-key', send_sign_in_code=lambda _email, code, _locale: codes.append(code)).test_client()
         email = f'{uuid.uuid4()}@example.com'
         assert api.post('/auth/email/start', json={'email': email}).status_code == 202
         response = api.post('/auth/email/verify', json={'email': email, 'code': codes[-1]})
