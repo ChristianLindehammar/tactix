@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import type { UserIdentity } from '@/services/currentUser';
 import { moveLocalData } from '@/services/localAccountData';
+import type { ProviderToken } from '@/services/signInProviders';
 
 const ACCOUNT_KEY = 'account';
 const REQUEST_TIMEOUT_MS = 20_000;
@@ -146,8 +147,10 @@ export function createAuthSession({
       await finishSignIn(response, 'invalidCode');
     },
 
-    signInWithProvider: async (provider: 'apple' | 'google', idToken: string, nonce: string | null) => {
-      const response = await postJson('/auth/provider', sessionFor({ provider, idToken, nonce }));
+    signInWithProvider: async (provider: 'apple' | 'google', token: ProviderToken) => {
+      const { idToken, nonce, authorizationCode } = token;
+      const body = authorizationCode ? { provider, idToken, nonce, authorizationCode } : { provider, idToken, nonce };
+      const response = await postJson('/auth/provider', sessionFor(body));
       await finishSignIn(response, 'invalidProviderToken');
     },
 

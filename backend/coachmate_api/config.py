@@ -1,4 +1,7 @@
 import os
+from pathlib import Path
+
+from .apple_tokens import AppleTokens
 
 from .plans import revenuecat_plan_source
 
@@ -23,6 +26,15 @@ def _list_from_env(name):
 def provider_audiences_from_env():
     """Which apps' tokens we accept. A provider with none set can't be used to sign in."""
     return {'google': _list_from_env('GOOGLE_CLIENT_IDS'), 'apple': _list_from_env('APPLE_CLIENT_IDS')}
+
+
+def apple_tokens_from_env():
+    """Revokes Apple sign-ins when accounts are deleted. None until every Apple setting is there."""
+    names = ('APPLE_TEAM_ID', 'APPLE_KEY_ID', 'APPLE_PRIVATE_KEY_PATH', 'APPLE_TOKEN_KEY')
+    team_id, key_id, key_path, seal_key = (os.getenv(name) for name in names)
+    if not all((team_id, key_id, key_path, seal_key)):
+        return None
+    return AppleTokens(team_id, key_id, Path(key_path).read_text(encoding='utf-8'), seal_key)
 
 
 def plan_source_from_env():

@@ -8,6 +8,8 @@ export interface ProviderToken {
   idToken: string;
   /** What the server hashes to compare with the token's own nonce. Null if the token has none. */
   nonce: string | null;
+  /** Apple's one-time code, which the server swaps for a token it can revoke when the account is deleted. */
+  authorizationCode?: string | null;
 }
 
 export interface SignInProvider {
@@ -25,7 +27,7 @@ const apple: SignInProvider = {
         requestedScopes: [AppleAuthentication.AppleAuthenticationScope.EMAIL],
         nonce: await Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, nonce),
       });
-      return { idToken: credential.identityToken!, nonce };
+      return { idToken: credential.identityToken!, nonce, authorizationCode: credential.authorizationCode };
     } catch (error) {
       if ((error as { code?: string }).code === 'ERR_REQUEST_CANCELED') return null;
       throw error;

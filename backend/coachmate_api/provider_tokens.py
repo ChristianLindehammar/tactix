@@ -6,7 +6,8 @@ from collections import namedtuple
 
 import jwt
 
-Identity = namedtuple('Identity', 'subject email')
+# audience is the app the token was issued to, which Apple needs again to swap the sign-in's code
+Identity = namedtuple('Identity', 'subject email audience', defaults=[None])
 
 ISSUERS = {
     'google': ['https://accounts.google.com', 'accounts.google.com'],
@@ -69,7 +70,8 @@ class ProviderTokenVerifier:
         if provider in NONCE_REQUIRED or raw_nonce is not None:
             if not _nonce_matches(claims.get('nonce'), raw_nonce):
                 raise InvalidProviderToken('nonceMismatch')
-        return Identity(claims['sub'], _verified_email(claims))
+        audience = claims['aud'] if isinstance(claims['aud'], str) else None
+        return Identity(claims['sub'], _verified_email(claims), audience)
 
 
 def real_signing_keys():

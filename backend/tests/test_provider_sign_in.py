@@ -146,3 +146,115 @@ def test_repeated_sign_ins_from_one_address_are_limited(db_config, verifier):
     api = create_app(db_config, limits=limits, provider_verifier=verifier).test_client()
 
     assert [sign_in(api).status_code for _ in range(3)] == [200, 200, 429]
+
+
+class FakeAppleTokens:
+    """Stands in for Apple's token endpoints. A code becomes a token named after it."""
+
+    def __init__(self):
+        self.exchanged = []
+        self.revoked = []
+        self.failing = False
+
+    def exchange(self, code, client_id):
+        self.exchanged.append((code, client_id))
+        if self.failing:
+            raise RuntimeError('Apple is down')
+        return f'refresh-for-{code}'
+
+    def revoke(self, refresh_token):
+        self.revoked.append(refresh_token)
+        if self.failing:
+            raise RuntimeError('Apple is down')
+
+
+@pytest.fixture()
+def apple_tokens():
+    return FakeAppleTokens()
+
+
+@pytest.fixture()
+def apple_api(db_config, verifier, apple_tokens):
+    verifier.identities['apple-token'] = Identity('apple-sub', 'coach@example.com', 'com.example.app')
+    return create_app(db_config, provider_verifier=verifier, apple_tokens=apple_tokens).test_client()
+
+
+def sign_in_with_apple(api, **extra):
+    return sign_in(api, 'apple-token', provider='apple', **extra)
+
+
+def delete_account(api, response):
+    return api.delete('/me', headers={'Authorization': f"Bearer {response.get_json()['token']}"})
+
+
+def test_deleting_an_apple_account_revokes_the_sign_in_at_apple(apple_api, apple_tokens):
+    response = sign_in_with_apple(apple_api, authorizationCode='code-1')
+
+    assert delete_account(apple_api, response).status_code == 204
+    assert apple_tokens.exchanged == [('code-1', 'com.example.app')]
+    assert apple_tokens.revoked == ['refresh-for-code-1']
+
+
+def test_the_latest_apple_sign_in_is_the_one_revoked(apple_api, apple_tokens):
+    sign_in_with_apple(apple_api, authorizationCode='code-1')
+    response = sign_in_with_apple(apple_api, authorizationCode='code-2')
+
+    delete_account(apple_api, response)
+
+    assert apple_tokens.revoked == ['refresh-for-code-2']
+
+
+def test_signing_in_without_a_code_keeps_the_stored_apple_token(apple_api, apple_tokens):
+    sign_in_with_apple(apple_api, authorizationCode='code-1')
+    response = sign_in_with_apple(apple_api)
+
+    delete_account(apple_api, response)
+
+    assert apple_tokens.revoked == ['refresh-for-code-1']
+
+
+def test_the_apple_token_is_not_stored_readably(apple_api, rows):
+    sign_in_with_apple(apple_api, authorizationCode='code-1')
+
+    # The fake returns what the real adapter would have sealed, so this only checks where it goes
+    assert rows("SELECT refresh_token FROM user_identities WHERE provider = 'apple'") == [('refresh-for-code-1',)]
+
+
+def test_apple_being_down_does_not_stop_signing_in_or_deleting(apple_api, apple_tokens, rows):
+    apple_tokens.failing = True
+
+    response = sign_in_with_apple(apple_api, authorizationCode='code-1')
+    assert response.status_code == 200
+    assert rows("SELECT refresh_token FROM user_identities WHERE provider = 'apple'") == [(None,)]
+
+    apple_tokens.failing = False
+    sign_in_with_apple(apple_api, authorizationCode='code-2')
+    apple_tokens.failing = True
+    assert delete_account(apple_api, response).status_code == 204
+    assert rows('SELECT COUNT(*) FROM users') == [(0,)]
+
+
+def test_only_apple_codes_are_exchanged(apple_api, apple_tokens, verifier):
+    verifier.identities['token'] = Identity('google-sub', 'other@example.com', 'google-client')
+
+    response = sign_in(apple_api, authorizationCode='code-1')
+    delete_account(apple_api, response)
+
+    assert apple_tokens.exchanged == []
+    assert apple_tokens.revoked == []
+
+
+@pytest.mark.parametrize('code', [5, '', 'x' * 2001])
+def test_a_malformed_apple_code_is_ignored(apple_api, apple_tokens, code):
+    assert sign_in_with_apple(apple_api, authorizationCode=code).status_code == 200
+    assert apple_tokens.exchanged == []
+
+
+def test_a_server_without_apple_keys_still_signs_in_and_deletes(db_config, verifier):
+    verifier.identities['apple-token'] = Identity('apple-sub', 'coach@example.com', 'com.example.app')
+    api = create_app(db_config, provider_verifier=verifier).test_client()
+
+    response = sign_in_with_apple(api, authorizationCode='code-1')
+
+    assert response.status_code == 200
+    assert delete_account(api, response).status_code == 204

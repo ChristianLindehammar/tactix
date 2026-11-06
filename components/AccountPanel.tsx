@@ -224,7 +224,7 @@ export function AccountPanel({ session, providers, intro, profile }: AccountPane
           onPress={() => attempt(async () => {
             const token = await provider.signIn();
             if (!token) return;
-            await session.signInWithProvider(provider.id, token.idToken, token.nonce);
+            await session.signInWithProvider(provider.id, token);
             reset();
           })}
         />

@@ -121,3 +121,10 @@ def test_failing_to_reach_the_provider_is_not_a_bad_token():
 
     with pytest.raises(ProviderUnavailable):
         verifier.verify('google', sign(), None)
+
+
+def test_an_identity_names_the_app_its_token_was_issued_to(verifier):
+    """Apple needs the same client ID again to swap the sign-in's code for a refresh token."""
+    token = sign(iss=APPLE_ISSUER, aud='com.example.app', nonce=HASHED_NONCE)
+
+    assert verifier.verify('apple', token, RAW_NONCE).audience == 'com.example.app'

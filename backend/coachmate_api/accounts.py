@@ -26,6 +26,8 @@ MAX_CODE_ATTEMPTS = 5
 MAX_EMAIL_LENGTH = 254
 EMAIL_PATTERN = re.compile(r'[^\s@]+@[^\s@.]+(\.[^\s@.]+)+')
 MAX_DISPLAY_NAME_LENGTH = 40
+# Apple's codes are a few hundred characters. Anything far longer isn't one
+MAX_APPLE_CODE_LENGTH = 2000
 
 
 def _digest(*parts):
@@ -190,6 +192,7 @@ def provider_sign_in():
     except ProviderUnavailable:
         logger.error('Could not check a sign-in token from %s', provider)
         return jsonify({'error': 'serviceUnavailable'}), 503
+    apple_refresh_token = _apple_refresh_token(provider, identity, body.get('authorizationCode'))
 
     connection = get_db()
     cursor = connection.cursor()
@@ -213,9 +216,42 @@ def provider_sign_in():
             (provider, identity.subject),
         )
         user_id = cursor.fetchone()[0]
+    if apple_refresh_token:
+        cursor.execute(
+            'UPDATE user_identities SET refresh_token = %s WHERE provider = %s AND subject = %s',
+            (apple_refresh_token, provider, identity.subject),
+        )
     cursor.execute('SELECT email FROM users WHERE id = %s', (user_id,))
     email = cursor.fetchone()[0]
     return _signed_in(connection, cursor, user_id, email, body)
+
+
+def _apple_refresh_token(provider, identity, code):
+    """Swaps an Apple sign-in's code for a token that deleting the account can revoke later.
+    Signing in never waits on it working: without it, deleting just can't tell Apple."""
+    apple_tokens = current_app.config['APPLE_TOKENS']
+    if provider != 'apple' or apple_tokens is None or not identity.audience:
+        return None
+    if not isinstance(code, str) or not 0 < len(code) <= MAX_APPLE_CODE_LENGTH:
+        return None
+    try:
+        return apple_tokens.exchange(code, identity.audience)
+    except Exception as error:  # noqa: BLE001
+        logger.error('Could not swap an Apple sign-in code: %s', error)
+        return None
+
+
+def _revoke_at_apple(refresh_tokens):
+    apple_tokens = current_app.config['APPLE_TOKENS']
+    if refresh_tokens and apple_tokens is None:
+        logger.error('An account with Apple sign-in was deleted, but Apple keys are not set, so Apple was not told')
+        return
+    for refresh_token in refresh_tokens:
+        try:
+            apple_tokens.revoke(refresh_token)
+        except Exception as error:  # noqa: BLE001
+            # The account is already gone, and the coach can still remove CoachMate in their Apple ID settings
+            logger.error('Could not revoke an Apple sign-in for a deleted account: %s', error)
 
 
 @bp.post('/auth/sign-out')
@@ -283,6 +319,11 @@ def delete_account():
     cursor = connection.cursor()
     cursor.execute('SELECT email FROM users WHERE id = %s', (g.user_id,))
     email = cursor.fetchone()[0]
+    cursor.execute(
+        "SELECT refresh_token FROM user_identities WHERE user_id = %s AND provider = 'apple' AND refresh_token IS NOT NULL",
+        (g.user_id,),
+    )
+    apple_refresh_tokens = [row[0] for row in cursor.fetchall()]
     # Without the key, the row can't be found. It holds nothing readable and gets cleared when it expires
     if email and current_app.config['SIGN_IN_CODE_KEY']:
         cursor.execute('DELETE FROM sign_in_codes WHERE email_hash = %s', (_digest(email),))
@@ -291,6 +332,8 @@ def delete_account():
     cursor.execute('DELETE FROM users WHERE id = %s', (g.user_id,))
     connection.commit()
     cursor.close()
+    # After the commit, so a failed delete never leaves an account that Apple has already let go of
+    _revoke_at_apple(apple_refresh_tokens)
     response = current_app.response_class(status=204)
     clear_session_cookie(response)
     return response

@@ -322,16 +322,17 @@ describe('on the web', () => {
   });
 });
 
-test('Apple and Google tokens are sent with their nonce', async () => {
+test('Apple tokens are sent with their nonce and the code the server needs to revoke the sign-in', async () => {
   const { session, fetch } = setup();
 
-  await session.signInWithProvider('apple', 'id-token', 'raw-nonce');
+  await session.signInWithProvider('apple', { idToken: 'id-token', nonce: 'raw-nonce', authorizationCode: 'apple-code' });
 
   expect(fetch.mock.calls[0][0]).toBe('https://api.test/auth/provider');
   expect(JSON.parse(fetch.mock.calls[0][1]!.body as string)).toEqual({
     provider: 'apple',
     idToken: 'id-token',
     nonce: 'raw-nonce',
+    authorizationCode: 'apple-code',
   });
   expect(session.getState().status).toBe('signedIn');
 });

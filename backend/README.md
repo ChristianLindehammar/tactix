@@ -10,13 +10,13 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | `GET /health` | No | 200 if the database answers, otherwise 503 |
 | `POST /auth/email/start` | No | Emails a 6-digit code. Takes `email` and optional `locale` (`en`, `sv`, `fi`) |
 | `POST /auth/email/verify` | No | Takes `email` and `code`. Returns `userId`, `email` and `token`, once |
-| `POST /auth/provider` | No | Takes `provider` (`apple` or `google`), `idToken` and `nonce`. Answers like verify |
+| `POST /auth/provider` | No | Takes `provider` (`apple` or `google`), `idToken` and `nonce`, and for Apple the sign-in's `authorizationCode`, kept so deleting the account can revoke it. Answers like verify |
 | `POST /auth/sign-out` | Yes | Ends this session only |
 | `GET /me` | Yes | Returns `userId`, `email`, `displayName` and `plan` (`active`, `expiresAt`) |
 | `PUT /me/display-name` | Yes | Takes `displayName`, up to 40 characters, or `null` to clear it. Shown as the author of public exercises |
 | `POST /me/plan/refresh` | Yes | Asks RevenueCat for the coach's plan again and returns it. Limited to 30 an hour |
 | `POST /webhooks/revenuecat` | Webhook secret | RevenueCat says a plan changed, and the server asks it for the current state. Answers 503 so it retries if RevenueCat can't be reached |
-| `DELETE /me` | Yes | Permanently deletes the account and its exercises |
+| `DELETE /me` | Yes | Permanently deletes the account and its exercises, and revokes its Apple sign-in at Apple |
 | `GET /exercises` | Yes | Lists your own exercises, leaving out deleted ones |
 | `PUT /exercises/<id>` | Yes | Creates or replaces an exercise. Only its owner can change it |
 | `GET /exercises/<id>` | Yes | Fetches an exercise. Any valid token can read by ID, for share links, unless reports have hidden it. Its author always can |
@@ -124,6 +124,7 @@ Needs Python 3.9 or newer and MariaDB 10.4 or newer.
 6. Check that `https://lindehammar-konsult.se/coachmate/api/health` answers `{"status":"ok"}`.
 7. Add `scripts/backup_db.sh` to cron.
 8. Set `MODERATOR_EMAIL` in `.env` to hear about reported exercises.
+9. For Apple sign-in, create a Sign in with Apple key under Keys at developer.apple.com, upload the `.p8` outside the web folder with `chmod 600`, and set the `APPLE_*` settings in `.env`. Without them, deleting an account can't revoke its Apple sign-in, which the App Store requires.
 
 ## After deploying, check the limiter sees real addresses
 

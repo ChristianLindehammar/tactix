@@ -30,15 +30,18 @@ test('each platform offers the providers it can use', () => {
   expect(signInProvidersFor('web')).toEqual([]);
 });
 
-test('Apple gets the hashed nonce and the server gets the raw one', async () => {
-  (AppleAuthentication.signInAsync as jest.Mock).mockResolvedValueOnce({ identityToken: 'apple-token' });
+test('Apple gets the hashed nonce and the server gets the raw one, with the authorization code', async () => {
+  (AppleAuthentication.signInAsync as jest.Mock).mockResolvedValueOnce({
+    identityToken: 'apple-token',
+    authorizationCode: 'apple-code',
+  });
 
   const token = await providerFor('ios', 'apple').signIn();
 
   expect((AppleAuthentication.signInAsync as jest.Mock).mock.calls[0][0].nonce).toBe(
     '2c5d107938053a2275f022c153c9a71f65ee07754b8bca543ee97a0c3cc66990',
   );
-  expect(token).toEqual({ idToken: 'apple-token', nonce: 'raw-nonce' });
+  expect(token).toEqual({ idToken: 'apple-token', nonce: 'raw-nonce', authorizationCode: 'apple-code' });
 });
 
 test('backing out of Apple counts as cancelled', async () => {
