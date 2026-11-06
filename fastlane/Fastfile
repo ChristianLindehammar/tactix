@@ -225,23 +225,6 @@ private_lane :build_and_upload_android do
   aab_path = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
   UI.message("Built AAB at: #{aab_path}")
 
-  # Collect all existing version codes across tracks so Google Play can map
-  # upgrade paths from every previously-released code to the new one.
-  retain_codes = []
-  %w[internal alpha beta production].each do |track|
-    begin
-      codes = google_play_track_version_codes(
-        track: track,
-        json_key: json_key_path
-      )
-      retain_codes.concat(codes) if codes
-    rescue => e
-      UI.message("No version codes for retain check on track '#{track}': #{e.message}")
-    end
-  end
-  retain_codes = retain_codes.uniq.sort
-  UI.message("Retaining existing version codes: #{retain_codes.inspect}")
-
   # Released straight to internal testers, with the release notes
   upload_to_play_store(
     track: 'internal',
@@ -252,8 +235,7 @@ private_lane :build_and_upload_android do
     skip_upload_changelogs: false,
     skip_upload_images: true,
     skip_upload_screenshots: true,
-    release_status: 'completed',
-    version_codes_to_retain: retain_codes
+    release_status: 'completed'
   )
 end
 
@@ -288,22 +270,30 @@ end
 # ---------------------------------------------------------------------------
 platform :android do
   desc "Release a build already on the internal track to testers, with the current release notes"
-  desc "Usage: fastlane android release_internal version_code:34"
+  desc "Release an uploaded build to internal testers (e.g. a draft left by an earlier run)"
   lane :release_internal do |options|
-    version_code = options[:version_code] || UI.user_error!("Pass version_code:<n>")
-    write_play_changelogs(version_code)
-    upload_to_play_store(
-      track: 'internal',
-      version_code: version_code.to_i,
-      metadata_path: PLAY_METADATA_PATH,
-      skip_upload_apk: true,
-      skip_upload_aab: true,
-      skip_upload_metadata: true,
-      skip_upload_changelogs: false,
-      skip_upload_images: true,
-      skip_upload_screenshots: true,
-      release_status: 'completed'
+    version_code = (options[:version_code] || UI.user_error!("Pass version_code:<n>")).to_s
+    package = CredentialsManager::AppfileConfig.try_fetch_value(:package_name)
+    Supply.config = FastlaneCore::Configuration.create(
+      Supply::Options.available_options,
+      json_key: File.expand_path("play-store-credentials.json", __dir__),
+      package_name: package
     )
+    client = Supply::Client.make_from_config
+    client.begin_edit(package_name: package)
+    track = client.tracks('internal').first
+    release = track&.releases&.find { |r| r.version_codes.include?(version_code) }
+    unless release
+      client.abort_current_edit
+      UI.user_error!("No internal release contains version code #{version_code}")
+    end
+    # Only this build, so a lower code in the same release can't block the rollout
+    release.status = 'completed'
+    release.version_codes = [version_code]
+    track.releases = [release]
+    client.update_track('internal', track)
+    client.commit_current_edit!
+    UI.success("Released #{release.name} (#{version_code}) to internal testers")
   end
 
   desc "Build AAB and upload to Play Store internal testing"

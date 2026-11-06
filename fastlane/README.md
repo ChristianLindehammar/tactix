@@ -55,7 +55,7 @@ Build and upload a new beta build to TestFlight
 
 Release a build already on the internal track to testers, with the current release notes
 
-Usage: fastlane android release_internal version_code:34
+Release an uploaded build to internal testers (e.g. a draft left by an earlier run)
 
 ### android beta
 
