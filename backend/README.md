@@ -49,7 +49,7 @@ who joins can edit; only the owner invites, removes coaches or stops sharing. No
 | `DELETE /teams/<id>/invites` | Owner only. Stops every invite link for the team |
 | `GET /invites/<code>` | Who and what the invite is for: `teamId`, `name`, `sport`, `ownerName`, `memberCount`, and your `role` if you're already in |
 | `POST /invites/<code>/accept` | Joins as an editor. Returns `teamId` and `role` |
-| `GET /join/<code>` | No token. The web page an invite link opens, with a button to the app and the code to type in |
+| `GET /join/<code>` | No token. The web page an invite link opens, in English, Swedish or Finnish: a button to the app, store links for coaches without it (`APP_STORE_URL`, `PLAY_STORE_URL`) and the code to type in |
 
 A team is stored as items, so two coaches editing different players don't overwrite each other: `team/team`
 (`name`, `sport`), `player/<id>` (`name`, `position`), `formation/<id>` (`name`) and

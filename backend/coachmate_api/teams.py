@@ -12,12 +12,12 @@ import re
 import secrets
 import uuid
 from datetime import datetime, timedelta, timezone
-from html import escape
 
 from flask import Blueprint, current_app, g, jsonify, request
 
 from .auth import require_user
 from .db import get_db, query_all, query_one
+from .join_page import page_language, render_join_page
 from .rate_limit import current_user, rate_limited
 from .validation import SPORTS
 
@@ -388,36 +388,9 @@ def accept_invite(code):
     return jsonify({'teamId': team_id, 'role': role})
 
 
-JOIN_PAGE = '''<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join a team on CoachMate</title>
-<style>
-  body {{ font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 32px 16px; background: #f5f7f8; color: #11181c; text-align: center; }}
-  main {{ max-width: 420px; margin: 0 auto; }}
-  a.button {{ display: block; margin: 24px 0; padding: 14px; border-radius: 10px; background: #0a7ea4; color: #fff; text-decoration: none; font-weight: 600; }}
-  code {{ font-size: 24px; letter-spacing: 2px; }}
-  @media (prefers-color-scheme: dark) {{ body {{ background: #151718; color: #ecedee; }} }}
-</style>
-</head>
-<body>
-<main>
-  <h1>Join a team on CoachMate</h1>
-  <p>A coach invited you to plan their lineup together.</p>
-  <a class="button" href="coachmate://join/{code}">Open in CoachMate</a>
-  <p>Or open CoachMate, go to Team, choose Join with code and enter:</p>
-  <p><code>{code}</code></p>
-</main>
-</body>
-</html>
-'''
-
-
 @bp.get('/join/<code>')
 def join_page(code):
-    """Where invite links lead. Messaging apps only make web addresses tappable, so this page hands
-    over to the app and shows the code for typing in."""
+    """Where invite links lead. See join_page.py for what the page offers."""
     code = _normalized_code(code)[:INVITE_LENGTH]
-    return current_app.response_class(JOIN_PAGE.format(code=escape(code)), mimetype='text/html')
+    page = render_join_page(code, page_language(request.accept_languages), current_app.config['STORE_LINKS'])
+    return current_app.response_class(page, mimetype='text/html')

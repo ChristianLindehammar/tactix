@@ -29,3 +29,9 @@ def plan_source_from_env():
     """Asks RevenueCat about coaches' plans. Without a key, plans can't be checked."""
     api_key = os.getenv('REVENUECAT_SECRET_KEY')
     return revenuecat_plan_source(api_key, os.getenv('REVENUECAT_ENTITLEMENT', 'premium')) if api_key else None
+
+
+def store_links_from_env():
+    """Where the invite page sends coaches who don't have the app yet. A store without a link is left out."""
+    links = {'ios': os.getenv('APP_STORE_URL'), 'android': os.getenv('PLAY_STORE_URL')}
+    return {platform: url for platform, url in links.items() if url}

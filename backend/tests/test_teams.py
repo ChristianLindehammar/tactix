@@ -277,6 +277,47 @@ class TestInvites:
 
         assert '<script>' not in page
 
+    def test_the_join_page_links_to_the_stores(self, db_config):
+        stores = {'ios': 'https://apps.apple.com/app/id123', 'android': 'https://play.example/coachmate'}
+        client = create_app(db_config, store_links=stores).test_client()
+
+        page = client.get('/join/ABCDEFGHJK').get_data(as_text=True)
+
+        assert 'https://apps.apple.com/app/id123' in page
+        assert 'https://play.example/coachmate' in page
+
+    def test_the_join_page_leaves_out_stores_without_a_link(self, db_config):
+        client = create_app(db_config, store_links={'android': 'https://play.example/coachmate'}).test_client()
+
+        page = client.get('/join/ABCDEFGHJK').get_data(as_text=True)
+
+        assert 'https://play.example/coachmate' in page
+        assert 'App Store' not in page
+
+    def test_the_join_page_offers_the_iphone_app_in_safari(self, db_config):
+        client = create_app(db_config, store_links={'ios': 'https://apps.apple.com/app/coachmate/id123'}).test_client()
+
+        page = client.get('/join/ABCDEFGHJK').get_data(as_text=True)
+
+        assert '<meta name="apple-itunes-app" content="app-id=123, app-argument=coachmate://join/ABCDEFGHJK">' in page
+
+    def test_the_join_page_says_how_to_join_after_installing(self, client):
+        page = client.get('/join/ABCDEFGHJK').get_data(as_text=True)
+
+        assert 'Join a team' in page
+        assert 'sign in' in page
+
+    @pytest.mark.parametrize('language, html_lang, wording', [
+        ('sv-SE,sv;q=0.9,en;q=0.5', 'sv', 'Gå med i ett lag'),
+        ('fi', 'fi', 'Liity joukkueeseen'),
+        ('de-DE', 'en', 'Join a team'),
+    ])
+    def test_the_join_page_speaks_the_browsers_language(self, client, language, html_lang, wording):
+        page = client.get('/join/ABCDEFGHJK', headers={'Accept-Language': language}).get_data(as_text=True)
+
+        assert f'<html lang="{html_lang}">' in page
+        assert wording in page
+
 
 class TestMembers:
     def test_lists_members_with_the_owner_first(self, client, owner, team_id, join_team):
