@@ -54,7 +54,8 @@ export default function RootLayout() {
         <TeamProvider>
           <SafeAreaProvider>
             <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-              <Stack>
+              {/* Only the arrow: the screen behind is the tab group, whose name "(tabs)" isn't a title */}
+              <Stack screenOptions={{ headerBackButtonDisplayMode: 'minimal' }}>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="share-team" options={{ title: t('coachTogether') }} />
                 <Stack.Screen name="join/index" options={{ title: t('joinTeam') }} />
