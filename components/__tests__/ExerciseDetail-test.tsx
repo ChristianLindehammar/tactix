@@ -382,6 +382,30 @@ describe('exercise detail', () => {
     });
   });
 
+  it('offers Report and Block on another coach\'s shared exercise that is also on this device', async () => {
+    // A second coach used this phone, and signing out keeps their exercises here
+    mockId = 'theirs';
+    await exerciseRepository.save(
+      buildExercise({ id: 'theirs', ownerId: 'other-account', sport: 'soccer', title: 'Their drill', visibility: 'public' }),
+    );
+    renderExerciseScreen(<ExerciseDetailScreen />);
+    await screen.findByText('Their drill');
+
+    expect(screen.getByText('Report')).toBeTruthy();
+    expect(screen.getByText('Block this coach')).toBeTruthy();
+  });
+
+  it('offers no Report on another coach\'s private exercise, as the server only knows it by link', async () => {
+    mockId = 'theirs';
+    await exerciseRepository.save(
+      buildExercise({ id: 'theirs', ownerId: 'other-account', sport: 'soccer', title: 'Their drill', visibility: 'private' }),
+    );
+    renderExerciseScreen(<ExerciseDetailScreen />);
+    await screen.findByText('Their drill');
+
+    expect(screen.queryByText('Report')).toBeNull();
+  });
+
   it('offers no Report or Block on your own exercise', async () => {
     renderExerciseScreen(<ExerciseDetailScreen />);
     await screen.findByText('Triangle passing');

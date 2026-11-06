@@ -6,12 +6,14 @@ const json = (status: number, body: unknown = {}) =>
 
 const setup = (respond: (url: string, init?: RequestInit) => Response | Promise<Response>, signedIn = true) => {
   const fetch = jest.fn(async (url: string, init?: RequestInit) => respond(url, init));
+  const onSessionRejected = jest.fn();
   const library = createLibrary({
     baseUrl: 'https://api.test',
     fetch: fetch as unknown as typeof globalThis.fetch,
     getAuthHeaders: async () => (signedIn ? { Authorization: 'Bearer token' } : null),
+    onSessionRejected,
   });
-  return { library, fetch };
+  return { library, fetch, onSessionRejected };
 };
 
 const errorCode = async (promise: Promise<unknown>) => {
@@ -73,6 +75,13 @@ describe('browsing the library', () => {
 
     expect(await errorCode(library.list({}))).toBe('signedOut');
     expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it('ends a session the server no longer accepts, as uploading does', async () => {
+    const { library, onSessionRejected } = setup(() => json(401));
+
+    expect(await errorCode(library.list({}))).toBe('signedOut');
+    expect(onSessionRejected).toHaveBeenCalledTimes(1);
   });
 
   it('tells being offline apart from a failing server', async () => {

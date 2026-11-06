@@ -55,6 +55,8 @@ interface LibraryOptions {
   baseUrl: string;
   fetch: typeof globalThis.fetch;
   getAuthHeaders: () => Promise<Record<string, string> | null>;
+  /** The server no longer accepts this session. */
+  onSessionRejected: () => Promise<void> | void;
 }
 
 const toQuery = (filter: LibraryFilter) => {
@@ -73,7 +75,7 @@ const toQuery = (filter: LibraryFilter) => {
 };
 
 /** Other coaches' public exercises, and what a coach can do about them, on the server. */
-export function createLibrary({ baseUrl, fetch, getAuthHeaders }: LibraryOptions) {
+export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejected }: LibraryOptions) {
   const request = async (path: string, init: RequestInit = {}, body?: unknown) => {
     const authHeaders = await getAuthHeaders();
     if (!authHeaders) throw new LibraryError('signedOut');
@@ -94,7 +96,10 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders }: LibraryOptions
     } finally {
       clearTimeout(timer);
     }
-    if (response.status === 401) throw new LibraryError('signedOut');
+    if (response.status === 401) {
+      await onSessionRejected();
+      throw new LibraryError('signedOut');
+    }
     if (response.status === 429) throw new LibraryError('rateLimited');
     return response;
   };
@@ -162,4 +167,5 @@ export const library = createLibrary({
   baseUrl: API_BASE_URL,
   fetch: (...args) => fetch(...args),
   getAuthHeaders: () => authSession.getAuthHeaders(),
+  onSessionRejected: () => authSession.handleSessionRejected(),
 });

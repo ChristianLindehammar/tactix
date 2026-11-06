@@ -1,6 +1,6 @@
 import * as React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
 
 import ExerciseLibraryScreen from '@/app/(tabs)/exercises/index';
 import { getCurrentUserId } from '@/services/currentUser';
@@ -11,12 +11,18 @@ import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
 
 const mockPush = jest.fn();
+// Coming back to the screen runs its focus effects again, as the navigator does
+const mockFocusEffects = new Set<() => void>();
+const refocus = () => mockFocusEffects.forEach(effect => effect());
 
 jest.mock('expo-router', () => {
   const { useEffect } = require('react');
   return {
     useRouter: () => ({ push: mockPush }),
-    useFocusEffect: (effect: () => void) => useEffect(effect, [effect]),
+    useFocusEffect: (effect: () => void) => {
+      mockFocusEffects.add(effect);
+      useEffect(effect, [effect]);
+    },
   };
 });
 jest.mock('expo-router/js-tabs', () => ({ useBottomTabBarHeight: () => 0 }));
@@ -384,6 +390,17 @@ describe('exercise library', () => {
       fireEvent.press(await screen.findByText('Try again'));
 
       expect(await screen.findByText('Rondo')).toBeTruthy();
+    });
+
+    it('asks the server again when you come back, so a reported exercise is gone', async () => {
+      await openLibrary();
+      await screen.findByText('Rondo');
+      mockList.mockResolvedValue({ entries: [], total: 0 });
+
+      await act(async () => refocus());
+
+      expect(await screen.findByText('No shared exercises for this sport yet.')).toBeTruthy();
+      expect(screen.queryByText('Rondo')).toBeNull();
     });
 
     it('goes back to your own exercises', async () => {

@@ -153,6 +153,9 @@ export default function ExerciseDetailScreen() {
   // Editing and deleting work on this device's copy, which a library exercise doesn't have
   const editable = mine && !fromLibrary;
   const authorId = exercise.ownerId;
+  // Anything the server can show another coach can be reported: a shared exercise, even when this
+  // device holds a copy because its author once used it, or one opened from the server by link
+  const reportable = !mine && (fromLibrary || exercise.visibility === 'public');
 
   // The exercise may have reloaded with fewer steps
   const step = exercise.frames[stepIndex] ?? exercise.frames[0];
@@ -231,7 +234,7 @@ export default function ExerciseDetailScreen() {
           {t('delete')}
         </ThemedButton>
       )}
-      {fromLibrary && !mine && (
+      {reportable && (
         <>
           <ThemedButton onPress={confirmReport}>{t('report')}</ThemedButton>
           {authorId && <ThemedButton onPress={() => confirmBlock(authorId)}>{t('blockCoach')}</ThemedButton>}

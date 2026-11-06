@@ -85,11 +85,6 @@ export default function ExerciseLibraryScreen() {
     }
   }, []);
 
-  useFocusEffect(
-    useCallback(() => {
-      load();
-    }, [load]),
-  );
 
   const parsedPlayerCount = /^\d+$/.test(playerCount.trim()) ? Number(playerCount) : undefined;
   const hasFilters =
@@ -149,6 +144,18 @@ export default function ExerciseLibraryScreen() {
     const timer = setTimeout(loadLibrary, LIBRARY_QUERY_DELAY_MS);
     return () => clearTimeout(timer);
   }, [inLibrary, loadLibrary]);
+
+  // Read on focus without making it rerun on every filter change, which the effect above handles
+  const reloadLibraryOnFocus = useRef<(() => void) | null>(null);
+  reloadLibraryOnFocus.current = inLibrary ? loadLibrary : null;
+
+  // Coming back from an exercise picks up edits, deletions and reports
+  useFocusEffect(
+    useCallback(() => {
+      load();
+      reloadLibraryOnFocus.current?.();
+    }, [load]),
+  );
 
   const loadMore = async () => {
     const query = latestQuery.current;
