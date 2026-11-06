@@ -30,7 +30,6 @@ export default function AboutScreen() {
             <ThemedView style={styles.librariesList}>
               <ThemedText style={styles.libraryItem}>• @expo/vector-icons - MIT License</ThemedText>
               <ThemedText style={styles.libraryItem}>• async-storage - MIT License</ThemedText>
-              <ThemedText style={styles.libraryItem}>• @react-native-picker - MIT License</ThemedText>
               <ThemedText style={styles.libraryItem}>• @react-navigation - MIT License</ThemedText>
               <ThemedText style={styles.libraryItem}>• expo and related packages - MIT License</ThemedText>
               <ThemedText style={styles.libraryItem}>• react & react-native - MIT License</ThemedText>
