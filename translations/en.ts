@@ -250,7 +250,9 @@ export default {
 
   // Account
   account: 'Account',
-  accountExplanation: 'Sign in to keep your exercises safe and reach them on your other devices. The app works without an account.',
+  accountExplanation: 'Sign in to keep your exercises safe and reach them on your other devices.',
+  accountGateTitle: 'Create your account',
+  accountGateBody: 'Your exercises are saved to your account, so they are backed up and ready on your other devices. Signing in the first time creates the account. Then you can start your free trial.',
   accountContinueWithApple: 'Continue with Apple',
   accountContinueWithGoogle: 'Continue with Google',
   accountEmail: 'Email address',

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import { API_BASE_URL, EXERCISE_SYNC_ENABLED } from '@/constants/api';
+import { API_BASE_URL } from '@/constants/api';
 import { authSession } from '@/services/account';
 import { getCurrentUserId } from '@/services/currentUser';
 import { createExerciseSync, ExerciseSync } from '@/services/exerciseSync';
@@ -135,29 +135,25 @@ const exerciseSync = createExerciseSync({
 });
 
 // Signing in has just queued everything for upload
-if (EXERCISE_SYNC_ENABLED) {
-  authSession.subscribe(() => {
-    if (authSession.getState().status === 'signedIn') void exerciseSync.syncNow();
-  });
-}
+authSession.subscribe(() => {
+  if (authSession.getState().status === 'signedIn') void exerciseSync.syncNow();
+});
 
-export const exerciseRepository = EXERCISE_SYNC_ENABLED
-  ? createSyncedExerciseRepository(localExerciseRepository, exerciseSync)
-  : localExerciseRepository;
+export const exerciseRepository = createSyncedExerciseRepository(localExerciseRepository, exerciseSync);
 
 /** Catches up on exercises saved earlier, or while offline. */
-export const syncExercises = async () => {
-  if (EXERCISE_SYNC_ENABLED) await exerciseSync.syncNow();
-};
+export const syncExercises = () => exerciseSync.syncNow();
 
 let restoring: Promise<void> | null = null;
 
+/** Picks up the last session. Safe to call from anywhere: it only ever runs once. */
+export const restoreAccount = () =>
+  (restoring ??= authSession.restore().catch(error => {
+    console.warn('Could not restore the session:', error);
+  }));
+
 /** Picks up the last session, then catches up on exercises saved while offline. */
 export const startAccountAndSync = async () => {
-  if (!EXERCISE_SYNC_ENABLED) return;
-  restoring ??= authSession.restore().catch(error => {
-    console.warn('Could not restore the session:', error);
-  });
-  await restoring;
+  await restoreAccount();
   await exerciseSync.syncNow();
 };

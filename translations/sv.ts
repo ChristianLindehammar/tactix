@@ -250,7 +250,9 @@ export default {
 
   // Account
   account: 'Konto',
-  accountExplanation: 'Logga in för att ha dina övningar i säkerhet och nå dem på dina andra enheter. Appen fungerar utan konto.',
+  accountExplanation: 'Logga in för att ha dina övningar i säkerhet och nå dem på dina andra enheter.',
+  accountGateTitle: 'Skapa ditt konto',
+  accountGateBody: 'Dina övningar sparas i ditt konto, så de är säkerhetskopierade och finns på dina andra enheter. Första gången du loggar in skapas kontot. Sedan kan du starta din kostnadsfria provperiod.',
   accountContinueWithApple: 'Fortsätt med Apple',
   accountContinueWithGoogle: 'Fortsätt med Google',
   accountEmail: 'E-postadress',

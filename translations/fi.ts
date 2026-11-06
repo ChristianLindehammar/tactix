@@ -250,7 +250,9 @@ export default {
 
   // Account
   account: 'Tili',
-  accountExplanation: 'Kirjaudu sisään, niin harjoituksesi pysyvät tallessa ja saat ne käyttöön muilla laitteillasi. Sovellus toimii ilman tiliä.',
+  accountExplanation: 'Kirjaudu sisään, niin harjoituksesi pysyvät tallessa ja saat ne käyttöön muilla laitteillasi.',
+  accountGateTitle: 'Luo tili',
+  accountGateBody: 'Harjoituksesi tallennetaan tilillesi, joten ne ovat varmuuskopioituna ja käytettävissä muilla laitteillasi. Tili luodaan, kun kirjaudut ensimmäistä kertaa. Sen jälkeen voit aloittaa ilmaisen kokeilujakson.',
   accountContinueWithApple: 'Jatka Apple-tilillä',
   accountContinueWithGoogle: 'Jatka Google-tilillä',
   accountEmail: 'Sähköpostiosoite',

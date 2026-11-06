@@ -18,7 +18,14 @@ const ERROR_KEYS: Record<AuthErrorCode, string> = {
   unavailable: 'accountErrorUnavailable',
 };
 
-export function AccountPanel({ session, providers }: { session: AuthSession; providers: SignInProvider[] }) {
+interface AccountPanelProps {
+  session: AuthSession;
+  providers: SignInProvider[];
+  /** Replaces the general explanation shown while signed out. */
+  intro?: string;
+}
+
+export function AccountPanel({ session, providers, intro }: AccountPanelProps) {
   const { t, getCurrentLocale } = useTranslation();
   const state = React.useSyncExternalStore(session.subscribe, session.getState);
   const textColor = useThemeColor({}, 'text') as string;
@@ -136,7 +143,7 @@ export function AccountPanel({ session, providers }: { session: AuthSession; pro
 
   return (
     <View style={styles.container}>
-      <ThemedText>{t('accountExplanation')}</ThemedText>
+      <ThemedText>{intro ?? t('accountExplanation')}</ThemedText>
       {providers.map(provider => (
         <ProviderSignInButton
           key={provider.id}
