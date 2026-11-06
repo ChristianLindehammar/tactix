@@ -1,5 +1,6 @@
-import { Alert, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 import { CustomInputDialog } from './CustomInputDialog';
 import { IconSymbol } from './ui/IconSymbol';
@@ -101,11 +102,21 @@ export const CourtConfigurationSelector: React.FC = () => {
   // Determine which buttons to show
   const showLeftArrow = configCount > 1 && currentIndex > 0;
   const showRightArrow = configCount > 1 && currentIndex < configCount - 1;
-  // Show plus button when viewing the last configuration (so users can always add more)
-  const showPlusButton = currentIndex === configCount - 1;
 
   return (
     <>
+      <View style={styles.header}>
+        <ThemedText type="title">{t('playGround')}</ThemedText>
+        <Pressable
+          onPress={() => setShowCreateDialog(true)}
+          accessibilityRole="button"
+          accessibilityLabel={t('createConfiguration')}
+          hitSlop={8}
+        >
+          <MaterialIcons name="add-circle" size={36} color={tintColor as string} />
+        </Pressable>
+      </View>
+
       <View style={[styles.container, { backgroundColor: backgroundColor as string }]}>
         {/* Left arrow - only show when not on first config */}
         {showLeftArrow ? (
@@ -137,21 +148,7 @@ export const CourtConfigurationSelector: React.FC = () => {
           </ThemedText>
         </TouchableOpacity>
 
-        {/* Right side: either right arrow, plus button, or empty space */}
-        {showPlusButton ? (
-          <TouchableOpacity
-            onPress={() => {
-              setShowCreateDialog(true);
-            }}
-            style={styles.arrowButton}
-          >
-            <IconSymbol
-              name="plus.circle.fill"
-              size={20}
-              color={tintColor as string}
-            />
-          </TouchableOpacity>
-        ) : showRightArrow ? (
+        {showRightArrow ? (
           <TouchableOpacity
             onPress={() => {
               switchToNextConfiguration();
@@ -189,6 +186,14 @@ export const CourtConfigurationSelector: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 12,
+    paddingBottom: 8,
+  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
