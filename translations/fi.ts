@@ -312,6 +312,7 @@ export default {
   planPerMonth: '{{price}} kuukaudessa',
   planStartTrial: 'Aloita ilmainen kokeilu',
   planRestore: 'Palauta osto',
+  planUnavailable: 'Ostot eivät ole käytettävissä tässä sovelluksen versiossa.',
   planErrorPurchase: 'Osto ei onnistunut. Yritä uudelleen.',
   planErrorRestore: 'Oston palauttaminen ei onnistunut. Yritä uudelleen.',
   planErrorSignInFirst: 'Osto voi kuulua tilille. Kirjaudu sisään kohdassa Asetukset > Tili saadaksesi sen takaisin.',

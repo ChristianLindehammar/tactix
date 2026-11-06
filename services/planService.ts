@@ -21,6 +21,8 @@ export interface PlanPrices {
 }
 
 export interface PlanStore {
+  /** Set by a build that has no store to sell through. */
+  readonly unavailable?: true;
   getPlan(): Promise<StorePlan>;
   getPrices(): Promise<PlanPrices>;
   /** 'cancelled' when the coach backed out of the store's own sheet. */
@@ -117,6 +119,7 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
   });
 
   return {
+    canSell: !store.unavailable,
     getState: () => state,
     getPrices: () => store.getPrices(),
     subscribe: (listener: () => void) => {

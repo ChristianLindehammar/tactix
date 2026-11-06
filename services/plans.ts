@@ -31,6 +31,7 @@ function createDevPlanStore(): PlanStore {
 
 /** A build without a key can't sell anything, so its exercises stay locked. */
 const unavailableStore: PlanStore = {
+  unavailable: true,
   getPlan: () => Promise.reject(new Error('No RevenueCat key in this build')),
   getPrices: async () => ({ annual: null, monthly: null }),
   purchase: () => Promise.reject(new Error('No RevenueCat key in this build')),

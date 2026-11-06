@@ -312,6 +312,7 @@ export default {
   planPerMonth: '{{price}} a month',
   planStartTrial: 'Start free trial',
   planRestore: 'Restore purchase',
+  planUnavailable: "Purchases aren't available in this version of the app.",
   planErrorPurchase: 'The purchase did not go through. Please try again.',
   planErrorRestore: 'Could not restore your purchase. Please try again.',
   planErrorSignInFirst: 'This purchase may belong to an account. Sign in under Settings > Account to get it back.',

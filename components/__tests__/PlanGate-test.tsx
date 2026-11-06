@@ -12,8 +12,9 @@ const LAST_YEAR = '2020-01-15T08:00:00.000Z';
 
 const t = (key: string, options?: Record<string, unknown>) => i18n.t(key, options);
 
-function setup(plan: StorePlan, { offline = false } = {}) {
+function setup(plan: StorePlan, { offline = false, unavailable = false } = {}) {
   const store: jest.Mocked<PlanStore> = {
+    ...(unavailable ? { unavailable: true as const } : {}),
     getPlan: jest.fn(async () => plan),
     getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
     purchase: jest.fn(async (_period: PlanPeriod) => plan),
@@ -177,4 +178,12 @@ test('a coach whose plan ended can renew on either plan', async () => {
 
   await screen.findByText('the library');
   expect(store.purchase).toHaveBeenCalledWith('monthly');
+});
+
+test('a build that cannot sell says so instead of offering a trial that fails', async () => {
+  setup({ expiresAt: null }, { unavailable: true });
+
+  expect(await screen.findByText(t('planUnavailable'))).toBeTruthy();
+  expect(screen.queryByRole('button', { name: t('planStartTrial') })).toBeNull();
+  expect(screen.queryByRole('button', { name: t('planRestore') })).toBeNull();
 });

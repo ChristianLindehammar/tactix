@@ -57,6 +57,15 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
   };
 
   if (state.status === 'active') return <>{children}</>;
+  if (!plans.canSell) {
+    return (
+      <View style={[styles.container, { backgroundColor: background }]}>
+        <ThemedText type="title">{t('planTitle')}</ThemedText>
+        <ThemedText>{t('planBenefits')}</ThemedText>
+        <ThemedText type="defaultSemiBold">{t('planUnavailable')}</ThemedText>
+      </View>
+    );
+  }
   if (checking && state.status === 'unknown') return <ActivityIndicator style={styles.spinner} />;
   if (state.status === 'unknown') {
     return (
