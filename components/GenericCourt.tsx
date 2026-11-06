@@ -10,7 +10,6 @@ interface Props {
   availableHeight: number;
   availableWidth: number;
   playerPositions: PlayerType[];
-  onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
   CourtSvg: React.ComponentType<{ width: number; height: number, stroke?: string }>;
   aspectRatio: number; // width/height ratio of the court
 }
@@ -27,8 +26,8 @@ const isValidPosition = (position: { x: number; y: number } | null | undefined):
          position.y <= 1 + epsilon;
 };
 
-export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
-  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
+export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, CourtSvg, aspectRatio }: Props) => {
+  const [selectedPlayerId] = useState<string | null>(null);
   const { updatePlayerPosition } = useTeam();
   
   // Fix invalid positions only on initial render or when new players are added
@@ -54,17 +53,6 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
   // Filter players with valid positions for rendering
   const validatedPlayers = playerPositions.filter(player => isValidPosition(player.courtPosition));
   
-  const handleDragEnd = (playerId: string, pos: { x: number; y: number }) => {
-    // Ensure position is within bounds before updating
-    const clampedPos = {
-      x: Math.max(0, Math.min(1, pos.x)),
-      y: Math.max(0, Math.min(1, pos.y))
-    };
-    
-    setSelectedPlayerId(null);
-    onDragEnd(playerId, clampedPos);
-  };
-
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
       <CourtSurface width={availableWidth} height={availableHeight} CourtSvg={CourtSvg}>
@@ -76,7 +64,6 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
               name={player.name}
               position={player.position}
               courtPosition={player.courtPosition!}
-              onDragEnd={(pos) => handleDragEnd(player.id, pos)}
               containerSize={{ width: availableWidth, height: availableHeight }}
               isSelected={player.id === selectedPlayerId}
             />

@@ -1,99 +1,106 @@
-import React, { createContext, useState, useContext, PropsWithChildren, useCallback } from 'react';
-import { PlayerType } from '@/types/models';
+import React, { createContext, PropsWithChildren, useCallback, useContext, useRef, useState } from 'react';
+import { View } from 'react-native';
+import { SharedValue, useSharedValue } from 'react-native-reanimated';
 
-interface Position {
-  x: number;
-  y: number;
-}
+import { PlayerType, Position } from '@/types/models';
+import { DropAction, DropSource, Rect, resolveDrop } from '@/utils/resolveDrop';
 
-interface DragInfo {
+interface ActiveDrag {
   player: PlayerType;
-  initialPosition: Position;
-}
-
-interface DropResult {
-  droppedPlayer: PlayerType | null;
-  finalPosition: Position | null;
+  source: DropSource;
 }
 
 interface DragContextProps {
-  // Current drag state
-  draggedItem: DragInfo | null;
-  dragPosition: Position | null;
-  isDragging: boolean;
-  lastDrop: DropResult | null;
-  
-  // Drag operations
-  startDrag: (player: PlayerType, initialPosition: Position) => void;
-  updateDragPosition: (position: Position) => void;
-  endDrag: () => DropResult;
-  clearLastDrop: () => void;
+  /** Changes only when a drag starts or ends, so dragging doesn't re-render the screen */
+  activeDrag: ActiveDrag | null;
+  /** Finger position in window coordinates, updated on the UI thread */
+  dragX: SharedValue<number>;
+  dragY: SharedValue<number>;
+  /** Where the bench is on screen, so gestures can tell when a court player is over it */
+  benchRect: SharedValue<Rect | null>;
+  /** True while a court player is held over the bench */
+  overBench: SharedValue<boolean>;
+  courtRef: React.RefObject<View | null>;
+  benchRef: React.RefObject<View | null>;
+  startDrag: (player: PlayerType, source: DropSource) => void;
+  endDrag: (point: Position, courtPosition?: Position) => void;
+  cancelDrag: () => void;
 }
 
 const DragContext = createContext<DragContextProps | undefined>(undefined);
 
+const measure = (ref: React.RefObject<View | null>, onMeasured: (rect: Rect) => void) =>
+  ref.current?.measureInWindow((x, y, width, height) => onMeasured({ x, y, width, height }));
+
+interface DragProviderProps {
+  onDrop: (player: PlayerType, action: DropAction) => void;
+}
+
 /**
- * Provides a centralized system for tracking and managing player dragging 
- * between the court and bench. Used to:
- * 1. Handle bench player → court drag and drop
- * 2. Handle court player → bench drag and drop
- * 3. Display ghost markers during drags
+ * Tracks one player being dragged between the court and the bench. Gestures report where
+ * the finger is released, and the drop is resolved against where the court and bench are.
  */
-export const DragProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [draggedItem, setDraggedItem] = useState<DragInfo | null>(null);
-  const [dragPosition, setDragPosition] = useState<Position | null>(null);
-  const [lastDrop, setLastDrop] = useState<DropResult | null>(null);
+export const DragProvider: React.FC<PropsWithChildren<DragProviderProps>> = ({ children, onDrop }) => {
+  const [activeDrag, setActiveDrag] = useState<ActiveDrag | null>(null);
+  const activeDragRef = useRef<ActiveDrag | null>(null);
+  const dragX = useSharedValue(0);
+  const dragY = useSharedValue(0);
+  const benchRect = useSharedValue<Rect | null>(null);
+  const overBench = useSharedValue(false);
+  const courtRect = useRef<Rect | null>(null);
+  const courtRef = useRef<View | null>(null);
+  const benchRef = useRef<View | null>(null);
+  const onDropRef = useRef(onDrop);
+  onDropRef.current = onDrop;
 
-  const startDrag = useCallback((player: PlayerType, initialPosition: Position) => {
-    setDraggedItem({ player, initialPosition });
-    setDragPosition(initialPosition);
-  }, []);
+  const startDrag = useCallback((player: PlayerType, source: DropSource) => {
+    // The bench can be opened or closed between drags, so measure each time
+    measure(courtRef, rect => (courtRect.current = rect));
+    measure(benchRef, rect => (benchRect.value = rect));
+    activeDragRef.current = { player, source };
+    setActiveDrag(activeDragRef.current);
+  }, [benchRect]);
 
-  const updateDragPosition = useCallback((position: Position) => {
-    setDragPosition(position);
-  }, []);
+  const finish = useCallback(() => {
+    activeDragRef.current = null;
+    overBench.value = false;
+    setActiveDrag(null);
+  }, [overBench]);
 
-  const endDrag = useCallback(() => {
-    const droppedPlayer = draggedItem?.player ?? null;
-    const finalPosition = dragPosition;
-    const dropData = { droppedPlayer, finalPosition };
-    
-    setLastDrop(dropData);
-    setDraggedItem(null);
-    setDragPosition(null);
-    
-    return dropData;
-  }, [draggedItem, dragPosition]);
-
-  const clearLastDrop = useCallback(() => setLastDrop(null), []);
-
-  // Simple check if something is currently being dragged
-  const isDragging = !!draggedItem;
+  const endDrag = useCallback((point: Position, courtPosition?: Position) => {
+    const drag = activeDragRef.current;
+    finish();
+    if (!drag) return;
+    const action = resolveDrop({
+      source: drag.source,
+      point,
+      court: courtRect.current,
+      bench: benchRect.value,
+      courtPosition,
+    });
+    onDropRef.current(drag.player, action);
+  }, [finish, benchRect]);
 
   return (
-    <DragContext.Provider value={{ 
-      draggedItem, 
-      dragPosition, 
-      isDragging, 
-      lastDrop,
-      startDrag, 
-      updateDragPosition, 
-      endDrag,
-      clearLastDrop
-    }}>
+    <DragContext.Provider
+      value={{
+        activeDrag,
+        dragX,
+        dragY,
+        benchRect,
+        overBench,
+        courtRef,
+        benchRef,
+        startDrag,
+        endDrag,
+        cancelDrag: finish,
+      }}
+    >
       {children}
     </DragContext.Provider>
   );
 };
 
-/**
- * Hook to access the drag context. Provides functionality for:
- * - Tracking drag state with isDragging
- * - Starting drags with startDrag
- * - Updating drag position with updateDragPosition
- * - Ending drags with endDrag
- * - Getting the last drop details with lastDrop
- */
 export const useDrag = () => {
   const context = useContext(DragContext);
   if (!context) {

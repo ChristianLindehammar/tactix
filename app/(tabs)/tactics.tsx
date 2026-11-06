@@ -161,7 +161,6 @@ export default function TacticsScreen() {
             CourtSvg={() => null} 
             aspectRatio={1} 
             playerPositions={[]}
-            onDragEnd={() => {}} 
           />
         </View>
       </ThemedView>
