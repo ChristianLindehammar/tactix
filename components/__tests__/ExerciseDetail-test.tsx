@@ -186,7 +186,7 @@ describe('exercise detail', () => {
       expect(screen.queryByText('Delete')).toBeNull();
     });
 
-    it('can be cloned into an exercise you own and edit', async () => {
+    it('can be cloned into an exercise you own, edited on top of the copy so saving lands on it', async () => {
       renderExerciseScreen(<ExerciseDetailScreen />);
 
       fireEvent.press(await screen.findByText('Clone'));
@@ -197,10 +197,10 @@ describe('exercise detail', () => {
         ownerId: await getCurrentUserId(),
         title: 'Their drill (copy)',
       });
-      expect(mockPush).toHaveBeenCalledWith({
-        pathname: '/exercises/edit',
-        params: { id: copy!.id },
-      });
+      expect(mockPush.mock.calls).toEqual([
+        [`/exercises/${copy!.id}`],
+        [{ pathname: '/exercises/edit', params: { id: copy!.id } }],
+      ]);
     });
 
     it('can be rated without changing the exercise', async () => {
@@ -222,7 +222,7 @@ describe('exercise detail', () => {
     await act(async () => {});
 
     expect(await exerciseRepository.list()).toHaveLength(2);
-    expect(mockPush).toHaveBeenCalledTimes(1);
+    expect(mockPush).toHaveBeenCalledTimes(2);
   });
 
   it('says so when cloning fails, and stays on the exercise', async () => {
@@ -412,5 +412,66 @@ describe('exercise detail', () => {
 
     expect(screen.queryByText('Report')).toBeNull();
     expect(screen.queryByText('Block this coach')).toBeNull();
+  });
+
+  describe('a copy', () => {
+    beforeEach(async () => {
+      await exerciseRepository.save(
+        buildExercise({ id: 'copy', ownerId: await getCurrentUserId(), title: 'Rondo (copy)', clonedFromId: 'original' }),
+      );
+      mockId = 'copy';
+    });
+
+    it('links to the exercise it was copied from on this device', async () => {
+      await exerciseRepository.save(buildExercise({ id: 'original', title: 'Rondo' }));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Rondo'));
+
+      expect(screen.getByText('Copied from')).toBeTruthy();
+      expect(mockPush).toHaveBeenCalledWith('/exercises/original');
+    });
+
+    it('links to the original on the server when it is not on this device', async () => {
+      mockLibrary.get.mockResolvedValue(buildExercise({ id: 'original', ownerId: 'anna', title: 'Rondo' }));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Rondo'));
+
+      expect(mockLibrary.get).toHaveBeenCalledWith('original');
+      expect(mockPush).toHaveBeenCalledWith('/exercises/original');
+    });
+
+    it('says so, without a link, when the original has been removed', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('An exercise that no longer exists'));
+
+      expect(mockPush).not.toHaveBeenCalled();
+    });
+
+    it('still links to the original when it cannot be looked up', async () => {
+      mockLibrary.get.mockRejectedValue(new LibraryError('offline'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Open the original'));
+
+      expect(mockPush).toHaveBeenCalledWith('/exercises/original');
+    });
+
+    it('shows the copy itself even when the original cannot be looked up', async () => {
+      mockLibrary.get.mockRejectedValue(new LibraryError('offline'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Rondo (copy)')).toBeTruthy();
+    });
+  });
+
+  it('shows no origin for an exercise that is not a copy', async () => {
+    renderExerciseScreen(<ExerciseDetailScreen />);
+    await screen.findByText('Triangle passing');
+
+    expect(screen.queryByText('Copied from')).toBeNull();
+    expect(mockLibrary.get).not.toHaveBeenCalled();
   });
 });

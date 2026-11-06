@@ -21,6 +21,19 @@ import { describeExercise } from '@/utils/describeExercise';
 
 const noop = () => {};
 
+/** Where a copy came from: its title, gone (deleted or hidden), or unknown when it couldn't be looked up. */
+type Origin = { id: string } & ({ state: 'found'; title: string } | { state: 'gone' } | { state: 'unknown' });
+
+// This device first, then the server, like the exercise itself. Never throws, as the copy matters more.
+const findOrigin = async (id: string): Promise<Origin> => {
+  try {
+    const original = (await exerciseRepository.get(id)) ?? (await library.get(id));
+    return original ? { id, state: 'found', title: original.title } : { id, state: 'gone' };
+  } catch {
+    return { id, state: 'unknown' };
+  }
+};
+
 export default function ExerciseDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
@@ -37,6 +50,7 @@ export default function ExerciseDetailScreen() {
   const [rating, setRating] = useState<RatingStars | null>(null);
   const [failure, setFailure] = useState<string | null>(null);
   const [stepIndex, setStepIndex] = useState(0);
+  const [origin, setOrigin] = useState<Origin | null>(null);
 
   // Reloads on return from the editor, so edits show straight away
   useFocusEffect(
@@ -60,6 +74,14 @@ export default function ExerciseDetailScreen() {
           setUserId(me);
           setRating(myRating);
           setStatus(found ? 'ready' : 'notFound');
+          const originId = found?.clonedFromId;
+          if (!originId) {
+            setOrigin(null);
+            return;
+          }
+          findOrigin(originId).then(result => {
+            if (active) setOrigin(result);
+          });
         })
         .catch(() => {
           if (active) setStatus(localFailed ? 'failed' : 'libraryFailed');
@@ -132,6 +154,8 @@ export default function ExerciseDetailScreen() {
         title: t('cloneTitle', { title: exercise.title }),
       });
       await exerciseRepository.save(copy);
+      // The editor opens on top of the copy, so saving or leaving lands on the copy, which links back here
+      router.push(`/exercises/${copy.id}`);
       router.push({ pathname: '/exercises/edit', params: { id: copy.id } });
     } catch {
       setFailure(t('exerciseCloneFailed'));
@@ -188,6 +212,24 @@ export default function ExerciseDetailScreen() {
         <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>
         <StarRating value={rating} onChange={rate} />
       </View>
+
+      {origin && (
+        <View style={styles.section}>
+          <ThemedText type="defaultSemiBold">{t('copiedFrom')}</ThemedText>
+          {origin.state === 'gone' ? (
+            <ThemedText>{t('copiedFromGone')}</ThemedText>
+          ) : (
+            <ThemedText
+              type="link"
+              accessibilityRole="link"
+              style={styles.link}
+              onPress={() => router.push(`/exercises/${origin.id}`)}
+            >
+              {origin.state === 'found' ? origin.title : t('openOriginal')}
+            </ThemedText>
+          )}
+        </View>
+      )}
 
       {exercise.focus.length > 0 && (
         <View style={styles.section}>
@@ -263,6 +305,10 @@ const styles = StyleSheet.create({
   },
   section: {
     gap: 4,
+  },
+  link: {
+    // Only the title opens the original, not the whole row
+    alignSelf: 'flex-start',
   },
   error: {
     color: '#D32F2F',
