@@ -22,6 +22,8 @@ DEFAULT_LIMITS = {
     'providerSignIns': (60, 3600),
     # Each one calls RevenueCat
     'planRefreshes': (30, 3600),
+    # Each one may email the moderator
+    'reports': (20, 3600),
 }
 
 

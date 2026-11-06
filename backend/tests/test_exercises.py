@@ -35,6 +35,7 @@ def build_exercise(**overrides):
         'createdAt': '2026-11-03T10:00:00.000Z',
         'updatedAt': '2026-11-03T10:30:00.250Z',
         'deletedAt': None,
+        'visibility': 'public',
         **overrides,
     }
 
@@ -96,6 +97,25 @@ class TestSavingAndFetching:
         put(client, {**exercise, 'deletedAt': '2026-11-04T08:00:00.000Z'}, me)
 
         assert get(client, exercise, me).status_code == 404
+
+
+class TestVisibility:
+    def test_keeps_a_private_exercise_private(self, client, register):
+        me = register()
+        exercise = build_exercise(visibility='private')
+
+        put(client, exercise, me)
+
+        assert get(client, exercise, me).get_json()['visibility'] == 'private'
+
+    def test_an_exercise_from_an_older_app_is_public(self, client, register):
+        me = register()
+        exercise = build_exercise()
+        del exercise['visibility']
+
+        put(client, exercise, me)
+
+        assert get(client, exercise, me).get_json()['visibility'] == 'public'
 
 
 class TestOwnership:
@@ -162,6 +182,7 @@ class TestValidation:
             ({'difficulty': True}, 'invalidDifficulty'),
             ({'focus': 'passing'}, 'invalidFocus'),
             ({'phase': 'nap'}, 'invalidPhase'),
+            ({'visibility': 'friends'}, 'invalidVisibility'),
             ({'durationMinutes': 0}, 'invalidCount'),
             ({'minPlayers': 12, 'maxPlayers': 6}, 'invalidCount'),
             ({'durationMinutes': 10**12}, 'invalidCount'),

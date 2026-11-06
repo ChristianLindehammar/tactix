@@ -5,7 +5,7 @@ from flask import Blueprint, g, jsonify, request
 
 from .auth import require_user
 from .db import get_db, query_all, query_one
-from .listing import InvalidFilter, build_listing
+from .listing import InvalidFilter, build_library, build_listing
 from .plans import has_active_plan
 from .rate_limit import current_user, rate_limited
 from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise
@@ -41,6 +41,7 @@ def _to_exercise(row, focus):
         'createdAt': _format_date(row['created_at']),
         'updatedAt': _format_date(row['updated_at']),
         'deletedAt': _format_date(row['deleted_at']),
+        'visibility': row['visibility'],
     }
 
 
@@ -85,6 +86,7 @@ def _write_exercise(exercise, owner_id, exists):
         'created_at': exercise['createdAt'],
         'updated_at': exercise['updatedAt'],
         'deleted_at': exercise['deletedAt'],
+        'visibility': exercise['visibility'],
     }
     cursor = get_db().cursor()
     if exists:
@@ -104,22 +106,41 @@ def _write_exercise(exercise, owner_id, exists):
     cursor.close()
 
 
-@bp.get('/exercises')
-@require_user
-def list_exercises():
-    """The caller's own exercises. Browsing other coaches' exercises isn't offered."""
+def _listing(build, with_author=False):
     try:
-        where, params, order, limit, offset = build_listing(request.args, g.user_id)
+        where, params, order, limit, offset = build()
     except InvalidFilter:
         return jsonify({'error': 'invalidFilter'}), 400
 
     total = query_one(f'SELECT COUNT(*) AS total FROM exercises e WHERE {where}', params)['total']
+    author = ', u.display_name AS author_name' if with_author else ''
+    joined = 'JOIN users u ON u.id = e.owner_id' if with_author else ''
     rows = query_all(
-        f'SELECT e.* FROM exercises e WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
+        f'SELECT e.*{author} FROM exercises e {joined} WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
         [*params, limit, offset],
     )
     focus = _focus_by_exercise([row['id'] for row in rows])
-    return jsonify({'exercises': [_to_exercise(row, focus.get(row['id'], [])) for row in rows], 'total': total})
+    exercises = []
+    for row in rows:
+        exercise = _to_exercise(row, focus.get(row['id'], []))
+        if with_author:
+            exercise['authorName'] = row['author_name']
+        exercises.append(exercise)
+    return jsonify({'exercises': exercises, 'total': total})
+
+
+@bp.get('/exercises')
+@require_user
+def list_exercises():
+    """The caller's own exercises."""
+    return _listing(lambda: build_listing(request.args, g.user_id))
+
+
+@bp.get('/library')
+@require_user
+def library():
+    """Public exercises from every coach. Browsing needs an account but not a plan."""
+    return _listing(lambda: build_library(request.args, g.user_id), with_author=True)
 
 
 @bp.put('/exercises/<exercise_id>')
@@ -159,7 +180,15 @@ def save_exercise(exercise_id):
 @require_user
 def get_exercise(exercise_id):
     """Any signed-in install can read by id: the unguessable id is what a share link carries."""
-    exercise = _load_exercise(exercise_id.lower())
+    exercise_id = exercise_id.lower()
+    exercise = _load_exercise(exercise_id)
     if exercise is None or exercise['deletedAt'] is not None:
         return jsonify({'error': 'notFound'}), 404
+    if exercise['ownerId'] != g.user_id and _is_hidden(exercise_id):
+        return jsonify({'error': 'notFound'}), 404
     return jsonify(exercise)
+
+
+def _is_hidden(exercise_id):
+    """Hidden by reports, waiting for the moderator. Its author still sees it."""
+    return query_one('SELECT hidden_at FROM exercises WHERE id = %s', (exercise_id,))['hidden_at'] is not None

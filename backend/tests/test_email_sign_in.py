@@ -58,6 +58,7 @@ def test_a_coach_signs_in_with_the_code_sent_to_their_email(api, outbox):
     assert me.get_json() == {
         'userId': signed_in.get_json()['userId'],
         'email': 'coach@example.com',
+        'displayName': None,
         'plan': {'active': False, 'expiresAt': None},
     }
 

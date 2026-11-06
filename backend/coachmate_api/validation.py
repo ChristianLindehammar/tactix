@@ -11,6 +11,7 @@ FOCUS_TAGS = {
     'passing', 'shooting', 'ballControl', 'defence', 'attack', 'transition',
     'positioning', 'setPieces', 'goalkeeping', 'conditioning',
 }
+VISIBILITIES = {'public', 'private'}
 MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'goal'}
 ARROW_TYPES = {'arrow-solid', 'arrow-dashed'}
 MAX_ARROW_BEND = 0.5
@@ -154,6 +155,10 @@ def parse_exercise(data):
     if not isinstance(data.get('frames'), list) or not data['frames']:
         raise ExerciseParseError('invalidFrames')
     frames = [_parse_frame(frame) for frame in data['frames']]
+    # Apps from before the public library don't send it
+    visibility = data.get('visibility', 'public')
+    if visibility not in VISIBILITIES:
+        raise ExerciseParseError('invalidVisibility')
 
     deleted_at = data.get('deletedAt')
     return {
@@ -176,4 +181,5 @@ def parse_exercise(data):
         'createdAt': parse_date(data.get('createdAt')),
         'updatedAt': parse_date(data.get('updatedAt')),
         'deletedAt': None if deleted_at is None else parse_date(deleted_at),
+        'visibility': visibility,
     }

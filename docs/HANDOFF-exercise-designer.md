@@ -55,6 +55,7 @@ Last run: 440 app tests in 29 suites and 211 backend tests passing. `tsc` report
 - **Ratings:** one record per user and exercise, stored apart from the exercise (`exercise-rating:<userId>:<exerciseId>`). A cleared rating stays as `stars: null` so it can sync.
 - **Clone:** creates a new exercise you own, with `clonedFromId` pointing at the source. Ratings are not copied.
 - **Arrow names:** solid is Run and dashed is Pass, confirmed by Christian. Coaches' conventions differ, but swapping would only change the displayed names in `translations/`.
+- **Public exercise library:** saved exercises are public by default, building one shared database for every coach. Decided by Christian on 2026-11-06, replacing the curated-first suggestion. A private toggle sits in the editor, and a private exercise is only seen by people who get its share link. Public exercises show a display name the coach chooses, never their email. Anyone with an account can browse the library, while saving your own exercises needs a plan. Exercises uploaded before this stay private. App store rules for user-made content apply: reporting, blocking users, removing objectionable content quickly, and published contact details.
 - **Sharing exercises:** wait for the database, then share by link, which works in SMS and mail. Decided by Christian on 2026-11-04. Links need a web page or app store fallback for people without the app. Until import exists, the app treats every `.coachmate` file it opens as a team.
 - **Placing near a marker:** while a tool is selected, a marker's touch area shrinks to the marker itself, so nearby taps place the new marker. Tapping or dragging the marker itself still puts the tool away.
 - **Curved arrows:** an arrow's middle dot sits on the first hump's peak. Dragging it sideways sets the bend, and dragging it toward the start adds waves, with faint dots showing the snap positions. Humps are uniform with evenly spaced peaks, so an arrow starting half a cone gap before a row of cones, with one wave per cone, makes a slalom. Stored as `bend` (share of court width, signed, steps of 0.02, up to 0.5) and `waves` (1–8) on the arrow, and a straight arrow has neither. A wave count is only offered if the arrow has room for it. It's on through `enableCurves`, used by the exercise editor and the free Tactics board (Christian's choice on 2026-11-05). Tactics has no hint row, so nothing there explains the dot.
@@ -132,7 +133,7 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Clear test data from the live database before launch. Nothing there is real yet: it holds users and exercises from the live server check and `CoachMate_Dev`. To remove the check's leftovers but keep the emulator's user, delete exercise `d09005cf-7bcd-4504-9725-2396f07547be`, then rows in `api_tokens` and `users` whose user owns no exercises. Removing exercises in `CoachMate_Dev`'s account as well means it won't send them again, because of the `exercise-sync:` keys.
     - Deploy the curve validation (`bend`, `waves`). Until then the live server drops them from uploads, and `exercise-sync:` keys stop unchanged exercises being re-sent, so curved exercises uploaded before the deploy stay straight there until edited. Test exercise "Slalom" (`2635589d-7070-4f78-a593-bfb0def5f4cd`) is on the live server from the curve check.
     - Add ratings and average ratings, then filtering and sorting by rating in `GET /exercises`.
-    - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option. Browsing others' exercises waits for the exercise library decision.
+    - Listing only returns your own exercises and leaves out deleted ones. Sync across devices will need deleted ones and an "updated since" option.
     - Titles sort with `å`, `ä` and `ö` among `a` and `o` on the server, unlike Swedish sorting in the app.
     - Upload gaps: clearing the server's tables stops unchanged exercises being sent again, because of the `exercise-sync:` keys. A 429 wait is only held in memory, and a refused upload only shows as a console warning.
     - With downloading: decide what happens when two devices edit the same exercise, where the last save currently wins, even if it's older.
@@ -146,10 +147,16 @@ The `tdd` skill is in use: agree the test seams with Christian before writing te
     - Check on iOS, and check real mail delivery and spam filtering.
     - Downloading, so a second device or the web app can see a coach's exercises.
     - Review the Swedish and Finnish account texts and the code emails.
-4. **RevenueCat and paywall.** The tactics board stays free. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
+4. **Public library:**
+    - Backend built and tested, **not deployed**: migration `005_public_library.sql`, `visibility` on exercises (apps that don't send it save public ones), `PUT /me/display-name`, `GET /library` with `authorName` and a `lang` filter, `POST /exercises/<id>/report` and blocking (`backend/coachmate_api/reports.py`), the moderator email (`MODERATOR_EMAIL`) and `scripts/moderate.py`. One report hides an exercise from the reporter, three different coaches hide it from everyone, and its author always keeps it. Endpoints are in `backend/README.md`.
+    - Until the app sends `visibility`, everything it uploads is public.
+    - Next, the app: `visibility` in `types/exercise.ts`, the toggle with a warning about names in notes, a Library view, read-only detail with "Copy to my exercises", reporting, blocking and a display name on the Account screen.
+    - Update the privacy policy for public content before release.
+5. **RevenueCat and paywall.** The tactics board stays free. Christian needs to create the products in App Store Connect and Google Play Console. Include Restore Purchases.
 
 Later:
 - Sharing exercises by link, once they're in the database.
+- Translating coaches' texts: on the server when an exercise is opened in another language, kept per exercise, language and `updatedAt`, with a "Show original" toggle. DeepL suggested. Build it with sharing by link.
 - Animating between steps: markers keep their IDs from step to step, so they could slide into place.
 
 ## Found during device checks, not fixed
@@ -161,7 +168,6 @@ Later:
 ## Open decisions for Christian
 
 - **Saving tactics:** should saved plain tactics be free? I suggested a few for free.
-- **Exercise library:** whether to offer a shared or curated one. I suggested curated first, since publishing by coaches needs moderation.
 - **Difficulty scale:** currently 1–5. Three levels might rate more consistently if a shared library comes soon.
 - **Deleting others' exercises:** blocked for now, which Christian didn't explicitly ask for. It needs rethinking with link sharing, so people can remove a shared copy.
 - **Translations:** Swedish and Finnish strings need review, Finnish especially.

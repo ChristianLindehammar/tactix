@@ -1,12 +1,15 @@
-"""Turns the query string of GET /exercises into SQL. Same meaning as filterExercises in
+"""Turns the query string of GET /exercises and GET /library into SQL. Same meaning as filterExercises in
 utils/filterExercises.ts, except sorting by rating, which needs ratings on the server first.
 Only values from the caller become query parameters; the SQL text comes from this file."""
+import re
+
 from .validation import FOCUS_TAGS, MAX_COUNT, PHASES, SPORTS
 
 DEFAULT_PAGE_SIZE = 50
 MAX_PAGE_SIZE = 100
 MAX_OFFSET = 1_000_000
 MAX_SEARCH_LENGTH = 200
+LANGUAGE = re.compile(r'[a-z]{2,3}')
 
 SORTS = {
     'updated': 'e.updated_at DESC, e.id',
@@ -40,10 +43,10 @@ def _placeholders(values):
     return ', '.join(['%s'] * len(values))
 
 
-def build_listing(args, owner_id):
-    """Returns (where, params, order, limit, offset) for the caller's own exercises."""
-    where = ['e.owner_id = %s', 'e.deleted_at IS NULL']
-    params = [owner_id]
+def _build(args, where, params):
+    """Returns (where, params, order, limit, offset), narrowing the given conditions by the filters."""
+    where = [*where, 'e.deleted_at IS NULL']
+    params = list(params)
 
     if 'sport' in args:
         where.append('e.sport = %s')
@@ -86,3 +89,27 @@ def build_listing(args, owner_id):
     limit = _whole_number(args['limit'], 1, MAX_PAGE_SIZE) if 'limit' in args else DEFAULT_PAGE_SIZE
     offset = _whole_number(args['offset'], 0, MAX_OFFSET) if 'offset' in args else 0
     return ' AND '.join(where), params, order, limit, offset
+
+
+def build_listing(args, owner_id):
+    """The caller's own exercises."""
+    return _build(args, ['e.owner_id = %s'], [owner_id])
+
+
+def build_library(args, viewer_id):
+    """Every coach's public exercises, minus hidden ones, those the viewer reported and those by
+    coaches the viewer blocked. A language matches its regional variants too, so sv finds sv-FI."""
+    where = [
+        "e.visibility = 'public'",
+        'e.hidden_at IS NULL',
+        'NOT EXISTS (SELECT 1 FROM exercise_reports r WHERE r.exercise_id = e.id AND r.reporter_id = %s)',
+        'NOT EXISTS (SELECT 1 FROM user_blocks b WHERE b.blocker_id = %s AND b.blocked_id = e.owner_id)',
+    ]
+    params = [viewer_id, viewer_id]
+    if 'lang' in args:
+        language = args['lang'].lower()
+        if not LANGUAGE.fullmatch(language):
+            raise InvalidFilter()
+        where.append("(e.locale = %s OR e.locale LIKE %s)")
+        params.extend([language, f'{language}-%'])
+    return _build(args, where, params)

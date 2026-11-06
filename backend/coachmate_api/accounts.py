@@ -4,6 +4,7 @@ import hmac
 import logging
 import re
 import secrets
+import unicodedata
 import uuid
 from datetime import datetime, timezone
 
@@ -24,6 +25,7 @@ CODE_LIFETIME_SECONDS = 600
 MAX_CODE_ATTEMPTS = 5
 MAX_EMAIL_LENGTH = 254
 EMAIL_PATTERN = re.compile(r'[^\s@]+@[^\s@.]+(\.[^\s@.]+)+')
+MAX_DISPLAY_NAME_LENGTH = 40
 
 
 def _digest(*parts):
@@ -235,8 +237,41 @@ def sign_out():
 @bp.get('/me')
 @require_user
 def me():
-    row = query_one('SELECT id, email, plan_expires_at FROM users WHERE id = %s', (g.user_id,))
-    return jsonify({'userId': row['id'], 'email': row['email'], 'plan': plan_of(row['plan_expires_at'])})
+    row = query_one('SELECT id, email, display_name, plan_expires_at FROM users WHERE id = %s', (g.user_id,))
+    return jsonify({
+        'userId': row['id'],
+        'email': row['email'],
+        'displayName': row['display_name'],
+        'plan': plan_of(row['plan_expires_at']),
+    })
+
+
+def _display_name(value):
+    """The name to store, or None to clear it. Raises ValueError for one that can't be shown."""
+    if value is None:
+        return None
+    if not isinstance(value, str):
+        raise ValueError()
+    name = value.strip()
+    # Line breaks and other control characters would break the layout wherever it's shown
+    if not 0 < len(name) <= MAX_DISPLAY_NAME_LENGTH or any(unicodedata.category(c)[0] == 'C' for c in name):
+        raise ValueError()
+    return name
+
+
+@bp.put('/me/display-name')
+@require_user
+def set_display_name():
+    try:
+        name = _display_name((request.get_json(silent=True) or {}).get('displayName'))
+    except ValueError:
+        return jsonify({'error': 'invalidDisplayName'}), 400
+    connection = get_db()
+    cursor = connection.cursor()
+    cursor.execute('UPDATE users SET display_name = %s WHERE id = %s', (name, g.user_id))
+    connection.commit()
+    cursor.close()
+    return jsonify({'displayName': name})
 
 
 @bp.delete('/me')

@@ -50,6 +50,7 @@ def test_the_first_sign_in_creates_an_account(api, verifier):
     assert me.get_json() == {
         'userId': response.get_json()['userId'],
         'email': 'coach@example.com',
+        'displayName': None,
         'plan': {'active': False, 'expiresAt': None},
     }
     assert verifier.calls == [('google', 'token', 'n')]
