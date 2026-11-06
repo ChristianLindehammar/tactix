@@ -1,114 +1,102 @@
-import { NavigationProp, useNavigation } from "expo-router/react-navigation";
-import { Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
-
+import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { useBottomTabBarHeight } from "expo-router/js-tabs";
-import { PlayerListItem } from '@/components/PlayerListItem';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useBottomTabBarHeight } from 'expo-router/js-tabs';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { PlayerListItem } from '@/components/PlayerListItem';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { TooltipModal } from '@/components/TooltipModal';
+import { AddPlayersSheet } from '@/components/team/AddPlayersSheet';
+import { TeamActionsSheet } from '@/components/team/TeamActionsSheet';
+import { TeamSwitcherButton } from '@/components/team/TeamSwitcherButton';
+import { TeamSwitcherSheet } from '@/components/team/TeamSwitcherSheet';
+import { useTeamUiColors } from '@/components/team/useTeamUiColors';
 import { useTeam } from '@/context/TeamContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
+import { PlayerType } from '@/types/models';
 
-type RootStackParamList = {
-  'modal/teamModal': undefined;
-};
-
+type Sheet = 'none' | 'switch' | 'actions' | 'add';
 
 export default function TeamScreen() {
-  const { team, teams, addPlayer } = useTeam();
-  const [newPlayerName, setNewPlayerName] = useState('');
-  const [showTooltip, setShowTooltip] = useState(false);
-  const textColor = useThemeColor({}, 'text') as string;
+  const { team, teams } = useTeam();
+  const [sheet, setSheet] = useState<Sheet>('none');
   const tint = useThemeColor({}, 'tint') as string;
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const colors = useTeamUiColors();
   const tabBarHeight = useBottomTabBarHeight();
-
-  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
-  const textInputRef = useRef<TextInput>(null);
   const { t } = useTranslation();
+  const closeSheet = () => setSheet('none');
 
-  // Get all players combined
-  const allPlayers = [...(team?.startingPlayers ?? []), ...(team?.benchPlayers ?? [])];
+  const onCourt = team?.startingPlayers ?? [];
+  const bench = team?.benchPlayers ?? [];
+  const playerCount = onCourt.length + bench.length;
 
-  useEffect(() => {
-    if (teams.length > 0 && team && allPlayers.length === 0) {
-      setTimeout(() => {
-        if (textInputRef.current) {
-          textInputRef.current.measure((_x, _y, width, height, pageX, pageY) => {
-            setTooltipPosition({
-              x: pageX + width / 2,
-              y: pageY + height + 10,
-            });
-          });
-        }
-        setShowTooltip(true);
-      }, 1000); // Small delay to ensure layout is complete
-
-      const timer = setTimeout(() => setShowTooltip(false), 5000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [teams, team, allPlayers.length]);
-
-  const handleAddPlayer = () => {
-    if (newPlayerName.trim() !== '') {
-      addPlayer(newPlayerName);
-      setNewPlayerName('');
-    }
-  };
+  const section = (title: string, players: PlayerType[]) => players.length > 0 && (
+    <>
+      <ThemedText style={[styles.sectionTitle, { color: colors.muted }]}>{title}</ThemedText>
+      {players.map(player => (
+        <PlayerListItem key={player.id} player={player} isOnCourt={false} />
+      ))}
+    </>
+  );
 
   return (
-    <ThemedView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-        {teams.length === 0 ? (
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-            <ThemedText>{t('noTeamsExist')}</ThemedText>
-            <ThemedButton onPress={() => navigation.navigate('modal/teamModal')}>{t('createTeam')}</ThemedButton>
+    <ThemedView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top']}>
+        {!team ? (
+          <View style={styles.empty}>
+            <ThemedText style={styles.emptyText}>{teams.length === 0 ? t('noTeamsExist') : t('pickATeam')}</ThemedText>
+            <ThemedButton onPress={() => setSheet('switch')}>{teams.length === 0 ? t('addATeam') : t('yourTeams')}</ThemedButton>
           </View>
         ) : (
-          <ThemedView style={[styles.container, { paddingBottom: Platform.OS === 'ios' ? tabBarHeight : 0 }]}>
-            <View style={styles.teamTitle}>
-              <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
-              {team?.shared && (
-                <View style={styles.sharedBadge} accessibilityLabel={t('sharedTeam')}>
-                  <Ionicons name="people" size={14} color={tint} />
-                  <ThemedText style={[styles.sharedText, { color: tint }]}>{t('sharedTeam')}</ThemedText>
+          <>
+            <View style={styles.header}>
+              <View style={styles.titleRow}>
+                <TeamSwitcherButton variant="title" onPress={() => setSheet('switch')} />
+                <View style={styles.actions}>
+                  <Pressable
+                    style={[styles.moreButton, { backgroundColor: colors.chip }]}
+                    onPress={() => setSheet('actions')}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('teamOptions')}
+                    hitSlop={4}
+                  >
+                    <MaterialIcons name="more-horiz" size={24} color={colors.text} />
+                  </Pressable>
+                  <Pressable onPress={() => setSheet('add')} accessibilityRole="button" accessibilityLabel={t('addPlayers')} hitSlop={8}>
+                    <MaterialIcons name="add-circle" size={36} color={tint} />
+                  </Pressable>
                 </View>
-              )}
+              </View>
+              <View style={styles.subtitle}>
+                {team.shared ? <Ionicons name="people" size={15} color={colors.accent} /> : null}
+                <ThemedText style={[styles.subtitleText, { color: colors.muted }]}>
+                  {`${t('teamPlayerCount', { count: playerCount })} · ${team.shared ? t('sharedWithCoaches') : t('onlyOnThisDevice')}`}
+                </ThemedText>
+              </View>
             </View>
 
-            <TooltipModal visible={showTooltip} onClose={() => setShowTooltip(false)} message={t('startByAddingPlayers')} position={tooltipPosition} />
-
-            <ThemedView style={styles.addPlayerContainer}>
-              <TextInput ref={textInputRef} style={[styles.input, { color: textColor }]} placeholder={t('enterPlayerName')} value={newPlayerName} onChangeText={setNewPlayerName} />
-              <ThemedButton onPress={handleAddPlayer} disabled={newPlayerName.trim() === ''}>
-                {t('addPlayer')}
-              </ThemedButton>
-            </ThemedView>
-
-            <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
-              <ThemedText style={styles.headerText}>{t('players')}</ThemedText>
-              {allPlayers.length === 0 ? (
+            {playerCount === 0 ? (
+              <View style={styles.empty}>
                 <ThemedText style={styles.emptyText}>{t('noPlayersYet')}</ThemedText>
-              ) : (
-                allPlayers.map((player) => (
-                  <PlayerListItem key={player.id} player={player} isOnCourt={false} />
-                ))
-              )}
-              <View style={styles.listFooter} />
-            </ScrollView>
-          </ThemedView>
+                <ThemedButton onPress={() => setSheet('add')}>{t('addPlayers')}</ThemedButton>
+              </View>
+            ) : (
+              <ScrollView contentContainerStyle={{ paddingBottom: (Platform.OS === 'ios' ? tabBarHeight : 0) + 24 }}>
+                {section(t('onCourtCount', { count: onCourt.length }), onCourt)}
+                {section(t('benchCount', { count: bench.length }), bench)}
+              </ScrollView>
+            )}
+          </>
         )}
       </SafeAreaView>
-      <Pressable style={[styles.fab, { bottom: (Platform.OS === 'ios' ? tabBarHeight : 0) + 16 }]} onPress={() => navigation.navigate('modal/teamModal')}>
-        <Ionicons name='people-outline' size={28} color='white' />
-      </Pressable>
+
+      <TeamSwitcherSheet visible={sheet === 'switch'} onClose={closeSheet} />
+      <TeamActionsSheet visible={sheet === 'actions'} onClose={closeSheet} />
+      <AddPlayersSheet visible={sheet === 'add'} onClose={closeSheet} />
     </ThemedView>
   );
 }
@@ -117,96 +105,54 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  teamTitle: {
-    alignItems: 'center',
+  header: {
+    paddingHorizontal: 16,
+    paddingTop: 12,
+    paddingBottom: 4,
   },
-  sharedBadge: {
+  titleRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    justifyContent: 'space-between',
+    gap: 12,
   },
-  sharedText: {
+  actions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  moreButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subtitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  subtitleText: {
     fontSize: 13,
   },
-  scrollView: {
+  sectionTitle: {
+    fontSize: 13,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 4,
+  },
+  empty: {
     flex: 1,
-  },
-  scrollContent: {
-    paddingBottom: 0,
-  },
-  listFooter: {
-    paddingBottom: 80,
-  },
-  addPlayerContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
-    margin: 16,
-  },
-  input: {
-    flex: 1,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    padding: 8,
-    marginRight: 8,
-  },
-  playerItem: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-  },
-  player: {
-    fontSize: 16,
-  },
-  sectionContainer: {
-    margin: 16,
-    flex: 1,
-  },
-  headerText: {
-    textAlign: 'center',
-    padding: 16,
-    fontSize: 16,
+    justifyContent: 'center',
+    gap: 16,
+    paddingHorizontal: 32,
   },
   emptyText: {
     textAlign: 'center',
-    padding: 16,
-    fontSize: 14,
-    opacity: 0.6,
-  },
-  teamName: {
-    textAlign: 'center',
-    padding: 16,
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  fab: {
-    position: 'absolute',
-    right: 16,
-    backgroundColor: '#0097B2',
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-  },
-  fabText: {
-    fontSize: 24,
-    color: 'white',
-    textAlign: 'center',
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  button: {
-    backgroundColor: '#007AFF',
-    borderRadius: 8,
-    padding: 12,
-    alignItems: 'center',
-    borderWidth: 1,
   },
 });

@@ -5,6 +5,8 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { CustomInputDialog } from './CustomInputDialog';
 import { IconSymbol } from './ui/IconSymbol';
 import { ThemedText } from './ThemedText';
+import { TeamSwitcherButton } from './team/TeamSwitcherButton';
+import { TeamSwitcherSheet } from './team/TeamSwitcherSheet';
 import { useTeam } from '@/context/TeamContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -24,6 +26,7 @@ export const CourtConfigurationSelector: React.FC = () => {
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showRenameDialog, setShowRenameDialog] = useState(false);
+  const [showTeamSwitcher, setShowTeamSwitcher] = useState(false);
 
   if (!team || !team.configurations || team.configurations.length === 0) {
     return null;
@@ -117,6 +120,10 @@ export const CourtConfigurationSelector: React.FC = () => {
         </Pressable>
       </View>
 
+      <View style={styles.team}>
+        <TeamSwitcherButton variant="compact" onPress={() => setShowTeamSwitcher(true)} />
+      </View>
+
       <View style={[styles.container, { backgroundColor: backgroundColor as string }]}>
         {/* Left arrow - only show when not on first config */}
         {showLeftArrow ? (
@@ -166,6 +173,8 @@ export const CourtConfigurationSelector: React.FC = () => {
         )}
       </View>
 
+      <TeamSwitcherSheet visible={showTeamSwitcher} onClose={() => setShowTeamSwitcher(false)} />
+
       <CustomInputDialog
         visible={showCreateDialog}
         title={t('createConfiguration') || 'Create Configuration'}
@@ -192,7 +201,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingTop: 12,
-    paddingBottom: 8,
+  },
+  team: {
+    paddingHorizontal: 16,
+    paddingBottom: 6,
   },
   container: {
     flexDirection: 'row',

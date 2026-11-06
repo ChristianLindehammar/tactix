@@ -56,17 +56,6 @@ export default function RootLayout() {
             <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
               <Stack>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen 
-                  name="modal/teamModal" 
-                  options={{ 
-                    presentation: 'transparentModal',
-                    animation: 'fade',  // This will fade the background
-                    headerShown: false, // Remove the header
-                    cardStyle: { 
-                      backgroundColor: 'transparent',
-                    },
-                  }} 
-                />
                 <Stack.Screen name="share-team" options={{ title: t('coachTogether') }} />
                 <Stack.Screen name="join/index" options={{ title: t('joinTeam') }} />
                 <Stack.Screen name="join/[code]" options={{ title: t('joinTeam') }} />

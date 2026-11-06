@@ -29,8 +29,8 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { PlayerType } from '@/types/models';
 import { DropAction } from '@/utils/resolveDrop';
 
-// Title header (60) plus the configuration switcher (36)
-const CONFIGURATION_SELECTOR_HEIGHT = 96;
+// Title header (52), the team switcher (38) and the configuration switcher (36)
+const CONFIGURATION_SELECTOR_HEIGHT = 126;
 
 export default function HomeScreen() {
   const { movePlayerToCourt, movePlayerToBench, updatePlayerPosition } = useTeam();

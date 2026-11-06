@@ -2,6 +2,7 @@ import * as React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
 import { CourtConfigurationSelector } from '../CourtConfigurationSelector';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { TeamContext } from '@/context/TeamContext';
 
 const configurations = [
@@ -9,13 +10,19 @@ const configurations = [
   { id: 'b', name: 'Defence' },
 ];
 
+const metrics = { frame: { x: 0, y: 0, width: 390, height: 844 }, insets: { top: 0, left: 0, right: 0, bottom: 0 } };
+
 const renderSelector = (selectedConfigurationId: string) => {
   const team = {
+    name: 'F12 Basket',
+    startingPlayers: [],
+    benchPlayers: [],
     configurations,
     selectedConfigurationId,
   };
   const value = {
     team,
+    teams: [team],
     switchToPreviousConfiguration: jest.fn(),
     switchToNextConfiguration: jest.fn(),
     createConfiguration: jest.fn(),
@@ -23,9 +30,11 @@ const renderSelector = (selectedConfigurationId: string) => {
     deleteConfiguration: jest.fn(),
   };
   render(
-    <TeamContext.Provider value={value as any}>
-      <CourtConfigurationSelector />
-    </TeamContext.Provider>,
+    <SafeAreaProvider initialMetrics={metrics}>
+      <TeamContext.Provider value={value as any}>
+        <CourtConfigurationSelector />
+      </TeamContext.Provider>
+    </SafeAreaProvider>,
   );
   return value;
 };
@@ -36,6 +45,14 @@ describe('CourtConfigurationSelector', () => {
 
     expect(screen.getByText('Playing field')).toBeTruthy();
     expect(screen.getByText('Attack')).toBeTruthy();
+  });
+
+  it('shows the open team, which opens the team switcher', () => {
+    renderSelector('a');
+
+    fireEvent.press(screen.getByLabelText('Switch team, current team F12 Basket'));
+
+    expect(screen.getByText('Your teams')).toBeTruthy();
   });
 
   it('offers a new configuration from the header even when not on the last one', () => {
