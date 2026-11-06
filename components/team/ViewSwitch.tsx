@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 import { ThemedText } from '@/components/ThemedText';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useTeamUiColors } from './useTeamUiColors';
 
@@ -19,7 +20,7 @@ export function ViewSwitch({ view, playerCount, onChange }: ViewSwitchProps) {
   const { t } = useTranslation();
   const colors = useTeamUiColors();
 
-  const option = (value: TeamView, icon: 'sports' | 'people', label: string) => {
+  const option = (value: TeamView, label: string) => {
     const selected = view === value;
     return (
       <Pressable
@@ -28,7 +29,12 @@ export function ViewSwitch({ view, playerCount, onChange }: ViewSwitchProps) {
         accessibilityState={{ selected }}
         style={[styles.option, selected && [styles.selected, { backgroundColor: colors.sheet }]]}
       >
-        <MaterialIcons name={icon} size={16} color={colors.text} />
+        {value === 'court' ? (
+          // The same court as the Team tab's icon
+          <IconSymbol name="sportscourt.fill" size={16} color={colors.text} />
+        ) : (
+          <MaterialIcons name="people" size={16} color={colors.text} />
+        )}
         <ThemedText style={[styles.label, selected && styles.selectedLabel]}>{label}</ThemedText>
       </Pressable>
     );
@@ -36,8 +42,8 @@ export function ViewSwitch({ view, playerCount, onChange }: ViewSwitchProps) {
 
   return (
     <View style={[styles.switch, { backgroundColor: colors.chip }]} accessibilityRole="tablist">
-      {option('court', 'sports', t('court'))}
-      {option('players', 'people', t('playersCount', { count: playerCount }))}
+      {option('court', t('court'))}
+      {option('players', t('playersCount', { count: playerCount }))}
     </View>
   );
 }
