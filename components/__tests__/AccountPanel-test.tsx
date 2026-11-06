@@ -5,13 +5,14 @@ import * as React from 'react';
 import { AccountPanel } from '@/components/AccountPanel';
 import { createAuthSession } from '@/services/authSession';
 import { createUserIdentity } from '@/services/currentUser';
+import { LibraryError } from '@/services/library';
 import type { SignInProvider } from '@/services/signInProviders';
 import i18n from '@/translations/i18n';
 
 const json = (status: number, body: unknown = {}) =>
   new Response(status === 204 ? null : JSON.stringify(body), { status });
 
-const setup = (providers: SignInProvider[] = []) => {
+const setup = (providers: SignInProvider[] = [], profile?: React.ComponentProps<typeof AccountPanel>['profile']) => {
   const fetch = jest.fn(async (url: string, _init?: RequestInit) =>
     url.endsWith('/auth/email/start')
       ? json(202)
@@ -31,7 +32,7 @@ const setup = (providers: SignInProvider[] = []) => {
       clear: async () => void (token = null),
     },
   });
-  render(<AccountPanel session={session} providers={providers} />);
+  render(<AccountPanel session={session} providers={providers} profile={profile} />);
   return { session, fetch };
 };
 
@@ -208,4 +209,54 @@ test('a provider that fails shows an error and leaves the coach signed out', asy
 
   expect(await screen.findByRole('alert')).toBeTruthy();
   expect(session.getState().status).toBe('signedOut');
+});
+
+describe('the display name', () => {
+  const profileWith = (name: string | null) => ({
+    getDisplayName: jest.fn(async () => name),
+    setDisplayName: jest.fn(async (_name: string | null) => undefined),
+  });
+
+  it('shows the name chosen before, once signed in', async () => {
+    setup([], profileWith('Coach Anna'));
+    await signIn();
+
+    expect(await screen.findByDisplayValue('Coach Anna')).toBeTruthy();
+    expect(screen.getByText(t('displayNameHint'))).toBeTruthy();
+  });
+
+  it('saves a new name', async () => {
+    const profile = profileWith(null);
+    setup([], profile);
+    await signIn();
+
+    fireEvent.changeText(await screen.findByLabelText(t('displayName')), 'Coach Anna');
+    fireEvent.press(screen.getByRole('button', { name: t('displayNameSave') }));
+
+    await waitFor(() => expect(profile.setDisplayName).toHaveBeenCalledWith('Coach Anna'));
+    expect(await screen.findByText(t('displayNameSaved'))).toBeTruthy();
+  });
+
+  it('clears the name when the field is emptied', async () => {
+    const profile = profileWith('Coach Anna');
+    setup([], profile);
+    await signIn();
+
+    fireEvent.changeText(await screen.findByDisplayValue('Coach Anna'), '  ');
+    fireEvent.press(screen.getByRole('button', { name: t('displayNameSave') }));
+
+    await waitFor(() => expect(profile.setDisplayName).toHaveBeenCalledWith(null));
+  });
+
+  it('explains a name the server refuses', async () => {
+    const profile = profileWith(null);
+    profile.setDisplayName.mockRejectedValue(new LibraryError('invalidDisplayName'));
+    setup([], profile);
+    await signIn();
+
+    fireEvent.changeText(await screen.findByLabelText(t('displayName')), 'Anna');
+    fireEvent.press(screen.getByRole('button', { name: t('displayNameSave') }));
+
+    expect(await screen.findByText(t('displayNameInvalid'))).toBeTruthy();
+  });
 });

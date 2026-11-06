@@ -29,6 +29,10 @@ describe('cloning an exercise', () => {
     expect(parseExercise(copy)).toEqual(copy);
   });
 
+  it('starts private, so copies for your own team do not fill the library', () => {
+    expect(clone().visibility).toBe('private');
+  });
+
   it('becomes a new exercise that you own', () => {
     const copy = clone();
 

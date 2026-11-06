@@ -74,6 +74,29 @@ describe('exercise editor', () => {
       expect(mockBack).toHaveBeenCalledTimes(1);
     });
 
+    it('shares a new exercise in the library, warning against players\' names', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+
+      fireEvent.changeText(await screen.findByLabelText('Title'), 'Breakout');
+      expect(screen.getByLabelText('Share in the library')).toHaveProp('value', true);
+      expect(screen.getByText(/Don't write players' names/)).toBeTruthy();
+      await pressSave();
+
+      const [saved] = await exerciseRepository.list();
+      expect(saved.visibility).toBe('public');
+    });
+
+    it('keeps an exercise private when sharing is switched off', async () => {
+      renderExerciseScreen(<ExerciseEditorScreen />);
+
+      fireEvent.changeText(await screen.findByLabelText('Title'), 'Breakout');
+      fireEvent(screen.getByLabelText('Share in the library'), 'valueChange', false);
+      await pressSave();
+
+      const [saved] = await exerciseRepository.list();
+      expect(saved.visibility).toBe('private');
+    });
+
     it('removes a focus tag when it is pressed again', async () => {
       renderExerciseScreen(<ExerciseEditorScreen />);
 

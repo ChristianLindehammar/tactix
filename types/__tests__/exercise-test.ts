@@ -30,6 +30,7 @@ const validExercise = () => ({
   createdAt: '2026-11-03T10:00:00.000Z',
   updatedAt: '2026-11-03T10:00:00.000Z',
   deletedAt: null,
+  visibility: 'public',
 });
 
 const errorCodeFor = (data: unknown): string | undefined => {
@@ -66,6 +67,7 @@ describe('parseExercise', () => {
     ['a fractional difficulty', { difficulty: 2.5 }, 'invalidDifficulty'],
     ['focus that is not a list', { focus: 'passing' }, 'invalidFocus'],
     ['an unknown phase', { phase: 'nap' }, 'invalidPhase'],
+    ['an unknown visibility', { visibility: 'friends' }, 'invalidVisibility'],
     ['a negative duration', { durationMinutes: -5 }, 'invalidCount'],
     ['more minimum than maximum players', { minPlayers: 12, maxPlayers: 6 }, 'invalidCount'],
     ['no frames', { frames: [] }, 'invalidFrames'],
@@ -142,6 +144,16 @@ describe('parseExercise', () => {
     const marker = { id: 'a', type: 'cone', x: -0.02, y: 1.03 };
 
     expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
+  });
+
+  it('keeps a private exercise private', () => {
+    expect(parseExercise({ ...validExercise(), visibility: 'private' }).visibility).toBe('private');
+  });
+
+  it('treats an exercise saved before the public library as private, as the server does', () => {
+    const { visibility: _visibility, ...older } = validExercise();
+
+    expect(parseExercise(older).visibility).toBe('private');
   });
 
   it('accepts unset duration and player counts', () => {

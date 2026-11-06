@@ -14,6 +14,7 @@ import { StarRating } from '@/components/StarRating';
 import { getCurrentUserId } from '@/services/currentUser';
 import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
+import { library } from '@/services/library';
 import { Exercise, RatingStars } from '@/types/exercise';
 import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
@@ -28,7 +29,10 @@ export default function ExerciseDetailScreen() {
   const background = useThemeColor({}, 'background') as string;
 
   const [exercise, setExercise] = useState<Exercise | null>(null);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'notFound' | 'failed'>('loading');
+  const [status, setStatus] = useState<'loading' | 'ready' | 'notFound' | 'failed' | 'libraryFailed'>(
+    'loading',
+  );
+  const [fromLibrary, setFromLibrary] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   const [rating, setRating] = useState<RatingStars | null>(null);
   const [failure, setFailure] = useState<string | null>(null);
@@ -38,16 +42,27 @@ export default function ExerciseDetailScreen() {
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      Promise.all([exerciseRepository.get(id), getCurrentUserId(), ratingRepository.getMine(id)])
-        .then(([found, me, myRating]) => {
+      // This device first, then the shared library, which is also where share links lead
+      let localFailed = false;
+      const found = exerciseRepository.get(id).then(
+        async local =>
+          local ? { exercise: local, fromLibrary: false } : { exercise: await library.get(id), fromLibrary: true },
+        error => {
+          localFailed = true;
+          throw error;
+        },
+      );
+      Promise.all([found, getCurrentUserId(), ratingRepository.getMine(id)])
+        .then(([{ exercise: found, fromLibrary: shared }, me, myRating]) => {
           if (!active) return;
           setExercise(found);
+          setFromLibrary(shared);
           setUserId(me);
           setRating(myRating);
           setStatus(found ? 'ready' : 'notFound');
         })
         .catch(() => {
-          if (active) setStatus('failed');
+          if (active) setStatus(localFailed ? 'failed' : 'libraryFailed');
         });
       return () => {
         active = false;
@@ -72,6 +87,30 @@ export default function ExerciseDetailScreen() {
         },
       },
     ]);
+
+  const confirmThen = (title: string, message: string, confirm: string, action: () => Promise<void>, failed: string) =>
+    Alert.alert(title, message, [
+      { text: t('cancel'), style: 'cancel' },
+      {
+        text: confirm,
+        style: 'destructive',
+        onPress: async () => {
+          setFailure(null);
+          try {
+            await action();
+            router.back();
+          } catch {
+            setFailure(t(failed));
+          }
+        },
+      },
+    ]);
+
+  const confirmReport = () =>
+    confirmThen(t('reportExerciseTitle'), t('reportExerciseMessage'), t('report'), () => library.report(id), 'reportFailed');
+
+  const confirmBlock = (authorId: string) =>
+    confirmThen(t('blockCoachTitle'), t('blockCoachMessage'), t('block'), () => library.block(authorId), 'blockFailed');
 
   const rate = async (stars: RatingStars | null) => {
     setFailure(null);
@@ -105,9 +144,15 @@ export default function ExerciseDetailScreen() {
         <Stack.Screen options={{ title: '' }} />
         {status === 'notFound' && <ThemedText>{t('exerciseNotFound')}</ThemedText>}
         {status === 'failed' && <ThemedText>{t('exerciseLoadFailed')}</ThemedText>}
+        {status === 'libraryFailed' && <ThemedText>{t('libraryExerciseLoadFailed')}</ThemedText>}
       </ThemedView>
     );
   }
+
+  const mine = exercise.ownerId === userId;
+  // Editing and deleting work on this device's copy, which a library exercise doesn't have
+  const editable = mine && !fromLibrary;
+  const authorId = exercise.ownerId;
 
   // The exercise may have reloaded with fewer steps
   const step = exercise.frames[stepIndex] ?? exercise.frames[0];
@@ -173,7 +218,7 @@ export default function ExerciseDetailScreen() {
 
       {failure && <ThemedText style={styles.error}>{failure}</ThemedText>}
 
-      {exercise.ownerId === userId && (
+      {editable && (
         <ThemedButton
           onPress={() => router.push({ pathname: '/exercises/edit', params: { id: exercise.id } })}
         >
@@ -181,10 +226,16 @@ export default function ExerciseDetailScreen() {
         </ThemedButton>
       )}
       <ThemedButton onPress={clone}>{t('clone')}</ThemedButton>
-      {exercise.ownerId === userId && (
+      {editable && (
         <ThemedButton onPress={confirmDelete} style={styles.deleteButton}>
           {t('delete')}
         </ThemedButton>
+      )}
+      {fromLibrary && !mine && (
+        <>
+          <ThemedButton onPress={confirmReport}>{t('report')}</ThemedButton>
+          {authorId && <ThemedButton onPress={() => confirmBlock(authorId)}>{t('blockCoach')}</ThemedButton>}
+        </>
       )}
     </ScrollView>
   );

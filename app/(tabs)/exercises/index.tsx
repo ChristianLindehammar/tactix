@@ -1,5 +1,5 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import { FlatList, Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ActivityIndicator, FlatList, Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useBottomTabBarHeight } from 'expo-router/js-tabs';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -13,6 +13,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
+import { library, LibraryEntry, LibrarySort } from '@/services/library';
 import {
   Exercise,
   EXERCISE_DIFFICULTIES,
@@ -30,6 +31,17 @@ const toggled = <T,>(list: T[], item: T) =>
   list.includes(item) ? list.filter(existing => existing !== item) : [...list, item];
 
 const MIN_RATING_OPTIONS: RatingStars[] = [3, 4, 5];
+// Waits for typing to pause before asking the server
+const LIBRARY_QUERY_DELAY_MS = 300;
+
+type Source = 'mine' | 'library';
+const SOURCES: Source[] = ['mine', 'library'];
+
+interface LibraryState {
+  status: 'loading' | 'ready' | 'failed';
+  entries: LibraryEntry[];
+  total: number;
+}
 
 export default function ExerciseLibraryScreen() {
   const { selectedSport } = useSport();
@@ -54,6 +66,10 @@ export default function ExerciseLibraryScreen() {
   const [minRating, setMinRating] = useState<RatingStars | undefined>();
   const [sort, setSort] = useState<ExerciseSort>('updated');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [source, setSource] = useState<Source>('mine');
+  const [shared, setShared] = useState<LibraryState>({ status: 'loading', entries: [], total: 0 });
+  const [loadingMore, setLoadingMore] = useState(false);
+  const latestQuery = useRef(0);
 
   const load = useCallback(async () => {
     try {
@@ -100,8 +116,57 @@ export default function ExerciseLibraryScreen() {
     locale,
   });
 
+  const inLibrary = source === 'library';
+  // Ratings are only on this device so far, so the server can't filter or sort by them
+  const sorts = inLibrary ? EXERCISE_SORTS.filter(option => option !== 'rating') : EXERCISE_SORTS;
+  const librarySort: LibrarySort = sort === 'rating' ? 'updated' : sort;
+  const libraryFilter = useMemo(
+    () => ({
+      sport: selectedSport ?? undefined,
+      focus,
+      difficulties,
+      phase,
+      playerCount: parsedPlayerCount,
+      search,
+      sort: librarySort,
+    }),
+    [selectedSport, focus, difficulties, phase, parsedPlayerCount, search, librarySort],
+  );
+
+  const loadLibrary = useCallback(async () => {
+    const query = ++latestQuery.current;
+    setShared(current => ({ ...current, status: 'loading' }));
+    try {
+      const page = await library.list(libraryFilter);
+      if (query === latestQuery.current) setShared({ status: 'ready', ...page });
+    } catch {
+      if (query === latestQuery.current) setShared(current => ({ ...current, status: 'failed' }));
+    }
+  }, [libraryFilter]);
+
+  useEffect(() => {
+    if (!inLibrary) return;
+    const timer = setTimeout(loadLibrary, LIBRARY_QUERY_DELAY_MS);
+    return () => clearTimeout(timer);
+  }, [inLibrary, loadLibrary]);
+
+  const loadMore = async () => {
+    const query = latestQuery.current;
+    setLoadingMore(true);
+    try {
+      const page = await library.list({ ...libraryFilter, offset: shared.entries.length });
+      if (query === latestQuery.current) {
+        setShared(current => ({ ...current, entries: [...current.entries, ...page.entries], total: page.total }));
+      }
+    } catch {
+      // The button stays, so the coach can try again
+    } finally {
+      setLoadingMore(false);
+    }
+  };
+
   const activeFilterCount =
-    focus.length + difficulties.length + (phase ? 1 : 0) + (minRating ? 1 : 0);
+    focus.length + difficulties.length + (phase ? 1 : 0) + (minRating && !inLibrary ? 1 : 0);
 
   const clearFilters = () => {
     setSearch('');
@@ -114,7 +179,73 @@ export default function ExerciseLibraryScreen() {
 
   const inputStyle = [styles.input, { borderColor: border, color: textColor }];
 
+  const renderCard = (item: Exercise, authorName?: string | null) => (
+    <Pressable
+      accessibilityRole="button"
+      onPress={() => router.push(`/exercises/${item.id}`)}
+      style={[styles.card, { backgroundColor: cardBackground, borderColor: border }]}
+    >
+      <View style={styles.cardTitle}>
+        <ThemedText type="defaultSemiBold" style={styles.cardTitleText}>
+          {item.title}
+        </ThemedText>
+        {ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
+      </View>
+      {authorName ? (
+        <ThemedText style={styles.cardDetail}>{t('byAuthor', { name: authorName })}</ThemedText>
+      ) : null}
+      <ThemedText style={styles.cardDetail}>{describeExercise(item, t)}</ThemedText>
+      {item.focus.length > 0 && (
+        <ThemedText style={styles.cardDetail}>
+          {item.focus.map(tag => t(`focusTags.${tag}`)).join(', ')}
+        </ThemedText>
+      )}
+    </Pressable>
+  );
+
+  const listPadding = {
+    padding: 16,
+    gap: 12,
+    paddingBottom: 16 + (Platform.OS === 'ios' ? tabBarHeight : 0),
+  };
+
+  const renderLibrary = () => {
+    if (shared.status === 'failed' && shared.entries.length === 0) {
+      return (
+        <View style={styles.message}>
+          <ThemedText style={styles.messageText}>{t('libraryLoadFailed')}</ThemedText>
+          <ThemedButton onPress={loadLibrary}>{t('tryAgain')}</ThemedButton>
+        </View>
+      );
+    }
+    if (shared.status === 'loading' && shared.entries.length === 0) {
+      return <ActivityIndicator style={styles.message} />;
+    }
+    return (
+      <FlatList
+        data={shared.entries}
+        keyExtractor={entry => entry.exercise.id}
+        keyboardShouldPersistTaps="handled"
+        contentContainerStyle={listPadding}
+        ListEmptyComponent={
+          <ThemedText style={styles.messageText}>
+            {t(hasFilters ? 'noMatchingExercises' : 'libraryEmpty')}
+          </ThemedText>
+        }
+        ListFooterComponent={
+          shared.entries.length < shared.total ? (
+            <ThemedButton disabled={loadingMore} onPress={loadMore}>
+              {t('showMore')}
+            </ThemedButton>
+          ) : null
+        }
+        renderItem={({ item }) => renderCard(item.exercise, item.authorName)}
+      />
+    );
+  };
+
   const renderBody = () => {
+    if (inLibrary) return renderLibrary();
     if (loadFailed) {
       return (
         <View style={styles.message}>
@@ -139,34 +270,11 @@ export default function ExerciseLibraryScreen() {
         data={visible}
         keyExtractor={exercise => exercise.id}
         keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{
-          padding: 16,
-          gap: 12,
-          paddingBottom: 16 + (Platform.OS === 'ios' ? tabBarHeight : 0),
-        }}
+        contentContainerStyle={listPadding}
         ListEmptyComponent={
           <ThemedText style={styles.messageText}>{t('noMatchingExercises')}</ThemedText>
         }
-        renderItem={({ item }) => (
-          <Pressable
-            accessibilityRole="button"
-            onPress={() => router.push(`/exercises/${item.id}`)}
-            style={[styles.card, { backgroundColor: cardBackground, borderColor: border }]}
-          >
-            <View style={styles.cardTitle}>
-              <ThemedText type="defaultSemiBold" style={styles.cardTitleText}>
-                {item.title}
-              </ThemedText>
-              {ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
-            </View>
-            <ThemedText style={styles.cardDetail}>{describeExercise(item, t)}</ThemedText>
-            {item.focus.length > 0 && (
-              <ThemedText style={styles.cardDetail}>
-                {item.focus.map(tag => t(`focusTags.${tag}`)).join(', ')}
-              </ThemedText>
-            )}
-          </Pressable>
-        )}
+        renderItem={({ item }) => renderCard(item)}
       />
     );
   };
@@ -183,6 +291,18 @@ export default function ExerciseLibraryScreen() {
         >
           <MaterialIcons name="add-circle" size={36} color={tint} />
         </Pressable>
+      </View>
+
+      <View style={styles.sourceRow}>
+        {SOURCES.map(option => (
+          <FilterChip
+            key={option}
+            label={t(option === 'mine' ? 'myExercises' : 'exerciseLibrary')}
+            testID={`source-${option}`}
+            selected={source === option}
+            onPress={() => setSource(option)}
+          />
+        ))}
       </View>
 
       <View style={styles.searchRow}>
@@ -218,7 +338,7 @@ export default function ExerciseLibraryScreen() {
           contentContainerStyle={styles.sortChips}
           keyboardShouldPersistTaps="handled"
         >
-          {EXERCISE_SORTS.map(option => (
+          {sorts.map(option => (
             <FilterChip
               key={option}
               label={t(`exerciseSorts.${option}`)}
@@ -286,6 +406,7 @@ export default function ExerciseLibraryScreen() {
           ))}
         </ScrollView>
 
+        {!inLibrary && (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -303,6 +424,7 @@ export default function ExerciseLibraryScreen() {
             />
           ))}
         </ScrollView>
+        )}
         </>
       )}
 
@@ -332,6 +454,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingTop: 12,
+    paddingBottom: 8,
+  },
+  sourceRow: {
+    flexDirection: 'row',
+    gap: 8,
+    paddingHorizontal: 16,
     paddingBottom: 8,
   },
   searchRow: {

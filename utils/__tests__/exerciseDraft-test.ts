@@ -50,6 +50,14 @@ describe('a new exercise from a draft', () => {
     });
   });
 
+  it('is public, so it joins the shared library', () => {
+    expect(save(validDraft()).visibility).toBe('public');
+  });
+
+  it('stays private when the coach says so', () => {
+    expect(save(validDraft({ visibility: 'private' })).visibility).toBe('private');
+  });
+
   it('gets its own id each time', () => {
     expect(save(validDraft()).id).not.toBe(save(validDraft()).id);
   });
@@ -149,6 +157,7 @@ describe('editing an existing exercise', () => {
       { id: 'first', note: 'Start', markers: [{ id: 'a', type: 'cone', x: 0.5, y: 0.5 }] },
       { id: 'second', markers: [] },
     ],
+    visibility: 'private',
   });
 
   it('loads every field into the draft and saves it back unchanged, apart from the edit date', () => {

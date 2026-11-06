@@ -13,6 +13,10 @@ export type ExerciseDifficulty = (typeof EXERCISE_DIFFICULTIES)[number];
 export const EXERCISE_PHASES = ['warmup', 'main', 'game', 'cooldown'] as const;
 export type ExercisePhase = (typeof EXERCISE_PHASES)[number];
 
+/** Public exercises are in the shared library. Private ones are only seen through a share link. */
+export const EXERCISE_VISIBILITIES = ['public', 'private'] as const;
+export type ExerciseVisibility = (typeof EXERCISE_VISIBILITIES)[number];
+
 // Stored as stable keys and translated on display, so filters work in every language
 export const FOCUS_TAGS = [
   'passing',
@@ -57,6 +61,7 @@ export interface Exercise {
   createdAt: string;
   updatedAt: string;
   deletedAt: string | null;
+  visibility: ExerciseVisibility;
 }
 
 export const RATING_STARS = [1, 2, 3, 4, 5] as const;
@@ -92,6 +97,7 @@ export type ExerciseParseErrorCode =
   | 'invalidDifficulty'
   | 'invalidFocus'
   | 'invalidPhase'
+  | 'invalidVisibility'
   | 'invalidCount'
   | 'invalidFrames'
   | 'invalidMarker'
@@ -199,6 +205,8 @@ export function parseExercise(data: unknown): Exercise {
     createdAt,
     updatedAt,
     deletedAt,
+    // Exercises from before the public library were saved as private work
+    visibility = 'private',
   } = data;
 
   if (!isNonEmptyText(id)) return fail('invalidId');
@@ -228,6 +236,7 @@ export function parseExercise(data: unknown): Exercise {
   if (!Array.isArray(frames) || frames.length === 0) return fail('invalidFrames');
   if (!isDate(createdAt) || !isDate(updatedAt)) return fail('invalidDate');
   if (deletedAt !== null && !isDate(deletedAt)) return fail('invalidDate');
+  if (!includes(EXERCISE_VISIBILITIES, visibility)) return fail('invalidVisibility');
 
   return {
     schemaVersion: EXERCISE_SCHEMA_VERSION,
@@ -251,5 +260,6 @@ export function parseExercise(data: unknown): Exercise {
     createdAt,
     updatedAt,
     deletedAt: deletedAt as string | null,
+    visibility,
   };
 }

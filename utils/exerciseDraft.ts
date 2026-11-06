@@ -6,6 +6,7 @@ import {
   EXERCISE_SCHEMA_VERSION,
   ExerciseDifficulty,
   ExercisePhase,
+  ExerciseVisibility,
   FocusTag,
 } from '@/types/exercise';
 import { TacticsMarker } from '@/types/tacticsMarker';
@@ -29,6 +30,7 @@ export interface ExerciseDraft {
   difficulty: ExerciseDifficulty;
   focus: FocusTag[];
   phase: ExercisePhase;
+  visibility: ExerciseVisibility;
   steps: DraftStep[];
 }
 
@@ -59,6 +61,7 @@ export const createDraft = (): ExerciseDraft => ({
   difficulty: 3,
   focus: [],
   phase: 'main',
+  visibility: 'public',
   steps: [{ id: randomUUID(), note: '', markers: [] }],
 });
 
@@ -75,6 +78,7 @@ export const draftFromExercise = (exercise: Exercise): ExerciseDraft => ({
   difficulty: exercise.difficulty,
   focus: exercise.focus,
   phase: exercise.phase,
+  visibility: exercise.visibility,
   steps: exercise.frames.map(frame => ({
     id: frame.id,
     note: frame.note ?? '',
@@ -167,6 +171,7 @@ export function draftToExercise(
       createdAt: existing?.createdAt ?? now,
       updatedAt: now,
       deletedAt: null,
+      visibility: draft.visibility,
     },
   };
 }

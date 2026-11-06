@@ -21,5 +21,6 @@ export const buildExercise = (overrides: Partial<Exercise> = {}): Exercise => ({
   createdAt: '2026-11-03T10:00:00.000Z',
   updatedAt: '2026-11-03T10:00:00.000Z',
   deletedAt: null,
+  visibility: 'public',
   ...overrides,
 });

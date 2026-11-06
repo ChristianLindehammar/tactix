@@ -7,6 +7,7 @@ import {
   Pressable,
   ScrollView,
   StyleSheet,
+  Switch,
   TextInput,
   TextInputProps,
   View,
@@ -250,6 +251,22 @@ export default function ExerciseEditorScreen() {
         />
 
         <View style={styles.field}>
+          <View style={styles.switchRow}>
+            <ThemedText type="defaultSemiBold" style={styles.switchLabel}>
+              {t('shareInLibrary')}
+            </ThemedText>
+            <Switch
+              accessibilityLabel={t('shareInLibrary')}
+              value={draft.visibility === 'public'}
+              onValueChange={shared => update({ visibility: shared ? 'public' : 'private' })}
+            />
+          </View>
+          <ThemedText style={styles.hint}>
+            {t(draft.visibility === 'public' ? 'shareInLibraryHint' : 'privateExerciseHint')}
+          </ThemedText>
+        </View>
+
+        <View style={styles.field}>
           <ThemedText type="defaultSemiBold">{t('diagram')}</ThemedText>
           {draft.steps.length > 1 && (
             <StepTabs count={draft.steps.length} selected={stepIndex} onSelect={setStepIndex} />
@@ -465,6 +482,14 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   rowField: {
+    flex: 1,
+  },
+  switchRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  switchLabel: {
     flex: 1,
   },
   stepControls: {

@@ -7,6 +7,7 @@ import ExerciseDetailScreen from '@/app/(tabs)/exercises/[id]';
 import { getCurrentUserId } from '@/services/currentUser';
 import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
+import { library, LibraryError } from '@/services/library';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
 
@@ -24,6 +25,13 @@ jest.mock('expo-router', () => {
   };
 });
 
+// The server is the boundary: the library service's own tests cover the requests
+jest.mock('@/services/library', () => ({
+  ...jest.requireActual('@/services/library'),
+  library: { get: jest.fn(), report: jest.fn(), block: jest.fn() },
+}));
+const mockLibrary = library as jest.Mocked<typeof library>;
+
 describe('exercise detail', () => {
   beforeEach(async () => {
     await AsyncStorage.clear();
@@ -31,6 +39,9 @@ describe('exercise detail', () => {
     mockBack.mockClear();
     mockId = 'exercise-1';
     jest.restoreAllMocks();
+    mockLibrary.get.mockReset().mockResolvedValue(null);
+    mockLibrary.report.mockReset().mockResolvedValue(undefined);
+    mockLibrary.block.mockReset().mockResolvedValue(undefined);
     await exerciseRepository.save(
       buildExercise({
         ownerId: await getCurrentUserId(),
@@ -286,5 +297,96 @@ describe('exercise detail', () => {
     renderExerciseScreen(<ExerciseDetailScreen />);
 
     expect(await screen.findByText('This exercise no longer exists.')).toBeTruthy();
+  });
+
+  describe('an exercise from the library', () => {
+    beforeEach(() => {
+      mockId = 'shared';
+      mockLibrary.get.mockResolvedValue(
+        buildExercise({ id: 'shared', ownerId: 'anna', sport: 'soccer', title: 'Rondo' }),
+      );
+    });
+
+    const answerPrompt = async (button: string, answer: string) => {
+      const alert = jest.spyOn(Alert, 'alert');
+      fireEvent.press(await screen.findByText(button));
+      await act(async () => {
+        alert.mock.lastCall?.[2]?.find(option => option.text === answer)?.onPress?.();
+      });
+      return alert;
+    };
+
+    it('is fetched from the library when it is not on this device', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Rondo')).toBeTruthy();
+      expect(mockLibrary.get).toHaveBeenCalledWith('shared');
+      expect(screen.queryByText('Edit')).toBeNull();
+    });
+
+    it('can be copied into your own exercises, starting private', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Clone'));
+      await act(async () => {});
+
+      const copy = (await exerciseRepository.list()).find(e => e.clonedFromId === 'shared');
+      expect(copy?.visibility).toBe('private');
+    });
+
+    it('can be reported after confirming, which takes you back', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      const alert = await answerPrompt('Report', 'Report');
+
+      expect(alert.mock.lastCall?.[0]).toBe('Report this exercise?');
+      expect(mockLibrary.report).toHaveBeenCalledWith('shared');
+      expect(mockBack).toHaveBeenCalledTimes(1);
+    });
+
+    it('is not reported when you cancel', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      await answerPrompt('Report', 'Cancel');
+
+      expect(mockLibrary.report).not.toHaveBeenCalled();
+      expect(mockBack).not.toHaveBeenCalled();
+    });
+
+    it('says so when the report cannot be sent, and stays', async () => {
+      mockLibrary.report.mockRejectedValue(new LibraryError('offline'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      await answerPrompt('Report', 'Report');
+
+      expect(screen.getByText('Could not send the report. Please try again.')).toBeTruthy();
+      expect(mockBack).not.toHaveBeenCalled();
+    });
+
+    it('lets you block its author after confirming', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      const alert = await answerPrompt('Block this coach', 'Block');
+
+      expect(alert.mock.lastCall?.[0]).toBe('Block this coach?');
+      expect(mockLibrary.block).toHaveBeenCalledWith('anna');
+      expect(mockBack).toHaveBeenCalledTimes(1);
+    });
+
+    it('says so when the library cannot be reached', async () => {
+      mockLibrary.get.mockRejectedValue(new LibraryError('offline'));
+
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Could not load the exercise. Check your connection and try again.')).toBeTruthy();
+    });
+  });
+
+  it('offers no Report or Block on your own exercise', async () => {
+    renderExerciseScreen(<ExerciseDetailScreen />);
+    await screen.findByText('Triangle passing');
+
+    expect(screen.queryByText('Report')).toBeNull();
+    expect(screen.queryByText('Block this coach')).toBeNull();
   });
 });

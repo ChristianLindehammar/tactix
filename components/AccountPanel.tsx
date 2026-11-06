@@ -7,6 +7,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { AuthError, AuthErrorCode, AuthSession } from '@/services/authSession';
+import { LibraryError } from '@/services/library';
 import type { SignInProvider } from '@/services/signInProviders';
 
 const ERROR_KEYS: Record<AuthErrorCode, string> = {
@@ -18,14 +19,84 @@ const ERROR_KEYS: Record<AuthErrorCode, string> = {
   unavailable: 'accountErrorUnavailable',
 };
 
+/** Where the display name lives. Left out, the panel doesn't offer one. */
+export interface DisplayNameStore {
+  getDisplayName(): Promise<string | null>;
+  setDisplayName(name: string | null): Promise<void>;
+}
+
 interface AccountPanelProps {
   session: AuthSession;
   providers: SignInProvider[];
   /** Replaces the general explanation shown while signed out. */
   intro?: string;
+  profile?: DisplayNameStore;
 }
 
-export function AccountPanel({ session, providers, intro }: AccountPanelProps) {
+const MAX_DISPLAY_NAME_LENGTH = 40;
+
+/** The name shown on exercises the coach shares, instead of their email. */
+function DisplayNameField({ profile }: { profile: DisplayNameStore }) {
+  const { t } = useTranslation();
+  const textColor = useThemeColor({}, 'text') as string;
+  const border = useThemeColor({}, 'borderColor') as string;
+  const [name, setName] = React.useState('');
+  const [busy, setBusy] = React.useState(false);
+  const [message, setMessage] = React.useState<{ text: string; failed: boolean } | null>(null);
+
+  React.useEffect(() => {
+    let active = true;
+    profile
+      .getDisplayName()
+      .then(current => active && setName(current ?? ''))
+      // Offline: the field starts empty, and saving says if it still can't reach the server
+      .catch(() => undefined);
+    return () => void (active = false);
+  }, [profile]);
+
+  const save = async () => {
+    setBusy(true);
+    setMessage(null);
+    try {
+      await profile.setDisplayName(name.trim() || null);
+      setMessage({ text: t('displayNameSaved'), failed: false });
+    } catch (failure) {
+      const invalid = failure instanceof LibraryError && failure.code === 'invalidDisplayName';
+      setMessage({ text: t(invalid ? 'displayNameInvalid' : 'displayNameSaveFailed'), failed: true });
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <View style={styles.nameSection}>
+      <ThemedText type="defaultSemiBold">{t('displayName')}</ThemedText>
+      <ThemedText style={styles.hint}>{t('displayNameHint')}</ThemedText>
+      <TextInput
+        accessibilityLabel={t('displayName')}
+        value={name}
+        onChangeText={value => {
+          setName(value);
+          setMessage(null);
+        }}
+        maxLength={MAX_DISPLAY_NAME_LENGTH}
+        autoComplete="name"
+        style={[styles.input, { borderColor: border, color: textColor }]}
+      />
+      <ThemedButton disabled={busy} onPress={save}>{t('displayNameSave')}</ThemedButton>
+      {message ? (
+        <ThemedText
+          accessibilityRole={message.failed ? 'alert' : undefined}
+          style={message.failed ? styles.error : styles.hint}
+        >
+          {message.text}
+        </ThemedText>
+      ) : null}
+    </View>
+  );
+}
+
+export function AccountPanel({ session, providers, intro, profile }: AccountPanelProps) {
   const { t, getCurrentLocale } = useTranslation();
   const state = React.useSyncExternalStore(session.subscribe, session.getState);
   const textColor = useThemeColor({}, 'text') as string;
@@ -76,6 +147,7 @@ export function AccountPanel({ session, providers, intro }: AccountPanelProps) {
         <ThemedText type="defaultSemiBold">{t('accountSignedInAs')}</ThemedText>
         <ThemedText>{state.email ?? t('accountNoEmail')}</ThemedText>
         <ThemedText style={styles.hint}>{t('accountUploadHint')}</ThemedText>
+        {profile ? <DisplayNameField profile={profile} /> : null}
         <ThemedButton
           disabled={busy}
           onPress={() => attempt(async () => {
@@ -189,4 +261,5 @@ const styles = StyleSheet.create({
   spinner: { marginTop: 4 },
   destructive: { backgroundColor: '#D32F2F' },
   confirm: { gap: 12, padding: 12, borderWidth: 1, borderRadius: 8 },
+  nameSection: { gap: 8, paddingVertical: 8 },
 });

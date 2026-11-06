@@ -6,6 +6,7 @@ import ExerciseLibraryScreen from '@/app/(tabs)/exercises/index';
 import { getCurrentUserId } from '@/services/currentUser';
 import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
+import { library, LibraryError } from '@/services/library';
 import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
 
@@ -19,6 +20,12 @@ jest.mock('expo-router', () => {
   };
 });
 jest.mock('expo-router/js-tabs', () => ({ useBottomTabBarHeight: () => 0 }));
+// The server is the boundary: the library service's own tests cover the requests
+jest.mock('@/services/library', () => ({
+  ...jest.requireActual('@/services/library'),
+  library: { list: jest.fn() },
+}));
+const mockList = library.list as jest.Mock;
 
 const saved = async (overrides: Parameters<typeof buildExercise>[0]) =>
   exerciseRepository.save(
@@ -291,5 +298,103 @@ describe('exercise library', () => {
     fireEvent.press(screen.getByLabelText('New exercise'));
 
     expect(mockPush).toHaveBeenCalledWith('/exercises/edit');
+  });
+
+  describe('the shared library', () => {
+    const entry = (overrides: Parameters<typeof buildExercise>[0], authorName: string | null = 'Coach Anna') => ({
+      exercise: buildExercise({ ownerId: 'anna', sport: 'soccer', ...overrides }),
+      authorName,
+    });
+
+    beforeEach(() => {
+      mockList.mockReset();
+      mockList.mockResolvedValue({ entries: [entry({ id: 'shared', title: 'Rondo' })], total: 1 });
+    });
+
+    const openLibrary = async () => {
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      fireEvent.press(await screen.findByTestId('source-library'));
+    };
+
+    it('shows every coach\'s public exercises for the selected sport, with their author', async () => {
+      await openLibrary();
+
+      expect(await screen.findByText('Rondo')).toBeTruthy();
+      expect(screen.getByText('By Coach Anna')).toBeTruthy();
+      expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ sport: 'soccer' }));
+    });
+
+    it('leaves out the author line when they chose no name', async () => {
+      mockList.mockResolvedValue({ entries: [entry({ title: 'Rondo' }, null)], total: 1 });
+
+      await openLibrary();
+
+      await screen.findByText('Rondo');
+      expect(screen.queryByText(/^By /)).toBeNull();
+    });
+
+    it('asks the server again when a filter changes', async () => {
+      await openLibrary();
+      await screen.findByText('Rondo');
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      fireEvent.press(screen.getByTestId('filter-focus-defence'));
+
+      await waitFor(() =>
+        expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ focus: ['defence'] })),
+      );
+    });
+
+    it('offers no rating filter or sort, as ratings are not shared yet', async () => {
+      await openLibrary();
+      await screen.findByText('Rondo');
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+
+      expect(screen.queryByTestId('filter-rating-4')).toBeNull();
+      expect(screen.queryByTestId('sort-rating')).toBeNull();
+    });
+
+    it('opens an exercise from the library', async () => {
+      await openLibrary();
+
+      fireEvent.press(await screen.findByText('Rondo'));
+
+      expect(mockPush).toHaveBeenCalledWith('/exercises/shared');
+    });
+
+    it('loads more when there are more than one page', async () => {
+      mockList
+        .mockResolvedValueOnce({ entries: [entry({ id: 'one', title: 'First' })], total: 2 })
+        .mockResolvedValueOnce({ entries: [entry({ id: 'two', title: 'Second' })], total: 2 });
+      await openLibrary();
+      await screen.findByText('First');
+
+      fireEvent.press(screen.getByText('Show more'));
+
+      expect(await screen.findByText('Second')).toBeTruthy();
+      expect(screen.getByText('First')).toBeTruthy();
+      expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 1 }));
+      expect(screen.queryByText('Show more')).toBeNull();
+    });
+
+    it('says when the library cannot be reached, and tries again', async () => {
+      mockList.mockRejectedValueOnce(new LibraryError('offline'));
+      await openLibrary();
+
+      fireEvent.press(await screen.findByText('Try again'));
+
+      expect(await screen.findByText('Rondo')).toBeTruthy();
+    });
+
+    it('goes back to your own exercises', async () => {
+      await saved({ title: 'My drill' });
+      await openLibrary();
+      await screen.findByText('Rondo');
+
+      fireEvent.press(screen.getByTestId('source-mine'));
+
+      expect(await screen.findByText('My drill')).toBeTruthy();
+      expect(screen.queryByText('Rondo')).toBeNull();
+    });
   });
 });
