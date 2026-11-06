@@ -1,6 +1,35 @@
 default_platform(:ios)
 
 # ---------------------------------------------------------------------------
+# Release notes: write them in fastlane/release-notes-template.txt before a
+# deploy. Each <locale>…</locale> block becomes that language's notes on Google
+# Play, and the en-US block becomes TestFlight's "What to Test".
+# ---------------------------------------------------------------------------
+RELEASE_NOTES_TEMPLATE = File.expand_path("release-notes-template.txt", __dir__)
+PLAY_METADATA_PATH = File.expand_path("metadata/android", __dir__)
+PLAY_NOTES_LIMIT = 500
+
+def release_notes
+  UI.user_error!("#{RELEASE_NOTES_TEMPLATE} not found") unless File.exist?(RELEASE_NOTES_TEMPLATE)
+  content = File.read(RELEASE_NOTES_TEMPLATE).gsub(/<!--.*?-->/m, "")
+  notes = content.scan(%r{<([A-Za-z-]+)>(.*?)</\1>}m).to_h { |locale, text| [locale, text.strip] }
+  UI.user_error!("No release notes in #{RELEASE_NOTES_TEMPLATE}") if notes.empty?
+  notes.each do |locale, text|
+    UI.user_error!("#{locale} release notes are #{text.length} characters, over Google Play's #{PLAY_NOTES_LIMIT}") if text.length > PLAY_NOTES_LIMIT
+  end
+  notes
+end
+
+# Writes metadata/android/<locale>/changelogs/<version_code>.txt, which upload_to_play_store sends
+def write_play_changelogs(version_code)
+  release_notes.each do |locale, text|
+    dir = File.join(PLAY_METADATA_PATH, locale, "changelogs")
+    FileUtils.mkdir_p(dir)
+    File.write(File.join(dir, "#{version_code}.txt"), text)
+  end
+end
+
+# ---------------------------------------------------------------------------
 # Private: expo prebuild (called once per deploy_all, or at start of each
 # individual platform lane when run standalone)
 # ---------------------------------------------------------------------------
@@ -87,6 +116,15 @@ private_lane :prebuild do |options|
   end
 end
 
+def asc_api_key
+  app_store_connect_api_key(
+    key_id: "9KF34Z7C3A",
+    issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
+    key_filepath: File.expand_path("./AuthKey_9KF34Z7C3A.p8", __dir__),
+    duration: 1200
+  )
+end
+
 # ---------------------------------------------------------------------------
 # Private: iOS build + TestFlight upload (no prebuild)
 # ---------------------------------------------------------------------------
@@ -95,12 +133,7 @@ private_lane :build_and_upload_ios do
 
   match(type: "appstore", readonly: true)
 
-  api_key = app_store_connect_api_key(
-    key_id: "9KF34Z7C3A",
-    issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
-    key_filepath: File.expand_path("./AuthKey_9KF34Z7C3A.p8", __dir__),
-    duration: 1200
-  )
+  api_key = asc_api_key
 
   increment_build_number(
     build_number: latest_testflight_build_number(api_key: api_key) + 1,
@@ -119,10 +152,14 @@ private_lane :build_and_upload_ios do
             "PROVISIONING_PROFILE_SPECIFIER=\"match AppStore com.lindehammar-konsult.coachmate\""
   )
 
+  # Waits for Apple to process the build, as "What to Test" can only be set after that.
+  # Internal testers get the build as soon as it's processed.
   upload_to_testflight(
     api_key: api_key,
     ipa: "ios/build/CoachMate.ipa",
-    skip_waiting_for_build_processing: true
+    changelog: release_notes.fetch("en-US"),
+    skip_waiting_for_build_processing: false,
+    distribute_external: false
   )
 end
 
@@ -133,6 +170,7 @@ private_lane :build_and_upload_android do
   setup_ci if ENV['CI']
 
   keystore_path  = File.expand_path("keystore.jks", __dir__)
+  # Set in ~/.zshrc, like Meridian's, so builds run without prompts
   store_password = ENV['ANDROID_STORE_PASSWORD'] || UI.password("Enter keystore password:")
   key_alias      = ENV['ANDROID_KEY_ALIAS']      || UI.input("Enter key alias:")
   key_password   = ENV['ANDROID_KEY_PASSWORD']   || UI.password("Enter key password:")
@@ -170,6 +208,7 @@ private_lane :build_and_upload_android do
     gradle_file_path: "android/app/build.gradle",
     version_code: new_version_code
   )
+  write_play_changelogs(new_version_code)
 
   gradle(
     task: "bundle",
@@ -203,14 +242,17 @@ private_lane :build_and_upload_android do
   retain_codes = retain_codes.uniq.sort
   UI.message("Retaining existing version codes: #{retain_codes.inspect}")
 
+  # Released straight to internal testers, with the release notes
   upload_to_play_store(
     track: 'internal',
     aab: aab_path,
+    metadata_path: PLAY_METADATA_PATH,
     skip_upload_apk: true,
     skip_upload_metadata: true,
+    skip_upload_changelogs: false,
     skip_upload_images: true,
     skip_upload_screenshots: true,
-    release_status: 'draft',
+    release_status: 'completed',
     version_codes_to_retain: retain_codes
   )
 end
@@ -229,6 +271,11 @@ end
 # iOS standalone
 # ---------------------------------------------------------------------------
 platform :ios do
+  desc "Renew the App Store profile, e.g. after adding a capability such as Sign in with Apple"
+  lane :refresh_profiles do
+    match(type: "appstore", readonly: false, force: true, api_key: asc_api_key)
+  end
+
   desc "Build and upload a new beta build to TestFlight"
   lane :beta do
     prebuild(platform: :ios)
@@ -240,6 +287,25 @@ end
 # Android standalone
 # ---------------------------------------------------------------------------
 platform :android do
+  desc "Release a build already on the internal track to testers, with the current release notes"
+  desc "Usage: fastlane android release_internal version_code:34"
+  lane :release_internal do |options|
+    version_code = options[:version_code] || UI.user_error!("Pass version_code:<n>")
+    write_play_changelogs(version_code)
+    upload_to_play_store(
+      track: 'internal',
+      version_code: version_code.to_i,
+      metadata_path: PLAY_METADATA_PATH,
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: false,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      release_status: 'completed'
+    )
+  end
+
   desc "Build AAB and upload to Play Store internal testing"
   lane :beta do
     prebuild(platform: :android)
