@@ -24,6 +24,7 @@ export default function TeamScreen() {
   const [newPlayerName, setNewPlayerName] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
   const textColor = useThemeColor({}, 'text') as string;
+  const tint = useThemeColor({}, 'tint') as string;
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const tabBarHeight = useBottomTabBarHeight();
 
@@ -72,7 +73,15 @@ export default function TeamScreen() {
           </View>
         ) : (
           <ThemedView style={[styles.container, { paddingBottom: Platform.OS === 'ios' ? tabBarHeight : 0 }]}>
-            <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
+            <View style={styles.teamTitle}>
+              <ThemedText style={styles.teamName}>{team?.name}</ThemedText>
+              {team?.shared && (
+                <View style={styles.sharedBadge} accessibilityLabel={t('sharedTeam')}>
+                  <Ionicons name="people" size={14} color={tint} />
+                  <ThemedText style={[styles.sharedText, { color: tint }]}>{t('sharedTeam')}</ThemedText>
+                </View>
+              )}
+            </View>
 
             <TooltipModal visible={showTooltip} onClose={() => setShowTooltip(false)} message={t('startByAddingPlayers')} position={tooltipPosition} />
 
@@ -107,6 +116,17 @@ export default function TeamScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  teamTitle: {
+    alignItems: 'center',
+  },
+  sharedBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  sharedText: {
+    fontSize: 13,
   },
   scrollView: {
     flex: 1,

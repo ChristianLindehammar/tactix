@@ -20,6 +20,14 @@ export interface Team {
   // New fields for multi-configuration support
   configurations?: CourtConfiguration[];
   selectedConfigurationId?: string;
+  /** Set while coaches share this team through the server. */
+  shared?: SharedTeamLink;
+}
+
+export interface SharedTeamLink {
+  /** The team's id on the server, which differs from the local id. */
+  id: string;
+  role: 'owner' | 'editor';
 }
 
 

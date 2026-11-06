@@ -24,6 +24,10 @@ DEFAULT_LIMITS = {
     'planRefreshes': (30, 3600),
     # Each one may email the moderator
     'reports': (20, 3600),
+    # Phones sync a shared team every 15 seconds while it's on screen, and after each change
+    'teamSyncs': (1200, 3600),
+    # Stops anyone guessing invite codes
+    'inviteLookups': (30, 3600),
 }
 
 

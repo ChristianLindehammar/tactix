@@ -4,7 +4,7 @@ import time
 import mysql.connector
 from flask import Flask, jsonify
 
-from . import accounts, exercises, plans, reports
+from . import accounts, exercises, plans, reports, teams
 from .db import close_db, query_one
 from .rate_limit import DEFAULT_LIMITS
 
@@ -31,6 +31,7 @@ def create_app(db_config, limits=None, clock=time.time, send_sign_in_code=None, 
     app.register_blueprint(exercises.bp)
     app.register_blueprint(plans.bp)
     app.register_blueprint(reports.bp)
+    app.register_blueprint(teams.bp)
 
     @app.get('/health')
     def health():

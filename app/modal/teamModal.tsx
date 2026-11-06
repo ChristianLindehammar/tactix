@@ -5,6 +5,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import * as DocumentPicker from 'expo-document-picker';
 import { useNavigation } from "expo-router/react-navigation";
+import { router } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 import { CustomInputDialog } from '@/components/CustomInputDialog';
 import { ImportPlayersDialog } from '@/components/ImportPlayersDialog';
@@ -14,7 +15,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TeamModal() {
   const navigation = useNavigation();
-  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile, addPlayers } = useTeam();
+  const { teams, createTeam, selectTeam, removeTeam, team, renameTeam, exportTeam, importTeamFromFile, addPlayers, stopSharing, leaveTeam } = useTeam();
   const [showCreateTeam, setShowCreateTeam] = useState(false);
   const [showSelectTeam, setShowSelectTeam] = useState(false);
   const [showRemoveTeam, setShowRemoveTeam] = useState(false);
@@ -42,10 +43,31 @@ export default function TeamModal() {
     navigation.goBack();
   };
 
-  const handleRemoveTeam = (teamId: string) => {
+  const handleRemoveTeam = async (teamId: string) => {
+    const shared = teams.find(candidate => candidate.id === teamId)?.shared;
+    if (shared) {
+      // Otherwise the team would come back at the next sign-in, and other coaches would wait for it
+      try {
+        await (shared.role === 'owner' ? stopSharing(teamId) : leaveTeam(teamId));
+      } catch {
+        Alert.alert(t('error'), t('sharingActionFailed'));
+        return;
+      }
+    }
     removeTeam(teamId);
     setShowRemoveTeam(false);
     navigation.goBack();
+  };
+
+  const removeConfirmation = (teamId: string, teamName: string) => {
+    const shared = teams.find(candidate => candidate.id === teamId)?.shared;
+    if (!shared) return t('teamRemoveConfirm', { teamName });
+    return t(shared.role === 'owner' ? 'removeSharedTeamOwnerConfirm' : 'removeSharedTeamEditorConfirm', { teamName });
+  };
+
+  const openScreen = (path: '/share-team' | '/join') => {
+    navigation.goBack();
+    router.push(path);
   };
 
   const handleRenameTeam = (newName: string) => {
@@ -143,6 +165,18 @@ export default function TeamModal() {
       visible: !!team,
     },
     {
+      icon: 'group',
+      title: t('coachTogether'),
+      onPress: () => openScreen('/share-team'),
+      visible: !!team,
+    },
+    {
+      icon: 'login',
+      title: t('joinTeam'),
+      onPress: () => openScreen('/join'),
+      visible: true,
+    },
+    {
       icon: 'file-upload',
       title: t('importTeam'),
       onPress: handleImportTeam,
@@ -191,9 +225,9 @@ export default function TeamModal() {
                 key={item.id}
                 style={styles.menuItem}
                 onPress={() => {
-                  Alert.alert(t('removeTeam'), t('teamRemoveConfirm', { teamName: item.name }), [
+                  Alert.alert(t('removeTeam'), removeConfirmation(item.id, item.name), [
                     { text: t('cancel'), style: 'cancel' },
-                    { text: t('ok'), onPress: () => handleRemoveTeam(item.id) },
+                    { text: t('ok'), onPress: () => void handleRemoveTeam(item.id) },
                   ]);
                 }}>
                 <MaterialIcons size={24} name='group-remove' color={tintColor} style={styles.menuIcon} />

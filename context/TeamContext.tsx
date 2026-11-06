@@ -1,10 +1,12 @@
 import { CourtConfiguration, PlayerType, Position, Team } from '@/types/models';
-import React, { PropsWithChildren, createContext, useContext } from 'react';
+import React, { PropsWithChildren, createContext, useCallback, useContext } from 'react';
+import { Alert } from 'react-native';
 import { exportTeamToFile, findFreePosition, getValidPosition, importTeamFromFile, validatePlayerPosition } from './utils';
 
 import { sportsConfig } from '@/constants/sports';
 import { useSport } from '@/context/SportContext';
 import { useTeamData } from './hooks/useTeamData';
+import { useSharedTeams } from './hooks/useSharedTeams';
 import { useTranslation } from '@/hooks/useTranslation';
 import { ParsedPlayer, createPlayersFromParsed } from './utils/parseBulkPlayerInput';
 
@@ -37,6 +39,11 @@ interface TeamContextProps {
   getActiveConfiguration: () => CourtConfiguration | undefined;
   switchToNextConfiguration: () => void;
   switchToPreviousConfiguration: () => void;
+  // Coaching together through the server
+  shareTeam: (teamId: string) => Promise<void>;
+  joinTeam: (code: string) => Promise<Team>;
+  stopSharing: (teamId: string) => Promise<void>;
+  leaveTeam: (teamId: string) => Promise<void>;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -91,6 +98,26 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     selectedTeam,
     error
   } = useTeamData(selectedSport || 'soccer');
+
+  const onSharingLost = useCallback((lost: Team) => {
+    Alert.alert(t('sharingEndedTitle'), t('sharingEndedMessage', { teamName: lost.name }));
+  }, [t]);
+
+  const { shareTeam, joinTeam: joinSharedTeam, stopSharing, leaveTeam } = useSharedTeams({
+    teams,
+    setTeams,
+    isLoading,
+    onSharingLost,
+  });
+
+  const joinTeam = async (code: string) => {
+    const joined = await joinSharedTeam(code);
+    if (joined.sport !== selectedSport) {
+      setSelectedSport(joined.sport);
+    }
+    setSelectedTeamId(joined.id);
+    return joined;
+  };
 
   const updateTeamInTeams = (updater: (team: Team) => Team) => {
     setTeams((prevTeams) => {
@@ -148,7 +175,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const defaultPosition = sportsConfig[selectedSport || 'soccer'].positions[0];
     
     const newPlayer: PlayerType = {
-      id: Date.now().toString(),
+      // Random as well, so players two coaches add at the same moment stay apart
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
       name: name,
       courtPosition: position,
       position: defaultPosition,
@@ -278,7 +306,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const exportTeam = async (teamId: string) => {
     const teamToExport = teams.find(t => t.id === teamId);
     if (teamToExport) {
-      await exportTeamToFile(teamToExport, t);
+      // The file is a copy, so it doesn't carry the link to the shared team
+      await exportTeamToFile({ ...teamToExport, shared: undefined }, t);
     }
   };
 
@@ -297,7 +326,8 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     const now = Date.now().toString();
     // Ensure the imported team has configurations (migration from old format)
-    const migratedTeam = ensureTeamHasConfigurations({ ...importedTeam, id: now, name: finalName });
+    // A file exported from a shared team is a copy, not a way into it
+    const migratedTeam = ensureTeamHasConfigurations({ ...importedTeam, id: now, name: finalName, shared: undefined });
     setTeams(prev => [...prev, migratedTeam]);
     setSelectedTeamId(now);
   };
@@ -540,6 +570,10 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       getActiveConfiguration,
       switchToNextConfiguration,
       switchToPreviousConfiguration,
+      shareTeam,
+      joinTeam,
+      stopSharing,
+      leaveTeam,
     }}>
       {children}
     </TeamContext.Provider>

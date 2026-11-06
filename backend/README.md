@@ -32,6 +32,33 @@ same codes as `parseExercise` in `types/exercise.ts`, plus `unauthorized`, `exer
 `notFound`, `tooLarge`, `invalidFilter`, `invalidDisplayName`, `invalidReason`, `ownExercise`, `ownAccount`, `invalidEmail`, `invalidCode`, `invalidProviderToken`,
 `rateLimited` and `serviceUnavailable`.
 
+### Shared teams
+
+Coaches with an account can plan a team together. The owner shares it and sends invite links. Everyone
+who joins can edit; only the owner invites, removes coaches or stops sharing. No plan is needed.
+
+| Endpoint | Description |
+|---|---|
+| `POST /teams` | Takes the new team's `id`, a UUID the app makes. 201, or 200 if you already own it |
+| `GET /teams` | Your shared teams: `id`, `role` (`owner` or `editor`), `name`, `sport`, `revision` |
+| `POST /teams/<id>/sync` | Takes `since` (the last revision you have) and `changes`, and returns `revision`, `role` and every item changed after `since` |
+| `DELETE /teams/<id>` | Owner only. Stops sharing for everyone; every coach keeps their copy in the app |
+| `GET /teams/<id>/members` | `userId`, `role`, `displayName` and `isYou` for each coach, owner first |
+| `DELETE /teams/<id>/members/<userId>` | The owner removes a coach, or a coach removes themselves to leave |
+| `POST /teams/<id>/invites` | Owner only. Returns a 10-character `code` that lasts 7 days and can be used by any number of coaches |
+| `DELETE /teams/<id>/invites` | Owner only. Stops every invite link for the team |
+| `GET /invites/<code>` | Who and what the invite is for: `teamId`, `name`, `sport`, `ownerName`, `memberCount`, and your `role` if you're already in |
+| `POST /invites/<code>/accept` | Joins as an editor. Returns `teamId` and `role` |
+| `GET /join/<code>` | No token. The web page an invite link opens, with a button to the app and the code to type in |
+
+A team is stored as items, so two coaches editing different players don't overwrite each other: `team/team`
+(`name`, `sport`), `player/<id>` (`name`, `position`), `formation/<id>` (`name`) and
+`place/<formationId>:<playerId>` (`x`, `y` from 0 to 1). A change with `data: null` deletes the item;
+the team item can't be deleted. Each sync gets one new revision, and for the same item the latest
+change wins. A `since` ahead of the server's revision gets the whole team. Coaches who aren't in the
+team get `notFound`, the same as for a team that doesn't exist. Only a hash of each invite code is stored.
+Extra error codes: `invalidId`, `teamExists`, `invalidChange`, `notOwner`, `ownerCannotLeave` and `inviteNotFound`.
+
 ### Listing
 
 `GET /exercises` and `GET /library` return `{"exercises": [...], "total": 12}`, where `total` counts
@@ -59,6 +86,8 @@ alphabet, so Swedish `å`, `ä` and `ö` sort with `a` and `o`, unlike in the ap
 | `POST /auth/provider` | 60 an hour | IP address, or IPv6 /64 network |
 | `PUT /exercises/<id>` | 300 an hour | Coach |
 | `POST /exercises/<id>/report` | 20 an hour | Coach |
+| `POST /teams/<id>/sync` | 1200 an hour | Coach |
+| `GET /invites/<code>`, `POST /invites/<code>/accept` | 30 an hour | Coach |
 
 Going over answers 429 with a `Retry-After` header. Counts are kept in MariaDB because Passenger runs
 several processes. Reads aren't limited. Change the numbers in `coachmate_api/rate_limit.py`.

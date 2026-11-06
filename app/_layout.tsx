@@ -11,6 +11,7 @@ import { SportProvider } from '@/context/SportContext';
 import { AppState, View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { useTranslation } from '@/hooks/useTranslation';
 import { startAccountAndSync, syncExercises } from '@/services/exerciseRepository';
 // Listens for sign-in, so it has to be loaded before the session is restored
 import '@/services/plans';
@@ -20,6 +21,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+  const { t } = useTranslation();
   const [fontsLoaded, fontError] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
@@ -65,6 +67,9 @@ export default function RootLayout() {
                     },
                   }} 
                 />
+                <Stack.Screen name="share-team" options={{ title: t('coachTogether') }} />
+                <Stack.Screen name="join/index" options={{ title: t('joinTeam') }} />
+                <Stack.Screen name="join/[code]" options={{ title: t('joinTeam') }} />
                 <Stack.Screen name="+not-found" options={{ title: 'Oops!' }} />
               </Stack>
               <StatusBar style="auto" />
