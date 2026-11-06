@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Team } from '@/types/models';
 import { Sport } from '@/constants/sports';
 import { loadTeamData, saveTeamData, selectTeamForSport, updateSportTeamSelection } from '../utils';
@@ -12,6 +12,8 @@ export const useTeamData = (selectedSport: string) => {
   const [isLoading, setIsLoading] = useState(true);
   
   const { error, handleError } = useErrorHandler();
+  const sportAtLoad = useRef(selectedSport);
+  sportAtLoad.current = selectedSport;
 
   // Memoized persistence function to prevent unnecessary re-creates
   const persistData = useCallback(async (data: {
@@ -34,7 +36,8 @@ export const useTeamData = (selectedSport: string) => {
     !isLoading
   );
 
-  // Load initial data with error handling
+  // Loads once. Reading storage again on a sport change would drop a team added since the last
+  // save, such as one just joined; the sport-change effect below picks the team instead.
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -45,7 +48,7 @@ export const useTeamData = (selectedSport: string) => {
         // Select appropriate team for current sport
         const teamId = selectTeamForSport(
           data.teams,
-          selectedSport,
+          sportAtLoad.current,
           data.sportTeamSelections,
           data.selectedTeamId
         );
@@ -58,7 +61,7 @@ export const useTeamData = (selectedSport: string) => {
     };
     
     loadData();
-  }, [selectedSport, handleError]);
+  }, [handleError]);
 
   // Update sport-team mapping when team selection changes (simplified)
   useEffect(() => {
