@@ -38,6 +38,24 @@ export const findFreePosition = (existingPlayers: PlayerType[]): Position => {
   return { x: 0.5, y: 0.5 };
 };
 
+/** The free spot closest to the centre circle, for a player put on the court without being dragged there. */
+export const findFreePositionNearCentre = (courtPlayers: PlayerType[]): Position => {
+  const spacing = 0.12;
+  const isFree = (pos: Position) =>
+    courtPlayers.every(p => !p.courtPosition || Math.hypot(p.courtPosition.x - pos.x, p.courtPosition.y - pos.y) >= spacing * 0.9);
+
+  for (let ring = 0; ring <= 3; ring++) {
+    for (let dy = -ring; dy <= ring; dy++) {
+      for (let dx = -ring; dx <= ring; dx++) {
+        if (Math.max(Math.abs(dx), Math.abs(dy)) !== ring) continue;
+        const candidate = { x: 0.5 + dx * spacing, y: 0.5 + dy * spacing };
+        if (isFree(candidate)) return candidate;
+      }
+    }
+  }
+  return { x: 0.5, y: 0.5 };
+};
+
 export const validatePlayerPosition = (position?: Position): Position | undefined => {
   if (!position) return undefined;
   

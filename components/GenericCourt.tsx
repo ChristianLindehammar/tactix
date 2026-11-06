@@ -12,6 +12,7 @@ interface Props {
   playerPositions: PlayerType[];
   CourtSvg: React.ComponentType<{ width: number; height: number, stroke?: string }>;
   aspectRatio: number; // width/height ratio of the court
+  onPlayerPress?: (playerId: string) => void;
 }
 
 // Helper function to validate player position
@@ -26,7 +27,7 @@ const isValidPosition = (position: { x: number; y: number } | null | undefined):
          position.y <= 1 + epsilon;
 };
 
-export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, CourtSvg, aspectRatio }: Props) => {
+export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, CourtSvg, aspectRatio, onPlayerPress }: Props) => {
   const [selectedPlayerId] = useState<string | null>(null);
   const { updatePlayerPosition } = useTeam();
   
@@ -66,6 +67,7 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
               courtPosition={player.courtPosition!}
               containerSize={{ width: availableWidth, height: availableHeight }}
               isSelected={player.id === selectedPlayerId}
+              onPress={onPlayerPress}
             />
           );
         })}

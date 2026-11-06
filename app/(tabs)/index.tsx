@@ -2,25 +2,30 @@ import * as FileSystem from 'expo-file-system/legacy';
 import * as Haptics from 'expo-haptics';
 import * as Linking from 'expo-linking';
 
-import { ActivityIndicator, Alert, Dimensions, LayoutChangeEvent, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Dimensions, LayoutChangeEvent, Platform, StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DragProvider, useDrag } from '@/context/DragContext';
 import { router, usePathname } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { debugTranslations } from '@/utils/debugTranslations';
 
 import { BenchPanel, PANEL_HEIGHT_COLLAPSED, PANEL_HEIGHT_EXPANDED } from '@/components/BenchPanel';
-import { CourtConfigurationSelector } from '@/components/CourtConfigurationSelector';
 import { GenericCourt } from '@/components/GenericCourt';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useBottomTabBarHeight } from "expo-router/js-tabs";
 import { Player } from '@/components/Player';
 import { SportSelector } from '@/components/SportSelector';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { TooltipModal } from '@/components/TooltipModal';
+import { ThemedButton } from '@/components/ThemedButton';
+import { AddPlayersSheet } from '@/components/team/AddPlayersSheet';
+import { LineupBar } from '@/components/team/LineupBar';
+import { PlayerSheet } from '@/components/team/PlayerSheet';
+import { RosterList } from '@/components/team/RosterList';
+import { TeamActionsSheet } from '@/components/team/TeamActionsSheet';
+import { TeamHeader } from '@/components/team/TeamHeader';
+import { TeamSwitcherSheet } from '@/components/team/TeamSwitcherSheet';
+import { TeamView, ViewSwitch } from '@/components/team/ViewSwitch';
 import { sportsConfig } from '@/constants/sports';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSport } from '@/context/SportContext';
@@ -29,8 +34,10 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { PlayerType } from '@/types/models';
 import { DropAction } from '@/utils/resolveDrop';
 
-// Title header (52), the team switcher (38) and the configuration switcher (36)
-const CONFIGURATION_SELECTOR_HEIGHT = 126;
+// Team header (74), the court / players switch (48) and the line-up chips (48), until the court is measured
+const HEADER_HEIGHT = 170;
+
+type Sheet = 'none' | 'switch' | 'actions' | 'add' | 'player';
 
 export default function HomeScreen() {
   const { movePlayerToCourt, movePlayerToBench, updatePlayerPosition } = useTeam();
@@ -61,7 +68,7 @@ export default function HomeScreen() {
 function HomeScreenContent() {
   const insets = useSafeAreaInsets();
   const tabBarHeight = useBottomTabBarHeight();
-  const { team, importTeamFromFile } = useTeam();
+  const { team, teams, importTeamFromFile } = useTeam();
   const { selectedSport } = useSport();
   const { t } = useTranslation();
   const { activeDrag, dragX, dragY, overBench, courtRef } = useDrag();
@@ -69,9 +76,14 @@ function HomeScreenContent() {
   const [isProcessingFile, setIsProcessingFile] = useState(false);
   const [benchExpanded, setBenchExpanded] = useState(false);
   const [courtContainerSize, setCourtContainerSize] = useState({ width: 0, height: 0 });
-  const [showConfigurationTooltip, setShowConfigurationTooltip] = useState(false);
-  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | undefined>();
-  const configurationSelectorRef = useRef<View>(null);
+  const [view, setView] = useState<TeamView>('court');
+  const [sheet, setSheet] = useState<Sheet>('none');
+  const [playerId, setPlayerId] = useState<string | null>(null);
+  const closeSheet = () => setSheet('none');
+  const openPlayer = (id: string) => {
+    setPlayerId(id);
+    setSheet('player');
+  };
   
   const pathname = usePathname();
   
@@ -139,7 +151,6 @@ function HomeScreenContent() {
             text: t('ok'), 
             onPress: () => {
               setIsProcessingFile(false);
-              router.replace('/team');
             }
           }]
         );
@@ -176,47 +187,6 @@ function HomeScreenContent() {
     const subscription = Linking.addEventListener('url', handleOpenURL);
     return () => subscription.remove();
   }, [pathname, t, router, importTeamFromFile, setIsProcessingFile]);
-
-  // Show tooltip for CourtConfigurationSelector
-  useEffect(() => {
-    const checkAndShowTooltip = async () => {
-      try {
-        const hasSeenConfigTooltip = await AsyncStorage.getItem('configurationTooltipShown');
-        if (hasSeenConfigTooltip === 'true') {
-          return;
-        }
-
-        if (team && selectedSport && configurationSelectorRef.current) {
-          setTimeout(() => {
-            if (configurationSelectorRef.current) {
-              configurationSelectorRef.current.measure((_x, _y, width, height, pageX, pageY) => {
-                setTooltipPosition({
-                  x: pageX + width / 2,
-                  y: pageY + height + 10,
-                });
-                setShowConfigurationTooltip(true);
-              });
-            }
-          }, 1000); // Small delay to ensure layout is complete
-        }
-      } catch (error) {
-        console.error('Error checking configuration tooltip status:', error);
-      }
-    };
-
-    checkAndShowTooltip();
-  }, [team, selectedSport]);
-
-  const handleConfigurationTooltipClose = async () => {
-    setShowConfigurationTooltip(false);
-    
-    // Mark tooltip as shown so it doesn't appear again
-    try {
-      await AsyncStorage.setItem('configurationTooltipShown', 'true');
-    } catch (error) {
-      console.error('Error saving tooltip shown status:', error);
-    }
-  };
 
   const ghostSource = activeDrag?.source;
   const ghostPlayerStyle = useAnimatedStyle(() => {
@@ -259,18 +229,28 @@ function HomeScreenContent() {
     );
   }
 
+  const sheets = (
+    <>
+      <TeamSwitcherSheet visible={sheet === 'switch'} onClose={closeSheet} />
+      <TeamActionsSheet visible={sheet === 'actions'} onClose={closeSheet} />
+      <AddPlayersSheet visible={sheet === 'add'} onClose={closeSheet} />
+      <PlayerSheet playerId={playerId} visible={sheet === 'player'} onClose={closeSheet} />
+    </>
+  );
+
   if (!team) {
     return (
       <ThemedView style={[styles.container, styles.centerContent]}>
-        <Pressable style={styles.noTeamContainer} onPress={() => router.push('/team')}>
-          <ThemedText style={styles.noTeamText}>
-            {t('createTeamPrompt')}
-            </ThemedText>
-          <IconSymbol name='arrow.right.circle.fill' size={42} color='gray' style={styles.arrow} />
-        </Pressable>
+        <View style={styles.empty}>
+          <ThemedText style={styles.emptyText}>{teams.length === 0 ? t('noTeamsExist') : t('pickATeam')}</ThemedText>
+          <ThemedButton onPress={() => setSheet('switch')}>{teams.length === 0 ? t('addATeam') : t('yourTeams')}</ThemedButton>
+        </View>
+        {sheets}
       </ThemedView>
     );
   }
+
+  const playerCount = team.startingPlayers.length + team.benchPlayers.length;
 
   // On iOS the tab bar is position:absolute (overlays content), so subtract it.
   // On Android the tab bar is in normal flow, content area already excludes it.
@@ -278,7 +258,7 @@ function HomeScreenContent() {
   // Get exact dimensions from the container layout, defaulting to window dimensions
   const availableWidth = courtContainerSize.width > 0 ? courtContainerSize.width : Dimensions.get('window').width;
   const benchHeight = benchExpanded ? PANEL_HEIGHT_EXPANDED : PANEL_HEIGHT_COLLAPSED;
-  const availableHeight = courtContainerSize.height > 0 ? courtContainerSize.height : Dimensions.get('window').height - insets.top - 10 - CONFIGURATION_SELECTOR_HEIGHT - benchHeight - tabBarOffset;
+  const availableHeight = courtContainerSize.height > 0 ? courtContainerSize.height : Dimensions.get('window').height - insets.top - 10 - HEADER_HEIGHT - benchHeight - tabBarOffset;
   const { Svg, aspectRatio } = sportsConfig[selectedSport];
   const screenRatio = availableWidth / availableHeight;
 
@@ -298,44 +278,59 @@ function HomeScreenContent() {
       <ThemedView style={styles.container}>
         <View style={{ height: insets.top }} />
 
-        <View ref={configurationSelectorRef} collapsable={false}>
-          <CourtConfigurationSelector />
-        </View>
-
-        <TooltipModal
-          visible={showConfigurationTooltip}
-          onClose={handleConfigurationTooltipClose}
-          message={t('configurationTooltipMessage') || 'Switch between different team configurations. Long press to rename or delete.'}
-          position={tooltipPosition}
+        <TeamHeader
+          onSwitchTeam={() => setSheet('switch')}
+          onTeamOptions={() => setSheet('actions')}
+          onAddPlayers={() => setSheet('add')}
         />
 
-        <View
-          style={styles.courtContainer}
-          onLayout={onCourtLayout}
-        >
-          <View
-            ref={courtRef}
-            collapsable={false}
-            style={{ width: finalDimensions.width, height: finalDimensions.height }}
-          >
-            <GenericCourt
-              availableHeight={finalDimensions.height}
-              availableWidth={finalDimensions.width}
-              playerPositions={team?.startingPlayers ?? []}
-              CourtSvg={Svg}
-              aspectRatio={aspectRatio}
-            />
+        {playerCount === 0 ? (
+          <View style={styles.empty}>
+            <ThemedText style={styles.emptyText}>{t('noPlayersYet')}</ThemedText>
+            <ThemedButton onPress={() => setSheet('add')}>{t('addPlayers')}</ThemedButton>
           </View>
-        </View>
+        ) : (
+          <>
+            <ViewSwitch view={view} playerCount={playerCount} onChange={setView} />
+            <LineupBar />
 
-        {/* Keeps the court clear of the bench, so no player ends up hidden under it */}
-        <View style={{ height: benchHeight + tabBarOffset }} />
+            {view === 'players' ? (
+              <RosterList onPlayerPress={openPlayer} />
+            ) : (
+              <>
+                <View
+                  style={styles.courtContainer}
+                  onLayout={onCourtLayout}
+                >
+                  <View
+                    ref={courtRef}
+                    collapsable={false}
+                    style={{ width: finalDimensions.width, height: finalDimensions.height }}
+                  >
+                    <GenericCourt
+                      availableHeight={finalDimensions.height}
+                      availableWidth={finalDimensions.width}
+                      playerPositions={team.startingPlayers}
+                      CourtSvg={Svg}
+                      aspectRatio={aspectRatio}
+                      onPlayerPress={openPlayer}
+                    />
+                  </View>
+                </View>
 
-        <BenchPanel
-          expanded={benchExpanded}
-          onToggle={() => setBenchExpanded(current => !current)}
-          tabBarHeight={tabBarHeight}
-        />
+                {/* Keeps the court clear of the bench, so no player ends up hidden under it */}
+                <View style={{ height: benchHeight + tabBarOffset }} />
+
+                <BenchPanel
+                  expanded={benchExpanded}
+                  onToggle={() => setBenchExpanded(current => !current)}
+                  tabBarHeight={tabBarHeight}
+                  onPlayerPress={openPlayer}
+                />
+              </>
+            )}
+          </>
+        )}
 
         {activeDrag && (
           <Animated.View style={ghostPlayerStyle} pointerEvents="none">
@@ -349,6 +344,8 @@ function HomeScreenContent() {
             />
           </Animated.View>
         )}
+
+        {sheets}
       </ThemedView>
     </GestureHandlerRootView>
   );
@@ -362,16 +359,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  noTeamContainer: {
+  empty: {
+    flex: 1,
     alignItems: 'center',
-    padding: 16,
+    justifyContent: 'center',
+    gap: 16,
+    paddingHorizontal: 32,
   },
-  noTeamText: {
+  emptyText: {
     textAlign: 'center',
-    marginRight: 8,
-  },
-  arrow: {
-    opacity: 0.7,
   },
   courtContainer: {
     flex: 1,

@@ -38,7 +38,8 @@ export function BottomSheet({ visible, onClose, onDismissed, title, subtitle, ch
       onDismiss={Platform.OS === 'ios' ? onDismissed : undefined}
       hardwareAccelerated={Platform.OS === 'android'}
     >
-      <KeyboardAvoidingView style={styles.fill} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+      {/* A modal gets its own window, which Android does not resize for the keyboard either */}
+      <KeyboardAvoidingView style={styles.fill} behavior="padding">
         <Pressable style={styles.backdrop} onPress={onClose} accessibilityRole="button" accessibilityLabel={t('close')} />
         <View style={[styles.sheet, { backgroundColor: colors.sheet, paddingBottom: 16 + insets.bottom }]}>
           <View style={[styles.handle, { backgroundColor: colors.handle }]} />

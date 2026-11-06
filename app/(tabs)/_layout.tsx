@@ -37,16 +37,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: t('playGround'),
+          title: t('team'),
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="sportscourt.fill" color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="team"
-        options={{
-          title: t('team'),
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.3.fill" color={color} />,
-        }}/>
       <Tabs.Screen
         name="tactics"
         options={{

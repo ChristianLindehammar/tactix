@@ -75,9 +75,10 @@ interface BenchPanelProps {
   expanded: boolean;
   onToggle: () => void;
   tabBarHeight: number;
+  onPlayerPress?: (playerId: string) => void;
 }
 
-export const BenchPanel: React.FC<BenchPanelProps> = ({ expanded: isExpanded, onToggle, tabBarHeight }) => {
+export const BenchPanel: React.FC<BenchPanelProps> = ({ expanded: isExpanded, onToggle, tabBarHeight, onPlayerPress }) => {
   const { team } = useTeam();
   const { t } = useTranslation();
   const { benchRef, overBench } = useDrag();
@@ -154,6 +155,7 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ expanded: isExpanded, on
                       position={player.position}
                       isOnCourt={false}
                       displayMode="bench"
+                      onPress={onPlayerPress}
                     />
                   </View>
                 ))
