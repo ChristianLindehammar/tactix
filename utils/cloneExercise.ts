@@ -17,7 +17,7 @@ export function cloneExercise(source: Exercise, { ownerId, now, title }: CloneOp
     ownerId,
     clonedFromId: source.id,
     title,
-    coachingPoints: [...source.coachingPoints],
+    coachingPoints: source.coachingPoints.map(point => ({ ...point })),
     customTags: [...source.customTags],
     focus: [...source.focus],
     frames: source.frames.map(frame => ({

@@ -2,6 +2,7 @@ import { randomUUID } from 'expo-crypto';
 
 import { Sport } from '@/constants/sports';
 import {
+  CoachingPoint,
   Exercise,
   EXERCISE_SCHEMA_VERSION,
   ExerciseDifficulty,
@@ -70,7 +71,7 @@ const numberText = (value: number | null) => (value === null ? '' : String(value
 export const draftFromExercise = (exercise: Exercise): ExerciseDraft => ({
   title: exercise.title,
   description: exercise.description,
-  coachingPoints: exercise.coachingPoints.join('\n'),
+  coachingPoints: exercise.coachingPoints.map(point => point.text).join('\n'),
   customTags: exercise.customTags.join(', '),
   durationMinutes: numberText(exercise.durationMinutes),
   minPlayers: numberText(exercise.minPlayers),
@@ -110,6 +111,17 @@ const splitList = (text: string, separator: string) =>
     .split(separator)
     .map(item => item.trim())
     .filter(Boolean);
+
+/** One point per line. A line whose text was already a point keeps that point's id, so its
+ * translation still matches; a new or edited line gets a new id. */
+function readCoachingPoints(text: string, previous: CoachingPoint[]): CoachingPoint[] {
+  const unused = [...previous];
+  return splitList(text, '\n').map(line => {
+    const index = unused.findIndex(point => point.text === line);
+    if (index === -1) return { id: randomUUID(), text: line };
+    return unused.splice(index, 1)[0];
+  });
+}
 
 /** Blank means unset; undefined means the text is not a positive whole number. */
 const parseCount = (text: string): number | null | undefined => {
@@ -157,7 +169,7 @@ export function draftToExercise(
       locale: existing?.locale ?? locale,
       title,
       description: draft.description,
-      coachingPoints: splitList(draft.coachingPoints, '\n'),
+      coachingPoints: readCoachingPoints(draft.coachingPoints, existing?.coachingPoints ?? []),
       customTags: [...new Set(splitList(draft.customTags, ','))],
       difficulty: draft.difficulty,
       focus: draft.focus,

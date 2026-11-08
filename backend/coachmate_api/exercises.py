@@ -8,7 +8,7 @@ from .db import get_db, query_all, query_one
 from .listing import InvalidFilter, build_library, build_listing
 from .plans import has_active_plan
 from .rate_limit import current_user, rate_limited
-from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise
+from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise, upgrade_coaching_points
 
 bp = Blueprint('exercises', __name__)
 
@@ -21,14 +21,15 @@ def _format_date(value):
 
 def _to_exercise(row, focus):
     return {
-        'schemaVersion': row['schema_version'],
+        # Rows from before version 2 are upgraded as they're read
+        'schemaVersion': SCHEMA_VERSION,
         'id': row['id'],
         'ownerId': row['owner_id'],
         'clonedFromId': row['cloned_from_id'],
         'sport': row['sport'],
         'title': row['title'],
         'description': row['description'],
-        'coachingPoints': json.loads(row['coaching_points']),
+        'coachingPoints': upgrade_coaching_points(json.loads(row['coaching_points'])),
         'locale': row['locale'],
         'difficulty': row['difficulty'],
         'focus': focus,

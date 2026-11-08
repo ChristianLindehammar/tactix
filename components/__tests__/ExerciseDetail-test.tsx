@@ -48,7 +48,10 @@ describe('exercise detail', () => {
         sport: 'soccer',
         title: 'Triangle passing',
         description: 'Pass and follow',
-        coachingPoints: ['Head up', 'Quick feet'],
+        coachingPoints: [
+          { id: 'point-1', text: 'Head up' },
+          { id: 'point-2', text: 'Quick feet' },
+        ],
         customTags: ['u12'],
         difficulty: 2,
         phase: 'warmup',

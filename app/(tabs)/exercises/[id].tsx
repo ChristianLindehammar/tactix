@@ -248,8 +248,8 @@ export default function ExerciseDetailScreen() {
       {exercise.coachingPoints.length > 0 && (
         <View style={styles.section}>
           <ThemedText type="defaultSemiBold">{t('coachingPoints')}</ThemedText>
-          {exercise.coachingPoints.map((point, index) => (
-            <ThemedText key={index}>{`• ${point}`}</ThemedText>
+          {exercise.coachingPoints.map(point => (
+            <ThemedText key={point.id}>{`• ${point.text}`}</ThemedText>
           ))}
         </View>
       )}

@@ -1,7 +1,7 @@
 import { Exercise } from '@/types/exercise';
 
 export const buildExercise = (overrides: Partial<Exercise> = {}): Exercise => ({
-  schemaVersion: 1,
+  schemaVersion: 2,
   id: 'exercise-1',
   ownerId: null,
   clonedFromId: null,

@@ -2,7 +2,8 @@ import { Sport, sportsConfig } from '@/constants/sports';
 import { TACTICS_MARKER_TYPES, TacticsMarker } from '@/types/tacticsMarker';
 import { MAX_BEND, MAX_WAVES } from '@/utils/arrowCurve';
 
-export const EXERCISE_SCHEMA_VERSION = 1;
+/** Version 2 gave coaching points ids. Version 1 exercises are still read and upgraded. */
+export const EXERCISE_SCHEMA_VERSION = 2;
 
 /** The most the server accepts; backend/coachmate_api/validation.py has the same limit. */
 export const MAX_TITLE_LENGTH = 200;
@@ -32,6 +33,13 @@ export const FOCUS_TAGS = [
 ] as const;
 export type FocusTag = (typeof FOCUS_TAGS)[number];
 
+/** The id stays the same while the text is unchanged, so a translation can find its point
+ * after the coach reorders or removes others. Unique within one exercise. */
+export interface CoachingPoint {
+  id: string;
+  text: string;
+}
+
 export interface ExerciseFrame {
   id: string;
   note?: string;
@@ -48,7 +56,7 @@ export interface Exercise {
   sport: Sport;
   title: string;
   description: string;
-  coachingPoints: string[];
+  coachingPoints: CoachingPoint[];
   locale: string;
   difficulty: ExerciseDifficulty;
   focus: FocusTag[];
@@ -180,9 +188,25 @@ function parseFrame(data: unknown): ExerciseFrame {
   return data.note === undefined ? frame : { ...frame, note: data.note };
 }
 
+/** Version 1 points get ids from their position, the same on every read and on the server. */
+const upgradeCoachingPoints = (value: unknown): unknown =>
+  isTextList(value) ? value.map((text, index) => ({ id: `point-${index + 1}`, text })) : value;
+
+const isCoachingPoints = (value: unknown): value is CoachingPoint[] =>
+  Array.isArray(value) &&
+  value.every(point => isRecord(point) && isNonEmptyText(point.id) && typeof point.text === 'string') &&
+  new Set(value.map(point => point.id)).size === value.length;
+
 /** Checks untrusted data (a shared file, stored JSON, an API response) is an exercise. */
 export function parseExercise(data: unknown): Exercise {
   if (!isRecord(data)) return fail('invalidFormat');
+  if (data.schemaVersion === 1) {
+    return parseExercise({
+      ...data,
+      schemaVersion: EXERCISE_SCHEMA_VERSION,
+      coachingPoints: upgradeCoachingPoints(data.coachingPoints),
+    });
+  }
   if (data.schemaVersion !== EXERCISE_SCHEMA_VERSION) return fail('unsupportedVersion');
 
   const {
@@ -216,7 +240,7 @@ export function parseExercise(data: unknown): Exercise {
   if (!isNonEmptyText(title)) return fail('invalidTitle');
   if (
     typeof description !== 'string' ||
-    !isTextList(coachingPoints) ||
+    !isCoachingPoints(coachingPoints) ||
     !isTextList(customTags) ||
     !isNonEmptyText(locale)
   ) {
@@ -246,7 +270,7 @@ export function parseExercise(data: unknown): Exercise {
     sport,
     title,
     description,
-    coachingPoints,
+    coachingPoints: coachingPoints.map(({ id: pointId, text }) => ({ id: pointId, text })),
     locale,
     difficulty,
     // Unknown tags are dropped, not rejected, so files from newer versions still open

@@ -1,19 +1,20 @@
 import json
 import uuid
 
+import mysql.connector
 import pytest
 
 
 def build_exercise(**overrides):
     return {
-        'schemaVersion': 1,
+        'schemaVersion': 2,
         'id': str(uuid.uuid4()),
         'ownerId': None,
         'clonedFromId': None,
         'sport': 'floorball',
         'title': 'Triangelpassningar på små ytor',
         'description': 'Tre spelare, två bollar',
-        'coachingPoints': ['Håll huvudet uppe'],
+        'coachingPoints': [{'id': 'point-a', 'text': 'Håll huvudet uppe'}],
         'locale': 'sv',
         'difficulty': 2,
         'focus': ['passing', 'positioning'],
@@ -60,6 +61,36 @@ class TestSavingAndFetching:
         assert fetched.status_code == 200
         owner = saved.get_json()['ownerId']
         assert fetched.get_json() == {**exercise, 'ownerId': owner}
+
+    def test_upgrades_an_exercise_from_an_older_app(self, client, register):
+        me = register()
+        exercise = build_exercise(schemaVersion=1, coachingPoints=['Håll huvudet uppe', 'Snabba fötter'])
+
+        assert put(client, exercise, me).status_code == 200
+        fetched = get(client, exercise, me).get_json()
+
+        assert fetched['schemaVersion'] == 2
+        assert fetched['coachingPoints'] == [
+            {'id': 'point-1', 'text': 'Håll huvudet uppe'},
+            {'id': 'point-2', 'text': 'Snabba fötter'},
+        ]
+
+    def test_upgrades_an_exercise_stored_before_coaching_points_had_ids(self, client, register, db_config):
+        me = register()
+        exercise = build_exercise()
+        put(client, exercise, me)
+        connection = mysql.connector.connect(**db_config)
+        connection.cursor().execute(
+            "UPDATE exercises SET schema_version = 1, coaching_points = '[\"Head up\"]' WHERE id = %s",
+            (exercise['id'],),
+        )
+        connection.commit()
+        connection.close()
+
+        fetched = get(client, exercise, me).get_json()
+
+        assert fetched['schemaVersion'] == 2
+        assert fetched['coachingPoints'] == [{'id': 'point-1', 'text': 'Head up'}]
 
     def test_keeps_a_cleared_optional_field_empty(self, client, register):
         me = register()
@@ -171,12 +202,17 @@ class TestValidation:
     @pytest.mark.parametrize(
         'overrides, code',
         [
-            ({'schemaVersion': 2}, 'unsupportedVersion'),
+            ({'schemaVersion': 3}, 'unsupportedVersion'),
             ({'sport': 'chess'}, 'invalidSport'),
             ({'title': '   '}, 'invalidTitle'),
             ({'title': 'x' * 201}, 'invalidTitle'),
             ({'description': 5}, 'invalidText'),
-            ({'coachingPoints': [1]}, 'invalidText'),
+            ({'coachingPoints': ['Version 1 points in a version 2 exercise']}, 'invalidText'),
+            ({'coachingPoints': [{'text': 'No id'}]}, 'invalidText'),
+            ({'coachingPoints': [{'id': 'a', 'text': 1}]}, 'invalidText'),
+            ({'coachingPoints': [{'id': 'x' * 65, 'text': 'Long id'}]}, 'invalidText'),
+            ({'coachingPoints': [{'id': 'a', 'text': 'One'}, {'id': 'a', 'text': 'Two'}]}, 'invalidText'),
+            ({'schemaVersion': 1, 'coachingPoints': [1]}, 'invalidText'),
             ({'locale': ''}, 'invalidText'),
             ({'difficulty': 6}, 'invalidDifficulty'),
             ({'difficulty': True}, 'invalidDifficulty'),

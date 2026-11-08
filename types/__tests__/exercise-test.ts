@@ -1,14 +1,14 @@
 import { ExerciseParseError, parseExercise } from '../exercise';
 
 const validExercise = () => ({
-  schemaVersion: 1,
+  schemaVersion: 2,
   id: '3f2b8c1e-7a44-4d21-9c55-0e1f2a3b4c5d',
   ownerId: null,
   clonedFromId: null,
   sport: 'floorball',
   title: 'Triangle passing',
   description: 'Pass and follow your pass.',
-  coachingPoints: ['Keep your head up'],
+  coachingPoints: [{ id: 'point-a', text: 'Keep your head up' }],
   locale: 'sv',
   difficulty: 2,
   focus: ['passing'],
@@ -53,7 +53,24 @@ describe('parseExercise', () => {
   });
 
   it('rejects an exercise from a newer app version', () => {
-    expect(errorCodeFor({ ...validExercise(), schemaVersion: 2 })).toBe('unsupportedVersion');
+    expect(errorCodeFor({ ...validExercise(), schemaVersion: 3 })).toBe('unsupportedVersion');
+  });
+
+  it('upgrades a version 1 exercise, giving its coaching points ids that stay the same', () => {
+    const old = { ...validExercise(), schemaVersion: 1, coachingPoints: ['Head up', 'Quick feet'] };
+
+    const upgraded = parseExercise(old);
+
+    expect(upgraded.schemaVersion).toBe(2);
+    expect(upgraded.coachingPoints).toEqual([
+      { id: 'point-1', text: 'Head up' },
+      { id: 'point-2', text: 'Quick feet' },
+    ]);
+    expect(parseExercise(old)).toEqual(upgraded);
+  });
+
+  it('rejects version 1 coaching points in a version 2 exercise', () => {
+    expect(errorCodeFor({ ...validExercise(), coachingPoints: ['Head up'] })).toBe('invalidText');
   });
 
   it.each([
@@ -61,7 +78,13 @@ describe('parseExercise', () => {
     ['a clone source that is not an id', { clonedFromId: 5 }, 'invalidId'],
     ['an unknown sport', { sport: 'cricket' }, 'invalidSport'],
     ['an empty title', { title: '   ' }, 'invalidTitle'],
-    ['non-text coaching points', { coachingPoints: [1] }, 'invalidText'],
+    ['a coaching point without an id', { coachingPoints: [{ text: 'Head up' }] }, 'invalidText'],
+    ['a coaching point that is not text', { coachingPoints: [{ id: 'a', text: 1 }] }, 'invalidText'],
+    [
+      'two coaching points with the same id',
+      { coachingPoints: [{ id: 'a', text: 'Head up' }, { id: 'a', text: 'Quick feet' }] },
+      'invalidText',
+    ],
     ['a difficulty below the scale', { difficulty: 0 }, 'invalidDifficulty'],
     ['a difficulty above the scale', { difficulty: 6 }, 'invalidDifficulty'],
     ['a fractional difficulty', { difficulty: 2.5 }, 'invalidDifficulty'],

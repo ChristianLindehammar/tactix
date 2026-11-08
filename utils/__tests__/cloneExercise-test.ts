@@ -10,7 +10,7 @@ const source = buildExercise({
   clonedFromId: 'older-original',
   title: 'Triangle passing',
   description: 'Pass and follow',
-  coachingPoints: ['Head up'],
+  coachingPoints: [{ id: 'point-1', text: 'Head up' }],
   customTags: ['u12'],
   difficulty: 4,
   focus: ['passing'],
@@ -54,7 +54,7 @@ describe('cloning an exercise', () => {
       sport: source.sport,
       locale: source.locale,
       description: 'Pass and follow',
-      coachingPoints: ['Head up'],
+      coachingPoints: [{ id: 'point-1', text: 'Head up' }],
       customTags: ['u12'],
       difficulty: 4,
       focus: ['passing'],
@@ -68,10 +68,10 @@ describe('cloning an exercise', () => {
 
     copy.frames[0].markers[0].x = 0.99;
     copy.focus.push('defence');
-    copy.coachingPoints.push('New');
+    copy.coachingPoints[0].text = 'Changed';
 
     expect(source.frames[0].markers[0].x).toBe(0.5);
     expect(source.focus).toEqual(['passing']);
-    expect(source.coachingPoints).toEqual(['Head up']);
+    expect(source.coachingPoints).toEqual([{ id: 'point-1', text: 'Head up' }]);
   });
 });

@@ -38,7 +38,9 @@ def show(cursor, exercise_id):
     if exercise is None:
         sys.exit('No such exercise')
     print(f"Title: {exercise['title']}\nDescription: {exercise['description']}")
-    print('Coaching points: ' + '; '.join(json.loads(exercise['coaching_points'])))
+    points = json.loads(exercise['coaching_points'])
+    # Version 1 rows hold plain text, later ones hold {id, text}
+    print('Coaching points: ' + '; '.join(p if isinstance(p, str) else p['text'] for p in points))
     for frame in json.loads(exercise['frames']):
         if frame.get('note'):
             print(f"Step note: {frame['note']}")

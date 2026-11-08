@@ -96,7 +96,19 @@ describe('a new exercise from a draft', () => {
   it('reads one coaching point per line, ignoring blank lines', () => {
     const { coachingPoints } = save(validDraft({ coachingPoints: ' Head up \n\nQuick feet\n' }));
 
-    expect(coachingPoints).toEqual(['Head up', 'Quick feet']);
+    expect(coachingPoints.map(point => point.text)).toEqual(['Head up', 'Quick feet']);
+  });
+
+  it('gives each new coaching point its own id', () => {
+    const { coachingPoints } = save(validDraft({ coachingPoints: 'Head up\nQuick feet' }));
+
+    expect(new Set(coachingPoints.map(point => point.id)).size).toBe(2);
+  });
+
+  it('gives a repeated coaching point a different id each time', () => {
+    const { coachingPoints } = save(validDraft({ coachingPoints: 'Head up\nHead up' }));
+
+    expect(coachingPoints[0].id).not.toBe(coachingPoints[1].id);
   });
 
   it('reads comma-separated custom tags without blanks or repeats', () => {
@@ -145,7 +157,10 @@ describe('editing an existing exercise', () => {
     updatedAt: '2026-01-01T00:00:00.000Z',
     title: 'Original',
     description: 'Details',
-    coachingPoints: ['One', 'Two'],
+    coachingPoints: [
+      { id: 'point-one', text: 'One' },
+      { id: 'point-two', text: 'Two' },
+    ],
     customTags: ['u12', 'fun'],
     difficulty: 4,
     focus: ['defence'],
@@ -164,6 +179,24 @@ describe('editing an existing exercise', () => {
     const saved = save(draftFromExercise(existing), existing);
 
     expect(saved).toEqual({ ...existing, updatedAt: NOW });
+  });
+
+  it('keeps the id of a coaching point whose text is unchanged, wherever it moves', () => {
+    const draft = { ...draftFromExercise(existing), coachingPoints: 'New\nTwo' };
+
+    const { coachingPoints } = save(draft, existing);
+
+    expect(coachingPoints[1]).toEqual({ id: 'point-two', text: 'Two' });
+    expect(coachingPoints[0].id).not.toMatch(/^point-/);
+  });
+
+  it('gives an edited coaching point a new id, so its old translation is not reused', () => {
+    const draft = { ...draftFromExercise(existing), coachingPoints: 'One!\nTwo' };
+
+    const { coachingPoints } = save(draft, existing);
+
+    expect(coachingPoints[0].id).not.toBe('point-one');
+    expect(coachingPoints[1].id).toBe('point-two');
   });
 
   it('drops a step that was removed', () => {

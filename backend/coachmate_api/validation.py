@@ -4,7 +4,8 @@ import math
 import uuid
 from datetime import datetime, timezone
 
-SCHEMA_VERSION = 1
+# Version 2 gave coaching points ids. Version 1 exercises are still accepted and upgraded.
+SCHEMA_VERSION = 2
 SPORTS = {'floorball', 'soccer', 'hockey', 'bandy', 'basketball'}
 PHASES = {'warmup', 'main', 'game', 'cooldown'}
 FOCUS_TAGS = {
@@ -20,6 +21,7 @@ MAX_ARROW_WAVES = 8
 MAX_TITLE_LENGTH = 200
 MAX_LOCALE_LENGTH = 16
 MAX_CLONED_FROM_LENGTH = 64
+MAX_POINT_ID_LENGTH = 64
 MAX_COUNT = 100_000
 
 
@@ -35,6 +37,27 @@ def _is_text(value):
 
 def _is_text_list(value):
     return isinstance(value, list) and all(isinstance(item, str) for item in value)
+
+
+def upgrade_coaching_points(points):
+    """Gives version 1 points ids from their position, the same ids the app gives them."""
+    if not _is_text_list(points):
+        return points
+    return [{'id': f'point-{index}', 'text': text} for index, text in enumerate(points, start=1)]
+
+
+def _is_coaching_points(value):
+    return (
+        isinstance(value, list)
+        and all(
+            isinstance(point, dict)
+            and _is_text(point.get('id'))
+            and len(point['id']) <= MAX_POINT_ID_LENGTH
+            and isinstance(point.get('text'), str)
+            for point in value
+        )
+        and len({point['id'] for point in value}) == len(value)
+    )
 
 
 def _is_int(value):
@@ -119,6 +142,8 @@ def parse_exercise(data):
     """Returns the fields of a valid exercise. The owner is left out: the server decides it."""
     if not isinstance(data, dict):
         raise ExerciseParseError('invalidFormat')
+    if data.get('schemaVersion') == 1:
+        data = {**data, 'schemaVersion': SCHEMA_VERSION, 'coachingPoints': upgrade_coaching_points(data.get('coachingPoints'))}
     if data.get('schemaVersion') != SCHEMA_VERSION:
         raise ExerciseParseError('unsupportedVersion')
 
@@ -133,7 +158,7 @@ def parse_exercise(data):
         raise ExerciseParseError('invalidTitle')
     if (
         not isinstance(data.get('description'), str)
-        or not _is_text_list(data.get('coachingPoints'))
+        or not _is_coaching_points(data.get('coachingPoints'))
         or not _is_text_list(data.get('customTags'))
         or not _is_text(data.get('locale'))
         or len(data['locale']) > MAX_LOCALE_LENGTH
@@ -167,7 +192,7 @@ def parse_exercise(data):
         'sport': data['sport'],
         'title': data['title'],
         'description': data['description'],
-        'coachingPoints': data['coachingPoints'],
+        'coachingPoints': [{'id': point['id'], 'text': point['text']} for point in data['coachingPoints']],
         'locale': data['locale'],
         'difficulty': data['difficulty'],
         # Unknown tags are dropped, not rejected, so newer versions of the app can still save
