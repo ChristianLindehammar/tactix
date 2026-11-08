@@ -53,8 +53,6 @@ Build and upload a new beta build to TestFlight
 [bundle exec] fastlane android release_internal
 ```
 
-Release a build already on the internal track to testers, with the current release notes
-
 Release an uploaded build to internal testers (e.g. a draft left by an earlier run)
 
 ### android beta
