@@ -313,6 +313,8 @@ export default {
   planStartTrial: 'Aloita ilmainen kokeilu',
   planRestore: 'Palauta osto',
   planUnavailable: 'Ostot eivät ole käytettävissä tässä sovelluksen versiossa.',
+  planTermsOfUse: 'Käyttöehdot',
+  planPrivacyPolicy: 'Tietosuojakäytäntö',
   planErrorPurchase: 'Osto ei onnistunut. Yritä uudelleen.',
   planErrorRestore: 'Oston palauttaminen ei onnistunut. Yritä uudelleen.',
   planErrorSignInFirst: 'Osto voi kuulua tilille. Kirjaudu sisään kohdassa Asetukset > Tili saadaksesi sen takaisin.',

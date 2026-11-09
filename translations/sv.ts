@@ -313,6 +313,8 @@ export default {
   planStartTrial: 'Starta gratis provperiod',
   planRestore: 'Återställ köp',
   planUnavailable: 'Köp är inte tillgängliga i den här versionen av appen.',
+  planTermsOfUse: 'Användarvillkor',
+  planPrivacyPolicy: 'Integritetspolicy',
   planErrorPurchase: 'Köpet gick inte igenom. Försök igen.',
   planErrorRestore: 'Det gick inte att återställa köpet. Försök igen.',
   planErrorSignInFirst: 'Köpet kan tillhöra ett konto. Logga in under Inställningar > Konto för att få tillbaka det.',

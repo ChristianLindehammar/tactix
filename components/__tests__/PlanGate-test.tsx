@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
 import * as React from 'react';
-import { Text } from 'react-native';
+import { Linking, Text } from 'react-native';
 
 import { PlanGate } from '@/components/PlanGate';
 import { createPlanService, PlanPeriod, PlanStore, StorePlan } from '@/services/planService';
@@ -186,4 +186,16 @@ test('a build that cannot sell says so instead of offering a trial that fails', 
   expect(await screen.findByText(t('planUnavailable'))).toBeTruthy();
   expect(screen.queryByRole('button', { name: t('planStartTrial') })).toBeNull();
   expect(screen.queryByRole('button', { name: t('planRestore') })).toBeNull();
+});
+
+test.each([
+  ['planTermsOfUse', 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'],
+  ['planPrivacyPolicy', 'https://lindehammar-konsult.se/privacy-policy.html'],
+])('the terms a coach subscribes under are one tap away: %s', async (labelKey, url) => {
+  const openURL = jest.spyOn(Linking, 'openURL').mockResolvedValue(undefined);
+  setup({ expiresAt: null });
+
+  fireEvent.press(await screen.findByRole('link', { name: t(labelKey) }));
+
+  expect(openURL).toHaveBeenCalledWith(url);
 });

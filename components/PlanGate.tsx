@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
@@ -14,6 +14,11 @@ interface PlanGateProps {
   children: React.ReactNode;
 }
 
+// Apple requires both on the screen that sells the subscription
+const LEGAL_LINKS = [
+  { labelKey: 'planTermsOfUse', url: 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/' },
+  { labelKey: 'planPrivacyPolicy', url: 'https://lindehammar-konsult.se/privacy-policy.html' },
+];
 const NO_PRICES: PlanPrices = { annual: null, monthly: null };
 const PERIODS: { period: PlanPeriod; labelKey: string }[] = [
   { period: 'annual', labelKey: 'planPerYear' },
@@ -159,6 +164,13 @@ export function PlanGate({ plans, onExport, onDeleteAll, children }: PlanGatePro
           )}
         </>
       ) : null}
+      <View style={styles.legal}>
+        {LEGAL_LINKS.map(({ labelKey, url }) => (
+          <Pressable key={labelKey} accessibilityRole="link" onPress={() => void Linking.openURL(url)}>
+            <ThemedText type="link">{t(labelKey)}</ThemedText>
+          </Pressable>
+        ))}
+      </View>
     </ScrollView>
   );
 }
@@ -167,6 +179,7 @@ const styles = StyleSheet.create({
   container: { flexGrow: 1, gap: 16, padding: 24, justifyContent: 'center' },
   spinner: { flex: 1 },
   options: { gap: 8 },
+  legal: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 24 },
   option: { borderWidth: 1, borderRadius: 8, padding: 16 },
   selected: { borderWidth: 3, padding: 14 },
   error: { color: '#c0392b' },
