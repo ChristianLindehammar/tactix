@@ -330,6 +330,9 @@ export default {
   planDeleteAllYes: 'Ja, radera dem',
   planErrorExport: 'Det gick inte att exportera dina övningar. Försök igen.',
   planErrorDelete: 'Det gick inte att radera dina övningar. Försök igen.',
+  planManage: 'Hantera prenumeration',
+  planManageHint: 'Avsluta eller byt mellan månads- och årsplan i ditt butikskonto.',
+  planErrorManage: 'Det gick inte att öppna dina prenumerationer. Försök igen.',
   // Coaching together
   coachTogether: "Coacha tillsammans",
   joinTeam: "Gå med i ett lag",

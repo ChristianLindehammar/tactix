@@ -19,6 +19,7 @@ function setup(plan: StorePlan, { offline = false, unavailable = false } = {}) {
     getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
     purchase: jest.fn(async (_period: PlanPeriod) => plan),
     restore: jest.fn(async () => plan),
+    manage: jest.fn(async (): Promise<void> => undefined),
     logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
   };

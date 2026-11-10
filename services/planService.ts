@@ -28,6 +28,8 @@ export interface PlanStore {
   /** 'cancelled' when the coach backed out of the store's own sheet. */
   purchase(period: PlanPeriod): Promise<StorePlan | 'cancelled'>;
   restore(): Promise<StorePlan>;
+  /** Opens the store's own page where the coach cancels or switches plans. */
+  manage(): Promise<void>;
   logIn(userId: string): Promise<void>;
   logOut(): Promise<void>;
 }
@@ -136,6 +138,11 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
       if (plan === 'cancelled') return;
       await adopt(plan);
       await tellServer().catch(warnNotLinked);
+    },
+    manage: async () => {
+      await store.manage();
+      // The coach may have switched plans there
+      await refresh();
     },
     refresh,
   };

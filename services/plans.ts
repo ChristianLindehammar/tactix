@@ -24,6 +24,7 @@ function createDevPlanStore(): PlanStore {
     purchase: async period =>
       (plan = { expiresAt: new Date(Date.now() + (period === 'annual' ? YEAR_MS : MONTH_MS)).toISOString() }),
     restore: async () => plan,
+    manage: async () => undefined,
     logIn: async () => undefined,
     logOut: async () => undefined,
   };
@@ -36,6 +37,7 @@ const unavailableStore: PlanStore = {
   getPrices: async () => ({ annual: null, monthly: null }),
   purchase: () => Promise.reject(new Error('No RevenueCat key in this build')),
   restore: () => Promise.reject(new Error('No RevenueCat key in this build')),
+  manage: () => Promise.reject(new Error('No RevenueCat key in this build')),
   logIn: async () => undefined,
   logOut: async () => undefined,
 };

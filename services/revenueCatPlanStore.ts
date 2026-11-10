@@ -1,9 +1,11 @@
+import { Linking, Platform } from 'react-native';
 import Purchases, { CustomerInfo, PURCHASES_ERROR_CODE } from 'react-native-purchases';
 
 import type { PlanStore, StorePlan } from '@/services/planService';
 
 const ENTITLEMENT = 'premium';
 const DAY_MS = 86_400_000;
+const PLAY_SUBSCRIPTIONS_URL = 'https://play.google.com/store/account/subscriptions';
 
 const toPlan = (info: CustomerInfo): StorePlan => {
   const entitlement = info.entitlements.all[ENTITLEMENT];
@@ -38,6 +40,12 @@ export function createRevenueCatPlanStore(apiKey: string): PlanStore {
       }
     },
     restore: async () => toPlan(await Purchases.restorePurchases()),
+    manage: async () => {
+      // Apple's sheet opens inside the app and also covers TestFlight purchases
+      if (Platform.OS === 'ios') return Purchases.showManageSubscriptions();
+      const { managementURL } = await Purchases.getCustomerInfo();
+      await Linking.openURL(managementURL ?? PLAY_SUBSCRIPTIONS_URL);
+    },
     logIn: async userId => {
       await Purchases.logIn(userId);
     },

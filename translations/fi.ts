@@ -330,6 +330,9 @@ export default {
   planDeleteAllYes: 'Kyllä, poista ne',
   planErrorExport: 'Harjoitteiden vienti ei onnistunut. Yritä uudelleen.',
   planErrorDelete: 'Harjoitteiden poistaminen ei onnistunut. Yritä uudelleen.',
+  planManage: 'Hallitse tilausta',
+  planManageHint: 'Peru tilaus tai vaihda kuukausi- ja vuositilauksen välillä kauppatililläsi.',
+  planErrorManage: 'Tilausten avaaminen ei onnistunut. Yritä uudelleen.',
   // Coaching together
   coachTogether: "Valmentakaa yhdessä",
   joinTeam: "Liity joukkueeseen",

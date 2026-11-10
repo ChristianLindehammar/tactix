@@ -330,6 +330,9 @@ export default {
   planDeleteAllYes: 'Yes, delete them',
   planErrorExport: 'Could not export your exercises. Please try again.',
   planErrorDelete: 'Could not delete your exercises. Please try again.',
+  planManage: 'Manage subscription',
+  planManageHint: 'Cancel or switch between monthly and yearly in your store account.',
+  planErrorManage: 'Could not open your subscriptions. Please try again.',
   // Coaching together
   coachTogether: "Coach together",
   joinTeam: "Join a team",

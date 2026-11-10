@@ -33,6 +33,7 @@ function setup(initial: StorePlan = { expiresAt: null }) {
     getPlan: jest.fn(async () => initial),
     purchase: jest.fn(async (_period: PlanPeriod) => initial),
     restore: jest.fn(async () => initial),
+    manage: jest.fn(async (): Promise<void> => undefined),
     getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
     logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
@@ -201,4 +202,15 @@ test('a coach can buy the monthly plan', async () => {
 
   expect(store.purchase).toHaveBeenCalledWith('monthly');
   expect(plans.getState()).toEqual({ status: 'active', expiresAt: NEXT_YEAR });
+});
+
+test('after managing their subscription the coach sees the plan the store now reports', async () => {
+  const { plans, store } = setup({ expiresAt: NEXT_YEAR });
+  await plans.refresh();
+  store.getPlan.mockResolvedValue({ expiresAt: LAST_YEAR });
+
+  await plans.manage();
+
+  expect(store.manage).toHaveBeenCalled();
+  expect(plans.getState()).toEqual({ status: 'lapsed', expiresAt: LAST_YEAR });
 });
