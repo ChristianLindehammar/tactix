@@ -18,7 +18,7 @@ function setup(plan: StorePlan) {
     purchase: jest.fn(async (_period: PlanPeriod) => plan),
     restore: jest.fn(async () => plan),
     manage: jest.fn(async (): Promise<void> => undefined),
-    logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
+    logIn: jest.fn(async (_userId: string, _email: string | null): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
   };
   const plans = createPlanService({

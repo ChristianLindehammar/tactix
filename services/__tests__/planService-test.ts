@@ -35,7 +35,7 @@ function setup(initial: StorePlan = { expiresAt: null }) {
     restore: jest.fn(async () => initial),
     manage: jest.fn(async (): Promise<void> => undefined),
     getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
-    logIn: jest.fn(async (_userId: string): Promise<void> => undefined),
+    logIn: jest.fn(async (_userId: string, _email: string | null): Promise<void> => undefined),
     logOut: jest.fn(async (): Promise<void> => undefined),
   };
   const auth = fakeAuth();
@@ -120,12 +120,20 @@ test('signing in brings in a plan bought on this device and tells the server to 
   auth.change(SIGNED_IN);
 
   await waitFor(() => expect(plans.getState()).toEqual({ status: 'active', expiresAt: NEXT_YEAR }));
-  expect(store.logIn).toHaveBeenCalledWith('account-1');
+  expect(store.logIn).toHaveBeenCalledWith('account-1', 'coach@example.com');
   expect(fetch).toHaveBeenCalledWith(
     'https://api.test/me/plan/refresh',
     expect.objectContaining({ method: 'POST', headers: { Authorization: 'Bearer secret-token' } }),
   );
   expect(store.logIn.mock.invocationCallOrder[0]).toBeLessThan(fetch.mock.invocationCallOrder[0]);
+});
+
+test('the store learns the coach email, so testers can be given free access by email', async () => {
+  const { store, auth } = setup();
+
+  auth.change(SIGNED_IN);
+
+  await waitFor(() => expect(store.logIn).toHaveBeenCalledWith('account-1', 'coach@example.com'));
 });
 
 test('signing in with no signal still leaves the coach with the plan they had', async () => {

@@ -47,8 +47,10 @@ export function createRevenueCatPlanStore(apiKey: string): PlanStore {
       await Linking.openURL(managementURL ?? PLAY_SUBSCRIPTIONS_URL);
     },
     onChange: listener => Purchases.addCustomerInfoUpdateListener(info => listener(toPlan(info))),
-    logIn: async userId => {
+    logIn: async (userId, email) => {
       await Purchases.logIn(userId);
+      // Shown and searchable on the customer's page in RevenueCat
+      if (email) await Purchases.setEmail(email);
     },
     logOut: async () => {
       await Purchases.logOut();

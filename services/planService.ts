@@ -32,7 +32,8 @@ export interface PlanStore {
   manage(): Promise<void>;
   /** Calls back whenever the store learns something new, as a renewal, cancel or expiry can happen any time. */
   onChange?(listener: (plan: StorePlan) => void): void;
-  logIn(userId: string): Promise<void>;
+  /** The email lets the store's dashboard find the coach, e.g. to give a tester free access. */
+  logIn(userId: string, email: string | null): Promise<void>;
   logOut(): Promise<void>;
 }
 
@@ -93,11 +94,11 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
     await fetch(`${baseUrl}/me/plan/refresh`, { method: 'POST', headers });
   };
 
-  const signedIn = async (userId: string) => {
+  const signedIn = async (userId: string, email: string | null) => {
     await AsyncStorage.removeItem(NEEDS_SIGN_IN_KEY);
     // Either can fail with no signal, and the next launch tries again. Until then uploads wait,
     // but access doesn't.
-    await store.logIn(userId).catch(warnNotLinked);
+    await store.logIn(userId, email).catch(warnNotLinked);
     await tellServer().catch(warnNotLinked);
     await refresh();
   };
@@ -123,7 +124,7 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
     const userId = current.status === 'signedIn' ? current.userId : null;
     if (userId === lastUserId) return;
     lastUserId = userId;
-    void (userId ? signedIn(userId) : signedOut());
+    void (current.status === 'signedIn' ? signedIn(current.userId, current.email) : signedOut());
   });
 
   return {
