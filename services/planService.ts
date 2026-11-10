@@ -30,6 +30,8 @@ export interface PlanStore {
   restore(): Promise<StorePlan>;
   /** Opens the store's own page where the coach cancels or switches plans. */
   manage(): Promise<void>;
+  /** Calls back whenever the store learns something new, as a renewal, cancel or expiry can happen any time. */
+  onChange?(listener: (plan: StorePlan) => void): void;
   logIn(userId: string): Promise<void>;
   logOut(): Promise<void>;
 }
@@ -56,6 +58,7 @@ export class PlanError extends Error {
 }
 
 const warnNotLinked = (error: unknown) => console.warn('Could not link the plan to the account:', error);
+const warnNotSaved = (error: unknown) => console.warn('Could not save the plan:', error);
 
 export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now }: PlanServiceOptions) {
   let state: PlanState = { status: 'unknown' };
@@ -110,6 +113,9 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
       await adopt({ expiresAt: null });
     }
   };
+
+  // The store may answer from an outdated copy at launch and only learn the truth a moment later
+  store.onChange?.(plan => void adopt(plan).catch(warnNotSaved));
 
   let lastUserId: string | null = null;
   auth.subscribe(() => {

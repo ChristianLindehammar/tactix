@@ -214,3 +214,22 @@ test('after managing their subscription the coach sees the plan the store now re
   expect(store.manage).toHaveBeenCalled();
   expect(plans.getState()).toEqual({ status: 'lapsed', expiresAt: LAST_YEAR });
 });
+
+test('a plan the store cancels or renews while the app is open takes effect straight away', async () => {
+  let storeChanged: (plan: StorePlan) => void = () => undefined;
+  const { store } = setup({ expiresAt: NEXT_YEAR });
+  store.onChange = jest.fn(listener => void (storeChanged = listener));
+  const watched = createPlanService({
+    store,
+    auth: fakeAuth(),
+    baseUrl: 'https://api.test',
+    fetch: jest.fn() as unknown as typeof globalThis.fetch,
+    now: () => NOW,
+  });
+  await watched.refresh();
+  expect(watched.getState().status).toBe('active');
+
+  storeChanged({ expiresAt: LAST_YEAR });
+
+  await waitFor(() => expect(watched.getState()).toEqual({ status: 'lapsed', expiresAt: LAST_YEAR }));
+});
