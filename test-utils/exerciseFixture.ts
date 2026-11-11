@@ -1,0 +1,26 @@
+import { Exercise } from '@/types/exercise';
+
+export const buildExercise = (overrides: Partial<Exercise> = {}): Exercise => ({
+  schemaVersion: 2,
+  id: 'exercise-1',
+  ownerId: null,
+  clonedFromId: null,
+  sport: 'floorball',
+  title: 'Triangle passing',
+  description: '',
+  coachingPoints: [],
+  locale: 'en',
+  difficulty: 2,
+  focus: ['passing'],
+  customTags: [],
+  phase: 'warmup',
+  durationMinutes: 10,
+  minPlayers: 6,
+  maxPlayers: 12,
+  frames: [{ id: 'frame-1', markers: [{ id: 'a', type: 'cone', x: 0.5, y: 0.5 }] }],
+  createdAt: '2026-11-03T10:00:00.000Z',
+  updatedAt: '2026-11-03T10:00:00.000Z',
+  deletedAt: null,
+  visibility: 'public',
+  ...overrides,
+});

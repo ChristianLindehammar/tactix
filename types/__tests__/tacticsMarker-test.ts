@@ -1,4 +1,4 @@
-import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers } from '../tacticsMarker';
+import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers, withArrowCurve } from '../tacticsMarker';
 
 describe('createTacticsMarker', () => {
   it('creates a cone marker with the given position', () => {
@@ -20,6 +20,29 @@ describe('createTacticsMarker', () => {
 
     const ids = [m1.id, m2.id, m3.id, m4.id];
     expect(new Set(ids).size).toBe(4);
+  });
+});
+
+describe('marker IDs', () => {
+  const UUID_V4 = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+  // Reloading the module is what an app restart does to module-level state
+  const createAfterRestart = () => {
+    let id = '';
+    jest.isolateModules(() => {
+      const fresh = require('../tacticsMarker');
+      id = fresh.createTacticsMarker('cone', 0.5, 0.5).id;
+    });
+    return id;
+  };
+
+  it('does not reuse an ID after the app restarts', () => {
+    expect(createAfterRestart()).not.toBe(createAfterRestart());
+  });
+
+  it('gives point and arrow markers UUIDs', () => {
+    expect(createTacticsMarker('cone', 0.5, 0.5).id).toMatch(UUID_V4);
+    expect(createArrowMarker('arrow-solid', 0.1, 0.1, 0.2, 0.2).id).toMatch(UUID_V4);
   });
 });
 
@@ -97,5 +120,17 @@ describe('clearAllMarkers', () => {
     expect(result[0].type).toBe('ball');
     expect(result[0].x).toBe(0.5);
     expect(result[0].y).toBe(0.5);
+  });
+});
+
+describe('withArrowCurve', () => {
+  const arrow = createArrowMarker('arrow-solid', 0, 0, 1, 1);
+
+  it('stores the curve on the arrow', () => {
+    expect(withArrowCurve(arrow, { bend: 0.1, waves: 3 })).toEqual({ ...arrow, bend: 0.1, waves: 3 });
+  });
+
+  it('removes the curve when the arrow goes back to straight', () => {
+    expect(withArrowCurve({ ...arrow, bend: 0.1, waves: 3 }, undefined)).toEqual(arrow);
   });
 });

@@ -5,18 +5,23 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { SettingsListItem } from '@/components/SettingsListItem';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useTabBarClearance } from '@/hooks/useTabBarClearance';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
   const background = useThemeColor({}, 'background');
+  const tabBarClearance = useTabBarClearance();
   const menuBackground = useThemeColor({}, 'menuBackground');
   const cardBorderColor = useThemeColor({}, 'borderColor');
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: background as string }} edges={['top']}>
-      <ScrollView style={{ flex: 1, backgroundColor: background as string }}>
+      <ScrollView
+        style={{ flex: 1, backgroundColor: background as string }}
+        contentContainerStyle={{ paddingBottom: tabBarClearance }}
+      >
         <ThemedView style={styles.container}>
           {/* Header */}
           <ThemedView style={styles.headerContainer}>
@@ -35,6 +40,7 @@ export default function SettingsScreen() {
               route="/settings/sport"
               isFirst={true}
             />
+            <SettingsListItem icon="person" title={t('account')} route="/settings/account" />
             <SettingsListItem
               icon="info"
               title={t('aboutApp')}

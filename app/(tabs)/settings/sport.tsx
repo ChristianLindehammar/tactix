@@ -4,16 +4,21 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { SportSelector } from '@/components/SportSelector';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useTabBarClearance } from '@/hooks/useTabBarClearance';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function SportSelectionScreen() {
   const { t } = useTranslation();
   const background = useThemeColor({}, 'background');
+  const tabBarClearance = useTabBarClearance();
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: background as string }} edges={['bottom']}>
-      <ScrollView style={{ flex: 1, backgroundColor: background as string }}>
+      <ScrollView
+        style={{ flex: 1, backgroundColor: background as string }}
+        contentContainerStyle={{ paddingBottom: tabBarClearance }}
+      >
         <ThemedView style={styles.container}>
           <ThemedView style={styles.section}>
             <ThemedText style={styles.description}>

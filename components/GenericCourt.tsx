@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { CourtSurface } from './CourtSurface';
 import { Player } from './Player';
 import { PlayerType } from '@/types/models';
 import { useTeam } from '@/context/TeamContext';
@@ -9,9 +10,9 @@ interface Props {
   availableHeight: number;
   availableWidth: number;
   playerPositions: PlayerType[];
-  onDragEnd: (playerId: string, position: { x: number; y: number }) => void;
   CourtSvg: React.ComponentType<{ width: number; height: number, stroke?: string }>;
   aspectRatio: number; // width/height ratio of the court
+  onPlayerPress?: (playerId: string) => void;
 }
 
 // Helper function to validate player position
@@ -26,8 +27,8 @@ const isValidPosition = (position: { x: number; y: number } | null | undefined):
          position.y <= 1 + epsilon;
 };
 
-export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, onDragEnd, CourtSvg, aspectRatio }: Props) => {
-  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
+export const GenericCourt = ({ availableHeight, availableWidth, playerPositions, CourtSvg, aspectRatio, onPlayerPress }: Props) => {
+  const [selectedPlayerId] = useState<string | null>(null);
   const { updatePlayerPosition } = useTeam();
   
   // Fix invalid positions only on initial render or when new players are added
@@ -53,38 +54,24 @@ export const GenericCourt = ({ availableHeight, availableWidth, playerPositions,
   // Filter players with valid positions for rendering
   const validatedPlayers = playerPositions.filter(player => isValidPosition(player.courtPosition));
   
-  const handleDragEnd = (playerId: string, pos: { x: number; y: number }) => {
-    // Ensure position is within bounds before updating
-    const clampedPos = {
-      x: Math.max(0, Math.min(1, pos.x)),
-      y: Math.max(0, Math.min(1, pos.y))
-    };
-    
-    setSelectedPlayerId(null);
-    onDragEnd(playerId, clampedPos);
-  };
-
   return (
     <GestureHandlerRootView style={styles.gestureRoot}>
-      <View style={[styles.container, { width: availableWidth, height: availableHeight }]}>
-        <CourtSvg width={availableWidth} height={availableHeight} />
-        <View style={StyleSheet.absoluteFill}>
-          {validatedPlayers.map((player) => {
-            return (
-              <Player
-                key={player.id}
-                id={player.id}
-                name={player.name}
-                position={player.position}
-                courtPosition={player.courtPosition!}
-                onDragEnd={(pos) => handleDragEnd(player.id, pos)}
-                containerSize={{ width: availableWidth, height: availableHeight }}
-                isSelected={player.id === selectedPlayerId}
-              />
-            );
-          })}
-        </View>
-      </View>
+      <CourtSurface width={availableWidth} height={availableHeight} CourtSvg={CourtSvg}>
+        {validatedPlayers.map((player) => {
+          return (
+            <Player
+              key={player.id}
+              id={player.id}
+              name={player.name}
+              position={player.position}
+              courtPosition={player.courtPosition!}
+              containerSize={{ width: availableWidth, height: availableHeight }}
+              isSelected={player.id === selectedPlayerId}
+              onPress={onPlayerPress}
+            />
+          );
+        })}
+      </CourtSurface>
     </GestureHandlerRootView>
   );
 };
@@ -94,13 +81,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  container: {
-    position: 'relative',
-    borderRadius: 8,
-    overflow: 'hidden',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   player: {
     position: 'absolute',

@@ -10,7 +10,7 @@ const SvgComponent = (props: SvgProps) => (
     fill="none"
     {...props}
   >
-    <Circle cx={12} cy={12} r={10} fill="#000" />
+    <Circle cx={12} cy={12} r={10} fill="#000" stroke="#9BA1A6" strokeWidth={1.5} />
   </Svg>
 )
 

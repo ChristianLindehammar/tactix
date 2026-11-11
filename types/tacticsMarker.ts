@@ -1,4 +1,18 @@
-export type TacticsMarkerType = 'player' | 'opponent' | 'ball' | 'cone' | 'arrow-solid' | 'arrow-dashed';
+import { randomUUID } from 'expo-crypto';
+
+import type { ArrowCurve } from '@/utils/arrowCurve';
+
+export const TACTICS_MARKER_TYPES = [
+  'player',
+  'opponent',
+  'ball',
+  'cone',
+  'arrow-solid',
+  'arrow-dashed',
+  'goal',
+] as const;
+
+export type TacticsMarkerType = (typeof TACTICS_MARKER_TYPES)[number];
 
 export interface TacticsMarker {
   id: string;
@@ -7,14 +21,17 @@ export interface TacticsMarker {
   y: number;
   endX?: number;
   endY?: number;
+  /** Arrows only, with waves: how far each hump reaches sideways, as a share of the court width. */
+  bend?: number;
+  /** Arrows only, with bend: how many humps the arrow has, alternating sides. */
+  waves?: number;
+  /** Short text shown on a player or opponent, such as a shirt number. */
+  label?: string;
 }
 
-let nextId = 0;
-
 export function createTacticsMarker(type: TacticsMarkerType, x: number, y: number): TacticsMarker {
-  nextId += 1;
   return {
-    id: `marker-${nextId}`,
+    id: randomUUID(),
     type,
     x,
     y,
@@ -28,15 +45,20 @@ export function createArrowMarker(
   endX: number,
   endY: number,
 ): TacticsMarker {
-  nextId += 1;
   return {
-    id: `marker-${nextId}`,
+    id: randomUUID(),
     type,
     x,
     y,
     endX,
     endY,
   };
+}
+
+/** The arrow with this curve, or with no curve fields at all when it's straight. */
+export function withArrowCurve(marker: TacticsMarker, curve: ArrowCurve | undefined): TacticsMarker {
+  const { bend: _bend, waves: _waves, ...straight } = marker;
+  return curve ? { ...straight, ...curve } : straight;
 }
 
 const COURT_CENTER_X = 0.5;

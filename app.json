@@ -3,7 +3,7 @@
     "name": "CoachMate",
     "slug": "coachmate",
     "description": "© 2025 Christian Lindehammar. All rights reserved.",
-    "version": "1.4.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "coachmate",
@@ -42,12 +42,13 @@
         "LSSupportsOpeningDocumentsInPlace": true
       },
       "bundleIdentifier": "com.lindehammar-konsult.coachmate",
+      "usesAppleSignIn": true,
       "appleTeamId": "4H4Q7SQF95"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0097B2"
       },
       "package": "com.lindehammarkonsult.coachmate",
       "intentFilters": [
@@ -104,19 +105,28 @@
       "expo-router",
       "./plugins/with-min-ios-deployment-target",
       "./plugins/with-ios-scene-lifecycle",
+      "./plugins/with-revenuecat-github-pods",
       [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#0097B2"
         }
       ],
       "expo-font",
       "expo-localization",
       "expo-web-browser",
       "expo-sharing",
-      "expo-status-bar"
+      "expo-status-bar",
+      "expo-secure-store",
+      "expo-apple-authentication",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.949912506031-dfhrh88vbms4jhgsja4kpob34ojb1tap"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

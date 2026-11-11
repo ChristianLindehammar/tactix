@@ -27,6 +27,7 @@ export const ThemedButton: FC<PropsWithChildren<ThemedButtonProps>> = ({
     <TouchableOpacity
       onPress={onPress}
       disabled={disabled}
+      accessibilityRole="button"
       style={[
         styles.button,
         { backgroundColor: buttonBg },

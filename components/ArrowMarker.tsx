@@ -1,8 +1,17 @@
-import React, { useState, useCallback } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { runOnJS } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import Svg, { Line, Polygon, Circle } from 'react-native-svg';
+import * as Haptics from 'expo-haptics';
+import Svg, { Path, Polygon, Circle } from 'react-native-svg';
+import {
+  arrivalAngle,
+  ArrowCurve,
+  curveFromHandle,
+  curveHandlePosition,
+  curvePath,
+  waveSnapPoints,
+} from '@/utils/arrowCurve';
 import { snapEndpoint } from '@/utils/snapEndpoint';
 
 interface ArrowMarkerProps {
@@ -12,15 +21,24 @@ interface ArrowMarkerProps {
   endX: number;
   endY: number;
   dashed: boolean;
+  curve?: ArrowCurve;
+  /** Shows the middle dot that curves the arrow. */
+  curveEditable?: boolean;
   containerSize: { width: number; height: number };
   color?: string;
   onDragEnd: (id: string, x: number, y: number, endX: number, endY: number) => void;
+  onCurveEnd?: (id: string, curve: ArrowCurve | undefined) => void;
+  onCurvingChange?: (curving: boolean) => void;
   onLongPress?: () => void;
   zIndex?: number;
 }
 
 const ARROW_HEAD_SIZE = 14;
 const HANDLE_HIT_SIZE = 48;
+const CURVE_HANDLE_HIT_SIZE = 40;
+const CURVE_HANDLE_Z_INDEX = 4;
+// On a shorter arrow the middle dot would cover the handles at both ends
+const MIN_CURVABLE_LENGTH = 56;
 
 export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
   id,
@@ -29,20 +47,31 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
   endX,
   endY,
   dashed,
+  curve,
+  curveEditable = false,
   containerSize,
   color = '#FFFFFF',
   onDragEnd,
+  onCurveEnd,
+  onCurvingChange,
   onLongPress,
   zIndex = 1,
 }) => {
   // Use state for positions so SVG re-renders on every frame
   const [pos, setPos] = useState({ sx: x, sy: y, ex: endX, ey: endY });
 
+  const [liveCurve, setLiveCurve] = useState(curve);
+  const [curving, setCurving] = useState(false);
+  // The gesture's end can run before the state from its last update has rendered
+  const draggedCurve = useRef(curve);
+  const curveTouch = useRef({ x: 0, y: 0 });
+
   // Sync when props change from parent
-  const propsKey = `${x},${y},${endX},${endY}`;
+  const propsKey = `${x},${y},${endX},${endY},${curve?.bend},${curve?.waves}`;
   const [lastPropsKey, setLastPropsKey] = useState(propsKey);
   if (propsKey !== lastPropsKey) {
     setPos({ sx: x, sy: y, ex: endX, ey: endY });
+    setLiveCurve(curve);
     setLastPropsKey(propsKey);
   }
 
@@ -52,10 +81,12 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
   const ex = pos.ex * containerSize.width;
   const ey = pos.ey * containerSize.height;
 
+  const start = { x: sx, y: sy };
+  const end = { x: ex, y: ey };
+  const courtWidth = containerSize.width;
+
   // Arrow head triangle
-  const dx = ex - sx;
-  const dy = ey - sy;
-  const angle = Math.atan2(dy, dx);
+  const angle = arrivalAngle(start, end, liveCurve, courtWidth);
   const headPoints = [
     `${ex},${ey}`,
     `${ex - ARROW_HEAD_SIZE * Math.cos(angle - Math.PI / 6)},${ey - ARROW_HEAD_SIZE * Math.sin(angle - Math.PI / 6)}`,
@@ -86,6 +117,63 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
     onDragEnd(id, pos.sx, pos.sy, pos.ex, pos.ey);
   }, [id, pos, onDragEnd]);
 
+  const handle = curveHandlePosition(start, end, liveCurve, courtWidth);
+  const curvable = curveEditable && Math.hypot(ex - sx, ey - sy) >= MIN_CURVABLE_LENGTH;
+
+  const committedHandle = curveHandlePosition(
+    { x: x * containerSize.width, y: y * containerSize.height },
+    { x: endX * containerSize.width, y: endY * containerSize.height },
+    curve,
+    courtWidth,
+  );
+
+  const noteCurveTouch = (absoluteX: number, absoluteY: number) => {
+    curveTouch.current = { x: absoluteX, y: absoluteY };
+  };
+
+  const beginCurve = () => {
+    draggedCurve.current = liveCurve;
+    setCurving(true);
+    onCurvingChange?.(true);
+  };
+
+  const updateCurve = (absoluteX: number, absoluteY: number) => {
+    // From the touch down, as the gesture's own translation only starts once it activates
+    const next = curveFromHandle(
+      start,
+      end,
+      {
+        x: committedHandle.x + absoluteX - curveTouch.current.x,
+        y: committedHandle.y + absoluteY - curveTouch.current.y,
+      },
+      courtWidth,
+    );
+    if (next?.waves !== draggedCurve.current?.waves) void Haptics.selectionAsync();
+    draggedCurve.current = next;
+    setLiveCurve(next);
+  };
+
+  const commitCurve = () => onCurveEnd?.(id, draggedCurve.current);
+
+  const finishCurve = () => {
+    setCurving(false);
+    onCurvingChange?.(false);
+  };
+
+  const curvePan = Gesture.Pan()
+    .minDistance(5)
+    .onBegin((e) => { runOnJS(noteCurveTouch)(e.absoluteX, e.absoluteY); })
+    .onStart(() => { runOnJS(beginCurve)(); })
+    .onUpdate((e) => { runOnJS(updateCurve)(e.absoluteX, e.absoluteY); })
+    .onEnd(() => { runOnJS(commitCurve)(); })
+    .onFinalize(() => { runOnJS(finishCurve)(); });
+
+  const curveLongPress = Gesture.LongPress()
+    .minDuration(500)
+    .onStart(() => { if (onLongPress) runOnJS(onLongPress)(); });
+
+  const curveGesture = Gesture.Race(curvePan, curveLongPress);
+
   // --- Tail gesture: drag start point ---
   const tailPan = Gesture.Pan()
     .minDistance(5)
@@ -111,11 +199,13 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
   const headGesture = Gesture.Race(headPan, headLongPress);
 
   return (
+    <>
     <View style={[StyleSheet.absoluteFill, { zIndex }]} pointerEvents="box-none">
       {/* SVG arrow line + head + visible handle dots */}
       <Svg style={StyleSheet.absoluteFill} pointerEvents="none">
-        <Line
-          x1={sx} y1={sy} x2={ex} y2={ey}
+        <Path
+          d={curvePath(start, end, liveCurve, courtWidth)}
+          fill="none"
           stroke={color} strokeWidth={3}
           strokeDasharray={dashed ? '8,6' : undefined}
         />
@@ -124,6 +214,14 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
         <Circle cx={sx} cy={sy} r={6} fill={color} opacity={0.6} />
         {/* Visible head dot */}
         <Circle cx={ex} cy={ey} r={6} fill={color} opacity={0.6} />
+        {/* Where the middle dot snaps for each number of waves */}
+        {curving && waveSnapPoints(start, end, liveCurve?.bend ?? 0, courtWidth).map(point => (
+          <Circle
+            key={`${point.x},${point.y}`}
+            cx={point.x} cy={point.y} r={4}
+            fill={color} opacity={0.45}
+          />
+        ))}
       </Svg>
 
       {/* Tail drag handle (invisible, larger hit area) */}
@@ -148,5 +246,27 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
         }} />
       </GestureDetector>
     </View>
+
+    {/* Above the markers, as a line through a row of cones puts this dot right under one */}
+    {curvable && (
+      <View style={[StyleSheet.absoluteFill, { zIndex: CURVE_HANDLE_Z_INDEX }]} pointerEvents="box-none">
+        <Svg style={StyleSheet.absoluteFill} pointerEvents="none">
+          <Circle cx={handle.x} cy={handle.y} r={7} fill="#FFFFFF" stroke={color} strokeWidth={2} />
+        </Svg>
+        <GestureDetector gesture={curveGesture}>
+          <View
+            testID={`arrow-curve-handle-${id}`}
+            style={{
+              position: 'absolute',
+              left: handle.x - CURVE_HANDLE_HIT_SIZE / 2,
+              top: handle.y - CURVE_HANDLE_HIT_SIZE / 2,
+              width: CURVE_HANDLE_HIT_SIZE,
+              height: CURVE_HANDLE_HIT_SIZE,
+            }}
+          />
+        </GestureDetector>
+      </View>
+    )}
+    </>
   );
 };

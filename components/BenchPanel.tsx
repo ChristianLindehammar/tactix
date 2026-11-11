@@ -1,5 +1,7 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { View, StyleSheet, ScrollView, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated, Platform, LayoutRectangle } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { View, StyleSheet, Pressable, NativeSyntheticEvent, NativeScrollEvent, Animated, Platform } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import Reanimated, { useAnimatedStyle, withTiming } from 'react-native-reanimated';
 import { useTeam } from '@/context/TeamContext';
 import { Player } from './Player'; 
 import { ThemedText } from './ThemedText';
@@ -7,11 +9,9 @@ import { IconSymbol } from './ui/IconSymbol';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useDrag } from '@/context/DragContext';
-import { useSport } from '@/context/SportContext';
-import { PlayerType } from '@/types/models';
 
-const PANEL_HEIGHT_COLLAPSED = 35;
-const PANEL_HEIGHT_EXPANDED = 130;
+export const PANEL_HEIGHT_COLLAPSED = 35;
+export const PANEL_HEIGHT_EXPANDED = 130;
 
 const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: { 
   scrollX: Animated.Value, 
@@ -72,100 +72,32 @@ const ScrollIndicator = ({ scrollX, contentWidth, containerWidth }: {
 };
 
 interface BenchPanelProps {
-  courtLayout: LayoutRectangle | null;
+  expanded: boolean;
+  onToggle: () => void;
   tabBarHeight: number;
+  onPlayerPress?: (playerId: string) => void;
 }
 
-export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeight }) => {
-  const { team, movePlayerToCourt, movePlayerToBench } = useTeam();
-  const [isExpanded, setIsExpanded] = React.useState(false);
+export const BenchPanel: React.FC<BenchPanelProps> = ({ expanded: isExpanded, onToggle, tabBarHeight, onPlayerPress }) => {
+  const { team } = useTeam();
   const { t } = useTranslation();
-  const { startDrag, isDragging, lastDrop, clearLastDrop, draggedItem, endDrag, dragPosition } = useDrag();
-  const prevDraggingRef = useRef(isDragging);
-  const panelRef = useRef<View>(null);
-  const scrollViewRef = useRef<ScrollView>(null);
+  const { benchRef, overBench } = useDrag();
   const [contentWidth, setContentWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
-  const [panelLayout, setPanelLayout] = useState<{x: number, y: number, width: number, height: number} | null>(null);
 
   const backgroundColor = useThemeColor({}, 'menuBackground') as string;
   const borderColor = useThemeColor({}, 'border') as string;
   const textColor = useThemeColor({}, 'text') as string;
   const iconColor = useThemeColor({}, 'icon') as string;
+  const tintColor = useThemeColor({}, 'tint') as string;
 
   const benchPlayers = team?.benchPlayers ?? [];
 
-  // Track panel position for more reliable drop detection
-  const measurePanel = useCallback(() => {
-    if (panelRef.current) {
-      panelRef.current.measureInWindow((x, y, width, height) => {
-        setPanelLayout({ x, y, width, height });
-      });
-    }
-  }, []);
-
-  // Re-measure panel when it's expanded/collapsed
-  useEffect(() => {
-    measurePanel();
-  }, [isExpanded, measurePanel]);
-
-  // Check for drop events
-  useEffect(() => {
-    if (lastDrop && lastDrop.droppedPlayer && lastDrop.finalPosition) {
-      const isCourtPlayer = team?.startingPlayers.some(p => p.id === lastDrop.droppedPlayer?.id);
-      
-      if (panelLayout && isCourtPlayer) {
-        const dropPos = lastDrop.finalPosition;
-        
-        // Add extra padding for touch target on Android
-        const padding = Platform.OS === 'android' ? 20 : 0;
-        
-        if (
-          dropPos.x >= panelLayout.x - padding && 
-          dropPos.x <= panelLayout.x + panelLayout.width + padding &&
-          dropPos.y >= panelLayout.y - padding && 
-          dropPos.y <= panelLayout.y + panelLayout.height + padding
-        ) {
-          movePlayerToBench(lastDrop.droppedPlayer.id);
-        }
-      }
-      clearLastDrop();
-    }
-  }, [lastDrop, team?.startingPlayers, panelLayout, movePlayerToBench, clearLastDrop]);
-
-  // Track drag state changes and re-measure panel when needed
-  useEffect(() => {
-    if (isDragging && !prevDraggingRef.current) {
-      // Drag just started, measure panel
-      measurePanel();
-    }
-    prevDraggingRef.current = isDragging;
-  }, [isDragging, measurePanel]);
-
-  const handlePlayerDragStart = (player: PlayerType, initialPosition: { x: number; y: number }) => {
-    startDrag(player, initialPosition);
-  };
-
-  const handlePlayerDragEnd = () => {
-    const { finalPosition } = endDrag();
-    
-    if (draggedItem && draggedItem.player && finalPosition && courtLayout) {
-      const { x: courtX, y: courtY, width: courtWidth, height: courtHeight } = courtLayout;
-      
-      if (
-        finalPosition.x >= courtX && finalPosition.x <= courtX + courtWidth &&
-        finalPosition.y >= courtY && finalPosition.y <= courtY + courtHeight
-      ) {
-        const relativeX = (finalPosition.x - courtX) / courtWidth;
-        const relativeY = (finalPosition.y - courtY) / courtHeight;
-        const clampedX = Math.max(0, Math.min(1, relativeX));
-        const clampedY = Math.max(0, Math.min(1, relativeY));
-        
-        movePlayerToCourt(draggedItem.player.id, { x: clampedX, y: clampedY });
-      }
-    }
-  };
+  // Shows the bench will take the player while a court player is held over it
+  const dropTargetStyle = useAnimatedStyle(() => ({
+    opacity: withTiming(overBench.value ? 1 : 0, { duration: 120 }),
+  }));
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     const offsetX = event.nativeEvent.contentOffset.x;
@@ -173,8 +105,9 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeigh
   };
 
   return (
-    <View 
-      ref={panelRef}
+    <View
+      ref={benchRef}
+      collapsable={false}
       style={[
         styles.panelContainer, 
         {
@@ -185,8 +118,12 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeigh
         }
       ]}
     >
-      <Pressable 
-        onPress={() => setIsExpanded(!isExpanded)} 
+      <Reanimated.View
+        pointerEvents="none"
+        style={[styles.dropTarget, { borderColor: tintColor, backgroundColor: `${tintColor}22` }, dropTargetStyle]}
+      />
+      <Pressable
+        onPress={onToggle}
         style={styles.toggleButton}
       >
         <IconSymbol name={isExpanded ? 'chevron.down' : 'chevron.up'} size={20} color={iconColor} />
@@ -202,7 +139,6 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeigh
             onLayout={(e) => setContainerWidth(e.nativeEvent.layout.width)}
           >
             <ScrollView 
-              ref={scrollViewRef}
               horizontal={true}
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.scrollViewContent}
@@ -219,8 +155,7 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeigh
                       position={player.position}
                       isOnCourt={false}
                       displayMode="bench"
-                      onDragStart={(initialPosition) => handlePlayerDragStart(player, initialPosition)}
-                      onDragEnd={handlePlayerDragEnd}
+                      onPress={onPlayerPress}
                     />
                   </View>
                 ))
@@ -248,6 +183,11 @@ export const BenchPanel: React.FC<BenchPanelProps> = ({ courtLayout, tabBarHeigh
 };
 
 const styles = StyleSheet.create({
+  dropTarget: {
+    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+    borderWidth: 2,
+    borderRadius: 8,
+  },
   panelContainer: {
     position: 'absolute',
     bottom: 0,

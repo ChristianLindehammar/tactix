@@ -12,6 +12,10 @@ interface CustomInputDialogProps {
   onCancel: () => void;
   onSubmit: (value: string) => void;
   initialValue?: string;
+  /** Lets the user submit an empty value, such as to clear something. */
+  allowEmpty?: boolean;
+  maxLength?: number;
+  autoCorrect?: boolean;
 }
 
 export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
@@ -19,7 +23,10 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
   title,
   onCancel,
   onSubmit,
-  initialValue = ''
+  initialValue = '',
+  allowEmpty = false,
+  maxLength,
+  autoCorrect,
 }) => {
   const [value, setValue] = useState(initialValue);
   const textColor = useThemeColor({}, 'text');
@@ -37,20 +44,24 @@ export const CustomInputDialog: React.FC<CustomInputDialogProps> = ({
               <ThemedText style={styles.title}>{title}</ThemedText>
               <TextInput
                 style={[styles.input, { color: String(textColor), borderColor: String(textColor) }]}
+                accessibilityLabel={title}
+                maxLength={maxLength}
+                autoCorrect={autoCorrect}
                 value={value}
                 onChangeText={setValue}
                 autoFocus
                 placeholderTextColor={typeof textColor === 'string' ? textColor : undefined}
               />
               <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button} onPress={onCancel}>
+                <TouchableOpacity style={styles.button} accessibilityRole="button" onPress={onCancel}>
                   <ThemedText>
                    { t('cancel')}
                   </ThemedText>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  accessibilityRole="button"
                   style={[styles.button, { backgroundColor: Colors.light.tint }]}
-                  onPress={() => value.trim() && onSubmit(value.trim())}
+                  onPress={() => (allowEmpty || value.trim()) && onSubmit(value.trim())}
                 >
                   <ThemedText style={{ color: '#fff' }}>
                     { t('ok')}

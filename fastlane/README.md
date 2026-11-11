@@ -26,6 +26,14 @@ Prebuild, then build and deploy both iOS (TestFlight) and Android (Play Store in
 
 ## iOS
 
+### ios refresh_profiles
+
+```sh
+[bundle exec] fastlane ios refresh_profiles
+```
+
+Renew the App Store profile, e.g. after adding a capability such as Sign in with Apple
+
 ### ios beta
 
 ```sh
@@ -38,6 +46,14 @@ Build and upload a new beta build to TestFlight
 
 
 ## Android
+
+### android release_internal
+
+```sh
+[bundle exec] fastlane android release_internal
+```
+
+Release an uploaded build to internal testers (e.g. a draft left by an earlier run)
 
 ### android beta
 
