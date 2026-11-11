@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react-nativ
 import * as React from 'react';
 import { Linking, Text } from 'react-native';
 
-import { PlanGate } from '@/components/PlanGate';
+import { legalLinksFor, PlanGate } from '@/components/PlanGate';
 import { createPlanService, PlanPeriod, PlanStore, StorePlan } from '@/services/planService';
 import i18n from '@/translations/i18n';
 
@@ -199,4 +199,13 @@ test.each([
   fireEvent.press(await screen.findByRole('link', { name: t(labelKey) }));
 
   expect(openURL).toHaveBeenCalledWith(url);
+});
+
+test.each([
+  ['ios', 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'],
+  ['android', 'https://lindehammar-konsult.se/terms-of-use.html'],
+])('a coach on %s reads the terms of the store they buy from', (os, url) => {
+  const terms = legalLinksFor(os).find(link => link.labelKey === 'planTermsOfUse');
+
+  expect(terms?.url).toBe(url);
 });

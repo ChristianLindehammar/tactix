@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Linking, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
@@ -14,11 +14,19 @@ interface PlanGateProps {
   children: React.ReactNode;
 }
 
-// Apple requires both on the screen that sells the subscription
-const LEGAL_LINKS = [
-  { labelKey: 'planTermsOfUse', url: 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/' },
-  { labelKey: 'planPrivacyPolicy', url: 'https://lindehammar-konsult.se/privacy-policy.html' },
-];
+// Apple requires both on the screen that sells the subscription. Apple's standard EULA
+// only covers App Store purchases, so Google Play buyers get our own terms.
+export function legalLinksFor(os: string) {
+  const terms =
+    os === 'ios'
+      ? 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
+      : 'https://lindehammar-konsult.se/terms-of-use.html';
+  return [
+    { labelKey: 'planTermsOfUse', url: terms },
+    { labelKey: 'planPrivacyPolicy', url: 'https://lindehammar-konsult.se/privacy-policy.html' },
+  ];
+}
+const LEGAL_LINKS = legalLinksFor(Platform.OS);
 const NO_PRICES: PlanPrices = { annual: null, monthly: null };
 const PERIODS: { period: PlanPeriod; labelKey: string }[] = [
   { period: 'annual', labelKey: 'planPerYear' },
