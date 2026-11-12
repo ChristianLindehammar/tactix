@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "id": "66258bf3-dca6-54e7-b7d3-22eb4071b2f4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – grepp i par",
+  "description": "Målvakterna jobbar i två par. A och C levererar bollen till B och D, som står i varsitt litet konmål. B och D fångar och rullar tillbaka. Efter några bollar byter alla plats diagonalt: A tar D:s plats och D tar A:s, B och C gör likadant.\n\nÖka svårigheten steg för steg: 1) låga bollar med foten, 2) bollar i maghöjd som kastas, 3) bollar mot ansiktet som kastas. Rotera så att båda paren får jobba i det stora målet. Fungerar med 2–5 målvakter.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå rätt: lätt böjda knän, vikten på framfoten och händerna framför kroppen."
+    },
+    {
+      "id": "cp2",
+      "text": "Tummar och pekfingrar bakom bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta bollen framför dig och ha blicken på bollen hela vägen in i händerna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och C levererar bollen till B och D.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.637
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.637
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.612,
+          "endX": 0.3,
+          "endY": 0.36
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.612,
+          "endX": 0.7,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B och D fångar och rullar tillbaka.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.383
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.383
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.408,
+          "endX": 0.3,
+          "endY": 0.66
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.408,
+          "endX": 0.7,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Byt plats diagonalt: A och D byter, B och C byter.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.803
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.803
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.68,
+          "endX": 0.66,
+          "endY": 0.36,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.34,
+          "endX": 0.34,
+          "endY": 0.66,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.33,
+          "endX": 0.66,
+          "endY": 0.68,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.68,
+          "endX": 0.34,
+          "endY": 0.33,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

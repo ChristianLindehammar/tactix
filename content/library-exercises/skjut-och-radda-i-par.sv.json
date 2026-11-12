@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "id": "1ea6b4ff-78b0-54b8-90b0-d44bcdfb0a55",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Skjut och rädda i par",
+  "description": "Två och två med en boll. Gör två konmål mittemot varandra, ungefär 6 meter breda och 10 meter isär. Den ena skjuter från sitt mål mot kompisens mål, och kompisen är målvakt och försöker rädda. Sedan byter ni: den som räddade skjuter tillbaka.\n\nÄndra avståndet efter hur det går – längre bort ger hårdare skott, närmare ger fler mål. Räkna mål och se vem som först kommer till fem. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp och välj hörn – titta sedan på bollen när du skjuter."
+    },
+    {
+      "id": "cp2",
+      "text": "Spänn vristen: tårna nedåt och hälen uppåt."
+    },
+    {
+      "id": "cp3",
+      "text": "Som målvakt: stå redo på tå med händerna framför dig."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skjuter mot B:s mål. B räddar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.85
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.787
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.747,
+          "endX": 0.6,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skjuter tillbaka och A står i mål.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.85
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.213
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87,
+          "label": "A"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.253,
+          "endX": 0.39,
+          "endY": 0.8
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

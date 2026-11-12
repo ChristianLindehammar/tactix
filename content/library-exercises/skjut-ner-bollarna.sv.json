@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 2,
+  "id": "f3c74703-8a74-5920-abb9-edea9ecbbabd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Skjut ner bollarna",
+  "description": "Två lag står på varsin linje, ungefär 15–20 meter isär och vända mot varandra. Mitt emellan står en rad koner med en boll ovanpå varje. Det blå laget har en boll per spelare och försöker skjuta ner bollarna från konerna.\n\nDet röda laget stoppar bollarna som kommer, ni lägger tillbaka de nedskjutna bollarna, och sedan är det rödas tur att skjuta. Räkna hur många bollar varje lag får ner. Flytta linjerna närmare om det blir för svårt.\n\nProva både med insidan och med vristen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stödjefoten bredvid bollen och tårna mot målet – dit pekar skottet."
+    },
+    {
+      "id": "cp2",
+      "text": "Luta dig fram över bollen så att den stannar nere."
+    },
+    {
+      "id": "cp3",
+      "text": "Träffa mitt på bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Stoppa bollen innan du skjuter tillbaka."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått skjuter mot bollen på konen framför sig.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "cb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.5
+        },
+        {
+          "id": "cb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "cb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "cb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "r0",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "b0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.79
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.745,
+          "endX": 0.2,
+          "endY": 0.56
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.88
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.79
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.745,
+          "endX": 0.4,
+          "endY": 0.56
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.88
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.79
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.745,
+          "endX": 0.6,
+          "endY": 0.56
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.88
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.745,
+          "endX": 0.8,
+          "endY": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Rött stoppar bollarna. Lägg upp bollarna igen – nu skjuter rött.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "cb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.5
+        },
+        {
+          "id": "cb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "cb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "cb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "b0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.88
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.88
+        },
+        {
+          "id": "r0",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.21
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.255,
+          "endX": 0.2,
+          "endY": 0.405
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.21
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.255,
+          "endX": 0.4,
+          "endY": 0.405
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.21
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.255,
+          "endX": 0.6,
+          "endY": 0.405
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.21
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.255,
+          "endX": 0.8,
+          "endY": 0.405
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

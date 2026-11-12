@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 2,
+  "id": "9cfa69de-c3f9-5546-ab07-02ba5b00a213",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Knock the balls off",
+  "description": "Two teams stand on a line each, about 15–20 metres apart and facing each other. Halfway between them is a row of cones with a ball on top of each one. The blue team have a ball each and try to knock the balls off the cones.\n\nThe red team stop the balls that come through, the knocked-off balls go back on the cones, and then it is red's turn to shoot. Count how many balls each team knocks off. Bring the lines closer if it is too hard.\n\nTry both the inside of the foot and the laces. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Standing foot beside the ball, toes pointing at the target – that is where the ball goes."
+    },
+    {
+      "id": "cp2",
+      "text": "Lean over the ball to keep it down."
+    },
+    {
+      "id": "cp3",
+      "text": "Strike the middle of the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Stop the ball before you shoot it back."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue shoot at the ball on the cone in front of them.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "cb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.5
+        },
+        {
+          "id": "cb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "cb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "cb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "r0",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "b0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.79
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.745,
+          "endX": 0.2,
+          "endY": 0.56
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.88
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.79
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.745,
+          "endX": 0.4,
+          "endY": 0.56
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.88
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.79
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.745,
+          "endX": 0.6,
+          "endY": 0.56
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.88
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.745,
+          "endX": 0.8,
+          "endY": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Red stop the balls. Put the balls back on the cones – now red shoot.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "cb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.5
+        },
+        {
+          "id": "cb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "cb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "cb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "b0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.88
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.88
+        },
+        {
+          "id": "r0",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.21
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.255,
+          "endX": 0.2,
+          "endY": 0.405
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.21
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.255,
+          "endX": 0.4,
+          "endY": 0.405
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.21
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.255,
+          "endX": 0.6,
+          "endY": 0.405
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.21
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.255,
+          "endX": 0.8,
+          "endY": 0.405
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

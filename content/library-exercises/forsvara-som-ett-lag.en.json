@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 2,
+  "id": "4418ab15-1240-5989-a8bd-12d81335f8e5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Defend as a team",
+  "description": "Play 8 v 8 on half a pitch with a big goal and a keeper. The coach stands in the centre circle with balls and starts every attack with a pass to blue. Blue attack and try to score. Offside applies.\n\nRed defend in two lines of four. If red win the ball they score by playing it back to the coach, making three passes in a row, or dribbling the ball under control over the halfway line.\n\nStop the game when needed and show the distances within and between the lines. Swap roles after 8–10 minutes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep good distances within and between the lines – no big gaps to play through."
+    },
+    {
+      "id": "cp2",
+      "text": "The nearest player presses, the others shift with the ball and cover."
+    },
+    {
+      "id": "cp3",
+      "text": "Step up together when the ball is played backwards or out wide."
+    },
+    {
+      "id": "cp4",
+      "text": "Keeper and back line talk all the time – who takes whom, when do we step up?"
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning",
+    "goalkeeping"
+  ],
+  "durationMinutes": 30,
+  "minPlayers": 14,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach starts the attack with a pass to A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.23
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.23
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "r6",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.45,
+          "label": "Y"
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.45
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.47
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.36
+        },
+        {
+          "id": "q5",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62
+        },
+        {
+          "id": "q6",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.62
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.837
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.807,
+          "endX": 0.5,
+          "endY": 0.7
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y presses A straight away. The midfielders squeeze in around the ball.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.23
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.23
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "r6",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.45,
+          "label": "Y"
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.45
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.47
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.36
+        },
+        {
+          "id": "q5",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62
+        },
+        {
+          "id": "q6",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.62
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "rr1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.49,
+          "endX": 0.45,
+          "endY": 0.55
+        },
+        {
+          "id": "rr2",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.48,
+          "endX": 0.3,
+          "endY": 0.5
+        },
+        {
+          "id": "rr3",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.47,
+          "endX": 0.7,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y wins the ball and plays it back to the coach – a point to red.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.23
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.23
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "r6",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.55,
+          "label": "Y"
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.36
+        },
+        {
+          "id": "q5",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62
+        },
+        {
+          "id": "q6",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.62
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.64
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.67,
+          "endX": 0.48,
+          "endY": 0.87
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

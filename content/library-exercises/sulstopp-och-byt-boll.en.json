@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 2,
+  "id": "e227abd3-ecb4-584a-bdec-6265343f4910",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Sole stop and swap balls",
+  "description": "Two lines side by side, everyone with a ball, and a cone in the middle of each lane. The first in each line starts on the coach's signal. Run each part for about 2 minutes with the right foot and 2 minutes with the left.\n\n1. Dribble round the cone and back, with a touch on every step.\n2. Dribble straight across to the other side with fewer touches and more pace.\n3. Dribble to the cone, stop the ball with your sole and leave it. Run diagonally across to the other lane, take the ball the other player left and dribble on.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ball close to the foot – use the outside of the instep."
+    },
+    {
+      "id": "cp2",
+      "text": "Speed up when you take fewer touches."
+    },
+    {
+      "id": "cp3",
+      "text": "Mix short touches with slightly longer ones."
+    },
+    {
+      "id": "cp4",
+      "text": "The sole stop should leave the ball still, so your partner can take it at full speed."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Part 1: dribble round the cone and back. B does the same in their lane.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.767
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.767
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.752,
+          "endX": 0.33,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.5,
+          "endX": 0.42,
+          "endY": 0.74,
+          "bend": 0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Part 3: dribble to the cone, stop it with your sole and leave it. Run diagonally to the other lane.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.58
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.64,
+          "endX": 0.6,
+          "endY": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.64,
+          "endX": 0.4,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Take the other player's ball and dribble on to the end.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.577
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.577
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.597,
+          "endX": 0.66,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d6",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.597,
+          "endX": 0.34,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

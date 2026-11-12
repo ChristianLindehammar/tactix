@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 2,
+  "id": "1e7b2a60-84cc-56f2-b2a0-30d0a2601b63",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "One-two and overlap on half a pitch",
+  "description": "An attacking pattern on half a pitch with ten outfield players and a keeper, no defenders. Centre-back A has the balls, and the players stand in position: central midfielder, striker, full-back and wide midfielder on both flanks.\n\nFirst through the middle: A passes to midfielder B, who turns, plays a one-two with striker C and shoots. C follows up for the rebound. Then down the flank: A passes to full-back D, who turns and passes to E. E drives inside to open the space down the line, D overlaps, gets the ball and crosses for C and B arriving in the box. Then do the same down the left.\n\nSwap B and C, and D and E, after a few rounds. Progression: add one or two defenders. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Turn to face forward as soon as you receive."
+    },
+    {
+      "id": "cp2",
+      "text": "The wall plays the ball in front of the runner."
+    },
+    {
+      "id": "cp3",
+      "text": "The overlapping player calls and keeps their pace after the first touch."
+    },
+    {
+      "id": "cp4",
+      "text": "Aim for the posts and look up before you shoot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 9,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Centre-back A passes to B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.74,
+          "endX": 0.46,
+          "endY": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays a one-two with C and shoots. C follows up for the rebound.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.47
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.45,
+          "endX": 0.49,
+          "endY": 0.38
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.52,
+          "endX": 0.36,
+          "endY": 0.26,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.3,
+          "endX": 0.38,
+          "endY": 0.22
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.4,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes to D, who plays it to E. E drives inside and D overlaps.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.591,
+          "y": 0.793
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.611,
+          "y": 0.783,
+          "endX": 0.77,
+          "endY": 0.75
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.81,
+          "y": 0.69,
+          "endX": 0.81,
+          "endY": 0.54
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.44,
+          "endX": 0.64,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.69,
+          "endX": 0.95,
+          "endY": 0.4,
+          "bend": -0.02,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D gets the ball down the line and crosses for C and B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.27
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.25,
+          "endX": 0.88,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p7",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.13,
+          "endX": 0.55,
+          "endY": 0.2
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.55,
+          "endY": 0.23
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

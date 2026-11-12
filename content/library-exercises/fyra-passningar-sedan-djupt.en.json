@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "id": "34fecbd1-fb4b-52e4-aed0-6111dd23e238",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Four passes, then in behind",
+  "description": "Play 4 v 4 in a middle zone of about 35 × 40 metres, with an end zone behind each team. No defenders are allowed into the end zones. A team scores by passing to a team-mate running into the opponents' end zone. Progression: the team needs at least four passes in a row before the ball in behind is allowed.\n\nVariant with big goals and keepers behind the zones: whoever receives in the zone shoots against the keeper. Add 1–2 jokers who play with the team in possession if passes are hard to find.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Check your shoulder before the ball arrives – where is the runner?"
+    },
+    {
+      "id": "cp2",
+      "text": "Start the run in behind in good time, before the player on the ball looks up."
+    },
+    {
+      "id": "cp3",
+      "text": "Run into the zone from the side of the defender, not straight behind them."
+    },
+    {
+      "id": "cp4",
+      "text": "If the way in behind is closed – keep the ball and wait for the next chance."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue have the ball in the middle zone and count passes. A plays to C.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.48,
+          "endX": 0.4,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D runs into the end zone, and C plays the pass into the run.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.39
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "r1x",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.35,
+          "endX": 0.74,
+          "endY": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.37,
+          "endX": 0.7,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: with a goal and keeper, D shoots straight from the zone.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.17
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.15,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

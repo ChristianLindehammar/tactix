@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "id": "588b1f77-e2df-5c91-b399-cc76cfde96e8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggspel två mot en mot mål",
+  "description": "Två stora mål med målvakter står 25–40 meter från varandra. Blått lag har ett led vid sitt mål, rött vid det andra. En försvarare och en väggspelare står i mitten. A utmanar försvararen, spelar vägg och avslutar. Om försvararen inte följer med väggen får A även dribbla förbi själv. Sedan anfaller rött åt andra hållet.\n\nRotation: bollhållaren blir försvarare när det andra laget anfaller, försvararen blir vägg för sitt eget lag och väggen ställer sig sist i ledet. Räkna mål – vilket lag gör flest på fem minuter?\n\nMed äldre spelare kan anfallen gå åt båda hållen samtidigt med en försvarare och en vägg per riktning. Byt sida på väggen efter en stund så att alla får spela åt båda håll. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Utmana försvararen med fart – tvinga hen att välja."
+    },
+    {
+      "id": "cp2",
+      "text": "Följer försvararen med väggen? Dribbla förbi själv."
+    },
+    {
+      "id": "cp3",
+      "text": "Väggen gör sig spelbar i rätt ögonblick och spelar direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta snabbt innan försvararen hinner tillbaka."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot försvararen X.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.74,
+          "endX": 0.58,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar till B och springer förbi X. B spelar direkt framför A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.63,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.56,
+          "endX": 0.26,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.59,
+          "endX": 0.67,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.43,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar. Nästa röda startar mot andra målet, och A blir försvarare.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.571,
+          "y": 0.231
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.571,
+          "y": 0.201,
+          "endX": 0.56,
+          "endY": 0.04
+        },
+        {
+          "id": "br",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.14
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.17,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

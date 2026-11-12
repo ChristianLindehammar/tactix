@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 2,
+  "id": "c56a8da9-0d3b-5231-8652-6089ec4f5a79",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Kontra till hörnspelaren",
+  "description": "Tre lag om fyra plus en joker (J) på en yta på ungefär 40 × 25 meter. Två lag spelar 4 mot 4 inne på ytan, och jokern hjälper alltid laget med bollen. Det tredje laget står i ytans fyra hörn, en i varje. Ett lag gör poäng när bollen når någon av de två hörnspelarna på motståndarnas planhalva.\n\nNär det lyckas spelar hörnspelaren direkt ut bollen till det andra laget, som anfaller åt andra hållet – och laget som just gjort poäng måste snabbt ställa om till försvar. Byt så att alla lag får stå i hörnen efter några minuter. Bilden visar färre spelare inne på ytan.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Första passningen efter en bollvinst: hård och framåt – leta efter det långa alternativet först."
+    },
+    {
+      "id": "cp2",
+      "text": "Går bollen till en spelare med ryggen mot anfallsriktningen – gör dig spelbar för tillbakaspel nära bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Någon måste samtidigt löpa i djupled, så att tillbakaspelet kan följas av en djupledspassning."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar ni bollen – vänd direkt och stäng vägen mot era hörn."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 13,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A har just vunnit bollen och spelar hårt framåt till B.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.59
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.58,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.57,
+          "endX": 0.6,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B står felvänd och lägger tillbaka till J. Samtidigt startar C sin djupledslöpning.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.47,
+          "endX": 0.55,
+          "endY": 0.54
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.37,
+          "endX": 0.24,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "J slår djupt i C:s löpning, och C spelar vidare till hörnspelaren – poäng.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.51
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.49,
+          "endX": 0.33,
+          "endY": 0.3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.19,
+          "endX": 0.14,
+          "endY": 0.14
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

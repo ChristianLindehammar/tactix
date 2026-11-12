@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "08213852-9658-58a9-aae6-96a85d8e156c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Romben – tillbaka och djupt",
+  "description": "Spelarna står i fyra till sex led runt en romb: ett led i varje ände (A och D) och led längs båda kanterna (B och C på den ena sidan). A passar ut till B, som har gått ut brett och gett spelbredd. B spelar tillbaka till A, som direkt slår bollen i djupled till C. C har startat sin löpning i tid och spelar vidare till D. Rotera ett steg framåt: A till B, B till C, C till D.\n\nSamtidigt startar D samma mönster åt andra hållet längs den andra kanten. Byt sida efter några minuter så att mönstret går åt andra hållet. Kör på en stor yta (ungefär 45 × 40 meter) för långa passningar, eller på ungefär 20 × 15 meter med fyra led för snabba, korta tillslag. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp innan du får bollen, så att du ser löparen i djupled."
+    },
+    {
+      "id": "cp2",
+      "text": "Djupledslöparen startar i god tid – innan medspelaren får bollen och tittar upp."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som ger spelbredd står brett och öppen mot planen."
+    },
+    {
+      "id": "cp4",
+      "text": "Tillbakaspelet ska vara rakt och lätt att slå vidare på ett tillslag."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar ut till B, som står brett.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.92
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.08
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.38
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.77
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.75,
+          "endX": 0.24,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar tillbaka till A. C startar sin djupledslöpning.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.92
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.08
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.38
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.284,
+          "y": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.314,
+          "y": 0.64,
+          "endX": 0.45,
+          "endY": 0.72
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.39,
+          "endX": 0.2,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A slår bollen i djupled till C, som passar vidare till D.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.92
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.08
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.38
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.71,
+          "endX": 0.25,
+          "endY": 0.33
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.21,
+          "endX": 0.42,
+          "endY": 0.14
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "8c94fd56-d6a2-5b49-9fb1-b0ba6033c572",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "2 v 2 – press and cover",
+  "description": "An area of roughly 30 × 20 metres. Blue line up in two lines at one end and red in two lines at the other. The first blue passes to their partner and they attack 2 v 2. Blue score by dribbling over red's end line. The first two red players come out and try to win the ball, one pressing and one covering.\n\nWhen red win the ball the attack stops, and the next attack starts from red going the other way with new players.\n\nBuild it up: play 2 v 2 towards two small goals on each end line, or towards big goals with keepers who start the attacks with a throw. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The nearest defender presses the ball carrier – get close and slow down."
+    },
+    {
+      "id": "cp2",
+      "text": "The other sits at an angle behind, covering the space behind and ready to cut out the pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Swap jobs as soon as the ball is passed: the cover becomes the presser."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk to each other – \"I've got him!\" and \"I'm covering!\"."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. X and Y come out from their end line.",
+      "markers": [
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.12
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.12
+        },
+        {
+          "id": "e3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.88
+        },
+        {
+          "id": "e4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.88
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.82,
+          "endX": 0.74,
+          "endY": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.14,
+          "endX": 0.76,
+          "endY": 0.42
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.14,
+          "endX": 0.45,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X presses B. Y covers at an angle behind. A offers out wide.",
+      "markers": [
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.12
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.12
+        },
+        {
+          "id": "e3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.88
+        },
+        {
+          "id": "e4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.88
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.63
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.44,
+          "endX": 0.72,
+          "endY": 0.53
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.77,
+          "endX": 0.25,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tries to find A, but Y reads the pass and cuts it out.",
+      "markers": [
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.12
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.12
+        },
+        {
+          "id": "e3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.88
+        },
+        {
+          "id": "e4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.88
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.5
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.6,
+          "endX": 0.49,
+          "endY": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "5e33aa70-5959-5c51-b55e-c2b41e32ab78",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ett mot ett – fyra mål",
+  "description": "En yta på ungefär 15 × 20 meter med två små mål i varje ände. Ett led i varje ände, bollarna hos rött. Den första röda passar till den första blå och går ut och försvarar. Blå försöker ta sig förbi och göra mål i något av rödas två mål.\n\nVinner röd bollen byter de roller direkt: röd anfaller blås mål och blå försvarar. Duellen pågår tills det blir mål eller bollen går ut. Ställ dig sist i det andra ledet efteråt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv med bollen nära foten när du närmar dig försvararen."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta på bollen i dribblingen och lyft blicken när du är förbi."
+    },
+    {
+      "id": "cp3",
+      "text": "Skydda bollen med kroppen – driv med foten längst från motståndaren."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar du bollen – försvara direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X passar till A och går ut för att försvara.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.283,
+          "endX": 0.5,
+          "endY": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A utmanar X och går mot det mål som är öppet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.521,
+          "y": 0.518
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.551,
+          "y": 0.478,
+          "endX": 0.74,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X vinner bollen och anfaller blås mål. A blir försvarare.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.496,
+          "y": 0.455
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.466,
+          "y": 0.495,
+          "endX": 0.27,
+          "endY": 0.76,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.36,
+          "endX": 0.6,
+          "endY": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

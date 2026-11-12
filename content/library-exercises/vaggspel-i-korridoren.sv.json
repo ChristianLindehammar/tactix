@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 2,
+  "id": "cacc4684-85f6-5cb4-ac5f-93d68c9c7916",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggspel i korridoren",
+  "description": "Markera en korridor på ungefär 25 × 15 meter med ett led i varje ände och en kon i mitten som tänkt försvarare. En väggspelare står på var sida om konen. A driver rakt mot konen, spelar en vägg och får tillbaka bollen bakom konen. A passar sedan till E i andra änden och ställer sig där. E kör samma sak tillbaka med väggen på andra sidan. Byt väggspelare efter en stund.\n\nStegring: ersätt konen med en försvarare som först är halvaktiv och sedan får vinna bollen. Har ni många barn kan ni köra två korridorer bredvid varandra.\n\nVariant för fler bollkontakter: i en ruta på 30 × 20 meter rör sig två bollhållare, tre väggspelare och tre försvarare fritt. Bollhållarna söker en försvarare att utmana och en väggspelare att spela med. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv rakt mot försvararen så att hen tror att du ska dribbla förbi."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa till väggen lagom nära – inte för tidigt och inte för sent."
+    },
+    {
+      "id": "cp3",
+      "text": "Väggen står halvt vänd och spelar direkt framför bollhållaren."
+    },
+    {
+      "id": "cp4",
+      "text": "Öka farten direkt efter passningen och spring förbi på andra sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver bollen rakt mot konen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "t",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.77
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.75,
+          "endX": 0.5,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar till C och springer förbi konen. C spelar direkt framför A.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "t",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.58
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.56,
+          "endX": 0.24,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.6,
+          "endX": 0.65,
+          "endY": 0.37,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Med försvararen X: A tar emot bakom X och passar vidare till E.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.491,
+          "y": 0.251
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.491,
+          "y": 0.231,
+          "endX": 0.5,
+          "endY": 0.14
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 2,
+  "id": "4406c8ed-e8e8-5c03-b014-e8b00f6696cf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggspel först – sedan mål",
+  "description": "Spela 3 mot 3 med målvakter och en joker som alltid är med det anfallande laget, på ungefär 30 × 20 meter. Ett mål räknas bara om laget har gjort minst ett väggspel under anfallet. Jokern är en bra vägg, men väggspel mellan två lagkamrater gäller också. Byt joker efter några minuter.\n\nFör äldre spelare: 5 mot 5 med två jokrar på en större plan, uppdelad i en mittzon och två målzoner. Ett lyckat väggspel i mittzonen ger poäng och öppnar vägen in i målzonen, där laget får göra mål. Börja utan försvarare i målzonerna och släpp in en när det går lätt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollhållaren utmanar – då öppnas ytan för väggspelet."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som ska bli vägg gör sig spelbar snett framför bollhållaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela direkt framför den som springer, inte i fötterna."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter väggspelet – sök avslut snabbt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar till jokern J och springer förbi försvararen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.75
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.6
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.58,
+          "endX": 0.26,
+          "endY": 0.53
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.62,
+          "endX": 0.44,
+          "endY": 0.38,
+          "bend": 0.02,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "J spelar direkt i A:s löpning, och A avslutar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.75
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.47,
+          "endX": 0.37,
+          "endY": 0.39
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.33,
+          "endX": 0.42,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

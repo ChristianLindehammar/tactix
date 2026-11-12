@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "b247abe5-2bde-5506-97f7-3dfbcaba404a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Passing chain – beat the lap",
+  "description": "Two teams. The blue team spread out inside a coned square with one ball. Each player has a letter (or number) and they pass in order: A to B, B to C and so on, then the chain starts again. The red team line up by a corner outside the square and dribble a lap round the square, one at a time.\n\nBlue count their passes while red run their relay. Then swap jobs – which team made more passes? Variation: race the clock – can you get the ball all the way round the chain in 20 seconds? The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Know who you pass to – look up before the ball arrives."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass with the inside of the foot for accuracy."
+    },
+    {
+      "id": "cp3",
+      "text": "Take your first touch towards where you're passing next."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. At the same time X dribbles round the square.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.18
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.18
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.88
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.363
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.403,
+          "endX": 0.34,
+          "endY": 0.54
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.577
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.537,
+          "endX": 0.92,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes on to C. X is halfway round – how many passes can blue make?",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.18
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.18
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.88
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.464,
+          "y": 0.6
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.504,
+          "y": 0.6,
+          "endX": 0.6,
+          "endY": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.596,
+          "y": 0.08
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.546,
+          "y": 0.08,
+          "endX": 0.3,
+          "endY": 0.08,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

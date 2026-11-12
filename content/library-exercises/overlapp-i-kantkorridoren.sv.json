@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 2,
+  "id": "2c146b6d-3cd4-57f3-a8ea-c2d61ce4c6a6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Överlapp i kantkorridoren",
+  "description": "Spela 5 mot 5 med målvakter och två jokrar på ungefär 50 × 45 meter. Markera en tio meter bred korridor längs varje kant. Efter minst fyra passningar ska laget ta sig fram via en överlappning i en korridor för att ett mål ska räknas. Låt försvararen i korridoren vara passiv i början.\n\nVariant: 4 mot 4 inne på planen med fyra extraspelare för det anfallande laget – en kantspelare i varje korridor och två väggspelare vid kortlinjen bredvid målet, med ett tillslag. Den som spelar ut till kantspelaren får följa med ut och skapa två mot en. Ny boll från egen målvakt vid mål eller när bollen går ut. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollhållaren driver snett inåt så att ytan längs kanten blir större."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som överlappar ropar och ökar farten i rätt ögonblick."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa snett framåt i löpningen när försvararen har valt dig."
+    },
+    {
+      "id": "cp4",
+      "text": "Fyll på i straffområdet – inlägget behöver någon att hitta."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C spelar ut till B i korridoren och startar överlappen bakom.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.2
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.68
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.645,
+          "y": 0.625
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.61,
+          "endX": 0.84,
+          "endY": 0.53
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.73,
+          "endX": 0.94,
+          "endY": 0.6,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver inåt och drar med sig försvararen X. C springer förbi på utsidan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.2
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.68
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.83,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.79,
+          "y": 0.36
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.94,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.35,
+          "endX": 0.63,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.95,
+          "y": 0.54,
+          "endX": 0.95,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B spelar C fri längs kanten, och C slår inlägg till A.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.2
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.68
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.27
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.33,
+          "endX": 0.86,
+          "endY": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.87,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.19
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.22,
+          "endX": 0.48,
+          "endY": 0.16
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "A"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

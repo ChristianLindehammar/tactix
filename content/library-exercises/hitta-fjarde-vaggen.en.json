@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 2,
+  "id": "1e2f09a5-1ba2-5844-acb7-7fd58cede2fd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Find the fourth wall",
+  "description": "An area of about 50 × 25 metres is split into two halves. Two teams play 4 v 4 in one half. Around it stand three wall players (J) – one on each long side and one at the end – who play with the team in possession. A fourth wall player stands at the far end of the other half.\n\nAfter a number of passes within the team (five, for example), the team must find the fourth wall far away. Play then moves to the other half, and the wall players on the sides go with it. The team that played the ball keeps it and plays on. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Give width: get free out by the touchlines."
+    },
+    {
+      "id": "cp2",
+      "text": "Give depth: run in behind, or offer support so the player on the ball can play straight or diagonally back."
+    },
+    {
+      "id": "cp3",
+      "text": "Use the walls to switch play when it gets crowded."
+    },
+    {
+      "id": "cp4",
+      "text": "The long pass should be firm and along the ground."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "positioning",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue keep the ball in the top half. A uses the wall on the long side.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.26,
+          "endX": 0.15,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "After enough passes C plays long to the fourth wall. The side walls move down with play.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.51
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.53,
+          "endX": 0.48,
+          "endY": 0.88
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.34,
+          "endX": 0.1,
+          "endY": 0.66
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.34,
+          "endX": 0.9,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Play goes on in the bottom half, and now the top wall is the fourth wall.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.72,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.72,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.7
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.62
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.82,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.93
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.9,
+          "endX": 0.7,
+          "endY": 0.81
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

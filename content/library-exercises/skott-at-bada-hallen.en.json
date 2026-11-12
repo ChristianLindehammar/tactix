@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 2,
+  "id": "626b58ed-0def-551d-8096-0b129928a0ce",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Shooting both ways",
+  "description": "Two goals with keepers, about 25–30 metres apart. Blue line up at an angle by one goal and red by the other, everyone with a ball, and both teams go at the same time. The first player runs round a cone out on the pitch, the next in line passes, and the runner shoots first time. Fetch your ball and join the back. Which team scores most in three minutes?\n\nVariation: swap the cone for a wall player. The first player dribbles out, plays a one-two and shoots. Slightly older players can instead receive a long pass from the line at the other end, control it and shoot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "See where the keeper is before the ball arrives."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass with the inside of the foot, in front of the runner."
+    },
+    {
+      "id": "cp3",
+      "text": "Use the laces for power and the inside of the foot for accuracy."
+    },
+    {
+      "id": "cp4",
+      "text": "Follow up your shot – the keeper might spill it."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and X run round their cone. Both teams go at the same time.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32
+        },
+        {
+          "id": "bq",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.33
+        },
+        {
+          "id": "c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.11,
+          "endX": 0.58,
+          "endY": 0.42,
+          "bend": -0.08,
+          "waves": 1
+        },
+        {
+          "id": "mgk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.9
+        },
+        {
+          "id": "mq",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.68
+        },
+        {
+          "id": "mbq",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.67
+        },
+        {
+          "id": "mc",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "mb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.8,
+          "label": "Y"
+        },
+        {
+          "id": "mbb",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.78
+        },
+        {
+          "id": "ma",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.9,
+          "label": "X"
+        },
+        {
+          "id": "mra",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.89,
+          "endX": 0.42,
+          "endY": 0.58,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B and Y pass, and A and X shoot first time.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32
+        },
+        {
+          "id": "bq",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.33
+        },
+        {
+          "id": "c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.22,
+          "endX": 0.5,
+          "endY": 0.22
+        },
+        {
+          "id": "pa",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.17,
+          "endX": 0.53,
+          "endY": 0.04
+        },
+        {
+          "id": "mgk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.9
+        },
+        {
+          "id": "mq",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.68
+        },
+        {
+          "id": "mbq",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.67
+        },
+        {
+          "id": "mc",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "mb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.8,
+          "label": "Y"
+        },
+        {
+          "id": "mbb",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.78
+        },
+        {
+          "id": "ma",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "mpb",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.78,
+          "endX": 0.5,
+          "endY": 0.78
+        },
+        {
+          "id": "mpa",
+          "type": "arrow-dashed",
+          "x": 0.445,
+          "y": 0.83,
+          "endX": 0.47,
+          "endY": 0.96
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variation: A dribbles out, plays a one-two with D and shoots.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32
+        },
+        {
+          "id": "bq",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.33
+        },
+        {
+          "id": "w",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.44
+        },
+        {
+          "id": "pa",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.37
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.4,
+          "endX": 0.42,
+          "endY": 0.24
+        },
+        {
+          "id": "pw",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.28,
+          "endX": 0.47,
+          "endY": 0.22
+        },
+        {
+          "id": "mgk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.9
+        },
+        {
+          "id": "mq",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.68
+        },
+        {
+          "id": "mbq",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.67
+        },
+        {
+          "id": "mw",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.67,
+          "label": "Z"
+        },
+        {
+          "id": "mb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.8,
+          "label": "Y"
+        },
+        {
+          "id": "mbb",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.78
+        },
+        {
+          "id": "ma",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "mba",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.56
+        },
+        {
+          "id": "mpa",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.57,
+          "endX": 0.42,
+          "endY": 0.63
+        },
+        {
+          "id": "mra",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.6,
+          "endX": 0.58,
+          "endY": 0.76
+        },
+        {
+          "id": "mpw",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.72,
+          "endX": 0.53,
+          "endY": 0.78
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "15950341-c6aa-5a42-b95e-7b4ea2734f60",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Curve round the defender",
+  "description": "Play 2 v 1 in a box of about 10 × 15 metres with a small goal at each end. A has the ball and B stands right in front of the defender X. When A starts to dribble, B makes a curved run out and round X. A plays the ball in behind to B, or dribbles past if X follows B. Finish in the far small goal.\n\nIf X wins the ball, X tries to score in the other small goal as fast as possible. Switch roles after a few goes or when the defender wins the ball. Variation: B comes towards A instead and offers a wall pass. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribble straight at the defender so they have to commit."
+    },
+    {
+      "id": "cp2",
+      "text": "Start the curved run when the player on the ball has turned and is driving forward – not before."
+    },
+    {
+      "id": "cp3",
+      "text": "Pass into the runner's path, ahead of B, so B can take it on without stopping."
+    },
+    {
+      "id": "cp4",
+      "text": "If the defender follows the run – take the space yourself."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at X. B starts in front of X and curves out and round.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.617
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.592,
+          "endX": 0.43,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.47,
+          "endX": 0.68,
+          "endY": 0.28,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X steps to A. A plays it into B's path, and B finishes in the small goal.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.48
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.46,
+          "endX": 0.68,
+          "endY": 0.34
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.26,
+          "endX": 0.55,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "If X follows B instead, A takes the space and finishes.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.47
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.44,
+          "endX": 0.4,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.26,
+          "endX": 0.47,
+          "endY": 0.18
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

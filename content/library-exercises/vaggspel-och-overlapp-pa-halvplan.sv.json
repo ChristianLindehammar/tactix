@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 2,
+  "id": "074ace59-ba1a-5cc3-a7bf-d6403528e2fe",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggspel och överlapp på halvplan",
+  "description": "Ett anfallsmönster på halv plan med tio utespelare och en målvakt, utan försvarare. Mittbacken A står med bollarna, och spelarna står på sina positioner: central mittfältare, anfallare, ytterback och yttermittfältare på båda kanterna.\n\nFörst centralt: A passar till mittfältaren B, som vänder upp, spelar vägg med anfallaren C och avslutar. C följer upp på returen. Sedan på kanten: A passar till ytterbacken D, som vänder upp och spelar till E. E driver in i planen och öppnar ytan längs kanten, D överlappar, får bollen och slår inlägg till C och B som har löpt in. Kör sedan samma sak på vänsterkanten.\n\nByt plats mellan B och C och mellan D och E efter några varv. Stegring: lägg till en eller två försvarare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vänd upp i anfallsriktningen direkt när du tar emot."
+    },
+    {
+      "id": "cp2",
+      "text": "Väggen spelar bollen framför spelaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som överlappar ropar och behåller farten efter mottagningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Sikta vid stolparna och titta upp innan du avslutar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 9,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Mittbacken A passar till B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.74,
+          "endX": 0.46,
+          "endY": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar vägg med C och avslutar. C följer upp på returen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.47
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.45,
+          "endX": 0.49,
+          "endY": 0.38
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.52,
+          "endX": 0.36,
+          "endY": 0.26,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.3,
+          "endX": 0.38,
+          "endY": 0.22
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.4,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar till D, som spelar till E. E driver inåt och D överlappar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.591,
+          "y": 0.793
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.48,
+          "label": "E"
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.611,
+          "y": 0.783,
+          "endX": 0.77,
+          "endY": 0.75
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.81,
+          "y": 0.69,
+          "endX": 0.81,
+          "endY": 0.54
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.44,
+          "endX": 0.64,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.69,
+          "endX": 0.95,
+          "endY": 0.4,
+          "bend": -0.02,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D får bollen längs kanten och slår inlägg till C och B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.27
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.25,
+          "endX": 0.88,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p7",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.13,
+          "endX": 0.55,
+          "endY": 0.2
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.55,
+          "endY": 0.23
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

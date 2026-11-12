@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 2,
+  "id": "c44ede1b-7cea-509b-9b00-934159f33418",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Wall pass first – then score",
+  "description": "Play 3 v 3 with keepers and a joker who always plays for the attacking team, on about 30 × 20 metres. A goal only counts if the team has played at least one one-two during the attack. The joker makes a good wall, but a one-two between two teammates counts too. Change the joker after a few minutes.\n\nFor older players: 5 v 5 with two jokers on a bigger pitch split into a middle zone and two scoring zones. A successful one-two in the middle zone earns a point and opens the way into the scoring zone, where the team may score. Start with no defenders in the scoring zones and let one in once it gets easy. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The ball carrier takes on a defender – that opens the space for the one-two."
+    },
+    {
+      "id": "cp2",
+      "text": "The wall player gets free diagonally in front of the ball carrier."
+    },
+    {
+      "id": "cp3",
+      "text": "Play it in front of the runner, not to their feet."
+    },
+    {
+      "id": "cp4",
+      "text": "After the one-two – look for a shot quickly."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays it to joker J and runs past the defender.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.75
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.6
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.58,
+          "endX": 0.26,
+          "endY": 0.53
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.62,
+          "endX": 0.44,
+          "endY": 0.38,
+          "bend": 0.02,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "J plays it first time into A's run, and A shoots.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.75
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.47,
+          "endX": 0.37,
+          "endY": 0.39
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.33,
+          "endX": 0.42,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

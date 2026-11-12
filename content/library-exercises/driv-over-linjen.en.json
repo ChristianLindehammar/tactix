@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "368412da-efa0-5bf8-ba13-ae80cddeeb0c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Dribble over the line",
+  "description": "A 3v3 game without goals. Each team defends one end line and attacks the other. You score by dribbling the ball over the opponents' line and stopping it with your foot – not by shooting.\n\nIt works just as well 2v2 or 4v4. Make the pitch wider if it gets crowded. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball close when you dribble, and use your laces when there is free space ahead."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up – is it open ahead, or should you pass to a teammate?"
+    },
+    {
+      "id": "cp3",
+      "text": "Defenders: stand between the ball and your line."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue attacks upwards. A dribbles forward into free space.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.537
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.25,
+          "label": "Z"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.507,
+          "endX": 0.55,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X comes out. A passes to B, who is free out wide.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.627,
+          "y": 0.457
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.657,
+          "y": 0.437,
+          "endX": 0.77,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B dribbles over the line and stops the ball – a goal!",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.217
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "Z"
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.187,
+          "endX": 0.82,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 2,
+  "id": "92af817e-bac8-582b-a473-486910832863",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Frys och befria – med boll",
+  "description": "Alla har en boll och rör sig fritt inne i en ruta. En jägare (röd) har också en boll och försöker träffa de andras bollar genom att passa sin boll på dem. Blir din boll träffad fryser du och står stilla med foten på bollen. En kompis befriar dig genom att driva fram och nudda dig.\n\nDe yngsta får rulla bollen med händerna i stället för att driva. Byt jägare ofta, och ha två jägare om gruppen är stor. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp – var är jägaren och var finns det fri yta?"
+    },
+    {
+      "id": "cp2",
+      "text": "Håll bollen nära foten så att du kan svänga snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Hjälp kompisarna – den som befriar flest vinner."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla driver sin boll i rutan. Jägaren X driver också.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.343
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.626,
+          "y": 0.72
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.483
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.374,
+          "y": 0.3
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.703
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.583
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.404,
+          "y": 0.32,
+          "endX": 0.46,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.733,
+          "endX": 0.38,
+          "endY": 0.76,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.603,
+          "endX": 0.74,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X passar sin boll och träffar C:s boll – C fryser.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.343
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.626,
+          "y": 0.72
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.483
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.374,
+          "y": 0.3
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.271,
+          "y": 0.702
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.713,
+          "y": 0.563
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.683,
+          "y": 0.583,
+          "endX": 0.31,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A driver fram och nuddar C. Nu är C fri igen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.343
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.626,
+          "y": 0.72
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.483
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.263,
+          "y": 0.454
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.271,
+          "y": 0.702
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.603
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.283,
+          "y": 0.484,
+          "endX": 0.27,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "id": "8b7672aa-62c7-573f-bf8b-d2735b143838",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Passa genom portarna",
+  "description": "Spela 6 mot 6 på ungefär 50 × 40 meter med nio konportar, cirka 3 meter breda, utspridda över ytan. Ett lag gör mål genom att passa bollen genom valfri port till en medspelare på andra sidan. Efter ett mål måste laget söka upp en ny port – samma port två gånger i rad räknas inte.\n\nVariant: 1–2 jokrar som spelar med laget som har bollen. Bilden visar färre spelare och portar och är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Orientera dig innan du får bollen – var står medspelarna och vilka portar är lediga?"
+    },
+    {
+      "id": "cp2",
+      "text": "Flytta dig ur passningsskuggan så att bollhållaren kan nå dig."
+    },
+    {
+      "id": "cp3",
+      "text": "Erbjud olika avstånd: någon nära, någon längre bort."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter ett mål – leta direkt efter nästa lediga port."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar genom porten till B – mål.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.56
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.54,
+          "endX": 0.49,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B får inte använda samma port. B spelar ut till C och löper mot en ny port.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.585,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.38,
+          "endX": 0.8,
+          "endY": 0.43
+        },
+        {
+          "id": "r1x",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.72,
+          "endY": 0.11,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar genom porten till B – nytt mål.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.32,
+          "endX": 0.74,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

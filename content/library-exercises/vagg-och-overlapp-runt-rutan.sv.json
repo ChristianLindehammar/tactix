@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 2,
+  "id": "6b013e7c-4d0b-5ce5-9708-120dcb4d0a31",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Vägg och överlapp runt rutan",
+  "description": "Ett passningsmönster i en ruta på ungefär 30 × 15 meter med åtta spelare och två bollar. A spelar vägg med B och slår sedan en lång passning till C. C spelar till D och överlappar runt D. D spelar in till B, som har flyttat in i mitten, och B lägger direkt i C:s löpning. C driver upp längs kanten till E-ledet. Då startar E samma mönster åt andra hållet med F som vägg.\n\nAlla flyttar en plats framåt efter sin aktion: A till B, B till C och C till ledet där hen slutade. Kör både medurs och moturs.\n\nStegring med motstånd: ställ en pressande försvarare framför den som tar emot på kanten. Bollhållaren driver snett inåt, kompisen överlappar och får bollen i djupled, och tre spelare roterar: bollhållaren blir försvarare och försvararen går till ledet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Väggen spelar bollen framför spelaren, inte i fötterna."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som överlappar ropar och växlar upp i farten."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta med bollen framåt i farten efter passningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Bra tempo i passningarna – mönstret ska gå utan stopp."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar till B och får tillbaka bollen direkt.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.92
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.661,
+          "y": 0.173
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.354,
+          "y": 0.183
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.339,
+          "y": 0.213,
+          "endX": 0.25,
+          "endY": 0.37
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.39,
+          "endX": 0.38,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår en lång passning till C.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.92
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.661,
+          "y": 0.173
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.323
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.353,
+          "endX": 0.26,
+          "endY": 0.78
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar till D och startar överlappen. B flyttar in i mitten.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.92
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.661,
+          "y": 0.173
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.419,
+          "y": 0.864
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.439,
+          "y": 0.864,
+          "endX": 0.72,
+          "endY": 0.85
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.78,
+          "endX": 0.9,
+          "endY": 0.74,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.42,
+          "endY": 0.57
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D spelar till B, som lägger direkt i C:s löpning. C driver till E-ledet.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.661,
+          "y": 0.173
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.77
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.86,
+          "label": "D"
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.75,
+          "endX": 0.52,
+          "endY": 0.64
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.58,
+          "endX": 0.88,
+          "endY": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.63,
+          "endX": 0.9,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.45,
+          "label": "F"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

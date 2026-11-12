@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "1f26368d-e33b-51ab-b3a4-a71de6a4ebb6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "3 v 3 – quick finishes",
+  "description": "Play 3 v 3 in a small area, about 20 × 15 metres. Blue attack a big goal with a keeper, red attack two small goals at the other end. Play 3–4 minutes and rest 1 minute, four times. With more than six players, use substitutes.\n\nThe focus is daring to shoot and using wall passes to get a shot off. No fixed positions – everyone attacks and everyone defends. Swap so both teams get to attack the big goal.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dare to shoot – every chance is a shooting chance."
+    },
+    {
+      "id": "cp2",
+      "text": "Use a wall pass to get past a defender."
+    },
+    {
+      "id": "cp3",
+      "text": "Few touches, and move before and after you have had the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "If you lose the ball – work together and win it back straight away."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and runs past X.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.61,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.427,
+          "y": 0.567
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.65
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.437,
+          "y": 0.547,
+          "endX": 0.61,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.56,
+          "endX": 0.35,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lays it back into A's run, and A shoots first time.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.629,
+          "y": 0.338
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.65
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.609,
+          "y": 0.328,
+          "endX": 0.41,
+          "endY": 0.3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.25,
+          "endX": 0.38,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red win the ball and counter towards a small goal. C presses straight away.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.713
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.63
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.733,
+          "endX": 0.66,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.7
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "9407e31a-9a8a-5441-a9a0-cf0c1d3dd292",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "1 v 1 – four goals",
+  "description": "An area of about 15 × 20 metres with two small goals at each end. A line at each end, red have the balls. The first red player passes to the first blue player and steps out to defend. Blue try to get past and score in either of red's goals.\n\nIf red win the ball the roles swap straight away: red attack blue's goals and blue defend. The duel goes on until someone scores or the ball goes out. Join the back of the other line afterwards. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball close as you get near the defender."
+    },
+    {
+      "id": "cp2",
+      "text": "Watch the ball while you dribble and look up once you are past."
+    },
+    {
+      "id": "cp3",
+      "text": "Shield the ball with your body – dribble with the foot furthest from the opponent."
+    },
+    {
+      "id": "cp4",
+      "text": "If you lose the ball – defend straight away."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X passes to A and steps out to defend.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.283,
+          "endX": 0.5,
+          "endY": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A takes on X and heads for the open goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.521,
+          "y": 0.518
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.551,
+          "y": 0.478,
+          "endX": 0.74,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X wins the ball and attacks blue's goals. A becomes the defender.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.06
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.94
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.496,
+          "y": 0.455
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.466,
+          "y": 0.495,
+          "endX": 0.27,
+          "endY": 0.76,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.36,
+          "endX": 0.6,
+          "endY": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

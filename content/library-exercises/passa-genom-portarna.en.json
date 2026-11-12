@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "id": "b86b02e2-0f5c-58d1-a363-06d49feff7a2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Pass through the gates",
+  "description": "Play 6 v 6 in about 50 × 40 metres with nine cone gates, about 3 metres wide, spread over the area. A team scores by passing the ball through any gate to a team-mate on the other side. After a goal the team must find a new gate – the same gate twice in a row does not count.\n\nVariant: 1–2 jokers who play with the team in possession. The diagram shows fewer players and gates and is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Check before the ball arrives – where are your team-mates, and which gates are free?"
+    },
+    {
+      "id": "cp2",
+      "text": "Move out of the passing shadow so the player on the ball can reach you."
+    },
+    {
+      "id": "cp3",
+      "text": "Offer different distances: someone close, someone further away."
+    },
+    {
+      "id": "cp4",
+      "text": "After a goal – look straight away for the next free gate."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes through the gate to B – a goal.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.56
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.54,
+          "endX": 0.49,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B cannot use the same gate. B plays out to C and runs towards a new gate.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.585,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.38,
+          "endX": 0.8,
+          "endY": 0.43
+        },
+        {
+          "id": "r1x",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.72,
+          "endY": 0.11,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes through the gate to B – another goal.",
+      "markers": [
+        {
+          "id": "g1l",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.2
+        },
+        {
+          "id": "g1r",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "g2l",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.2
+        },
+        {
+          "id": "g2r",
+          "type": "cone",
+          "x": 0.8200000000000001,
+          "y": 0.2
+        },
+        {
+          "id": "g3l",
+          "type": "cone",
+          "x": 0.44,
+          "y": 0.45
+        },
+        {
+          "id": "g3r",
+          "type": "cone",
+          "x": 0.56,
+          "y": 0.45
+        },
+        {
+          "id": "g4l",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.7
+        },
+        {
+          "id": "g4r",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "g5l",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.7
+        },
+        {
+          "id": "g5r",
+          "type": "cone",
+          "x": 0.8600000000000001,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.32,
+          "endX": 0.74,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

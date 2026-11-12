@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 2,
+  "id": "c2942709-dfce-5539-a082-ebad02298d90",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Wall pass in the lane",
+  "description": "Mark out a lane about 25 × 15 metres with a line at each end and a cone in the middle as a pretend defender. A wall player stands on each side of the cone. A dribbles straight at the cone, plays a one-two and gets the ball back behind the cone. A then passes to E at the far end and joins that line. E does the same coming back, using the wall on the other side. Swap the wall players after a while.\n\nProgression: replace the cone with a defender who is half-active at first and later allowed to win the ball. With lots of players, run two lanes side by side.\n\nVariant for more touches: in a 30 × 20 metre box, two ball carriers, three wall players and three defenders move freely. The ball carriers look for a defender to take on and a wall player to combine with. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribble straight at the defender so they think you will go past."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass to the wall at the right distance – not too early, not too late."
+    },
+    {
+      "id": "cp3",
+      "text": "The wall stands half-turned and plays it first time in front of the runner."
+    },
+    {
+      "id": "cp4",
+      "text": "Speed up straight after the pass and run past on the other side."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles straight at the cone.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "t",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.77
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.75,
+          "endX": 0.5,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays it to C and runs past the cone. C plays it first time in front of A.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "t",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.58
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.56,
+          "endX": 0.24,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.6,
+          "endX": 0.65,
+          "endY": 0.37,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "With defender X: A collects behind X and passes on to E.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.92
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.92
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.491,
+          "y": 0.251
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.491,
+          "y": 0.231,
+          "endX": 0.5,
+          "endY": 0.14
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

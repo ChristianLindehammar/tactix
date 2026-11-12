@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "id": "ef24984d-d7da-5cf7-952a-affe29031914",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "4 v 4 – stop the shot",
+  "description": "An area of roughly 40 × 40 metres in front of a big goal with a keeper. Four blue attackers play against four red defenders, and both teams have four players waiting at the side. The coach stands at the other end with balls, with two small goals in the corners there.\n\nThe coach passes to one of the blue players, and blue try to get a shot away and score. Red have to stop the shot. If red win the ball, they score by passing back to the coach or into one of the small goals. Switch the fours every 2–3 minutes.\n\nThe keeper talks to the defenders the whole time and helps sort out who presses. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The nearest defender presses the ball carrier – close enough to block the shot."
+    },
+    {
+      "id": "cp2",
+      "text": "The others cover behind and beside the presser."
+    },
+    {
+      "id": "cp3",
+      "text": "The keeper organises with their voice: who presses, who covers?"
+    },
+    {
+      "id": "cp4",
+      "text": "After winning the ball: play it away from the pressure straight away."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "transition"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach passes to C.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.83
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.81,
+          "endX": 0.63,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Z presses C. Y and E cover behind and to the side, X tucks in.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.33,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.565,
+          "y": 0.675
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.3,
+          "endX": 0.62,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z wins the ball, dribbles out and scores in a small goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.33,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.538,
+          "y": 0.572
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.548,
+          "y": 0.612,
+          "endX": 0.62,
+          "endY": 0.8,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.84,
+          "endX": 0.85,
+          "endY": 0.93
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

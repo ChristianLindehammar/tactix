@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 2,
+  "id": "c0612eb6-09f3-5617-a67e-0169a62a4196",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Sulstopp och byt boll",
+  "description": "Två led bredvid varandra, alla med en boll, och en kon mitt i varje bana. Den första i varje led startar på ledarens signal. Kör varje del i ungefär 2 minuter med höger fot och 2 minuter med vänster.\n\n1. Driv runt konen och tillbaka, med en touch på varje steg.\n2. Driv rakt över till andra sidan med färre touchar och mer fart.\n3. Driv till konen, stoppa bollen med sulan och lämna den. Spring diagonalt över till den andra banan, ta bollen som den andra spelaren lämnade och driv vidare.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen nära foten – använd utsidan av vristen."
+    },
+    {
+      "id": "cp2",
+      "text": "Öka farten när du har färre touchar."
+    },
+    {
+      "id": "cp3",
+      "text": "Variera korta och lite längre tillslag."
+    },
+    {
+      "id": "cp4",
+      "text": "Sulstoppet ska lämna bollen stilla, så att kompisen kan ta den i full fart."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Del 1: driv runt konen och tillbaka. B gör likadant i sin bana.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.85,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.767
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.767
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.752,
+          "endX": 0.33,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.5,
+          "endX": 0.42,
+          "endY": 0.74,
+          "bend": 0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Del 3: driv till konen, stoppa med sulan och lämna bollen. Spring diagonalt till den andra banan.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.58
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.64,
+          "endX": 0.6,
+          "endY": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.64,
+          "endX": 0.4,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Ta den andra spelarens boll och driv vidare till slutet.",
+      "markers": [
+        {
+          "id": "l1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "l2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "e1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.15
+        },
+        {
+          "id": "e2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.15
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.577
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.577
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.597,
+          "endX": 0.66,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d6",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.597,
+          "endX": 0.34,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

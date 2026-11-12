@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 2,
+  "id": "302f4ef4-20f9-5790-93ad-3e7e47171cbc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Play in, turn and go long",
+  "description": "A counter-attack pattern without opponents. Two lines stand at each end with the middle of the pitch between them, and one player (C) stands in a box in the middle. A passes in to C, who receives and turns. At the same time B starts their run. C plays the ball long into B's path, and A runs past on their side to give the counter depth.\n\nWhen A and B arrive, the drill turns and goes the other way. Change C every few minutes, for example 3 minutes on and 1 minute rest. Variation: B plays on to A, so the ball goes to the third player.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass in to C at the right pace so C can turn straight away."
+    },
+    {
+      "id": "cp2",
+      "text": "C checks over the shoulder before the ball arrives, so the turn is quick."
+    },
+    {
+      "id": "cp3",
+      "text": "The runner goes when the pass to C is played – not later."
+    },
+    {
+      "id": "cp4",
+      "text": "The long pass should land ahead of the runner, not at their feet."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes in to C in the box. B starts the run.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.4
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.6
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.374,
+          "y": 0.8
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.88
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.389,
+          "y": 0.77,
+          "endX": 0.45,
+          "endY": 0.56
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.75,
+          "endX": 0.72,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C turns and plays it long to B. A runs past to give depth.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.4
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.6
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.417
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.88
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.402,
+          "endX": 0.7,
+          "endY": 0.27,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.53,
+          "endX": 0.72,
+          "endY": 0.31
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.73,
+          "endX": 0.25,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Now the other way: B passes in to C and A sets off.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.4
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.6
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.303
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.88
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.318,
+          "endX": 0.53,
+          "endY": 0.45
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.27,
+          "endX": 0.25,
+          "endY": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

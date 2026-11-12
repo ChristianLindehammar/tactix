@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "id": "f3580d0c-9747-5e18-9898-83f410f95ba6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "City traffic",
+  "description": "The cones are the edge of the city and the ball is your car. Everyone drives around town without crashing and without leaving the city. The coach calls out traffic signals: \"Green\" – full speed, \"Red\" – stop with your foot on the ball, \"Reverse\" – drag the ball back with your sole, \"Roundabout\" – turn and go the other way. Make up your own signals with the children.\n\nAfter a while a car thief (without a ball) joins in. The thief tries to steal a car, and whoever loses their ball becomes the new thief. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up so you can see where the space is."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the ball close to your foot."
+    },
+    {
+      "id": "cp3",
+      "text": "Change direction and pace when someone gets close."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone drives around town. The coach calls the signals.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.15
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.15
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.85
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.421,
+          "y": 0.262
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.486,
+          "y": 0.253,
+          "endX": 0.72,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.742,
+          "y": 0.483
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.738,
+          "y": 0.527,
+          "endX": 0.72,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.65
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.567
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.233,
+          "y": 0.522,
+          "endX": 0.25,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.8
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.473,
+          "y": 0.789
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.538,
+          "y": 0.784,
+          "endX": 0.8,
+          "endY": 0.76,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.06,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Car thief X chases a ball. A turns away from the thief.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.15
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.15
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.85
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.85
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.45,
+          "endX": 0.55,
+          "endY": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.498,
+          "y": 0.265
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.433,
+          "y": 0.257,
+          "endX": 0.15,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.783,
+          "y": 0.583
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.774,
+          "y": 0.627,
+          "endX": 0.74,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.503
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.547,
+          "endX": 0.2,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.66
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.718
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.462,
+          "y": 0.748,
+          "endX": 0.35,
+          "endY": 0.82,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.06,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

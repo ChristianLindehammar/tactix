@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "id": "ed89b633-c332-5d28-b449-248896c86a0e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Wall pass 2 v 1 to goal",
+  "description": "Two big goals with keepers stand 25–40 metres apart. The blue team lines up by one goal, red by the other. A defender and a wall player stand in the middle. A takes on the defender, plays a one-two and shoots. If the defender doesn't go with the wall player, A can dribble past instead. Then red attack the other way.\n\nRotation: the ball carrier becomes the defender when the other team attacks, the defender becomes the wall for their own team, and the wall player goes to the back of the line. Keep score – which team scores most in five minutes?\n\nWith older players, attack both ways at the same time with a defender and a wall in each direction. Switch the wall to the other side after a while so everyone plays both ways. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Take on the defender with pace – make them choose."
+    },
+    {
+      "id": "cp2",
+      "text": "Does the defender go with the wall player? Then dribble past yourself."
+    },
+    {
+      "id": "cp3",
+      "text": "The wall gets free at the right moment and plays it first time."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish quickly before the defender can recover."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at defender X.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.74,
+          "endX": 0.58,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays it to B and runs past X. B plays it first time in front of A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.63,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.56,
+          "endX": 0.26,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.59,
+          "endX": 0.67,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.43,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots. The next red player sets off towards the other goal, and A becomes the defender.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkt",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.94
+        },
+        {
+          "id": "rq",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.571,
+          "y": 0.231
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.571,
+          "y": 0.201,
+          "endX": 0.56,
+          "endY": 0.04
+        },
+        {
+          "id": "br",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.14
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.17,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

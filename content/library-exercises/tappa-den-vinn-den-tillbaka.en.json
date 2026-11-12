@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "id": "83b772e9-d775-5905-baa7-d96faa273de5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Lose it – win it back",
+  "description": "An area of roughly 40 × 25 metres with a big goal and a keeper at one end and a marked line at the other. Play 4 v 4. The keeper plays out to blue, who try to play over the line. If they manage it, they turn and attack the goal, and red must defend.\n\nIf red win the ball they attack the goal straight away – and blue must react. The nearest blue player presses at once, the others mark or cover the dangerous spaces. If the ball can't be won straight back, blue run back and take up their positions to win it a little later. After a goal, a new attack starts from the keeper.\n\nBigger version: 6 v 6 with a keeper on half a pitch, with the halfway line as the line. Blue have four seconds to win the ball back – otherwise play stops. Let only one team work on the transition at first, then both. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The nearest player goes straight at the ball when it is lost."
+    },
+    {
+      "id": "cp2",
+      "text": "The others close the passes around the ball and mark players near it."
+    },
+    {
+      "id": "cp3",
+      "text": "If you can't win it straight back: get back between the ball and the goal."
+    },
+    {
+      "id": "cp4",
+      "text": "Decide together when to press and when to drop."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The keeper plays out to A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.145
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.165,
+          "endX": 0.2,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A dribbles forward and passes towards C, but Y steps in and cuts it out.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.43
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.29,
+          "endX": 0.16,
+          "endY": 0.37,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.425,
+          "endX": 0.51,
+          "endY": 0.39
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.51,
+          "endX": 0.42,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y turns towards goal. C presses at once, the other blue players run back and cover.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.37
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.33,
+          "endX": 0.48,
+          "endY": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.38,
+          "endX": 0.7,
+          "endY": 0.28
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.26,
+          "endX": 0.72,
+          "endY": 0.18
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.42,
+          "endX": 0.3,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

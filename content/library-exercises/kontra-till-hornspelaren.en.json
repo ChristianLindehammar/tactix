@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 2,
+  "id": "83bd4420-153f-515f-aaf0-666e5e8e8586",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Counter to the corner player",
+  "description": "Three teams of four plus a joker (J) in an area of about 40 × 25 metres. Two teams play 4 v 4 inside the area, and the joker always helps the team in possession. The third team stands in the four corners of the area, one in each. A team scores when the ball reaches one of the two corner players in the opponents' half.\n\nWhen that happens, the corner player plays the ball straight out to the other team, who attack the other way – and the team that just scored must switch to defending quickly. Rotate so every team takes a turn in the corners after a few minutes. The diagram shows fewer players inside the area.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "First pass after winning the ball: firm and forward – look for the long option first."
+    },
+    {
+      "id": "cp2",
+      "text": "If the ball goes to a player facing their own goal – offer a lay-off close to the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "At the same time someone must run in behind, so the lay-off can be followed by a ball in behind."
+    },
+    {
+      "id": "cp4",
+      "text": "If you lose the ball – turn at once and close the way to your corners."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 13,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A has just won the ball and plays it firmly forward to B.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.59
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.58,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.57,
+          "endX": 0.6,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B is facing the wrong way and lays it back to J. At the same time C starts a run in behind.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.47,
+          "endX": 0.55,
+          "endY": 0.54
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.37,
+          "endX": 0.24,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "J plays the ball into C's run, and C passes on to the corner player – a point.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.09
+        },
+        {
+          "id": "k2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.09
+        },
+        {
+          "id": "k3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.91
+        },
+        {
+          "id": "k4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.91
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.51
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.49,
+          "endX": 0.33,
+          "endY": 0.3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.19,
+          "endX": 0.14,
+          "endY": 0.14
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

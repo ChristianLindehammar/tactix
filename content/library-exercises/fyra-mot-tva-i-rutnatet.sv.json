@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 2,
+  "id": "c5451eb7-b3a0-572f-93d2-4b8e6d1b670d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fyra mot två i rutnätet",
+  "description": "En yta på ungefär 12 × 9 meter delas med koner i nio små rutor. Fyra spelare håller bollen mot två. Bara en anfallare får stå i varje ruta, och när du har passat måste du flytta till en ny, ledig ruta. Försvararna får röra sig fritt.\n\nByt försvarare efter en brytning eller efter en viss tid. Börja med fria tillslag och begränsa sedan till två eller ett. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Orientera dig hela tiden – vilka rutor är lediga?"
+    },
+    {
+      "id": "cp2",
+      "text": "Ställ dig så att ingen försvarare står mellan dig och bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Två medspelare nära bollen och en längre bort ger bollhållaren flera val."
+    },
+    {
+      "id": "cp4",
+      "text": "Passa och flytta direkt – stå aldrig still efter passningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till D förbi X.",
+      "markers": [
+        {
+          "id": "c00",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.14
+        },
+        {
+          "id": "c01",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.38
+        },
+        {
+          "id": "c02",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "c03",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.86
+        },
+        {
+          "id": "c10",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.14
+        },
+        {
+          "id": "c11",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.38
+        },
+        {
+          "id": "c12",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.62
+        },
+        {
+          "id": "c13",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.86
+        },
+        {
+          "id": "c20",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.14
+        },
+        {
+          "id": "c21",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.38
+        },
+        {
+          "id": "c22",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.62
+        },
+        {
+          "id": "c23",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.86
+        },
+        {
+          "id": "c30",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.14
+        },
+        {
+          "id": "c31",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.38
+        },
+        {
+          "id": "c32",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "c33",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.235,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.345
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.765,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.235,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.765,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.37,
+          "endX": 0.7,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A flyttar till en ny ruta. D spelar vidare till C.",
+      "markers": [
+        {
+          "id": "c00",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.14
+        },
+        {
+          "id": "c01",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.38
+        },
+        {
+          "id": "c02",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "c03",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.86
+        },
+        {
+          "id": "c10",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.14
+        },
+        {
+          "id": "c11",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.38
+        },
+        {
+          "id": "c12",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.62
+        },
+        {
+          "id": "c13",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.86
+        },
+        {
+          "id": "c20",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.14
+        },
+        {
+          "id": "c21",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.38
+        },
+        {
+          "id": "c22",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.62
+        },
+        {
+          "id": "c23",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.86
+        },
+        {
+          "id": "c30",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.14
+        },
+        {
+          "id": "c31",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.38
+        },
+        {
+          "id": "c32",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "c33",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.235,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.765,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.235,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.765,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.585
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.235,
+          "y": 0.31,
+          "endX": 0.235,
+          "endY": 0.47
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.6,
+          "endX": 0.31,
+          "endY": 0.73
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

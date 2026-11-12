@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 2,
+  "id": "e4a3a3e0-ddcf-59dd-83e1-053ae535b909",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Hitta fjärde väggen",
+  "description": "En yta på ungefär 50 × 25 meter delas i två halvor. Två lag spelar 4 mot 4 i den ena halvan. Runt den står tre väggspelare (J) – en på varje långsida och en på kortsidan – som spelar med laget som har bollen. En fjärde väggspelare står vid kortsidan på den andra halvan.\n\nEfter ett antal passningar inom laget (till exempel fem) ska laget hitta den fjärde väggen långt bort. Då flyttar spelet till den andra halvan, och väggarna på långsidorna följer med. Laget som slog bollen behåller den och spelar vidare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ge spelbredd: gör dig spelbar ute vid kanterna."
+    },
+    {
+      "id": "cp2",
+      "text": "Ge speldjup: löp i djupled, eller ge understöd så att bollhållaren kan spela rakt eller snett bakåt."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd väggarna för att vända spelet när det blir trångt."
+    },
+    {
+      "id": "cp4",
+      "text": "Den långa passningen ska vara hård och gå längs marken."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "positioning",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått håller bollen i den övre halvan. A använder väggen på långsidan.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.26,
+          "endX": 0.15,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Efter tillräckligt många passningar slår C långt till den fjärde väggen. Väggarna på sidorna följer med.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.28,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.51
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.53,
+          "endX": 0.48,
+          "endY": 0.88
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.34,
+          "endX": 0.1,
+          "endY": 0.66
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.34,
+          "endX": 0.9,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Spelet fortsätter i den nedre halvan, och nu är den övre väggen den fjärde.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.08
+        },
+        {
+          "id": "h5",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.92
+        },
+        {
+          "id": "h6",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.92
+        },
+        {
+          "id": "wt",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07,
+          "label": "J"
+        },
+        {
+          "id": "wb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93,
+          "label": "J"
+        },
+        {
+          "id": "wl",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.72,
+          "label": "J"
+        },
+        {
+          "id": "wr",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.72,
+          "label": "J"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.7
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.62
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.82,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.93
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.9,
+          "endX": 0.7,
+          "endY": 0.81
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "8db4557c-27eb-5fb8-9fa4-9fbf90f7a1dd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Driv över linjen",
+  "description": "Spel 3 mot 3 utan mål. Varje lag försvarar en kortlinje och anfaller den andra. Man gör mål genom att driva bollen över motståndarnas linje och stoppa den med foten – inte genom att skjuta.\n\nFungerar lika bra 2 mot 2 eller 4 mot 4. Gör planen bredare om det blir för trångt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen nära foten när du driver, och använd vristen när det är fri yta framför."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta upp – är det fritt framåt, eller ska du passa till en kompis?"
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: stå mellan bollen och din linje."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå anfaller uppåt. A driver bollen framåt mot fri yta.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.537
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.25,
+          "label": "Z"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.507,
+          "endX": 0.55,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X kommer emot. A passar till B, som är fri på kanten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.627,
+          "y": 0.457
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.657,
+          "y": 0.437,
+          "endX": 0.77,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B driver över linjen och stoppar bollen – mål!",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.217
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "Z"
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.187,
+          "endX": 0.82,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 2,
+  "id": "f95c0145-4af6-5982-ac77-7a6fc58a5701",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Tre mål – gör mål och försvara",
+  "description": "Tre små mål står på en linje, och en markerad zon framför dem är skottzonen. Två lag står i varsitt led en bit bort, alla med en boll. Den första röda driver mot valfritt mål, tar sig in i skottzonen och passar in bollen. Sedan rundar hen målet och blir försvarare.\n\nI samma stund som bollen går in startar den första blå mot valfritt mål. När blå har gjort mål startar nästa röda, och blå rundar sitt mål och försvarar. Brett mellan målen gör det lättare för anfallaren, tätt gör det svårare.\n\nStegring: nudda bara målet i stället för att runda det, eller försvara direkt. Vinner försvararen bollen spelas 1 mot 1. Svårast: skjut varifrån du vill – men missar du måste du runda målet innan du får försvara.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp medan du driver – vilket mål är öppet?"
+    },
+    {
+      "id": "cp2",
+      "text": "Byt riktning och fart för att komma förbi försvararen."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa in bollen med bredsidan – säkert, inte hårt."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter målet: vänd snabbt och bli försvarare direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "shooting",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röda A driver mot ett mål och tar sig in i skottzonen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.1
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.36
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.36
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.36
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.537
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.767
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.522,
+          "endX": 0.27,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar in bollen och rundar målet. Samtidigt startar blå B.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.1
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.36
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.36
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.36
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.289,
+          "y": 0.217
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.767
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.289,
+          "y": 0.202,
+          "endX": 0.26,
+          "endY": 0.14
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.27,
+          "endX": 0.36,
+          "endY": 0.05,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.752,
+          "endX": 0.66,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A försvarar mot B, som väljer ett annat mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.1
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.36
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.36
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.36
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.88
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.54,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.455
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.44,
+          "endX": 0.74,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2r",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.32,
+          "endX": 0.56,
+          "endY": 0.38
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

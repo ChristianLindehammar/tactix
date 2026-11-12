@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "id": "c4b285d6-b576-5051-9e53-888e6792389b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fyra passningar, sedan djupt",
+  "description": "Spela 4 mot 4 i en mittzon på ungefär 35 × 40 meter, med en djupledszon bakom varje lag. Inga försvarare får gå in i djupledszonerna. Ett lag gör poäng genom att passa en medspelare som löper in i motståndarnas zon. Stegring: laget måste ha minst fyra passningar i rad innan djupledspassningen får slås.\n\nVariant med stora mål och målvakter bakom zonerna: den som tar emot i zonen avslutar mot målvakten. Lägg till 1–2 jokrar som spelar med laget som har bollen om det blir svårt att hitta passningar.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Orientera dig innan du får bollen – var finns löparen?"
+    },
+    {
+      "id": "cp2",
+      "text": "Starta djupledslöpningen i god tid, innan bollhållaren tittar upp."
+    },
+    {
+      "id": "cp3",
+      "text": "Löp in i zonen från sidan av försvararen, inte rakt bakom hen."
+    },
+    {
+      "id": "cp4",
+      "text": "Är det stängt i djupled – behåll bollen och vänta på nästa läge."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått har bollen i mittzonen och räknar passningar. A spelar till C.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.48,
+          "endX": 0.4,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D löper in i djupledszonen, och C slår passningen framför hen.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.39
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "r1x",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.35,
+          "endX": 0.74,
+          "endY": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.37,
+          "endX": 0.7,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: med mål och målvakt avslutar D direkt från zonen.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.3
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.3
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.7
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.7
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.7
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.17
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.15,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "id": "a55a64ac-9afb-56a6-abe5-90fbcdbb285d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Skifta tillsammans",
+  "description": "En yta på ungefär 25 × 15 meter. Tre röda försvarare står i en linje i mitten. Tre blå spelare står runt dem – en på varje kant och en i mitten bakom – och en fjärde blå, D, står i andra änden. Blå ska slå minst tre passningar och sedan försöka spela en markpassning förbi försvararna till D.\n\nRöd ska inte vinna bollen i början. Den som är närmast bollhållaren pressar och styr, och de andra två flyttar över och täcker så att avståndet mellan dem inte blir för stort. När bollen är på kanten flyttar alla över mot den sidan; när den är centralt drar de ihop sig mot mitten.\n\nBygg på: röd får vinna bollen och gör då poäng genom att passa till en egen spelare i andra änden. Byt uppgifter inom och mellan lagen efter några minuter. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste spelare pressar – resten flyttar efter bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll ihop: lagom avstånd mellan er så att ingen passning går rakt igenom."
+    },
+    {
+      "id": "cp3",
+      "text": "Flytta medan bollen rullar, inte när den redan har kommit fram."
+    },
+    {
+      "id": "cp4",
+      "text": "Styr bollhållaren mot kanten, bort från passningen till D."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C har bollen på kanten. Z pressar, Y och X flyttar över mot bollen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.71
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.45,
+          "endX": 0.83,
+          "endY": 0.52
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.38,
+          "endX": 0.62,
+          "endY": 0.38
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.4,
+          "endX": 0.37,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Bollen spelas till B. Y pressar, Z och X drar in mot mitten.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.76
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.66,
+          "endX": 0.67,
+          "endY": 0.73
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.42,
+          "endX": 0.52,
+          "endY": 0.6
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.46
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.42,
+          "endX": 0.42,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar till A. X pressar, Y och Z flyttar över åt vänster.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.53
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.8,
+          "endX": 0.17,
+          "endY": 0.6
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.47,
+          "endX": 0.24,
+          "endY": 0.5
+        },
+        {
+          "id": "r8",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.58,
+          "endX": 0.44,
+          "endY": 0.52
+        },
+        {
+          "id": "r9",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.44,
+          "endX": 0.55,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

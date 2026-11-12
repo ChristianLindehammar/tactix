@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "id": "2a6aaec3-742a-561f-876d-a5bfb53fe436",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fyra mot fyra – stoppa avslutet",
+  "description": "En yta på ungefär 40 × 40 meter framför ett stort mål med målvakt. Fyra blå anfallare spelar mot fyra röda försvarare, och båda lagen har fyra spelare som väntar vid sidan. Ledaren står i andra änden med bollar, och i hörnen där står två små mål.\n\nLedaren passar till någon av de blå, som ska försöka komma till avslut och göra mål. Röd ska stoppa avslutet. Vinner röd bollen gör de poäng genom att passa tillbaka till ledaren eller göra mål i ett av de små målen. Byt fyrorna efter 2–3 minuter.\n\nMålvakten pratar med försvararna hela tiden och hjälper dem med vem som ska pressa. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste försvarare pressar bollhållaren – kom nära nog att hindra skottet."
+    },
+    {
+      "id": "cp2",
+      "text": "De andra täcker bakom och vid sidan av den som pressar."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakten styr försvaret med rösten: vem pressar, vem täcker?"
+    },
+    {
+      "id": "cp4",
+      "text": "Efter bollvinst: spela bort bollen från trycket direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "transition"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren passar till C.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.83
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.81,
+          "endX": 0.63,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Z pressar C. Y och E täcker bakom och vid sidan av, X drar in.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.33,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.565,
+          "y": 0.675
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.3,
+          "endX": 0.62,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z vinner bollen, driver ut och gör mål i ett litet mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.1,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.9,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.33,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.538,
+          "y": 0.572
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.548,
+          "y": 0.612,
+          "endX": 0.62,
+          "endY": 0.8,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.84,
+          "endX": 0.85,
+          "endY": 0.93
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

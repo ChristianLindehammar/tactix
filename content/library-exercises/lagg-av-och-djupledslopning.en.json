@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 2,
+  "id": "e0a8d284-71f4-543e-97ed-d106eb71e8aa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Lay it off and run in behind",
+  "description": "A full-pitch pattern without opponents, with a keeper in each goal. A line of centre backs (A) stands on each side of the pitch, with balls. A central midfielder (C) stands in the middle and a striker (B) high up. A plays up to B, who lays it back to C. B curls a run out and in behind an imaginary back line, C plays the ball in behind in front of B, and B carries it towards the box and shoots.\n\nRun the same pattern the other way at the same time from the other line. Rotate: centre back to midfield, midfielder to striker, and the striker collects the ball and joins the other line. Variant: add a passive defender for B to run in behind without being offside.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The ball in behind should be firm and played into the runner's path, not to their feet."
+    },
+    {
+      "id": "cp2",
+      "text": "The striker curves the run and times it through eye contact with the midfielder."
+    },
+    {
+      "id": "cp3",
+      "text": "The midfielder gets free with a V-run and meets the ball at speed."
+    },
+    {
+      "id": "cp4",
+      "text": "Take the ball forward with your first touch and look up before you shoot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays up to B. C gets free in the middle.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.748
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.718,
+          "endX": 0.62,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lays it back to C and starts the curved run.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.45
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.47,
+          "endX": 0.5,
+          "endY": 0.53
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.31,
+          "endX": 0.27,
+          "endY": 0.36,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C plays the ball in behind, in front of B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.47
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.45,
+          "endX": 0.3,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B carries the ball towards the box and shoots.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.27
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.25,
+          "endX": 0.37,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.13,
+          "endX": 0.46,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 2,
+  "id": "eeeaa330-1d03-5f78-a57a-317cebac9a28",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggen i mitten",
+  "description": "Två led står mot varandra, ungefär 20–30 meter isär, och en spelare (C) står i mitten en bit åt sidan. Den första i ledet driver ut, spelar väggspel med C och passar sedan vidare till det andra ledet. Följ med och ställ dig sist där. Därefter går övningen åt andra hållet. C stannar kvar på sin plats.\n\nByt mittspelare efter en stund. Variant: två mittspelare, en på varje sida, så att bollen kan gå via båda. För 9–11 år.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa med insidan av foten – den ger bäst precision."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela väggspelet framför medspelaren, så att hen kan ta bollen i fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Står mittspelaren felvänd – gör dig spelbar snett framför hen."
+    },
+    {
+      "id": "cp4",
+      "text": "Ta emot med första tillslaget och passa vidare med andra."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 7,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver ut och passar C. Sedan löper A framåt.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.69,
+          "endX": 0.5,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.58,
+          "endX": 0.65,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C lägger bollen framför A.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.49,
+          "endX": 0.42,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar vidare till B och följer efter till det ledet.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.92
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.51
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.49,
+          "endX": 0.49,
+          "endY": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.56,
+          "endX": 0.36,
+          "endY": 0.17
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

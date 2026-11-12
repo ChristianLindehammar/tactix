@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "c7fa4758-f6f3-5f5b-b93e-9ebca056f0da",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Passkedjan – hinn före varvet",
+  "description": "Två lag. Det blå laget står utspritt inne i en konad ruta och har en boll. Spelarna har varsin bokstav (eller siffra) och passar i ordning: A till B, B till C och så vidare, och sedan börjar kedjan om. Det röda laget står i led vid ett hörn utanför rutan och driver ett varv runt rutan, en i taget.\n\nBlått räknar sina passningar medan rött kör stafett. Byt sedan uppgift – vilket lag hann flest passningar? Variant: kör mot klockan – hinner ni ett helt varv i kedjan på 20 sekunder? Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vet vem du ska passa – titta upp innan bollen kommer."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa med bredsidan för bäst precision."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot med en touch åt det håll du ska passa."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B. Samtidigt driver X runt rutan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.18
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.18
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.88
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.363
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.403,
+          "endX": 0.34,
+          "endY": 0.54
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.577
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.537,
+          "endX": 0.92,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar vidare till C. X är halvvägs – hur många passningar hinner blått?",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.18
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.18
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.88
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.464,
+          "y": 0.6
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.504,
+          "y": 0.6,
+          "endX": 0.6,
+          "endY": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.596,
+          "y": 0.08
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.546,
+          "y": 0.08,
+          "endX": 0.3,
+          "endY": 0.08,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

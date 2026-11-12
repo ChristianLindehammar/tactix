@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "id": "dbba24c7-b5a7-58f1-9de0-d42ea7bdff4e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Tappa den – vinn den tillbaka",
+  "description": "En yta på ungefär 40 × 25 meter med ett stort mål och målvakt i ena änden, och en markerad linje i andra. Spel 4 mot 4. Målvakten spelar ut till blå, som ska spela sig över linjen. Lyckas de vänder de och anfaller mot målet, och då ska röd försvara.\n\nVinner röd bollen anfaller de direkt mot målet – och blå ska ställa om. Närmaste blå pressar på en gång, de andra markerar eller täcker de farliga ytorna. Går det inte att vinna bollen direkt, springer blå hem och tar sina positioner för att vinna den lite senare. Efter mål startar nytt anfall från målvakten.\n\nStörre variant: 6 mot 6 med målvakt på halv plan, där mittlinjen är linjen. Blå har fyra sekunder på sig att vinna tillbaka bollen – annars bryts övningen. Låt först bara ena laget öva omställningen och sedan båda. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste spelare går direkt på bollen när den tappas."
+    },
+    {
+      "id": "cp2",
+      "text": "De andra stänger passningarna runt bollen och markerar spelare nära den."
+    },
+    {
+      "id": "cp3",
+      "text": "Går det inte att vinna bollen direkt: spring hem och ta position mellan bollen och målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Bestäm tillsammans när ni pressar och när ni faller hem."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten spelar ut till A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.145
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.165,
+          "endX": 0.2,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver framåt och passar mot C, men Y kliver in och bryter.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.43
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.29,
+          "endX": 0.16,
+          "endY": 0.37,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.425,
+          "endX": 0.51,
+          "endY": 0.39
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.51,
+          "endX": 0.42,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y vänder mot mål. C pressar direkt, de andra blå springer hem och täcker.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.78
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.37
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.33,
+          "endX": 0.48,
+          "endY": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.38,
+          "endX": 0.7,
+          "endY": 0.28
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.26,
+          "endX": 0.72,
+          "endY": 0.18
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.42,
+          "endX": 0.3,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

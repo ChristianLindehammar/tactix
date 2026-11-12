@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "id": "aa6f025d-5767-5ee0-9b9f-54b4fa086a33",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – diving technique",
+  "description": "Four keepers in two pairs, each with a small cone goal. A shoots the ball to one side of B, who dives and catches it. At the same time C shoots at D. After the shots B and D swap places, and new shots go in.\n\nStart with calm shots along the ground close to the keeper, and move the ball further away from the keeper as it goes well. Switch roles so everyone gets to shoot and dive, and switch direction so the keepers dive to both sides. Works with 2–4 keepers.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Angle the take-off foot outwards and step towards the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Land on your side, on the soft parts – not on the elbow or knee."
+    },
+    {
+      "id": "cp3",
+      "text": "Take the ball in front of you and hold on to it as you land."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots to one side of B, who dives and catches it. C shoots at D at the same time.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.597
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.597
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.572,
+          "endX": 0.23,
+          "endY": 0.31
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.572,
+          "endX": 0.63,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B and D swap places.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.67,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.39
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.39
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.26,
+          "endX": 0.66,
+          "endY": 0.24,
+          "bend": -0.05,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.35,
+          "endX": 0.34,
+          "endY": 0.36,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "New shots, now the other way.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.597
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.597
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.31,
+          "y": 0.572,
+          "endX": 0.37,
+          "endY": 0.31
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.572,
+          "endX": 0.77,
+          "endY": 0.31
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

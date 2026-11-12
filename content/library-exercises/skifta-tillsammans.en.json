@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "id": "5bfb2b4d-390f-5146-a3f0-8b710105af86",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Slide together",
+  "description": "An area of roughly 25 × 15 metres. Three red defenders stand in a line across the middle. Three blue players stand around them – one on each side and one behind in the middle – and a fourth blue, D, stands at the far end. Blue must make at least three passes, then try to play a ground pass past the defenders to D.\n\nRed are not allowed to win the ball at first. The defender nearest the ball carrier presses and steers, and the other two slide across and cover so the gaps between them don't grow. When the ball is out wide, everyone shifts towards that side; when it is central, they squeeze into the middle.\n\nBuild it up: red may win the ball and then score by passing to their own player at the other end. Swap jobs within and between the teams after a few minutes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The nearest player presses – the rest move with the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Stay compact: keep the gaps small so no pass goes straight through."
+    },
+    {
+      "id": "cp3",
+      "text": "Move while the ball is travelling, not once it has arrived."
+    },
+    {
+      "id": "cp4",
+      "text": "Show the ball carrier towards the touchline, away from the pass to D."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C has the ball out wide. Z presses, Y and X slide across towards the ball.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.71
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.45,
+          "endX": 0.83,
+          "endY": 0.52
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.38,
+          "endX": 0.62,
+          "endY": 0.38
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.4,
+          "endX": 0.37,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The ball goes to B. Y presses, Z and X tuck in towards the middle.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.76
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.66,
+          "endX": 0.67,
+          "endY": 0.73
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.42,
+          "endX": 0.52,
+          "endY": 0.6
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.46
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.42,
+          "endX": 0.42,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes to A. X presses, Y and Z slide across to the left.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.05
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.05
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.95
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.95
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.53
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.8,
+          "endX": 0.17,
+          "endY": 0.6
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.47,
+          "endX": 0.24,
+          "endY": 0.5
+        },
+        {
+          "id": "r8",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.58,
+          "endX": 0.44,
+          "endY": 0.52
+        },
+        {
+          "id": "r9",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.44,
+          "endX": 0.55,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

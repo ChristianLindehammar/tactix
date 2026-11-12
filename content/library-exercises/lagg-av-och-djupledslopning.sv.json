@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 2,
+  "id": "5435e7de-3b95-5f1e-aa7f-213b98f7c26c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Lägg av och löp i djupet",
+  "description": "Ett mönster på hel plan utan motstånd, med målvakt i varje mål. Ett led mittbackar (A) står på var sin sida av planen, med bollar. En innermittfältare (C) står centralt och en forward (B) högt upp. A spelar upp till B, som lägger tillbaka till C. B löper i en båge ut och bakom en tänkt backlinje, C slår bollen i djupled framför B, och B tar med sig bollen mot straffområdet och avslutar.\n\nKör samma mönster samtidigt åt andra hållet från det andra ledet. Rotera: mittback blir mittfältare, mittfältare blir forward och forwarden hämtar bollen och ställer sig i det andra ledet. Variant: ställ en passiv back som B ska löpa bakom utan att hamna offside.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Djupledspassningen ska vara hård och läggas framför löparen, inte på hen."
+    },
+    {
+      "id": "cp2",
+      "text": "Forwarden löper i en båge och tajmar löpningen med ögonkontakt med mittfältaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Mittfältaren gör sig spelbar med en V-löpning och möter bollen i fart."
+    },
+    {
+      "id": "cp4",
+      "text": "Ta med bollen framåt på första tillslaget och titta upp innan du avslutar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar upp till B. C gör sig spelbar centralt.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.748
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.718,
+          "endX": 0.62,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lägger tillbaka till C och startar sin båglöpning.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.45
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.47,
+          "endX": 0.5,
+          "endY": 0.53
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.31,
+          "endX": 0.27,
+          "endY": 0.36,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C slår bollen i djupled framför B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.47
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.45,
+          "endX": 0.3,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B tar med sig bollen in mot straffområdet och avslutar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.87
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.96
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.27
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.25,
+          "endX": 0.37,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.13,
+          "endX": 0.46,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

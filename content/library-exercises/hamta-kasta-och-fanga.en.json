@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "id": "d9d9966a-24e0-5334-8f1b-55ab83bbd4bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fetch, throw and catch",
+  "description": "An area of roughly 20 × 15 metres with four cones. All the balls lie at cone 1. The blue team lines up at cone 2 and the red team at cone 3, a bit further away.\n\nThe first blue player runs to cone 1, fetches a ball, runs back to cone 2 and throws it to the first red player at cone 3. Red catches it, runs with it to cone 4 and puts it down. Then the next player in each line goes. When all the balls are at cone 4, the teams swap jobs.\n\nCount how many balls the team catches without dropping one. Harder: a longer gap between cones 2 and 3, or throw with a bounce so the catcher has to get down. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Feet apart and knees slightly bent while you wait for the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Watch the ball, not the thrower."
+    },
+    {
+      "id": "cp3",
+      "text": "Catch with both hands and pull the ball in to your body."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs to cone 1 and fetches a ball.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.1
+        },
+        {
+          "id": "pb1",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "pb2",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.92
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.32
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.7
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.72
+        },
+        {
+          "id": "w3",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.24,
+          "endX": 0.3,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A runs back to cone 2 and throws to X at cone 3.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.1
+        },
+        {
+          "id": "pb1",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "pb2",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.92
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.32
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.7
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.72
+        },
+        {
+          "id": "w3",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.19,
+          "y": 0.37,
+          "endX": 0.18,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X catches it and runs with the ball to cone 4.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.1
+        },
+        {
+          "id": "pb1",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.08
+        },
+        {
+          "id": "pb2",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.08
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.92
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.32
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.7
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.72
+        },
+        {
+          "id": "w3",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.75
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.69,
+          "endX": 0.56,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

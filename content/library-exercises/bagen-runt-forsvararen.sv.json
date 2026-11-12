@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "da9f1950-c226-599e-8e2a-0907d765f181",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bågen runt försvararen",
+  "description": "Spela två mot en i en ruta på ungefär 10 × 15 meter med ett litet mål i varje ände. A har bollen, B står precis framför försvararen X. När A börjar driva gör B en båglöpning ut och runt X. A spelar bollen i djupled till B eller dribblar själv förbi om X följer med B. Avsluta i det bortre lilla målet.\n\nVinner X bollen ska X göra mål i det andra lilla målet så fort som möjligt. Byt roller efter några försök eller när försvararen vinner bollen. Variant: B kommer i stället emot A och erbjuder ett väggspel. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv rakt mot försvararen så att den måste ta ställning."
+    },
+    {
+      "id": "cp2",
+      "text": "Starta båglöpningen när bollföraren har vänt upp och driver framåt – inte före."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa i löpbanan, framför B, så att B kan ta med bollen utan att stanna."
+    },
+    {
+      "id": "cp4",
+      "text": "Följer försvararen med löpningen – ta ytan själv."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot X. B startar framför X och gör en båglöpning ut och runt.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.617
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.592,
+          "endX": 0.43,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.47,
+          "endX": 0.68,
+          "endY": 0.28,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X går mot A. A spelar djupt i B:s löpbana, och B avslutar i det lilla målet.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.48
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.46,
+          "endX": 0.68,
+          "endY": 0.34
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.26,
+          "endX": 0.55,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Följer X med B i stället tar A ytan själv och avslutar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.85,
+          "rotation": 180
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.93
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.47
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.44,
+          "endX": 0.4,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.26,
+          "endX": 0.47,
+          "endY": 0.18
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

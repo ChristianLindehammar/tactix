@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "031b2b90-027f-531e-93b5-f7abb458ec48",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Tre mot tre – snabba avslut",
+  "description": "Spela 3 mot 3 på en liten yta, ungefär 20 × 15 meter. Blå anfaller mot ett stort mål med målvakt, röd mot två små mål i andra änden. Spela 3–4 minuter och vila 1 minut, fyra gånger. Har du fler än sex spelare, använd avbytare.\n\nFokus är att våga skjuta och att använda väggspel för att komma till avslut. Inga fasta positioner – alla anfaller och alla försvarar. Byt så att båda lagen får anfalla mot det stora målet.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Våga skjuta – varje läge är ett avslutsläge."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd väggspel för att ta dig förbi en försvarare."
+    },
+    {
+      "id": "cp3",
+      "text": "Få tillslag och rörelse före och efter att du har haft bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar ni bollen – jobba tillsammans och vinn tillbaka den direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B och löper förbi X.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.61,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.427,
+          "y": 0.567
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.65
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.437,
+          "y": 0.547,
+          "endX": 0.61,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.56,
+          "endX": 0.35,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lägger tillbaka i A:s löpning, och A avslutar direkt.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.629,
+          "y": 0.338
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.65
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.609,
+          "y": 0.328,
+          "endX": 0.41,
+          "endY": 0.3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.25,
+          "endX": 0.38,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Rött vinner bollen och kontrar mot ett litet mål. C pressar direkt.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "sg1",
+          "type": "goal",
+          "x": 0.33,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "sg2",
+          "type": "goal",
+          "x": 0.67,
+          "y": 0.9,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.713
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.63
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.733,
+          "endX": 0.66,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.7
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
