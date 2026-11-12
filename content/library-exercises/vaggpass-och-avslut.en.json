@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "id": "d0ec48ae-fb17-571f-b6ee-1198fb811a97",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Wall pass off the boards and finish",
+  "description": "The players stand in a line at a cone, each with a ball. The first dribbles straight ahead, passes into the boards (or a bench on its side), collects the rebound on the move and shoots at goal. Fetch your ball and join the back of the line.\n\nMake it harder with a coach as a defender at the second cone. Start at a steady pace so the player ahead has time to collect their ball from the goal. Two lines can run at once. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hit the boards at an angle so the rebound comes out in front of you."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep running after the pass – meet the rebound at speed."
+    },
+    {
+      "id": "cp3",
+      "text": "Receive with a soft blade and shoot quickly."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles forward along the left side.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.775
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.74,
+          "endX": 0.28,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes into the boards and runs past the cone. The rebound comes back in front of A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.46
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.45,
+          "endX": 0.04,
+          "endY": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.04,
+          "y": 0.39,
+          "endX": 0.2,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.3,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots at goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.21,
+          "endX": 0.45,
+          "endY": 0.075
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

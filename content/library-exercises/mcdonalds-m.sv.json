@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "4a6966f4-7eb7-51a0-a99b-da56a0845c95",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "M-et – diagonalpass och avslut i fart",
+  "description": "Två led, ett i varje hörn bredvid målet, och en hög kon på var sida en bit ut. Den första i ena ledet springer utan boll ner och runt sin kon. Den första i andra ledet slår en diagonalpass till löparen, som skjuter direkt nära konen. Sedan springer passaren runt sin kon och får passningen från andra hållet, och så vidare. Löpvägarna bildar ett M.\n\nByt led så att alla får skjuta från båda hållen. Bra som snabb uppvärmning av både spelare och målvakt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs golvet, till bladet."
+    },
+    {
+      "id": "cp2",
+      "text": "Löparen visar med klubban var bollen ska komma."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut direkt – ta inte emot först."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer utan boll ner och runt den vänstra konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.23
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.26,
+          "endX": 0.36,
+          "endY": 0.36,
+          "bend": -0.12,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en diagonalpass till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.23
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.25,
+          "endX": 0.43,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter direkt. B springer runt den högra konen och får nästa passning.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.27,
+          "endX": 0.42,
+          "endY": 0.08
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.26,
+          "endX": 0.64,
+          "endY": 0.36,
+          "bend": 0.12,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "id": "6f45cce0-8975-59c5-95b6-89a6e9c88975",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Passning i två led",
+  "description": "Två led står mitt emot varandra. Den första i ena ledet passar till den första i det andra, och springer sedan och ställer sig sist i det ledet. Mottagaren passar tillbaka till nästa spelare i första ledet och springer över, och så vidare.\n\nSpring ut åt höger så att ni inte krockar. Övningen passar bra som snabb uppvärmning före match. Har ni en spelare över kan den värma upp målvakten samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen ska gå längs golvet till mottagarens blad."
+    },
+    {
+      "id": "cp2",
+      "text": "Hårda passningar, men inte skott."
+    },
+    {
+      "id": "cp3",
+      "text": "Spring direkt efter passningen så att tempot hålls uppe."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och springer över till Bs led.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.7
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.7,
+          "endX": 0.68,
+          "endY": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.74,
+          "endX": 0.86,
+          "endY": 0.78,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tillbaka till nästa i As led och springer över.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.7
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.7
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.7,
+          "endX": 0.32,
+          "endY": 0.7
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.66,
+          "endX": 0.14,
+          "endY": 0.62,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "6fa56cb1-a8dc-5358-9d98-29c472a1374c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Korridoren – lång pass, avslut och försvar",
+  "description": "Samma korridorer som i överlämningen: led A vid målet med alla bollar, led B i andra änden. A slår en hård passning – direkt eller via sargen – till B, som tar med sig bollen i fart mot mål och avslutar. A ställer sig sist i B-ledet, och B i A-ledet.\n\nSteg två: efter passningen springer A ut och ställer sig före mittlinjen som försvarare. B ska ta sig förbi A och avsluta. Andra korridoren kan användas av två led till samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs golvet till bladet, även när den går via sargen."
+    },
+    {
+      "id": "cp2",
+      "text": "Mottagaren tar med bollen framåt i första touchen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvararen: stå i vägen mot mål och tvinga ut anfallaren mot sargen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång passning till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.13
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.3
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.6000000000000001
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.21
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.24,
+          "endX": 0.18,
+          "endY": 0.8
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver mot mål. I steg två springer A ut som försvarare.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.13
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.3
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.6000000000000001
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.77,
+          "endX": 0.27,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.19,
+          "endX": 0.24,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar sig förbi A och avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.13
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.3
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.6000000000000001
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.21,
+          "endX": 0.45,
+          "endY": 0.075
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

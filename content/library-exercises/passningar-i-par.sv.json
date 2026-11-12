@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 2,
+  "id": "67f2bbce-a88c-500f-a7e8-2fba2b6920cf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Passningar i par",
+  "description": "Spelarna står parvis mitt emot varandra längs långsidorna, med en boll per par. Passa till din kompis, som stoppar bollen och passar tillbaka. Det kräver koncentration – varje passning ska vara exakt.\n\nVarianter: stoppa bollen med foten innan du passar tillbaka, ta emot på backhand och passa på forehand (och tvärtom), eller passa direkt tillbaka med kontroll. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs golvet till kompisens blad."
+    },
+    {
+      "id": "cp2",
+      "text": "Visa med klubban var du vill ha bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Mjukt blad när du tar emot – dämpa bollen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, C och E passar över till sin kompis.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "pa",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.2,
+          "endX": 0.78,
+          "endY": 0.2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.3
+        },
+        {
+          "id": "pc",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.3,
+          "endX": 0.78,
+          "endY": 0.3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.4,
+          "label": "F"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.4
+        },
+        {
+          "id": "pe",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.4,
+          "endX": 0.78,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B, D och F stoppar bollen och passar tillbaka.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.2
+        },
+        {
+          "id": "qa",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.2,
+          "endX": 0.22,
+          "endY": 0.2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.3
+        },
+        {
+          "id": "qc",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.3,
+          "endX": 0.22,
+          "endY": 0.3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.4,
+          "label": "F"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.4
+        },
+        {
+          "id": "qe",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.4,
+          "endX": 0.22,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

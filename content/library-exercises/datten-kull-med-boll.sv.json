@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "id": "46b32115-601a-58f7-843f-3ab90c63dab7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Datten – kull med boll",
+  "description": "Alla spelare är innanför en ruta av koner med var sin boll och ska hela tiden driva bollen. Två ledare är tagare. Den som blir nuddad, eller går utanför konerna, är tagen och står still. En fri spelare kan rädda en tagen kompis genom att slå en tunnel med sin boll mellan kompisens ben. Starta och stoppa med visselpipan och kör några minuter i taget – är alla tagna när tiden är slut?\n\nSom tagare: anpassa tempot så att spelarna oftast vinner. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp – då ser du både tagarna och kompisarna."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen nära klubban när du byter riktning."
+    },
+    {
+      "id": "cp3",
+      "text": "Hjälp varandra: rädda en tagen kompis så fort du kan."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla driver boll inne i rutan. Tagare A jagar en spelare.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.285
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.305
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.445
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.465
+        },
+        {
+          "id": "ta",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "tb",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.27,
+          "endX": 0.58,
+          "endY": 0.22
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.33,
+          "endX": 0.76,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Spelaren blev tagen. En kompis räddar hen med en tunnel.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.285
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.305
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.445
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.465
+        },
+        {
+          "id": "ta",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "tb",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "tunnel",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.29,
+          "endX": 0.59,
+          "endY": 0.26
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

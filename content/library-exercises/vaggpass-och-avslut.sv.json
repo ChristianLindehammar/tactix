@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "id": "2196e6d4-372f-5161-9837-35da19432cc2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Väggpass mot sargen och avslut",
+  "description": "Spelarna står i ett led vid en kon med var sin boll. Den första driver bollen rakt fram, passar in i sargen (eller en liggande bänk) och tar emot returen i farten, och avslutar sedan på mål. Hämta bollen och ställ dig sist.\n\nGör det svårare genom att ställa en ledare som back vid den andra konen. Starta i lagom tempo så att den före hinner hämta sin boll ur målet. Två led kan köras samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa i sargen i en vinkel så att returen kommer framför dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Fortsätt springa efter passningen – möt returen i fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot med mjukt blad och avsluta snabbt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver bollen fram längs vänsterkanten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.775
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.74,
+          "endX": 0.28,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar in i sargen och springer förbi konen. Returen kommer tillbaka framför A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.46
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.45,
+          "endX": 0.04,
+          "endY": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.04,
+          "y": 0.39,
+          "endX": 0.2,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.3,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar på mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.92
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.21,
+          "endX": 0.45,
+          "endY": 0.075
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

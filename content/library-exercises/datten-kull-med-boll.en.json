@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "id": "579703e5-63ba-5d54-9fc6-00703475537e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Tag with a ball",
+  "description": "All the players are inside a box of cones, each with a ball, and must keep dribbling the whole time. Two coaches are the taggers. Anyone touched, or anyone who leaves the box, is caught and stands still. A free player can rescue a caught team-mate by passing their ball between the team-mate's legs. Start and stop with the whistle and play a few minutes at a time – is everyone caught when time is up?\n\nAs a tagger: pace yourself so the players win most of the time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up – then you see both the taggers and your team-mates."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the ball close to the stick when you change direction."
+    },
+    {
+      "id": "cp3",
+      "text": "Help each other: rescue a caught team-mate as soon as you can."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone dribbles inside the box. Tagger A chases a player.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.285
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.305
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.445
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.465
+        },
+        {
+          "id": "ta",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "tb",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.27,
+          "endX": 0.58,
+          "endY": 0.22
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.33,
+          "endX": 0.76,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The player is caught. A team-mate rescues them by passing through their legs.",
+      "markers": [
+        {
+          "id": "c0",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.285
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.305
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.445
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.465
+        },
+        {
+          "id": "ta",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "tb",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "tunnel",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.29,
+          "endX": 0.59,
+          "endY": 0.26
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "id": "1c3d6c05-2ca9-552d-9f2c-b410e60b48fe",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The arc – slalom and finish",
+  "description": "All the players line up in the corner with the balls. The first dribbles at high speed in an arc down towards the centre line, slaloms through the cones there and shoots as soon as their body faces the goal and the ball is under control.\n\nVariation (Arc 2): the runner goes without a ball along the arc and gets a firm pass from the next in line, then shoots first time. Run it from both sides. Works with or without a goalkeeper. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "High speed in the arc, short touches in the slalom."
+    },
+    {
+      "id": "cp2",
+      "text": "Turn your body towards the goal before you shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "Variation: the passer aims where the runner is going, not where they are."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "shooting",
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles in an arc and slaloms through the cones by the centre line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.46
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.46
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.46
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.215
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.24,
+          "endX": 0.22,
+          "endY": 0.53,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.53,
+          "endX": 0.56,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns towards the goal and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.46
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.46
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.46
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.375
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.35,
+          "endX": 0.56,
+          "endY": 0.075
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variation: A runs without the ball and B passes into the run.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.46
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.46
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.46
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.07
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.15,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.215
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.3,
+          "endX": 0.6,
+          "endY": 0.5,
+          "bend": -0.1,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.24,
+          "endX": 0.55,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

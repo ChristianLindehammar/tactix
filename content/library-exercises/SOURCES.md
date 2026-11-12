@@ -67,6 +67,22 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | ajaxtriangeln | soccer | The coach's own training plans for HJIK P2019 ("Träning v37–v41 (Hage 1)", .pptx) | 2026-11-12 |
 | behall-bollen | soccer | The coach's own training plans for HJIK P2019 ("Träning v33–v41 (Hage 4)", .pptx) | 2026-11-12 |
 | fotbollskubb | soccer | The coach's own training plans for HJIK P2019 ("Träning v41 (Hage 2)", .pptx) | 2026-11-12 |
+| slalom-bollkontroll | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 1 Slalom | 2026-11-12 |
+| vaggpass-och-avslut | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 2 Väggpassen | 2026-11-12 |
+| halvmanen | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 3 Halvmånen | 2026-11-12 |
+| passning-i-led | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 4 Passning i led | 2026-11-12 |
+| mcdonalds-m | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 5 McDonalds M-et | 2026-11-12 |
+| datten-kull-med-boll | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 6 Datten | 2026-11-12 |
+| popcorn | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 7 Popcorn | 2026-11-12 |
+| bagen-slalom-och-avslut | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), U-övning 8–9 Bågen 1 and 2 | 2026-11-12 |
+| anfall-och-forsvar-2-mot-2 | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 1 Anfall & försvar 2x2 | 2026-11-12 |
+| forst-till-bollen-innebandy | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 2 Först till bollen | 2026-11-12 |
+| passningar-i-par | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 3 Enkel pass 1x1 | 2026-11-12 |
+| korridoren-overlamning | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 4 Korridoren 1 | 2026-11-12 |
+| korridoren-pass-och-avslut | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 5–6 Korridoren 2 and 3 | 2026-11-12 |
+| kombinationen | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 7 Kombinationen | 2026-11-12 |
+| snurren | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 8 Snurren | 2026-11-12 |
+| kuvertet | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 9 Kuvertet | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 
@@ -79,3 +95,4 @@ These exercises draw the leader as a blue player labelled "L". Once most coaches
 - horn-duell-hockey
 - forst-till-bollen
 - ledarvaggen-och-avslut
+- forst-till-bollen-innebandy

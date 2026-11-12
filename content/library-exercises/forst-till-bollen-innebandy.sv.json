@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "id": "e43c41c9-80a9-5945-a41c-4a252e059043",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Först till bollen – kamp och avslut",
+  "description": "Två led, ett i varje hörn vid ena kortsidan, och en ledare framför målet. Ledaren slår en halvhård passning rakt ut, och det är startsignalen. De två första spelarna tävlar om bollen; den som får kontroll försöker avsluta på målvakten i andra änden, och den andra försöker vinna tillbaka bollen.\n\nDet ska vara matchtempo och kamp, men inom rimliga gränser så att ingen skadar sig. Gå tillbaka längs långsidorna efter avslutet. Variera med höga passningar, eller att spelarna startar på knä. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Reagera på passningen – inte på ledarens rörelse."
+    },
+    {
+      "id": "cp2",
+      "text": "Skydda bollen med kroppen när du har den."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som inte fick bollen: ge aldrig upp, jaga tillbaka."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "conditioning",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren passar ut bollen. A och B springer.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.87
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.15,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.265
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.55
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.2,
+          "endX": 0.38,
+          "endY": 0.55
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.2,
+          "endX": 0.62,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A hinner först och driver mot mål. B jagar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.87
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.67
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.7,
+          "endX": 0.45,
+          "endY": 0.78,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.66,
+          "endX": 0.53,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar på målvakten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.87
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.69,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.75
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.78,
+          "endX": 0.46,
+          "endY": 0.92
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
