@@ -162,6 +162,14 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | hjulet-passningar-hockey | hockey | Hockey version of hjulet-passningar (same source) | 2026-11-12 |
 | possession-tva-zoner-hockey | hockey | Hockey version of possession-tva-zoner (same source) | 2026-11-12 |
 | alla-mot-alla-finta-hockey | hockey | Hockey version of alla-mot-alla-finta (same source) | 2026-11-12 |
+| tva-mot-ett-fram-och-tillbaka | floorball | Text description pasted by the coach (source not named; tags: etablerat anfalls- och försvarsspel, duellspel, avslut, spelbarhet). Diagram and rotation are our interpretation | 2026-11-12 |
+| tva-mot-ett-fram-och-tillbaka-hockey | hockey | Hockey version of tva-mot-ett-fram-och-tillbaka (same source) | 2026-11-12 |
+| tre-mot-tre-med-passningsjokrar | floorball | Text description pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, duellspel, avslut, spelbarhet). Joker positions, goalkeepers, no joker goals, transitions and rotation are our interpretation | 2026-11-12 |
+| tre-mot-tre-med-passningsjokrar-hockey | hockey | Hockey version of tre-mot-tre-med-passningsjokrar (same source) | 2026-11-12 |
+| tva-mot-ett-inspel-och-rollbyte | floorball | Text description pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, duellspel, avslut, spelbarhet). The three-way rotation (back → forward, centre forward → back, front forward → new ball at centre) is our interpretation | 2026-11-12 |
+| tva-mot-ett-inspel-och-rollbyte-hockey | hockey | Hockey version of tva-mot-ett-inspel-och-rollbyte (same source) | 2026-11-12 |
+| aktivera-tredje-spelaren | floorball | Text description pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, duellspel, avslut, spelbarhet). "Tar hen ett direkt avslut" read as the third player playing the ball on first time and joining; the waiting line behind each back is our interpretation | 2026-11-12 |
+| aktivera-tredje-spelaren-hockey | hockey | Hockey version of aktivera-tredje-spelaren (same source) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 

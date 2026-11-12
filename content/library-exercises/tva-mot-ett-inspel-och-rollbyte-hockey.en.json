@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "id": "146186d0-ba3b-5497-8144-0bbab187e572",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "2v1 with a pass in from the middle – everyone switches roles",
+  "description": "A 2v1 game against one goal with a goalkeeper, in groups of three. The back (D) and one forward (A) start centrally in front of goal. The other forward (B) starts with the puck at the centre line. B plays the puck in to A and joins the attack straight away, and the two forwards try to create a chance against the lone back.\n\nAs soon as the puck is out of play everyone switches: the back steps up as the forward in front of goal, B who started from the centre becomes the new back, and A goes out to the centre line, takes a new puck and starts the next attack straight away. That way everyone plays every role. With more players: have the next group wait at the centre line and change groups after a few attacks.\n\nThe role changes keep the drill unpredictable, and the goalkeeper keeps facing new situations. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Make yourself available – show for the pass in and get free of the back."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk to each other: who has the puck, who goes to goal?"
+    },
+    {
+      "id": "cp3",
+      "text": "The player on the puck takes on the back so they have to choose."
+    },
+    {
+      "id": "cp4",
+      "text": "Switch straight away when the puck is out of play – the next attack starts at once."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A gets free and B plays the puck in from the centre line.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.243,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.436
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.35,
+          "endX": 0.33,
+          "endY": 0.404
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.414,
+          "endX": 0.37,
+          "endY": 0.425
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A receives and heads for goal. B joins the attack.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.254,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.413,
+          "y": 0.436
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.443,
+          "y": 0.425,
+          "endX": 0.4,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.447,
+          "endX": 0.7,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The back D steps up to A. A passes to B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.265,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.448,
+          "y": 0.341
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.478,
+          "y": 0.341,
+          "endX": 0.68,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B shoots.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.286
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.259,
+          "endX": 0.58,
+          "endY": 0.064
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Role switch: D becomes the forward in front of goal, B becomes the back and A fetches a new puck at the centre line.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.5
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.307,
+          "endX": 0.44,
+          "endY": 0.307
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.318,
+          "endX": 0.56,
+          "endY": 0.243
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.414,
+          "endX": 0.62,
+          "endY": 0.479,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "The next attack starts at once with the new roles: A plays the puck in to D, and B is the back.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.243,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.436
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.414,
+          "endX": 0.44,
+          "endY": 0.35
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

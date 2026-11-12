@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "id": "297a223d-b589-5078-9031-3b2ce26b3b84",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Aktivera tredje spelaren – 2 mot 2 blir 3 mot 2",
+  "description": "Båda lagen anfaller samma mål med målvakt. Varje lag har två spelare på rinken och en tredje spelare – backen – vid mittlinjen, med resten av laget i ett led bakom. Övningen startar 2 mot 2 när målvakten spelar ut pucken.\n\nEtt lag får bara göra mål när det först har aktiverat sin tredje spelare: pucken spelas upp till backen vid mittlinjen, som spelar den vidare direkt och går in i spelet. Då blir det 3 mot 2. Vinner laget med två spelare pucken måste de i sin tur hitta upp till sin back vid mittlinjen – då blir det 3 mot 3 och båda lagen får göra mål.\n\nAvslut utan mål: den som sköt går tillbaka till ledet, och laget är två på rinken igen. Vid mål startar båda lagen om 2 mot 2 från målvakten. Övningen växlar hela tiden mellan 3 mot 2 och 2 mot 3: i anfall gäller det att utnyttja övertaget och hitta det bästa avslutet, i försvar att stå emot pressen och hitta vägen upp till den egna backen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta efter backen tidigt – utan den får ni inte göra mål."
+    },
+    {
+      "id": "cp2",
+      "text": "I 3 mot 2: dra på er försvarare och välj det bästa avslutet, inte det första."
+    },
+    {
+      "id": "cp3",
+      "text": "I 2 mot 3: pressa puckföraren och stäng passningen upp till motståndarnas back."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid puckvinst: hitta din egen back direkt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "transition",
+    "shooting",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten passar ut till A. Det är 2 mot 2.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.361,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.254,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.158
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.179,
+          "endX": 0.35,
+          "endY": 0.254
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar upp pucken till sin back C vid mittlinjen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.329,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.275,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.255,
+          "y": 0.332
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.255,
+          "y": 0.364,
+          "endX": 0.29,
+          "endY": 0.447
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.361,
+          "endX": 0.36,
+          "endY": 0.393
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar direkt vidare till B och går in i spelet – nu är det 3 mot 2.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.393,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.275,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.388,
+          "y": 0.469
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.418,
+          "y": 0.458,
+          "endX": 0.63,
+          "endY": 0.382
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.447,
+          "endX": 0.4,
+          "endY": 0.254,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B avslutar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.233,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.372,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.233,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.674,
+          "y": 0.257
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.654,
+          "y": 0.23,
+          "endX": 0.55,
+          "endY": 0.064
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Ingen mål: B går tillbaka till ledet. Rött vinner returen och hittar sin back F – nu blir det 3 mot 3.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.233,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.201,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.372
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.393,
+          "endX": 0.67,
+          "endY": 0.457
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.361,
+          "endX": 0.27,
+          "endY": 0.553,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

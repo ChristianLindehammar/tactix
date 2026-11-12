@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "id": "48a497ee-0a5f-58b6-a416-8cf3ed91ecc5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "2 mot 1 med inspel från mitten – alla byter roll",
+  "description": "Spel 2 mot 1 mot ett mål med målvakt, i grupper om tre. Backen (D) och en forward (A) startar centralt framför mål. Den andra forwarden (B) står med pucken vid mittlinjen. B spelar in pucken till A och ansluter direkt till anfallet, och de två forwarderna försöker skapa en målchans mot den ensamma backen.\n\nSå fort pucken är ur spel byter alla roll: backen kliver upp som forward framför mål, B som startade från mittlinjen blir ny back, och A åker ut till mittlinjen, tar en ny puck och startar nästa anfall direkt. På så sätt får alla prova alla roller. Med fler spelare: låt nästa grupp vänta vid mittlinjen och byt grupp efter några anfall.\n\nRollbytena gör övningen oförutsägbar, och målvakten får hela tiden nya lägen att hantera. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör dig spelbar – visa dig för inspelet, ta dig loss från backen."
+    },
+    {
+      "id": "cp2",
+      "text": "Prata med varandra: vem har pucken, vem går mot mål?"
+    },
+    {
+      "id": "cp3",
+      "text": "Den med pucken utmanar backen så att hen måste välja."
+    },
+    {
+      "id": "cp4",
+      "text": "Ställ om direkt när pucken är ur spel – nästa anfall startar på en gång."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A gör sig spelbar och B spelar in pucken från mittlinjen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.243,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.436
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.35,
+          "endX": 0.33,
+          "endY": 0.404
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.414,
+          "endX": 0.37,
+          "endY": 0.425
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar emot och går mot mål. B ansluter till anfallet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.254,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.413,
+          "y": 0.436
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.443,
+          "y": 0.425,
+          "endX": 0.4,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.447,
+          "endX": 0.7,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Backen D går mot A. A passar till B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.265,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.448,
+          "y": 0.341
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.478,
+          "y": 0.341,
+          "endX": 0.68,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B avslutar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.286
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.259,
+          "endX": 0.58,
+          "endY": 0.064
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Rollbyte: D blir forward framför mål, B blir back och A hämtar en ny puck vid mittlinjen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.5
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.307,
+          "endX": 0.44,
+          "endY": 0.307
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.318,
+          "endX": 0.56,
+          "endY": 0.243
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.414,
+          "endX": 0.62,
+          "endY": 0.479,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "Nästa anfall direkt med nya roller: A spelar in till D, och B är back.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.243,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.436
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.414,
+          "endX": 0.44,
+          "endY": 0.35
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "id": "3b047fae-d963-548a-8297-602a022eddf6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "2 mot 1 med inspel från mitten – alla byter roll",
+  "description": "Spel 2 mot 1 mot ett mål med målvakt, i grupper om tre. Backen (D) och en forward (A) startar centralt framför mål. Den andra forwarden (B) står med bollen vid mittplan. B spelar in bollen till A och ansluter direkt till anfallet, och de två forwarderna försöker skapa en målchans mot den ensamma backen.\n\nSå fort bollen är ur spel byter alla roll: backen kliver upp som forward framför mål, B som startade från mittplan blir ny back, och A åker ut till mittplan, tar en ny boll och startar nästa anfall direkt. På så sätt får alla prova alla roller. Med fler spelare: låt nästa grupp vänta vid mittplan och byt grupp efter några anfall.\n\nRollbytena gör övningen oförutsägbar, och målvakten får hela tiden nya lägen att hantera. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör dig spelbar – visa dig för inspelet, ta dig loss från backen."
+    },
+    {
+      "id": "cp2",
+      "text": "Prata med varandra: vem har bollen, vem går mot mål?"
+    },
+    {
+      "id": "cp3",
+      "text": "Bolltagaren utmanar backen så att hen måste välja."
+    },
+    {
+      "id": "cp4",
+      "text": "Ställ om direkt när bollen är ur spel – nästa anfall startar på en gång."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A gör sig spelbar och B spelar in bollen från mittplan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.36,
+          "endX": 0.33,
+          "endY": 0.41
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.37,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar emot och går mot mål. B ansluter till anfallet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.413,
+          "y": 0.44
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.443,
+          "y": 0.43,
+          "endX": 0.4,
+          "endY": 0.35,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.45,
+          "endX": 0.7,
+          "endY": 0.36,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Backen D går mot A. A passar till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.28,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.448,
+          "y": 0.351
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.478,
+          "y": 0.351,
+          "endX": 0.68,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.275,
+          "endX": 0.58,
+          "endY": 0.09
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Rollbyte: D blir forward framför mål, B blir back och A hämtar en ny boll vid mittplan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.5
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.32,
+          "endX": 0.44,
+          "endY": 0.32
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.33,
+          "endX": 0.56,
+          "endY": 0.26
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.42,
+          "endX": 0.62,
+          "endY": 0.48,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "Nästa anfall direkt med nya roller: A spelar in till D, och B är back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.44,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

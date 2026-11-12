@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 2,
+  "id": "bd79155b-36e1-581a-aa5f-bec0f17ad5d6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Aktivera tredje spelaren – 2 mot 2 blir 3 mot 2",
+  "description": "Båda lagen anfaller samma mål med målvakt. Varje lag har två spelare på planen och en tredje spelare – backen – vid mittlinjen, med resten av laget i ett led bakom. Övningen startar 2 mot 2 när målvakten kastar ut bollen.\n\nEtt lag får bara göra mål när det först har aktiverat sin tredje spelare: bollen spelas upp till backen vid mittlinjen, som spelar den vidare direkt och går in i spelet. Då blir det 3 mot 2. Vinner laget med två spelare bollen måste de i sin tur hitta upp till sin back vid mittlinjen – då blir det 3 mot 3 och båda lagen får göra mål.\n\nAvslut utan mål: den som sköt går tillbaka till ledet, och laget är två på planen igen. Vid mål startar båda lagen om 2 mot 2 från målvakten. Övningen växlar hela tiden mellan 3 mot 2 och 2 mot 3: i anfall gäller det att utnyttja övertaget och hitta det bästa avslutet, i försvar att stå emot pressen och hitta vägen upp till den egna backen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta efter backen tidigt – utan den får ni inte göra mål."
+    },
+    {
+      "id": "cp2",
+      "text": "I 3 mot 2: dra på er försvarare och välj det bästa avslutet, inte det första."
+    },
+    {
+      "id": "cp3",
+      "text": "I 2 mot 3: pressa bollhållaren och stäng passningen upp till motståndarnas back."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid bollvinst: hitta din egen back direkt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "transition",
+    "shooting",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut till A. Det är 2 mot 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.37,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.18
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.2,
+          "endX": 0.35,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar upp bollen till sin back C vid mittlinjen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.29,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.255,
+          "y": 0.343
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.255,
+          "y": 0.373,
+          "endX": 0.29,
+          "endY": 0.45
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.37,
+          "endX": 0.36,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar direkt vidare till B och går in i spelet – nu är det 3 mot 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.29,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.388,
+          "y": 0.471
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.418,
+          "y": 0.461,
+          "endX": 0.63,
+          "endY": 0.39
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.45,
+          "endX": 0.4,
+          "endY": 0.27,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.25,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.25,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.674,
+          "y": 0.273
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.654,
+          "y": 0.248,
+          "endX": 0.55,
+          "endY": 0.09
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Ingen mål: B går tillbaka till ledet. Rött vinner returen och hittar sin back F – nu blir det 3 mot 3.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "cq",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "fq",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.25,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.4,
+          "endX": 0.67,
+          "endY": 0.46
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.37,
+          "endX": 0.27,
+          "endY": 0.55,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

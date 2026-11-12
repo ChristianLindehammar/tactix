@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "id": "b7b59ed2-4220-598a-b19e-e30b244422e4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "2v1 with a pass in from the middle – everyone switches roles",
+  "description": "A 2v1 game against one goal with a goalkeeper, in groups of three. The back (D) and one forward (A) start centrally in front of goal. The other forward (B) starts with the ball at the centre line. B plays the ball in to A and joins the attack straight away, and the two forwards try to create a chance against the lone back.\n\nAs soon as the ball is out of play everyone switches: the back steps up as the forward in front of goal, B who started from the centre becomes the new back, and A goes out to the centre line, takes a new ball and starts the next attack straight away. That way everyone plays every role. With more players: have the next group wait at the centre line and change groups after a few attacks.\n\nThe role changes keep the drill unpredictable, and the goalkeeper keeps facing new situations. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Make yourself available – show for the pass in and get free of the back."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk to each other: who has the ball, who goes to goal?"
+    },
+    {
+      "id": "cp3",
+      "text": "The player on the ball takes on the back so they have to choose."
+    },
+    {
+      "id": "cp4",
+      "text": "Switch straight away when the ball is out of play – the next attack starts at once."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A gets free and B plays the ball in from the centre line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.36,
+          "endX": 0.33,
+          "endY": 0.41
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.37,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A receives and heads for goal. B joins the attack.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.413,
+          "y": 0.44
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.443,
+          "y": 0.43,
+          "endX": 0.4,
+          "endY": 0.35,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.45,
+          "endX": 0.7,
+          "endY": 0.36,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The back D steps up to A. A passes to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.28,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.448,
+          "y": 0.351
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.478,
+          "y": 0.351,
+          "endX": 0.68,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.275,
+          "endX": 0.58,
+          "endY": 0.09
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Role switch: D becomes the forward in front of goal, B becomes the back and A fetches a new ball at the centre line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.5
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.32,
+          "endX": 0.44,
+          "endY": 0.32
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.33,
+          "endX": 0.56,
+          "endY": 0.26
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.42,
+          "endX": 0.62,
+          "endY": 0.48,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "The next attack starts at once with the new roles: A plays the ball in to D, and B is the back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.44,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
