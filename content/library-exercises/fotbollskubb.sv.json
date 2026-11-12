@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "bfced4ee-7c84-5c85-a021-516b9054dee9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fotbollskubb",
+  "description": "Kubb med fotboll. Två lag står på var sin baslinje med lika många koner utställda längs linjen. Lagen turas om att passa, och målet är att passa omkull motståndarnas koner.\n\nTräffar man en kon kastar motståndarlaget ut den på den andra planhalvan, och den konen måste passas omkull först innan man får sikta på konerna på baslinjen. Står en utkastad kon kvar när laget har passat klart får motståndarna flytta fram sin baslinje till den. Laget som först får ner alla motståndarens koner vinner. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa med insidan – det är säkrare än tårna."
+    },
+    {
+      "id": "cp2",
+      "text": "Stödfoten bredvid bollen och pekande mot målet."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta god tid på dig och sikta."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar mot en röd kon och träffar.",
+      "markers": [
+        {
+          "id": "rc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "rc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.2
+        },
+        {
+          "id": "rc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "rc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.2
+        },
+        {
+          "id": "bc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.8
+        },
+        {
+          "id": "bc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.8
+        },
+        {
+          "id": "bc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.8
+        },
+        {
+          "id": "bc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.2
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.8
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.8
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.7,
+          "endX": 0.61,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Röd kastar ut konen på blås planhalva. D måste nu passa omkull den först.",
+      "markers": [
+        {
+          "id": "rc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "rc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.2
+        },
+        {
+          "id": "rc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "rc3",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.62
+        },
+        {
+          "id": "bc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.8
+        },
+        {
+          "id": "bc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.8
+        },
+        {
+          "id": "bc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.8
+        },
+        {
+          "id": "bc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.2
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.8
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.8
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.57
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

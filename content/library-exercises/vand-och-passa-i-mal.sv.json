@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "id": "e92f3e0d-8edb-5fd8-a7ce-22bf54f4838a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ta emot, vänd och passa i mål",
+  "description": "Två koner på en linje mot ett mål, ungefär 10 meter isär. Ett led står vid den bortre konen och en spelare vid den närmre. Den första i ledet passar till spelaren vid konen, som tar emot, vänder med bollen och passar den i mål. Passaren springer fram och tar mottagarens plats; mottagaren hämtar bollen och ställer sig sist i ledet.\n\nVariant utan mål: ställ en spelare där målet är. Den får passningen och driver bollen tillbaka till ledet. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta över axeln innan bollen kommer – var är målet?"
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med insidan och vänd åt sidan, bort från ledet."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa lugnt och exakt i mål – det är ingen skottövning."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B vid konen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.64,
+          "endX": 0.5,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B vänder med bollen. A springer fram till konen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.48,
+          "endX": 0.62,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.42,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar i mål. A väntar på nästa passning.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.54,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.26,
+          "endX": 0.52,
+          "endY": 0.045
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 2,
+  "id": "4c7427e4-1d9d-5d44-9d2b-37ae406da7ac",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "5v5 match",
+  "description": "A normal match with four outfield players plus a goalkeeper on each side, using small 5-a-side goals on a small pitch. With lots of children, play on two or three pitches at once.\n\nWhen a team scores, the team that conceded restarts with the ball, and the scoring team runs back into its own half before play continues. Change goalkeeper every 2–3 minutes so everyone gets a go. With several teams, rotate halfway through so nobody plays the same team the whole time. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dare to dribble and shoot – the match is where everything is practised for real."
+    },
+    {
+      "id": "cp2",
+      "text": "Help out defending when the other team has the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Goalkeeper: restart with a pass or a throw to a team-mate who is free."
+    },
+    {
+      "id": "cp4",
+      "text": "Cheer each other on – praise the attempts, not just the goals."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "attack",
+    "defence",
+    "goalkeeping"
+  ],
+  "phase": "game",
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue attacks upwards. C passes to D, who shoots.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.25
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.38,
+          "endX": 0.61,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.23,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Goal! Red restarts from its goalkeeper, and blue runs back into its own half.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.25
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.2
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.42
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.15,
+          "endX": 0.36,
+          "endY": 0.23
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.42,
+          "endX": 0.42,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.28,
+          "endX": 0.6,
+          "endY": 0.56
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

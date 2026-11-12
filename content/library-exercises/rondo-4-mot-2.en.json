@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "id": "e4c658d2-3dae-5bb6-972d-ed199199f061",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Rondo 4v2",
+  "description": "Four players on the edges of a square, about 12 × 12 metres, keep the ball away from two players in the middle. The outside players may move along their side but not step into the square. Play with two touches at most.\n\nWhen a middle player wins the ball, or it goes out, the player who made the mistake swaps with the middle player who has been in longest. Count passes in a row – ten in a row scores a point. A pass between the two middle players counts double. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show for the ball carrier – stand where there is a passing lane between the middle players."
+    },
+    {
+      "id": "cp2",
+      "text": "Receive on the foot furthest from the defender and open your body to the next pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Look for the pass through the middle – it takes out both defenders."
+    },
+    {
+      "id": "cp4",
+      "text": "Middle players: one presses the ball carrier, the other closes the pass through the middle."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "defence"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. E presses B straight away.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.43,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.58,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.33,
+          "endX": 0.8,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.45,
+          "endX": 0.66,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes between the defenders to D – a pass through the middle.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "F"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.77,
+          "y": 0.47,
+          "endX": 0.22,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D plays on to C. If E or F wins the ball, they swap with the player who lost it.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.57,
+          "label": "F"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.59,
+          "endX": 0.44,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

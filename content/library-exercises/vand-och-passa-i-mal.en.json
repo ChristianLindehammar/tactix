@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "id": "b1026cdc-78b4-56f9-81eb-6557af2653e6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Receive, turn and pass into the goal",
+  "description": "Two cones in a line towards a goal, about 10 metres apart. A line of players stands at the far cone and one player at the near cone. The first in line passes to the player at the cone, who receives, turns with the ball and passes it into the goal. The passer runs forward and takes the receiver's place; the receiver fetches the ball and joins the back of the line.\n\nVariation without a goal: put a player where the goal is. They receive the pass and dribble the ball back to the line. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look over your shoulder before the ball arrives – where is the goal?"
+    },
+    {
+      "id": "cp2",
+      "text": "Receive with the inside of your foot and turn to the side, away from the line."
+    },
+    {
+      "id": "cp3",
+      "text": "Pass calmly and accurately into the goal – it is not a shooting drill."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B at the cone.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.64,
+          "endX": 0.5,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B turns with the ball. A runs forward to the cone.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.48,
+          "endX": 0.62,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.42,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes into the goal. A waits for the next pass.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.75
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.54,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.26,
+          "endX": 0.52,
+          "endY": 0.045
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

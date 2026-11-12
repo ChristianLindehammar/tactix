@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "097cdb94-2332-52c5-8d79-0dc66eabdbc5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Diagonalpassningar och avslut",
+  "description": "Tre koner i sicksack upp mot ett mål, en spelare vid varje kon och resten i led vid den första. Den första passar diagonalt till kon 2, som passar diagonalt vidare till kon 3. Spelaren vid kon 3 tar emot och avslutar på mål.\n\nEfter din passning springer du till nästa kon. Den som har skjutit hämtar bollen och ställer sig i ledet vid första konen. Låt barnen turas om att stå i mål. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa med insidan och sikta på kompisens fötter."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot bollen så att den hamnar framför dig i den riktning du ska spela."
+    },
+    {
+      "id": "cp3",
+      "text": "Spring direkt efter passningen till nästa kon."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar diagonalt till B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.71,
+          "endX": 0.39,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar diagonalt till C. A springer till B:s kon.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.53
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.51,
+          "endX": 0.58,
+          "endY": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.74,
+          "endX": 0.42,
+          "endY": 0.65
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C avslutar. B springer till C:s kon.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.29,
+          "endX": 0.55,
+          "endY": 0.035
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.55,
+          "endX": 0.55,
+          "endY": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

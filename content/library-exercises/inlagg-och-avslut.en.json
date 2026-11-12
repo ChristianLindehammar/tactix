@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "id": "d4760c08-9be1-51c1-b196-c95a3b981440",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Crossing and finishing",
+  "description": "A winger dribbles along the touchline towards the byline and crosses. Two forwards start centrally outside the penalty area and time their runs: one to the near post and one to the far post. Finish against a goalkeeper.\n\nRun it from both wings. Add a defender when the players are ready, and vary the cross: driven along the ground, lofted to the far post, or cut back to the penalty spot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Winger: look up before crossing and play the ball into the space the forwards are running into."
+    },
+    {
+      "id": "cp2",
+      "text": "Forwards: hold your run so you arrive in the space at the same time as the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "One goes to the near post, one to the far post – never on the same line."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish with the inside of the foot, or head the ball down towards the ground."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles down the wing. B and C start their runs into the area.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.29,
+          "endX": 0.86,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.38,
+          "endX": 0.45,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.42,
+          "endX": 0.56,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A crosses. C attacks the near post, B the far post.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.13,
+          "endX": 0.64,
+          "endY": 0.14,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.25,
+          "endX": 0.62,
+          "endY": 0.15
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.22,
+          "endX": 0.38,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C meets the cross at the near post and finishes.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.11,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

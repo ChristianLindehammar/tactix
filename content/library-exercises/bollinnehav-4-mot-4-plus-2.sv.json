@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 2,
+  "id": "dc8a686b-6361-5751-8a80-68136779d975",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bollinnehav 4 mot 4 + 2 jokrar",
+  "description": "Två lag om fyra spelar inne i en ruta på ungefär 25 × 25 meter. Två jokrar står på var sin sida utanför rutan och spelar alltid med laget som har bollen, så det blir 6 mot 4. Laget med bollen får en poäng för sex passningar i rad. Jokrarna får två touch och får inte passa varandra.\n\nVinner det andra laget bollen är det direkt deras tur – och jokrarna byter sida i huvudet. Byt jokrar efter några minuter. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skapa bredd och djup – stå aldrig två på samma linje."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd jokern för att komma ur press, och sök sedan en spelare på andra sidan."
+    },
+    {
+      "id": "cp3",
+      "text": "Vid bolltapp: pressa direkt, de första sekunderna avgör."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid bollvinst: första passningen bort från trycket, gärna till en joker."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå har bollen. A passar till B.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.63
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.31,
+          "endX": 0.64,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar till jokern som lägger vidare till D – blå behåller bollen mot fyra.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.38
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.63
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.39,
+          "endX": 0.88,
+          "endY": 0.46
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.55,
+          "endX": 0.74,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Röd vinner bollen och spelar direkt till en joker. Nu är det röds tur.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.38
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.72
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.49,
+          "y": 0.73
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.14,
+          "endY": 0.53
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

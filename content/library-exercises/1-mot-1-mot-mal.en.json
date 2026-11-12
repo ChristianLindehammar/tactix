@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "id": "0fb6d9fb-1411-5603-8baa-a0aecf8cb6d3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "1v1 to goal",
+  "description": "A defender stands by the goal and an attacker about 25 metres out, between two cones. The defender plays the ball to the attacker and steps out straight away to stop them. The attacker tries to get past and finish; the defender steers the attacker away or wins the ball. Use a goalkeeper if you have one.\n\nIf the defender wins the ball, they can score by dribbling it over the cone line. Use two lines and swap roles after each go. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: take your first touch forward and run at the defender."
+    },
+    {
+      "id": "cp2",
+      "text": "Attack: make your move when the defender is close – not too early."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence: get out quickly, slow down for the last few metres and stand side-on on your toes."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: steer the attacker to the side and away from goal."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "D passes out to A and steps out straight away to meet them.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.49,
+          "y": 0.21
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A takes the ball forward at D. D slows down and turns side-on.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.27,
+          "endX": 0.53,
+          "endY": 0.36
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.41,
+          "endX": 0.5,
+          "endY": 0.33,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A goes past on the outside and finishes.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.14,
+          "endX": 0.45,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

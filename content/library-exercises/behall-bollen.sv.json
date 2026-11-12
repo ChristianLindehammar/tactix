@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "d818f735-d27b-5c16-a38d-9517b8cde900",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Behåll bollen",
+  "description": "Två lag och en boll inne i en ruta, utan mål. Laget med bollen ska hålla den inom laget så länge som möjligt, och det andra laget försöker ta den. Tar de bollen är det deras tur.\n\nBlir det rörigt eller många barn, dela upp i två rutor och spela 2 mot 2 eller 3 mot 3. Räkna gärna passningar i rad högt tillsammans. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spring till en plats där bollhållaren kan passa dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå inte bakom en motståndare."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta upp innan du passar – vem är fri?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. C springer ut till en fri yta.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.57
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.35,
+          "endX": 0.66,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.7,
+          "endX": 0.72,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar till C. A rör sig så att hen blir passningsbar.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.45
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.57
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.4,
+          "endX": 0.74,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.39,
+          "endX": 0.38,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar till A – blå behåller bollen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.38
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.46
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.65,
+          "endX": 0.42,
+          "endY": 0.56
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

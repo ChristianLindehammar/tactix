@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "659ebad0-5e41-5622-bccc-cf9b11fec02e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Football kubb",
+  "description": "Kubb played with a football. Two teams stand on opposite base lines, with the same number of cones set out along each line. The teams take turns to pass, trying to knock over the other team's cones.\n\nIf you hit a cone, the other team throws it out into the opposite half, and that cone must be knocked over before you may aim at the cones on the base line. If a thrown-out cone is still standing when a team has finished its turn, the opponents move their base line up to it. The first team to knock over all the other team's cones wins. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass with the inside of your foot – it is more accurate than your toes."
+    },
+    {
+      "id": "cp2",
+      "text": "Standing foot beside the ball and pointing at the target."
+    },
+    {
+      "id": "cp3",
+      "text": "Take your time and aim."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes at a red cone and hits it.",
+      "markers": [
+        {
+          "id": "rc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "rc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.2
+        },
+        {
+          "id": "rc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "rc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.2
+        },
+        {
+          "id": "bc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.8
+        },
+        {
+          "id": "bc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.8
+        },
+        {
+          "id": "bc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.8
+        },
+        {
+          "id": "bc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.2
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.8
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.8
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.7,
+          "endX": 0.61,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Red throws the cone out into blue's half. D now has to knock that one over first.",
+      "markers": [
+        {
+          "id": "rc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "rc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.2
+        },
+        {
+          "id": "rc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "rc3",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.62
+        },
+        {
+          "id": "bc1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.8
+        },
+        {
+          "id": "bc2",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.8
+        },
+        {
+          "id": "bc3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.8
+        },
+        {
+          "id": "bc4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.2
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.8
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.8
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.57
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

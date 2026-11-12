@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "id": "bc365e05-3204-54c8-a69d-eef44290c89b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Give-and-go with the coach and shoot",
+  "description": "The players stand in a line, each with a ball. The coach stands between the line and the goal. The first player passes to the coach, runs forward, gets the ball back and shoots at goal. Fetch your ball and join the back of the line.\n\nVariations: dribble a slalom or run through an agility ladder before the pass. Let the player who has just shot become goalkeeper – the old goalkeeper takes their ball and joins the line. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass with the inside of your foot, straight to the coach."
+    },
+    {
+      "id": "cp2",
+      "text": "Run forward as soon as you have passed."
+    },
+    {
+      "id": "cp3",
+      "text": "Shoot first time, or take one touch forward first."
+    },
+    {
+      "id": "cp4",
+      "text": "Goalkeeper: be ready with your hands out in front."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to the coach.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.61,
+          "endX": 0.5,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A runs forward and the coach plays the ball in front of A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.45,
+          "endX": 0.63,
+          "endY": 0.36
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots at goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.28,
+          "endX": 0.56,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

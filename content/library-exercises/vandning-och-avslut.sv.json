@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "6bf39d0f-5405-5162-8c87-971a97e03baf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Vändning och avslut",
+  "description": "En anfallare står med ryggen mot mål vid straffområdets kant, med en försvarare bakom sig. En passare spelar bollen till anfallarens fötter. Anfallaren känner efter var försvararen står, vänder upp åt den fria sidan och avslutar. Försvararen får först bara följa med, och sedan försöka på riktigt.\n\nByt roller efter några försök: passare blir anfallare, anfallare blir försvarare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta över axeln innan bollen kommer – vet var försvararen är."
+    },
+    {
+      "id": "cp2",
+      "text": "Känn försvararen med armen eller ryggen och vänd åt det håll där försvararen inte står."
+    },
+    {
+      "id": "cp3",
+      "text": "Första touchen i vändningen ska ta dig förbi – inte bara runt."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta snabbt efter vändningen, innan försvararen hinner tillbaka."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passar till A som står med ryggen mot mål. D står tätt bakom.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.53
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.23,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.5,
+          "endX": 0.52,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar med sig bollen åt sidan i första touchen och vänder upp bort från D.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.28,
+          "endX": 0.67,
+          "endY": 0.21,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar på mål innan D hinner ikapp.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.18
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.155,
+          "endX": 0.55,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

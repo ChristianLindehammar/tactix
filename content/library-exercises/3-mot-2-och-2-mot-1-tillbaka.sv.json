@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 2,
+  "id": "042a71a1-3059-5532-8f0c-5f1e72c4401e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "3 mot 2 – och 2 mot 1 tillbaka",
+  "description": "Tre anfallare startar vid mittlinjen och anfaller ett mål med målvakt mot två försvarare. När anfallet är slut – mål, räddning eller bollvinst – kontrar de två försvararna direkt mot det andra målet. Den av anfallarna som rörde bollen sist får springa hem och försvara, så det blir 2 mot 1 åt andra hållet.\n\nHa led vid mittlinjen och vid målen, så nästa grupp kan starta direkt. Spela på en halv plan för yngre spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: bredd med två ytterspelare, och gå mot försvarare för att binda dem."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela till den fria spelaren innan försvararna hinner flytta över."
+    },
+    {
+      "id": "cp3",
+      "text": "Omställning: de två kontrar direkt – den första passningen framåt avgör."
+    },
+    {
+      "id": "cp4",
+      "text": "Den som springer hem: stör bollhållaren och tvinga fram en passning tidigt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "transition",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B driver mot försvararna medan A och C springer upp på kanterna.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.55,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.25,
+          "label": "E"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.5,
+          "endX": 0.5,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.51,
+          "endX": 0.25,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.51,
+          "endX": 0.75,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar till C som är fri och avslutar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.41
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.28,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.38,
+          "endX": 0.72,
+          "endY": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.19,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten slår ut till E. D och E kontrar mot andra målet, och B springer hem för att försvara.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.13,
+          "endX": 0.66,
+          "endY": 0.38
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.52,
+          "endX": 0.66,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.38,
+          "endY": 0.7
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.7
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

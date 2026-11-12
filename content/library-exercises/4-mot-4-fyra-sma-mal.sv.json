@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "id": "c379621b-f01c-5842-9540-575b0059e36f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "4 mot 4 mot fyra små mål",
+  "description": "Smålagsspel 4 mot 4 utan målvakter på en yta på ungefär 30 × 20 meter. Varje lag anfaller mot två små mål på motståndarens kortsida, ett i varje hörn. När motståndaren täcker det ena målet ska laget byta spelsida och anfalla det andra.\n\nSpela korta perioder på 3–4 minuter med vila emellan. Gör det svårare genom att bara låta mål räknas efter ett byte av spelsida. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör planen stor när ni har bollen – en spelare på varje kant."
+    },
+    {
+      "id": "cp2",
+      "text": "Ser du att motståndarna flyttar över? Byt sida med en eller två snabba passningar."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: flytta ihop mot bollsidan och täck det närmaste målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid bollvinst: titta direkt efter det mål som är öppet."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "phase": "game",
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå anfaller uppåt. Röd flyttar över mot bollsidan och stänger det vänstra målet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.06
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.47
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.3
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.5,
+          "endX": 0.35,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar till B som byter spelsida med en passning till D.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.06
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.55
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.28,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.53
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.3
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.58,
+          "endX": 0.58,
+          "endY": 0.58
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.52,
+          "endX": 0.78,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D tar med sig bollen och avslutar i det öppna målet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.06
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.06
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.94,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.2
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.53
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.3
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.24
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.4
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.17,
+          "endX": 0.78,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

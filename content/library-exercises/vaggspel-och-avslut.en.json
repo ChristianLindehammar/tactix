@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "id": "965d673e-0e72-5739-a934-238083376f8b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Give-and-go and finish",
+  "description": "The players form two lines: one with balls outside the penalty area and one with wall players diagonally ahead. A cone in front of the area stands in for a defender. The first player passes to the wall, runs past the cone, gets the ball back in stride and finishes against a goalkeeper.\n\nSwap lines after each go. Vary it with one-touch finishes, the weaker foot, or a passive defender instead of the cone. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass along the ground to the wall's foot so they can return it first time."
+    },
+    {
+      "id": "cp2",
+      "text": "Start your run as the pass is played – not after."
+    },
+    {
+      "id": "cp3",
+      "text": "Wall: play the ball in front of the runner, in their running direction."
+    },
+    {
+      "id": "cp4",
+      "text": "Look up at the goalkeeper before you shoot and aim low into the corners."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B, the wall player.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.44
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.42,
+          "endX": 0.57,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A runs past the cone and B plays the ball back into A's run.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.25
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.44,
+          "endX": 0.31,
+          "endY": 0.26,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.23,
+          "endX": 0.38,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A finishes. A takes the wall's place and B joins the back of the ball line.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.165
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.135,
+          "endX": 0.45,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

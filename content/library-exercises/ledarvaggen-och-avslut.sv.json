@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "id": "0560895c-716a-5371-8620-ff391650e0c9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Väggspel med ledaren och avslut",
+  "description": "Spelarna står i ett led med var sin boll. Ledaren står mellan ledet och målet. Den första spelaren passar till ledaren, springer framåt och får tillbaka bollen, och avslutar sedan på mål. Hämta bollen och ställ dig sist i ledet.\n\nVarianter: dribbla en slalombana eller spring genom en repstege innan passningen. Låt den som just skjutit bli målvakt – den gamla målvakten tar sin boll och ställer sig sist. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa med insidan av foten, rakt på ledaren."
+    },
+    {
+      "id": "cp2",
+      "text": "Spring framåt direkt efter passningen."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut gärna direkt, eller ta en touch framåt först."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakten: stå redo med händerna framme."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till ledaren.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.61,
+          "endX": 0.5,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A springer framåt och ledaren lägger bollen framför A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.45,
+          "endX": 0.63,
+          "endY": 0.36
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar på mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.28,
+          "endX": 0.56,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

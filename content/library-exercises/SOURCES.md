@@ -47,6 +47,26 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | ytterzonen-hockey | hockey | Hockey version of ytterzonen (same source) | 2026-11-12 |
 | zon-till-zon-hockey | hockey | Hockey version of zon-till-zon (same source) | 2026-11-12 |
 | pressa-pressen-hockey | hockey | Hockey version of pressa-pressen (same source) | 2026-11-12 |
+| rondo-4-mot-2 | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan (rondo 4v2) https://www.renderfoot.com/blog/u12-soccer-practice-plan and sportsessionplanner.com rondo drills https://www.sportsessionplanner.com/s/cdvNh/Rondo-Drills.html | 2026-11-12 |
+| passa-och-folj | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U8 practice plan https://www.renderfoot.com/de/blog/u8-soccer-practice-plan | 2026-11-12 |
+| 1-mot-1-mot-mal | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U10 practice plan https://www.renderfoot.com/de/blog/u10-soccer-practice-plan | 2026-11-12 |
+| vaggspel-och-avslut | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan https://www.renderfoot.com/blog/u12-soccer-practice-plan | 2026-11-12 |
+| inlagg-och-avslut | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan https://www.renderfoot.com/blog/u12-soccer-practice-plan | 2026-11-12 |
+| 4-mot-4-fyra-sma-mal | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U10 practice plan (4v4 with cone goals) https://www.renderfoot.com/de/blog/u10-soccer-practice-plan | 2026-11-12 |
+| bollinnehav-4-mot-4-plus-2 | soccer | Classic coaching game, common knowledge; checked against SvFF spelformsutbildning 5 mot 5 (PDF) https://utbildning.sisuforlag.se/globalassets/fotboll/publik/spelarutbildning/utbildning/2022/handledning-spelformsutbildning-5-mot-5-2024.pdf | 2026-11-12 |
+| 3-mot-2-och-2-mot-1-tillbaka | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan https://www.renderfoot.com/blog/u12-soccer-practice-plan | 2026-11-12 |
+| uppbyggnad-fran-malvakt | soccer | Classic coaching game, common knowledge; checked against SvFF spelformsutbildning 5 mot 5 (PDF) https://utbildning.sisuforlag.se/globalassets/fotboll/publik/spelarutbildning/utbildning/2022/handledning-spelformsutbildning-5-mot-5-2024.pdf | 2026-11-12 |
+| vandning-och-avslut | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan https://www.renderfoot.com/blog/u12-soccer-practice-plan | 2026-11-12 |
+| matchspel-5-mot-5 | soccer | The coach's own training plans for HJIK P2019 ("Träning v21–v22 (Hage 1) and v33–v41 (Matchspel)", .pptx) | 2026-11-12 |
+| forst-till-bollen | soccer | The coach's own training plans for HJIK P2019 ("Träning v21 (Hage 2, slalom) and v22 (Hage 2, sprint race)", .pptx) | 2026-11-12 |
+| slalom-och-avslut | soccer | The coach's own training plans for HJIK P2019 ("Träning v21 (Hage 3)", .pptx) | 2026-11-12 |
+| ledarvaggen-och-avslut | soccer | The coach's own training plans for HJIK P2019 ("Träning v22 (Hage 3), v33–v34 (Hage 3), v39–v40 (Hage 3), v41 (Hage 3)", .pptx) | 2026-11-12 |
+| vand-och-passa-i-mal | soccer | The coach's own training plans for HJIK P2019 ("Träning v22 (Hage 4)", .pptx) | 2026-11-12 |
+| driv-och-passa-tre-led | soccer | The coach's own training plans for HJIK P2019 ("Träning v35–v36 (Hage 1)", .pptx) | 2026-11-12 |
+| diagonalpassningar-och-avslut | soccer | The coach's own training plans for HJIK P2019 ("Träning v35–v38 (Hage 3)", .pptx) | 2026-11-12 |
+| ajaxtriangeln | soccer | The coach's own training plans for HJIK P2019 ("Träning v37–v41 (Hage 1)", .pptx) | 2026-11-12 |
+| behall-bollen | soccer | The coach's own training plans for HJIK P2019 ("Träning v33–v41 (Hage 4)", .pptx) | 2026-11-12 |
+| fotbollskubb | soccer | The coach's own training plans for HJIK P2019 ("Träning v41 (Hage 2)", .pptx) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 
@@ -57,3 +77,5 @@ These exercises draw the leader as a blue player labelled "L". Once most coaches
 - sargduellen
 - spelavstand-3v2-hockey
 - horn-duell-hockey
+- forst-till-bollen
+- ledarvaggen-och-avslut

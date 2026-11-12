@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "id": "2d141448-3ea5-5df6-8290-5ebb2ff27af4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Passa och följ i fyrkant",
+  "description": "Fyra koner i en fyrkant, ungefär 15 × 15 meter, med två eller flera spelare vid varje kon. Den första spelaren passar till nästa kon och springer efter sin passning och ställer sig sist där. Mottagaren tar med sig bollen åt rätt håll och passar vidare till nästa kon, och så vidare runt fyrkanten.\n\nByt håll efter en stund. Gör det svårare med en touch, med svagare foten, eller med två bollar samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa med insidan och stödfoten pekande mot mottagaren."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med första touchen i den riktning du ska spela nästa passning."
+    },
+    {
+      "id": "cp3",
+      "text": "Möt bollen – vänta inte på att den ska komma fram."
+    },
+    {
+      "id": "cp4",
+      "text": "Spring direkt efter din passning, så flödet aldrig stannar."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och springer efter sin passning.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.25,
+          "endX": 0.67,
+          "endY": 0.25
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.19,
+          "endX": 0.76,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar med bollen mot nästa kon och passar till C, och följer sin passning.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.36,
+          "endX": 0.75,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.29,
+          "endX": 0.9,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar vidare till D och följer – så fortsätter det runt fyrkanten.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.645,
+          "y": 0.65
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.65,
+          "endX": 0.33,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.69,
+          "endX": 0.23,
+          "endY": 0.79
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

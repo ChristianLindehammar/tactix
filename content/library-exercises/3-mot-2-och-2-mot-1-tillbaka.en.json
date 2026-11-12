@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 2,
+  "id": "81b56fe2-641f-5613-8c34-94207900dc5a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "3v2 – and 2v1 back",
+  "description": "Three attackers start at the halfway line and attack a goal with a goalkeeper against two defenders. When the attack ends – a goal, a save or a turnover – the two defenders counter straight away towards the other goal. The attacker who touched the ball last runs back to defend, making it 2v1 the other way.\n\nKeep lines at the halfway line and by the goals so the next group can go straight away. Use half a pitch for younger players. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: width with two wide players, and run at defenders to pin them."
+    },
+    {
+      "id": "cp2",
+      "text": "Play to the free player before the defenders can shift across."
+    },
+    {
+      "id": "cp3",
+      "text": "Transition: the two counter straight away – the first pass forward decides it."
+    },
+    {
+      "id": "cp4",
+      "text": "The player running back: delay the ball carrier and force an early pass."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "transition",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B dribbles at the defenders while A and C run up the wings.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.55,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.25,
+          "label": "E"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.5,
+          "endX": 0.5,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.51,
+          "endX": 0.25,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.51,
+          "endX": 0.75,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays to C, who is free and shoots.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.41
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.28,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.38,
+          "endX": 0.72,
+          "endY": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.19,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper throws out to E. D and E counter towards the other goal, and B runs back to defend.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.13,
+          "endX": 0.66,
+          "endY": 0.38
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.52,
+          "endX": 0.66,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.38,
+          "endY": 0.7
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.7
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

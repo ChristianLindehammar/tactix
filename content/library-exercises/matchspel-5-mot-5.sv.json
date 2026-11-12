@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 2,
+  "id": "e04e7d89-7b84-563a-b05f-5b34965a4d38",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Matchspel 5 mot 5",
+  "description": "Vanlig match fyra utespelare plus målvakt mot lika många, med 5-mannamål på en liten plan. Har ni många barn, spela på två eller tre planer samtidigt.\n\nNär ett lag gör mål börjar laget som släppte in målet med bollen, och laget som gjorde mål springer hem till sin egen planhalva innan spelet fortsätter. Byt målvakt efter 2–3 minuter så att alla får prova. Möter man flera lag, rotera efter halva tiden så att ingen spelar mot samma lag hela tiden. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Våga driva och skjuta – det är matchen där allt tränas på riktigt."
+    },
+    {
+      "id": "cp2",
+      "text": "Hjälp till hemåt när motståndarna har bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakten: börja spelet med en passning eller ett kast till en kompis som är fri."
+    },
+    {
+      "id": "cp4",
+      "text": "Peppa varandra – beröm försöken, inte bara målen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "attack",
+    "defence",
+    "goalkeeping"
+  ],
+  "phase": "game",
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå anfaller uppåt. C passar till D som skjuter.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.25
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.38,
+          "endX": 0.61,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.23,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Mål! Röd börjar med bollen hos målvakten, och blå springer hem till egen planhalva.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.25
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.2
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.42
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.15,
+          "endX": 0.36,
+          "endY": 0.23
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.42,
+          "endX": 0.42,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.28,
+          "endX": 0.6,
+          "endY": 0.56
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

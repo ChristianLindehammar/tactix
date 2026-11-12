@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "id": "1632d174-845e-5bec-9b5b-8d279c40ae85",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Inlägg och avslut",
+  "description": "En ytter driver bollen längs kanten mot kortlinjen och slår ett inlägg. Två anfallare startar centralt utanför straffområdet och tajmar sina löpningar: en mot första stolpen och en mot bortre stolpen. Avsluta på mål med målvakt.\n\nKör från båda kanterna. Lägg till en försvarare när spelarna klarar det, och variera inlägget: hårt längs marken, högt mot bortre stolpen eller inspel bakåt till straffpunkten. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Yttern: titta upp innan inlägget och slå bollen in i ytan dit anfallarna är på väg."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfallarna: vänta med löpningen så att ni når ytan samtidigt som bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "En löper mot första stolpen, en mot bortre – stå aldrig på samma linje."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta med insidan eller pannan nedåt mot marken."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver längs kanten. B och C börjar sina löpningar in mot straffområdet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.29,
+          "endX": 0.86,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.38,
+          "endX": 0.45,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.42,
+          "endX": 0.56,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår inlägget. C löper mot första stolpen, B mot bortre.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.13,
+          "endX": 0.64,
+          "endY": 0.14,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.25,
+          "endX": 0.62,
+          "endY": 0.15
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.22,
+          "endX": 0.38,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C möter inlägget vid första stolpen och avslutar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.11,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

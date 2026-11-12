@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "6128f3cc-a807-5cfc-b2e7-bc3cebaa8506",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Turn and shoot",
+  "description": "A forward stands with their back to goal at the edge of the penalty area, a defender behind them. A server plays the ball into the forward's feet. The forward feels where the defender is, turns towards the free side and shoots. At first the defender only follows; then they defend for real.\n\nSwap roles after a few goes: server becomes forward, forward becomes defender. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Check over your shoulder before the ball arrives – know where the defender is."
+    },
+    {
+      "id": "cp2",
+      "text": "Feel the defender with your arm or back and turn away from where they stand."
+    },
+    {
+      "id": "cp3",
+      "text": "The first touch of the turn should take you past them – not just around."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot quickly after the turn, before the defender can recover."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passes to A, who has their back to goal. D stands tight behind.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.53
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.23,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.5,
+          "endX": 0.52,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A takes the first touch to the side and turns away from D.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.28,
+          "endX": 0.67,
+          "endY": 0.21,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots before D can catch up.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.18
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.155,
+          "endX": 0.55,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

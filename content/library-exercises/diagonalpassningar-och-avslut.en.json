@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "401ae547-561b-5909-b74a-3498faa9c126",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Diagonal passes and shoot",
+  "description": "Three cones zigzagging up towards a goal, one player at each cone and the rest in a line at the first. The first player passes diagonally to cone 2, who passes diagonally on to cone 3. The player at cone 3 receives and shoots at goal.\n\nAfter your pass, run to the next cone. The shooter fetches the ball and joins the line at the first cone. Let the children take turns in goal. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass with the inside of your foot and aim at your team-mate's feet."
+    },
+    {
+      "id": "cp2",
+      "text": "Receive so the ball ends up in front of you, in the direction you will play."
+    },
+    {
+      "id": "cp3",
+      "text": "Run to the next cone straight after your pass."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes diagonally to B.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.71,
+          "endX": 0.39,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes diagonally to C. A runs to B's cone.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.53
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.51,
+          "endX": 0.58,
+          "endY": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.74,
+          "endX": 0.42,
+          "endY": 0.65
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C shoots. B runs to C's cone.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.29,
+          "endX": 0.55,
+          "endY": 0.035
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.55,
+          "endX": 0.55,
+          "endY": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

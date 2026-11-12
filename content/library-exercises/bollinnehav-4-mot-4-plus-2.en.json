@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 2,
+  "id": "916c105d-9c92-5130-8fef-92194a8615a6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Possession 4v4 + 2 jokers",
+  "description": "Two teams of four play inside a box of about 25 × 25 metres. Two jokers stand on opposite sides outside the box and always play with the team that has the ball, making it 6v4. The team in possession scores a point for six passes in a row. Jokers have two touches and may not pass to each other.\n\nIf the other team wins the ball it is their turn straight away – and the jokers switch sides in their heads. Change jokers after a few minutes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Create width and depth – never two players on the same line."
+    },
+    {
+      "id": "cp2",
+      "text": "Use a joker to escape pressure, then look for a player on the far side."
+    },
+    {
+      "id": "cp3",
+      "text": "When you lose the ball: press straight away, the first seconds decide it."
+    },
+    {
+      "id": "cp4",
+      "text": "When you win the ball: play the first pass away from pressure, ideally to a joker."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue has the ball. A passes to B.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.63
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.31,
+          "endX": 0.64,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays to the joker, who lays it on to D – blue keeps the ball against four.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.38
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.63
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.39,
+          "endX": 0.88,
+          "endY": 0.46
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.55,
+          "endX": 0.74,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red wins the ball and plays straight to a joker. Now it is red's turn.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.38
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.52
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.72
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.49,
+          "y": 0.73
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.14,
+          "endY": 0.53
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

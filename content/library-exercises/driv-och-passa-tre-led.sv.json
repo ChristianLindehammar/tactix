@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 2,
+  "id": "148c6e02-c057-5803-9b97-f5f5d2ae2dcb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Driv och passa i tre led",
+  "description": "Tre rader med en kon i varje ände och en kon i mitten, ungefär 15 meter mellan ändarna. Spelarna står i led vid ändkonerna, en boll per rad. Den första driver bollen till mittkonen och passar sedan till kompisen vid andra änden, och springer efter och ställer sig sist i det ledet. Mottagaren gör likadant tillbaka.\n\nGör det svårare med svagare foten, eller genom att passa redan från första konen. Passar bra för yngre barn, från ungefär 7 år. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv bollen med små touchar och titta upp ibland."
+    },
+    {
+      "id": "cp2",
+      "text": "Stanna bollen vid mittkonen innan du passar."
+    },
+    {
+      "id": "cp3",
+      "text": "Mottagaren: möt bollen och ta emot med insidan."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, C och E driver bollen mot mittkonen.",
+      "markers": [
+        {
+          "id": "ka",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.20500000000000002
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.225,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "ma",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.25,
+          "endX": 0.42,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "kc",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.455
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.225,
+          "y": 0.5
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "mc",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.5,
+          "endX": 0.42,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ke",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.705
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.75,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.225,
+          "y": 0.75
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.75,
+          "label": "F"
+        },
+        {
+          "id": "me",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.75,
+          "endX": 0.42,
+          "endY": 0.75,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "De passar till kompisen vid andra änden och springer efter.",
+      "markers": [
+        {
+          "id": "ka",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.20500000000000002
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.485,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "pa",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.25,
+          "endX": 0.82,
+          "endY": 0.25
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.295,
+          "endX": 0.82,
+          "endY": 0.33
+        },
+        {
+          "id": "kc",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.455
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.485,
+          "y": 0.5
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "pc",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.5,
+          "endX": 0.82,
+          "endY": 0.5
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.545,
+          "endX": 0.82,
+          "endY": 0.58
+        },
+        {
+          "id": "ke",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.705
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.75,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.485,
+          "y": 0.75
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.75,
+          "label": "F"
+        },
+        {
+          "id": "pe",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.75,
+          "endX": 0.82,
+          "endY": 0.75
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.795,
+          "endX": 0.82,
+          "endY": 0.83
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B, D och F driver tillbaka mot mitten.",
+      "markers": [
+        {
+          "id": "ka",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.20500000000000002
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.335,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.775,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "na",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.25,
+          "endX": 0.6,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "kc",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.455
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.585,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.775,
+          "y": 0.5
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "nc",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.5,
+          "endX": 0.6,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ke",
+          "type": "cone",
+          "x": 0.55,
+          "y": 0.705
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.835,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.775,
+          "y": 0.75
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.75,
+          "label": "F"
+        },
+        {
+          "id": "ne",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.75,
+          "endX": 0.6,
+          "endY": 0.75,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

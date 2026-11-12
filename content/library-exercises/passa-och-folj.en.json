@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "id": "5ab98f2e-5c54-5c24-a553-27a07b4e0401",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Pass and follow square",
+  "description": "Four cones in a square, about 15 × 15 metres, with two or more players at each cone. The first player passes to the next cone, follows the pass and joins the back of that line. The receiver takes the ball in the right direction and passes on to the next cone, and so on around the square.\n\nChange direction after a while. Make it harder with one touch, with the weaker foot, or with two balls at once. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass with the inside of the foot, standing foot pointing at the receiver."
+    },
+    {
+      "id": "cp2",
+      "text": "Take your first touch in the direction of your next pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Move towards the ball – do not wait for it to arrive."
+    },
+    {
+      "id": "cp4",
+      "text": "Run straight after your pass so the flow never stops."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and follows the pass.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.25,
+          "endX": 0.67,
+          "endY": 0.25
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.19,
+          "endX": 0.76,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B takes the ball towards the next cone, passes to C and follows.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.36,
+          "endX": 0.75,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.29,
+          "endX": 0.9,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes on to D and follows – and so on around the square.",
+      "markers": [
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.18
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.18
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.72
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.645,
+          "y": 0.65
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.65,
+          "label": "D"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.65,
+          "endX": 0.33,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.69,
+          "endX": 0.23,
+          "endY": 0.79
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

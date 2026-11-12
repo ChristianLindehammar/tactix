@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "id": "d280c843-c485-5d0a-86b1-b865c71bb5cd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Rondo 4 mot 2",
+  "description": "Fyra spelare på kanterna av en kvadrat, ungefär 12 × 12 meter, håller bollen mot två spelare i mitten. Ytterspelarna får röra sig längs sin sida men inte gå in i kvadraten. Spela med högst två touch.\n\nNär en mittspelare vinner bollen, eller bollen går ut, byter den som slog felpassningen plats med mittspelaren som varit inne längst. Räkna passningar i rad – tio i rad ger en poäng. En passning mellan de två mittspelarna är extra värd. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Visa dig för bollhållaren – stå så att det finns en passningsväg mellan mittspelarna."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med foten längst från försvararen och öppna kroppen mot nästa passning."
+    },
+    {
+      "id": "cp3",
+      "text": "Leta efter passningen genom mitten – den kapar båda försvararna."
+    },
+    {
+      "id": "cp4",
+      "text": "Mittspelarna: en pressar bollhållaren, den andra stänger passningen genom mitten."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "defence"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. E går direkt i press mot B.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.43,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.58,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.33,
+          "endX": 0.8,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.45,
+          "endX": 0.66,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar mellan försvararna till D – en passning genom mitten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "F"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.77,
+          "y": 0.47,
+          "endX": 0.22,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D spelar vidare till C. Vinner E eller F bollen byter de plats med den som tappade den.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.57,
+          "label": "F"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.59,
+          "endX": 0.44,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

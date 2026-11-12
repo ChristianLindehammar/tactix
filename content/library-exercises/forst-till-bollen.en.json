@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "id": "19d59e48-086e-5f3e-a8c8-2baa176e8fc6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "First to the ball",
+  "description": "Two lines side by side some way from a goal, with a slalom of cones in front of each line. One player from each line runs the slalom. At the same time the coach passes a ball into the space between the courses. Whoever reaches the ball first shoots at goal; the other tries to stop the shot. Afterwards, join the back of your own line.\n\nVariation: instead of the slalom, run around a cone and then to the ball. Works well for young children, from about 7 years old. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Take short, quick steps between the cones."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up for the ball as you come out of the course."
+    },
+    {
+      "id": "cp3",
+      "text": "First to the ball: take it towards goal and shoot straight away."
+    },
+    {
+      "id": "cp4",
+      "text": "Second to the ball: get between the ball and the goal."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "conditioning",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B run the slalom. The coach passes the ball out between the courses.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.62
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.54
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.62
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.54
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.81
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.74
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.68,
+          "endX": 0.34,
+          "endY": 0.4
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.68,
+          "endX": 0.66,
+          "endY": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.71,
+          "endX": 0.5,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A gets there first and shoots. B tries to get in the way.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.62
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.54
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.62
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.54
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.81
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.81
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.26
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.29,
+          "endX": 0.56,
+          "endY": 0.2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.045
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "id": "f71728db-f2b2-5771-9ee4-5cc8003c58b3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Speluppbyggnad från målvakten, 4+1 mot 3",
+  "description": "Målvakten och fyra försvarare bygger upp spelet från eget mål mot tre anfallare som pressar. Försvararna gör mål genom att spela bollen in i något av de två små målen vid mittlinjen – eller genom att föra bollen över mittlinjen. Vinner anfallarna bollen ska de avsluta på det stora målet så snabbt som möjligt.\n\nStarta varje gång från målvakten. Gör det svårare med fler anfallare, eller genom att bara räkna mål efter att bollen gått via målvakten en gång. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör planen bred – ytterbackarna högt och nära kanten."
+    },
+    {
+      "id": "cp2",
+      "text": "Mittbackarna går isär så att målvakten har två passningsvägar."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela bort från pressen – titta efter den spelare som är fri på andra sidan."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfallarna: pressa tillsammans och stäng passningen till mitten."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten spelar till C. E pressar mot C.",
+      "markers": [
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "m1g",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "m2g",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.6,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.6,
+          "label": "G"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.81,
+          "endX": 0.61,
+          "endY": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.69,
+          "endX": 0.58,
+          "endY": 0.75
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C spelar till D högt på kanten, som tar med sig bollen framåt.",
+      "markers": [
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "m1g",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "m2g",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.76
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "G"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.77,
+          "y": 0.74,
+          "endX": 0.86,
+          "endY": 0.7
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.62,
+          "endX": 0.86,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D spelar in bollen i det lilla målet – försvararna har byggt upp hela vägen.",
+      "markers": [
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "m1g",
+          "type": "goal",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "m2g",
+          "type": "goal",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.56
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "G"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.53,
+          "endX": 0.785,
+          "endY": 0.495
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
