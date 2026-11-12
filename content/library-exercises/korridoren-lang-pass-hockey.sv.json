@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "id": "bfa3833c-f48e-5563-924c-6215ade3b602",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Korridoren – lång pass, skott och försvar",
+  "description": "Samma korridorer som i droppassövningen: led A vid målet med alla puckar, led B i andra änden. A slår en hård passning – direkt eller via sargen – till B, som tar med sig pucken i fart mot mål och skjuter. A ställer sig sist i B-ledet, och B i A-ledet.\n\nSteg två: efter passningen åker A ut och ställer sig före mittlinjen som back. B ska ta sig förbi A och skjuta. Andra korridoren kan användas av två led till samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs isen till bladet, även när den går via sargen."
+    },
+    {
+      "id": "cp2",
+      "text": "Mottagaren tar med pucken framåt i första touchen."
+    },
+    {
+      "id": "cp3",
+      "text": "Backen: åk baklänges mellan anfallaren och målet och tvinga ut hen mot sargen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång passning till B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.286
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.393
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.714
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.057
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.126,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.19
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.885,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.222,
+          "endX": 0.18,
+          "endY": 0.821
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B åker mot mål med pucken. I steg två åker A ut som back.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.286
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.393
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.714
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.057
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.126,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.821
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.885,
+          "label": "B"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.789,
+          "endX": 0.27,
+          "endY": 0.457,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.168,
+          "endX": 0.24,
+          "endY": 0.307
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar sig förbi A och skjuter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.286
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.393
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.714
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.057
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.329,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.222
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.19,
+          "endX": 0.45,
+          "endY": 0.053
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 2,
+  "id": "73184473-4fc0-58d2-b66e-7508f2d1f26b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Kuvertet – passningskedja och skott",
+  "description": "Fyra platser bildar ett kuvert framför ena målet, med en spelare på varje plats. Övriga står i ett led med alla puckar. Den första i ledet slår en hård passning till spelaren på första platsen, som direkt passar vidare till nästa, och så vidare tills pucken når spelaren i slottet framför målet, som skjuter.\n\nDirekt efter varje passning åker man efter pucken och tar nästa plats. Den som skjuter ställer sig sist i ledet. Övningen tar en zon. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa längs isen till mottagarens blad."
+    },
+    {
+      "id": "cp2",
+      "text": "Visa med klubban var du vill ha pucken."
+    },
+    {
+      "id": "cp3",
+      "text": "Åk direkt efter passningen till nästa plats."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och åker efter.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.896
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.885,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.607,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.607,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.885,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.815
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.15,
+          "y": 0.789,
+          "endX": 0.15,
+          "endY": 0.671
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.874,
+          "endX": 0.25,
+          "endY": 0.671
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tvärs över till C.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.896
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.607,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.607,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.885,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.564
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.564,
+          "endX": 0.78,
+          "endY": 0.596
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.553,
+          "endX": 0.74,
+          "endY": 0.532
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar ner till D.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.896
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.607,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.607,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.885,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.676
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.703,
+          "endX": 0.85,
+          "endY": 0.821
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.91,
+          "y": 0.65,
+          "endX": 0.92,
+          "endY": 0.821
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passar in till E framför målet.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.896
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.607,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.607,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.885,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.842
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.821,
+          "endX": 0.56,
+          "endY": 0.757
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "E skjuter och ställer sig sist i ledet.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.896
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.607,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.607,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.885,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.799
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.832,
+          "endX": 0.45,
+          "endY": 0.943
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

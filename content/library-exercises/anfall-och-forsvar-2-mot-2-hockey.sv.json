@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 2,
+  "id": "89b5a3fb-1384-5a19-a569-23ed6235c9f3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Anfall och försvar 2 mot 2",
+  "description": "Fyra led, ett i varje hörn. De två leden vid ena målet är backar (A och B), de två vid andra målet anfallare (C och D). A startar övningen med en lång diagonalpass till D. C och D anfaller tillsammans, passar fram och tillbaka och försöker med passningar och finter komma förbi backarna till ett skott. A och B åker ut och försvarar framför målvakten men får inte åka över mittlinjen.\n\nByt roller mellan leden efter en stund. Åk tillbaka längs sargerna, utanför konerna, så att ingen krockar. Spela utan tacklingar för yngre spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: passa längs isen och visa med klubban var du vill ha pucken."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: åk mot en back för att binda hen, passa sedan."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: prata med varandra – vem tar puckföraren?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A startar med en diagonalpass till D.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.057
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.057
+        },
+        {
+          "id": "qa",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "qb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.126,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.126,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.885,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.885,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.853
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.821,
+          "endX": 0.82,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D åker framåt med pucken och C åker med. A och B åker ut för att försvara.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.057
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.057
+        },
+        {
+          "id": "qa",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "qb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.126,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.126,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.885,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.885,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.19
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.233,
+          "endX": 0.66,
+          "endY": 0.414,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.179,
+          "endX": 0.3,
+          "endY": 0.414
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.842,
+          "endX": 0.3,
+          "endY": 0.671
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.842,
+          "endX": 0.7,
+          "endY": 0.671
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D passar till C, som utmanar A och försöker komma till skott.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.057
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.057
+        },
+        {
+          "id": "qa",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "qb",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.436,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.671,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.489
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.5,
+          "endX": 0.39,
+          "endY": 0.489
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.5,
+          "endX": 0.42,
+          "endY": 0.735,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

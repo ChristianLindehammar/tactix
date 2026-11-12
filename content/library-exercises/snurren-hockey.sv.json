@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "b98ea9a2-0129-575a-afbe-b5ea7f548a30",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Snurren – finta, sväng och direktskott",
+  "description": "Två led vid mittlinjen. Den första i A-ledet åker med pucken mot mål, fintar ett skott mot målvakten och svänger tight runt en kon (snurren). På väg ut tittar A upp och passar den första i B-ledet, som har tajmat sin åkning genom en port av två koner så att passningen kommer på bladet just där. B avslutar med ett direktskott.\n\nSpelarna byter led bakom målet. Övningen tar en zon. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör skottfinten på riktigt – målvakten ska tro på den."
+    },
+    {
+      "id": "cp2",
+      "text": "Tight sväng runt konen med pucken på utsidan, titta upp när du kommer ut."
+    },
+    {
+      "id": "cp3",
+      "text": "B: anpassa farten så att du är i porten när passningen kommer."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker mot mål, fintar ett skott och svänger runt konen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.222
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.318
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.318
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.532
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.532
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.457,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.388
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.457,
+          "label": "B"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.361,
+          "endX": 0.8,
+          "endY": 0.286,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar ut till B, som åker genom porten.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.222
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.318
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.318
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.532
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.532
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.217
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.457,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.211,
+          "endX": 0.36,
+          "endY": 0.286
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.414,
+          "endX": 0.3,
+          "endY": 0.307
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.104
+        },
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.222
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.318
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.42,
+          "y": 0.318
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.532
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.532
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.222
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.19,
+          "endX": 0.44,
+          "endY": 0.053
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

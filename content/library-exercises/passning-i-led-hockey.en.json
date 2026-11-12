@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "id": "6eb5c7b8-7e66-546c-b6e1-7f69c45605f6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Passing in two lines",
+  "description": "Two lines face each other. The first player in one line passes to the first in the other, then skates across and joins the back of that line. The receiver passes back to the next player in the first line and skates across, and so on.\n\nSkate out to the right so you do not collide. It works well as a quick warm-up before a game. A spare player can warm up the goalie at the same time. Vary it with backhand passes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass along the ice to the receiver's blade."
+    },
+    {
+      "id": "cp2",
+      "text": "Firm passes, but not shots."
+    },
+    {
+      "id": "cp3",
+      "text": "Skate straight after your pass to keep the tempo up."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and skates across to B's line.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.714
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.714,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.714
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.714,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.714
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.714,
+          "endX": 0.68,
+          "endY": 0.714
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.757,
+          "endX": 0.86,
+          "endY": 0.799,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes back to the next player in A's line and skates across.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.714
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.799,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.714,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.714
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.714
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.714,
+          "endX": 0.32,
+          "endY": 0.714
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.671,
+          "endX": 0.14,
+          "endY": 0.628,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

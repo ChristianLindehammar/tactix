@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "02171aa4-5cee-5354-9e0c-4ff401d9d536",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Bågen – slalom och skott",
+  "description": "Alla spelare står i ett led i hörnet med puckarna. Den första åker med pucken i högt tempo i en båge ner mot mittlinjen, går slalom genom konerna där och skjuter så fort kroppen är vänd mot mål och pucken är under kontroll.\n\nVariant (Bågen 2): spelaren åker utan puck längs bågen och får en hård passning från nästa i ledet, och skjuter direkt. Kör från båda hållen så att alla svänger åt båda sidorna. Fungerar med eller utan målvakt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full fart i bågen, korta drag med pucken i slalomen."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd upp kroppen mot mål innan du skjuter."
+    },
+    {
+      "id": "cp3",
+      "text": "Variant: passaren slår pucken dit spelaren är på väg, inte dit hen är."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "shooting",
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker med pucken i en båge och går slalom vid mittlinjen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.307
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.457
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.457
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.457
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.126,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.195
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.222,
+          "endX": 0.22,
+          "endY": 0.532,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.532,
+          "endX": 0.56,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder mot mål och skjuter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.307
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.457
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.457
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.457
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.366
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.34,
+          "endX": 0.56,
+          "endY": 0.053
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: A åker utan puck och B passar in i åkningen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.307
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.457
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.457
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.48,
+          "y": 0.457
+        },
+        {
+          "id": "q",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.126,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.195
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.243,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.286,
+          "endX": 0.6,
+          "endY": 0.5,
+          "bend": -0.1,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.222,
+          "endX": 0.55,
+          "endY": 0.414
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

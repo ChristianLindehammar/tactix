@@ -47,6 +47,21 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | ytterzonen-hockey | hockey | Hockey version of ytterzonen (same source) | 2026-11-12 |
 | zon-till-zon-hockey | hockey | Hockey version of zon-till-zon (same source) | 2026-11-12 |
 | pressa-pressen-hockey | hockey | Hockey version of pressa-pressen (same source) | 2026-11-12 |
+| slalom-puckkontroll-hockey | hockey | Hockey version of slalom-bollkontroll (same source) | 2026-11-12 |
+| vaggpass-och-avslut-hockey | hockey | Hockey version of vaggpass-och-avslut (same source) | 2026-11-12 |
+| halvmanen-hockey | hockey | Hockey version of halvmanen (same source) | 2026-11-12 |
+| passning-i-led-hockey | hockey | Hockey version of passning-i-led (same source) | 2026-11-12 |
+| m-et-diagonalpass-hockey | hockey | Hockey version of mcdonalds-m (same source) | 2026-11-12 |
+| datten-kull-med-puck-hockey | hockey | Hockey version of datten-kull-med-boll (same source) | 2026-11-12 |
+| bagen-slalom-och-skott-hockey | hockey | Hockey version of bagen-slalom-och-avslut (same source) | 2026-11-12 |
+| anfall-och-forsvar-2-mot-2-hockey | hockey | Hockey version of anfall-och-forsvar-2-mot-2 (same source) | 2026-11-12 |
+| forst-till-pucken-hockey | hockey | Hockey version of forst-till-bollen-innebandy (same source) | 2026-11-12 |
+| passningar-i-par-hockey | hockey | Hockey version of passningar-i-par (same source) | 2026-11-12 |
+| korridoren-droppass-hockey | hockey | Hockey version of korridoren-overlamning (same source) | 2026-11-12 |
+| korridoren-lang-pass-hockey | hockey | Hockey version of korridoren-pass-och-avslut (same source) | 2026-11-12 |
+| kombinationen-hockey | hockey | Hockey version of kombinationen (same source) | 2026-11-12 |
+| snurren-hockey | hockey | Hockey version of snurren (same source) | 2026-11-12 |
+| kuvertet-hockey | hockey | Hockey version of kuvertet (same source) | 2026-11-12 |
 | rondo-4-mot-2 | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U12 practice plan (rondo 4v2) https://www.renderfoot.com/blog/u12-soccer-practice-plan and sportsessionplanner.com rondo drills https://www.sportsessionplanner.com/s/cdvNh/Rondo-Drills.html | 2026-11-12 |
 | passa-och-folj | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U8 practice plan https://www.renderfoot.com/de/blog/u8-soccer-practice-plan | 2026-11-12 |
 | 1-mot-1-mot-mal | soccer | Classic coaching game, common knowledge; checked against renderfoot.com U10 practice plan https://www.renderfoot.com/de/blog/u10-soccer-practice-plan | 2026-11-12 |
@@ -96,3 +111,4 @@ These exercises draw the leader as a blue player labelled "L". Once most coaches
 - forst-till-bollen
 - ledarvaggen-och-avslut
 - forst-till-bollen-innebandy
+- forst-till-pucken-hockey

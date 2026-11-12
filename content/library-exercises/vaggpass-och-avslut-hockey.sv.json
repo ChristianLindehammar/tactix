@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "id": "b7909a4d-2418-5522-9f63-efe2e7044af6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Väggpass mot sargen och skott",
+  "description": "Spelarna står i ett led vid en kon med var sin puck. Den första åker rakt fram med pucken, passar in i sargen och tar emot returen i farten, och skjuter sedan på mål. Hämta pucken och ställ dig sist.\n\nGör det svårare genom att ställa en ledare som back vid den andra konen. Starta i lagom tempo så att den före hinner hämta sin puck. Två led kan köras samtidigt, ett mot varje sarg. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa i sargen i en vinkel så att returen kommer ut framför dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Fortsätt åka efter passningen – möt returen i fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot med mjukt blad och skjut snabbt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker med pucken fram längs vänsterkanten.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.943
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.393
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.928
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.794
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.757,
+          "endX": 0.28,
+          "endY": 0.521,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar in i sargen och åker förbi konen. Returen kommer ut framför A.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.943
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.393
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.928
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.457
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.447,
+          "endX": 0.04,
+          "endY": 0.393
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.04,
+          "y": 0.382,
+          "endX": 0.2,
+          "endY": 0.297
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.457,
+          "endX": 0.3,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter på mål.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.943
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.45,
+          "y": 0.393
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.928
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.222
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.19,
+          "endX": 0.45,
+          "endY": 0.053
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

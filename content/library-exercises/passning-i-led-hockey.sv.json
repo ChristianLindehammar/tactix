@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "id": "1cbc4a48-5524-53ba-b48f-658ef73cba6e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Passning i två led",
+  "description": "Två led står mitt emot varandra. Den första i ena ledet passar till den första i det andra, och åker sedan över och ställer sig sist i det ledet. Mottagaren passar tillbaka till nästa spelare i första ledet och åker över, och så vidare.\n\nÅk ut åt höger så att ni inte krockar. Övningen passar bra som snabb uppvärmning före match. Har ni en spelare över kan den värma upp målvakten samtidigt. Variera med passningar på backhand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs isen till mottagarens blad."
+    },
+    {
+      "id": "cp2",
+      "text": "Hårda passningar, men inte skott."
+    },
+    {
+      "id": "cp3",
+      "text": "Åk direkt efter passningen så att tempot hålls uppe."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och åker över till Bs led.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.714
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.714,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.714
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.714,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.714
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.714,
+          "endX": 0.68,
+          "endY": 0.714
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.757,
+          "endX": 0.86,
+          "endY": 0.799,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tillbaka till nästa i As led och åker över.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.714
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.799,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.714,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.714
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.714
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.714,
+          "endX": 0.32,
+          "endY": 0.714
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.671,
+          "endX": 0.14,
+          "endY": 0.628,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

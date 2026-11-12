@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "10e282a0-4306-5808-a232-600c83829b77",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "M-et – diagonalpass och skott i fart",
+  "description": "Två led, ett i varje hörn bredvid målet, och en kon på var sida en bit ut. Den första i ena ledet åker utan puck ner och runt sin kon. Den första i andra ledet slår en diagonalpass till den som åker, och hen skjuter direkt nära konen. Sedan åker passaren runt sin kon och får passningen från andra hållet, och så vidare. Åkvägarna bildar ett M.\n\nByt led så att alla får skjuta från båda hållen, på forehand och backhand. Bra som snabb uppvärmning av både spelare och målvakt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs isen, till bladet."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som åker visar med klubban var pucken ska komma."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut direkt – stanna inte pucken först."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker utan puck ner och runt den vänstra konen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.436
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.104
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.104
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.211
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.243,
+          "endX": 0.24,
+          "endY": 0.468
+        },
+        {
+          "id": "r1b",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.479,
+          "endX": 0.37,
+          "endY": 0.382,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en diagonalpass till A.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.436
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.104
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.104
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.211
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.233,
+          "endX": 0.43,
+          "endY": 0.329
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter direkt. B åker runt den högra konen och får nästa passning.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.436
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.104
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.104
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.286
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.254,
+          "endX": 0.42,
+          "endY": 0.057
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.243,
+          "endX": 0.76,
+          "endY": 0.468
+        },
+        {
+          "id": "r2b",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.479,
+          "endX": 0.63,
+          "endY": 0.382,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
