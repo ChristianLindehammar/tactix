@@ -330,6 +330,14 @@ describe('exercise library', () => {
       expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ sport: 'soccer' }));
     });
 
+    it('asks for exercises in the language the app is shown in', async () => {
+      await openLibrary();
+
+      await waitFor(() =>
+        expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ language: 'en' })),
+      );
+    });
+
     it('leaves out the author line when they chose no name', async () => {
       mockList.mockResolvedValue({ entries: [entry({ title: 'Rondo' }, null)], total: 1 });
 

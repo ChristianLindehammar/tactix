@@ -61,6 +61,75 @@ describe('browsing the library', () => {
     expect(init?.headers).toEqual({ Authorization: 'Bearer token' });
   });
 
+  describe('in the coach language', () => {
+    const page = (total: number) => json(200, { exercises: [], total });
+
+    it('asks only for exercises in that language when it has some', async () => {
+      const { library, fetch } = setup(() => page(3));
+
+      await library.list({ sport: 'floorball', language: 'sv', search: 'rondo' });
+
+      const urls = fetch.mock.calls.map(([url]) => url);
+      // First a check that the language has any exercises for the sport, then the page itself
+      expect(urls).toEqual([
+        'https://api.test/library?sport=floorball&lang=sv',
+        'https://api.test/library?sport=floorball&search=rondo&lang=sv',
+      ]);
+    });
+
+    it('falls back to English when the language has none for the sport', async () => {
+      const { library, fetch } = setup(url => page(url.includes('lang=fi') ? 0 : 5));
+
+      await library.list({ sport: 'floorball', language: 'fi' });
+
+      expect(fetch.mock.calls.at(-1)?.[0]).toBe('https://api.test/library?sport=floorball&lang=en');
+    });
+
+    it('checks each language and sport only once', async () => {
+      const { library, fetch } = setup(() => page(3));
+
+      await library.list({ sport: 'floorball', language: 'sv' });
+      await library.list({ sport: 'floorball', language: 'sv', offset: 20 });
+      await library.list({ sport: 'soccer', language: 'sv' });
+
+      expect(fetch.mock.calls.map(([url]) => url)).toEqual([
+        'https://api.test/library?sport=floorball&lang=sv',
+        'https://api.test/library?sport=floorball&lang=sv',
+        'https://api.test/library?sport=floorball&offset=20&lang=sv',
+        'https://api.test/library?sport=soccer&lang=sv',
+        'https://api.test/library?sport=soccer&lang=sv',
+      ]);
+    });
+
+    it('asks for English straight away, as there is nothing to fall back to', async () => {
+      const { library, fetch } = setup(() => page(3));
+
+      await library.list({ sport: 'floorball', language: 'en' });
+
+      expect(fetch.mock.calls.map(([url]) => url)).toEqual(['https://api.test/library?sport=floorball&lang=en']);
+    });
+
+    it('uses only the language of a regional locale', async () => {
+      const { library, fetch } = setup(() => page(3));
+
+      await library.list({ sport: 'floorball', language: 'sv-FI' });
+
+      expect(fetch.mock.calls.at(-1)?.[0]).toBe('https://api.test/library?sport=floorball&lang=sv');
+    });
+
+    it('checks again next time if the check failed', async () => {
+      let failing = true;
+      const { library, fetch } = setup(() => (failing ? json(503) : page(3)));
+
+      expect(await errorCode(library.list({ sport: 'floorball', language: 'sv' }))).toBe('unavailable');
+      failing = false;
+      await library.list({ sport: 'floorball', language: 'sv' });
+
+      expect(fetch.mock.calls.at(-1)?.[0]).toBe('https://api.test/library?sport=floorball&lang=sv');
+      expect(fetch).toHaveBeenCalledTimes(3);
+    });
+  });
+
   it('skips an exercise it cannot read rather than failing the page', async () => {
     const good = buildExercise({ id: 'good' });
     const { library } = setup(() =>

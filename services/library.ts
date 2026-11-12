@@ -37,7 +37,12 @@ export interface LibraryFilter {
   search?: string;
   sort?: LibrarySort;
   offset?: number;
+  /** The coach's language. Exercises in it are shown, or in English if the sport has none in it. */
+  language?: string;
 }
+
+/** Shown when the coach's language has no exercises for the sport yet. */
+const FALLBACK_LANGUAGE = 'en';
 
 export interface LibraryEntry {
   exercise: Exercise;
@@ -59,7 +64,7 @@ interface LibraryOptions {
   onSessionRejected: () => Promise<void> | void;
 }
 
-const toQuery = (filter: LibraryFilter) => {
+const toQuery = (filter: LibraryFilter, lang?: string) => {
   const params: [string, string][] = [];
   if (filter.sport) params.push(['sport', filter.sport]);
   filter.focus?.forEach(tag => params.push(['focus', tag]));
@@ -70,6 +75,7 @@ const toQuery = (filter: LibraryFilter) => {
   if (search) params.push(['search', search]);
   if (filter.sort) params.push(['sort', filter.sort]);
   if (filter.offset) params.push(['offset', String(filter.offset)]);
+  if (lang) params.push(['lang', lang]);
   const query = params.map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
   return query ? `?${query}` : '';
 };
@@ -123,9 +129,28 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
     }
   };
 
+  // Which language each sport's library is shown in, per coach language, found once per session
+  const shownLanguages = new Map<string, string>();
+
+  const languageToShow = async (sport: Sport | undefined, locale: string) => {
+    // The server matches regional variants itself, so sv-FI asks for sv
+    const language = locale.split('-')[0].toLowerCase();
+    if (language === FALLBACK_LANGUAGE) return language;
+    const key = `${sport ?? ''}:${language}`;
+    const known = shownLanguages.get(key);
+    if (known) return known;
+
+    const response = expectOk(await request(`/library${toQuery({ sport }, language)}`));
+    const { total } = await response.json();
+    const shown = total > 0 ? language : FALLBACK_LANGUAGE;
+    shownLanguages.set(key, shown);
+    return shown;
+  };
+
   return {
-    list: async (filter: LibraryFilter): Promise<LibraryPage> => {
-      const response = expectOk(await request(`/library${toQuery(filter)}`));
+    list: async ({ language, ...filter }: LibraryFilter): Promise<LibraryPage> => {
+      const lang = language ? await languageToShow(filter.sport, language) : undefined;
+      const response = expectOk(await request(`/library${toQuery(filter, lang)}`));
       const { exercises, total } = await response.json();
       return {
         entries: (exercises as unknown[]).map(readEntry).filter((entry): entry is LibraryEntry => entry !== null),

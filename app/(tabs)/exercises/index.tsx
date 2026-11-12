@@ -124,8 +124,10 @@ export default function ExerciseLibraryScreen() {
       playerCount: parsedPlayerCount,
       search,
       sort: librarySort,
+      // One language at a time, so a drill published in two languages isn't listed twice
+      language: locale,
     }),
-    [selectedSport, focus, difficulties, phase, parsedPlayerCount, search, librarySort],
+    [selectedSport, focus, difficulties, phase, parsedPlayerCount, search, librarySort, locale],
   );
 
   const loadLibrary = useCallback(async () => {
