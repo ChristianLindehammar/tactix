@@ -163,6 +163,27 @@ describe('parseExercise', () => {
     expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
   });
 
+  it('keeps the rotation of a goal', () => {
+    const marker = { id: 'a', type: 'goal', x: 0.5, y: 0.5, rotation: 90 };
+
+    expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual(marker);
+  });
+
+  it('drops a rotation from a marker that is not a goal', () => {
+    const marker = { id: 'a', type: 'cone', x: 0.5, y: 0.5, rotation: 90 };
+
+    expect(parseExercise(withMarker(marker)).frames[0].markers[0]).toEqual({ id: 'a', type: 'cone', x: 0.5, y: 0.5 });
+  });
+
+  it.each([['text', '90'], ['zero', 0], ['a full turn', 360], ['negative', -45]])(
+    'rejects a goal rotation that is %s',
+    (_name, rotation) => {
+      const marker = { id: 'a', type: 'goal', x: 0.5, y: 0.5, rotation };
+
+      expect(errorCodeFor(withMarker(marker))).toBe('invalidMarker');
+    },
+  );
+
   it('accepts a marker dragged slightly off the court', () => {
     const marker = { id: 'a', type: 'cone', x: -0.02, y: 1.03 };
 

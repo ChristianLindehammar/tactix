@@ -30,8 +30,10 @@ import {
   getMarkerIcon,
   TacticsMarker,
   TacticsMarkerType,
+  turnGoal,
   withArrowCurve,
 } from '@/types/tacticsMarker';
+import { sportKey } from '@/utils/sportWording';
 import { getToolbarLayout } from '@/utils/toolbarLayout';
 
 export interface CourtSize {
@@ -51,6 +53,8 @@ export interface TacticsBoardProps {
   enableLabels?: boolean;
   /** Gives each arrow a middle dot that curves it into an arc or a wave. */
   enableCurves?: boolean;
+  /** Pressing a goal turns it a step clockwise. */
+  enableGoalRotation?: boolean;
   /** Display only: no toolbar, no touches, and the markers never change. */
   /** Drawn faintly behind the markers, out of reach, such as the previous step of a drill. */
   guideMarkers?: TacticsMarker[];
@@ -112,6 +116,7 @@ export function TacticsBoard({
   showToolHints = false,
   enableLabels = false,
   enableCurves = false,
+  enableGoalRotation = false,
   guideMarkers,
   readOnly = false,
   requireBall = true,
@@ -160,6 +165,8 @@ export function TacticsBoard({
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [labellingId, setLabellingId] = useState<string | null>(null);
   const [curving, setCurving] = useState(false);
+  // Explain turning once a goal is placed, until the next arrow takes over the hint row
+  const [goalPlaced, setGoalPlaced] = useState(false);
 
   // Gestures and alerts can fire before the host re-renders with the new value
   const latest = useRef(value);
@@ -192,9 +199,11 @@ export function TacticsBoard({
       update(markers => [...markers, arrow]);
       // Arrows are typically placed one at a time, deselect after placement
       setAddingType(null);
+      setGoalPlaced(false);
     } else {
       const marker = createTacticsMarker(addingType, x, y);
       update(markers => [...markers, marker]);
+      if (addingType === 'goal') setGoalPlaced(true);
     }
     onMarkerAdded?.();
   };
@@ -218,10 +227,12 @@ export function TacticsBoard({
   };
 
   const toolHint = addingType
-    ? t('placeMarkerHint', { name: t(`markerNames.${addingType}`) })
+    ? t('placeMarkerHint', { name: t(sportKey(`markerNames.${addingType}`, sport)) })
     : curving
       ? t('curveArrowDragHint')
-      : enableCurves && value.some(marker => isArrow(marker.type))
+      : enableGoalRotation && goalPlaced
+        ? t('rotateGoalHint')
+        : enableCurves && value.some(marker => isArrow(marker.type))
         ? t('curveArrowHint')
         : null;
 
@@ -241,7 +252,7 @@ export function TacticsBoard({
       ]}
       onPress={() => setAddingType(current => (current === mt.type ? null : mt.type))}
       accessibilityRole="button"
-      accessibilityLabel={t(`markerNames.${mt.type}`)}
+      accessibilityLabel={t(sportKey(`markerNames.${mt.type}`, sport))}
       accessibilityState={{ selected: addingType === mt.type }}
     >
       <MaterialIcons
@@ -279,9 +290,24 @@ export function TacticsBoard({
           <ConeSvg size={32} />
         </View>
       ) : marker.type === 'goal' ? (
-        <View style={styles.coneMarker}>
+        <TouchableOpacity
+          testID={interactive ? `marker-${marker.id}` : undefined}
+          activeOpacity={0.8}
+          accessibilityRole={interactive && enableGoalRotation ? 'button' : undefined}
+          accessibilityLabel={t('markerNames.goal')}
+          accessibilityHint={interactive && enableGoalRotation ? t('rotateGoalHint') : undefined}
+          onPress={
+            interactive && enableGoalRotation
+              ? () => update(markers => markers.map(m => (m.id === marker.id ? turnGoal(m) : m)))
+              : undefined
+          }
+          style={[
+            styles.coneMarker,
+            marker.rotation ? { transform: [{ rotate: `${marker.rotation}deg` }] } : null,
+          ]}
+        >
           <GoalSvg size={36} color={arrowColor} />
-        </View>
+        </TouchableOpacity>
       ) : (
         <TouchableOpacity
           testID={interactive ? `marker-${marker.id}` : undefined}

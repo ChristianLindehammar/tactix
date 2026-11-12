@@ -28,6 +28,8 @@ export interface TacticsMarker {
   waves?: number;
   /** Short text shown on a player, opponent or coach, such as a shirt number. */
   label?: string;
+  /** Goals only: degrees turned clockwise from the opening facing down. Left out when 0. */
+  rotation?: number;
 }
 
 export function createTacticsMarker(type: TacticsMarkerType, x: number, y: number): TacticsMarker {
@@ -60,6 +62,15 @@ export function createArrowMarker(
 export function withArrowCurve(marker: TacticsMarker, curve: ArrowCurve | undefined): TacticsMarker {
   const { bend: _bend, waves: _waves, ...straight } = marker;
   return curve ? { ...straight, ...curve } : straight;
+}
+
+export const GOAL_ROTATION_STEP = 45;
+
+/** The goal turned one more step clockwise, back to no rotation after a full turn. */
+export function turnGoal(marker: TacticsMarker): TacticsMarker {
+  const { rotation = 0, ...unturned } = marker;
+  const next = (rotation + GOAL_ROTATION_STEP) % 360;
+  return next === 0 ? unturned : { ...unturned, rotation: next };
 }
 
 const COURT_CENTER_X = 0.5;

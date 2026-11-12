@@ -36,6 +36,7 @@ import {
   MAX_TITLE_LENGTH,
 } from '@/types/exercise';
 import { TACTICS_MARKER_TYPES } from '@/types/tacticsMarker';
+import { sportKey } from '@/utils/sportWording';
 import {
   addStep,
   createDraft,
@@ -305,7 +306,7 @@ export default function ExerciseEditorScreen() {
             {FOCUS_TAGS.map(tag => (
               <FilterChip
                 key={tag}
-                label={t(`focusTags.${tag}`)}
+                label={t(sportKey(`focusTags.${tag}`, sport))}
                 testID={`focus-${tag}`}
                 selected={draft.focus.includes(tag)}
                 onPress={() =>
@@ -408,6 +409,7 @@ export default function ExerciseEditorScreen() {
             showToolHints
             enableLabels
             enableCurves
+            enableGoalRotation
           />
           <View style={styles.stepControls}>
             <StepTabs

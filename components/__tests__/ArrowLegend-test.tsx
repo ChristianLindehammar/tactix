@@ -34,6 +34,14 @@ describe('ArrowLegend', () => {
     expect(screen.queryByText('Run')).toBeNull();
   });
 
+  it('uses hockey words for a hockey exercise', () => {
+    const run = { ...dribble, id: 'r', bend: undefined, waves: undefined };
+    render(<ArrowLegend frames={[{ id: 'f', markers: [player, run, dribble] }]} sport="hockey" />);
+
+    expect(screen.getByText('Skate')).toBeTruthy();
+    expect(screen.getByText('Puck carry')).toBeTruthy();
+  });
+
   it('shows nothing when no step has an arrow', () => {
     const { toJSON } = render(<ArrowLegend frames={[{ id: 'f', markers: [player] }]} />);
 

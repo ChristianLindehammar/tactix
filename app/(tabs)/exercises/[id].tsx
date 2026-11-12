@@ -19,6 +19,7 @@ import { library } from '@/services/library';
 import { Exercise, RatingStars } from '@/types/exercise';
 import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
+import { sportKey } from '@/utils/sportWording';
 
 const noop = () => {};
 
@@ -207,7 +208,7 @@ export default function ExerciseDetailScreen() {
           requireBall={false}
         />
       </View>
-      <ArrowLegend frames={exercise.frames} />
+      <ArrowLegend frames={exercise.frames} sport={exercise.sport} />
       {step.note ? <ThemedText>{step.note}</ThemedText> : null}
 
       <View style={styles.section}>
@@ -236,7 +237,7 @@ export default function ExerciseDetailScreen() {
       {exercise.focus.length > 0 && (
         <View style={styles.section}>
           <ThemedText type="defaultSemiBold">{t('trainingFocus')}</ThemedText>
-          <ThemedText>{exercise.focus.map(tag => t(`focusTags.${tag}`)).join(', ')}</ThemedText>
+          <ThemedText>{exercise.focus.map(tag => t(sportKey(`focusTags.${tag}`, exercise.sport))).join(', ')}</ThemedText>
         </View>
       )}
 

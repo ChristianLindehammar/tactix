@@ -380,6 +380,57 @@ describe('TacticsBoard', () => {
     });
   });
 
+  describe('turning goals', () => {
+    const goal = createTacticsMarker('goal', 0.5, 0.2);
+
+    it('turns a pressed goal one eighth of a turn', async () => {
+      const { onChange } = await renderBoard({ value: [ball, goal], enableGoalRotation: true });
+
+      fireEvent.press(screen.getByTestId(`marker-${goal.id}`));
+
+      expect(onChange.mock.lastCall?.[0].find(m => m.id === goal.id)?.rotation).toBe(45);
+    });
+
+    it('draws a goal at its rotation', async () => {
+      await renderBoard({ value: [ball, { ...goal, rotation: 90 }], readOnly: true });
+
+      expect(screen.getByLabelText('Goal')).toHaveStyle({ transform: [{ rotate: '90deg' }] });
+    });
+
+    it('does nothing on press unless turning is enabled', async () => {
+      const { onChange } = await renderBoard({ value: [ball, goal] });
+
+      fireEvent.press(screen.getByTestId(`marker-${goal.id}`));
+
+      expect(onChange).not.toHaveBeenCalled();
+    });
+
+    it('explains how to turn a goal once one is placed', async () => {
+      await renderBoard({
+        showToolHints: true,
+        enableGoalRotation: true,
+        allowedMarkerTypes: ['goal'],
+      });
+
+      fireEvent.press(screen.getByLabelText('Goal'));
+      tapCourt(100, 100);
+      fireEvent.press(screen.getByLabelText('Goal'));
+
+      expect(screen.getByText('Tap a goal to turn it')).toBeTruthy();
+    });
+  });
+
+  describe('hockey wording', () => {
+    it('calls the ball a puck and the run a skate', async () => {
+      await renderBoard({ sport: 'hockey', showToolHints: true });
+
+      expect(screen.getByLabelText('Puck')).toBeTruthy();
+      fireEvent.press(screen.getByLabelText('Skate'));
+
+      expect(screen.getByText('Skate: tap the court to place it')).toBeTruthy();
+    });
+  });
+
   describe('previous step guide', () => {
     const player = createTacticsMarker('player', 0.2, 0.8);
     const run = createArrowMarker('arrow-solid', 0.2, 0.8, 0.2, 0.3);

@@ -1,4 +1,4 @@
-import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers, withArrowCurve } from '../tacticsMarker';
+import { createTacticsMarker, createArrowMarker, TacticsMarkerType, getMarkerIcon, canDeleteMarker, ensureAtLeastOneBall, clearAllMarkers, withArrowCurve, turnGoal } from '../tacticsMarker';
 
 describe('createTacticsMarker', () => {
   it('creates a cone marker with the given position', () => {
@@ -132,5 +132,18 @@ describe('withArrowCurve', () => {
 
   it('removes the curve when the arrow goes back to straight', () => {
     expect(withArrowCurve({ ...arrow, bend: 0.1, waves: 3 }, undefined)).toEqual(arrow);
+  });
+});
+
+describe('turnGoal', () => {
+  const goal = createTacticsMarker('goal', 0.5, 0.5);
+
+  it('turns a goal one eighth of a turn clockwise', () => {
+    expect(turnGoal(goal)).toEqual({ ...goal, rotation: 45 });
+    expect(turnGoal({ ...goal, rotation: 90 })).toEqual({ ...goal, rotation: 135 });
+  });
+
+  it('leaves out the rotation after a full turn', () => {
+    expect(turnGoal({ ...goal, rotation: 315 })).toEqual(goal);
   });
 });

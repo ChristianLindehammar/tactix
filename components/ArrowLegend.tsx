@@ -3,10 +3,12 @@ import { StyleSheet, View } from 'react-native';
 import Svg, { Path, Polygon } from 'react-native-svg';
 
 import { ThemedText } from '@/components/ThemedText';
+import type { Sport } from '@/constants/sports';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { ExerciseFrame } from '@/types/exercise';
 import { TacticsMarker } from '@/types/tacticsMarker';
+import { sportKey } from '@/utils/sportWording';
 
 export type ArrowKind = 'run' | 'dribble' | 'pass';
 
@@ -58,7 +60,7 @@ const Sample = ({ kind, color }: { kind: ArrowKind; color: string }) => (
 );
 
 /** Explains the arrows an exercise uses, under its diagram. Nothing when it has none. */
-export const ArrowLegend = ({ frames }: { frames: ExerciseFrame[] }) => {
+export const ArrowLegend = ({ frames, sport }: { frames: ExerciseFrame[]; sport?: Sport }) => {
   const { t } = useTranslation();
   const color = useThemeColor({}, 'text') as string;
   const kinds = arrowKindsIn(frames.map(frame => frame.markers));
@@ -69,7 +71,7 @@ export const ArrowLegend = ({ frames }: { frames: ExerciseFrame[] }) => {
       {kinds.map(kind => (
         <View key={kind} style={styles.item}>
           <Sample kind={kind} color={color} />
-          <ThemedText style={styles.label}>{t(LABEL_KEYS[kind])}</ThemedText>
+          <ThemedText style={styles.label}>{t(sportKey(LABEL_KEYS[kind], sport))}</ThemedText>
         </View>
       ))}
     </View>

@@ -149,6 +149,9 @@ const fail = (code: ExerciseParseErrorCode): never => {
 const isBend = (value: unknown): value is number =>
   typeof value === 'number' && value !== 0 && Math.abs(value) <= MAX_BEND;
 
+const isRotation = (value: unknown): value is number =>
+  typeof value === 'number' && Number.isFinite(value) && value > 0 && value < 360;
+
 const isWaveCount = (value: unknown): value is number =>
   typeof value === 'number' && Number.isInteger(value) && value >= 1 && value <= MAX_WAVES;
 
@@ -168,6 +171,10 @@ function parseMarker(data: unknown): TacticsMarker {
 
   const marker: TacticsMarker = { id: data.id, type: data.type, x: data.x, y: data.y };
   if (data.label !== undefined) marker.label = data.label;
+  if (data.type === 'goal' && data.rotation !== undefined) {
+    if (!isRotation(data.rotation)) return fail('invalidMarker');
+    marker.rotation = data.rotation;
+  }
   if (data.type !== 'arrow-solid' && data.type !== 'arrow-dashed') return marker;
 
   if (!isCoordinate(data.endX) || !isCoordinate(data.endY)) return fail('invalidMarker');

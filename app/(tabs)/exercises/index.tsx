@@ -25,6 +25,7 @@ import {
   RatingStars,
 } from '@/types/exercise';
 import { describeExercise } from '@/utils/describeExercise';
+import { sportKey } from '@/utils/sportWording';
 import { EXERCISE_SORTS, ExerciseSort, filterExercises } from '@/utils/filterExercises';
 
 const toggled = <T,>(list: T[], item: T) =>
@@ -206,7 +207,7 @@ export default function ExerciseLibraryScreen() {
       <ThemedText style={styles.cardDetail}>{describeExercise(item, t)}</ThemedText>
       {item.focus.length > 0 && (
         <ThemedText style={styles.cardDetail}>
-          {item.focus.map(tag => t(`focusTags.${tag}`)).join(', ')}
+          {item.focus.map(tag => t(sportKey(`focusTags.${tag}`, item.sport))).join(', ')}
         </ThemedText>
       )}
     </Pressable>
@@ -371,7 +372,7 @@ export default function ExerciseLibraryScreen() {
           {FOCUS_TAGS.map(tag => (
             <FilterChip
               key={tag}
-              label={t(`focusTags.${tag}`)}
+              label={t(sportKey(`focusTags.${tag}`, selectedSport))}
               testID={`filter-focus-${tag}`}
               selected={focus.includes(tag)}
               onPress={() => setFocus(current => toggled(current, tag))}

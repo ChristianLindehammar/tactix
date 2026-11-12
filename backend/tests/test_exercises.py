@@ -61,6 +61,26 @@ class TestSavingAndFetching:
         assert put(client, exercise, me).status_code == 200
         assert get(client, exercise, me).get_json()['frames'] == frames
 
+    def test_keeps_the_rotation_of_a_goal(self, client, register):
+        me = register()
+        frames = [{'id': 'f', 'markers': [
+            {'id': 'g', 'type': 'goal', 'x': 0.5, 'y': 0.1, 'rotation': 90},
+            {'id': 'b', 'type': 'ball', 'x': 0.5, 'y': 0.5},
+        ]}]
+        exercise = build_exercise(frames=frames)
+
+        assert put(client, exercise, me).status_code == 200
+        assert get(client, exercise, me).get_json()['frames'] == frames
+
+    @pytest.mark.parametrize('rotation', ['90', 0, 360, -45, True])
+    def test_rejects_a_goal_rotation_out_of_range(self, client, register, rotation):
+        me = register()
+        frames = [{'id': 'f', 'markers': [{'id': 'g', 'type': 'goal', 'x': 0.5, 'y': 0.1, 'rotation': rotation}]}]
+
+        response = put(client, build_exercise(frames=frames), me)
+
+        assert response.status_code == 400
+
     def test_gives_back_exactly_what_was_saved(self, client, register):
         me = register()
         exercise = build_exercise()

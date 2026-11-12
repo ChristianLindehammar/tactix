@@ -103,6 +103,15 @@ def _is_arrow_curve(bend, waves):
     )
 
 
+def _is_rotation(value):
+    return (
+        isinstance(value, (int, float))
+        and not isinstance(value, bool)
+        and math.isfinite(value)
+        and 0 < value < 360
+    )
+
+
 def _parse_marker(data):
     if (
         not isinstance(data, dict)
@@ -116,6 +125,10 @@ def _parse_marker(data):
         raise ExerciseParseError('invalidMarker')
 
     marker = {key: data[key] for key in ('id', 'type', 'x', 'y', 'label') if key in data}
+    if data['type'] == 'goal' and 'rotation' in data:
+        if not _is_rotation(data['rotation']):
+            raise ExerciseParseError('invalidMarker')
+        marker['rotation'] = data['rotation']
     if data['type'] not in ARROW_TYPES:
         return marker
     if not _is_coordinate(data.get('endX')) or not _is_coordinate(data.get('endY')):
