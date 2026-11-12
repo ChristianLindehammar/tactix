@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 2,
+  "id": "d1731d72-1948-5c25-82ae-ff05e71e8475",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Fyra led – passningsvarianter",
+  "description": "Fyra led som står parvis mot varandra, två till vänster och två till höger. Den första i ett led passar och springer sedan vidare enligt den variant ni kör:\n1. Passa framåt och ställ dig sist i ditt eget led.\n2. Passa framåt och följ efter passningen till ledet du passade till.\n3. Passa i sidled och byt till ledet rakt fram.\n4. Passa rakt fram och byt till ledet i sidled.\n5. Passa diagonalt och byt rakt fram eller i sidled.\n\nVariera passningarna: forehand, backhand, direkt, luftpassning och via sargen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningen längs golvet till mottagarens blad."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med mjukt blad och passa vidare snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Spring direkt efter passningen så att ledet aldrig står still."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Variant 1: A passar till B och springer tillbaka sist i sitt eget led.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.12
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.12
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.48,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.54
+        },
+        {
+          "id": "d3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.33,
+          "endX": 0.3,
+          "endY": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.27,
+          "endX": 0.2,
+          "endY": 0.08
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Variant 2: C passar till D och följer efter passningen till Ds led.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.12
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.12
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.48,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.54
+        },
+        {
+          "id": "d3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.33,
+          "endX": 0.7,
+          "endY": 0.42
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.62,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant 3: A passar i sidled till C och springer till ledet rakt fram.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.18
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.12
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.12
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.48,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.54
+        },
+        {
+          "id": "d3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.391,
+          "y": 0.266
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.421,
+          "y": 0.266,
+          "endX": 0.63,
+          "endY": 0.26
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.28,
+          "endX": 0.2,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

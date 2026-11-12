@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "id": "3b9663a2-d956-5d96-b749-2660a6eb730f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Goalkeeper: moving sideways",
+  "description": "Two outfield players stand just outside the goal crease and pass the ball between them at least three times before one of them shoots. The goalkeeper follows every pass and should always be set when the shot comes.\n\nThe goalkeeper practises moving quickly and smoothly, and keeping their balance while moving. Have the players vary when the shot comes so the goalkeeper cannot predict it. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Goalkeeper: small, quick steps – do not cross your legs."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the upper body still and your eyes on the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Outfield players: only shoot once the goalkeeper has had a chance to get set."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. The goalkeeper follows.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.403,
+          "y": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.433,
+          "y": 0.22,
+          "endX": 0.63,
+          "endY": 0.22
+        },
+        {
+          "id": "g1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.15,
+          "endX": 0.56,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes back. The goalkeeper moves again.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.597,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.567,
+          "y": 0.22,
+          "endX": 0.37,
+          "endY": 0.22
+        },
+        {
+          "id": "g2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.15,
+          "endX": 0.47,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "After at least three passes one of them shoots.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.601,
+          "y": 0.236
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.581,
+          "y": 0.216,
+          "endX": 0.52,
+          "endY": 0.085
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

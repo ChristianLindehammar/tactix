@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "id": "4ed628f7-2db5-53a5-a60c-3268a6111b24",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Kalles special – passningsspel och överlappning",
+  "description": "Led A i ena hörnet vid målet, led B längre ut på andra sidan och en fast passare (C). Konerna står vid mittlinjen.\n\nSteg 1: A passar diagonalt till den första i B-ledet och åker ner längs sargen och rundar konen. B passar A när konen rundas, och A passar tillbaka till B, som har tagit något steg fram från ledet.\n\nSteg 2: B passar till den fasta passaren C. Direkt efter passningen gör A och B en överlappning – de korsar varandras åkvägar in mot mål. C passar till någon av dem, som avslutar.\n\nLär in steg 1 först, och lägg sedan på steg 2. Byt A–B–A, och byt den fasta passaren då och då. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa i åkriktningen så att mottagaren kan fortsätta i fart."
+    },
+    {
+      "id": "cp2",
+      "text": "Vid överlappningen: åk nära varandra så att försvaret får svårt att välja."
+    },
+    {
+      "id": "cp3",
+      "text": "C: titta upp och välj den som är friast."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar diagonalt till B och åker ner längs sargen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.057
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.126,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.447,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.189,
+          "y": 0.17
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.219,
+          "y": 0.191,
+          "endX": 0.8,
+          "endY": 0.414
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.179,
+          "endX": 0.08,
+          "endY": 0.382
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A rundar konen och får passningen från B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.057
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.425,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.425,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.757,
+          "y": 0.425
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.727,
+          "y": 0.436,
+          "endX": 0.32,
+          "endY": 0.479
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.479,
+          "endX": 0.3,
+          "endY": 0.436,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar tillbaka till B, som har tagit ett steg fram.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.057
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.404,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.403,
+          "y": 0.471
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.433,
+          "y": 0.46,
+          "endX": 0.74,
+          "endY": 0.414
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passar till C. A och B korsar varandra in mot mål.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.057
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.372,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.657,
+          "y": 0.372
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.627,
+          "y": 0.361,
+          "endX": 0.26,
+          "endY": 0.361
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.404,
+          "endX": 0.62,
+          "endY": 0.222
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.329,
+          "endX": 0.42,
+          "endY": 0.201
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "C passar till A, som avslutar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.057
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.201,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.269,
+          "y": 0.306
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.299,
+          "y": 0.296,
+          "endX": 0.58,
+          "endY": 0.243
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.179,
+          "endX": 0.53,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

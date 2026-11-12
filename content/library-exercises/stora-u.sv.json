@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "id": "459cf5ac-40b3-56f0-9b74-a9d4071dde76",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Stora U – passningar i fart över hela planen",
+  "description": "Ett led vid mittlinjen och en fast passare (X) i varje hörn på samma långsida. A springer utan boll upp mot hörnet, får en passning av passaren och spelar tillbaka direkt. A båglöper ut mot sargen och får tillbaka bollen när hen har vänt upp. A driver bollen längs sargen över mittlinjen och passar ner i det andra hörnet, får tillbaka bollen och avslutar.\n\nByt fasta passare med jämna mellanrum. Kör från båda långsidorna så att spelarna tränar både forehand och backhand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll farten genom hela banan – passningarna ska tas emot i löpningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd upp kroppen innan du får tillbaka bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Passaren: slå passningen framför spelaren, i löpriktningen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer utan boll upp mot hörnet.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.113
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.47,
+          "endX": 0.65,
+          "endY": 0.28,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X passar A.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.113
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.777,
+          "y": 0.133,
+          "endX": 0.71,
+          "endY": 0.215
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A spelar tillbaka direkt och båglöper ut mot sargen.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.2,
+          "endX": 0.85,
+          "endY": 0.12
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.86,
+          "endY": 0.34,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X passar A, som har vänt upp.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.14
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.17,
+          "endX": 0.88,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "A driver bollen längs sargen över mittlinjen.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.43,
+          "endX": 0.88,
+          "endY": 0.7,
+          "bend": 0.015,
+          "waves": 6
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "A passar ner i hörnet och springer in mot mål.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.869,
+          "y": 0.789
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.879,
+          "y": 0.809,
+          "endX": 0.88,
+          "endY": 0.86
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.78,
+          "endX": 0.68,
+          "endY": 0.8
+        }
+      ]
+    },
+    {
+      "id": "f7",
+      "note": "X passar tillbaka, och A avslutar.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.839,
+          "y": 0.869
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.819,
+          "y": 0.859,
+          "endX": 0.71,
+          "endY": 0.82
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.84,
+          "endX": 0.58,
+          "endY": 0.92
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 2,
+  "id": "58fa31fc-20d3-548f-a350-a9623a586188",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Målvakt: skott från fyra håll",
+  "description": "Fyra utespelare med bollar runt målet: A och B nära hörnen, C och D längre ut. A driver in i slottet och tar ett snabbt avslut. Därefter är det Bs, Cs och Ds tur, och sedan börjar det om. Målvakten får hela tiden jobba i sidled.\n\nMålvakten tränar på att förflytta sig i sidled och på att placera sig så att hen täcker så mycket som möjligt från varje vinkel. Övningen bygger också styrka och kondition. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten: kom på plats innan skottet – inte samtidigt."
+    },
+    {
+      "id": "cp2",
+      "text": "Målvakten: täck den närmaste stolpen och möt bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Utespelarna: starta när målvakten har hunnit flytta sig."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver in i slottet och skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.2
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.22,
+          "endX": 0.64,
+          "endY": 0.24,
+          "bend": -0.04,
+          "waves": 2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.22,
+          "endX": 0.54,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B gör samma sak från andra sidan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.22,
+          "endX": 0.36,
+          "endY": 0.24,
+          "bend": 0.04,
+          "waves": 2
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.22,
+          "endX": 0.46,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C driver in och skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.53,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.395
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.375,
+          "endX": 0.64,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.27,
+          "endX": 0.53,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D avslutar varvet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.395
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.375,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "s4",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.27,
+          "endX": 0.47,
+          "endY": 0.085
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

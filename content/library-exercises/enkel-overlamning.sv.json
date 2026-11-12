@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 2,
+  "id": "42d166c3-3594-5600-9ad9-5844dde404d2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Enkel överlämning – avslut och retur",
+  "description": "Två led vid mittlinjen, ett vid varje sarg. A passar längs mittlinjen till B, som driver bollen snett in mot mitten. A springer in samtidigt, och B lämnar över bollen till A, som avslutar på mål. B fortsätter in mot mål och tar en eventuell retur.\n\nByt led efter varje tur, eller slå första passningen från varannan sida. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lämna bollen stilla vid överlämningen – A tar den i fart."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som tar emot ska komma i full fart, inte stå och vänta."
+    },
+    {
+      "id": "cp3",
+      "text": "B: följ alltid med in mot mål – returerna ger många mål."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar längs mittlinjen till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.56
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.474
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.474,
+          "endX": 0.83,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver bollen snett in mot mitten. A springer in mot samma punkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.56
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.41
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.38,
+          "endX": 0.6,
+          "endY": 0.29,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.42,
+          "endX": 0.42,
+          "endY": 0.3,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B lämnar bollen till A och fortsätter mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.56
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.36,
+          "endX": 0.42,
+          "endY": 0.32
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.28,
+          "endX": 0.62,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A avslutar. B tar en eventuell retur.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.56
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.255
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.425,
+          "y": 0.225,
+          "endX": 0.45,
+          "endY": 0.085
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.21,
+          "endX": 0.56,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

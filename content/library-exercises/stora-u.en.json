@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "id": "fabd63a2-c8d8-5de8-88e2-fc52e1df509f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The big U – passing at speed over the whole court",
+  "description": "One line at the centre line and a fixed passer (X) in each corner on the same long side. A runs without the ball up towards the corner, gets a pass from the passer and plays it straight back. A curves out towards the board and gets the ball back once they have turned. A carries the ball along the board over the centre line and passes down into the other corner, gets it back and shoots.\n\nChange the fixed passers now and then. Run it from both long sides so the players practise both forehand and backhand. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the speed up the whole way – take the passes on the run."
+    },
+    {
+      "id": "cp2",
+      "text": "Turn your body before you get the ball back."
+    },
+    {
+      "id": "cp3",
+      "text": "Passer: play the pass in front of the player, in their running direction."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs without the ball up towards the corner.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.113
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.47,
+          "endX": 0.65,
+          "endY": 0.28,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X passes to A.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.113
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.777,
+          "y": 0.133,
+          "endX": 0.71,
+          "endY": 0.215
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A plays it straight back and curves out towards the board.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.2,
+          "endX": 0.85,
+          "endY": 0.12
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.86,
+          "endY": 0.34,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X passes to A, who has turned.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.14
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.17,
+          "endX": 0.88,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "A carries the ball along the board over the centre line.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.43,
+          "endX": 0.88,
+          "endY": 0.7,
+          "bend": 0.015,
+          "waves": 6
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "A passes down into the corner and runs in towards goal.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.869,
+          "y": 0.789
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.879,
+          "y": 0.809,
+          "endX": 0.88,
+          "endY": 0.86
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.78,
+          "endX": 0.68,
+          "endY": 0.8
+        }
+      ]
+    },
+    {
+      "id": "f7",
+      "note": "X passes back, and A shoots.",
+      "markers": [
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "x1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "X"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.839,
+          "y": 0.869
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.819,
+          "y": 0.859,
+          "endX": 0.71,
+          "endY": 0.82
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.84,
+          "endX": 0.58,
+          "endY": 0.92
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

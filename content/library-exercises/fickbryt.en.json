@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "id": "18f702be-1ae6-5530-8265-414f4df43498",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Cut inside – curved run and drive to the middle",
+  "description": "Four lines: A and D in the corners by the goal, B and C further out along the sides. A runs in a curve along the board and gets a pass from B level with the cone. A receives, curves in with the ball towards the middle and shoots. Then D runs from the other side and gets the pass from C.\n\nRotation: B goes to line A, A to D, D to C and C to B. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Receive on the move – do not stop at the cone."
+    },
+    {
+      "id": "cp2",
+      "text": "Cut in towards the middle with the ball close to the blade."
+    },
+    {
+      "id": "cp3",
+      "text": "Shoot as soon as you have a good angle."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs in a curve along the board. B passes to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.851,
+          "y": 0.431
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.13,
+          "endX": 0.84,
+          "endY": 0.32,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.851,
+          "y": 0.401,
+          "endX": 0.84,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A curves in with the ball and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.365
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.385,
+          "endX": 0.6,
+          "endY": 0.33,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.53,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D runs from the other side and gets the pass from C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.149,
+          "y": 0.431
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.13,
+          "endX": 0.16,
+          "endY": 0.32,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.149,
+          "y": 0.401,
+          "endX": 0.16,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

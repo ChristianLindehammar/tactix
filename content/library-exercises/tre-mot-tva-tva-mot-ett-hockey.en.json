@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 2,
+  "id": "ee1d3df0-5906-5c23-8084-857a1495e21c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "3 on 2, 2 on 1 – attack and counter",
+  "description": "Three lines at one end and two defenders in the other half. The first in each of the three lines attack 3v2 against the defenders. The attacker who \"kills\" the puck – shoots, misplaces a pass or loses it – becomes the lone defender in the next phase.\n\nThe defenders get the puck through a quick outlet pass from the goalkeeper and counter 2v1 towards the goal where the lines stand. When the counter is over, the defenders join a line each, and the two attackers who did not kill the puck become the new defenders. That way the rotation happens by itself.\n\nThe drill needs at least twelve outfield players to keep a good tempo. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: wide and deep – make the most of the extra player."
+    },
+    {
+      "id": "cp2",
+      "text": "Whoever kills the puck: turn straight away and defend."
+    },
+    {
+      "id": "cp3",
+      "text": "Defenders: talk to each other and switch quickly when you win the puck."
+    },
+    {
+      "id": "cp4",
+      "text": "Goalkeeper: move the puck out quickly so the counter gets going."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 12,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B and C attack 3v2 against defenders D and E.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.072
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.057
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.072
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.158,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.136,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.158,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.693,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.693,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.619,
+          "y": 0.191
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.619,
+          "y": 0.223,
+          "endX": 0.52,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.211,
+          "endX": 0.22,
+          "endY": 0.521
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.211,
+          "endX": 0.78,
+          "endY": 0.521
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes to C, who drives forward and shoots. C has killed the puck.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.072
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.057
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.072
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.564,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.543,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.564,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.671,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.671,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.583,
+          "y": 0.578
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.603,
+          "y": 0.589,
+          "endX": 0.74,
+          "endY": 0.607
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.628,
+          "endX": 0.7,
+          "endY": 0.778,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.799,
+          "endX": 0.53,
+          "endY": 0.94
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper passes out to D. D and E counter, and C turns to defend.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.072
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.057
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.072
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.821,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.778,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.65,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.821
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.81,
+          "endX": 0.33,
+          "endY": 0.789
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.735,
+          "endX": 0.36,
+          "endY": 0.457,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.607,
+          "endX": 0.62,
+          "endY": 0.414
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.767,
+          "endX": 0.52,
+          "endY": 0.479
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D and E play 2v1 against C and shoot. A and B become the new defenders.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.072
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.057
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.072
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.671,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.393,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.372,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.318
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.318,
+          "endX": 0.58,
+          "endY": 0.286
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.254,
+          "endX": 0.53,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

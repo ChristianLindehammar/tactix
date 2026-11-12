@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "id": "089b50fb-943d-5d47-b053-3bfd195356eb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "M-et med bonus – vaken efter avslutet",
+  "description": "En fortsättning på M-et. Två led i hörnen vid ena målet och en kon på var sida en bit ut. A springer ner och rundar sin kon, får en diagonalpass från B i andra hörnet och avslutar – direkt eller efter mottagning.\n\nEfter avslutet vänder A mot sitt eget hörn och får en passning från den som står först där (C), och spelar direkt tillbaka. C slår sedan diagonalpassen till B, som under tiden har rundat sin kon. Så rullar det på.\n\nDet är lätt att slappna av efter ett skott. Här lär sig spelarna att vara vakna även efter avslutet. Byt led så att alla får skjuta från båda hållen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Släpp inte fokus efter skottet – vänd direkt mot ditt hörn."
+    },
+    {
+      "id": "cp2",
+      "text": "Direktpassningen tillbaka ska vara hård och exakt."
+    },
+    {
+      "id": "cp3",
+      "text": "Löparen visar med klubban var bollen ska komma."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer ner och rundar den vänstra konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.823,
+          "y": 0.256
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.26,
+          "endX": 0.24,
+          "endY": 0.47
+        },
+        {
+          "id": "r1b",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.48,
+          "endX": 0.37,
+          "endY": 0.39,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en diagonalpass till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.823,
+          "y": 0.256
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.793,
+          "y": 0.276,
+          "endX": 0.43,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.28,
+          "endX": 0.46,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C passar A, som spelar direkt tillbaka. B rundar sin kon.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.209,
+          "y": 0.219
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.229,
+          "y": 0.209,
+          "endX": 0.31,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.31,
+          "y": 0.24,
+          "endX": 0.23,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.26,
+          "endX": 0.76,
+          "endY": 0.47
+        },
+        {
+          "id": "r2b",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.48,
+          "endX": 0.63,
+          "endY": 0.39,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "C slår diagonalpassen till B, som avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.37,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.217,
+          "y": 0.216
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.247,
+          "y": 0.236,
+          "endX": 0.58,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

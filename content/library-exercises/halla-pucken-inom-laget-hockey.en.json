@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "4f80765b-e068-5bf4-907a-07e221d97dc9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Keep the puck in the team – ten passes",
+  "description": "Two teams, for example 5v5 or 4v4. The team with the puck tries to keep it by passing it around, and the other team tries to win it. Ten passes in a row without the other team getting control scores a point. Nobody shoots at goal.\n\nMake it easier for one team with an extra player (5v4), or have the other team keep only one hand on the stick. Play on the whole rink or in a smaller area – the smaller the area, the harder it gets. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Talk to each other – call for the puck."
+    },
+    {
+      "id": "cp2",
+      "text": "Move into space where you can receive a pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up before you pass – is anyone free?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. A red player closes B down.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.222
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.286
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.275,
+          "endX": 0.64,
+          "endY": 0.19
+        },
+        {
+          "id": "rr1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.179,
+          "endX": 0.6,
+          "endY": 0.158
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes on to C, who moves away from their marker.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.168
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.679,
+          "y": 0.234
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.669,
+          "y": 0.266,
+          "endX": 0.54,
+          "endY": 0.361
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.404,
+          "endX": 0.56,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red intercepts and passes to a team-mate – now red starts counting.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.168
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.34
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.532,
+          "y": 0.285
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.512,
+          "y": 0.253,
+          "endX": 0.35,
+          "endY": 0.243
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

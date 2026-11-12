@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "id": "a63c84b9-db76-53b8-be2d-a4e95a2ccdd5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Kalle's special – passing and an overlap",
+  "description": "Line A in one corner by the goal, line B further out on the other side, and a fixed passer (C). The cones are by the centre line.\n\nStep 1: A passes diagonally to the first in line B, then runs down along the board and around the cone. B passes to A as they round the cone, and A passes back to B, who has taken a step forward from the line.\n\nStep 2: B passes to the fixed passer C. Right after the pass, A and B make an overlap – they cross each other's paths in towards goal. C passes to one of them, who shoots.\n\nTeach step 1 first, then add step 2. Rotate A–B–A, and change the fixed passer now and then. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass in the running direction so the receiver can keep their speed."
+    },
+    {
+      "id": "cp2",
+      "text": "At the overlap: run close to each other so the defence struggles to choose."
+    },
+    {
+      "id": "cp3",
+      "text": "C: look up and pick whoever is most free."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes diagonally to B and runs down along the board.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.189,
+          "y": 0.191
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.219,
+          "y": 0.211,
+          "endX": 0.8,
+          "endY": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.2,
+          "endX": 0.08,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A goes around the cone and gets the pass from B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.43,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.757,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.727,
+          "y": 0.44,
+          "endX": 0.32,
+          "endY": 0.48
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.48,
+          "endX": 0.3,
+          "endY": 0.44,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes back to B, who has stepped forward.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.403,
+          "y": 0.473
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.433,
+          "y": 0.463,
+          "endX": 0.74,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes to C. A and B cross each other on the way in towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.657,
+          "y": 0.38
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.627,
+          "y": 0.37,
+          "endX": 0.26,
+          "endY": 0.37
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.41,
+          "endX": 0.62,
+          "endY": 0.24
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.34,
+          "endX": 0.42,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "C passes to A, who shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.269,
+          "y": 0.319
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.299,
+          "y": 0.309,
+          "endX": 0.58,
+          "endY": 0.26
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.2,
+          "endX": 0.53,
+          "endY": 0.085
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

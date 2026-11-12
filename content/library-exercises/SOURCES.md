@@ -98,6 +98,40 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | kombinationen | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 7 Kombinationen | 2026-11-12 |
 | snurren | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 8 Snurren | 2026-11-12 |
 | kuvertet | floorball | Hjulsbro IK "Innebandyövningar" v1 June 2015 (PDF), T-övning 9 Kuvertet | 2026-11-12 |
+| halla-bollen-inom-laget | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 1 "Hålla bollen inom laget" | 2026-11-12 |
+| fyra-led-passningar | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 2 "Fyra led" | 2026-11-12 |
+| enkel-overlamning | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 3 "Enkel överlämning" | 2026-11-12 |
+| dubbeln-tva-avslut | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 4 "Dubbeln" | 2026-11-12 |
+| m-et-med-bonus | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 5 "M-et med bonus" | 2026-11-12 |
+| m-et-med-vaggspel | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 6 "M-et med väggspel" | 2026-11-12 |
+| stora-u | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 7 "Stora U" | 2026-11-12 |
+| vaggpassen-runt-konen | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 9 "Väggpassen" | 2026-11-12 |
+| tre-mot-tva-tva-mot-ett | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 10 "3 mot 2, 2 mot 1" | 2026-11-12 |
+| kalles-special-overlappning | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 11 "Kalles special" | 2026-11-12 |
+| breda-v | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 12 "Breda V" | 2026-11-12 |
+| in-och-ut | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 13 "In och ut" | 2026-11-12 |
+| fickbryt | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 14 "Fickbryt" | 2026-11-12 |
+| malvakt-forflyttning-passningar | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 15 "Förflyttning 1" | 2026-11-12 |
+| malvakt-mota-med-kroppen | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 16 "Förflyttning 2" | 2026-11-12 |
+| malvakt-reflexer | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 17 "Reflexövning" | 2026-11-12 |
+| malvakt-siddled | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 18 "Siddledsövning" | 2026-11-12 |
+| titta-upp-rakna-fingrar | floorball | Lomma FBC "Övningsbank" (PDF, based on SIBF/Skåne IBF material), drill 19 "Titta upp – räkna fingrar" | 2026-11-12 |
+| halla-pucken-inom-laget-hockey | hockey | Hockey version of halla-bollen-inom-laget (same source) | 2026-11-12 |
+| fyra-led-passningar-hockey | hockey | Hockey version of fyra-led-passningar (same source) | 2026-11-12 |
+| enkel-overlamning-hockey | hockey | Hockey version of enkel-overlamning (same source) | 2026-11-12 |
+| dubbeln-tva-avslut-hockey | hockey | Hockey version of dubbeln-tva-avslut (same source) | 2026-11-12 |
+| m-et-med-bonus-hockey | hockey | Hockey version of m-et-med-bonus (same source) | 2026-11-12 |
+| m-et-med-vaggspel-hockey | hockey | Hockey version of m-et-med-vaggspel (same source) | 2026-11-12 |
+| stora-u-hockey | hockey | Hockey version of stora-u (same source) | 2026-11-12 |
+| vaggpassen-runt-konen-hockey | hockey | Hockey version of vaggpassen-runt-konen (same source) | 2026-11-12 |
+| tre-mot-tva-tva-mot-ett-hockey | hockey | Hockey version of tre-mot-tva-tva-mot-ett (same source) | 2026-11-12 |
+| kalles-special-overlappning-hockey | hockey | Hockey version of kalles-special-overlappning (same source) | 2026-11-12 |
+| breda-v-hockey | hockey | Hockey version of breda-v (same source) | 2026-11-12 |
+| in-och-ut-hockey | hockey | Hockey version of in-och-ut (same source) | 2026-11-12 |
+| fickbryt-hockey | hockey | Hockey version of fickbryt (same source) | 2026-11-12 |
+| malvakt-forflyttning-passningar-hockey | hockey | Hockey version of malvakt-forflyttning-passningar (same source) | 2026-11-12 |
+| malvakt-siddled-hockey | hockey | Hockey version of malvakt-siddled (same source) | 2026-11-12 |
+| titta-upp-rakna-fingrar-hockey | hockey | Hockey version of titta-upp-rakna-fingrar (same source) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 

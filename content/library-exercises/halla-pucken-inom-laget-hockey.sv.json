@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "7c69634c-7581-51da-9f66-50c796087d8b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Håll pucken i laget – tio passningar",
+  "description": "Två lag, till exempel 5 mot 5 eller 4 mot 4. Laget med pucken ska hålla den inom laget genom att passa runt, och det andra laget försöker vinna den. Klarar ett lag tio passningar i rad utan att motståndarna får kontroll på pucken blir det ett poäng. Ingen skjuter på mål.\n\nGör det lättare för det ena laget med en spelare extra (5 mot 4), eller låt det laget bara ha en hand på klubban. Spela på hela rinken eller på en mindre yta – ju mindre yta, desto svårare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Prata med varandra – ropa på pucken."
+    },
+    {
+      "id": "cp2",
+      "text": "Rör dig till en fri yta där du kan få en passning."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta upp innan du passar – finns det någon fri?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. Röd går mot B för att pressa.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.222
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.286
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.275,
+          "endX": 0.64,
+          "endY": 0.19
+        },
+        {
+          "id": "rr1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.179,
+          "endX": 0.6,
+          "endY": 0.158
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar vidare till C, som rör sig bort från sin motståndare.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.168
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.679,
+          "y": 0.234
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.669,
+          "y": 0.266,
+          "endX": 0.54,
+          "endY": 0.361
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.404,
+          "endX": 0.56,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Röd snappar pucken och passar till en lagkamrat – nu börjar röd räkna.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.628
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.168
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.34
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.436
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.372
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.532,
+          "y": 0.285
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.512,
+          "y": 0.253,
+          "endX": 0.35,
+          "endY": 0.243
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

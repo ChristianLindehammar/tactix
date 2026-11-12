@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "id": "bfc45161-b200-5623-b305-6ec4c5abaa02",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Fickbryt – båglöpning och inbrytning",
+  "description": "Fyra led: A och D i hörnen vid målet, B och C längre ut längs kanterna. A springer i en båge längs sargen och får en passning från B i höjd med konen. A tar emot och bågar in med bollen mot mitten och avslutar. Sedan springer D från andra sidan och får passningen från C.\n\nLedbyten: B går till A-ledet, A till D, D till C och C till B. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta emot i farten – stanna inte upp vid konen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bryt in mot mitten med bollen nära bladet."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut så fort du har en bra vinkel."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer i en båge längs sargen. B passar till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.851,
+          "y": 0.431
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.13,
+          "endX": 0.84,
+          "endY": 0.32,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.851,
+          "y": 0.401,
+          "endX": 0.84,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A bågar in med bollen och avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.365
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.385,
+          "endX": 0.6,
+          "endY": 0.33,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.53,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D springer från andra sidan och får passningen från C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.149,
+          "y": 0.431
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.13,
+          "endX": 0.16,
+          "endY": 0.32,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.149,
+          "y": 0.401,
+          "endX": 0.16,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

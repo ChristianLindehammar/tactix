@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "id": "6dabf43d-3b97-568d-a1b9-a139ab8d077f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Simple handover – shot and rebound",
+  "description": "Two lines at the centre line, one by each board. A passes along the centre line to B, who skates with the puck diagonally in towards the middle. A skates in at the same time, and B hands the puck over to A, who shoots. B skates on towards goal and picks up any rebound.\n\nSwap lines after each turn, or play the first pass from alternate sides. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Leave the puck dead still at the handover – A takes it at speed."
+    },
+    {
+      "id": "cp2",
+      "text": "The receiver should arrive at full speed, not stand and wait."
+    },
+    {
+      "id": "cp3",
+      "text": "B: always follow in towards goal – rebounds bring lots of goals."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes along the centre line to B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.564
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.457,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.457,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.472
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.472,
+          "endX": 0.83,
+          "endY": 0.468
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skates with the puck diagonally in towards the middle. A skates to the same spot.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.564
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.457,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.457,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.404
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.372,
+          "endX": 0.6,
+          "endY": 0.275,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.414,
+          "endX": 0.42,
+          "endY": 0.286,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B leaves the puck for A and skates on towards goal.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.564
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.286
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.35,
+          "endX": 0.42,
+          "endY": 0.307
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.265,
+          "endX": 0.62,
+          "endY": 0.201
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A shoots. B picks up any rebound.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.564
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.564
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.297,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.222,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.238
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.425,
+          "y": 0.206,
+          "endX": 0.45,
+          "endY": 0.06
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.19,
+          "endX": 0.56,
+          "endY": 0.136
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "id": "b851a48b-8003-55fe-95a1-d2ba9a4b3623",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Målvakt: förflyttning i sidled",
+  "description": "Två utespelare står precis utanför målområdet och spelar bollen mellan sig minst tre gånger innan någon av dem skjuter. Målvakten följer med i varje passning och ska alltid stå rätt när skottet kommer.\n\nMålvakten tränar på att förflytta sig snabbt och smidigt, och på balansen i förflyttningarna. Låt spelarna variera när skottet kommer, så att målvakten inte kan räkna ut det. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten: små, snabba steg – korsa inte benen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll överkroppen stilla och blicken på bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Utespelarna: skjut först när målvakten har haft en chans att komma på plats."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. Målvakten följer med.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.403,
+          "y": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.433,
+          "y": 0.22,
+          "endX": 0.63,
+          "endY": 0.22
+        },
+        {
+          "id": "g1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.15,
+          "endX": 0.56,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tillbaka. Målvakten flyttar sig igen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.597,
+          "y": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.567,
+          "y": 0.22,
+          "endX": 0.37,
+          "endY": 0.22
+        },
+        {
+          "id": "g2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.15,
+          "endX": 0.47,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Efter minst tre passningar skjuter någon av dem.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.11
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.601,
+          "y": 0.236
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.581,
+          "y": 0.216,
+          "endX": 0.52,
+          "endY": 0.085
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

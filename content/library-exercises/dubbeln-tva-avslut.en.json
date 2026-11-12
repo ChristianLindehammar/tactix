@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 2,
+  "id": "d3e02a85-1f32-5dd4-8907-4342c33b564d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The double – two shots in a row",
+  "description": "Two lines, one in each corner at one end, with a cone on each side further out. B runs down along the board, goes around their cone, gets a pass from line A in the far corner and shoots. Straight away B gets another pass from their own line and shoots again, first time. Then it is line A's turn from the other side.\n\nThe first pass must be played early so it reaches the runner just after the cone. Each player plays two passes before it is their turn to run. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Good shots need good passes – concentrate on every pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass to where the runner is going, not where they are."
+    },
+    {
+      "id": "cp3",
+      "text": "After the first shot: turn quickly and be ready for the next ball."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B runs down along the board and around the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.46
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.09
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.22
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.22,
+          "endX": 0.9,
+          "endY": 0.46
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.5,
+          "endX": 0.68,
+          "endY": 0.39,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays an early diagonal pass to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.46
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.09
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.24,
+          "endX": 0.61,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots and keeps moving in towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.46
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.09
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.34
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.52,
+          "endY": 0.085
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.36,
+          "endX": 0.64,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "The next in B's line passes, and B shoots first time again. A starts from the other side.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.46
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.09
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.135
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.155,
+          "endX": 0.66,
+          "endY": 0.22
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.21,
+          "endX": 0.53,
+          "endY": 0.085
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.22,
+          "endX": 0.1,
+          "endY": 0.44
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

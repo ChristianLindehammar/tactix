@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "id": "7451a646-72b0-53c6-9981-6726475ce6b8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Wide V – pass out wide and shoot",
+  "description": "Three lines: A along the left side, B along the right side and C in the middle with the balls. A runs along the side with their stick on the floor. C passes to A level with the cone. A receives and goes for goal. Then B runs along their side and gets a pass from C, and so on.\n\nRotation: A goes to line C, C goes to the side they passed to, and B goes to line C after their shot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stick on the floor – show where you want the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "C: pass in front of the runner, level with the cone."
+    },
+    {
+      "id": "cp3",
+      "text": "Receive on the move and go straight for goal."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs along the side. C passes to A level with the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.36
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.48
+        },
+        {
+          "id": "qc2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.48
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.451,
+          "y": 0.391
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.42,
+          "endX": 0.08,
+          "endY": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.421,
+          "y": 0.381,
+          "endX": 0.13,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A receives and goes for goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.36
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.48
+        },
+        {
+          "id": "qc2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.48
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.129,
+          "y": 0.251
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.149,
+          "y": 0.231,
+          "endX": 0.3,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.15,
+          "endX": 0.45,
+          "endY": 0.085
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B runs along the other side and gets the pass from C. A goes to line C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.36
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.48
+        },
+        {
+          "id": "qc2",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.48
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.549,
+          "y": 0.391
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.4,
+          "endX": 0.92,
+          "endY": 0.31
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.579,
+          "y": 0.381,
+          "endX": 0.87,
+          "endY": 0.33
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.21,
+          "endX": 0.48,
+          "endY": 0.38,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

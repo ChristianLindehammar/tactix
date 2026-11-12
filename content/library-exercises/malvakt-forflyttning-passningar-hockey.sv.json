@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 2,
+  "id": "be931166-6a4e-5cea-abc7-0d5e0f51a48f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Målvakt: förflyttning i sidled",
+  "description": "Två utespelare står precis utanför målgården och spelar pucken mellan sig minst tre gånger innan någon av dem skjuter. Målvakten följer med i varje passning och ska alltid stå rätt när skottet kommer.\n\nMålvakten tränar på att förflytta sig snabbt och smidigt, och på balansen i förflyttningarna. Låt spelarna variera när skottet kommer, så att målvakten inte kan räkna ut det. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten: korta, kontrollerade skjut i sidled – shuffla eller T-skjut."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll överkroppen stilla och blicken på pucken."
+    },
+    {
+      "id": "cp3",
+      "text": "Utespelarna: skjut först när målvakten har haft en chans att komma på plats."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. Målvakten följer med.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.201,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.105
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.403,
+          "y": 0.201
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.433,
+          "y": 0.201,
+          "endX": 0.63,
+          "endY": 0.201
+        },
+        {
+          "id": "g1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.126,
+          "endX": 0.56,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tillbaka. Målvakten flyttar sig igen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.201,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.105
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.597,
+          "y": 0.201
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.567,
+          "y": 0.201,
+          "endX": 0.37,
+          "endY": 0.201
+        },
+        {
+          "id": "g2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.126,
+          "endX": 0.47,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Efter minst tre passningar skjuter någon av dem.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.201,
+          "label": "B"
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.105
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.601,
+          "y": 0.218
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.581,
+          "y": 0.196,
+          "endX": 0.52,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
