@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "38412caf-121c-5072-ac3c-e597bb019f80",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – snabb igångsättning",
+  "description": "En målvakt i mål och två utespelare ute på planen, plus en ledare med bollar vid sidan. Ledaren slår ett inlägg eller ett inspel mot målvakten, som fångar bollen. Samtidigt gör sig utespelarna spelbara. Målvakten väljer vem bollen ska till och hur – utkast, utspark eller sidvolley – beroende på läget. Byt uppgifter efter fyra igångsättningar.\n\nSvårare: när målvakten fångar bollen gör sig bara den ena utespelaren spelbar. Den andra springer till en kon och räknas då som markerad. Målvakten har ett enda bra alternativ och måste uppfatta vilket det är. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp direkt när du fått bollen – se var dina medspelare finns innan du väljer."
+    },
+    {
+      "id": "cp2",
+      "text": "Välj rätt sorts igångsättning: kast för kort och exakt, sidvolley eller utspark för längre."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela till medspelarens rätta fot eller framför hen, så att hen kan fortsätta framåt."
+    },
+    {
+      "id": "cp4",
+      "text": "Utespelarna: gör er spelbara på bredden eller djupet så fort målvakten har bollen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren slår ett inlägg mot målet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.28,
+          "endX": 0.56,
+          "endY": 0.13,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten fångar bollen. A och B gör sig spelbara.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.45,
+          "endX": 0.14,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.57,
+          "endX": 0.62,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten kastar ut bollen till A, som är fri på kanten.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.24
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.13,
+          "endX": 0.22,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Svårare: B springer till konen och är markerad. Målvakten ser att A är fri och sparkar ut till A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.22,
+          "endY": 0.51
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.6,
+          "endX": 0.68,
+          "endY": 0.54
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.12,
+          "endX": 0.23,
+          "endY": 0.5,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

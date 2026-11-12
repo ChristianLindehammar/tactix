@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "id": "fccf5ab1-c68b-5202-8cb1-af58256c9e2f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – djupledsboll och friläge",
+  "description": "En målvakt i straffområdet och två utespelare strax utanför. Ledaren står längre ut med bollar och ett litet mål ställs upp en bit ut på planen.\n\nLedaren spelar in en boll i ytan mellan målvakten och en av utespelarna. Målvakten ska om möjligt komma ut och ta bollen före motspelaren, annars stå kvar och rädda avslutet. Spelaren som passningen går mot försöker hinna först och göra mål, och den andra spelaren går in för att ta en eventuell retur. Tar målvakten bollen spelar, kastar eller sparkar hen den direkt i det lilla målet. Tas bollen utanför straffområdet måste målvakten spela med fötterna.\n\nVariera hårdheten i passningarna så att målvakten får blandade lägen: djupledsboll, friläge och skott. Svårare: ledaren får också skjuta själv. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakt: bestäm dig tidigt – kom ut eller stanna, men aldrig halvvägs."
+    },
+    {
+      "id": "cp2",
+      "text": "Står du kvar: gör dig stor, kom nära och låt anfallaren göra första rörelsen."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta bollen med händerna i straffområdet och med fötterna utanför."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter bollvinst: snabb och rätt igångsättning till det lilla målet."
+    },
+    {
+      "id": "cp5",
+      "text": "Utespelarna: avsluta tidigt innan målvakten hinner fram, och följ alltid upp på retur."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren spelar in en boll mellan målvakten och A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.41,
+          "endX": 0.38,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten kommer ut och hinner före A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.25
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.14,
+          "endX": 0.4,
+          "endY": 0.22
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.31,
+          "endX": 0.31,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten spelar direkt bollen i det lilla målet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.22,
+          "endX": 0.83,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Hinner A först blir det friläge – A avslutar och B följer upp på retur.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.15,
+          "endX": 0.55,
+          "endY": 0.05
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.26,
+          "endX": 0.6,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 2,
+  "id": "eb3d87a1-c1ae-5233-87e5-c1c7c4bbba1a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Vinn tillbaka bollen – sju sekunder till avslut",
+  "description": "Spel i sista tredjedelen på en 9 mot 9-plan. Lika många i båda lagen, men röd har också en målvakt. Båda lagen ställer upp enligt sin formation, och alla spelare håller till i tredjedelen.\n\nRöds målvakt startar med att spela bollen till blå, som ska hålla den inom laget. Tappar blå bollen ska de vinna tillbaka den direkt – och har då sju sekunder på sig att komma till avslut. Röd ska efter bollvinst slå fem passningar inom laget och sedan ta bollen ut ur tredjedelen, genom att driva över linjen eller passa till en spelare som löper på djupet.\n\nFortsättning: flytta övningen till den mittre tredjedelen. Blå kontrar då efter bollvinst mot sista tredjedelen, och målvakten får bryta långa passningar. Bilden visar bara sista tredjedelen och är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Tappar ni bollen: närmaste spelare pressar direkt, de andra stänger passningarna runt bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Efter bollvinst – leta efter vägen mot mål på en gång, sju sekunder går fort."
+    },
+    {
+      "id": "cp3",
+      "text": "Ha spelare nära bollen när ni anfaller, så att ni är nära när bollen tappas."
+    },
+    {
+      "id": "cp4",
+      "text": "Röd: första passningen ut ur trycket, sedan bredd och djup."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röds målvakt startar med att spela till A.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.6
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.6
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.13,
+          "endX": 0.25,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A försöker passa till B, men röd X bryter.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.6
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.6
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.42
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.38,
+          "endX": 0.37,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A och B pressar X direkt och vinner tillbaka bollen – sju sekunder börjar nu.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.6
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.6
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.59
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.45,
+          "endX": 0.36,
+          "endY": 0.53
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.58,
+          "endX": 0.47,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A spelar till D, som avslutar direkt.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.6
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.6
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.6
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.57,
+          "endX": 0.2,
+          "endY": 0.29
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.2,
+          "endX": 0.44,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Om röd vinner bollen och hinner slå fem passningar driver de bollen ut ur tredjedelen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.6
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.6
+        },
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.57
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.6,
+          "endX": 0.71,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.53,
+          "endX": 0.6,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

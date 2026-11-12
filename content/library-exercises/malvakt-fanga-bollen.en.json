@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "id": "b9b4768b-5aef-5eda-aede-694b10cbdc59",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – catch the ball",
+  "description": "A goalkeeper in goal and two outfield players in front of the penalty area, plus a coach to the side. A passes to B, who stands with their back to goal and lays the ball back. A shoots with the first or second touch. The goalkeeper catches the ball and rolls it to the coach. Swap roles after three shots.\n\nHarder for the goalkeeper: B chooses whether to turn and shoot or lay it back. Also vary the direction and pace of the lay-off, so the shots come from different positions and the goalkeeper cannot guess.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep moving with the ball – be balanced when the shot comes."
+    },
+    {
+      "id": "cp2",
+      "text": "Get your body behind the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Catch with both hands at the same time and use the whole hand to grip."
+    },
+    {
+      "id": "cp4",
+      "text": "If you can't catch it: push the ball out to the side, away from goal."
+    },
+    {
+      "id": "cp5",
+      "text": "When diving: push off with the leg nearest the ball and land with one hand behind and the other on top of the ball."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B, who stands with their back to goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.43
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.41,
+          "endX": 0.55,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lays the ball back to A, who steps onto it.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.32,
+          "endX": 0.46,
+          "endY": 0.35
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.47,
+          "endX": 0.42,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots first time. The goalkeeper has shifted with the lay-off and is balanced.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.31,
+          "endX": 0.47,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "The goalkeeper catches the ball and rolls it to the coach L.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.13,
+          "endX": 0.17,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Harder: B turns and shoots. The goalkeeper does not know in advance who will shoot.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.21
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.64,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.19,
+          "endX": 0.57,
+          "endY": 0.08
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

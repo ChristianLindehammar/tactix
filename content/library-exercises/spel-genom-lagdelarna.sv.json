@@ -1,0 +1,872 @@
+{
+  "schemaVersion": 2,
+  "id": "e34a46b0-3718-51c1-bf20-5c5c316dabf6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Spel genom lagdelarna",
+  "description": "Spel på en 9 mot 9-plan som delas i tredjedelar. Koner eller pinnar står utspridda i varje tredjedel och fungerar som motståndare. Ett lag i sin formation – bilden visar 3-3-2 – spelar bollen från sin egen målvakt till målvakten i andra änden (J) och måste passera alla tre tredjedelarna. Offside gäller. När bollen når fram börjar laget om med en ny boll från samma målvakt. Har ni två lag kan de spela samtidigt åt var sitt håll med varsin boll.\n\nVariera hur bollen spelas till målvakten. Kör två minuter i taget med en minuts rörlighet emellan.\n\nFortsättning: byt konerna mot försvarare, två i varje tredjedel, som får försvara sin zon. Bryter de, kontrar de och laget som tappade bollen försöker vinna tillbaka den. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå mellan motståndarna (konerna), inte bakom dem – då kan du ta emot och vända."
+    },
+    {
+      "id": "cp2",
+      "text": "Bredd och djup i varje lagdel så att det alltid finns minst två passningsvägar."
+    },
+    {
+      "id": "cp3",
+      "text": "Kolla över axeln innan bollen kommer så att du vet om du kan vända upp."
+    },
+    {
+      "id": "cp4",
+      "text": "Hård passning längs marken förbi en lagdel är bättre än en säker passning i sidled."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten startar med en passning till A i första tredjedelen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "d1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.72
+        },
+        {
+          "id": "d2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.72
+        },
+        {
+          "id": "d3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "d4",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "d5",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "d6",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.27
+        },
+        {
+          "id": "d7",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.27
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "tk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.6
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.87
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.86,
+          "endX": 0.53,
+          "endY": 0.84
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar förbi konerna till B, som har ställt sig mellan dem. Ytterspelaren gör sig spelbar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "d1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.72
+        },
+        {
+          "id": "d2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.72
+        },
+        {
+          "id": "d3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "d4",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "d5",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "d6",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.27
+        },
+        {
+          "id": "d7",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.27
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "tk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.6
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.71,
+          "endX": 0.5,
+          "endY": 0.64
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.64,
+          "endX": 0.24,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B vänder upp, tar med sig bollen och spelar vidare till C i sista tredjedelen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "d1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.72
+        },
+        {
+          "id": "d2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.72
+        },
+        {
+          "id": "d3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "d4",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "d5",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "d6",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.27
+        },
+        {
+          "id": "d7",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.27
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "tk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.6
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.55
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.62,
+          "endX": 0.65,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.53,
+          "endX": 0.35,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C spelar till målvakten J – bollen har passerat alla tre lagdelarna.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "d1",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.72
+        },
+        {
+          "id": "d2",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.72
+        },
+        {
+          "id": "d3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "d4",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "d5",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "d6",
+          "type": "cone",
+          "x": 0.35,
+          "y": 0.27
+        },
+        {
+          "id": "d7",
+          "type": "cone",
+          "x": 0.65,
+          "y": 0.27
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "tk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.6
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.4
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Fortsättning: två försvarare i varje tredjedel. Spela mellan dem och förbi deras lagdel.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "tk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.6
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.6
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38
+        },
+        {
+          "id": "x1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.72
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.7
+        },
+        {
+          "id": "y1",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.5
+        },
+        {
+          "id": "y2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.48
+        },
+        {
+          "id": "z1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28
+        },
+        {
+          "id": "z2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.79
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.77,
+          "endX": 0.44,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

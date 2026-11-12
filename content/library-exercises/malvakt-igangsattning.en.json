@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "239d4e3e-f1f3-5058-a2f7-cb39ad666398",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – quick distribution",
+  "description": "A goalkeeper in goal and two outfield players out on the pitch, plus a coach with balls to the side. The coach crosses or plays the ball in towards the goalkeeper, who catches it. At the same time the outfield players get available. The goalkeeper chooses who gets the ball and how – throw, kick or side volley – depending on the situation. Swap roles after four restarts.\n\nHarder: when the goalkeeper catches the ball only one outfield player gets available. The other runs to a cone and counts as marked. The goalkeeper has only one good option and has to spot which it is. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up as soon as you have the ball – see where your teammates are before you choose."
+    },
+    {
+      "id": "cp2",
+      "text": "Choose the right restart: a throw for short and accurate, a side volley or kick for longer."
+    },
+    {
+      "id": "cp3",
+      "text": "Play to the teammate's correct foot or in front of them so they can keep going forward."
+    },
+    {
+      "id": "cp4",
+      "text": "Outfield players: get available wide or in depth as soon as the goalkeeper has the ball."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach crosses towards the goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.28,
+          "endX": 0.56,
+          "endY": 0.13,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper catches the ball. A and B get available.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.45,
+          "endX": 0.14,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.57,
+          "endX": 0.62,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper throws the ball out to A, who is free out wide.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.24
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.13,
+          "endX": 0.22,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Harder: B runs to the cone and is marked. The goalkeeper sees that A is free and kicks it out to A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.22,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "pole",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.22,
+          "endY": 0.51
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.6,
+          "endX": 0.68,
+          "endY": 0.54
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.12,
+          "endX": 0.23,
+          "endY": 0.5,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

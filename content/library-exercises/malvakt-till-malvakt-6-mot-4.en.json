@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 2,
+  "id": "760fb24e-bd3a-51de-a4c6-3ea8d38343e3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper to goalkeeper, 6 v 4",
+  "description": "Played on a 7v7 pitch split into thirds with cones. Six blue players and two goalkeepers must play the ball from one goalkeeper to the other and must have the ball in all three thirds on the way. Blue starts with two players in each third but may then move freely.\n\nFour red defenders start in the middle third. When a goalkeeper starts, two of them may go in and press in that third; the other two press when the ball heads the other way. All four may press in the middle. Blue scores a point when the ball reaches the goalkeeper without red touching it – then that goalkeeper starts the other way.\n\nIf red wins the ball they try to score in either goal, and blue must win it back at once. Make it harder with more red defenders. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Turn when you can – receive with your body open forwards."
+    },
+    {
+      "id": "cp2",
+      "text": "Create width and depth so there is always a pass past the nearest defender."
+    },
+    {
+      "id": "cp3",
+      "text": "Goalkeeper: play to the player who is free and facing the right way, not just the nearest one."
+    },
+    {
+      "id": "cp4",
+      "text": "Red: press in pairs, close the forward pass and win the ball between the opponents' touches."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The bottom goalkeeper starts with a pass to A. Red X and Y step in and press.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.38
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.87,
+          "endX": 0.25,
+          "endY": 0.8
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.65,
+          "endX": 0.3,
+          "endY": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.65,
+          "endX": 0.72,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A receives and plays forward to B in the middle third, past the press.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.73
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.7,
+          "endX": 0.24,
+          "endY": 0.57
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B plays to C in the last third, and C passes to the goalkeeper – a point.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.21
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.68,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.45,
+          "endX": 0.32,
+          "endY": 0.27
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.19,
+          "endX": 0.48,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Red Y has won the ball and shoots at once. Blue presses to win it back.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.333
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.333
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.667
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.667
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.79
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.4
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.79
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.82,
+          "endX": 0.55,
+          "endY": 0.95
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.76,
+          "endX": 0.68,
+          "endY": 0.76
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.71,
+          "endX": 0.33,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

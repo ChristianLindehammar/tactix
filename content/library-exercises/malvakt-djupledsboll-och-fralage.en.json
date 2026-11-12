@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "id": "8c6c8b3b-9d7a-5702-80ea-b24851a95506",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – through balls and one-on-ones",
+  "description": "A goalkeeper in the penalty area and two outfield players just outside it. The coach stands further out with balls, and a small goal is set up some way up the pitch.\n\nThe coach plays a ball into the space between the goalkeeper and one of the outfield players. The goalkeeper should come out and win the ball before the attacker if possible, otherwise stay and save the shot. The player the pass is aimed at tries to get there first and score, and the other player moves in for any rebound. If the goalkeeper wins the ball they pass, throw or kick it straight into the small goal. If the ball is won outside the penalty area the goalkeeper must use their feet.\n\nVary the pace of the passes so the goalkeeper gets a mix of through balls, one-on-ones and shots. Harder: the coach may also shoot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Goalkeeper: decide early – come out or stay, but never halfway."
+    },
+    {
+      "id": "cp2",
+      "text": "If you stay: make yourself big, get close and let the attacker make the first move."
+    },
+    {
+      "id": "cp3",
+      "text": "Take the ball with your hands inside the penalty area and with your feet outside it."
+    },
+    {
+      "id": "cp4",
+      "text": "After winning the ball: a quick, accurate restart into the small goal."
+    },
+    {
+      "id": "cp5",
+      "text": "Outfield players: shoot early before the goalkeeper arrives, and always follow up for the rebound."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach plays a ball in between the goalkeeper and A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.41,
+          "endX": 0.38,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper comes out and gets there before A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.25
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.14,
+          "endX": 0.4,
+          "endY": 0.22
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.31,
+          "endX": 0.31,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper plays the ball straight into the small goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.22,
+          "endX": 0.83,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If A gets there first it is a one-on-one – A shoots and B follows up for the rebound.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "mini",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.15,
+          "endX": 0.55,
+          "endY": 0.05
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.26,
+          "endX": 0.6,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

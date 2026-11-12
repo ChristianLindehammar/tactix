@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "id": "b8df4059-bdff-52d2-9080-c32765f9e097",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – fånga bollen",
+  "description": "En målvakt i mål och två utespelare framför straffområdet, plus en ledare vid sidan. A passar till B, som står med ryggen mot mål och lägger tillbaka bollen. A avslutar på första eller andra touch. Målvakten fångar bollen och rullar den till ledaren. Byt uppgifter efter tre skott.\n\nSvårare för målvakten: B väljer själv att antingen vända upp och skjuta eller lägga tillbaka. Variera också riktning och hårdhet på tillbakaspelet, så att skotten kommer från olika lägen och målvakten inte kan gissa.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Flytta dig efter bollen hela tiden – stå i balans när skottet kommer."
+    },
+    {
+      "id": "cp2",
+      "text": "Ha kroppen bakom bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Fånga med båda händerna samtidigt och använd hela handen som grepp."
+    },
+    {
+      "id": "cp4",
+      "text": "Kan du inte fånga: stöt bollen ut åt sidan, bort från målet."
+    },
+    {
+      "id": "cp5",
+      "text": "Vid fall: skjut ifrån med benet närmast bollen och landa med ena handen bakom och andra ovanpå bollen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B, som står med ryggen mot mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.43
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.41,
+          "endX": 0.55,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lägger tillbaka bollen till A, som kliver in mot den.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.32,
+          "endX": 0.46,
+          "endY": 0.35
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.47,
+          "endX": 0.42,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter direkt. Målvakten har flyttat sig efter tillbakaspelet och står i balans.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.31,
+          "endX": 0.47,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Målvakten fångar bollen och rullar den till ledaren L.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.13,
+          "endX": 0.17,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Svårare: B vänder upp och skjuter själv. Målvakten vet inte i förväg vem som skjuter.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.21
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.64,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.19,
+          "endX": 0.57,
+          "endY": 0.08
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
