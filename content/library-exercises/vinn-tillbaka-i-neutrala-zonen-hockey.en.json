@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 2,
+  "id": "3265a6ec-29ab-50d0-bfa8-fca6fd536ef8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Win the puck back in the neutral zone",
+  "description": "Play 5 v 5 with goalies on full ice. All skaters stay in the neutral zone, between the blue lines.\n\nBlue always start with the puck from their goalie and must keep it within the team in the neutral zone. Red try to win the puck. When red have won it they must make five passes within the team in the neutral zone – then they may cross the blue line and attack blue's net. Blue must win the puck back before red get there.\n\nSwap roles after a few attacks. Harder for red: blue may defend over the whole ice even after red have left the zone, and red may counter straight after winning the puck without the passing rule.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "If you lose the puck: press at once where the puck is, before the opponents can turn up ice."
+    },
+    {
+      "id": "cp2",
+      "text": "Stay close together with the puck – then you are already close when it is lost."
+    },
+    {
+      "id": "cp3",
+      "text": "The defencemen hold the blue line and read long passes when the team loses the puck."
+    },
+    {
+      "id": "cp4",
+      "text": "Red: the first pass after winning the puck goes away from the pressure, and spread out wide."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue's goalie starts with a pass to A in the neutral zone.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.416
+        },
+        {
+          "id": "b4",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.601
+        },
+        {
+          "id": "b5",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.567
+        },
+        {
+          "id": "o3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.399
+        },
+        {
+          "id": "o4",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.601
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.851
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.458,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.517,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.383,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.829,
+          "endX": 0.25,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Red X wins the puck and plays on to Y – now red count their five passes.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.416
+        },
+        {
+          "id": "b4",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.601
+        },
+        {
+          "id": "b5",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.567
+        },
+        {
+          "id": "o3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.399
+        },
+        {
+          "id": "o4",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.601
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.458,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.45
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.517,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.383,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.425,
+          "endX": 0.67,
+          "endY": 0.475,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Blue press Y at once and close the passes around the puck.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.416
+        },
+        {
+          "id": "b4",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.601
+        },
+        {
+          "id": "b5",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.601
+        },
+        {
+          "id": "o3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.399
+        },
+        {
+          "id": "o4",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.601
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.483,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.475,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.534,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.517,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.79,
+          "y": 0.517
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.383,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.483,
+          "endX": 0.61,
+          "endY": 0.492
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.575,
+          "endX": 0.82,
+          "endY": 0.559
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.441,
+          "endX": 0.81,
+          "endY": 0.475
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If red manage five passes they may cross the blue line and attack. Blue skate back.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.483
+        },
+        {
+          "id": "b4",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.634
+        },
+        {
+          "id": "b5",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.601
+        },
+        {
+          "id": "o3",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.416
+        },
+        {
+          "id": "o4",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.698
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.517,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.567,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.698,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.753
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.383,
+          "label": "Z"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.775,
+          "endX": 0.56,
+          "endY": 0.851,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.634,
+          "endX": 0.74,
+          "endY": 0.786,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

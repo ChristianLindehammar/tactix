@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 2,
+  "id": "35a28199-ac5c-578f-b5b6-88def0efecc1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Kontring med uppflyttning",
+  "description": "Varje lag har sin egen försvarszon, och mellan dem ligger neutrala zonen. I varje lag står målvakten och fyra spelare i egen zon och en forward i neutrala zonen. Två spelare från motståndarlaget anfaller i din zon, så det blir 2 mot 4 plus målvakt.\n\nDet övertaliga laget ska vinna pucken och kontra via sin forward i neutrala zonen. Två spelare – forwarden och en som följer med – åker över till motståndarnas zon. Där är de undertaliga, och övningen vänder åt andra hållet. De två som tappade pucken åker direkt hem till sin zon och hjälper till att vinna tillbaka den. En av dem stannar i neutrala zonen som ny forward.\n\nStarta gärna enklare utan motstånd: laget slår tre passningar i egen zon, spelar upp på forwarden och fyra spelare flyttar upp till andra zonen.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Första passningen efter puckvinst – framåt till forwarden om den är spelbar."
+    },
+    {
+      "id": "cp2",
+      "text": "Forwarden: gör dig spelbar redan innan pucken vinns, med bladet på isen."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som följer med åker direkt, utan att vänta på att se hur det går."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar ni pucken: åk hem på kortaste vägen och hjälp laget att vinna tillbaka den."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd X och Y anfaller i blås zon, 2 mot 4. A tar pucken från X.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.829,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.69,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.69,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.315,
+          "y": 0.754
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.235,
+          "y": 0.743,
+          "endX": 0.27,
+          "endY": 0.753
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar direkt upp till forwarden F i neutrala zonen. B åker med.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.829,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.69,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.632
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.606,
+          "endX": 0.32,
+          "endY": 0.534
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.786,
+          "endX": 0.5,
+          "endY": 0.601,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "F tar med sig pucken in i röds zon, B följer med. X och Y åker hem.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.567,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.475,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.362,
+          "y": 0.405
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.654,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.634,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.362,
+          "y": 0.439,
+          "endX": 0.38,
+          "endY": 0.366,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.542,
+          "endX": 0.58,
+          "endY": 0.399
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.626,
+          "endX": 0.46,
+          "endY": 0.542
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.609,
+          "endX": 0.78,
+          "endY": 0.542
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Nu är blå undertaliga, 2 mot 4 plus målvakt. Y har åkt hem och X stannat som ny forward – röd vinner pucken och kontrar via X.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.13,
+          "y": 0.25
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.214
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.258
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.324,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.258,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.374,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.523,
+          "y": 0.348
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.553,
+          "y": 0.368,
+          "endX": 0.68,
+          "endY": 0.466
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 2,
+  "id": "ae5088cf-28df-5540-8f95-d91409ad686f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Three zones – get goal side",
+  "description": "Use the rink's three zones. In each zone there is one attacker (blue) and one defender (red). Two attackers with a puck start at the goal line and skate into the first zone, making it 3 v 1.\n\nThe attackers must get through all three zones. When they cross a line into the next zone, everyone – attackers and defenders – may follow. So the defender who has been beaten must skate back quickly and get goal side in the next zone, making the overload smaller. Finish with a shot on goal in the last zone.\n\nIf the defenders win the puck they score by playing it over the goal line where the attackers started. Swap roles after a while. For younger players, one zone can be split into three smaller zones with cones.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defender: if you are beaten – skate back the shortest way towards the net, not towards the puck."
+    },
+    {
+      "id": "cp2",
+      "text": "Get between the puck and the net before you try to win the puck."
+    },
+    {
+      "id": "cp3",
+      "text": "Steer the puck carrier towards the boards, away from the middle."
+    },
+    {
+      "id": "cp4",
+      "text": "Attackers: use the overload quickly, before the defenders get back."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B skate into the first zone with the puck. C is waiting there – now it is 3 v 1 against X.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.8
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.654,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.458,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.247,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.291,
+          "label": "Z"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.77,
+          "endX": 0.5,
+          "endY": 0.73,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.82,
+          "endX": 0.76,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to C, who skates past X into the neutral zone. B follows.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.775,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.654,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.676,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.609
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.458,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.247,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.291,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.753,
+          "endX": 0.27,
+          "endY": 0.687
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.584,
+          "endX": 0.34,
+          "endY": 0.534,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.676,
+          "endX": 0.76,
+          "endY": 0.584
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X has been beaten and skates back to get goal side in the neutral zone, together with Y.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.698,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.567,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.542,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.517
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.634,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.441,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.458,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.247,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.291,
+          "label": "Z"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.609,
+          "endX": 0.56,
+          "endY": 0.433,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.654,
+          "endX": 0.62,
+          "endY": 0.584
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y wins the puck and plays it over the start line – a point to the defenders.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.542,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.441,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.247,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.291,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.53,
+          "endX": 0.5,
+          "endY": 0.895
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

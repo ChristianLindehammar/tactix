@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 2,
+  "id": "414d194e-9ca4-513a-b83f-22563b9645c6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Counter and move up",
+  "description": "Each team has its own defensive zone, with the neutral zone between them. Each team has its goalie and four players in its own zone and one forward in the neutral zone. Two players from the other team attack in your zone, so it is 2 v 4 plus the goalie.\n\nThe team with more players must win the puck and counter through its forward in the neutral zone. Two players – the forward and one who joins – skate into the opponents' zone. There they are outnumbered, and the drill turns the other way. The two who lost the puck skate straight back to their zone and help win it back. One of them stays in the neutral zone as the new forward.\n\nStart simpler without opposition: the team makes three passes in its own zone, plays up to the forward and four players move up to the other zone.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The first pass after winning the puck – forward to the forward if they are open."
+    },
+    {
+      "id": "cp2",
+      "text": "Forward: get open before the puck is won, with your stick on the ice."
+    },
+    {
+      "id": "cp3",
+      "text": "The player who joins goes at once, without waiting to see what happens."
+    },
+    {
+      "id": "cp4",
+      "text": "If you lose the puck: skate back the shortest way and help the team win it back."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red X and Y attack in blue's zone, 2 v 4. A takes the puck from X.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.829,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.69,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.69,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.315,
+          "y": 0.754
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.235,
+          "y": 0.743,
+          "endX": 0.27,
+          "endY": 0.753
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays it straight up to the forward F in the neutral zone. B joins.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.829,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.69,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.632
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.606,
+          "endX": 0.32,
+          "endY": 0.534
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.786,
+          "endX": 0.5,
+          "endY": 0.601,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "F carries the puck into red's zone, B follows. X and Y skate back.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.236
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.302
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.258
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.567,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.475,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.362,
+          "y": 0.405
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.654,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.634,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.362,
+          "y": 0.439,
+          "endX": 0.38,
+          "endY": 0.366,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.542,
+          "endX": 0.58,
+          "endY": 0.399
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.626,
+          "endX": 0.46,
+          "endY": 0.542
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.609,
+          "endX": 0.78,
+          "endY": 0.542
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Now blue are outnumbered, 2 v 4 plus the goalie. Y has skated back and X has stayed up as the new forward – red win the puck and counter through X.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.13,
+          "y": 0.25
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.214
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.258
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.324,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.764
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.829
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.258,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.374,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.523,
+          "y": 0.348
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.553,
+          "y": 0.368,
+          "endX": 0.68,
+          "endY": 0.466
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
