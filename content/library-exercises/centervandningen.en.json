@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "id": "8b716f8e-eca3-5929-a1bc-80e7efbd5e96",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The centre turn – 3v3 in corridors",
+  "description": "A 3v3 game with goalkeepers on an area of about 20 × 20 metres, for example one half of the court with an extra goal at the centre line. Cones split the area into three corridors running from end to end. Each player has a fixed position in one corridor.\n\nA goal only counts if the ball has been passed at least once from an outer corridor into the central one. This makes the team use the width and gives the centre player lots of chances to receive, turn and shoot.\n\nProgression: play freely without fixed positions, but keep the rule about the pass from an outer to the central corridor.\n\nNot to scale. The goalkeepers are not drawn.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Centre player: move so you are available whenever the ball is in an outer corridor."
+    },
+    {
+      "id": "cp2",
+      "text": "Receive with your body open towards goal so you can turn quickly."
+    },
+    {
+      "id": "cp3",
+      "text": "Wide players: keep the width so there is space in the middle."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: how can you stop the ball being switched from one outer corridor to the other?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Three corridors with one player from each team in each. A has the ball in the left corridor and the team attacks upwards.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball forward a little and passes into the middle. B moves away from their defender to get free.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.39,
+          "endX": 0.44,
+          "endY": 0.36
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.47,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B turns with the ball and shoots – the pass into the middle means the goal counts.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.34,
+          "endX": 0.6,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.2,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

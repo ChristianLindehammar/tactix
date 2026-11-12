@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 2,
+  "id": "2e4b93a4-65f7-591d-80d5-b7c3a91e9dfd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Stora Coast to Coast – kontring via jokrar",
+  "description": "Spelarna delas in i fyra lag. Två lag spelar 3 mot 3 med målvakter över hela rinken, och de två andra lagen är jokrar i passningszoner längs sargen – ett jokerlag i varje rinkhalva (märkta J). Varje lags jokrar står i den halva där laget försvarar.\n\nEna laget anfaller. När det försvarande laget vinner pucken måste det först passa en av sina jokrar, och därifrån startar en snabb kontring mot det andra målet. Pucken är i spel tills försvarslaget lyckats passa en joker. Lagen spelar ett anfall och ett försvar, sedan byter man – vid mål eller när pucken går ur spel. Byt också roller mellan spelande lag och jokerlag. Målvakterna är inte utritade.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Så fort pucken är vunnen: titta upp och hitta närmaste joker."
+    },
+    {
+      "id": "cp2",
+      "text": "Spelarna utan puck åker direkt i djupled mot motsatt mål – inte i sidled."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa framför den som åker, så att hen kan ta emot i full fart."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta snabbt, innan motståndarna hunnit hem i försvar."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått anfaller uppåt. A åker med pucken mot mål, men röd D står i vägen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.19
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.425
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.19
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.425
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.575
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.81
+        },
+        {
+          "id": "k7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.575
+        },
+        {
+          "id": "k8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.81
+        },
+        {
+          "id": "j1",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j5",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j6",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "j7",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j8",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.447,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.489
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.318
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.286
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.233,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.168,
+          "label": "F"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.414,
+          "endX": 0.5,
+          "endY": 0.297,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D vinner pucken och passar en röd joker. E och F startar direkt i djupled mot nedre målet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.19
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.425
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.19
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.425
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.575
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.81
+        },
+        {
+          "id": "k7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.575
+        },
+        {
+          "id": "k8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.81
+        },
+        {
+          "id": "j1",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j5",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j6",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "j7",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j8",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.468
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.372
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.243,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.286
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.147,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.179,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.297,
+          "endX": 0.86,
+          "endY": 0.35
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.201,
+          "endX": 0.68,
+          "endY": 0.553,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.222,
+          "endX": 0.38,
+          "endY": 0.586,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Jokern spelar en lång passning framför E.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.19
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.425
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.19
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.425
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.575
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.81
+        },
+        {
+          "id": "k7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.575
+        },
+        {
+          "id": "k8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.81
+        },
+        {
+          "id": "j1",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j5",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j6",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "j7",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j8",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.372,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.436
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.265,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.553,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.628,
+          "label": "F"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.414
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.447,
+          "endX": 0.72,
+          "endY": 0.671
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "E avslutar innan de blå hunnit tillbaka. Nu anfaller rött och blått försvarar med sina jokrar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.19
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.425
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.19
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.425
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.575
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.81
+        },
+        {
+          "id": "k7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.575
+        },
+        {
+          "id": "k8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.81
+        },
+        {
+          "id": "j1",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.361,
+          "label": "J"
+        },
+        {
+          "id": "j5",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j6",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "j7",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.639,
+          "label": "J"
+        },
+        {
+          "id": "j8",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.746,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.521
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.553
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.35,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.735,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.757,
+          "label": "F"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.789
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.821,
+          "endX": 0.53,
+          "endY": 0.928
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

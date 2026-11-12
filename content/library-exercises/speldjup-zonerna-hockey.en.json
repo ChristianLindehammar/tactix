@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "id": "2d73ff4e-a51e-5559-a655-5befa1f6cf7d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Depth in zones – 2-on-1 and 2-on-3",
+  "description": "The area, about 20 × 20 metres (not to scale), is split into a build-up zone and an attacking zone – roughly 40/60 to 50/50. The build-up zone has a full-size net with a goalie; the attacking zone has two small nets or two cones.\n\nThe attacking team has two players in each zone. The defending team has one player in the build-up zone and three in the attacking zone. That makes a 2-on-1 in the build-up and a 2-on-3 further up. The attackers build up in their zone, pass in to a team-mate in the attacking zone and try to score in one of the small nets. The defenders try to stop the build-up and counter on the net with the goalie. After a turnover both teams may attack and defend in both zones.\n\nVariations: add jokers who play with the attacking team, or remove the zones and play freely. The full-size net at the top end is not used.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Give the puck carrier options forward, back and diagonally – do not stand in a line."
+    },
+    {
+      "id": "cp2",
+      "text": "Skate in depth when the puck carrier has time and can see you."
+    },
+    {
+      "id": "cp3",
+      "text": "Position yourself so you can receive and take the puck straight towards the net."
+    },
+    {
+      "id": "cp4",
+      "text": "Use the extra skater in the build-up: draw the defender before you pass."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 11,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The bottom half is the build-up zone: A and B against one defender, with their own goalie. The top half is the attacking zone: C and D against three defenders and two small nets.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.746
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.671,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.628
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to B past the defender. C skates down towards the zone line to become available.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.746
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.671,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.628
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.735,
+          "endX": 0.7,
+          "endY": 0.682
+        },
+        {
+          "id": "r4r",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.628,
+          "endX": 0.6,
+          "endY": 0.607
+        },
+        {
+          "id": "cr",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.35,
+          "endX": 0.38,
+          "endY": 0.425
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B plays the pass into the attacking zone to C.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.425,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.553
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.532,
+          "endX": 0.42,
+          "endY": 0.447
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C takes the puck on and shoots at one of the small nets.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.318
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.425,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.404
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.372,
+          "endX": 0.25,
+          "endY": 0.115
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

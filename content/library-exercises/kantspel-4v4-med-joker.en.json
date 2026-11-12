@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "id": "c59d6aab-b7c2-5e14-8ea6-7e0a58db077d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Wing play – 4v4 with a back joker",
+  "description": "A 4v4 game on one half of the court, towards a goal with a goalkeeper. At the back, nearest the centre line, is a relief zone where only the joker (J) may go. The joker always plays for the team with the ball and acts as a back to pass to.\n\nRules: the attackers may only pass to the joker along the boards, outside the two cones. The joker may only bring the ball into the attacking zone between the cones. When the defenders win the ball they attack straight away, so play keeps switching between attack and defence. The two small goals by the centre line are our reading of the source picture: the defenders can counter on them once they win the ball.\n\nNot to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look for the spaces that are hardest to defend – usually in front of goal and at the far post."
+    },
+    {
+      "id": "cp2",
+      "text": "Use the joker to switch play from one side to the other."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence: steer the attackers towards the boards and close the space in front of goal."
+    },
+    {
+      "id": "cp4",
+      "text": "Ask the players: which spaces are hard to defend, and why?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "shooting"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "4v4 in front of goal. The joker (J) waits in the relief zone behind the cones. B has the ball by the boards.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes back to the joker along the boards, outside the cone. The joker moves towards the ball.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.36,
+          "endX": 0.88,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.45,
+          "endX": 0.75,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The joker carries the ball in between the cones and passes to C, who shoots.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.46
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.44,
+          "endX": 0.52,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.33,
+          "endX": 0.39,
+          "endY": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.1,
+          "endX": 0.46,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

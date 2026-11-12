@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 2,
+  "id": "01b5266c-f31c-5fbc-a79b-9da2f3a4540f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Ajax game – 4v2 with goals",
+  "description": "Four attackers keep the ball away from two defenders in an area of about 20 × 10 metres with a goal at each end (not to scale). The attackers score a point every time all four have touched the ball without losing it. The defenders chase the ball, and if they win it they attack straight away on either goal – so the drill trains both passing and transition.\n\nUse goalkeepers if you have them; small goals work fine otherwise. Play until someone reaches five points, then change defenders. Make the area bigger for younger or less experienced players.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep moving so the ball carrier always has two passing options."
+    },
+    {
+      "id": "cp2",
+      "text": "Play the ball away from the pressure – often to whoever is furthest from the defenders."
+    },
+    {
+      "id": "cp3",
+      "text": "Defenders: work together, one presses and one closes the passing lane."
+    },
+    {
+      "id": "cp4",
+      "text": "When you win the ball: look up straight away and go for the more open goal."
+    },
+    {
+      "id": "cp5",
+      "text": "Ask the players: what is the easiest way to keep the ball, and what do you do the moment you lose it?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Four attackers around the area, two defenders in the middle. A has the ball.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.57,
+          "label": "F"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to B. E chases the ball, F moves across to close the next pass.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.57,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.32,
+          "endX": 0.69,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.42,
+          "endX": 0.62,
+          "endY": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.57,
+          "endX": 0.66,
+          "endY": 0.53
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes to D, who plays on to C – all four have touched the ball and the team scores a point.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.39
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.37,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.55,
+          "label": "F"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.41,
+          "endX": 0.31,
+          "endY": 0.65
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.7,
+          "endX": 0.68,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If E wins the ball, the defenders attack straight away and shoot at one of the goals. The attackers try to win it back.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.67
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.46,
+          "label": "F"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.69,
+          "endX": 0.5,
+          "endY": 0.79
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.66,
+          "endX": 0.33,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 2,
+  "id": "bf979656-d9ca-5572-baa2-068633d26aa6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Joker point – 4v4 with a joker behind play",
+  "description": "A 4v4 game on half the rink, towards one big net with a goalie. Two small nets stand by the red line. The attacking team has a joker (J) who stays behind play, like a defenceman, and offers a pass backwards.\n\nAlong the boards are outer zones (marked with cones). The joker may only play the puck up to a player in one of the outer zones. The attackers must get the puck through an outer zone before they can score on the big net. The defending team tries to win the puck and counter on one of the small nets. The game ends when a team scores.\n\nNot to scale. The goalie is not drawn.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Time your move into the outer zone so you are free when the joker has the puck."
+    },
+    {
+      "id": "cp2",
+      "text": "Joker: position yourself so the puck carrier can always pass back to you."
+    },
+    {
+      "id": "cp3",
+      "text": "Move the puck back to the joker rather than losing it under pressure."
+    },
+    {
+      "id": "cp4",
+      "text": "Defenders: read the pass to the outer zone and be ready to counter at once."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "positioning",
+    "passing",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue attacks upwards. The outer zones run along the boards between the cones. The joker (J) stays behind play.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.318
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A is under pressure and passes back to the joker. The joker plays it up to D, who has skated into the outer zone.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.318
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.414
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.414,
+          "endX": 0.9,
+          "endY": 0.286,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.168,
+          "endX": 0.92,
+          "endY": 0.254
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The puck has been through the outer zone – now the team may score. D passes to B, who shoots.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.201
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.19,
+          "endX": 0.41,
+          "endY": 0.115
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.083,
+          "endX": 0.46,
+          "endY": 0.043
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If red wins the puck they counter straight away on one of the small nets.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.179
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.286
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.318,
+          "label": "A"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.425,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.372,
+          "endX": 0.7,
+          "endY": 0.436,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.436,
+          "endX": 0.72,
+          "endY": 0.457
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

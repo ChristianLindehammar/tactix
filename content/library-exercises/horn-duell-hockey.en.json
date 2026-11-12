@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 2,
+  "id": "5d31c313-c68f-500d-99b1-915e915adb27",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Corner battle – escape the corner",
+  "description": "A 1v1 battle in a corner of the rink. Put one cone behind the net near the post and one cone about a metre off the boards up by the face-off circle – those are the two exits. The players line up in two lines facing the corner: attackers (blue) and defenders (red).\n\nThe leader (L) dumps the puck into the corner. The first attacker starts one step ahead of the first defender. The attacker has to get out with the puck through either exit – behind the net or up the boards. The defender closes, plays the body and wins the puck as quickly as possible. Afterwards, join the back of the other line. The diagram is not to scale – the corner is drawn bigger.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: protect the puck with your body along the boards and read which exit the defender leaves open."
+    },
+    {
+      "id": "cp2",
+      "text": "Attack: threaten one exit and turn out through the other."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence: arrive with speed under control, close the nearest exit and pin the attacker to the boards."
+    },
+    {
+      "id": "cp4",
+      "text": "Ask the players: when does it pay to go behind the net, and when is up the boards better?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The leader dumps the puck into the corner.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.136,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.15,
+          "endX": 0.14,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A skates for the puck, D follows a step behind.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.136,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.055
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.115,
+          "endX": 0.16,
+          "endY": 0.064
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.168,
+          "endX": 0.19,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A picks up the puck and tries to get out up the boards past the cone. D tries to close and win the puck.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.1
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.136,
+          "label": "D"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.06,
+          "y": 0.13,
+          "endX": 0.06,
+          "endY": 0.33,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

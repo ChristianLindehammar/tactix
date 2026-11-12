@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 2,
+  "id": "ff92f55b-b3b9-5643-aa51-807ed3bd08d5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Goals in the middle – lots of shots",
+  "description": "A normal game, but with two small goals back to back in the middle of the pitch. Teams may score in either goal, so shots come from above and below and players get lots of attempts. The diagram shows two games, one in each half separated by cones; the full-size goals are not used. The diagram is not to scale.\n\nPitch size and numbers: about 10 × 10 metres for 2v2, 15 × 10 for 2v2 or 3v3 and 20 × 10 for 3v3 or 4v4. With small goals, players practise finding gaps to pass in behind the defence around the goal.\n\nRebounds: at a lower level the opponents may take the rebound straight away. At a higher level they must first score in the other goal from the rebound, or play the ball out to a set area before they may attack. With goalkeepers you can keep three scores: outfield players against goalkeepers, team against team, and goalkeeper against goalkeeper. Play short games, for example 2 × 1, 2 × 3 or 2 × 4 minutes depending on level, and find what works for the group.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Shoot quickly – don't wait for the perfect chance."
+    },
+    {
+      "id": "cp2",
+      "text": "Switch goals when one is covered: the goal on the other side is often open."
+    },
+    {
+      "id": "cp3",
+      "text": "Follow up your shot – lots of goals come from rebounds."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: stay between the attacker and the goals, and keep both goals in view."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack",
+    "goalkeeping"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue A passes across to B, who is free at the upper goal.",
+      "markers": [
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.35
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.79
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.58
+        },
+        {
+          "id": "l3",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.58
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "l5",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.84
+        },
+        {
+          "id": "l6",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.68
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.24
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.31
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.43
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.22,
+          "endX": 0.71,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B shoots first time into the upper goal.",
+      "markers": [
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.35
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.79
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.58
+        },
+        {
+          "id": "l3",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.58
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "l5",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.84
+        },
+        {
+          "id": "l6",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.68
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.25
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.33
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.43
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.68,
+          "y": 0.25,
+          "endX": 0.54,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red D picks up the rebound and shoots straight away into the goal facing the other way.",
+      "markers": [
+        {
+          "id": "k0",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.5
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.35
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.79
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.58
+        },
+        {
+          "id": "l3",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.58
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.8
+        },
+        {
+          "id": "l5",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.84
+        },
+        {
+          "id": "l6",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.68
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.4
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.41,
+          "endX": 0.47,
+          "endY": 0.37
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

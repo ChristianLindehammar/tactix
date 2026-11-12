@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "id": "698581c0-dc4f-56c7-aa5b-0b2e14ebff96",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Zone to zone – from 3-on-3 into a 2-on-1",
+  "description": "The rink is split into two zones: a press zone and a play zone, with a net and a goalie at each end. A 3-on-3 is played in the press zone, and one player from each team waits in the play zone. The drill starts on a signal with the puck at the attacking team in the press zone.\n\nThe attackers try to get into the play zone with the puck under control – either by carrying it in or by passing to the team-mate already there. Only one attacker may follow into the play zone, which makes it a 2-on-1. The defending team tries to win the puck in the press zone and score straight away. Play stops at a goal; on the coach's signal everyone resets and it starts again. Progression: the puck may only enter the play zone by carrying it in.\n\nHow the rink is split and where the nets are is an interpretation – adapt it to your rink. The drill is made for 10 players.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show that you are available – with your voice, stick and body."
+    },
+    {
+      "id": "cp2",
+      "text": "Position yourself so the puck carrier has a forward pass in depth."
+    },
+    {
+      "id": "cp3",
+      "text": "Time your skate: go when the puck carrier can pass, not too early."
+    },
+    {
+      "id": "cp4",
+      "text": "Put the pass in front of your team-mate so they can take it at speed."
+    },
+    {
+      "id": "cp5",
+      "text": "In the play zone: use the 2-on-1 – draw the defender and pass on."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Press zone (bottom half): A, B and C against three defenders. Play zone (top half): D against one defender. A goalie in each net.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.778
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.575
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to C, who carries the puck into the play zone. A defender chases but may not follow in.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.778
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.575
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.757,
+          "endX": 0.79,
+          "endY": 0.682
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.607,
+          "endX": 0.82,
+          "endY": 0.436,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1r",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.575,
+          "endX": 0.72,
+          "endY": 0.532
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "In the play zone it is 2-on-1: C passes to D, who shoots.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.404,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.361
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.564
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.329
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.275,
+          "endX": 0.48,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If the defenders win the puck in the press zone, they go straight for the net at their end.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.671
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.725
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.553
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.746,
+          "endX": 0.48,
+          "endY": 0.864
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "id": "b18693dd-cbe9-5a10-ae43-e327005f83e6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Spacing 3-on-2",
+  "description": "Three attackers (A, B, C) start on the centre line and attack two defencemen (D, E) who start in the zone. The leader (L) starts each rush by passing to one of the attackers. Play without offside.\n\nThe attackers keep width and depth so that one defenceman cannot cover two players, and work the puck to whoever is free in a shooting position. If there is no pass forward, they keep the puck in the team and dare to take on a defender to open space for each other. If the defencemen win the puck, they counter the other way. The rush ends with a goal or a lost puck.\n\nLine the players up at each starting point and rotate after each rush: A → D → B → E → C → A. Use a goalie if you have one.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spread out – one defenceman should never be able to cover two attackers."
+    },
+    {
+      "id": "cp2",
+      "text": "Show yourself to the puck carrier, both in depth and to the side."
+    },
+    {
+      "id": "cp3",
+      "text": "Puck carrier: skate at a defender to draw them in, then pass to the free player."
+    },
+    {
+      "id": "cp4",
+      "text": "The third attacker drives the net – look for rebounds."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Starting position. The leader passes to one of the attackers – here B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.468,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.468,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.158,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.35,
+          "endX": 0.83,
+          "endY": 0.447
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B carries the puck up ice while A and C look for space. D and E step up.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.468,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.468,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.158,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.468
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.436,
+          "endX": 0.84,
+          "endY": 0.297,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.436,
+          "endX": 0.64,
+          "endY": 0.211
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.436,
+          "endX": 0.25,
+          "endY": 0.307,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.179,
+          "endX": 0.47,
+          "endY": 0.233,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.19,
+          "endX": 0.76,
+          "endY": 0.265
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "E pressures B and D covers the middle. A is free – pass and shoot.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.168,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.233,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.286,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.393
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.393,
+          "endX": 0.32,
+          "endY": 0.297
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.265,
+          "endX": 0.46,
+          "endY": 0.065
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

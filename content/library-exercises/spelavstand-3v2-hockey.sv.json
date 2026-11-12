@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "id": "53b63da5-034e-5f13-932c-a81f51730534",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Spelavstånd 3 mot 2",
+  "description": "Tre anfallare (A, B, C) startar vid mittlinjen och anfaller mot två backar (D, E) som startar inne i zonen. Ledaren (L) startar varje anfall genom att passa till någon av anfallarna. Spela utan offside.\n\nAnfallarna ska hålla bredd och djup så att backarna inte kan täcka två spelare samtidigt, och spela fram pucken till ett skottläge för den som är fri. Finns ingen passning framåt ska de hålla pucken inom laget och våga utmana för att skapa ytor åt varandra. Vinner backarna pucken får de kontra mot andra hållet. Anfallet är slut när trion gjort mål eller pucken är förlorad.\n\nStäll upp spelarna i led vid varje startpunkt och rotera efter varje anfall: A → D → B → E → C → A. Använd målvakt om ni har.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sprid ut er – en back ska inte kunna täcka två anfallare."
+    },
+    {
+      "id": "cp2",
+      "text": "Visa dig för puckföraren både på djupet och i sidled."
+    },
+    {
+      "id": "cp3",
+      "text": "Puckföraren: åk mot en back för att dra till dig honom, och spela sedan den fria."
+    },
+    {
+      "id": "cp4",
+      "text": "Den tredje anfallaren går mot mål – leta efter returer."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Startläge. Ledaren passar till en av anfallarna – här B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.468,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.468,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.158,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.35,
+          "endX": 0.83,
+          "endY": 0.447
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar pucken framåt medan A och C söker ytor. D och E möter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.468,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.468,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.158,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.468
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.436,
+          "endX": 0.84,
+          "endY": 0.297,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.436,
+          "endX": 0.64,
+          "endY": 0.211
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.436,
+          "endX": 0.25,
+          "endY": 0.307,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.179,
+          "endX": 0.47,
+          "endY": 0.233,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.19,
+          "endX": 0.76,
+          "endY": 0.265
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "E pressar B, D tar mitten. A är fri – passning och skott.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.168,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.233,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.286,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.329,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.393
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.393,
+          "endX": 0.32,
+          "endY": 0.297
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.265,
+          "endX": 0.46,
+          "endY": 0.065
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 2,
+  "id": "8c9aba5c-966c-5c8f-9e19-a4ce661d8285",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Hörnduell – ta dig ut ur hörnet",
+  "description": "Duellspel 1 mot 1 i ett hörn av rinken. Ställ en kon bakom målet nära stolpen och en kon ungefär en meter ut från sargen uppe vid tekningscirkeln – det är de två utgångarna. Spelarna står i två led med ansiktet mot hörnet: anfallare (blå) och försvarare (röd).\n\nLedaren (L) slår in pucken i hörnet. Den främsta anfallaren startar ett steg före den främsta försvararen. Anfallaren ska ta sig ut med pucken genom någon av utgångarna – bakom målet eller upp längs sargen. Försvararen ska stänga, ta kroppen och vinna pucken så snabbt som möjligt. Ställ er sist i det andra ledet efteråt. Bilden är inte skalenlig – hörnet är ritat större.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: skydda pucken med kroppen mot sargen och läs vilken utgång försvararen lämnar öppen."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: hota den ena utgången och vänd ut genom den andra."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: kom in med fart under kontroll, stäng den närmaste utgången och sätt anfallaren mot sargen."
+    },
+    {
+      "id": "cp4",
+      "text": "Fråga spelarna: när lönar det sig att gå bakom målet, och när är det bättre upp längs sargen?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren slår in pucken i hörnet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.136,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.15,
+          "endX": 0.14,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A åker mot pucken, D följer ett steg efter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.136,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.055
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.115,
+          "endX": 0.16,
+          "endY": 0.064
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.168,
+          "endX": 0.19,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A tar pucken och försöker ta sig ut upp längs sargen förbi konen. D försöker stänga och vinna pucken.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.2
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.222
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.286
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.297,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.382
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.222,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.1
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.136,
+          "label": "D"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.06,
+          "y": 0.13,
+          "endX": 0.06,
+          "endY": 0.33,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

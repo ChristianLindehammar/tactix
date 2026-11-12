@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "c168755d-af2f-5d91-81a2-6a295bf8b97b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Spegeln",
+  "description": "Två rutor på ungefär 5 × 5 meter läggs ut med koner så att de delar en sida (bilden är inte skalenlig). Spelarna går ihop i par och ett par i taget är aktivt. De står i var sin ruta, vända mot varandra. A leder och förflyttar sig snabbt mellan konerna i sin ruta. B ska följa efter som en spegelbild i den andra rutan.\n\nByt par efter ungefär 10 sekunder. Nästa gång paret är på tur byter de roller.\n\nStegring: börja utan klubba och boll, fortsätt med bara klubba och avsluta med klubba och boll.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll blicken uppe så att du ser både bollen och din kamrat."
+    },
+    {
+      "id": "cp2",
+      "text": "Små, snabba steg och låg tyngdpunkt gör det lättare att byta riktning."
+    },
+    {
+      "id": "cp3",
+      "text": "Ledaren: variera tempo och riktning för att utmana spegeln."
+    },
+    {
+      "id": "cp4",
+      "text": "Fråga spelarna: vilken rörelse var lättast och vilken var svårast att följa?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B står mitt emot varandra i var sin ruta. De andra paren väntar på tur.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.7
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.7
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.4
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.6
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.4
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A förflyttar sig snabbt mot en kona. B följer efter som en spegelbild.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.7
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.7
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.4
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.6
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.4
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.38,
+          "endX": 0.32,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.62,
+          "endX": 0.32,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A byter riktning och B hänger med. Efter cirka 10 sekunder är nästa par på tur.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.7
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.7
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.4
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.6
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.4
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.91,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.39
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.61
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.38,
+          "endX": 0.66,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.62,
+          "endX": 0.66,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

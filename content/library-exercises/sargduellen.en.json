@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "41df3367-54ed-5f0e-a654-ff19e3594443",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Corner duel – 1v1 by the boards",
+  "description": "A duel drill in one corner of the pitch. The players are split into two lines standing a couple of metres out from the boards. Two pairs of cones mark the lines into two goal zones – one along the end boards and one along the side boards.\n\nThe coach plays a ball into the corner. That is the signal for the first player in each line to run in and play 1v1. You score by dribbling the ball into either goal zone. Change to the next pair after a goal or when the ball leaves the area.\n\nThe drawing is not to scale, and where the lines and goal zones are placed is an interpretation – adapt it to your hall.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep your body between the opponent and the ball – use the boards as a shield."
+    },
+    {
+      "id": "cp2",
+      "text": "Get out of the corner with speed, ideally with a turn away from the opponent."
+    },
+    {
+      "id": "cp3",
+      "text": "As the defender: block the way to the nearest goal zone and win the ball against the boards."
+    },
+    {
+      "id": "cp4",
+      "text": "Ask the players: how do you get out of the corner, and how do you protect the ball?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Two lines outside the corner, A first in the blue line and B first in the red. The cones mark the lines into the two goal zones. The coach has the ball.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach plays the ball into the corner. A and B run in and compete for it.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.23,
+          "endX": 0.16,
+          "endY": 0.16
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.3,
+          "endY": 0.22
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.42,
+          "endX": 0.18,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A wins the ball and dribbles it into the goal zone along the side boards. B chases.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.11,
+          "y": 0.19
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.11,
+          "y": 0.22,
+          "endX": 0.12,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.24,
+          "endX": 0.24,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

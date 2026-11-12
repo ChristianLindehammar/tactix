@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "a71980d9-6309-52cd-a1c8-12beca5e022d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Pressa – 1 mot 2 / 2 mot 1",
+  "description": "En liten match med tre mål, ungefär 15 × 10 meter. Två anfallare (A och B) försöker göra mål i det stora målet med målvakt. En ensam försvarare försvarar det målet och kontrar mot två små mål när hen vunnit pucken. Den ensamma spelaren har alltså två mål att anfalla, medan paret har två mål att försvara.\n\nBygg gärna fyra sådana matcher på isen – två i varje zon – och rotera spelarna. Speltid cirka 45–60 sekunder per byte.\n\nFokus beroende på nivå: grön – teknik hos den ensamma spelaren och parets sätt att använda ytorna; blå – den ensamma spelaren kommer in i press och stänger ytorna, paret dubblar för att vinna tillbaka pucken; röd – besluten i anfall och försvar.\n\nBilden visar en match och är inte skalenlig. Målvakten är inte utritad.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: kom snabbt nära puckföraren och styr hen åt det håll du vill."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: håll klubban i passningsvägen till den andra anfallaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall 2 mot 1: dra på dig försvararen och passa när hen bestämt sig."
+    },
+    {
+      "id": "cp4",
+      "text": "Ensam med pucken: skydda den med kroppen och leta ytor till skott."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B anfaller det stora målet. Den röda försvararen startar framför målet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.179
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Försvararen pressar A och försöker styra hen mot sidan. B gör sig spelbar och A passar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.222,
+          "endX": 0.4,
+          "endY": 0.275,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.286,
+          "endX": 0.72,
+          "endY": 0.179
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.34,
+          "endX": 0.68,
+          "endY": 0.201
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter mot det stora målet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.275
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.158,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.158
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.136,
+          "endX": 0.53,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Vinner försvararen pucken kontrar hen direkt mot ett av de små målen, och A och B försvarar.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.318,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.265
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.34
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.372,
+          "endX": 0.3,
+          "endY": 0.425,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.436,
+          "endX": 0.26,
+          "endY": 0.447
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

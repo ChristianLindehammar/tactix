@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "7926fb0e-3840-5809-8057-e42a9a49fb09",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Finishing 1v1 + passer",
+  "description": "Finishing practice in the attacking zone. One passer stands in each corner of the zone (A–D) – two up by the blue line and two down level with the goal line – and an attacker faces a defenceman in front of the net. The passers play one puck each in turn, so the attacker gets four shots per round.\n\nThe attacker has to get open for each pass and find a way to a shot. After passing, the passer becomes an extra option – the attacker can shoot or play it back. The defenceman tries to stop the shots. Use a goalie if you have one.\n\nDefensive levels: 1) a coach defends, 2) a player without a stick, 3) a player with a stick starting by the net, 4) a player with a stick starting next to the attacker. Change attacker after each round.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Get open at the right moment – skate away, then come towards the puck."
+    },
+    {
+      "id": "cp2",
+      "text": "Take the pass moving towards the net so the shot can come quickly."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up: shoot if you have the chance, otherwise use the passer who has moved."
+    },
+    {
+      "id": "cp4",
+      "text": "Passers give a new option straight after their pass."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passer in every corner of the zone. The attacker and the defenceman start in front of the net.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.447,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.115,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.115,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.361
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.243
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.447
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes. The attacker comes to the puck while A skates up the boards as a new option.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.447,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.115,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.115,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.361
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.243
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.447
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.436,
+          "endX": 0.42,
+          "endY": 0.372
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.361,
+          "endX": 0.47,
+          "endY": 0.361
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.404,
+          "endX": 0.13,
+          "endY": 0.286
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The attacker shoots – or plays A if the defenceman closes the shot.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.115,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.115,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.361
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.243
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.286
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.265,
+          "endX": 0.48,
+          "endY": 0.066
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "The next pass comes from B, then C and D. Four shots per round.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.447,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.115,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.115,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.361
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.243
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.115
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.13,
+          "endX": 0.43,
+          "endY": 0.286
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.35,
+          "endX": 0.47,
+          "endY": 0.307
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

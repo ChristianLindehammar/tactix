@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 2,
+  "id": "86d49b83-c867-5c2b-84b7-7620cf78baac",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Zone to zone – from 3v3 into a 2v1",
+  "description": "The pitch is split into two zones: a press zone and a play zone, with a goal and a goalkeeper at each end. A 3v3 is played in the press zone, and one player from each team waits in the play zone. The drill starts on a signal with the ball at the attacking team in the press zone.\n\nThe attackers try to get into the play zone with the ball under control – either by dribbling in or by passing to the team-mate already there. Only one attacker may follow into the play zone, which makes it a 2v1. The defending team tries to win the ball in the press zone and score straight away. Play stops at a goal; on the coach's signal everyone resets and it starts again. Progression: the ball may only enter the play zone by dribbling.\n\nHow the pitch is split and where the goals are is an interpretation – adapt it to your hall. The drill is made for 10 players.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show that you are available – with your voice, stick and body."
+    },
+    {
+      "id": "cp2",
+      "text": "Position yourself so the ball carrier has a forward pass in depth."
+    },
+    {
+      "id": "cp3",
+      "text": "Time your run: move when the ball carrier can pass, not too early."
+    },
+    {
+      "id": "cp4",
+      "text": "Aim the pass in front of your team-mate so they can take it at speed."
+    },
+    {
+      "id": "cp5",
+      "text": "In the play zone: use the 2v1 – draw the defender and pass on."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Press zone (bottom half): A, B and C against three defenders. Play zone (top half): D against one defender. A goalkeeper in each goal.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.58
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.27
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.76
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.57
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to C, who dribbles into the play zone. A defender chases but may not follow in.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.58
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.27
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.76
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.57
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.74,
+          "endX": 0.79,
+          "endY": 0.67
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.6,
+          "endX": 0.82,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1r",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.57,
+          "endX": 0.72,
+          "endY": 0.53
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "In the play zone it is 2v1: C passes to D, who shoots.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.58
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.65
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.41,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.56
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.36,
+          "endX": 0.45,
+          "endY": 0.34
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.29,
+          "endX": 0.48,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If the defenders win the ball in the press zone, they go straight for the goal at their end.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.58
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.66
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.71
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.55
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.73,
+          "endX": 0.48,
+          "endY": 0.84
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

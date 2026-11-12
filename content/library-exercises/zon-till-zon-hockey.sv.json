@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "id": "de5a1922-9f64-5cbb-b374-7c64a9600a46",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Zon till zon – från 3 mot 3 till 2 mot 1",
+  "description": "Rinken delas i två zoner: en presszon och en spelzon, med ett mål och en målvakt i vardera änden. I presszonen spelas 3 mot 3, och i spelzonen står en spelare från varje lag. Övningen startar på signal med pucken hos det anfallande laget i presszonen.\n\nAnfallarna ska ta sig in i spelzonen med pucken under kontroll – antingen genom att åka in med den eller genom att passa till lagkamraten som redan står där. Bara en anfallare får följa med in, så det blir 2 mot 1 i spelzonen. Försvarande lag försöker vinna pucken i presszonen och göra mål direkt. Spelet bryts vid mål; på tränarens signal går alla tillbaka och det börjar om. Stegring: pucken får bara tas in i spelzonen genom att åka in med den.\n\nZonindelningen och målens placering är en tolkning – anpassa efter er rink. Övningen är gjord för 10 spelare.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Visa att du är spelbar – med rösten, klubban och kroppen."
+    },
+    {
+      "id": "cp2",
+      "text": "Ställ dig så att puckföraren har en passning framåt på djupet."
+    },
+    {
+      "id": "cp3",
+      "text": "Tajma åkningen: starta när puckföraren kan passa, inte för tidigt."
+    },
+    {
+      "id": "cp4",
+      "text": "Lägg passningen framför medspelaren så att hen kan ta emot i fart."
+    },
+    {
+      "id": "cp5",
+      "text": "I spelzonen: utnyttja 2 mot 1 – dra på backen och spela vidare."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Presszonen (nedre halvan): A, B och C mot tre försvarare. Spelzonen (övre halvan): D mot en försvarare. En målvakt i varje mål.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.778
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.575
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till C som åker in i spelzonen med pucken. En försvarare jagar men får inte följa med in.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.778
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.575
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.757,
+          "endX": 0.79,
+          "endY": 0.682
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.607,
+          "endX": 0.82,
+          "endY": 0.436,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1r",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.575,
+          "endX": 0.72,
+          "endY": 0.532
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "I spelzonen blir det 2 mot 1: C passar till D som skjuter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.286
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.404,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.361
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.564
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.329
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.275,
+          "endX": 0.48,
+          "endY": 0.126
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Vinner försvararna pucken i presszonen går de direkt på mål i sin ände.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.307,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.254
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.586
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.671
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.725
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.778,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.65,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.553
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.746,
+          "endX": 0.48,
+          "endY": 0.864
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

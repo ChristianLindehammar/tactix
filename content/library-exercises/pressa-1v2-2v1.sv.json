@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "9246d892-4c39-51ed-9ea2-6612ef9f3a7e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Pressa – 1 mot 2 / 2 mot 1",
+  "description": "En liten match med tre mål på ungefär 15 × 10 meter. Två anfallare (A och B) försöker göra mål på ett större mål med målvakt. En ensam försvarare försvarar det målet och kontrar mot två små mål när hen vunnit bollen. Den ensamma spelaren har alltså två mål att anfalla, medan paret har två mål att försvara.\n\nBygg gärna fyra sådana matcher på en helplan och rotera spelarna. Speltid cirka 45–60 sekunder per match.\n\nFokus beroende på nivå: grön – teknik hos den ensamma spelaren och parets sätt att använda ytorna; blå – den ensamma spelaren kommer in i press och stänger ytorna, paret dubblar för att vinna tillbaka bollen; röd – besluten i anfall och försvar.\n\nBilden visar en match och är inte skalenlig. Målvakten är inte utritad.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: kom snabbt nära bollhållaren och styr hen åt det håll du vill."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: stå så att du skär av passningen till den andra anfallaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall 2 mot 1: dra på dig försvararen och passa när hen bestämt sig."
+    },
+    {
+      "id": "cp4",
+      "text": "Ensam med boll: skydda bollen med kroppen och leta ytor till avslut."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B anfaller det stora målet. Den röda försvararen startar framför målet.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Försvararen pressar A och försöker styra hen mot sidan. B gör sig spelbar och A passar.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.24,
+          "endX": 0.4,
+          "endY": 0.29,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.3,
+          "endX": 0.72,
+          "endY": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.35,
+          "endX": 0.68,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B avslutar mot det stora målet.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.29
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.16,
+          "endX": 0.53,
+          "endY": 0.09
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Vinner försvararen bollen kontrar hen direkt mot ett av de små målen, och A och B försvarar.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.28
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.35
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.38,
+          "endX": 0.3,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.44,
+          "endX": 0.26,
+          "endY": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

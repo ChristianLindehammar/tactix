@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "id": "654cfcb4-03b7-5e19-ae3b-50faee47e97f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Spelbarhet – 2 mot 2 + 2 poängspelare",
+  "description": "Två lag spelar 2 mot 2 i en kvadrat på ungefär 12 × 12 meter, gärna i mittzonen. Utanför kvadraten finns fyra poängzoner, en på varje sida. Varje lag har två egna poängspelare som står i zonerna mitt emot varandra – det blå laget till vänster och höger, det röda uppe och nere. Laget som har pucken är alltså fyra mot två.\n\nEtt lag får poäng när pucken går från den ena poängspelaren till den andra, via spelarna i kvadraten. Det är tillåtet att spela tillbaka till samma poängspelare för att behålla pucken, men det ger ingen poäng. Bilden är inte skalenlig.\n\nLättare: spela 1 mot 1 + 2. Gör kvadraten större eller mindre efter spelarnas nivå.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Åk till en yta där det finns en fri passningsväg mellan dig och puckföraren – inte bakom en motståndare."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta dig omkring innan pucken kommer, så att du vet var nästa passning ska gå."
+    },
+    {
+      "id": "cp3",
+      "text": "Visa med klubbladet på isen och med rösten att du är redo att ta emot."
+    },
+    {
+      "id": "cp4",
+      "text": "Passa på medspelarens klubblad, gärna på den sida som är bort från motståndaren."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå A har pucken i sin poängzon. C åker till en fri yta där passningen inte kan brytas.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.329
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.329
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.671
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.671
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.179
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.179
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.821
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.821
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.414
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.586
+        },
+        {
+          "id": "z7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.414
+        },
+        {
+          "id": "z8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.586
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "pr1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "pr2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.757
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.447
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.586
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.564
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.414,
+          "endX": 0.31,
+          "endY": 0.468
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till C, som är spelbar mellan de röda spelarna.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.329
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.329
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.671
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.671
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.179
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.179
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.821
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.821
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.414
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.586
+        },
+        {
+          "id": "z7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.414
+        },
+        {
+          "id": "z8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.586
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "pr1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "pr2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.757
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.489,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.414
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.607
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.564
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.553,
+          "endX": 0.26,
+          "endY": 0.511
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar vidare till B i motsatt poängzon – poäng till blått.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.329
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.329
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.671
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.671
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.179
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.179
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.821
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.821
+        },
+        {
+          "id": "z5",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.414
+        },
+        {
+          "id": "z6",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.586
+        },
+        {
+          "id": "z7",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.414
+        },
+        {
+          "id": "z8",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.586
+        },
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "pr1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "pr2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.757
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.489,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.393,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.393
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.607
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.543
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.521,
+          "endX": 0.85,
+          "endY": 0.521
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

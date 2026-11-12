@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "3ae5975d-45de-5029-a3b4-d2f394eadf9c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Pressure – 1v2 / 2v1",
+  "description": "A small game with three goals on about 15 × 10 metres. Two attackers (A and B) try to score on a bigger goal with a goalkeeper. A single defender protects that goal and counters on two small goals after winning the ball. So the lone player has two goals to attack, while the pair has two goals to defend.\n\nSet up four of these games on a full court and rotate the players. Each game lasts about 45–60 seconds.\n\nFocus by level: green – the lone player’s technique and how the pair uses space; blue – the lone player gets into pressure and closes space, the pair double up to win the ball back; red – decision-making in attack and defence.\n\nThe picture shows one game and is not to scale. The goalkeeper is not drawn.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defence: close down the ball carrier quickly and steer them where you want."
+    },
+    {
+      "id": "cp2",
+      "text": "Defence: position yourself to cut off the pass to the other attacker."
+    },
+    {
+      "id": "cp3",
+      "text": "Attacking 2v1: draw the defender and pass once they have committed."
+    },
+    {
+      "id": "cp4",
+      "text": "Alone with the ball: shield it with your body and look for space to shoot."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B attack the big goal. The red defender starts in front of the goal.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The defender presses A and tries to steer them wide. B gets free and A passes.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.24,
+          "endX": 0.4,
+          "endY": 0.29,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.3,
+          "endX": 0.72,
+          "endY": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.35,
+          "endX": 0.68,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots on the big goal.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.29
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.16,
+          "endX": 0.53,
+          "endY": 0.09
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If the defender wins the ball they counter straight away on one of the small goals, and A and B defend.",
+      "markers": [
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.46
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.28
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.35
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.38,
+          "endX": 0.3,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.44,
+          "endX": 0.26,
+          "endY": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

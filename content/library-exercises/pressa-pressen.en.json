@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 2,
+  "id": "579c3f01-f2b2-5cd4-8cc8-dded81f2d845",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The press – switch play against a pressing team",
+  "description": "A 3v3 small-sided game across the court (4v4 on a bigger area for older players), with two goals. Both teams may score in both goals, but the teams have different tasks, and cones split the pitch into two halves.\n\nThe attacking team must get the ball through both halves – by passing or dribbling – before it may score. This forces the team to switch play, both in depth and across the pitch. The pressing team tries to win the ball and then score as quickly as possible. Swap tasks after a while. The drill works without goalkeepers and can be played on half a court. The diagram is not to scale.\n\nInterpretation: the source calls the halves two zones the team must get through; here that means the ball has to have been on both sides of the cones.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Press: close down the ball carrier straight away and shut the lane to the nearest team-mate."
+    },
+    {
+      "id": "cp2",
+      "text": "When you win the ball – turn and finish within a few seconds."
+    },
+    {
+      "id": "cp3",
+      "text": "Attack: dribble away from the pressure and play the pass to the side where there is space."
+    },
+    {
+      "id": "cp4",
+      "text": "Players on the far side: run into space the moment the ball carrier looks up."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red D presses A, who dribbles away towards the boards.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.34
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.47
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.25,
+          "endX": 0.42,
+          "endY": 0.28
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.34,
+          "endX": 0.19,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays a long pass into the other half. C runs out towards the boards and takes it.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.45
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.48
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.48,
+          "endX": 0.17,
+          "endY": 0.76
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.76,
+          "endX": 0.21,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The ball has been in both halves – C cuts inside and shoots.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.79,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.85
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.6
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.78
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.85,
+          "endX": 0.36,
+          "endY": 0.83,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.85,
+          "endX": 0.47,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

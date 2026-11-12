@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "47e66353-dfc2-55d2-842e-25701767072c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Pressure – 1v2 / 2v1",
+  "description": "A small game with three nets on about 15 × 10 metres. Two attackers (A and B) try to score on the big net with a goalie. A single defender protects that net and counters on two small nets after winning the puck. So the lone player has two nets to attack, while the pair has two nets to defend.\n\nSet up four of these games on the ice – two in each zone – and rotate the players. Each shift lasts about 45–60 seconds.\n\nFocus by level: green – the lone player’s technique and how the pair uses space; blue – the lone player gets into pressure and closes space, the pair double up to win the puck back; red – decision-making in attack and defence.\n\nThe picture shows one game and is not to scale. The goalie is not drawn.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defence: close down the puck carrier quickly and steer them where you want."
+    },
+    {
+      "id": "cp2",
+      "text": "Defence: keep your stick in the passing lane to the other attacker."
+    },
+    {
+      "id": "cp3",
+      "text": "Attacking 2v1: draw the defender and pass once they have committed."
+    },
+    {
+      "id": "cp4",
+      "text": "Alone with the puck: protect it with your body and look for space to shoot."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B attack the big net. The red defender starts in front of it.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.179
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The defender pressures A and tries to steer them wide. B gets open and A passes.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.222,
+          "endX": 0.4,
+          "endY": 0.275,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.286,
+          "endX": 0.72,
+          "endY": 0.179
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.34,
+          "endX": 0.68,
+          "endY": 0.201
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots on the big net.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.275
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.158,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.158
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.136,
+          "endX": 0.53,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If the defender wins the puck they counter straight away on one of the small nets, and A and B defend.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.457
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.457
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.318,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.265
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.34
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.372,
+          "endX": 0.3,
+          "endY": 0.425,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.436,
+          "endX": 0.26,
+          "endY": 0.447
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

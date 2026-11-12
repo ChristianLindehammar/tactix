@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "id": "590a6826-9e55-5b38-91f5-61594fa2d043",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Snabba avslut – smålagsspel med väggar",
+  "description": "Smålagsspel 3 mot 3 med målvakter i en zon, ungefär 15 × 10 meter (mindre för yngre). Två eller tre andra lag ställer sig på sex punkter runt ytan och fungerar som väggar (märkta J): de spelar hela tiden tillbaka pucken till laget som passar dem, så pucken är nästan alltid i spel. Går pucken ändå ut spelar målvakten på den sidan ut en ny puck till sitt lag.\n\nSyftet är att hitta snabba avslut i de ytor som öppnar sig, och att läsa situationen – smarta och precisa skott väger tyngre än hårda. Byt flygande var 1,5 minut mellan spelande lag och väggar, till exempel 2 × 12 minuter. Begränsa väggarnas antal tillslag efter nivå: tre, två eller ett. Bilden är inte skalenlig och målvakterna är inte utritade.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Använd väggen för att ta dig förbi en försvarare: passa och åk direkt in i ytan."
+    },
+    {
+      "id": "cp2",
+      "text": "Skjut på första eller andra tillslaget när läget öppnar sig."
+    },
+    {
+      "id": "cp3",
+      "text": "Precision före kraft – sikta på hörnen och utnyttja målvaktens placering."
+    },
+    {
+      "id": "cp4",
+      "text": "Väggarna: passa framför den som åker, så att hen kan skjuta direkt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "passing",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå B passar vänstra väggen och åker mot mål mellan de röda försvararna.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.072
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.072
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.447
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.447
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.468
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.29,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w5",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "w6",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.297
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.297
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.404
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.158,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.201,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.158
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.158,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.168,
+          "endX": 0.13,
+          "endY": 0.243
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.233,
+          "endX": 0.5,
+          "endY": 0.318
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Väggen spelar direkt tillbaka framför B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.072
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.072
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.447
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.447
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.468
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.29,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w5",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "w6",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.297
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.297
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.404
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.158,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.329,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.158,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.307
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.318,
+          "endX": 0.44,
+          "endY": 0.361
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt mot det nedre målet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.072
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.072
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.17,
+          "y": 0.447
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.83,
+          "y": 0.447
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.468
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.29,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w2",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.036,
+          "label": "J"
+        },
+        {
+          "id": "w3",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.254,
+          "label": "J"
+        },
+        {
+          "id": "w5",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "w6",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.521,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.297
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.297
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.404
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.179,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.329,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.382
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.179,
+          "label": "C"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.404,
+          "endX": 0.5,
+          "endY": 0.457
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

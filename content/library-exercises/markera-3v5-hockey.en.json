@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 2,
+  "id": "35d097e4-c03a-5822-bc8b-c0401592e6a7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Marking – 3v5, defend the slot",
+  "description": "Three defenders play against five attackers on half the rink. The attackers try to score on a big net with a goalie. The defenders try to prevent and block shots and counter on two small nets by the red line. In front of the net, cones mark the slot – the area where shots are most dangerous.\n\nAttackers score: goal from the slot 3 pts, goal from a one-timer where the puck passed through the slot 2 pts, other goals 1 pt.\nDefenders score: goal on a counter 1 pt, winning the puck in the slot 1 pt, blocked shot 2 pts.\n\nNot to scale. The goalie is not drawn.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mark tightly when your player is near the slot – you can give more room when they are far away."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand on the side of your opponent that is closest to the net and the puck."
+    },
+    {
+      "id": "cp3",
+      "text": "Cut off passing lanes into the slot with your stick on the ice."
+    },
+    {
+      "id": "cp4",
+      "text": "Steer the pressure so the attackers end up outside the slot."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Five attackers (A–E) against three defenders. Cones mark the slot in front of the net.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.036
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.036
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.275
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.275
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.468
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.382,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.382,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.372,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.147
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.147
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.254
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.297
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tries to pass to C, who skates into the slot. The nearest defender reads the pass and steps in.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.036
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.036
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.275
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.275
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.468
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.382,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.382,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.372,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.147
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.147
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.254
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.297
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.286,
+          "endX": 0.42,
+          "endY": 0.222
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.254,
+          "endX": 0.36,
+          "endY": 0.211
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.34,
+          "endX": 0.56,
+          "endY": 0.222,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The defender wins the puck and counters straight away on one of the small nets.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.036
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.036
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.275
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.275
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.468
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.179,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.372,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.382,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.372,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.147
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.147
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.233
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.307
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.329,
+          "endX": 0.25,
+          "endY": 0.425,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.436,
+          "endX": 0.21,
+          "endY": 0.457
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

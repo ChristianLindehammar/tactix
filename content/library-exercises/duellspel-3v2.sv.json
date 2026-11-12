@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "id": "326bc46f-0bd2-50ce-9a5d-479b8260e958",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Duellspel 3 mot 2 – stoppa avsluten",
+  "description": "Tre anfallare möter två försvarare och en målvakt på en halvplan. Bara bollsidan används – ytan bortom konerna är utanför spel, så försvararna har en sida att styra mot och anfallarna måste lösa avsluten från bollsidan. Mittlinjen behöver inte försvaras. Varje anfall börjar med bollen hos den anfallare som står längst bak.\n\nFokus ligger på försvarsspelet: försvararna ska gå på bollföraren, minska tiden och ytorna, och få anfallarna att vända sig bort från målet innan de hinner skjuta. Målvakten jobbar ihop med försvararna. Kör korta anfall, byt roller efter några försök.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den närmaste försvararen går direkt på bollföraren – den andra täcker ytan framför mål."
+    },
+    {
+      "id": "cp2",
+      "text": "Styr bollföraren mot sargen och bort från bra skottlägen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försök få anfallaren felvänd, med ryggen mot målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakten pratar och hjälper försvararna att täcka rätt skott."
+    },
+    {
+      "id": "cp5",
+      "text": "Fråga spelarna: vilka ytor var svåra att hitta, och varifrån kom de flesta avsluten?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Utgångsläge: C bakerst med bollen, A och B längre fram. D och E försvarar, målvakten i mål. Ytan till höger om konerna är utanför spel.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.27
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.47,
+          "label": "E"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passar till A. E går direkt på A, D glider över mot mitten och täcker B.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.27
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.44
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.47,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.42,
+          "endX": 0.19,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.21,
+          "endY": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.2,
+          "endX": 0.4,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar vidare till B som vill skjuta. D kliver ut och blockerar, målvakten ställer sig rätt.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.27
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.37
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.4,
+          "label": "E"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.35,
+          "endX": 0.47,
+          "endY": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.21,
+          "endX": 0.45,
+          "endY": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.25,
+          "endX": 0.51,
+          "endY": 0.13
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

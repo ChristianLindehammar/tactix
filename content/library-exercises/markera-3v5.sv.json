@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 2,
+  "id": "1b09cbf7-6dbe-5cd8-96fe-f83579fb7ceb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Markera – 3 mot 5 och försvara slottet",
+  "description": "Tre försvarare spelar mot fem anfallare på ungefär 20 × 20 meter. Anfallarna ska göra mål på ett stort mål med målvakt. Försvararna ska förhindra och rädda avslut och kontra mot två små mål. Framför målet markeras \"slottet\" med koner – ytan där avsluten är farligast.\n\nPoäng för anfallarna: mål från slottet 3 p, mål på direktskott där bollen gått genom slottet 2 p, övriga mål 1 p.\nPoäng för försvararna: mål på kontring 1 p, bollvinst i slottet 1 p, täckt skott 2 p.\n\nBilden är inte skalenlig. Målvakten är inte utritad.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå nära den du markerar när hen är nära slottet – längre ifrån när hen är långt borta."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå på den sida av motståndaren som är närmast mål och bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Skär av passningsvinklar in mot slottet med klubban."
+    },
+    {
+      "id": "cp4",
+      "text": "Styra presspelet så att motståndarna hamnar utanför slottet."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Fem anfallare (A–E) mot tre försvarare. Slottet är markerat med koner framför mål.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.29
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.29
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.39,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.39,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.17
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A försöker passa in till C som rör sig in i slottet. Närmaste försvarare läser passningen och kliver in.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.29
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.29
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.39,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.39,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.17
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.3,
+          "endX": 0.42,
+          "endY": 0.24
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.36,
+          "endY": 0.23
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.35,
+          "endX": 0.56,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Försvararen vinner bollen och kontrar direkt mot ett av de små målen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.29
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.29
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.39,
+          "label": "E"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.17
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.25
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.32
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.34,
+          "endX": 0.25,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.44,
+          "endX": 0.21,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

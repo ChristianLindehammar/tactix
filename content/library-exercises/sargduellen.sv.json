@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "17f2a6d3-616f-5f88-a352-564508310008",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Sargduellen – 1 mot 1 i hörnet",
+  "description": "En duellövning i ett av planens hörn. Spelarna delas i två led som står ett par meter ut från sargen. Två konpar markerar linjerna in till två målzoner – en längs kortsargen och en längs långsargen.\n\nTränaren spelar in en boll i hörnet. Det är signalen för de första i varje led att springa in och spela 1 mot 1. Man gör mål genom att driva in bollen i någon av de två målzonerna. Byt till nästa par vid mål eller när bollen hamnar utanför ytan.\n\nBilden är inte skalenlig, och var leden och målzonerna står är en tolkning – anpassa efter er hall.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll kroppen mellan motståndaren och bollen – använd sargen som skydd."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta dig ut ur hörnet med fart, gärna med en vändning bort från motståndaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Som försvarare: stäng vägen mot närmaste målzon och vinn bollen mot sargen."
+    },
+    {
+      "id": "cp4",
+      "text": "Fråga spelarna: hur gör du för att ta dig ur sarghörnet, och hur skyddar du bollen?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Två led utanför hörnet, A först i det blå och B först i det röda. Konerna markerar linjerna till de två målzonerna. Tränaren har bollen.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Tränaren spelar in bollen i hörnet. A och B springer in och tävlar om den.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.23,
+          "endX": 0.16,
+          "endY": 0.16
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.3,
+          "endY": 0.22
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.42,
+          "endX": 0.18,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A vinner bollen och driver in den i målzonen längs långsargen. B jagar.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.03
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.13
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.3
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.3
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.51
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.11,
+          "y": 0.19
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.11,
+          "y": 0.22,
+          "endX": 0.12,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.24,
+          "endX": 0.24,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

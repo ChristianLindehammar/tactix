@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 2,
+  "id": "56b7512c-4e90-5e67-8548-241b208b791c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Pressen – byt spelsida mot ett pressande lag",
+  "description": "Smålagsspel 3 mot 3 tvärs över planen (4 mot 4 på en större yta för äldre spelare), med två mål. Båda lagen får göra mål i båda målen, men lagen har olika uppgifter, och planen delas i två halvor med koner.\n\nDet anfallande laget måste få bollen genom båda planhalvorna – med passning eller dribbling – innan det får göra mål. Det tvingar laget att byta spelsida, både på djupet och på bredden. Det pressande laget försöker vinna bollen och gör sedan mål så snabbt som möjligt. Byt uppgifter efter en stund. Övningen fungerar utan målvakter och kan spelas på halva planen. Bilden är inte skalenlig.\n\nTolkning: källan beskriver halvorna som två zoner laget ska ta sig igenom; här visas det som att bollen ska ha varit på båda sidor om konerna.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Press: gå på bollhållaren direkt och stäng vägen mot närmaste medspelare."
+    },
+    {
+      "id": "cp2",
+      "text": "Vid bollvinst – vänd upp och avsluta på några sekunder."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall: driv bort från pressen och slå passningen till den sida där det är glest."
+    },
+    {
+      "id": "cp4",
+      "text": "Spelarna på andra sidan: löp in i ytan i samma ögonblick som bollhållaren tittar upp."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd D pressar A, som driver undan mot sargen.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.34
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.47
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.25,
+          "endX": 0.42,
+          "endY": 0.28
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.34,
+          "endX": 0.19,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår en lång passning till andra planhalvan. C löper ut mot sargen och tar emot.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.45
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.48
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.48,
+          "endX": 0.17,
+          "endY": 0.76
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.76,
+          "endX": 0.21,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Bollen har varit på båda halvorna – C driver in och avslutar.",
+      "markers": [
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.79,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.85
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.6
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.78
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.85,
+          "endX": 0.36,
+          "endY": 0.83,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.85,
+          "endX": 0.47,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

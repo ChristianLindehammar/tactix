@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 2,
+  "id": "2a311918-334b-57ba-8ccb-d94baa2694bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Driva boll – 2 mot 2 med fyra mål",
+  "description": "Spela 2 mot 2 på en plan på ungefär 20 × 10 meter med två små mål på varje kortsida. Båda lagen får göra mål i alla fyra målen. Dela en vanlig plan på bredden, så blir planerna tillräckligt långa för att driva bollen och utmana ytorna bakom motståndarna. Bilden visar två planer, en på varje planhalva, och är inte skalenlig.\n\nHar ni inte många mål går det bra med koner. Spelar ni med stora mål utan målvakter måste försvararna gå på mycket hårdare; en extra regel kan då vara att man inte får skjuta när man står framför motståndaren med målet bakom hen – man ska driva förbi först.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv bollen in i den fria ytan – öka tempot när du kommit förbi."
+    },
+    {
+      "id": "cp2",
+      "text": "Är ett mål stängt: byt riktning och gå mot ett annat."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: när är det svårt att försvara? Diskutera med spelarna."
+    },
+    {
+      "id": "cp4",
+      "text": "När kan man släppa ena handen på klubban för att nå längre?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå A driver mot vänstra målet, men röd D flyttar sig och stänger det.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "g5",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "g6",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "g7",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "g8",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.76
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8
+        },
+        {
+          "id": "l3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.64
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.4
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.19
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.33,
+          "endX": 0.22,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.22,
+          "endX": 0.24,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder och driver tvärs över planen mot den öppna sidan.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "g5",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "g6",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "g7",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "g8",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.76
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8
+        },
+        {
+          "id": "l3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.64
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.3
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.19
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.28,
+          "endX": 0.66,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar i högra målet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "g4",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "g5",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "g6",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "g7",
+          "type": "goal",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "g8",
+          "type": "goal",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "l1",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72
+        },
+        {
+          "id": "lb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.76
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8
+        },
+        {
+          "id": "l3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.64
+        },
+        {
+          "id": "l4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.41,
+          "endX": 0.83,
+          "endY": 0.43
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

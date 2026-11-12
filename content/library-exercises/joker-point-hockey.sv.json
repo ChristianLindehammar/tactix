@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 2,
+  "id": "e476b0c5-222e-5c22-ba08-da92299351ec",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Joker Point – 4 mot 4 med joker bakom spelet",
+  "description": "Spel 4 mot 4 på en planhalva, mot ett stort mål med målvakt. Vid mittlinjen står två små mål. Anfallande lag har en joker (J) som står bakom spelet, som en back, och erbjuder ett passningsalternativ bakåt.\n\nLängs sargerna finns ytterzoner (markerade med koner). Jokern får bara spela upp pucken till en spelare i någon av ytterzonerna. Anfallarna måste få pucken genom en ytterzon innan de får göra mål på det stora målet. Försvarande lag ska vinna pucken och kontra mot ett av de små målen. Spelet är slut när ett lag har gjort mål.\n\nBilden är inte skalenlig. Målvakten är inte utritad.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Tajma åkningen ut i ytterzonen så att du blir spelbar när jokern har pucken."
+    },
+    {
+      "id": "cp2",
+      "text": "Jokern: stå så att du alltid är spelbar bakåt för puckföraren."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela hem till jokern hellre än att tappa pucken under press."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvarare: läs passningen till ytterzonen och var redo att kontra direkt."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "positioning",
+    "passing",
+    "transition"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått lag anfaller uppåt. Ytterzonerna går längs sargerna mellan konerna. Jokern (J) står bakom spelet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.318
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A är pressad och spelar hem till jokern. Jokern spelar upp till D, som har åkt ut i ytterzonen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.318
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.414
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.414,
+          "endX": 0.9,
+          "endY": 0.286,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.168,
+          "endX": 0.92,
+          "endY": 0.254
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Pucken har gått genom ytterzonen – nu får laget göra mål. D passar B, som skjuter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.222
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.297
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.201
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.19,
+          "endX": 0.41,
+          "endY": 0.115
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.083,
+          "endX": 0.46,
+          "endY": 0.043
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Vinner rött lag pucken kontrar de direkt mot ett av de små målen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.115
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.115
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.393
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.393
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.28,
+          "y": 0.468
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.72,
+          "y": 0.468
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.201
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.179
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.072
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.286
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.35
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.275,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.318,
+          "label": "A"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.425,
+          "label": "J"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.158,
+          "label": "D"
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.372,
+          "endX": 0.7,
+          "endY": 0.436,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.436,
+          "endX": 0.72,
+          "endY": 0.457
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

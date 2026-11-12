@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "id": "54d173fb-0001-5102-813b-4caff164a4b9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Kantspel – 4 mot 4 med back som joker",
+  "description": "Spel 4 mot 4 på en planhalva mot ett mål med målvakt. Längst bak, närmast mittlinjen, finns en avlastningszon där bara jokern (J) får vara. Jokern spelar alltid med laget som har bollen och fungerar som en back att spela hem till.\n\nRegler: anfallarna får bara passa jokern längs sargerna, utanför de två konerna. Jokern får bara föra in bollen i anfallszonen mellan konerna. Vinner försvararna bollen blir de anfallare direkt, så spelet växlar mellan anfall och försvar hela tiden. De två små målen vid mittlinjen är vår tolkning av bilden i källan: försvararna kan kontra mot dem när de vunnit bollen.\n\nBilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sök de ytor som är svårast att försvara – oftast framför mål och vid bortre stolpen."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd jokern för att flytta spelet från ena kanten till den andra."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: styr anfallarna ut mot sargen och stäng ytan framför mål."
+    },
+    {
+      "id": "cp4",
+      "text": "Fråga spelarna: vilka ytor är svåra att försvara, och varför?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "shooting"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "4 mot 4 framför mål. Jokern (J) står i avlastningszonen bakom konerna. B har bollen vid sargen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar hem till jokern längs sargen, utanför konan. Jokern rör sig mot bollen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.36,
+          "endX": 0.88,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.45,
+          "endX": 0.75,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Jokern driver in bollen mellan konerna och passar C, som avslutar.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.4
+        },
+        {
+          "id": "m1",
+          "type": "goal",
+          "x": 0.07,
+          "y": 0.47
+        },
+        {
+          "id": "m2",
+          "type": "goal",
+          "x": 0.93,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.26
+        },
+        {
+          "id": "d4",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.46
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.44,
+          "endX": 0.52,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.33,
+          "endX": 0.39,
+          "endY": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.1,
+          "endX": 0.46,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "id": "3a958e44-6b5b-593a-b928-d4f6b463cb29",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Centervändningen – 3 mot 3 i korridorer",
+  "description": "Spel 3 mot 3 med målvakter på en yta på ungefär 20 × 20 meter, till exempel en planhalva med ett extra mål vid mittlinjen. Ytan delas med koner i tre korridorer som går från kortsida till kortsida. Varje spelare har en fast position i en korridor.\n\nFör att ett mål ska räknas måste bollen ha spelats minst en gång från en ytterkorridor in till den centrala korridoren. Det tvingar laget att använda bredden och ger centern många lägen att ta emot, vända och avsluta.\n\nStegring: spela fritt utan fasta positioner, men behåll regeln om passningen från yttre till central korridor.\n\nBilden är inte skalenlig. Målvakterna är inte utritade.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Centern: rör dig så att du är spelbar när bollen är i en ytterkorridor."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med kroppen öppen mot målet så att vändningen går snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Ytterspelarna: håll bredden så att det finns plats i mitten."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: hur kan ni stoppa passningen från ena ytterkorridoren till den andra?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tre korridorer med en spelare från varje lag i varje. A har bollen i vänster korridor och laget anfaller uppåt.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver fram en bit och passar in i mitten. B rör sig bort från sin försvarare för att bli spelbar.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.39,
+          "endX": 0.44,
+          "endY": 0.36
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.3,
+          "endX": 0.47,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B vänder upp med bollen och avslutar – passningen in i mitten gör att målet räknas.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.05
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.05
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.27
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.27
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.47
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.47
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.34,
+          "endX": 0.6,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.2,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

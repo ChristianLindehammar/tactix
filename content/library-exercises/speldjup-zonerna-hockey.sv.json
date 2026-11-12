@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "id": "606dada6-659b-5807-b4ac-9725b66ce15d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Speldjup i zoner – 2 mot 1 och 2 mot 3",
+  "description": "Ytan, ungefär 20 × 20 meter (bilden är inte skalenlig), delas i en uppspelszon och en anfallszon – ungefär 40/60 till 50/50. I uppspelszonen finns ett stort mål med målvakt, i anfallszonen två små mål eller två koner.\n\nAnfallande lag har två spelare i varje zon. Försvarande lag har en spelare i uppspelszonen och tre i anfallszonen. Det blir alltså 2 mot 1 i uppspelet och 2 mot 3 längre fram. Anfallarna bygger upp i sin zon, passar in till en lagkamrat i anfallszonen och försöker göra mål i något av de små målen. Försvararna ska stoppa uppspelet och kontra mot målet med målvakt. Vid omställning får båda lagen anfalla och försvara i båda zonerna.\n\nVarianter: lägg till jokrar som spelar med det anfallande laget, eller ta bort zonerna och spela fritt. Det stora målet i den övre änden används inte.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ge puckföraren alternativ framåt, bakåt och snett – stå inte på samma linje."
+    },
+    {
+      "id": "cp2",
+      "text": "Åk på djupet när puckföraren har tid och kan se dig."
+    },
+    {
+      "id": "cp3",
+      "text": "Ställ dig så att du kan ta emot och direkt ta med pucken mot mål."
+    },
+    {
+      "id": "cp4",
+      "text": "Utnyttja övertalet i uppspelet: dra på försvararen innan du passar."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 11,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Nedre halvan är uppspelszonen: A och B mot en försvarare, med egen målvakt. Övre halvan är anfallszonen: C och D mot tre försvarare och två små mål.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.746
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.671,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.628
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till B förbi försvararen. C åker ner mot zongränsen och blir spelbar.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.746
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.671,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.628
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.735,
+          "endX": 0.7,
+          "endY": 0.682
+        },
+        {
+          "id": "r4r",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.628,
+          "endX": 0.6,
+          "endY": 0.607
+        },
+        {
+          "id": "cr",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.35,
+          "endX": 0.38,
+          "endY": 0.425
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B slår passningen in i anfallszonen till C.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.201
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.425,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.553
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.532,
+          "endX": 0.42,
+          "endY": 0.447
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C tar med sig pucken och avslutar mot ett av de små målen.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.072
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.072
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.243
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.179
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.318
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.425,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.404
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.286,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.607
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.372,
+          "endX": 0.25,
+          "endY": 0.115
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

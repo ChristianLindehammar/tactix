@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 2,
+  "id": "a06ba352-4ac6-51d3-ba65-b4aa93da10ce",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Ytterzonen – 3 mot 3 med jokrar på kanterna",
+  "description": "Planen delas i en spelzon i mitten och två smala ytterzoner längs sargerna, cirka 2 meter breda. I spelzonen spelas 3 mot 3. I ytterzonerna står 1–2 jokrar (J) som spelar med det lag som har bollen, till exempel en på varje planhalva.\n\nAnfallande lag måste passa en av jokrarna innan de får avsluta. Mål får också göras direkt från ytterzonen. Barn samlas gärna kring bollen – övningen lär dem att använda bredden och att länka ihop spelet.\n\nSpela till exempel 2 × 5 minuter och byt jokrar. Ha bollar vid målen så att målvakten snabbt kan sätta igång spelet om bollen går ut. Spela på längden eller tvären beroende på ålder – aldrig på hela planen.\n\nStegring: jokrarna i ytterzonen får ta bollen från varandra, eller ta bort jokrarna och ge extra poäng för mål som kommer via ytterzonen.\n\nBilden är inte skalenlig. Målvakterna är inte utritade.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sprid ut er – öka spelytan centralt genom att inte samlas runt bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Jokrarna: rör er längs sargen så att ni är spelbara för bollhållaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa ut till ytterzonen när motståndarna har samlats centralt."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakten: försök nå en ytterzonsspelare direkt när du sätter igång spelet."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "positioning",
+    "passing",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "3 mot 3 i spelzonen. Jokrarna (J) står i ytterzonerna längs sargerna. Blått lag anfaller uppåt.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.13
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.13
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.5
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.5
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.87
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.42
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.62
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.68,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.74
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.27,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar ut till jokern i ytterzonen, som driver längs sargen. C rör sig fram mot mål.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.13
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.13
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.5
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.5
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.87
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.42
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.62
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.68,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.74
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.73,
+          "endX": 0.89,
+          "endY": 0.69
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.93,
+          "y": 0.64,
+          "endX": 0.93,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.24,
+          "endX": 0.5,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Jokern passar C, som avslutar. Nu räknas målet, eftersom bollen gått via en joker.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.13
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.13
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.5
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.5
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.87
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.42
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.62
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.36,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.93,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.9,
+          "y": 0.27,
+          "endX": 0.56,
+          "endY": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.14,
+          "endX": 0.5,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

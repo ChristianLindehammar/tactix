@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 2,
+  "id": "a9dc0d25-1670-5706-ae22-6ee16b63753b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Duel play 3v2 – stop the shots",
+  "description": "Three attackers take on two defencemen and a goalie in one zone. Only the puck side is used – the area beyond the cones is out of play, which gives the defencemen a side to push towards and makes the attackers finish from the puck side. The centre line does not need defending and there is no offside. Each rush starts with the puck at the attacker furthest back.\n\nThe focus is on defending: the defencemen close down the puck carrier, take away time and space, and force the attackers away from the net before they can shoot. The goalie works together with the defencemen. Keep the rushes short and swap roles after a few goes.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The nearest defenceman goes straight at the puck carrier – the other one covers the space in front of the net."
+    },
+    {
+      "id": "cp2",
+      "text": "Steer the puck carrier towards the boards and away from good shooting spots."
+    },
+    {
+      "id": "cp3",
+      "text": "Block the shot with body and stick – but do not leave the free player in front of the net."
+    },
+    {
+      "id": "cp4",
+      "text": "The goalie talks and helps the defencemen cover the right shots."
+    },
+    {
+      "id": "cp5",
+      "text": "Ask the players: which spaces were hard to find, and where did most shots come from?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Start: C at the back with the puck, A and B further up. D and E defend, the goalie is in the net. The area right of the cones is out of play.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.043
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.254
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.468
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.275,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.436
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.179,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.468,
+          "label": "E"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passes to A. E goes straight at A, D slides towards the middle and covers B.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.043
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.254
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.468
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.275,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.436
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.179,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.468,
+          "label": "E"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.414,
+          "endX": 0.19,
+          "endY": 0.286
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.436,
+          "endX": 0.21,
+          "endY": 0.361
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.179,
+          "endX": 0.4,
+          "endY": 0.211
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes on to B, who wants to shoot. D steps out to block and the goalie gets set.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.043
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.254
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.468
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.275,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.447,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.361
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.19,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.393,
+          "label": "E"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.34,
+          "endX": 0.47,
+          "endY": 0.286
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.19,
+          "endX": 0.45,
+          "endY": 0.233
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.233,
+          "endX": 0.5,
+          "endY": 0.135
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
