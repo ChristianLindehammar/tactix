@@ -46,6 +46,7 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | trillingmatchen-hockey | hockey | Hockey version of trillingmatchen (same source) | 2026-11-12 |
 | ytterzonen-hockey | hockey | Hockey version of ytterzonen (same source) | 2026-11-12 |
 | zon-till-zon-hockey | hockey | Hockey version of zon-till-zon (same source) | 2026-11-12 |
+| pressa-pressen-hockey | hockey | Hockey version of pressa-pressen (same source) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 

@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "24701728-d7b2-5ca8-858b-2e7af054b805",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "The press – switch play against a pressing team",
+  "description": "A 3-on-3 small-sided game with a net at each end (4-on-4 on a bigger area for older players). Both teams may score in both nets, but the teams have different tasks, and cones at the centre line split the rink into two halves.\n\nThe attacking team must get the puck through both halves – by passing or carrying it – before it may score. This forces the team to switch play, both in depth and across the ice. The pressing team tries to win the puck and then score as quickly as possible. Swap tasks after a while. Play without offside. The drill works without goalies and can be played in a smaller part of the rink. The diagram is not to scale.\n\nInterpretation: the source calls the halves two zones the team must get through; here that means the puck has to have been on both sides of the cones.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pressure: close down the puck carrier straight away, stick on the ice, and shut the lane to the nearest team-mate."
+    },
+    {
+      "id": "cp2",
+      "text": "When you win the puck – turn and finish within a few seconds."
+    },
+    {
+      "id": "cp3",
+      "text": "Attack: skate away from the pressure and pass to the side where there is space."
+    },
+    {
+      "id": "cp4",
+      "text": "Players on the far side: skate into space the moment the puck carrier looks up."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red D pressures A, who carries the puck away towards the boards.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.329
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.372,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.757,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.468
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.233,
+          "endX": 0.42,
+          "endY": 0.265
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.329,
+          "endX": 0.19,
+          "endY": 0.393,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays a long pass into the other half. C skates out towards the boards and takes it.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.393,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.447
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.372,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.757,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.318,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.479
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.714
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.479,
+          "endX": 0.17,
+          "endY": 0.778
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.778,
+          "endX": 0.21,
+          "endY": 0.821,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The puck has been in both halves – C cuts inside and shoots.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.479,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.81,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.874
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.393,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.607
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.799
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.874,
+          "endX": 0.36,
+          "endY": 0.853,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.874,
+          "endX": 0.47,
+          "endY": 0.935
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

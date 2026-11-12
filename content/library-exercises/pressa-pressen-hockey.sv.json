@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "cbd70c50-d9c9-5bc5-8467-2b9b135a135c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Pressen – byt spelsida mot ett pressande lag",
+  "description": "Smålagsspel 3 mot 3 med ett mål i varje ände (4 mot 4 på en större yta för äldre spelare). Båda lagen får göra mål i båda målen, men lagen har olika uppgifter, och rinken delas i två halvor med koner vid mittlinjen.\n\nDet anfallande laget måste få pucken genom båda halvorna – med passning eller genom att åka med den – innan det får göra mål. Det tvingar laget att byta spelsida, både på djupet och på bredden. Det pressande laget försöker vinna pucken och gör sedan mål så snabbt som möjligt. Byt uppgifter efter en stund. Spela utan offside. Övningen fungerar utan målvakter och kan spelas i en mindre del av rinken. Bilden är inte skalenlig.\n\nTolkning: källan beskriver halvorna som två zoner laget ska ta sig igenom; här visas det som att pucken ska ha varit på båda sidor om konerna.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Press: gå på puckföraren direkt med klubban på isen och stäng vägen mot närmaste medspelare."
+    },
+    {
+      "id": "cp2",
+      "text": "Vid puckvinst – vänd upp och avsluta på några sekunder."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall: åk bort från pressen och slå passningen till den sida där det är glest."
+    },
+    {
+      "id": "cp4",
+      "text": "Spelarna på andra sidan: åk in i ytan i samma ögonblick som puckföraren tittar upp."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "phase": "game",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd D pressar A, som åker undan med pucken mot sargen.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.329
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.372,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.757,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.201,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.468
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.693
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.233,
+          "endX": 0.42,
+          "endY": 0.265
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.329,
+          "endX": 0.19,
+          "endY": 0.393,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår en lång passning till andra halvan. C åker ut mot sargen och tar emot.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.393,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.447
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.372,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.757,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.318,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.479
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.714
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.479,
+          "endX": 0.17,
+          "endY": 0.778
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.778,
+          "endX": 0.21,
+          "endY": 0.821,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Pucken har varit på båda halvorna – C går in mot mitten och skjuter.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "h1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.5
+        },
+        {
+          "id": "h2",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "h3",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "h4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.479,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.81,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.874
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.393,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.607
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.799
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.874,
+          "endX": 0.36,
+          "endY": 0.853,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.874,
+          "endX": 0.47,
+          "endY": 0.935
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
