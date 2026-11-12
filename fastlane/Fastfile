@@ -230,10 +230,16 @@ private_lane :build_and_upload_android do
   aab_path = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
   UI.message("Built AAB at: #{aab_path}")
 
+  # R8 obfuscates release builds (expo-build-properties in app.json); Play needs the
+  # mapping file to turn crash and ANR stack traces back into readable names
+  mapping_path = File.expand_path("../android/app/build/outputs/mapping/release/mapping.txt", __dir__)
+  UI.user_error!("R8 mapping file not found at #{mapping_path} - is minify on?") unless File.exist?(mapping_path)
+
   # Released straight to internal testers, with the release notes
   upload_to_play_store(
     track: 'internal',
     aab: aab_path,
+    mapping: mapping_path,
     metadata_path: PLAY_METADATA_PATH,
     skip_upload_apk: true,
     skip_upload_metadata: true,
