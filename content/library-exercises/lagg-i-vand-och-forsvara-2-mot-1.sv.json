@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "85d1e448-b585-5e72-977b-0984c8ba51d6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Lägg i, vänd och försvara 2 mot 1",
+  "description": "Tre led: två anfallsled i hörnen vid baslinjen och ett försvarsled vid högra sidlinjen, där den första har bollen. Försvararen driver mot korgen och lägger upp, och vänder sedan för att försvara den andra korgen.\n\nEn av anfallarna tar returen (eller gör inkast bakom baslinjen om det blev korg) och passar till den andra. Sedan kör de 2 mot 1 mot andra korgen. Anfallet får bara ett skott. Nästa grupp startar ungefär när gruppen före når mittlinjen. Efteråt joggar alla tillbaka längs sidlinjen och byter till nästa led.\n\nStegring: poäng som minskar för varje extra passning (t.ex. 3 poäng, minus 1 per passning efter den första), eller poäng till anfallarna vid korg och till försvararen vid stopp. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blev det korg? Snabbt inkast bakom baslinjen."
+    },
+    {
+      "id": "cp2",
+      "text": "Utan boll: flytta dig ur passningsskuggan så att du kan ta emot."
+    },
+    {
+      "id": "cp3",
+      "text": "Läs försvararen – kommer hen mot bollen, passa; stannar hen kvar, avsluta."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvararen: finta och chansa – du är i underläge och måste störa."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X driver från sidlinjen och lägger upp. A och B väntar i hörnen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.655
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.68,
+          "endX": 0.6,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.885,
+          "endX": 0.51,
+          "endY": 0.935
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar bollen och passar ut till A. X sprintar hem för att försvara andra korgen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.865
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.85,
+          "endX": 0.24,
+          "endY": 0.75
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.75,
+          "endX": 0.58,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A och B anfaller 2 mot 1. A läser X och väljer att avsluta eller passa till B.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.62
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.45,
+          "endX": 0.34,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.54,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.49,
+          "endX": 0.66,
+          "endY": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

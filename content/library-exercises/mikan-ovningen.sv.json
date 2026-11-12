@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "id": "ac3f9bc6-e128-54df-8288-8c66f6395651",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Mikan-övningen",
+  "description": "En spelare och en boll per korg. Spelaren står nära korgen och gör lay-ups utan dribbling, växelvis från höger och vänster sida. Från höger sida avslutar hen med högerhanden, tar bollen ur nätet utan att den studsar, tar ett steg över till vänster och avslutar med vänsterhanden. Så fortsätter det fram och tillbaka.\n\nKör i 30–60 sekunder och räkna träffarna, eller se hur många i rad man klarar. Är ni fler än korgarna, byt efter varje omgång.\n\nStegring: baklänges lay-ups – kliv in under korgen och avsluta på andra sidan med ryggen mot plattan.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen ovanför huvudet hela tiden – sänk den aldrig till midjan."
+    },
+    {
+      "id": "cp2",
+      "text": "Ett steg och upp: höger hand från höger sida, vänster hand från vänster sida."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd plattan och avsluta mjukt."
+    },
+    {
+      "id": "cp4",
+      "text": "Ta bollen innan den studsar och håll ett jämnt tempo."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 5,
+  "minPlayers": 1,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A gör lay-up med högerhanden från höger sida och kliver sedan över till vänster.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.08,
+          "endX": 0.53,
+          "endY": 0.06
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.21,
+          "endX": 0.4,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A avslutar med vänsterhanden från vänster sida och kliver tillbaka till höger.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.09
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.08,
+          "endX": 0.47,
+          "endY": 0.06
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.21,
+          "endX": 0.6,
+          "endY": 0.21,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Stegring: A kliver in under korgen och gör en baklänges lay-up på andra sidan.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.725,
+          "y": 0.115
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.105,
+          "endX": 0.54,
+          "endY": 0.06
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.15,
+          "endX": 0.58,
+          "endY": 0.13,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

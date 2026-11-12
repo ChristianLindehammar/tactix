@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "id": "d0519c05-3ddf-5a21-9dc1-074349e3a0bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Passningstriangeln 3 mot 1",
+  "description": "Grupper om fyra med en boll. Tre spelare står i en triangel med 4–5 meter mellan sig och den fjärde står i mitten som försvarare. Triangeln passar runt och räknar passningarna högt. Tio i rad vinner, men tar försvararen bollen vinner hen. Byt försvarare efter varje omgång. Lobbpass över försvararen är inte tillåtna.\n\nÄr ni ojämnt många kan en vuxen fylla en plats, eller så kör en grupp 4 mot 1. Undvik 2 mot 1 – då finns inget val om vem som är fri.\n\nVariera: större triangel blir lättare för anfallet, mindre svårare. Stegring: bollen måste vidare inom två sekunder, uppmuntra studspass, eller kör 4 mot 2. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Läs av vem som är fri innan du passar."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd passningsfinter och pivotering för att få en ny vinkel – och undvik stegfel."
+    },
+    {
+      "id": "cp3",
+      "text": "Mottagaren: händerna redo och blicken på bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvararen: låg basketställning och armarna ute – gör dig stor."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till C medan X står i mitten. Alla räknar högt.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.23,
+          "endX": 0.72,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X stänger mot C och täcker vägen till A. C ser att B är fri och passar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.385
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.39,
+          "endX": 0.29,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar vidare till A innan X hinner stänga.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.33
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.37,
+          "endX": 0.38,
+          "endY": 0.38
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

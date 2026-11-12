@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 2,
+  "id": "d68bd4b0-0729-51b0-b2ce-a9d4f22626fc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Nudda mittlinjen – 3 mot 3 med hjälpförsvar",
+  "description": "Halvplan. Tre anfallare står vid mittlinjen: en i mitten med boll och en nära varje sidlinje. Tre försvarare står en och en halv meter närmare korgen, framför var sin anfallare.\n\nMittspelaren passar till någon av kanterna, som direkt attackerar korgen. Försvararen på den som fick bollen måste först springa och nudda mittlinjen innan hen får försvara. Då måste någon av de andra försvararna hjälpa på attacken – och de övriga roterar. Spela tills det blir poäng, försvaret vinner bollen eller bollen blir död.\n\nByten: anfall blir försvar och nya anfallare kommer in. Med många spelare går båda lagen av och byter roll nästa gång. Stegring: 2 poäng för skott från passning och 1 för avslut efter dribbling, eller dra av en poäng för varje passning efter den första. Flytta försvararna närmare mittlinjen för mindre övertag, längre bort för mer. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: attackera för att göra mål – det är det som tvingar fram hjälpen."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: när en kompis attackerar, rör dig dit du kan få bollen och skjuta."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: korta, tydliga rop – ”hjälp!” och ”boll!” – så alla vet vem som tar vem."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: sprinta ut i closeout mot den som får passen efter hjälpen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "defence",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passar till C. Z måste nu springa och nudda mittlinjen.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.34,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.44
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.44,
+          "endX": 0.83,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C attackerar korgen. Y kliver över och hjälper, Z jagar ikapp.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.375
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.35,
+          "endX": 0.8,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.41,
+          "endX": 0.76,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.31,
+          "endX": 0.62,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar till den fria B. X roterar mot B och lämnar A – vem tar A?",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.31,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.225
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.37
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.35,
+          "endX": 0.35,
+          "endY": 0.38
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

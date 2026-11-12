@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "id": "e16af73b-ea2e-5510-9c04-a6ca0435d622",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sprinta ut – 1 mot 1 efter passen",
+  "description": "Tre spelare per korg. Passaren står under korgen med bollen, försvararen står bredvid och håller en hand på bollen, och anfallaren börjar utanför trepoängslinjen. När passaren studsar bollen i golvet rör sig anfallaren in inom sitt skottavstånd, försvararen sprintar ut i closeout och passaren spelar bollen till anfallaren.\n\nNär anfallaren fångar är det 1 mot 1 fullt ut: skjut direkt eller attackera förbi. Passaren stannar vid korgen och hjälper till i försvar om anfallaren går hela vägen, så att det inte blir fria lay-ups. Är ni fler än tre per korg står resten i led bakom baslinjen: ledet blir passare, passaren blir försvar, försvaret blir anfall och anfallaren går till ledet.\n\nJustera avståndet för försvararen om hen alltid kommer för tidigt eller för sent – målet är en jämn blandning av skott och attacker. Stegring: ge mer poäng för skott direkt än efter dribbling, och lägg till returtagning.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: sprinta ut med händerna uppe för att ta bort skottet."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: sikta strax utanför ena axeln på anfallaren, inte rakt på – då slipper du foul och styr attacken."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall: fånga redo att skjuta, titta på korgen och läs försvararen samtidigt."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfall: bestäm dig snabbt och starta en attack med en snabb första dribbling."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C studsar bollen. A rör sig in mot korgen inom sitt skottavstånd.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.35,
+          "endX": 0.81,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passar till A. X sprintar ut i closeout.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.14,
+          "endX": 0.74,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.15,
+          "endX": 0.69,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Live 1 mot 1. Attackerar A hela vägen, kliver C fram och hjälper.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.28
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.26,
+          "endX": 0.55,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.15,
+          "endX": 0.43,
+          "endY": 0.19
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "e89b5cbf-0c22-50e6-a1ab-bc20fece26f6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Score, turn and defend the 2v1",
+  "description": "Three lines: two attacking lines in the corners at the baseline and one defending line at the right-hand sideline, where the first player has the ball. The defender drives to the basket for a lay-up, then turns and defends the other basket.\n\nOne attacker takes the rebound (or inbounds from behind the baseline if it went in) and passes to the other. They then play 2v1 at the far basket. The attack gets one shot only. The next group start about when the group before reaches half-court. Afterwards everyone jogs back along the sideline and moves to the next line.\n\nProgressions: points that drop with every extra pass (e.g. 3 points, minus 1 for each pass after the first), or points to the attackers for a basket and to the defender for a stop. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Did they score? Inbound quickly from behind the baseline."
+    },
+    {
+      "id": "cp2",
+      "text": "Without the ball: move out of the passing shadow so you can receive."
+    },
+    {
+      "id": "cp3",
+      "text": "Read the defender – if they step up to the ball, pass; if they stay back, finish."
+    },
+    {
+      "id": "cp4",
+      "text": "Defender: fake and gamble – you are outnumbered and must cause confusion."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X drives in from the sideline and lays it up. A and B wait in the corners.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.655
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.68,
+          "endX": 0.6,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.885,
+          "endX": 0.51,
+          "endY": 0.935
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B takes the ball and outlets to A. X sprints back to defend the far basket.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.865
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.85,
+          "endX": 0.24,
+          "endY": 0.75
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "X"
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.75,
+          "endX": 0.58,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A and B attack 2v1. A reads X and either finishes or passes to B.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.83
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.62
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.47
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.45,
+          "endX": 0.34,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.54,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.49,
+          "endX": 0.66,
+          "endY": 0.22
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

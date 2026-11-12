@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "id": "70e5293f-b048-54ba-949d-800bb97b4c96",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Driv in och servera skytten",
+  "description": "Spelarna går ihop två och två med en boll och fördelar sig på alla korgar. Båda startar utanför trepoängslinjen. Den med bollen attackerar in i 3-sekundersområdet, medan kompisen rör sig in till ett läge där hen gärna skjuter ifrån. Den som driver passar ut till skytten, och skytten avslutar direkt.\n\nSkytten tar sin egen retur, dribblar ut utanför trepoängslinjen och blir nästa som attackerar. Passaren går ut till trepoängslinjen och blir skytt. Så rullar det på utan stopp.\n\nStegring: passaren springer ut mot skytten efter passningen – antingen lugnt med låga händer (då skjuter man) eller hårt med händerna uppe (då tar man en studs förbi och skjuter). Fler par per korg gör det trängre och svårare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa hårt och rakt mot skyttens skotthand – helst direkt från dribblingen."
+    },
+    {
+      "id": "cp2",
+      "text": "Skytten visar händerna och är redo att skjuta innan bollen kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Landa i balans med böjda knän och gå rakt upp i skottet."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata med varandra – timing på passningen och koll på andra par."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A attackerar in i 3-sekundersområdet. B rör sig in inom sitt skottavstånd.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.4
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar ut till B och går själv ut till trepoängslinjen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.16,
+          "endX": 0.73,
+          "endY": 0.17
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.2,
+          "endX": 0.22,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.17,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter, tar returen och dribblar ut. Nu är det B som attackerar och A som skjuter.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.14,
+          "endX": 0.53,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

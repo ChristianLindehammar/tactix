@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "id": "101df283-aa79-54af-b6ae-3a23fd56ef8b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Mikan drill",
+  "description": "One player and one ball per basket. The player stands close to the basket and makes lay-ups without dribbling, alternating right and left sides. From the right side they finish with the right hand, catch the ball out of the net before it bounces, step across to the left and finish with the left hand. Keep going back and forth.\n\nGo for 30–60 seconds and count the makes, or see how many in a row you can hit. With more players than baskets, swap after each round.\n\nProgression: reverse lay-ups – step under the basket and finish on the far side with your back to the backboard.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball above your head the whole time – never drop it to your waist."
+    },
+    {
+      "id": "cp2",
+      "text": "One step and up: right hand from the right, left hand from the left."
+    },
+    {
+      "id": "cp3",
+      "text": "Use the backboard and finish softly."
+    },
+    {
+      "id": "cp4",
+      "text": "Catch the ball before it bounces and keep a steady rhythm."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 5,
+  "minPlayers": 1,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A makes a right-handed lay-up from the right side, then steps across to the left.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.09
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.08,
+          "endX": 0.53,
+          "endY": 0.06
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.21,
+          "endX": 0.4,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A finishes left-handed from the left side and steps back to the right.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.09
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.08,
+          "endX": 0.47,
+          "endY": 0.06
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.21,
+          "endX": 0.6,
+          "endY": 0.21,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Progression: A steps under the basket and makes a reverse lay-up on the other side.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.725,
+          "y": 0.115
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.105,
+          "endX": 0.54,
+          "endY": 0.06
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.15,
+          "endX": 0.58,
+          "endY": 0.13,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

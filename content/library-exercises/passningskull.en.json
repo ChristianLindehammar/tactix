@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "id": "d3a97f2d-77af-520c-bb6c-33946059aefa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Pass-or-get-tagged",
+  "description": "Players work in threes (fours if numbers don't divide) with one ball: two attackers and one tagger. For 45 seconds the tagger tries to tag the attackers as many times as possible, but only a player without the ball can be tagged. Each tag scores a point, and after every tag the tagger spins round once so the attackers can get away.\n\nThe attackers may move anywhere on the court but must act as soon as they catch the ball – pass or start dribbling. Standing still holding the ball gives the tagger a point. Switch roles after each round and let the players keep their own score.\n\nVariations: two spins or a jump instead of one spin changes how much time the attackers get. Longer rounds raise the physical load, and a push-up after each tag makes it tougher for the tagger.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep moving – if you stand still, you get tagged."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass to your team-mate, not just away from yourself."
+    },
+    {
+      "id": "cp3",
+      "text": "Start dribbling the moment you catch the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep dribbling until you pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X chases B, who has no ball. A dribbles and looks for B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.42,
+          "endX": 0.44,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.2,
+          "endX": 0.84,
+          "endY": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.38,
+          "endX": 0.68,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to B before X gets there. Now X chases A, who must move away.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.265
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.25,
+          "endX": 0.74,
+          "endY": 0.17
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.33,
+          "endX": 0.52,
+          "endY": 0.37
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.34,
+          "endX": 0.28,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

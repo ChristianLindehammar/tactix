@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 2,
+  "id": "6e55f003-0952-575b-86ae-ebb0f729a2db",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Skalförsvar 4 mot 4 – boll, neka, hjälp",
+  "description": "Halvplan. Fyra anfallare står runt trepoängslinjen – två på toppen och två på vingarna – och fyra försvarare matchar upp. Anfallarna passar runt bollen i lugnt tempo, utan att dribbla eller skjuta. På varje passning flyttar alla fyra försvarare samtidigt till rätt läge.\n\nDen som vaktar bollen sätter press. Den som vaktar en spelare en passning bort står i passningslinjen och nekar. Den som vaktar en spelare två passningar bort sjunker in i 3-sekundersområdet som hjälpförsvar. Alla pratar hela tiden: ”boll!”, ”neka!”, ”hjälp!”.\n\nStegring: tillåt drive mot korgen så att hjälpen måste kliva fram och de andra rotera, och sedan fritt spel till avslut. Försvaret får poäng för stopp, anfallet för mål. Byt anfall och försvar efter tre stopp. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Flytta medan bollen är i luften – inte när den redan är framme."
+    },
+    {
+      "id": "cp2",
+      "text": "Se både bollen och din spelare: peka på båda om det hjälper."
+    },
+    {
+      "id": "cp3",
+      "text": "Hjälpförsvaret står med en fot i 3-sekundersområdet och är redo att stoppa drive."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata högt och hela tiden – tyst försvar är ett dåligt försvar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "positioning",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till C. Z kliver ut på bollen och Y sjunker in mot hjälpläge.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.15,
+          "y": 0.37,
+          "endX": 0.1,
+          "endY": 0.31
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.19,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.15,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.19,
+          "endX": 0.19,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.52,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Nya lägen: Z på bollen, X nekar A, Y och W i hjälp. C passar tillbaka till A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.35,
+          "endX": 0.25,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Stegring: C driver längs baslinjen. W kliver över och hjälper, Y roterar ner mot D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.21,
+          "endX": 0.28,
+          "endY": 0.09,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.345,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.13,
+          "label": "W"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.12,
+          "endX": 0.4,
+          "endY": 0.09
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.25,
+          "endX": 0.72,
+          "endY": 0.23
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

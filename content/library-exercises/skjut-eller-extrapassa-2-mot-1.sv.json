@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "id": "dac4779b-3fcf-5263-8548-c2b459fcec01",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Skjut eller extrapassa – 2 mot 1",
+  "description": "Fyra spelare per korg. Två anfallare står inom sitt skottavstånd, ungefär tre meter från varandra. Passaren står under korgen med bollen och försvararen bredvid, med ryggen mot baslinjen och en hand på bollen.\n\nPassaren spelar till en av anfallarna och försvararen sprintar ut för att ta bort skottet. Anfallaren väljer: skjut direkt eller slå extrapasset till kompisen, som skjuter. Efter ett extrapass fortsätter försvararen och försöker störa även det skottet. Max en passning, och anfallarna får varken skottfinta eller attackera.\n\nLåt gruppen själv bestämma hur de roterar. Flytta passare och försvarare närmare eller längre bort om försvaret alltid är för snabbt eller för långsamt. Stegring: 3 poäng för skott direkt och 1 poäng efter extrapass.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: ta bort skottet till varje pris – utom med en foul. Aktiva händer, hoppa om det behövs."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: fånga redo att skjuta – händerna i skottläge, landa i balans."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall: bestäm dig direkt; ett snabbt beslut slår ett perfekt men sent."
+    },
+    {
+      "id": "cp4",
+      "text": "Extrapasset ska vara hårt och rakt i händerna, inte vid knäna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "shooting",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passar till A. X sprintar ut i closeout.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.1
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.13,
+          "endX": 0.32,
+          "endY": 0.19
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.14,
+          "endX": 0.42,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X tar bort skottet, så A slår extrapasset till B. X fortsätter mot B.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.27,
+          "endX": 0.65,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.19,
+          "endX": 0.58,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt medan X försöker störa.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.23,
+          "endX": 0.51,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

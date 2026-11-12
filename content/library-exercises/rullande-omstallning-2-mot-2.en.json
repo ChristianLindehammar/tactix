@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 2,
+  "id": "3520bfd4-eb78-581e-a918-d1e380af1926",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Rolling transition 2v2",
+  "description": "Two teams, each lined up in two lines in the corners at the baseline at opposite ends – a team defends the basket next to its own lines. Play starts 2v2 at one end.\n\nAfter a basket or a defensive rebound, the teams swap roles. The defenders pass to one of the two team-mates stepping in from the lines (a direct pass after a rebound, an inbound from behind the baseline after a basket), and the other player stepping in runs the fast break. The attackers sprint back to defend, and the old defenders go to the back of their lines. If only one attacker gets back, it becomes 2v1.\n\nProgressions: play first to three baskets or four-minute games with a score. With 12 or more players you can play 3v3. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Did they score? Inbound quickly from behind the baseline."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk within the team so the lines are filled and the next pair is ready."
+    },
+    {
+      "id": "cp3",
+      "text": "Attack quickly to find the advantage before the defence is set."
+    },
+    {
+      "id": "cp4",
+      "text": "Switch to defence straight after a shot or turnover – sprint back first, then look."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue A and B attack red X and Y. Red Z and W wait in their lines, blue C and D in theirs.",
+      "markers": [
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.1,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.09,
+          "label": "W"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.31,
+          "endX": 0.5,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.25,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X takes the rebound and passes to Z. W runs the fast break while A and B sprint back.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.165
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.18,
+          "endX": 0.24,
+          "endY": 0.26
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.31,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.35,
+          "endX": 0.8,
+          "endY": 0.68
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.45,
+          "endX": 0.4,
+          "endY": 0.72
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.41,
+          "endX": 0.6,
+          "endY": 0.72
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z and W attack A and B. X and Y have gone to the lines. C and D step in at the next change.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.1,
+          "y": 0.09,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.09,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "bz",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.61
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.63,
+          "endX": 0.34,
+          "endY": 0.78,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.62,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.67,
+          "endX": 0.74,
+          "endY": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.84,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

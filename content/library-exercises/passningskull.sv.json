@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "id": "ed845cc4-46f6-5fd0-b1cc-d104fbe0540e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Passningskull",
+  "description": "Spelarna går ihop tre och tre (fyra om det inte går jämnt ut) med en boll: två anfallare och en som tar. Under 45 sekunder försöker den som tar kulla anfallarna så många gånger som möjligt, men bara den som är utan boll får kullas. Varje kull ger en poäng, och efter varje kull snurrar den som tar ett varv så att anfallarna hinner sticka.\n\nAnfallarna får röra sig över hela planen men måste agera direkt när de får bollen – passa eller börja dribbla. Står man still med bollen får den som tar en poäng. Byt roll efter varje omgång och låt spelarna räkna själva.\n\nVariant: två varv eller ett hopp i stället för ett varv ändrar hur mycket tid anfallarna får. Längre omgångar ger mer fysisk belastning, och en armhävning efter varje kull gör det tuffare för den som tar.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör dig hela tiden – står du still blir du kullad."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa till kompisen, inte bort från dig själv."
+    },
+    {
+      "id": "cp3",
+      "text": "Börja dribbla direkt när du fångar bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Dribbla ända tills du passar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X jagar B, som är utan boll. A dribblar och letar efter B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.42,
+          "endX": 0.44,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.2,
+          "endX": 0.84,
+          "endY": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.38,
+          "endX": 0.68,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till B innan X hinner fram. Nu jagar X A, som måste röra sig bort.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.265
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.25,
+          "endX": 0.74,
+          "endY": 0.17
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.33,
+          "endX": 0.52,
+          "endY": 0.37
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.34,
+          "endX": 0.28,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

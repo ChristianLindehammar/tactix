@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "id": "dc76bbbd-b720-50e5-9d82-4199fa22714c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Swap partners – pass off the dribble",
+  "description": "Players pair up around the half-court line, one ball per pair. The player without the ball runs towards a basket; the player with the ball dribbles after them and passes while still dribbling. The receiver catches at full speed and finishes with a lay-up without stopping.\n\nAfter the finish, both players find a new partner. The shooter grabs the rebound, finds a player without a ball and dribbles towards the other basket. The passer finds a new partner who has a ball and runs towards the other basket to receive. The result is a continuous flow in both directions across the whole court.\n\nProgressions: alternate left- and right-hand lay-ups, pass only one-handed straight off the dribble, or play in silence – eye contact and hands only. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep dribbling until you pass – don't pick the ball up first."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass in front of your partner so they can keep their speed."
+    },
+    {
+      "id": "cp3",
+      "text": "Make eye contact and show your hands before cutting to the basket."
+    },
+    {
+      "id": "cp4",
+      "text": "Find a new partner quickly after the finish."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles towards the basket while B runs ahead. C and D do the same the other way.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.525
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.5,
+          "endX": 0.4,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.725
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.75,
+          "endX": 0.32,
+          "endY": 0.87,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.69,
+          "label": "D"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.74,
+          "endX": 0.66,
+          "endY": 0.86
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes off the dribble; B catches on the move and lays it up.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.33
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.31,
+          "endX": 0.57,
+          "endY": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.23,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.19,
+          "endX": 0.52,
+          "endY": 0.07
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.82,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.82
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B takes the rebound and dribbles to the other basket with new partner E. A looks for a new partner.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.18
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.2,
+          "endX": 0.38,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.35,
+          "endX": 0.72,
+          "endY": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.35,
+          "endX": 0.18,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "106ff5d5-3eeb-5165-8870-b7d957b89db8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "2 mot 2 med tränaren som joker",
+  "description": "Match 2 mot 2 på en korg. Tränaren står vid trepoängslinjen och är joker: hen kan passas av båda lagen och alltid passa tillbaka, men får aldrig skjuta. Jokern är alltid fri, så anfallet hittar lättare en passning. Tränaren kan också belöna bra saker, till exempel slå passningen till den som skär mot korgen, och styra tempot.\n\nByter bollen lag (retur, steal eller poäng) måste första passningen gå till jokern. Då hinner alla ställa om innan det nya anfallet får bollen. Byt lag ofta om ni har avbytare, och låt de som väntar heja.\n\nVariant på helplan: 3 mot 3 eller 4 mot 4 med en joker som följer med spelet fram och tillbaka. Stegring: bollen måste vidare inom två sekunder, spelarna utan boll måste röra sig, eller räkna poäng till tre.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Med boll: bestäm dig snabbt – passa, dribbla eller skjut."
+    },
+    {
+      "id": "cp2",
+      "text": "Utan boll: rör dig till en fri yta eller skär mot korgen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: stoppa spelaren med boll och lämna ingen fri under korgen."
+    },
+    {
+      "id": "cp4",
+      "text": "Tacka motståndarna efter matchen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till jokern. B skär mot korgen bakom Y.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.29,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.33,
+          "endX": 0.44,
+          "endY": 0.32
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.17,
+          "endX": 0.62,
+          "endY": 0.1,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Jokern belönar skärningen med en passning till B, som gör lay-up.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.25,
+          "endX": 0.61,
+          "endY": 0.16
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.09,
+          "endX": 0.52,
+          "endY": 0.06
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y tar returen och måste först passa till jokern. Under tiden sprider X ut sig och A och B blir försvar.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.13,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.23,
+          "endX": 0.15,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

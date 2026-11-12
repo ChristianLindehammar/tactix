@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 2,
+  "id": "87b7a1e3-83f9-5da4-bef3-6466bd5556cd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Fast-break waves – 3 v 2 into 2 v 1",
+  "description": "Full court. Two defenders wait at one basket, one close to the rim and one up at the free-throw line. Three attackers start from the other half: one in the middle with the ball and one in each outside lane. They push the break 3 v 2 and try to score quickly.\n\nWhen the 3 v 2 ends – score, miss or turnover – the two defenders take the ball and go 2 v 1 the other way. The player who took the shot in the 3 v 2 sprints back and defends alone. The other two attackers stay and become the new defenders at that basket.\n\nAfter the 2 v 1 those three go to the lines on the baseline, and the next group of three starts a new 3 v 2 against the two who are waiting. The drill never stops. Progression: a shot clock on each attack, or compete for the most baskets in five minutes.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Fill the lanes: stay wide near the sidelines and run all the way."
+    },
+    {
+      "id": "cp2",
+      "text": "Middle ball-handler draws a defender, then passes – decide before the free-throw line."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence in the 3 v 2: the top player stops the ball, the back player takes the first pass."
+    },
+    {
+      "id": "cp4",
+      "text": "The shooter turns at once and sprints back – you are the only defender."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles up the middle, B and C fill the lanes. X and Y wait.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.625,
+          "y": 0.64
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.61,
+          "endX": 0.52,
+          "endY": 0.47,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.6,
+          "endX": 0.14,
+          "endY": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.6,
+          "endX": 0.86,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A draws Y and passes to C. X goes out to C.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.41,
+          "endX": 0.81,
+          "endY": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.13,
+          "endX": 0.63,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C finishes. Y gets the rebound.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.23,
+          "endX": 0.51,
+          "endY": 0.07
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.19,
+          "endX": 0.46,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X and Y break 2 v 1 the other way against C. A and B stay as the new defenders.",
+      "markers": [
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.275,
+          "y": 0.12
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.15,
+          "endX": 0.24,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.34,
+          "endX": 0.58,
+          "endY": 0.68
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.36,
+          "endX": 0.8,
+          "endY": 0.74,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

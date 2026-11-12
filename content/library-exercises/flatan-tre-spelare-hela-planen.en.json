@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 2,
+  "id": "b13bcb3b-53e9-5a7f-97a6-a350f4972180",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Full-court weave for three",
+  "description": "Three lines at the baseline: one in the middle with a ball and one on each side. The middle player passes to one side and runs behind the receiver. The receiver passes on to the other side and runs behind that player, and so on. The ball must not hit the floor and nobody dribbles.\n\nThe group weaves up the whole court, and whoever gets the ball nearest the basket finishes with a lay-up. The other two fill the lanes and one takes the rebound. Come back the same way or along the sideline and join a new line.\n\nProgressions: no more than five passes before the lay-up, finish with the left hand, or have the two non-shooters turn and defend a 2v1 on the way back. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass and run behind the player you passed to."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass in front of the receiver – lead them into their stride."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep the width – the outside lanes stay close to the sideline."
+    },
+    {
+      "id": "cp4",
+      "text": "Catch and pass in one movement without dribbling."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to C and runs behind C. B runs up the left lane.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.825
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.86,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.81,
+          "endX": 0.66,
+          "endY": 0.75
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.81,
+          "endX": 0.69,
+          "endY": 0.71
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.91,
+          "endX": 0.9,
+          "endY": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.81,
+          "endX": 0.19,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passes to B and runs behind B.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.54,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.6,
+          "endX": 0.35,
+          "endY": 0.6
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.65,
+          "endX": 0.3,
+          "endY": 0.73
+        },
+        {
+          "id": "r1b",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.72,
+          "endX": 0.1,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes to A and runs behind A. A heads for the basket.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.41,
+          "endX": 0.74,
+          "endY": 0.38
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.47,
+          "endX": 0.9,
+          "endY": 0.45,
+          "bend": 0.08,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.33,
+          "endX": 0.64,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A finishes with a lay-up. B and C fill the lanes and take the rebound.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.11,
+          "endX": 0.505,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.28,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

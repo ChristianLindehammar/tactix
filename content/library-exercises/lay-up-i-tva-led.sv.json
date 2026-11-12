@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "2b67e65b-b4ee-5d11-9532-645b680510c4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Lay-up i två led",
+  "description": "Två led vid mittlinjen eller trepoängslinjen, ett på varje sida om korgen. Ledet till höger har bollarna och är skyttar, ledet till vänster tar returer.\n\nFörsta skytten dribblar in med högerhanden och gör lay-up från höger sida. Första i returledet springer in, tar bollen och passar ut till nästa skytt. Byt led efter varje försök: skytten går till returledet och returtagaren ställer sig sist bland skyttarna.\n\nEfter några minuter flyttar ni bollarna till vänster led och gör lay-ups med vänsterhanden från vänster sida. Stegring: två bollar i gång samtidigt, eller tävla om flest lay-ups i rad utan miss.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Höger sida: höger–vänster i stegen, upp från vänster fot och avsluta med högerhanden."
+    },
+    {
+      "id": "cp2",
+      "text": "Sikta på det övre hörnet av rutan på plattan."
+    },
+    {
+      "id": "cp3",
+      "text": "Returtagaren tar bollen innan den studsar och passar direkt till nästa."
+    },
+    {
+      "id": "cp4",
+      "text": "Håll fart men ta kontroll – hellre rätt steg än snabbt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar in från höger och gör lay-up med högerhanden. B springer in för att ta returen.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.29
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.26,
+          "endX": 0.63,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "sh1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.11,
+          "endX": 0.53,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.34,
+          "endX": 0.38,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar ut till nästa skytt. A springer till returledet.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.23
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.25,
+          "endX": 0.78,
+          "endY": 0.47
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.25,
+          "endX": 0.27,
+          "endY": 0.45,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Byt sida: nu dribblar skyttarna in från vänster och avslutar med vänsterhanden.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.29
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.26,
+          "endX": 0.37,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "sh2",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.11,
+          "endX": 0.47,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.34,
+          "endX": 0.62,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

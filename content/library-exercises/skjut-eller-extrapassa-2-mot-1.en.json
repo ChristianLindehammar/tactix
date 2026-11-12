@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "id": "392eca3f-177e-5d06-bc56-2124434159f0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Shoot or swing it – 2 v 1",
+  "description": "Four players per basket. Two attackers stand within shooting range, about three metres apart. The passer is under the basket with the ball and the defender stands beside them, back to the baseline, with a hand on the ball.\n\nThe passer feeds one of the attackers and the defender sprints out to take the shot away. The attacker decides: shoot straight away or make the extra pass to the partner, who shoots. After an extra pass the defender keeps going and tries to bother that shot too. One pass at most, and the attackers may not shot-fake or drive.\n\nLet each group decide how they rotate. Move the passer and defender closer or further away if the defence is always too fast or too slow. Progression: 3 points for a shot on the catch and 1 point after an extra pass.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defence: take the shot away at all costs – except by fouling. Active hands, jump if you need to."
+    },
+    {
+      "id": "cp2",
+      "text": "Offence: catch ready to shoot – hands in shooting position, land balanced."
+    },
+    {
+      "id": "cp3",
+      "text": "Offence: decide at once; a quick decision beats a perfect but late one."
+    },
+    {
+      "id": "cp4",
+      "text": "Make the extra pass hard and straight into the hands, not at the knees."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "shooting",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passes to A. X sprints out to close out.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.1
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.13,
+          "endX": 0.32,
+          "endY": 0.19
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.14,
+          "endX": 0.42,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X takes the shot away, so A swings it to B. X keeps going towards B.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.27,
+          "endX": 0.65,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.19,
+          "endX": 0.58,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots on the catch while X tries to contest.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.23,
+          "endX": 0.51,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

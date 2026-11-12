@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 2,
+  "id": "f71fd2c5-f437-5fda-9c23-ae20fdf787e1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Touch the line – 3 v 3 with help defence",
+  "description": "Half court. Three attackers start at the half-court line: one in the middle with the ball and one near each sideline. Three defenders stand about a metre and a half closer to the basket, each in front of an attacker.\n\nThe middle player passes to one of the wings, who attacks the basket straight away. The defender of the player who caught the ball must first run back and touch the half-court line before they can defend. That forces one of the other defenders to help on the drive – and the rest have to rotate. Play until a score, a defensive stop or a dead ball.\n\nRotation: offence goes to defence and new attackers come on. With a big group, both teams step off and swap roles next time. Progression: 2 points for a shot off a pass and 1 for a finish off the dribble, or minus one point for every pass after the first. Move the defenders closer to half court for less of an advantage, further away for more. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Offence: attack to score – that is what makes the defence help."
+    },
+    {
+      "id": "cp2",
+      "text": "Offence: when a team-mate drives, move to where you can catch and shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence: short, clear calls – \"help!\" and \"ball!\" – so everyone knows who has who."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: sprint out and close out on whoever catches the pass after the help."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "defence",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passes to C. Z must now run and touch the half-court line.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.34,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.44
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.44,
+          "endX": 0.83,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C attacks the basket. Y steps across to help, Z chases back.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.375
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.35,
+          "endX": 0.8,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.41,
+          "endX": 0.76,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.31,
+          "endX": 0.62,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes to the open B. X rotates to B and leaves A – who takes A?",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.31,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.225
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.37
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.35,
+          "endX": 0.35,
+          "endY": 0.38
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

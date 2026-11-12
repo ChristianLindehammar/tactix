@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "f51897a1-6ae2-5a65-b757-4294ce4120dc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "2 v 2 with the coach as joker",
+  "description": "A 2 v 2 game on one basket. The coach stands at the three-point line as a joker: both teams can pass to them and get the ball back, but the joker never shoots. The joker is always open, so the attack finds a pass more easily. The coach can also reward good habits, for example hitting a player who cuts to the basket, and control the tempo.\n\nWhen possession changes (rebound, steal or basket) the first pass must go to the joker. That gives everyone time to switch before the new attack gets the ball. Rotate teams often if there are subs, and let those waiting cheer.\n\nFull-court variant: 3 v 3 or 4 v 4 with a joker who runs up and down with play. Progressions: the ball must move within two seconds, players without the ball must keep moving, or play first to three.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "With the ball: decide quickly – pass, dribble or shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "Without the ball: move to open space or cut to the basket."
+    },
+    {
+      "id": "cp3",
+      "text": "Defence: stop the ball handler and leave nobody open under the basket."
+    },
+    {
+      "id": "cp4",
+      "text": "Thank your opponents after the game."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to the joker. B cuts to the basket behind Y.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.29,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.33,
+          "endX": 0.44,
+          "endY": 0.32
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.17,
+          "endX": 0.62,
+          "endY": 0.1,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The joker rewards the cut with a pass to B, who lays it up.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.25,
+          "endX": 0.61,
+          "endY": 0.16
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.09,
+          "endX": 0.52,
+          "endY": 0.06
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y takes the rebound and must pass to the joker first. Meanwhile X spreads out and A and B get back on defence.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "L"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.13,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.23,
+          "endX": 0.15,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

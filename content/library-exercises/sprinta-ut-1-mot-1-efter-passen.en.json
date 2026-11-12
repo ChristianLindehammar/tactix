@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "id": "9e0f22cc-c058-56d5-937b-5d57f0cf1cc3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sprint out – 1 v 1 off the catch",
+  "description": "Three players per basket. The passer stands under the basket with the ball, the defender stands next to them with a hand on the ball, and the attacker starts outside the three-point line. When the passer bounces the ball, the attacker moves in within shooting range, the defender sprints out to close out and the passer feeds the attacker.\n\nOn the catch it is a live 1 v 1: shoot straight away or attack past. The passer stays at the rim and helps if the attacker drives all the way, so there are no free lay-ups. With more than three per basket, the rest line up behind the baseline: line to passer, passer to defence, defence to offence, offence to the line.\n\nMove the defender closer or further away if they always arrive too early or too late – you want a mix of shots and drives. Progression: more points for a catch-and-shoot than a finish off the dribble, and add a rebound battle.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defence: sprint out with hands up to take the shot away."
+    },
+    {
+      "id": "cp2",
+      "text": "Defence: aim just outside one shoulder, not straight at the shooter – no foul, and you steer the drive."
+    },
+    {
+      "id": "cp3",
+      "text": "Offence: catch ready to shoot, eyes on the rim while you read the defender."
+    },
+    {
+      "id": "cp4",
+      "text": "Offence: decide quickly, and start a drive with a fast first dribble."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C bounces the ball. A moves in towards the basket within shooting range.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.35,
+          "endX": 0.81,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passes to A. X sprints out to close out.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.14,
+          "endX": 0.74,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.15,
+          "endX": 0.69,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Live 1 v 1. If A drives all the way, C steps up to help.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.28
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.26,
+          "endX": 0.55,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.15,
+          "endX": 0.43,
+          "endY": 0.19
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 2,
+  "id": "2dd37cfc-383d-55c5-8bc5-59a028999eec",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "4 v 4 shell – ball, deny, help",
+  "description": "Half court. Four attackers spread round the three-point line – two at the top and two on the wings – and four defenders match up. The attackers move the ball round at a steady pace, no dribbling or shooting. On every pass all four defenders move to their new spot together.\n\nThe on-ball defender pressures. The defender one pass away stands in the passing lane and denies. The defender two passes away sinks into the paint as the help. Everyone talks the whole time: \"ball!\", \"deny!\", \"help!\".\n\nProgression: allow drives so the help has to step up and the others rotate, then play it live to a finish. The defence scores for stops, the offence for baskets. Switch offence and defence after three stops. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move while the ball is in the air – not once it has arrived."
+    },
+    {
+      "id": "cp2",
+      "text": "See the ball and your player: point at both if it helps."
+    },
+    {
+      "id": "cp3",
+      "text": "The help defender has a foot in the paint, ready to stop a drive."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk loudly and all the time – a quiet defence is a bad defence."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "positioning",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to C. Z steps out on the ball and Y sinks towards help.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.15,
+          "y": 0.37,
+          "endX": 0.1,
+          "endY": 0.31
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.19,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.15,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.19,
+          "endX": 0.19,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.52,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "New spots: Z on the ball, X denies A, Y and W in help. C passes back to A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.35,
+          "endX": 0.25,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Progression: C drives the baseline. W slides across to help, Y rotates down to D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.21,
+          "endX": 0.28,
+          "endY": 0.09,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.345,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.13,
+          "label": "W"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.12,
+          "endX": 0.4,
+          "endY": 0.09
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.25,
+          "endX": 0.72,
+          "endY": 0.23
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

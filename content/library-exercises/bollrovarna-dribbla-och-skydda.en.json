@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "e8413580-0e24-54dd-84ea-82d153cba973",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Ball raiders – dribble and shield",
+  "description": "Everyone stays inside a half court (full court if the group is big). About two out of three players have a ball and dribble freely. The rest are raiders without a ball who try to poke away or steal a ball from someone who is dribbling.\n\nIf a raider wins a ball, they keep it and start dribbling, and the player who lost it becomes a new raider. A new raider may not go straight back after the player who just took the ball. No grabbing or slapping arms – that is a foul.\n\nVary it: more raiders means higher tempo and more pressure, a smaller area means more traffic. Progression: ask players to try crossovers between the legs or behind the back when a raider comes.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Eyes up – spot the raiders before they arrive."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep dribbling when it gets crowded. Do not pick the ball up (double dribble)."
+    },
+    {
+      "id": "cp3",
+      "text": "Shield the ball with your body and free arm, without pushing."
+    },
+    {
+      "id": "cp4",
+      "text": "Raiders: go for the ball, not the arm."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B and C dribble. Raiders X and Y hunt the balls.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.23
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.27,
+          "endX": 0.34,
+          "endY": 0.33,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.26,
+          "endX": 0.72,
+          "endY": 0.39,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.39
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.43,
+          "endX": 0.64,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.16,
+          "endX": 0.29,
+          "endY": 0.21
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.38,
+          "endX": 0.36,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X has stolen the ball from A and dribbles on (now blue). A is the new raider (now red) and looks for someone else.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.21,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.36
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.4,
+          "endX": 0.3,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.33
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.37,
+          "endX": 0.86,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.43
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.43,
+          "endX": 0.54,
+          "endY": 0.44
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

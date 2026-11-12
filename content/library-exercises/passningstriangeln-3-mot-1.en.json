@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "id": "88df1da5-5911-5be4-b01f-94974baec1ca",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Passing triangle 3 v 1",
+  "description": "Groups of four with one ball. Three players form a triangle 4–5 metres apart and the fourth stands in the middle as defender. The triangle passes it round and counts the passes out loud. Ten in a row wins, but if the defender wins the ball, they win. Change defender after every round. Lob passes over the defender are not allowed.\n\nWith uneven numbers an adult can fill a spot, or one group plays 4 v 1. Avoid 2 v 1 – there is no choice about who is open.\n\nVary it: a bigger triangle is easier for the passers, a smaller one harder. Progressions: the ball must move within two seconds, encourage bounce passes, or play 4 v 2. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Read who is open before you pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Use pass fakes and pivots to find a new angle – and avoid travelling."
+    },
+    {
+      "id": "cp3",
+      "text": "Receiver: hands ready and eyes on the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Defender: low stance and arms out – make yourself big."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to C while X stands in the middle. Everyone counts out loud.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.23,
+          "endX": 0.72,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X closes out on C and blocks the lane to A. C sees B is open and passes.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.385
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.39,
+          "endX": 0.29,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B moves it on to A before X can close out.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.33
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.37,
+          "endX": 0.38,
+          "endY": 0.38
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

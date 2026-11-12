@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 2,
+  "id": "797eb2dd-394d-5b07-902a-0924323fd8bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Konracet 1 mot 1",
+  "description": "Ställ två koner nära sidlinjen på var sida om korgen, strax innanför mittlinjen och en halvmeter från varandra. Spelarna går ihop i par med en boll. Anfallaren står bakom konen närmast mittlinjen, försvararen framför den andra konen med ansiktet mot anfallaren.\n\nFörsvararen startar genom att runda konerna åt ena hållet. Så fort hen rör sig går anfallaren åt andra hållet, attackerar korgen så snabbt som möjligt och avslutar. Försvararen jagar ikapp och försöker störa avslutet. Paret byter roller och stannar på samma sida; paret på andra sidan kör när första paret är klart. Byt sida halvvägs.\n\nStegring: koner längre isär ger anfallaren mer försprång, närmare ihop ger mer kontakt. Låt försvararen finta, ge extrapoäng för avslut med svaga handen eller spela först till fem. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: håll farten hela vägen in i avslutet."
+    },
+    {
+      "id": "cp2",
+      "text": "Dribbla och avsluta med handen längst bort från försvararen."
+    },
+    {
+      "id": "cp3",
+      "text": "Släpp bollen mjukt mot plattan – sikta på övre hörnet av rutan."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: spring ikapp, ta en plats framför anfallaren och håll händerna höga utan att fälla."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X rundar konerna på insidan. A går direkt åt andra hållet längs sidlinjen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.48
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.48
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.59,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.59
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.59,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.59
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.56,
+          "endX": 0.11,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.34,
+          "endX": 0.36,
+          "endY": 0.5,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver mot korgen medan X jagar ikapp.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.48
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.48
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.59,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.59
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.11,
+          "y": 0.32
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.11,
+          "y": 0.29,
+          "endX": 0.3,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.45,
+          "endX": 0.47,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A lägger upp med handen bort från X, som försöker störa. C och Y kör sedan på andra sidan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.48
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.48
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.59,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.59
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.095,
+          "endX": 0.5,
+          "endY": 0.056
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

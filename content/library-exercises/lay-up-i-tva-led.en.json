@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "1b895ffb-be6a-5b96-a69a-1d53364e05e9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Two-line lay-ups",
+  "description": "Two lines at half court or the three-point line, one on each side of the basket. The right-hand line has the balls and shoots, the left-hand line rebounds.\n\nThe first shooter dribbles in with the right hand and makes a lay-up from the right side. The first rebounder runs in, grabs the ball and passes out to the next shooter. Switch lines after every go: the shooter joins the rebound line and the rebounder joins the back of the shooting line.\n\nAfter a few minutes move the balls to the left-hand line and shoot left-handed lay-ups from the left side. Progressions: two balls going at once, or compete for the most lay-ups in a row without a miss.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Right side: right–left steps, take off from the left foot and finish with the right hand."
+    },
+    {
+      "id": "cp2",
+      "text": "Aim for the top corner of the square on the backboard."
+    },
+    {
+      "id": "cp3",
+      "text": "Rebounder: catch it before it bounces and pass straight to the next shooter."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep the speed but stay in control – right steps beat fast steps."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles in from the right and lays it up with the right hand. B runs in for the rebound.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.29
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.26,
+          "endX": 0.63,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "sh1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.11,
+          "endX": 0.53,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.34,
+          "endX": 0.38,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes out to the next shooter. A runs to the rebound line.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.23
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.25,
+          "endX": 0.78,
+          "endY": 0.47
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.25,
+          "endX": 0.27,
+          "endY": 0.45,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Switch sides: now the shooters come in from the left and finish with the left hand.",
+      "markers": [
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5
+        },
+        {
+          "id": "s3",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.58
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.29
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.26,
+          "endX": 0.37,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "sh2",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.11,
+          "endX": 0.47,
+          "endY": 0.06
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.34,
+          "endX": 0.62,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

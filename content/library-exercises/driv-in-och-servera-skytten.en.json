@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "id": "4d6f0581-4827-5b23-a734-99af30f32981",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Drive and serve the shooter",
+  "description": "Players pair up with one ball and spread out over all the baskets. Both start outside the three-point line. The player with the ball drives into the paint while the partner moves in to a spot they like shooting from. The driver kicks the ball out to the shooter, who shoots straight away.\n\nThe shooter gets their own rebound, dribbles out beyond the arc and becomes the next driver. The passer drifts out to the arc and becomes the shooter. Keep it going without stopping.\n\nProgression: after the pass, the passer runs out at the shooter – either under control with low hands (so shoot) or hard with hands up (so take one dribble past and then shoot). More pairs per basket makes it busier and harder. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass hard and straight to the shooting hand – off the dribble if you can."
+    },
+    {
+      "id": "cp2",
+      "text": "Shooter shows a target with both hands before the ball arrives."
+    },
+    {
+      "id": "cp3",
+      "text": "Land balanced with bent knees and go straight up into the shot."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk to each other – time the pass and watch out for the other pairs."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A drives into the paint. B moves in within shooting range.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.4
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A kicks the ball out to B and moves out to the three-point line.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.16,
+          "endX": 0.73,
+          "endY": 0.17
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.2,
+          "endX": 0.22,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.17,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots, rebounds and dribbles out. Now B drives and A is the shooter.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.14,
+          "endX": 0.53,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

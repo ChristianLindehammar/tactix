@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "id": "ddeee314-efb7-5658-a824-5bc67254bf2a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Byt kompis – passa ur dribblingen",
+  "description": "Alla går ihop två och två runt mittlinjen, en boll per par. Den utan boll springer mot en korg, den med boll dribblar efter och passar medan hen fortfarande dribblar. Mottagaren tar emot i full fart och avslutar med lay-up utan att stanna.\n\nEfter avslutet byter båda partner. Skytten tar returen, letar upp en ny spelare utan boll och dribblar mot den andra korgen. Passaren hittar en ny kompis med boll och springer mot andra korgen för att ta emot. Det blir ett rullande flöde åt båda hållen över hela planen.\n\nStegring: varannan lay-up med vänster och höger hand, passa bara med en hand direkt ur dribblingen, eller spela helt utan att prata – bara ögonkontakt och händer. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribbla ända tills du passar – plocka inte upp bollen först."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa framför kompisen så att hen kan behålla farten."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta ögonkontakt och visa händer innan du skär mot korgen."
+    },
+    {
+      "id": "cp4",
+      "text": "Hitta en ny kompis snabbt efter avslutet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar mot korgen medan B springer före. C och D gör samma sak åt andra hållet.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.525
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.5,
+          "endX": 0.4,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.69,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.725
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.75,
+          "endX": 0.32,
+          "endY": 0.87,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.69,
+          "label": "D"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.74,
+          "endX": 0.66,
+          "endY": 0.86
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar ur dribblingen, B tar emot i farten och lägger upp.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.33
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.31,
+          "endX": 0.57,
+          "endY": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.23,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.19,
+          "endX": 0.52,
+          "endY": 0.07
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.82,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.82
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar returen och dribblar mot andra korgen med nya kompisen E. A letar upp en ny partner.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.18
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.2,
+          "endX": 0.38,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.35,
+          "endX": 0.72,
+          "endY": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.35,
+          "endX": 0.18,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

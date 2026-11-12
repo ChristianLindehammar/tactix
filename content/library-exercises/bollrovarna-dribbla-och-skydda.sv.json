@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "b60d5bf4-47f2-585c-9cb1-ad0c12e93427",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Bollrövarna – dribbla och skydda bollen",
+  "description": "Alla håller sig på en halvplan (helplan om ni är många). Ungefär två av tre spelare har en boll och dribblar fritt. Resten är bollrövare utan boll och försöker peta bort eller sno en boll från någon som dribblar.\n\nLyckas rövaren behåller hen bollen och börjar dribbla, och den som tappade bollen blir ny rövare. Ny rövare får inte gå direkt tillbaka på den som just tog bollen. Ingen tackling eller slag på armarna – det är foul.\n\nVariera: fler rövare ger högre tempo och mer press, en mindre yta ger mer trängsel. Stegring: be spelarna pröva handbyten mellan benen eller bakom ryggen när en rövare kommer.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blicken uppe – se rövarna innan de är framme."
+    },
+    {
+      "id": "cp2",
+      "text": "Fortsätt dribbla när det blir trångt. Plocka inte upp bollen (dubbeldribbling)."
+    },
+    {
+      "id": "cp3",
+      "text": "Skydda bollen med kroppen och den fria armen, utan att knuffa."
+    },
+    {
+      "id": "cp4",
+      "text": "Rövare: ta bollen, inte armen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B och C dribblar. Rövarna X och Y jagar bollarna.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.23
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.27,
+          "endX": 0.34,
+          "endY": 0.33,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.22
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.26,
+          "endX": 0.72,
+          "endY": 0.39,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.39
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.43,
+          "endX": 0.64,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.16,
+          "endX": 0.29,
+          "endY": 0.21
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.38,
+          "endX": 0.36,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X har snott bollen från A och dribblar vidare (nu blå). A är ny rövare (nu röd) och letar efter någon annan.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.21,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.36
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.4,
+          "endX": 0.3,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.33
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.37,
+          "endX": 0.86,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.43
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.43,
+          "endX": 0.54,
+          "endY": 0.44
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
