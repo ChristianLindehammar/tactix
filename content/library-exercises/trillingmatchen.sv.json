@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 2,
+  "id": "08cb06da-8c6d-4edb-9164-21bc7a564ade",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Trillingmatchen – tre 1 mot 1 samtidigt",
+  "description": "Tre separata 1 mot 1-matcher spelas samtidigt på en liten plan med två mål, ungefär 15 × 10 meter (bilden är inte skalenlig – planen är ritad större för att spelarna ska synas). Varje par har en egen boll. Den som har bollen anfaller, och vid bollvinst byter paren roller direkt. Eftersom alla tre duellerna pågår på samma yta blir det trångt och rörigt, och spelarna får hela tiden nya 1 mot 1-lägen att lösa.\n\nAnpassa planens storlek: en mindre yta ger mindre tid och mer duellspel, en större yta ger mer tid men övningen blir lätt mest att driva boll. Med fler spelare bygger man två planer bredvid varandra.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: finta åt ena hållet och gå åt det andra – följ upp finten med en tempoväxling."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: håll kroppen mellan motståndaren och bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvar: stå rättvänd mellan anfallaren och målet, och styr ut motståndaren mot sidan."
+    },
+    {
+      "id": "cp4",
+      "text": "Fråga spelarna: vad behöver man tänka på i anfall 1 mot 1 – och i försvar?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tre par på samma plan. Den med boll anfaller uppåt.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.78
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.22
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.51
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.63
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.59
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.51
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Alla tre anfallarna utmanar sin försvarare samtidigt: finta, driv förbi, öka tempot.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.78
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.22
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.51
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.63
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.59
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.51
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.69
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.58,
+          "endX": 0.28,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.55,
+          "endX": 0.58,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.58,
+          "endX": 0.72,
+          "endY": 0.41,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Den som kommer förbi avslutar. Vinner försvararen bollen anfaller hen direkt åt andra hållet.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.78
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.22
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.37
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.48
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.35
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.41
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.6
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.46
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.35
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.53
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.24
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.63,
+          "endX": 0.5,
+          "endY": 0.74,
+          "bend": 0.03,
+          "waves": 2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "id": "ff258cc2-3675-4df9-9524-ed6bc10ae64e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Finishing 1v1 + passer",
+  "description": "Finishing practice in the middle of the attacking zone. One passer stands in each corner of the half (A–D), and an attacker faces a defender in front of goal. The passers play one ball each in turn, so the attacker gets four shots per round.\n\nThe attacker has to get open for each pass and find a way to a shot. After passing, the passer becomes an extra option – the attacker can shoot or play it back. The defender tries to stop the shots.\n\nDefensive levels: 1) a coach defends, 2) a player without a stick, 3) a player with a stick starting by the goal, 4) a player with a stick starting next to the attacker. Change attacker after each round.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Get open at the right moment – move away, then come towards the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Take the ball facing the goal so the shot can come quickly."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up: shoot if you have the chance, otherwise use the passer who has moved."
+    },
+    {
+      "id": "cp4",
+      "text": "Passers give a new option straight after their pass."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passer in every corner. The attacker and the defender start in front of goal.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes. The attacker comes to the ball while A moves up along the boards as a new option.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.45
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.42,
+          "endY": 0.38
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.37,
+          "endX": 0.47,
+          "endY": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.41,
+          "endX": 0.13,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The attacker shoots – or plays A if the defender closes the shot.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.28,
+          "endX": 0.48,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "The next pass comes from B, then C and D. Four shots per round.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.11,
+          "endX": 0.42,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.47,
+          "endY": 0.32
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

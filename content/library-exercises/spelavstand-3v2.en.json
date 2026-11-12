@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "48a8d94e-b77f-4c10-ad21-3699f6aa74dd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Spacing 3v2",
+  "description": "Three attackers (A, B, C) start on the centre line and attack two defenders (D, E) who start by the goal. The leader (L) starts each attack by passing to one of the attackers.\n\nThe attackers look for space where they can receive from the ball carrier – both in depth and to the side – and work the ball to a free player in a scoring position. If there is no pass forward they keep the ball in the team and dare to take on a defender to open space for each other. If the defenders win the ball, they counter the other way. The attack ends when the trio scores.\n\nLine the players up at each starting point and rotate after each attack: A → D → B → E → C → A. A smaller area makes it harder; on half a court you can run two pitches side by side.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spread out – keep enough distance that one defender cannot cover two attackers."
+    },
+    {
+      "id": "cp2",
+      "text": "Show yourself to the ball carrier, both in depth and to the side."
+    },
+    {
+      "id": "cp3",
+      "text": "Ball carrier: take on a defender to draw them in, then pass to the free player."
+    },
+    {
+      "id": "cp4",
+      "text": "Look for the player who is on their own – that is where the shot is."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "passing"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Starting position. The leader passes to one of the attackers – here B.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.18,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.18,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.35
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.36,
+          "endX": 0.83,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B carries the ball forward while A and C look for space. D and E step up.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.18,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.18,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.47
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.44,
+          "endX": 0.84,
+          "endY": 0.31,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.44,
+          "endX": 0.64,
+          "endY": 0.23
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.44,
+          "endX": 0.25,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.2,
+          "endX": 0.47,
+          "endY": 0.25,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.21,
+          "endX": 0.76,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "E presses B and D covers the middle. A is free – pass and shoot.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "pd",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "pe",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "lead",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.4,
+          "endX": 0.32,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.28,
+          "endX": 0.45,
+          "endY": 0.11
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

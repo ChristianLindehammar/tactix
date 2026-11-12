@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "id": "4f4ea60b-4672-48ca-abb5-54adab2dc349",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Avslut 1 mot 1 + passare",
+  "description": "Avslutsträning centralt i anfallszonen. En passare står i varje hörn av planhalvan (A–D) och en anfallare möter en försvarare framför mål. Passarna slår en passning var i tur och ordning, så anfallaren får fyra avslut per runda.\n\nAnfallaren ska göra sig spelbar för varje passning och hitta en väg till avslut. Efter sin passning blir passaren ett extra alternativ – anfallaren kan avsluta själv eller spela tillbaka. Försvararen försöker förhindra avsluten.\n\nSvårighetsgrad för försvaret: 1) en ledare försvarar, 2) spelare utan klubba, 3) spelare med klubba som startar vid målet, 4) spelare med klubba som startar bredvid anfallaren. Byt anfallare efter varje runda.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör dig spelbar i rätt ögonblick – rör dig bort och kom sedan emot bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot bollen med riktning mot mål så att avslutet kan gå snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta upp: avsluta om du har läget, annars spela passaren som rört sig."
+    },
+    {
+      "id": "cp4",
+      "text": "Passaren ska direkt efter sin passning ge ett nytt alternativ."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Passare i alla fyra hörn. Anfallaren och försvararen startar framför mål.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar. Anfallaren kommer emot bollen och A rör sig fram längs sargen som nytt alternativ.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.45
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.42,
+          "endY": 0.38
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.37,
+          "endX": 0.47,
+          "endY": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.41,
+          "endX": 0.13,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Anfallaren avslutar – eller spelar A om försvararen stänger skottläget.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.28,
+          "endX": 0.48,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Nästa passning kommer från B, sedan C och D. Fyra avslut per runda.",
+      "markers": [
+        {
+          "id": "pa",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "pd",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "att",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "def",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.11,
+          "endX": 0.42,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.47,
+          "endY": 0.32
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
