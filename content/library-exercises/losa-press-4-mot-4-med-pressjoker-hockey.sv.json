@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "id": "be0bee57-81da-58d2-99bc-6379c26f550b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Lösa press – 4 mot 4 med pressjoker",
+  "description": "Spel 4 mot 4 med målvakter på hela rinken. Dessutom finns en defensiv joker (J) som alltid pressar laget som har pucken – laget med puck har alltså fem motståndare att lösa. Ledaren sätter igång pucken från ett lags defensiva hörn, och laget ska spela sig ur pressen på den lilla ytan och snabbt vända spelet.\n\nVinner jokern pucken slår den ut pucken över sargen. Vid spelavbrott startar ledaren om från det andra lagets defensiva hörn.\n\nSpela gärna med tre lag, där det tredje laget står för jokern och byter in en ny joker vid varje start. Se till att alla lag får vara joker lika många gånger. Övningen kan också användas för att träna ett aggressivt presspel i offensiv zon. I bilden är jokern röd med J, men den pressar båda lagen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spela er ur pressen – inga långa puckar på chans."
+    },
+    {
+      "id": "cp2",
+      "text": "Prata med varandra: vem är fri, var finns ytan?"
+    },
+    {
+      "id": "cp3",
+      "text": "Rör er för att erbjuda korta passningsvägar nära puckföraren."
+    },
+    {
+      "id": "cp4",
+      "text": "Vänd spelet snabbt när pressen dras åt ena sidan."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 15,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren sätter igång pucken till A i blåts defensiva hörn. Jokern och E pressar direkt.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.821,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.65,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.703,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.468,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.778,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.154,
+          "y": 0.92
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.164,
+          "y": 0.915,
+          "endX": 0.2,
+          "endY": 0.89
+        },
+        {
+          "id": "rj",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.799,
+          "endX": 0.18,
+          "endY": 0.832
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.832,
+          "endX": 0.28,
+          "endY": 0.853
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A är pressad av två spelare och spelar kort till C, som kommer emot.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.917,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.671,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.725,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.489,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.81,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.274,
+          "y": 0.81
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.284,
+          "y": 0.799,
+          "endX": 0.35,
+          "endY": 0.741
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Pressen dras mot C. C vänder spelet direkt till B på andra sidan.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.799,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.671,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.725,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.489,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.418,
+          "y": 0.768
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.428,
+          "y": 0.779,
+          "endX": 0.75,
+          "endY": 0.832
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B har yta och åker upp med pucken längs sargen. D åker djupt.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.821,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.682,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.757,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.703,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.767,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.799,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.807,
+          "y": 0.786
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.807,
+          "y": 0.775,
+          "endX": 0.82,
+          "endY": 0.521,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.575,
+          "endX": 0.67,
+          "endY": 0.393
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Om jokern i stället vinner pucken: den slås ut över sargen. Nästa start från röds defensiva hörn.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.821,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.65,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.703,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.468,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.821,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.869
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.09,
+          "y": 0.869,
+          "endX": 0.02,
+          "endY": 0.81
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

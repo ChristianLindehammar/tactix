@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 2,
+  "id": "77633eb3-e67e-52c0-a414-d7d5f01ae7fb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "2 mot 2 med hörnjokrar",
+  "description": "Spel 2 mot 2 mot ett mål med målvakt, på en planhalva. I varje hörn av ytan står en passningsjoker (J) – fyra totalt. Jokrarna spelar alltid med laget som har bollen och försöker spela vidare på ett tillslag. Båda lagen anfaller samma mål.\n\nAnvänd jokrarna för att skapa snabba kombinationer: passa, rör dig direkt och ta emot bollen igen i en farligare yta. Väggspel med jokrarna flyttar försvararna och öppnar vägar fram till avslut. Vinner ett lag bollen måste det först spela via en joker innan det får göra mål – det uppmuntrar till anfall genom passningsspel i stället för att gå rakt mot mål.\n\nByt utespelare och jokrar efter några minuter. I bilden är jokrarna blå med J, men de hör inte till något lag. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa och gå – rör dig direkt efter passningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Gör dig spelbar för jokern i en yta där du kan avsluta direkt."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd övertaget: med jokrarna är ni alltid fler än försvararna."
+    },
+    {
+      "id": "cp4",
+      "text": "Jokrarna: spela på ett tillslag och titta upp innan bollen kommer."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar jokern i hörnet och går direkt mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.351,
+          "y": 0.429
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.341,
+          "y": 0.439,
+          "endX": 0.13,
+          "endY": 0.46
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.35,
+          "endX": 0.33,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Jokern spelar tillbaka på ett tillslag till A – ett väggspel.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.415
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.415,
+          "endX": 0.3,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar vidare till jokern vid mållinjen. B rör sig in framför mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.281,
+          "y": 0.161
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.271,
+          "y": 0.151,
+          "endX": 0.13,
+          "endY": 0.1
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.31,
+          "endX": 0.57,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Jokern spelar direkt in till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.125
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.135,
+          "endX": 0.54,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "B avslutar direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.548,
+          "y": 0.216
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.538,
+          "y": 0.206,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "Målvakten räddar och röd D vinner returen. Rött måste spela via en joker innan de får göra mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.468,
+          "y": 0.261
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.488,
+          "y": 0.271,
+          "endX": 0.87,
+          "endY": 0.44
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.34,
+          "endX": 0.58,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

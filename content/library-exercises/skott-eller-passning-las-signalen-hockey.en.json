@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 2,
+  "id": "2aefc5b4-a6b8-5753-afb8-742ac6d50fc9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Shoot or pass – read the signal",
+  "description": "Two lines at the centre line, one on each side, and a goal with a goalkeeper. Beside the goal, one on each side, stands a signal player (S) – a player or a coach.\n\nThe first player in one line skates in through the middle and gets a pass from the other line. Take the puck on the forehand and curve out towards the side at speed – away from the signal player you may pass to – with your eyes up on that signal player.\n\nThe signal player shows what to do:\n• Butt end on the ice – go straight for goal and shoot yourself, no pass.\n• Blade on the ice – pass diagonally to the signal player on the other side and keep going towards goal on your side. The signal player plays the puck back across to you for a first-time shot, or shoots.\n\nThe goalkeeper cannot see the signal and does not know whether the shot comes straight away, after a cross pass or from the signal player. The cross pass also makes the goalkeeper move sideways – which makes the drill a challenge for the goalkeeper too.\n\nSwitch lines after each turn and alternate sides so both signal players are used. Make it harder for more advanced players by giving the signal later. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Eyes up – watch the signal, not the puck."
+    },
+    {
+      "id": "cp2",
+      "text": "Threaten forward with the puck under control, as fast as you can manage."
+    },
+    {
+      "id": "cp3",
+      "text": "Decide quickly, then carry it out as well as you can."
+    },
+    {
+      "id": "cp4",
+      "text": "On a pass: keep going towards goal on your side and be ready to shoot first time."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates in through the middle and gets a pass from B in the other line.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.564,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.805,
+          "y": 0.588
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.543,
+          "endX": 0.44,
+          "endY": 0.414
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.795,
+          "y": 0.577,
+          "endX": 0.48,
+          "endY": 0.436
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A takes it on the forehand and curves out towards the side, away from the signal player S on the other side – eyes on S.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.404,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.509,
+          "y": 0.351
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.509,
+          "y": 0.373,
+          "endX": 0.76,
+          "endY": 0.286,
+          "bend": 0.03,
+          "waves": 4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Signal 1 – butt end on the ice: A goes straight for goal and shoots. Turn over.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.245
+        },
+        {
+          "id": "s1x",
+          "type": "arrow-dashed",
+          "x": 0.685,
+          "y": 0.235,
+          "endX": 0.55,
+          "endY": 0.072
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Signal 2 (instead of step 3) – blade on the ice: A passes diagonally to S and keeps going towards goal.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.245
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.675,
+          "y": 0.235,
+          "endX": 0.24,
+          "endY": 0.083
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.254,
+          "endX": 0.68,
+          "endY": 0.179
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "S plays the puck back across to A – or shoots.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.11
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.12,
+          "endX": 0.64,
+          "endY": 0.179
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "A shoots first time. The next turn starts from the other side.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.105
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.064,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.628
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.703
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.703
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.778
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.628,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.631,
+          "y": 0.137
+        },
+        {
+          "id": "s2x",
+          "type": "arrow-dashed",
+          "x": 0.616,
+          "y": 0.132,
+          "endX": 0.55,
+          "endY": 0.072
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 2,
+  "id": "231e8c88-f418-5580-9df3-4cb246c2f58b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "2v2 with corner jokers",
+  "description": "Play 2v2 at one goal with a goalkeeper, on half a court. In each corner of the area stands a passing joker (J) – four in all. The jokers always play with the team that has the ball and try to move it on first time. Both teams attack the same goal.\n\nUse the jokers to build quick combinations: pass, move straight away and get the ball back in a more dangerous spot. Wall passes with the jokers shift the defenders and open routes to a shot. A team that wins the ball must play through a joker before it may score – this pushes the players to attack through passing instead of running straight at goal.\n\nSwap court players and jokers after a few minutes. In the picture the jokers are blue with a J, but they do not belong to either team. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass and move – go straight after your pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Get open for the joker in a spot where you can shoot first time."
+    },
+    {
+      "id": "cp3",
+      "text": "Use the overload: with the jokers you always outnumber the defenders."
+    },
+    {
+      "id": "cp4",
+      "text": "Jokers: play first time and look up before the ball arrives."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting",
+    "positioning"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to the joker in the corner and heads straight for goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.351,
+          "y": 0.429
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.341,
+          "y": 0.439,
+          "endX": 0.13,
+          "endY": 0.46
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.35,
+          "endX": 0.33,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The joker plays it back first time to A – a wall pass.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.415
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.415,
+          "endX": 0.3,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A moves it on to the joker at the goal line. B moves in front of goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.281,
+          "y": 0.161
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.271,
+          "y": 0.151,
+          "endX": 0.13,
+          "endY": 0.1
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.31,
+          "endX": 0.57,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "The joker plays it straight in to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.125
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.135,
+          "endX": 0.54,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.548,
+          "y": 0.216
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.538,
+          "y": 0.206,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "The goalkeeper saves and red D wins the rebound. Red must play through a joker before they may score.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.08,
+          "label": "J"
+        },
+        {
+          "id": "j3",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "j4",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.31,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.468,
+          "y": 0.261
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.488,
+          "y": 0.271,
+          "endX": 0.87,
+          "endY": 0.44
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.34,
+          "endX": 0.58,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

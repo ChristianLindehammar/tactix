@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "id": "55f03b66-fb90-5510-a415-53bebfb57b36",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Beat the press – 4v4 with a pressing joker",
+  "description": "Play 4v4 with goalkeepers on a full rink. On top of that there is a defensive joker (J) who always presses the team with the puck – so the team in possession has five opponents to beat. The leader starts play from one team's defensive corner, and that team has to play its way out of the pressure in the tight space and switch play quickly.\n\nIf the joker wins the puck, they hit it out over the boards. At every stoppage the leader restarts from the other team's defensive corner.\n\nIdeally play with three teams, where the third team provides the joker and sends in a new joker at each restart. Make sure every team gets the joker role equally often. The drill can also be used to practise aggressive pressing in the offensive zone. In the picture the joker is red with a J, but they press both teams. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Play your way out of the pressure – no long hopeful pucks."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk to each other: who is free, where is the space?"
+    },
+    {
+      "id": "cp3",
+      "text": "Move to offer short passing options close to the player on the puck."
+    },
+    {
+      "id": "cp4",
+      "text": "Switch play quickly when the pressure is drawn to one side."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 15,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The leader plays the puck to A in blue's defensive corner. The joker and E press straight away.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.821,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.65,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.703,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.468,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.778,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.154,
+          "y": 0.92
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.164,
+          "y": 0.915,
+          "endX": 0.2,
+          "endY": 0.89
+        },
+        {
+          "id": "rj",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.799,
+          "endX": 0.18,
+          "endY": 0.832
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.832,
+          "endX": 0.28,
+          "endY": 0.853
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A is pressed by two players and plays short to C, who comes towards the puck.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.917,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.671,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.725,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.489,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.81,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.274,
+          "y": 0.81
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.284,
+          "y": 0.799,
+          "endX": 0.35,
+          "endY": 0.741
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The pressure follows C. C switches play first time to B on the other side.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.799,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.671,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.725,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.489,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.418,
+          "y": 0.768
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.428,
+          "y": 0.779,
+          "endX": 0.75,
+          "endY": 0.832
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B has space and skates with the puck up the side. D skates deep.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.821,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.682,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.757,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.703,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.767,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.799,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.807,
+          "y": 0.786
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.807,
+          "y": 0.775,
+          "endX": 0.82,
+          "endY": 0.521,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.575,
+          "endX": 0.67,
+          "endY": 0.393
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "If the joker wins the puck instead: it is hit out over the boards. The next start is from red's defensive corner.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.896
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.104
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.957,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.864,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.842,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.714,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.607,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.821,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.65,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.703,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.468,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.821,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.869
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.09,
+          "y": 0.869,
+          "endX": 0.02,
+          "endY": 0.81
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

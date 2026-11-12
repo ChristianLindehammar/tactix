@@ -170,6 +170,12 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | tva-mot-ett-inspel-och-rollbyte-hockey | hockey | Hockey version of tva-mot-ett-inspel-och-rollbyte (same source) | 2026-11-12 |
 | aktivera-tredje-spelaren | floorball | Text description pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, duellspel, avslut, spelbarhet). "Tar hen ett direkt avslut" read as the third player playing the ball on first time and joining; the waiting line behind each back is our interpretation | 2026-11-12 |
 | aktivera-tredje-spelaren-hockey | hockey | Hockey version of aktivera-tredje-spelaren (same source) | 2026-11-12 |
+| tva-mot-tva-med-hornjokrar | floorball | Text description pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, etablerat försvarsspel, duellspel, avslut, spelbarhet). Half-court area, goalkeeper and the example sequence are our interpretation | 2026-11-12 |
+| tva-mot-tva-med-hornjokrar-hockey | hockey | Hockey version of tva-mot-tva-med-hornjokrar (same source) | 2026-11-12 |
+| skott-eller-passning-las-signalen | floorball | Text description and a video still pasted by the coach (source not named; tags: etablerat anfallsspel, komma till avslut, avslut, bollbehandling). Line positions at the centre line, a signal player on each side of the goal and alternating sides are our interpretation | 2026-11-12 |
+| skott-eller-passning-las-signalen-hockey | hockey | Hockey version of skott-eller-passning-las-signalen (same source) | 2026-11-12 |
+| losa-press-4-mot-4-med-pressjoker | floorball | Text description and video transcript pasted by the coach (source not named; tags: etablerat anfallsspel, spelbarhet, offensiva beslut, pressa). Full court with goalkeepers, one joker at a time and the example sequence are our interpretation | 2026-11-12 |
+| losa-press-4-mot-4-med-pressjoker-hockey | hockey | Hockey version of losa-press-4-mot-4-med-pressjoker (same source) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 

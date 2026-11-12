@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 2,
+  "id": "274eea3f-c092-523b-ba10-70ce06d54acf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Lösa press – 4 mot 4 med pressjoker",
+  "description": "Spel 4 mot 4 med målvakter på hel plan. Dessutom finns en defensiv joker (J) som alltid pressar laget som har bollen – laget med boll har alltså fem motståndare att lösa. Ledaren sätter igång bollen från ett lags defensiva hörn, och laget ska spela sig ur pressen på den lilla ytan och snabbt vända spelet.\n\nVinner jokern bollen slår den ut bollen över sargen. Vid spelavbrott startar ledaren om från det andra lagets defensiva hörn.\n\nSpela gärna med tre lag, där det tredje laget står för jokern och byter in en ny joker vid varje start. Se till att alla lag får vara joker lika många gånger. Övningen kan också användas för att träna ett aggressivt presspel i offensiv zon. I bilden är jokern röd med J, men den pressar båda lagen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spela er ur pressen – inga långa bollar på chans."
+    },
+    {
+      "id": "cp2",
+      "text": "Prata med varandra: vem är fri, var finns ytan?"
+    },
+    {
+      "id": "cp3",
+      "text": "Rör er för att erbjuda korta passningsvägar nära bollhållaren."
+    },
+    {
+      "id": "cp4",
+      "text": "Vänd spelet snabbt när pressen dras åt ena sidan."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 20,
+  "minPlayers": 15,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren sätter igång bollen till A i blåts defensiva hörn. Jokern och E pressar direkt.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.94,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.8,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.64,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.69,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.47,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.76,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.154,
+          "y": 0.893
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.164,
+          "y": 0.888,
+          "endX": 0.2,
+          "endY": 0.865
+        },
+        {
+          "id": "rj",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.78,
+          "endX": 0.18,
+          "endY": 0.81
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.81,
+          "endX": 0.28,
+          "endY": 0.83
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A är pressad av två spelare och spelar kort till C, som kommer emot.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.94,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.89,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.66,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.71,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.49,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.79,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.274,
+          "y": 0.79
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.284,
+          "y": 0.78,
+          "endX": 0.35,
+          "endY": 0.725
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Pressen dras mot C. C vänder spelet direkt till B på andra sidan.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.94,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.78,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.66,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.71,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.49,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.65,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.418,
+          "y": 0.751
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.428,
+          "y": 0.761,
+          "endX": 0.75,
+          "endY": 0.81
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B har yta och driver upp längs kanten. D löper djupt.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.94,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.67,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.69,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.75,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.78,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.807,
+          "y": 0.767
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.807,
+          "y": 0.757,
+          "endX": 0.82,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.57,
+          "endX": 0.67,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "Om jokern i stället vinner bollen: den slås ut över sargen. Nästa start från röds defensiva hörn.",
+      "markers": [
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.94,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.8,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.64,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.69,
+          "label": "G"
+        },
+        {
+          "id": "h",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.47,
+          "label": "H"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.8,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.845
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.09,
+          "y": 0.845,
+          "endX": 0.02,
+          "endY": 0.79
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

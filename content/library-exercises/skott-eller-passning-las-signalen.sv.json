@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 2,
+  "id": "f14b90c9-9bcd-5012-871a-0fe7c0238b47",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Skott eller passning – läs signalen",
+  "description": "Två led vid mittlinjen, ett på var sida, och ett mål med målvakt. Vid sidan av målet, på var sin sida, står en signalspelare (S) – en spelare eller en ledare.\n\nDen första i ena ledet springer in centralt och får en passning från det andra ledet. Ta emot bollen på forehand och båga ut mot kanten i hög fart – bort från den signalspelare du kan komma att passa – med blicken uppe mot signalspelaren.\n\nSignalspelaren visar vad som gäller:\n• Knoppen i golvet – gå direkt på mål och skjut själv, utan passning.\n• Bladet i golvet – passa snett över till signalspelaren på andra sidan och fortsätt mot mål på din sida. Signalspelaren spelar bollen tvärs tillbaka till dig för ett direktavslut, eller avslutar själv.\n\nMålvakten ser inte signalen och vet inte om skottet kommer direkt, efter en tvärpassning eller från signalspelaren. Tvärpassningen tvingar dessutom målvakten att förflytta sig i sidled – det gör övningen utmanande även för målvakten.\n\nByt led efter varje tur och växla sida så att båda signalspelarna används. Gör det svårare för de som kommit längre genom att visa signalen senare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blicken uppe – titta på signalen, inte på bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Hota framåt med bollen under kontroll, i så hög fart du klarar."
+    },
+    {
+      "id": "cp3",
+      "text": "Bestäm dig snabbt och utför sedan med så hög kvalitet som möjligt."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid passning: fortsätt mot mål på din sida och var redo för ett direktavslut."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer in centralt och får en passning från B i det andra ledet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.805,
+          "y": 0.582
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.54,
+          "endX": 0.44,
+          "endY": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.795,
+          "y": 0.572,
+          "endX": 0.48,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar emot på forehand och bågar ut mot kanten, bort från signalspelaren S på andra sidan – blicken på S.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.41,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.509,
+          "y": 0.361
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.509,
+          "y": 0.381,
+          "endX": 0.76,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Signal 1 – knoppen i golvet: A går direkt på mål och skjuter. Turen är klar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.262
+        },
+        {
+          "id": "s1x",
+          "type": "arrow-dashed",
+          "x": 0.685,
+          "y": 0.252,
+          "endX": 0.55,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Signal 2 (i stället för steg 3) – bladet i golvet: A passar snett över till S och fortsätter mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.262
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.675,
+          "y": 0.252,
+          "endX": 0.24,
+          "endY": 0.11
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.27,
+          "endX": 0.68,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "note": "S spelar bollen tvärs över till A – eller avslutar själv.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.135
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.145,
+          "endX": 0.64,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "note": "A avslutar direkt. Nästa tur startar från andra sidan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.09,
+          "label": "S"
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.69
+        },
+        {
+          "id": "q3",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.69
+        },
+        {
+          "id": "q4",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.631,
+          "y": 0.161
+        },
+        {
+          "id": "s2x",
+          "type": "arrow-dashed",
+          "x": 0.616,
+          "y": 0.156,
+          "endX": 0.55,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
