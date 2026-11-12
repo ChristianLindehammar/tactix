@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "id": "7b0fcf6c-f76f-5980-bc3c-eb5116fce537",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Basketbollen – passa bara till den som är fri",
+  "description": "En grupp spelare rör sig fritt inne i en ruta, och det finns färre puckar än spelare. Den som har en puck ska passa till någon som inte redan har en puck och inte heller är på väg att få en. Då måste alla titta upp innan de passar. Kör några minuter i taget.\n\nRäkna ungefär tio kvadratmeter per spelare, till exempel 10 × 10 meter för tio spelare. Visa vad ytan betyder genom att låta en grupp spela väldigt trångt och en annan på en stor yta. Tappar gruppen fokus: räkna passningar som går till någon som redan har en puck – lägst poäng vinner. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp innan du passar – vem är fri?"
+    },
+    {
+      "id": "cp2",
+      "text": "Utan puck: rör dig dit där du kan få en passning och visa dig."
+    },
+    {
+      "id": "cp3",
+      "text": "En passning är ett samtal – det behövs både en som passar och en som tar emot."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B passar till C och D, som inte har någon puck. E väntar – ingen är fri åt hen just nu.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.586
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.586
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.286,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.479,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.372,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.372,
+          "label": "F"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.35
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.532
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.436
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.34,
+          "endX": 0.57,
+          "endY": 0.297
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.521,
+          "endX": 0.45,
+          "endY": 0.489
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Nu är A, B och F fria. C, D och E passar vidare till dem.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.586
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.82,
+          "y": 0.586
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.286,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.479,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.372,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.372,
+          "label": "F"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.35
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.543
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.436
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.35,
+          "endX": 0.35,
+          "endY": 0.297
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.543,
+          "endX": 0.65,
+          "endY": 0.489
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.425,
+          "endX": 0.69,
+          "endY": 0.382
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

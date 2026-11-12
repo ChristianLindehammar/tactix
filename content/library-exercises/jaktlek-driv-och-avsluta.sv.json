@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "id": "0452913d-def4-596e-b34b-da75927951e6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Jaktlek – driv bollen och avsluta",
+  "description": "Två led i ena hörnet. Ledet med bollar står en bit framför det andra ledet, som är jägare. På signal driver den första bollföraren mot målet i andra änden och försöker avsluta, och jägaren försöker hinna ikapp och ta bollen. Byt led efter varje tur.\n\nAnpassa avståndet mellan leden så att både bollföraren och jägaren har en chans. Börja utan målvakt så att det inte blir för svårt. Lägg märke till hur spelarna löser uppgiften olika beroende på vem som jagar dem. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv bollen fritt – med en eller två händer, på forehand eller backhand."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta upp mot målet innan du skjuter."
+    },
+    {
+      "id": "cp3",
+      "text": "Jägare: spring på bollförarens klubbsida."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot andra målet. Jägaren B startar samtidigt.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.18
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.3
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.33,
+          "endX": 0.4,
+          "endY": 0.7,
+          "bend": 0.02,
+          "waves": 5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.09,
+          "y": 0.18,
+          "endX": 0.3,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A avslutar innan B hinner fram.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.18
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.78
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.8,
+          "endX": 0.5,
+          "endY": 0.905
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.68,
+          "endX": 0.4,
+          "endY": 0.75
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

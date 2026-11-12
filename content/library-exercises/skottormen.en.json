@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "id": "6e242b18-98c8-5b80-9006-6f374e7f1890",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The shooting snake – curve in and shoot",
+  "description": "The players stand in a line in one corner, and a pile of balls lies in the other corner at the same end. The first player carries the ball in a curve in towards goal and shoots. Then they run to the other corner, take a new ball and do the same in the other direction. The next in line starts once the one ahead has shot.\n\nShooting without opposition but with a bit of pressure. Choose the shot for each round: drag shot, wrist shot or backhand. Smart, accurate shots usually score more than hard ones. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "How do you aim? Look at the goal, not the ball, just before you shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "How hard do you need to shoot? Placement beats power."
+    },
+    {
+      "id": "cp3",
+      "text": "Shoot on the move – do not stop before the shot."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball in a curve in towards goal.",
+      "markers": [
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.28
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.191,
+          "y": 0.156
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.211,
+          "y": 0.186,
+          "endX": 0.37,
+          "endY": 0.27,
+          "bend": -0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A shoots and runs across to the other corner.",
+      "markers": [
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.28
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.397,
+          "y": 0.244
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.417,
+          "y": 0.224,
+          "endX": 0.46,
+          "endY": 0.1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.32,
+          "endX": 0.84,
+          "endY": 0.16,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A takes a new ball and curves in from the other side. The next in line gets ready.",
+      "markers": [
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.22
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.17
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.2,
+          "endX": 0.63,
+          "endY": 0.27,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.26,
+          "endX": 0.54,
+          "endY": 0.1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.32,
+          "endX": 0.1,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

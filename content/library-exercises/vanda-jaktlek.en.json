@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "id": "72e51544-656f-5508-bbad-99715cd3ef96",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Turn and go home – 1v1 chase game",
+  "description": "A narrow rectangle, about 10 × 3 metres, with two lines side by side at one short end. One line has balls, the other chases. A cone two to three metres in marks where the carrier may turn at the earliest and where the chaser may take the ball at the earliest. Carrier A heads for the far end, turns after the cone and tries to carry the ball back to the start. Chaser B tries to stop the turn and ideally win the ball. Then both swap to the other line.\n\nPoints for A: 1 point for keeping the ball until the turn, 1 point for turning and reaching the end with the ball. Points for B: 2 points for winning the ball before A turns, 1 point for stopping A from reaching the end. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Which way is easiest to turn? Try both."
+    },
+    {
+      "id": "cp2",
+      "text": "Turn with your body between the chaser and the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Chaser: when is it hardest for the player turning?"
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball past the cone. B sets off after them.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.74
+        },
+        {
+          "id": "mid",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.21
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.33
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.36,
+          "endX": 0.45,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.31,
+          "endX": 0.55,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns and heads back to the start. B tries to close the way.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.74
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.74
+        },
+        {
+          "id": "mid",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.21
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.59,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.53,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.65
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.64,
+          "endX": 0.42,
+          "endY": 0.37,
+          "bend": 0.06,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.56,
+          "endX": 0.5,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

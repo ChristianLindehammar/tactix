@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "id": "94db58ae-0e56-57fb-b0a9-212e3826a55c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "British Bulldogs – ta dig över utan att tappa bollen",
+  "description": "Alla spelare står på ena sidan med var sin boll. En jagare – bulldoggen – står i mitten. På signal driver alla över till andra sidan, och bulldoggen försöker ta så många bollar som möjligt. Den som blir av med bollen blir också bulldogg. Ju fler som tas, desto svårare blir det att komma över.\n\nSvårighetsgrader: 1) Bulldoggarna har klubba och tar bollen. 2) Alla anfallare har även en svans (en väst i byxlinningen) som fungerar som ett extraliv – tappar du bollen men har svansen kvar får du en ny boll. 3) Bulldoggarna har ingen klubba och behöver bara ta svansen. Anpassa ytan efter antalet spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp – leta efter luckan mellan bulldoggarna."
+    },
+    {
+      "id": "cp2",
+      "text": "Byt riktning och tempo när en bulldogg kommer nära."
+    },
+    {
+      "id": "cp3",
+      "text": "Skydda bollen med kroppen om du blir pressad."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 25,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "På signal driver alla över till andra sidan. Bulldoggen går mot C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.203,
+          "y": 0.17
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.203,
+          "y": 0.26
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.203,
+          "y": 0.35
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.203,
+          "y": 0.44
+        },
+        {
+          "id": "dog",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.3
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.233,
+          "y": 0.17,
+          "endX": 0.86,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.233,
+          "y": 0.26,
+          "endX": 0.86,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.233,
+          "y": 0.44,
+          "endX": 0.86,
+          "endY": 0.43,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C har tappat bollen och är nu också bulldogg. Nästa signal: tillbaka igen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "dog",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.3
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.17
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.26
+        },
+        {
+          "id": "bd2",
+          "type": "ball",
+          "x": 0.797,
+          "y": 0.44
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "m5",
+          "type": "arrow-solid",
+          "x": 0.767,
+          "y": 0.17,
+          "endX": 0.16,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m6",
+          "type": "arrow-solid",
+          "x": 0.767,
+          "y": 0.44,
+          "endX": 0.16,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -132,6 +132,36 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | malvakt-forflyttning-passningar-hockey | hockey | Hockey version of malvakt-forflyttning-passningar (same source) | 2026-11-12 |
 | malvakt-siddled-hockey | hockey | Hockey version of malvakt-siddled (same source) | 2026-11-12 |
 | titta-upp-rakna-fingrar-hockey | hockey | Hockey version of titta-upp-rakna-fingrar (same source) | 2026-11-12 |
+| basketbollen | floorball | SIBF exercise sheet "Blå - Passa/Mottagning - Basketbollen" (utbildning.sisuforlag.se, exerciseId=40355) | 2026-11-12 |
+| evighetsstafett | floorball | SIBF exercise sheet "Evighetsstafett" (utbildning.sisuforlag.se, exerciseId=26372) | 2026-11-12 |
+| ett-mot-ett-genom-porten | floorball | SIBF exercise sheet "Grön - 360 kontroll - 1v1" (utbildning.sisuforlag.se, exerciseId=39125) | 2026-11-12 |
+| bollkull | floorball | SIBF exercise sheet "Grön - 360 kontroll - Innebandykull" (utbildning.sisuforlag.se, exerciseId=39124) | 2026-11-12 |
+| british-bulldogs | floorball | SIBF exercise sheet "Grön - Driva - British Bulldogs" (utbildning.sisuforlag.se, exerciseId=29893) | 2026-11-12 |
+| gatloppet | floorball | SIBF exercise sheet "Grön - Driva - Gatloppet" (utbildning.sisuforlag.se, exerciseId=39048) | 2026-11-12 |
+| jaktlek-driv-och-avsluta | floorball | SIBF exercise sheet "Grön - Driva - Jaktlek" (utbildning.sisuforlag.se, exerciseId=38885) | 2026-11-12 |
+| vanda-jaktlek | floorball | SIBF exercise sheet "Grön - Färdighetsövning - Vända (Jaktlek)" (utbildning.sisuforlag.se, exerciseId=65718) | 2026-11-12 |
+| passningsleken | floorball | SIBF exercise sheet "Grön - Passa - Passningsleken" (utbildning.sisuforlag.se, exerciseId=39208) | 2026-11-12 |
+| skottormen | floorball | SIBF exercise sheet "Grön - Skott - Skottormen" (utbildning.sisuforlag.se, exerciseId=39221) | 2026-11-12 |
+| vandningen-hej | floorball | SIBF exercise sheet "Grön - Vända - Vändningen" (utbildning.sisuforlag.se, exerciseId=39127) | 2026-11-12 |
+| vagg-till-vagg | floorball | SIBF exercise sheet "Grön, Blå - Vända - Vägg till vägg" (utbildning.sisuforlag.se, exerciseId=39157) | 2026-11-12 |
+| hjulet-passningar | floorball | SIBF exercise sheet "Passning under rörelse - hjul" (utbildning.sisuforlag.se, exerciseId=26370) | 2026-11-12 |
+| possession-tva-zoner | floorball | SIBF exercise sheet "Spelövning - Passa (Possession)" (utbildning.sisuforlag.se, exerciseId=31974) | 2026-11-12 |
+| alla-mot-alla-finta | floorball | SIBF exercise sheet "Utmana, finta och dribbla (Alla mot alla)" (utbildning.sisuforlag.se, exerciseId=63408) | 2026-11-12 |
+| basketbollen-hockey | hockey | Hockey version of basketbollen (same source) | 2026-11-12 |
+| evighetsstafett-hockey | hockey | Hockey version of evighetsstafett (same source) | 2026-11-12 |
+| ett-mot-ett-genom-porten-hockey | hockey | Hockey version of ett-mot-ett-genom-porten (same source) | 2026-11-12 |
+| puckkull-hockey | hockey | Hockey version of bollkull (same source) | 2026-11-12 |
+| british-bulldogs-hockey | hockey | Hockey version of british-bulldogs (same source) | 2026-11-12 |
+| gatloppet-hockey | hockey | Hockey version of gatloppet (same source) | 2026-11-12 |
+| jaktlek-och-avslut-hockey | hockey | Hockey version of jaktlek-driv-och-avsluta (same source) | 2026-11-12 |
+| vanda-jaktlek-hockey | hockey | Hockey version of vanda-jaktlek (same source) | 2026-11-12 |
+| passningsleken-hockey | hockey | Hockey version of passningsleken (same source) | 2026-11-12 |
+| skottormen-hockey | hockey | Hockey version of skottormen (same source) | 2026-11-12 |
+| vandningen-hej-hockey | hockey | Hockey version of vandningen-hej (same source) | 2026-11-12 |
+| vagg-till-vagg-hockey | hockey | Hockey version of vagg-till-vagg (same source) | 2026-11-12 |
+| hjulet-passningar-hockey | hockey | Hockey version of hjulet-passningar (same source) | 2026-11-12 |
+| possession-tva-zoner-hockey | hockey | Hockey version of possession-tva-zoner (same source) | 2026-11-12 |
+| alla-mot-alla-finta-hockey | hockey | Hockey version of alla-mot-alla-finta (same source) | 2026-11-12 |
 
 ## Leader drawn as a player "L"
 

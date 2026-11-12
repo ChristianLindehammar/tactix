@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "id": "74b9c689-1ed6-5496-ad21-17fbbd8a08ab",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Vänd och driv hem – jaktlek 1 mot 1",
+  "description": "En smal rektangel, ungefär 10 × 3 meter, med två led bredvid varandra vid ena kortsidan. Ena ledet har puckar, andra ledet jagar. En kon två–tre meter in markerar var puckföraren tidigast får vända och var jagaren tidigast får ta pucken. Puckföraren A driver mot andra kortsidan, vänder efter konen och försöker driva tillbaka till start. Jagaren B försöker hindra vändningen och helst vinna pucken. Sedan byter båda till det andra ledet.\n\nPoäng för A: 1 poäng om hen behåller pucken fram till vändningen, 1 poäng om hen vänder och når kortsidan med pucken. Poäng för B: 2 poäng för att vinna pucken innan A vänder, 1 poäng för att stoppa A från att nå kortsidan. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vilket håll är lättast att vända åt? Prova båda."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd med kroppen mellan jagaren och pucken."
+    },
+    {
+      "id": "cp3",
+      "text": "Jagare: när är det svårast för den som vänder?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver förbi konen. B startar och jagar.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.307
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.307
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.757
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.757
+        },
+        {
+          "id": "mid",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.425
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.19
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.19
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.254,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.318
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.575,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.297,
+          "endX": 0.55,
+          "endY": 0.521
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder och driver tillbaka mot start. B försöker stänga vägen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.307
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.307
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.34,
+          "y": 0.757
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.757
+        },
+        {
+          "id": "mid",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.425
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.43,
+          "y": 0.19
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.19
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.596,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.532,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.66
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.65,
+          "endX": 0.42,
+          "endY": 0.361,
+          "bend": 0.06,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.564,
+          "endX": 0.5,
+          "endY": 0.628
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

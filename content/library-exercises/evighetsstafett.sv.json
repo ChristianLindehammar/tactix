@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "id": "13a2aba7-5d5c-54ad-b5d6-514a787da4d4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Evighetsstafett – jaga laget framför",
+  "description": "Fyra koner bildar en ruta på ungefär 10 × 10 meter. Dela in spelarna i två till fyra lag, och varje lag ställer sig vid ett eget hörn. Den första i varje lag driver bollen ett varv runt rutan, utanför konerna, och lämnar över till nästa i laget med en high five. Sedan ställer hen sig sist.\n\nStafetten fortsätter tills någon har hunnit ikapp löparen från ett annat lag, eller efter ett bestämt antal varv. Korta, intensiva ruscher med vila emellan – bra för att orka hålla tempot länge. Kör utan boll om ni bara vill träna löpning. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full fart hela varvet – vilan kommer i ledet."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll bollen nära i svängarna runt konerna."
+    },
+    {
+      "id": "cp3",
+      "text": "Nästa i laget: stå redo med klubban i golvet."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "conditioning",
+    "ballControl"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 6,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B startar samtidigt från varsitt hörn och driver bollen runt rutan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.27
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.27
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.53
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.14
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.08
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.66
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.72
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.303,
+          "y": 0.2
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.697,
+          "y": 0.6
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.2,
+          "endX": 0.72,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.6,
+          "endX": 0.28,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Efter ett helt varv: high five med nästa i laget och ställ dig sist. Hinner du ikapp den framför vinner ditt lag.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.27
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.27
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.27,
+          "y": 0.53
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.73,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.14
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.08
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.66
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.72
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.81,
+          "y": 0.36
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.44
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.39,
+          "endX": 0.81,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.41,
+          "endX": 0.19,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

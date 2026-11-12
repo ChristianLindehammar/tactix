@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "id": "f3c9adb1-58c5-51af-a92f-6ae61f5d694d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Chase game – carry the ball and shoot",
+  "description": "Two lines in one corner. The line with balls stands a little ahead of the other line, the hunters. On the signal the first ball carrier heads for the goal at the other end and tries to shoot, and the hunter tries to catch up and win the ball. Swap lines after each turn.\n\nSet the gap between the lines so both the carrier and the hunter have a chance. Start without a goalkeeper so it does not get too hard. Notice how the players solve the task differently depending on who is chasing them. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Carry the ball freely – one or two hands, forehand or backhand."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up at the goal before you shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "Hunter: run on the carrier's stick side."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A heads for the far goal. Hunter B starts at the same time.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.18
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.3
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.33,
+          "endX": 0.4,
+          "endY": 0.7,
+          "bend": 0.02,
+          "waves": 5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.09,
+          "y": 0.18,
+          "endX": 0.3,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A shoots before B gets there.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.18
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.78
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.8,
+          "endX": 0.5,
+          "endY": 0.905
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.68,
+          "endX": 0.4,
+          "endY": 0.75
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

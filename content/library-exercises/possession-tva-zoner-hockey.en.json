@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "id": "8c02223e-3507-51d7-8885-7aab54136770",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Keep the puck – 3v1 in two zones",
+  "description": "Two teams and two zones next to each other. Start with 3v1 in one zone: the blue team passes to keep the puck, and one red player tries to win it. The other reds wait in the second zone.\n\nWhen the red player wins the puck, they carry it over to their zone, where their team-mates are waiting. The blue team then sends one player across as the new defender, and now it is red who keeps the puck. Adjust the numbers and the size of the zones to the level. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move so the player on the puck always has two options."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass past the defender, not straight at them."
+    },
+    {
+      "id": "cp3",
+      "text": "Whoever wins the puck: get over to your zone quickly."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B and C play 3v1 against D. A passes around D to C.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.115
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.115
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.457
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.457
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.543
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.543
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.885
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.885
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.693,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.735,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.233,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.393,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.275,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.341,
+          "y": 0.255
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.361,
+          "y": 0.287,
+          "endX": 0.46,
+          "endY": 0.361
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.307,
+          "endX": 0.47,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D wins the puck and skates it over to their zone.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.115
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.115
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.457
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.457
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.543
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.543
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.885
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.885
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.693,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.735,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.233,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.372,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.414,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.479
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.511,
+          "endX": 0.5,
+          "endY": 0.628,
+          "bend": 0.03,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Now red keeps the puck. B goes across as the new defender.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.115
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.115
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.457
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.457
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.543
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.543
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.885
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.885
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.693,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.735,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.233,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.372,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.628,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.412,
+          "y": 0.659
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.382,
+          "y": 0.67,
+          "endX": 0.34,
+          "endY": 0.682
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.286,
+          "endX": 0.6,
+          "endY": 0.607
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "id": "617751f1-d448-5fc2-b87d-b00538c17914",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "1 mot 1 genom porten",
+  "description": "En liten ruta på ungefär 5 × 5 meter med en port av två koner, en meter isär, mitt i rutan. Två spelare möts 1 mot 1 med en boll. Den som har bollen får ett poäng varje gång hen driver bollen genom porten – från vilket håll som helst. Den andra försöker vinna bollen och anfaller då själv.\n\nSpela ungefär en minut och byt sedan motståndare så att matcherna blir jämna. På en högre nivå kan ni spela 2 mot 2 i samma ruta. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blir porten stängd från ena hållet – byt sida och gå in från det andra."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd kroppen mellan motståndaren och bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: stå mellan bollen och porten, inte bakom porten."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver genom porten ovanifrån – ett poäng. B kommer för sent.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.24
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.24
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.56
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.56
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.4
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.57,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.35
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.35,
+          "endX": 0.5,
+          "endY": 0.47,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.36,
+          "endX": 0.57,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B stänger porten underifrån. A driver runt konen för att komma in ovanifrån i stället.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.24
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.24
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.56
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.56
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.4
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.57,
+          "y": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.44
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.41,
+          "endX": 0.55,
+          "endY": 0.31,
+          "bend": -0.04,
+          "waves": 2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

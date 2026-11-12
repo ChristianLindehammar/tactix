@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "7d5a4091-7fec-51f9-8da4-5236bd9c16d4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The passing game – in threes",
+  "description": "Split the players into groups of three with one ball per group, spread over the whole court. Each group passes the ball in turn: A to B, B to C, C to A. Shrink the area if the players can handle it – the groups come closer together and there is more to keep track of.\n\nMove on to free passing within the group, then to 2v1: one in the group chases the ball and the other two pass. Change chaser regularly. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Where should I stand to get the ball?"
+    },
+    {
+      "id": "cp2",
+      "text": "When should I pass – before the chaser gets there."
+    },
+    {
+      "id": "cp3",
+      "text": "Receive with a soft blade and look up for the next one."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 3,
+  "maxPlayers": 24,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and D passes to E.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.391,
+          "y": 0.266
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.421,
+          "y": 0.261,
+          "endX": 0.64,
+          "endY": 0.22
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.391,
+          "y": 0.626
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.421,
+          "y": 0.636,
+          "endX": 0.66,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes on to C and E to F – the order carries on.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.27
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.68,
+          "y": 0.3,
+          "endX": 0.55,
+          "endY": 0.37
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.72
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.74,
+          "endX": 0.51,
+          "endY": 0.79
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "2v1: C chases. A passes around C to B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.318
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.385,
+          "y": 0.308,
+          "endX": 0.66,
+          "endY": 0.26,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.37,
+          "endX": 0.42,
+          "endY": 0.33
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.74
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.73,
+          "endX": 0.33,
+          "endY": 0.65
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

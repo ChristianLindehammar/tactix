@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "61d6e444-f7e9-59b5-a15b-7df4314a28e5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Gatloppet – driv förbi gladiatorerna",
+  "description": "Dela planen i tre zoner som går från sarg till sarg, och ställ en gladiator i varje zon. Gladiatorerna får bara röra sig i sin egen zon. Alla andra börjar på ena kortsidan med var sin boll. På signal ska de driva bollen genom alla zonerna till andra kortsidan utan att gladiatorerna tar bollen.\n\nDen som blir av med bollen hämtar en ny och försöker igen. Utveckling: den som tappar bollen blir gladiator i den zon där det hände. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sök upp ytan där gladiatorn inte är."
+    },
+    {
+      "id": "cp2",
+      "text": "Hög fart på raksträckan, korta touchar nära gladiatorn."
+    },
+    {
+      "id": "cp3",
+      "text": "Hur håller du klubban när du vill springa så fort som möjligt?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 25,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla startar på signal. Gladiatorn i första zonen går mot C.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.38
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.38
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.62
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.62
+        },
+        {
+          "id": "g1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "G"
+        },
+        {
+          "id": "g2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "G"
+        },
+        {
+          "id": "g3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.73,
+          "label": "G"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.14,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.22
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.22
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.2
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.23,
+          "endX": 0.2,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.23,
+          "endX": 0.8,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.29,
+          "endX": 0.7,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A och D tar sig in i mittzonen. B tappade bollen och börjar om.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.38
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.38
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.62
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.62
+        },
+        {
+          "id": "g1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "G"
+        },
+        {
+          "id": "g2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "G"
+        },
+        {
+          "id": "g3",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.73,
+          "label": "G"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.414,
+          "y": 0.223
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.723,
+          "y": 0.36
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.52
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.53,
+          "endX": 0.26,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.55,
+          "endX": 0.78,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.5,
+          "endX": 0.3,
+          "endY": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

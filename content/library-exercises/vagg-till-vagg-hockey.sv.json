@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "id": "7f77e41a-e409-5800-a248-e8b79074f744",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Vägg till vägg – vänd och driv över linjen",
+  "description": "Fyra koner bildar en ruta på ungefär 5 × 5 meter. Två spelare möts 1 mot 1 inne i rutan, och var och en har en egen mållinje – en tänkt linje mellan två av konerna. Den som har pucken försöker vända bort från motståndaren och åka med pucken över sin linje. Vinner motståndaren pucken anfaller hen mot sin linje i stället.\n\nSpela ungefär en minut åt gången och byt motståndare om någon match blir ojämn. Bygg flera rutor bredvid varandra så att alla spelar samtidigt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vänd med kroppen mellan motståndaren och pucken."
+    },
+    {
+      "id": "cp2",
+      "text": "Vilket är ditt favoritsätt att vända med pucken?"
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: när är det svårast att ta pucken från den som vänder?"
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "phase": "main",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A har pucken och B pressar. A vänder bort från B.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.265
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.265
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.543
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.543
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.329,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.37
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.475,
+          "y": 0.402,
+          "endX": 0.37,
+          "endY": 0.447,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.436,
+          "endX": 0.54,
+          "endY": 0.404
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A åker med pucken över sin linje – ett poäng.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.265
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.265
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.28,
+          "y": 0.543
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.72,
+          "y": 0.543
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.436,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.393,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.489
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.521,
+          "endX": 0.45,
+          "endY": 0.618,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.436,
+          "endX": 0.5,
+          "endY": 0.521
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

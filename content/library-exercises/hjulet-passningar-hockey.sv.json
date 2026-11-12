@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "52f89ab2-85aa-5ccd-8418-62ec73f13fd6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Hjulet – passa i rörelse",
+  "description": "Fyra spelare bildar en ring, ungefär sju meter i diameter, och en femte spelare (X) står i mitten. Spelarna i ringen rör sig hela tiden framåt runt ringen. Den som har pucken passar in till X, som spelar ut den till nästa spelare i ringen.\n\nVarianter: spelarna i ringen rör sig baklänges, eller åt andra hållet så att de måste passa med backhand. Byt spelare i mitten efter en stund. Med fler spelare: bygg två hjul. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta emot och passa utan att stanna."
+    },
+    {
+      "id": "cp2",
+      "text": "X: vänd dig mot nästa spelare innan pucken kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa framför den som rör sig, inte bakom."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 8,
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar in till X. Alla i ringen rör sig framåt.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.436,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.201,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.436,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.671,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.436,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.265
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.291,
+          "endX": 0.5,
+          "endY": 0.382
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.19,
+          "endX": 0.7,
+          "endY": 0.243,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.489,
+          "endX": 0.74,
+          "endY": 0.596,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.682,
+          "endX": 0.3,
+          "endY": 0.628,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.382,
+          "endX": 0.26,
+          "endY": 0.275,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X spelar ut pucken till B, som är nästa i ringen.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.436,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.254,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.618,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.618,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.254,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.565,
+          "y": 0.482
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.503,
+          "endX": 0.68,
+          "endY": 0.575
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

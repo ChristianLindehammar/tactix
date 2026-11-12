@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "id": "c62c5e60-7fd7-5472-a33d-252c12f626b2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Behåll bollen – 3 mot 1 i två zoner",
+  "description": "Två lag och två zoner bredvid varandra. Börja med 3 mot 1 i den ena zonen: blått lag passar för att behålla bollen, och en röd spelare försöker vinna den. Övriga röda väntar i den andra zonen.\n\nNär den röda spelaren vinner bollen driver hen över till sin zon, där lagkamraterna väntar. Det blå laget skickar då över en spelare som ny försvarare, och nu är det röda laget som ska behålla bollen. Anpassa antalet spelare och zonernas storlek efter nivån. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör dig så att den med bollen alltid har två att passa till."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa förbi försvararen, inte rakt på hen."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som vinner bollen: ta dig snabbt över till din zon."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning",
+    "transition"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B och C spelar 3 mot 1 mot D. A passar runt D till C.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.14
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.14
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.46
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.46
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.54
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.54
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.86
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.86
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.341,
+          "y": 0.271
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.361,
+          "y": 0.301,
+          "endX": 0.46,
+          "endY": 0.37
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.47,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D vinner bollen och driver över till sin zon.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.14
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.14
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.46
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.46
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.54
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.54
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.86
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.86
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.48
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.51,
+          "endX": 0.5,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Nu behåller rött bollen. B går över som ny försvarare.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.14
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.14
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.46
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.46
+        },
+        {
+          "id": "y1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.54
+        },
+        {
+          "id": "y2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.54
+        },
+        {
+          "id": "y3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.86
+        },
+        {
+          "id": "y4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.86
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.412,
+          "y": 0.649
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.382,
+          "y": 0.659,
+          "endX": 0.34,
+          "endY": 0.67
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.3,
+          "endX": 0.6,
+          "endY": 0.6
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "d6a397dd-318b-5890-b746-139e5bb86e43",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Chase game – skate with the puck and shoot",
+  "description": "Two lines in one corner. The line with pucks stands a little ahead of the other line, the hunters. On the signal the first puck carrier heads for the goal at the other end and tries to shoot, and the hunter tries to catch up and win the puck. Swap lines after each turn.\n\nSet the gap between the lines so both the carrier and the hunter have a chance. Start without a goalkeeper so it does not get too hard. Notice how the players solve the task differently depending on who is chasing them. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Carry the puck freely – one or two hands, forehand or backhand."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up at the goal before you shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "Hunter: skate on the carrier's stick side."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "shooting"
+  ],
+  "phase": "main",
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A heads for the far goal. Hunter B starts at the same time.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.158
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.222,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.104,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.286
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.318,
+          "endX": 0.4,
+          "endY": 0.714,
+          "bend": 0.02,
+          "waves": 5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.09,
+          "y": 0.158,
+          "endX": 0.3,
+          "endY": 0.628
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A shoots before B gets there.",
+      "markers": [
+        {
+          "id": "net2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.948
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.158
+        },
+        {
+          "id": "b2",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.05
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.735,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.65,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.799
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.821,
+          "endX": 0.5,
+          "endY": 0.932
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.693,
+          "endX": 0.4,
+          "endY": 0.767
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

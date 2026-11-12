@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "id": "454e6fc8-f294-540e-a7d4-c01c8f46360b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "1v1 through the gate",
+  "description": "A small box of about 5 × 5 metres with a gate of two cones, one metre apart, in the middle. Two players face each other 1v1 with one puck. Whoever has the puck scores a point each time they carry it through the gate – from either direction. The other tries to win the puck and then attacks themselves.\n\nPlay for about a minute, then change opponents so the games stay even. At a higher level, play 2v2 in the same box. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "If the gate is shut from one side – switch sides and come in from the other."
+    },
+    {
+      "id": "cp2",
+      "text": "Use your body between the opponent and the puck."
+    },
+    {
+      "id": "cp3",
+      "text": "Defender: stand between the puck and the gate, not behind the gate."
+    }
+  ],
+  "locale": "en",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "phase": "main",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates with the puck through the gate from above – one point. B arrives too late.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.564
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.564
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.393
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.57,
+          "y": 0.393
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.275,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.318,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.34
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.34,
+          "endX": 0.5,
+          "endY": 0.468,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.35,
+          "endX": 0.57,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B shuts the gate from below. A skates with the puck around the cone to come in from above instead.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.564
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.564
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.393
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.57,
+          "y": 0.393
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.468,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.436
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.404,
+          "endX": 0.55,
+          "endY": 0.297,
+          "bend": -0.04,
+          "waves": 2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

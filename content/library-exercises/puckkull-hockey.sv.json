@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "id": "53d322a4-4c5b-554e-b543-1ae8576ab1c1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Puckkull – skydda din puck",
+  "description": "En ruta på ungefär 10 × 10 meter och fyra spelare. Tre har var sin puck och ska skydda den, den fjärde är jagare utan puck. Jagaren försöker vinna en puck enligt reglerna. Den som blir av med sin puck blir ny jagare och försöker i sin tur vinna en puck från någon annan.\n\nHåll igång ungefär fem minuter. Med fler spelare: gör fler rutor, eller ha två jagare i en större ruta. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ställ kroppen mellan jagaren och pucken."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta upp – vart kan du åka med pucken där jagaren inte är?"
+    },
+    {
+      "id": "cp3",
+      "text": "Jagare: vinn pucken med klubban, inte med kroppen."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "phase": "warmup",
+  "durationMinutes": 5,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Jagaren J går mot A. A driver undan mot ett fritt hörn.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.586
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.586
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.286,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.414,
+          "label": "J"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.35
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.35
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.436
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.372,
+          "endX": 0.27,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.414,
+          "endX": 0.38,
+          "endY": 0.393
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "J vinner pucken och driver iväg. A blir ny jagare och går mot C.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.222
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.222
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.586
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.586
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.479,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.286,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.372,
+          "label": "J"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.463,
+          "y": 0.372
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.35
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.436
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.493,
+          "y": 0.372,
+          "endX": 0.52,
+          "endY": 0.275,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.479,
+          "endX": 0.56,
+          "endY": 0.5
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

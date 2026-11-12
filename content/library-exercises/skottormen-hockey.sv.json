@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "id": "4f9552cd-3be4-571f-99c2-4523c6ea70d8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "hockey",
+  "title": "Skottormen – båge in och skjut",
+  "description": "Spelarna står i ett led i ena hörnet, och en hög med puckar ligger i det andra hörnet på samma kortsida. Den första åker med pucken i en båge in mot mål och skjuter. Sedan åker hen till det andra hörnet, tar en ny puck och gör samma sak åt andra hållet. Nästa i ledet startar när den före har skjutit.\n\nDet är skott utan motstånd men med lite stress. Bestäm vilket skott som gäller för varje varv: handledsskott, snärtskott eller backhandskott. Smarta skott med precision gör oftast fler mål än hårda skott. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hur siktar man? Titta på målet, inte på pucken, precis innan skottet."
+    },
+    {
+      "id": "cp2",
+      "text": "Hur hårt behöver man skjuta? Placering slår kraft."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut i farten – stanna inte upp innan skottet."
+    }
+  ],
+  "locale": "sv",
+  "difficulty": 1,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "phase": "main",
+  "durationMinutes": 8,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker med pucken i en båge in mot mål.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.201
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.179
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.104,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.191,
+          "y": 0.132
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.211,
+          "y": 0.164,
+          "endX": 0.37,
+          "endY": 0.254,
+          "bend": -0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A skjuter och åker över till det andra hörnet.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.201
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "pile",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.179
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.275,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.397,
+          "y": 0.226
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.417,
+          "y": 0.205,
+          "endX": 0.46,
+          "endY": 0.072
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.307,
+          "endX": 0.84,
+          "endY": 0.136,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A tar en ny puck och gör bågen åt andra hållet. Nästa i ledet gör sig redo.",
+      "markers": [
+        {
+          "id": "net1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.052
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.201
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.104,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.147
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.179,
+          "endX": 0.63,
+          "endY": 0.254,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.243,
+          "endX": 0.54,
+          "endY": 0.072
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.307,
+          "endX": 0.1,
+          "endY": 0.393
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
