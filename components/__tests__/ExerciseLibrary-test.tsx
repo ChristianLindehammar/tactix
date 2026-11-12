@@ -1,6 +1,7 @@
 import * as React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { FlatList, Keyboard } from 'react-native';
 
 import ExerciseLibraryScreen from '@/app/(tabs)/exercises/index';
 import { getCurrentUserId } from '@/services/currentUser';
@@ -286,6 +287,38 @@ describe('exercise library', () => {
     fireEvent.press(screen.getByTestId('filter-focus-defence'));
 
     expect(screen.getByRole('button', { name: 'Clear filters' })).toBeTruthy();
+  });
+
+  describe('keyboard', () => {
+    // The iOS number pad has no return key, so the keyboard must close some other way
+    it('closes when the list is scrolled', async () => {
+      await saved({ title: 'Scroll me' });
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('Scroll me');
+
+      expect(screen.UNSAFE_getByType(FlatList).props.keyboardDismissMode).toBe('on-drag');
+    });
+
+    it('closes when the filters are opened or the source is switched', async () => {
+      const dismiss = jest.spyOn(Keyboard, 'dismiss');
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('No exercises yet');
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      expect(dismiss).toHaveBeenCalledTimes(1);
+
+      mockList.mockResolvedValue({ entries: [], total: 0 });
+      fireEvent.press(screen.getByTestId('source-library'));
+      expect(dismiss).toHaveBeenCalledTimes(2);
+    });
+
+    it('offers a key to close it from both text fields', async () => {
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await screen.findByText('No exercises yet');
+
+      expect(screen.getByPlaceholderText('Search exercises').props.returnKeyType).toBe('search');
+      expect(screen.getByLabelText('Number of players').props.returnKeyType).toBe('done');
+    });
   });
 
   it('opens an exercise when it is pressed', async () => {

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, FlatList, Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { ActivityIndicator, FlatList, Keyboard, Platform, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useBottomTabBarHeight } from 'expo-router/js-tabs';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -236,6 +236,7 @@ export default function ExerciseLibraryScreen() {
         data={shared.entries}
         keyExtractor={entry => entry.exercise.id}
         keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
         contentContainerStyle={listPadding}
         ListEmptyComponent={
           <ThemedText style={styles.messageText}>
@@ -280,6 +281,7 @@ export default function ExerciseLibraryScreen() {
         data={visible}
         keyExtractor={exercise => exercise.id}
         keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
         contentContainerStyle={listPadding}
         ListEmptyComponent={
           <ThemedText style={styles.messageText}>{t('noMatchingExercises')}</ThemedText>
@@ -310,7 +312,10 @@ export default function ExerciseLibraryScreen() {
             label={t(option === 'mine' ? 'myExercises' : 'exerciseLibrary')}
             testID={`source-${option}`}
             selected={source === option}
-            onPress={() => setSource(option)}
+            onPress={() => {
+              Keyboard.dismiss();
+              setSource(option);
+            }}
           />
         ))}
       </View>
@@ -322,6 +327,7 @@ export default function ExerciseLibraryScreen() {
           placeholderTextColor="#888"
           value={search}
           onChangeText={setSearch}
+          returnKeyType="search"
         />
         <TextInput
           style={[inputStyle, styles.playerInput]}
@@ -329,6 +335,7 @@ export default function ExerciseLibraryScreen() {
           accessibilityLabel={t('playerCountFilter')}
           placeholderTextColor="#888"
           keyboardType="number-pad"
+          returnKeyType="done"
           value={playerCount}
           onChangeText={setPlayerCount}
         />
@@ -339,7 +346,10 @@ export default function ExerciseLibraryScreen() {
           label={activeFilterCount > 0 ? t('filtersWithCount', { count: activeFilterCount }) : t('filters')}
           testID="toggle-filters"
           selected={filtersOpen}
-          onPress={() => setFiltersOpen(current => !current)}
+          onPress={() => {
+            Keyboard.dismiss();
+            setFiltersOpen(current => !current);
+          }}
         />
         <ScrollView
           horizontal
