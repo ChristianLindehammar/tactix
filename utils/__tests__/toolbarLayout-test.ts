@@ -31,11 +31,11 @@ describe('getToolbarLayout', () => {
   );
 
   it.each([320, 360, 375, 390, 412, 428])(
-    'fits the exercise toolbar with its seven markers on a %ipx wide screen',
+    'fits the exercise toolbar with its eight markers on a %ipx wide screen',
     (windowWidth) => {
-      const layout = getToolbarLayout({ windowWidth, buttonCount: 7, hasClearButton: true });
+      const layout = getToolbarLayout({ windowWidth, buttonCount: 8, hasClearButton: true });
 
-      expect(measureToolbarWidth(layout, 7, true)).toBeLessThanOrEqual(windowWidth);
+      expect(measureToolbarWidth(layout, 8, true)).toBeLessThanOrEqual(windowWidth);
     },
   );
 });

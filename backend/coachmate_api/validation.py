@@ -13,7 +13,7 @@ FOCUS_TAGS = {
     'positioning', 'setPieces', 'goalkeeping', 'conditioning',
 }
 VISIBILITIES = {'public', 'private'}
-MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'goal'}
+MARKER_TYPES = {'player', 'opponent', 'ball', 'cone', 'arrow-solid', 'arrow-dashed', 'coach', 'goal'}
 ARROW_TYPES = {'arrow-solid', 'arrow-dashed'}
 MAX_ARROW_BEND = 0.5
 MAX_ARROW_WAVES = 8

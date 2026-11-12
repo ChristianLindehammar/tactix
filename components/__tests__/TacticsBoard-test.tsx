@@ -174,19 +174,28 @@ describe('TacticsBoard', () => {
       expect(screen.queryByLabelText('Goal')).toBeNull();
     });
 
-    it('can place a goal when allowed', async () => {
-      const { onChange } = await renderBoard({ allowedMarkerTypes: ['goal'] });
+    it.each([
+      ['goal', 'Goal'],
+      ['coach', 'Coach'],
+    ] as const)('can place a %s when allowed', async (type, name) => {
+      const { onChange } = await renderBoard({ allowedMarkerTypes: [type] });
 
-      fireEvent.press(screen.getByLabelText('Goal'));
+      fireEvent.press(screen.getByLabelText(name));
       tapCourt(100, 100);
 
-      expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe('goal');
+      expect(onChange.mock.lastCall?.[0].at(-1)?.type).toBe(type);
     });
 
-    it('no longer offers a coach marker, even with every marker allowed', async () => {
+    it('offers a coach marker with every marker allowed', async () => {
       await renderBoard({ allowedMarkerTypes: [...TACTICS_MARKER_TYPES] });
 
-      expect(screen.queryByLabelText('Coach')).toBeNull();
+      expect(screen.getByLabelText('Coach')).toBeTruthy();
+    });
+
+    it('shows a coach marker with its label', async () => {
+      await renderBoard({ value: [{ ...createTacticsMarker('coach', 0.5, 0.5), label: 'L' }], readOnly: true });
+
+      expect(screen.getByText('L')).toBeTruthy();
     });
   });
 

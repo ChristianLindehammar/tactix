@@ -4,6 +4,7 @@ import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-rou
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { StepTabs } from '@/components/StepTabs';
+import { ArrowLegend } from '@/components/ArrowLegend';
 import { TacticsBoard } from '@/components/TacticsBoard';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
@@ -206,6 +207,7 @@ export default function ExerciseDetailScreen() {
           requireBall={false}
         />
       </View>
+      <ArrowLegend frames={exercise.frames} />
       {step.note ? <ThemedText>{step.note}</ThemedText> : null}
 
       <View style={styles.section}>

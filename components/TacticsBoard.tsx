@@ -75,6 +75,11 @@ const DEFAULT_MARKER_TYPES: TacticsMarkerType[] = [
   'arrow-dashed',
 ];
 const MAX_LABEL_LENGTH = 3;
+const PERSON_COLORS: Partial<Record<TacticsMarkerType, string>> = {
+  player: '#1976D2',
+  opponent: '#D32F2F',
+  coach: '#2E7D32',
+};
 // Below this width full-size markers would crowd the diagram
 const FULL_SIZE_COURT_WIDTH = 320;
 
@@ -94,6 +99,7 @@ function getMarkerTypes(
     { type: 'cone', color: '#FF6D00', icon: 'change-history' },
     { type: 'arrow-solid', color: arrowColor, icon: 'arrow-forward' },
     { type: 'arrow-dashed', color: arrowColor, icon: 'arrow-forward' },
+    { type: 'coach', color: PERSON_COLORS.coach!, icon: 'sports' },
     { type: 'goal', color: arrowColor, icon: 'sports-score' },
   ];
 }
@@ -285,13 +291,13 @@ export function TacticsBoard({
           onPress={interactive && enableLabels ? () => setLabellingId(marker.id) : undefined}
           style={[
             styles.personMarker,
-            { backgroundColor: marker.type === 'player' ? '#1976D2' : '#D32F2F' },
+            { backgroundColor: PERSON_COLORS[marker.type] ?? PERSON_COLORS.opponent },
           ]}
         >
           {marker.label ? (
             <ThemedText style={styles.markerLabel}>{marker.label}</ThemedText>
           ) : (
-            <MaterialIcons name="person" size={28} color="#fff" />
+            <MaterialIcons name={marker.type === 'coach' ? 'sports' : 'person'} size={28} color="#fff" />
           )}
         </TouchableOpacity>
       )}

@@ -50,6 +50,17 @@ def get(client, exercise, headers):
 
 
 class TestSavingAndFetching:
+    def test_keeps_a_coach_marker_with_its_label(self, client, register):
+        me = register()
+        frames = [{'id': 'f', 'markers': [
+            {'id': 'c', 'type': 'coach', 'x': 0.1, 'y': 0.3, 'label': 'L'},
+            {'id': 'b', 'type': 'ball', 'x': 0.5, 'y': 0.5},
+        ]}]
+        exercise = build_exercise(frames=frames)
+
+        assert put(client, exercise, me).status_code == 200
+        assert get(client, exercise, me).get_json()['frames'] == frames
+
     def test_gives_back_exactly_what_was_saved(self, client, register):
         me = register()
         exercise = build_exercise()

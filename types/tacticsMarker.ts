@@ -9,6 +9,7 @@ export const TACTICS_MARKER_TYPES = [
   'cone',
   'arrow-solid',
   'arrow-dashed',
+  'coach',
   'goal',
 ] as const;
 
@@ -25,7 +26,7 @@ export interface TacticsMarker {
   bend?: number;
   /** Arrows only, with bend: how many humps the arrow has, alternating sides. */
   waves?: number;
-  /** Short text shown on a player or opponent, such as a shirt number. */
+  /** Short text shown on a player, opponent or coach, such as a shirt number. */
   label?: string;
 }
 
@@ -85,6 +86,7 @@ export function clearAllMarkers(): TacticsMarker[] {
 
 export function getMarkerIcon(type: TacticsMarkerType, selectedSport: string | null | undefined): string {
   if (type === 'cone') return 'change-history';
+  if (type === 'coach') return 'sports';
   if (type === 'arrow-solid' || type === 'arrow-dashed') return 'arrow-forward';
   if (type === 'ball') {
     switch (selectedSport) {
