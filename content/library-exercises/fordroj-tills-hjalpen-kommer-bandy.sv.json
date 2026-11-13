@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "id": "5e6ee9c8-0a02-5274-b91a-2bb4d74560d4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fördröj tills hjälpen är på plats",
+  "description": "Tre mot tre mot ett mål med målvakt, på halv plan. En fri spelare (J) börjar med bollen vid mittlinjen och spelar alltid med det anfallande laget. En av försvararna (Z) startar bakom anfallarna, bredvid J. De två andra försvararna ska fördröja anfallet tills Z har hunnit åka hem på målsidan – först då går de in i närkamp.\n\nFörsöket är slut vid mål, bollvinst eller när bollen går över kortlinjen eller sargen. Tre försök per lag, sedan byter lagen roller. Byt fri spelare efter varje omgång.\n\nVariant: försvararna får göra mål i ett litet mål vid mittlinjen när de har vunnit bollen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Åk baklänges och vinn tid – håll några meters avstånd till bollhållaren och låt dig inte passeras."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå snett med klubban ute så att bollhållaren styrs ut mot sargen, bort från mål."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som kommer bakifrån åker hem på målsidan, inte rakt mot bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata: säg till när du är på plats, så vet närmaste försvarare att det är dags att gå på."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J spelar till B. Z åker hem och X och Y backar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.64,
+          "endX": 0.485,
+          "endY": 0.54
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.64,
+          "endX": 0.7,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B åker mot mål. X och Y fördröjer, och Z är på väg in på målsidan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.48,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.42,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z är på plats på målsidan. X går på, vinner bollen och spelar ut till Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.72,
+          "endY": 0.22
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

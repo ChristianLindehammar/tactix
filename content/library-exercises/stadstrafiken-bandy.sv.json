@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "id": "9123a746-1836-51b0-b62f-acd997ecf251",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Stadstrafiken",
+  "description": "Konerna är stadens gränser och bollen är din bil. Alla har klubba och boll och åker runt i stan utan att krocka och utan att åka ut. Tränaren ropar trafiksignaler: ”Grönt” – full fart, ”Rött” – stanna och håll bollen still vid klubbladet, ”Backa” – dra bollen bakåt med klubban, ”Rondell” – sväng runt och åk åt andra hållet, ”Farthinder” – böj på knäna så djupt du kan och åk vidare. Hitta gärna på egna signaler tillsammans med barnen.\n\nEfter en stund släpps en biltjuv in, med klubba men utan boll. Tjuven försöker sno en bil, och den som blir av med sin boll blir ny biltjuv. Tjuven får bara spela på bollen, aldrig slå på klubbor eller ben. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp så att du ser var det är fritt på isen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll bollen nära klubbladet så att du hinner stanna och svänga."
+    },
+    {
+      "id": "cp3",
+      "text": "Byt riktning och fart med skären när någon kommer nära."
+    },
+    {
+      "id": "cp4",
+      "text": "Klubban låg och bladet nere mot isen – ingen lyfter klubban eller slår mot någon annans."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla åker runt i stan med sin boll. Tränaren ropar signalerna.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.375,
+          "y": 0.3
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.465,
+          "y": 0.3,
+          "endX": 0.74,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.56,
+          "endX": 0.78,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.72
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.375,
+          "y": 0.72,
+          "endX": 0.18,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Biltjuven X jagar en boll. A vänder bort från tjuven.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.42,
+          "endX": 0.58,
+          "endY": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.27
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.415,
+          "y": 0.26,
+          "endX": 0.2,
+          "endY": 0.23,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.72,
+          "endX": 0.52,
+          "endY": 0.74,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.52
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.18,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

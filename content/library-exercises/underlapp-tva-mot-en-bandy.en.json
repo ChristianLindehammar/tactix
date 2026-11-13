@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 2,
+  "id": "860146b1-5884-50ac-b132-369ef300aae0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Underlap – two v one",
+  "description": "Groups of three with one ball: a ball carrier, a team-mate and a defender, and a goalkeeper in goal. The ball carrier starts with the ball along the boards at the halfway line, the team-mate a little behind and more central, and the defender waits in the opponents' half.\n\nThe ball carrier skates forward along the boards and draws the defender towards them. The team-mate starts behind and skates on the inside – between the ball carrier and the middle – past the defender. The ball carrier plays the ball in front of the team-mate, who takes it at full speed towards goal and shoots. The defender is fairly passive at first. Swap roles after every attempt so everyone is ball carrier, team-mate and defender, and work from both sides.\n\nVariation: the defender is fully active. If the defender drops off to cover the underlap, the ball carrier may skate on, play a wall pass off the boards or fake the pass. Whoever wins the ball becomes an attacker and the player who lost it goes in as defender. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ball carrier: skate straight at the defender so they have to commit – that opens the inside."
+    },
+    {
+      "id": "cp2",
+      "text": "Team-mate: time your start and call when you arrive on the inside."
+    },
+    {
+      "id": "cp3",
+      "text": "Play the ball in front of the team-mate, into their stride, not behind."
+    },
+    {
+      "id": "cp4",
+      "text": "If the defender drops off to cover the underlap – skate on yourself or use the boards."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates forward along the boards. X skates out towards A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.52
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.46,
+          "endX": 0.84,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.34,
+          "endX": 0.73,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X takes A. B starts the underlap on the inside, past X.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.68,
+          "endX": 0.54,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A plays the ball in front of B, who carries on at full speed.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.255,
+          "endX": 0.56,
+          "endY": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.3,
+          "endX": 0.52,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B cuts in towards goal and shoots. Next attempt: A defends, X is the team-mate and B the ball carrier.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.16,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

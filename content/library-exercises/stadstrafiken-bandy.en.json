@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "id": "afff8509-9a4f-5a04-a6fc-a0596a942e99",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "City traffic",
+  "description": "The cones are the town limits and the ball is your car. Everyone has a stick and a ball and skates around town without crashing and without leaving it. The coach calls out traffic signals: “Green” – full speed, “Red” – stop and keep the ball still at the blade, “Reverse” – pull the ball back with the stick, “Roundabout” – turn and skate the other way, “Speed bump” – bend your knees as deep as you can and keep skating. Make up your own signals with the children.\n\nAfter a while a car thief comes in, with a stick but no ball. The thief tries to steal a car, and whoever loses their ball becomes the new thief. The thief may only play the ball, never hit sticks or legs. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up so you can see where the ice is free."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the ball close to the blade so you have time to stop and turn."
+    },
+    {
+      "id": "cp3",
+      "text": "Change direction and speed with your edges when someone comes close."
+    },
+    {
+      "id": "cp4",
+      "text": "Stick low and blade on the ice – nobody lifts their stick or hits someone else’s."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone skates around town with their ball. The coach calls the signals.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.375,
+          "y": 0.3
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.465,
+          "y": 0.3,
+          "endX": 0.74,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.56,
+          "endX": 0.78,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.72
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.375,
+          "y": 0.72,
+          "endX": 0.18,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The car thief X goes for a ball. A turns away from the thief.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.89
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.42,
+          "endX": 0.58,
+          "endY": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.27
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.415,
+          "y": 0.26,
+          "endX": 0.2,
+          "endY": 0.23,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.72,
+          "endX": 0.52,
+          "endY": 0.74,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.52
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.18,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

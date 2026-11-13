@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 2,
+  "id": "521e3dfa-05e6-53bc-bfe8-241e23f497c3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Målvakt – minska vinkeln i sju mot sju",
+  "description": "Matchspel sju mot sju med målvakter på hela isen. Tränaren bestämmer för varje period vilken typ av mål som ger dubbla poäng, så att målvakterna får många avslut av just det slaget.\n\nTill exempel: mål från snäv vinkel efter ett genombrott längs sargen, mål i friläge eller mål på skott utifrån. Byt typ efter ungefär fem minuter. Målvakterna jobbar hela tiden med att flytta med bollen och åka ut mot skytten så att vinkeln blir så liten som möjligt. Offside, hörnor och inslag som i match.\n\nVariant: räkna bara mål på direktskott inne i straffområdet, så att det blir fler avslut på nära håll. Bilden visar bara några av spelarna och är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå på linjen mellan bollen och mitten av målet."
+    },
+    {
+      "id": "cp2",
+      "text": "Åk ut mot skytten när bollen kommer närmare – men stanna och stå i balans när skottet går."
+    },
+    {
+      "id": "cp3",
+      "text": "Vid snäv vinkel: täck första stolpen med kroppen och låt skytten se så lite mål som möjligt."
+    },
+    {
+      "id": "cp4",
+      "text": "Upp på skridskorna direkt och starta spelet med ett snabbt utkast när du har bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker med bollen längs vänster sarg mot straffområdet.",
+      "markers": [
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.44
+        },
+        {
+          "id": "o1",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.23
+        },
+        {
+          "id": "o2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.48
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.42,
+          "endX": 0.14,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har kommit förbi X och åker in mot mål från snäv vinkel. Målvakten flyttar sig mot första stolpen.",
+      "markers": [
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.44
+        },
+        {
+          "id": "o1",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.23
+        },
+        {
+          "id": "o2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.24,
+          "endX": 0.24,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter, men målvakten har stängt vinkeln och räddar vid första stolpen.",
+      "markers": [
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.44
+        },
+        {
+          "id": "o1",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.23
+        },
+        {
+          "id": "o2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.14,
+          "endX": 0.46,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

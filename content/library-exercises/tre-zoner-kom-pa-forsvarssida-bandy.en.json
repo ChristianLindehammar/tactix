@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 2,
+  "id": "1b229b7d-80e9-5958-ab63-5a9019f26d4c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Three zones – recover goal-side",
+  "description": "Split the ice between the penalty areas into three equal zones with cones along the boards. Each zone has one attacker (blue) and one defender (red). Two attackers with a ball start below the first zone and skate into it, making it 3v1. The coach stands at the start line and a goalkeeper in the far goal.\n\nThe attackers must get through all three zones and finish against the goalkeeper. When the ball enters the next zone, everyone – attackers and defenders – may follow. A defender who has been beaten must therefore skate straight back and get goal-side in the next zone, so the overload shrinks. Passes off the boards are allowed.\n\nIf the defenders win the ball they score by passing it to the coach at the start line, and the attackers try to win it back. Swap roles after a while and play rounds of about three minutes with easy skating in between. Too easy: narrow the area with cones. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defender: if you are beaten, skate back the shortest way towards goal, not towards the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Get between the ball and the goal before you try to win the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Steer the ball carrier out towards the boards, away from the middle."
+    },
+    {
+      "id": "cp4",
+      "text": "Attackers: use the overload quickly, before the defenders get back."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B skate into the first zone with the ball. C is waiting there – now it is 3v1 against X.",
+      "markers": [
+        {
+          "id": "z0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.2
+        },
+        {
+          "id": "z0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.2
+        },
+        {
+          "id": "z1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.4
+        },
+        {
+          "id": "z1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.4
+        },
+        {
+          "id": "z2l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "z2r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.6
+        },
+        {
+          "id": "z3l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.8
+        },
+        {
+          "id": "z3r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.8
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.9,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.8
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.74,
+          "endX": 0.36,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.88,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.82,
+          "endX": 0.78,
+          "endY": 0.7
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "zz",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays C in at speed. B skates up on the other side.",
+      "markers": [
+        {
+          "id": "z0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.2
+        },
+        {
+          "id": "z0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.2
+        },
+        {
+          "id": "z1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.4
+        },
+        {
+          "id": "z1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.4
+        },
+        {
+          "id": "z2l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "z2r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.6
+        },
+        {
+          "id": "z3l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.8
+        },
+        {
+          "id": "z3r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.8
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.86
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.62,
+          "endX": 0.18,
+          "endY": 0.58
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.68,
+          "endX": 0.16,
+          "endY": 0.56
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.68,
+          "endX": 0.82,
+          "endY": 0.58
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "zz",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C carries the ball past X into the middle zone. X has been beaten and skates back to get goal-side together with Y.",
+      "markers": [
+        {
+          "id": "z0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.2
+        },
+        {
+          "id": "z0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.2
+        },
+        {
+          "id": "z1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.4
+        },
+        {
+          "id": "z1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.4
+        },
+        {
+          "id": "z2l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "z2r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.6
+        },
+        {
+          "id": "z3l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.8
+        },
+        {
+          "id": "z3r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.8
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.86
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.46
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.4,
+          "endX": 0.29,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.62,
+          "endX": 0.4,
+          "endY": 0.44,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.26,
+          "label": "E"
+        },
+        {
+          "id": "zz",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.28,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y wins the ball and passes it to the coach at the start line – a point to the defenders.",
+      "markers": [
+        {
+          "id": "z0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.2
+        },
+        {
+          "id": "z0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.2
+        },
+        {
+          "id": "z1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.4
+        },
+        {
+          "id": "z1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.4
+        },
+        {
+          "id": "z2l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "z2r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.6
+        },
+        {
+          "id": "z3l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.8
+        },
+        {
+          "id": "z3r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.8
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.86
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.54
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.6,
+          "endX": 0.47,
+          "endY": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "E"
+        },
+        {
+          "id": "zz",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.28,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

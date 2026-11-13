@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 2,
+  "id": "3416301e-ea0e-5bd8-819f-37f19227270e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Counter from the middle zone",
+  "description": "Full rink split into thirds with cones along the boards. Blue is a full team. Red has a goalkeeper, a libero, backs and a midfield – no forwards. Blue's backs and midfield stand in the middle zone, and blue's forwards stand in the last third against red's backs and goalkeeper.\n\nRed's goalkeeper starts with a throw-out to their midfield, who must keep the ball in the middle zone. Blue must win the ball there and counter towards goal as quickly as possible, ideally with a direct pass or lofted ball to a forward. Offside applies, so the forwards must time their runs against red's back line. Red's midfielders may only be in the middle zone. If red's backs win the ball they play it back up to the midfield, and if the ball goes over the end line or the boards, red's goalkeeper restarts with a throw-out.\n\nProgression: red's midfielders may skate back when the ball is played into their own third – so blue must counter even faster. The diagram shows fewer players and is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Press together in the middle zone so that red are forced into a difficult pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Your first look after winning the ball is forward – can it go straight to a forward?"
+    },
+    {
+      "id": "cp3",
+      "text": "Forwards: stay onside and start the run in behind as the pass is played."
+    },
+    {
+      "id": "cp4",
+      "text": "Midfielders join from behind – the counter needs more than the forwards."
+    },
+    {
+      "id": "cp5",
+      "text": "Red backs: skate backwards and give yourselves time when the counter comes."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 22,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red's goalkeeper throws the ball out to Y in the middle zone.",
+      "markers": [
+        {
+          "id": "t0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.333
+        },
+        {
+          "id": "t0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.333
+        },
+        {
+          "id": "t1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.667
+        },
+        {
+          "id": "t1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.667
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.165
+        },
+        {
+          "id": "u1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.225,
+          "endX": 0.52,
+          "endY": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y tries to pass to X, but A skates into the pass and wins the ball.",
+      "markers": [
+        {
+          "id": "t0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.333
+        },
+        {
+          "id": "t0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.333
+        },
+        {
+          "id": "t1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.667
+        },
+        {
+          "id": "t1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.667
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.36
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.39,
+          "endX": 0.28,
+          "endY": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.56,
+          "endX": 0.34,
+          "endY": 0.45
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.6,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A plays straight in behind to F. C and E start their runs forward.",
+      "markers": [
+        {
+          "id": "t0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.333
+        },
+        {
+          "id": "t0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.333
+        },
+        {
+          "id": "t1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.667
+        },
+        {
+          "id": "t1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.667
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "F"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "E"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.26,
+          "endX": 0.62,
+          "endY": 0.14
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.31,
+          "y": 0.38,
+          "endX": 0.4,
+          "endY": 0.28
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.56,
+          "endX": 0.66,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "F plays the ball across to E, who is free in front of goal and shoots. A supports behind.",
+      "markers": [
+        {
+          "id": "t0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.333
+        },
+        {
+          "id": "t0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.333
+        },
+        {
+          "id": "t1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.667
+        },
+        {
+          "id": "t1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.667
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.16
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.26
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.21
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.22,
+          "endX": 0.625,
+          "endY": 0.21
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.2,
+          "label": "E"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.14,
+          "endX": 0.52,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.38,
+          "endX": 0.5,
+          "endY": 0.28
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.54,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

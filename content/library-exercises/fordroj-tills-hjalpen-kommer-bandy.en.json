@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "id": "4458b35d-fbee-5bc3-be4d-c86d062b5198",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Delay until help arrives",
+  "description": "Three v three to one goal with a goalkeeper, on half a rink. A free player (J) starts with the ball at the centre line and always plays with the attacking team. One defender (Z) starts behind the attackers, next to J. The other two defenders must delay the attack until Z has skated back goal-side – only then do they go in for the ball.\n\nAn attempt ends with a goal, a won ball or when the ball goes over the end line or the boards. Three attempts per team, then the teams swap roles. Change the free player after each round.\n\nVariation: when the defenders win the ball they can score in a small goal on the centre line. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skate backwards and buy time – stay a few metres off the ball carrier and do not get passed."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand at an angle with your stick out so the ball carrier is steered towards the boards, away from goal."
+    },
+    {
+      "id": "cp3",
+      "text": "The player coming from behind skates back goal-side, not straight at the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk: call when you are in position, so the nearest defender knows it is time to go in."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J passes to B. Z skates back and X and Y drop off.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.64,
+          "endX": 0.485,
+          "endY": 0.54
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.64,
+          "endX": 0.7,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skates at goal. X and Y delay, and Z is on the way in goal-side.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.48,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.42,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z is in place goal-side. X goes in, wins the ball and passes out to Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "J"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.27,
+          "endX": 0.72,
+          "endY": 0.22
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

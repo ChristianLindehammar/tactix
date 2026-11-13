@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "id": "4f91e3dc-7adf-5a0d-9a2e-ad4025e881f7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Skifta tillsammans",
+  "description": "Märk ut en yta på ungefär 40 × 30 meter med koner på isen. Tre röda försvarare står på linje tvärs över ytan. Tre blå står runt dem – en på varje kant och en centralt bakom – och en fjärde blå, D, står i andra änden. Blå ska slå minst tre passningar och sedan försöka spela en hård passning längs isen förbi försvararna till D. Lyror räknas inte.\n\nRöd ska inte vinna bollen i början. Den som är närmast bollhållaren åker ut och styr, och de andra två flyttar över och täcker så att luckorna mellan dem inte blir för stora. Är bollen ute vid kanten flyttar alla åt det hållet; är den centralt drar de ihop sig mot mitten.\n\nBygg på: röd får vinna bollen och gör då poäng genom att spela till en egen spelare i andra änden. Byt uppgifter inom och mellan lagen efter några minuter. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste spelare åker ut – resten flyttar efter bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll ihop: lagom luckor mellan er så att ingen passning går rakt igenom."
+    },
+    {
+      "id": "cp3",
+      "text": "Flytta medan bollen glider, inte när den redan har kommit fram."
+    },
+    {
+      "id": "cp4",
+      "text": "Styr bollhållaren ut mot kanten med klubban, bort från passningen till D."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B spelar ut till C. Försvararna läser passningen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.72
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.68,
+          "endX": 0.84,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Z har gått ut mot C och styr utåt. Y flyttar in snett bakom Z och täcker luckan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.66
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.41,
+          "endX": 0.655,
+          "endY": 0.365
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Bollen har gått till A på andra kanten. Hela linjen har flyttat över och X går ut mot A.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.42,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.47,
+          "endX": 0.16,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

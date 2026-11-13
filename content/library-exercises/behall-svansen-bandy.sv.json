@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 2,
+  "id": "c9e9f237-e304-5f14-af3f-e1b90af8ccbf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Behåll svansen",
+  "description": "Markera en yta tvärs över isen med en mittzon av koner. Alla har klubba och boll och en väst som svans, löst instoppad baktill i byxlinningen så att den lossnar vid ett lätt drag. En jägare (röd) står i mittzonen. Jägaren lämnar sin klubba vid sargen och jagar med händerna fria, så att det inte blir någon klubba i närheten av kompisarnas ben.\n\nSpelarna för bollen genom mittzonen över till andra sidan, och tillbaka igen. Jägaren får bara vara i mittzonen och försöker dra åt sig svansarna när spelarna åker förbi – bara svansen, aldrig hålla fast, knuffa eller ta i klubban. Varje spelare räknar hur många gånger hen kommer igenom med svansen kvar. Den som blir av med svansen hämtar den och stoppar in den igen. Byt jägare ofta. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp innan du åker in i zonen – var är jägaren?"
+    },
+    {
+      "id": "cp2",
+      "text": "Byt riktning och fart med skären för att komma förbi."
+    },
+    {
+      "id": "cp3",
+      "text": "Vänd kroppen så att svansen är bort från jägaren, och ha bollen på andra sidan."
+    },
+    {
+      "id": "cp4",
+      "text": "Jägaren drar bara i svansen. Den ska lossna lätt, så att ingen tappar balansen och ramlar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B och C startar. Jägaren X väntar i mittzonen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.28
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.72
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.72
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.43
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.43
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.57
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.57
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.83,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.73
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.67,
+          "endX": 0.29,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.83,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.73
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.67,
+          "endX": 0.71,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X jagar C. A tar sig igenom zonen med svansen kvar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.28
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.72
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.72
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.43
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.43
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.57
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.57
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.37
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.31,
+          "endX": 0.25,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.585,
+          "endX": 0.66,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A är över. X har tagit C:s svans och B startar sin tur.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.28
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.72
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.72
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.43
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.43
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.57
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.57
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.21
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "m4",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.67,
+          "endX": 0.48,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.49,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

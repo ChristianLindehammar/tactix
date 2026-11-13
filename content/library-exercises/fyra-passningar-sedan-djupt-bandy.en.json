@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "id": "d9c4bdd5-a287-5fdb-898f-5a3e915e0450",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Four passes, then in behind",
+  "description": "Play 4 v 4 in a middle zone across the rink, about 40 metres long and marked with cones along the boards, with an end zone behind each team. No defenders are allowed into the end zones. A team scores by passing to a team-mate skating into the opponents' end zone; the receiver may not be in the zone before the pass is played. Progression: the team needs at least four passes in a row before the ball in behind is allowed.\n\nLofted passes are allowed and often the best way over the defence. Variant with goals and goalkeepers: whoever receives in the zone shoots against the goalkeeper. Add one or two jokers who play with the team in possession if passes are hard to find. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up before the ball arrives – where is the player who will skate in behind?"
+    },
+    {
+      "id": "cp2",
+      "text": "Start the run in behind in good time, before the player on the ball looks up."
+    },
+    {
+      "id": "cp3",
+      "text": "Skate into the zone from the side of the defender, not straight behind them."
+    },
+    {
+      "id": "cp4",
+      "text": "If the way in behind is closed – keep the ball and wait for the next chance."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue have the ball in the middle zone and count passes. A plays to C.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.52
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.51,
+          "endX": 0.48,
+          "endY": 0.45
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D skates into the end zone, and C plays the pass – a lofted one works well – in front of them.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.54,
+          "y": 0.32
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.28,
+          "endX": 0.74,
+          "endY": 0.18
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.32,
+          "endX": 0.76,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: with a goal and goalkeeper, D shoots straight from the zone.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

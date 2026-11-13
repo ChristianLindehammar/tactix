@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "id": "097739ba-3d78-5730-9f9e-88519799b05e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fyra passningar, sedan djupt",
+  "description": "Spela 4 mot 4 i en mittzon som går tvärs över banan, ungefär 40 meter lång och markerad med koner längs sargerna, med en djupledszon bakom varje lag. Inga försvarare får åka in i djupledszonerna. Ett lag gör poäng genom att passa en medspelare som åker in i motståndarnas djupledszon; mottagaren får inte vara i zonen innan passningen slås. Stegring: laget måste ha minst fyra passningar i rad innan djupledspassningen får slås.\n\nLyror är tillåtna och ofta bästa vägen över försvaret. Variant med mål och målvakter: den som tar emot i zonen avslutar mot målvakten. Lägg till en eller två jokrar som spelar med laget som har bollen om det blir svårt att hitta passningar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp innan bollen kommer – var finns den som ska åka i djupled?"
+    },
+    {
+      "id": "cp2",
+      "text": "Starta djupledslöpningen i god tid, innan bollföraren tittar upp."
+    },
+    {
+      "id": "cp3",
+      "text": "Åk in i zonen från sidan av försvararen, inte rakt bakom hen."
+    },
+    {
+      "id": "cp4",
+      "text": "Är det stängt i djupled – behåll bollen och vänta på nästa läge."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå har bollen i mittzonen och räknar passningar. A spelar till C.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.52
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.51,
+          "endX": 0.48,
+          "endY": 0.45
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D åker in i djupledszonen, och C slår passningen – gärna en lyra – framför hen.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.34
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.54,
+          "y": 0.32
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.28,
+          "endX": 0.74,
+          "endY": 0.18
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.32,
+          "endX": 0.76,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: med mål och målvakt avslutar D direkt från zonen.",
+      "markers": [
+        {
+          "id": "m0l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.3
+        },
+        {
+          "id": "m0r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.3
+        },
+        {
+          "id": "m1l",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.7
+        },
+        {
+          "id": "m1r",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.7
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.48
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

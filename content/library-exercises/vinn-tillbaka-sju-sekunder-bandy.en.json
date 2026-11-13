@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "id": "5b93b89d-4bd8-5266-9908-75f6654f978b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Win it back – seven seconds to finish",
+  "description": "Played in the attacking zone, from the end line and about 35 metres out, marked with cones by the boards. Equal numbers of outfield players in both teams, for example 4 v 4, and red also have a goalkeeper. All outfield players stay in the zone.\n\nRed's goalkeeper starts with a throw-out to blue, who must keep the ball within the team. If blue lose the ball they must win it back at once – and then have seven seconds to get a shot away. After winning the ball, red must make five passes within the team and then take it out of the zone, by skating over the cone line or passing to a team-mate skating in behind. If the ball goes over the end line it is a corner to blue or a goal throw to red, just as in a match.\n\nProgression: move the game to the middle zone. Blue then counter into the attacking zone after winning the ball, and the goalkeeper steps up in the penalty area and catches long balls. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "When you lose the ball: the nearest player goes at once, the others close the passes around the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "After winning it back – look for the way to goal straight away, seven seconds go fast."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep players close to the ball when you attack, so you are already close when it is lost."
+    },
+    {
+      "id": "cp4",
+      "text": "Red: play the first pass out of pressure, then find width and depth."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to A. Blue keep the ball in the zone.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.45
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.45
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.2,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.065
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.1,
+          "endX": 0.17,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y wins the ball. C skates straight at Y and D closes the pass to X.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.45
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.45
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.18,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.39,
+          "endX": 0.43,
+          "endY": 0.335
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.36,
+          "endX": 0.64,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C has won the ball back and shoots within seven seconds.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.45
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.45
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.16,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.19,
+          "endX": 0.5,
+          "endY": 0.02
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If red have made five passes, X sends Z in behind and out of the zone.",
+      "markers": [
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.04,
+          "y": 0.45
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.96,
+          "y": 0.45
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.45,
+          "endX": 0.66,
+          "endY": 0.56
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.44,
+          "endX": 0.78,
+          "endY": 0.58
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

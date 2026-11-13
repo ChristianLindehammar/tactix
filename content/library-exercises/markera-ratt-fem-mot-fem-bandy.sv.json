@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "fdcbdcbd-10d9-5844-aa98-ac46ab6bc41a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Markera rätt – fem mot fem",
+  "description": "Två lag med fyra utespelare och en målvakt var. Spela på hela isen, eller korta av den med koner om fem mot fem blir för glest. Lagen turas om att anfalla: ett lag får fem anfall i rad, sedan byter ni. Anfallet startar med ett utkast från egen målvakt. Offside gäller.\n\nDet försvarande laget markerar och försöker bryta. Försöket är slut när försvaret vinner bollen, när det blir mål eller när bollen går över sargen eller kortlinjen. Räkna mål och brytningar.\n\nVariant: spela vidare efter en brytning så att båda lagen får kontra flera gånger i samma försök – det avbryts först vid mål eller när bollen går ut. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå på målsidan om din spelare, så att du ser både spelaren och bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Nära bollen markerar du tätt; längre bort släpper du och hjälper till centralt."
+    },
+    {
+      "id": "cp3",
+      "text": "Åk med i djupledslöpningar – var beredd att kliva fram med klubban och bryta passningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata: säg till vem du tar och när du lämnar över en spelare."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå målvakt kastar ut till B. X tar plats nära B; resten står på målsidan om sin spelare.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.835
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.795,
+          "endX": 0.74,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D åker mot bollen och Z följer med på bollsidan. C åker i djupled och Y går med. W släpper in centralt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.52,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.68
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.43,
+          "endX": 0.53,
+          "endY": 0.505
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.38
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.34,
+          "endX": 0.2,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B spelar mot D, men Z läser passningen och bryter framför D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.66,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.45
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.585,
+          "endX": 0.67,
+          "endY": 0.505
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

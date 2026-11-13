@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 2,
+  "id": "94e05e9e-8bb0-5550-b5c5-88df970072d8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Cover the space in front of goal",
+  "description": "Play on half the rink with a goal and a keeper. Set up a cone gate about eight metres wide just beyond the halfway line. Four blue attackers against four red defenders. Every attack starts with a pass from A, who stands by the cone gate. Offside applies.\n\nRed cover the dangerous spaces and try to win the ball. When red win it they counter and score by skating with the ball through the cone gate. The attempt ends after the counter, after a goal or when the ball goes over the boards or the end line. Swap attack and defence after ten attempts.\n\nNow and then call \"Freeze!\" and let the defenders check for themselves: is the space behind the player pressing covered? Variation: play on after the ball is won, so both teams can win it several times in the same attempt. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The defender nearest the ball skates out – the next one sets up at an angle behind and covers."
+    },
+    {
+      "id": "cp2",
+      "text": "Players further away tuck in towards the middle; the space in front of goal is never left empty."
+    },
+    {
+      "id": "cp3",
+      "text": "Move while the ball is travelling, not once it has arrived."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk: \"I've got the ball!\" and \"I'm covering!\"."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "positioning",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. W skates out to B and X tucks in.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.66
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.54
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.27,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.323,
+          "y": 0.504,
+          "endX": 0.197,
+          "endY": 0.445
+        },
+        {
+          "id": "rw",
+          "type": "arrow-solid",
+          "x": 0.284,
+          "y": 0.308,
+          "endX": 0.161,
+          "endY": 0.369
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.635,
+          "y": 0.229,
+          "endX": 0.48,
+          "endY": 0.195
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skates past W along the boards. Y has moved across and covers the space behind W.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.66
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.33,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.15,
+          "label": "Z"
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.24,
+          "endX": 0.12,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y takes the ball off B and passes straight to X.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.66
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.23,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.33,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.15,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.16
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.4225,
+          "y": 0.207,
+          "endX": 0.531,
+          "endY": 0.288
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X counters and skates with the ball through the cone gate – a point to red.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.66
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.23,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.33,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.15,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.44
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.5,
+          "endX": 0.52,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

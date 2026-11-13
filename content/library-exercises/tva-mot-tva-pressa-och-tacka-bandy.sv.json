@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "4c594dfa-046a-5e32-9cbe-6d46c7cd3484",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Två mot två – pressa och täck",
+  "description": "Markera en yta på ungefär 40 × 30 meter med koner, gärna tvärs över isen med sargen som ena sidan. Blå står i två led vid ena kortsidan och röd i två led vid den andra. Första blå passar till sin kompis och de anfaller två mot två. Blå får poäng om de åker med bollen över röda lagets linje. De två första röda åker ut och ska vinna bollen: den ena pressar och den andra täcker.\n\nNär röd vinner bollen är anfallet slut, och nästa anfall startar från röd åt andra hållet med nya spelare. Går bollen över sargen får laget som inte rörde den sist ett inslag.\n\nBygg på: spela mot två små mål på varje kortsida, eller mot riktiga mål med målvakter som startar anfallen med ett utkast. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste försvarare pressar bollhållaren – åk nära, men bromsa in så att du inte blir förbiåkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Den andra står snett bakom, så att hen både täcker ytan bakom och kan bryta passningen."
+    },
+    {
+      "id": "cp3",
+      "text": "Byt roller direkt när bollen spelas: den som täckte blir den som pressar."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata med varandra – ”jag tar!” och ”jag täcker!”."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. X och Y åker ut från sin kortsida.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.14
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.14
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.86
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.86
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.93
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.93
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.81,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.7
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.335,
+          "y": 0.71,
+          "endX": 0.74,
+          "endY": 0.77
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.26,
+          "endX": 0.76,
+          "endY": 0.38
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.26,
+          "endX": 0.4,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X pressar B och Y täcker snett bakom. A åker upp och erbjuder sig längs sargen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.14
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.14
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.86
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.86
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.93
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.93
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.36,
+          "endX": 0.7,
+          "endY": 0.48
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.74,
+          "endX": 0.22,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B försöker spela till A, men Y läser passningen och bryter.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.14
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.14
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.86
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.86
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.93
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.93
+        },
+        {
+          "id": "q3",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "q4",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.07
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.54
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.61,
+          "endX": 0.55,
+          "endY": 0.555
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

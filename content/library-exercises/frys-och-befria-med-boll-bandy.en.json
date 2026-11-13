@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 2,
+  "id": "930f92bf-0315-56d4-b451-80f2c679e5e1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Freeze and free – with a ball",
+  "description": "Everyone has a stick and a ball and skates freely inside a square of cones. A hunter (red) also has a ball and tries to hit the others’ balls by passing at them. If your ball is hit you freeze: stand still with your blade on the ball. A team-mate frees you by skating a lap round you with their ball. Whoever frees the most wins.\n\nThe hunter passes along the ice – no lofted balls and no hard hits at team-mates. For the youngest: start without balls and let the hunter freeze someone with a touch of the hand. Change hunter often, and use two hunters in a big group. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up – where is the hunter and where is the free ice?"
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the ball close to the stick so you can turn quickly."
+    },
+    {
+      "id": "cp3",
+      "text": "Use crossovers as you skate round a frozen team-mate."
+    },
+    {
+      "id": "cp4",
+      "text": "Hunter: pass along the ice and aim at the ball, never at the skates."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone moves their ball around the square. The hunter X has a ball too.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.34
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.485,
+          "y": 0.34,
+          "endX": 0.64,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.52
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.54,
+          "y": 0.66
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.625,
+          "y": 0.5,
+          "endX": 0.46,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X passes and hits C’s ball. C freezes with the blade on the ball.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.34
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.54,
+          "y": 0.68
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.52
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.565,
+          "y": 0.525,
+          "endX": 0.37,
+          "endY": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skates a lap round C with their ball. C is free again.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.54
+        },
+        {
+          "id": "m3",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.6,
+          "endX": 0.2,
+          "endY": 0.82,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.42
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.72
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.53
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

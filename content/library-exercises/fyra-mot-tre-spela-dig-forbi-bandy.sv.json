@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "id": "f7cb4e37-1ed7-535c-865e-05bbe6b7c19d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fyra mot tre – spela dig förbi",
+  "description": "Fyra blå anfallare startar med bollen vid mittlinjen och ska spela sig förbi tre röda försvarare och göra mål på målvakten. Ställ två konportar strax innanför mittlinjen, en vid varje sarg. Vinner rött bollen kontrar de och gör poäng genom att föra bollen genom en av portarna.\n\nAnfallarna ska hitta spelaren mellan försvararna, vända upp och spela in den som åker i djupled. Offside gäller, så djupledslöpningen måste tajmas mot den sista försvararen. Byt spelare efter 6–8 anfall och vila mellan försöken. Blir det för svårt: spela 4 mot 2. Stegring: kanten får ta sig förbi med ett väggspel mot sargen eller åka ner och slå ett snett inspel. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta position mellan försvararna, där du kan få bollen och vända."
+    },
+    {
+      "id": "cp2",
+      "text": "Finns det fri is framför dig – åk med bollen och dra till dig en försvarare."
+    },
+    {
+      "id": "cp3",
+      "text": "Skapa två mot en där bollen är."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar ni bollen – vinn tillbaka den innan rött hinner till portarna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B startar längst bak och passar ut till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.6
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.6
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.6
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.32
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.56,
+          "endX": 0.26,
+          "endY": 0.51
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar in till D mellan försvararna. C åker i djupled längs sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.6
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.6
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.6
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.32
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.4,
+          "endX": 0.42,
+          "endY": 0.42
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.42,
+          "endX": 0.86,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D vänder och spelar in C i jämnhöjd med sista försvararen. C går in mot mål och avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.6
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.6
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.6
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.34
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.36
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.34
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.31,
+          "endX": 0.78,
+          "endY": 0.2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.81,
+          "y": 0.15,
+          "endX": 0.53,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

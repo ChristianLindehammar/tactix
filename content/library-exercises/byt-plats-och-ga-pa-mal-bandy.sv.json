@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "id": "374d1093-3bf8-5253-8dad-6b3464e9edfd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Byt plats och gå på mål",
+  "description": "Två anfallare mot två försvarare och en målvakt på ena planhalvan. Två understödsspelare står vid mittlinjen med bollarna. De slår in bollen och tar emot tillbakaspel, men åker inte själva in i spelet.\n\nAnfallarna åker hela tiden och byter plats med varandra – till exempel genom att korsa – för att bli av med sin försvarare och komma fria mot mål. Offside gäller, så ingen anfallare får vara förbi försvararna när understödet slår bollen. Försvararna är lagom aktiva i början. Försöket är slut vid mål, räddning, bollvinst eller när bollen går ut. Byt efter några försök parvis: anfallarna blir understöd, understödet försvarare och försvararna anfallare.\n\nVariant: helt aktiva försvarare, och tävla paren emellan. Vid mål får både anfallarna och understödsspelarna poäng. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Byt plats i fart – den ena åkningen drar med sig en försvarare och öppnar isen för den andra."
+    },
+    {
+      "id": "cp2",
+      "text": "Tajma åkningen så att du är onside när bollen slås: vänta in passningen, åk förbi sedan."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd understödet: spela hellre tillbaka än att tappa bollen i trängseln framför mål."
+    },
+    {
+      "id": "cp4",
+      "text": "Understöd: slå bollen framför den som åker, så att hen kan ta emot i full fart."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C slår in bollen till A, som har åkt ner mot den. X följer med.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.68
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.62,
+          "endX": 0.3,
+          "endY": 0.51
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lägger tillbaka till D. B åker snett in mot mitten och drar med sig Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.5
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.56,
+          "endX": 0.68,
+          "endY": 0.7
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A byter plats med B och åker ut till höger, där isen nu är tom. D slår bollen framför A, som är onside.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.68
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.47,
+          "endX": 0.76,
+          "endY": 0.38
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.765,
+          "y": 0.62,
+          "endX": 0.78,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A avslutar vid sidan av målvakten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.21,
+          "endX": 0.48,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

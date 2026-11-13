@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "id": "3ace0967-2318-5698-94c9-b19c0f356c37",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Stötta den som pressar – fem mot fyra",
+  "description": "Halv plan med målvakt i målet. Fyra blå anfallare plus en fri spelare, J, mot fem röda försvarare. J startar alltid med bollen vid mittlinjen och spelar bara som stöd bakifrån.\n\nRöd har en spelare mer och ska använda den: en går på, en stöttar nära och resten täcker ytan framför mål. Försöket är slut när röd vinner bollen, vid mål eller när bollen går över kortlinjen eller sargen. Byt anfall och försvar efter tio försök och byt fri spelare samtidigt.\n\nBygg på: ställ två små mål vid mittlinjen som röd får göra mål i efter bollvinst. Svårare: fem mot fem, där J får spela fritt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den som stöttar står några meter snett bakom den som går på – nära nog att ta över direkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Går bollen vidare blir stöttaren ny pressare, och den som gick på faller tillbaka och stöttar."
+    },
+    {
+      "id": "cp3",
+      "text": "Resten flyttar efter bollen och håller ihop – ingen fri yta rakt framför mål."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakten ser hela spelet: styr försvaret med rösten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning",
+    "goalkeeping"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 11,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J spelar ut till A. V åker ut mot A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "J"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.28,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.34,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.61,
+          "endX": 0.17,
+          "endY": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.34,
+          "endX": 0.16,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "W har ställt sig snett bakom V. A spelar in till C, och W går på C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "J"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.36,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.26,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.6
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.58,
+          "endX": 0.38,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.32,
+          "endX": 0.385,
+          "endY": 0.415
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "V har fallit tillbaka och stöttar. W har vunnit bollen och spelar ut till Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "J"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.32,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.34,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.41,
+          "endX": 0.8,
+          "endY": 0.31
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

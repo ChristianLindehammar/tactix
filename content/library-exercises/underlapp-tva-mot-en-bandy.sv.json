@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 2,
+  "id": "ae8b6ea1-82ed-5e57-8c65-436c8fc66975",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Underlapp – två mot en",
+  "description": "Grupper om tre med en boll: en bollförare, en medspelare och en försvarare, och en målvakt i mål. Bollföraren startar med bollen längs sargen vid mittlinjen, medspelaren en bit bakom och mer centralt, och försvararen väntar på motståndarens planhalva.\n\nBollföraren åker framåt längs sargen och drar försvararen mot sig. Medspelaren startar bakom och åker på insidan – mellan bollföraren och mitten – förbi försvararen. Bollföraren spelar bollen framför medspelaren, som tar den i full fart in mot mål och avslutar. Försvararen är ganska passiv i början. Byt roller efter varje försök så att alla får vara bollförare, medspelare och försvarare, och kör från båda sidor.\n\nVariant: försvararen spelar helt aktivt. Släpper hen bollföraren för att ta underlappet får bollföraren åka själv, spela väggspel mot sargen eller göra en passningsfint. Den som bryter blir anfallare och den som tappade bollen går in som försvarare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollföraren: åk rakt på försvararen så att hen måste ta dig – då öppnas insidan."
+    },
+    {
+      "id": "cp2",
+      "text": "Medspelaren: starta i rätt läge och ropa när du kommer på insidan."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela bollen framför medspelaren, i farten och inte bakom."
+    },
+    {
+      "id": "cp4",
+      "text": "Släpper försvararen dig för att ta underlappet – åk själv eller använd sargen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker framåt längs sargen. X åker ut mot A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.52
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.46,
+          "endX": 0.84,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.34,
+          "endX": 0.73,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X tar A. B startar underlappet på insidan, förbi X.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.68,
+          "endX": 0.54,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A spelar bollen framför B, som fortsätter i full fart.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.255,
+          "endX": 0.56,
+          "endY": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.3,
+          "endX": 0.52,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B går in mot mål och avslutar. Nästa försök: A blir försvarare, X medspelare och B bollförare.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.16,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

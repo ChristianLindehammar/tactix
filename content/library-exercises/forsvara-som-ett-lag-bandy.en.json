@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "id": "ed33cc58-ea50-51cf-8f77-271a35d50bee",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Defend as a team",
+  "description": "Play 8 v 8 on half the rink towards one goal with a keeper. The coach stands at the centre spot with balls and starts every attack with a pass to blue, who attack and try to score. Offside applies. A ball over the boards gives a stroke-in; a ball over the end line means the next attack starts with the coach.\n\nRed defend in two lines of four: a back line with the defenders and a front line with the midfielders. If red win the ball they score by playing it back to the coach, making three passes in a row, or skating with the ball under control over the halfway line.\n\nStop the game when needed and show the distances within and between the lines – things happen fast on ice and a gap soon becomes a breakaway. Swap roles after 8–10 minutes. The diagram does not show every blue player and is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep good distances within and between the lines – no gaps to play the ball through."
+    },
+    {
+      "id": "cp2",
+      "text": "The nearest player skates out and presses, the others shift with the ball and cover."
+    },
+    {
+      "id": "cp3",
+      "text": "Step up together when the ball is played backwards or out to the boards – keep the offside line."
+    },
+    {
+      "id": "cp4",
+      "text": "Keeper and defenders talk all the time – who takes whom, when do we step up?"
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning",
+    "goalkeeping"
+  ],
+  "durationMinutes": 30,
+  "minPlayers": 14,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach starts the attack with a pass to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.21
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.21
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.21
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.37
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.37
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.37
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.29
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.29
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.52
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.8
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.74,
+          "endX": 0.5,
+          "endY": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y skates out and presses A straight away. The midfielders squeeze in around the ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.21
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.21
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.21
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.4
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.37
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.29
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.29
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.52
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.415,
+          "y": 0.425,
+          "endX": 0.465,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y wins the ball and plays it back to the coach – a point to red.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.21
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.21
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.21
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.4
+        },
+        {
+          "id": "r7",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42
+        },
+        {
+          "id": "r8",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.37
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.29
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.29
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.52
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.6
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.66,
+          "endX": 0.47,
+          "endY": 0.83
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

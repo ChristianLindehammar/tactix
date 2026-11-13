@@ -405,17 +405,30 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | passning-retur-fart-och-skott | bandy | Finnish Bandy Federation youth coach programme, programme 6 shot from a pass. Own title; added passer, positions and rotation for the three steps | 2026-11-13 |
 | lyra-over-liberon-till-yttern | bandy | Finnish Bandy Federation youth coach programme, page 14 game drill. Own title; added layout, mirroring both ways, rotation and coaching points | 2026-11-13 |
 | tre-mot-tre-intervaller-stoppa-pa-linjen | bandy | Finnish Bandy Federation youth coach programme, page 5 interval game. Own title; added area, scoring by stopping the ball on the line and rule variants | 2026-11-13 |
-
-## Leader drawn as a player "L"
-
-These exercises draw the leader as a blue player labelled "L". Once most coaches run an app version that knows the coach marker, switch them to `coach` and upload again:
-
-- spelavstand-3v2
-- duellspel-tampa-deluxe
-- sargduellen
-- spelavstand-3v2-hockey
-- horn-duell-hockey
-- forst-till-bollen
-- ledarvaggen-och-avslut
-- forst-till-bollen-innebandy
-- forst-till-pucken-hockey
+| tre-lag-direkt-atererovring-bandy | bandy | Bandy version of tre-lag-direkt-atererovring (same source); cone box about 30 × 25 m mid-ice, cone-goal variant scored by skating through | 2026-11-13 |
+| tappa-den-vinn-den-tillbaka-bandy | bandy | Bandy version of tappa-den-vinn-den-tillbaka (same source); half rink with the centre line as turning line, goalkeeper throw-outs, restart after end line/sarg | 2026-11-13 |
+| vinn-tillbaka-sju-sekunder-bandy | bandy | Bandy version of vinn-tillbaka-sju-sekunder (same source); attacking zone about 35 m out marked by the sarg, 4 v 4 plus goalkeeper, hörna/utslag over the end line, goalkeeper catches long balls | 2026-11-13 |
+| vinn-tillbaka-i-mittre-tredjedelen-bandy | bandy | Bandy version of vinn-tillbaka-i-mittre-tredjedelen (same source); full rink with mittzonen marked by the sarg, 4 v 4 to 6 v 6, goalkeeper throw-outs, offside once red leave the zone | 2026-11-13 |
+| skifta-tillsammans-bandy | bandy | Bandy version of skifta-tillsammans (same source); area about 40 × 30 m on the ice, firm passes along the ice (no lyror), steering with the stick | 2026-11-13 |
+| stotta-den-som-pressar-fem-mot-fyra-bandy | bandy | Bandy version of stotta-den-som-pressar-fem-mot-fyra (same source); half rink with J at the centre line, small goals only in the build-on, red pass out after winning the ball | 2026-11-13 |
+| fordroj-tills-hjalpen-kommer-bandy | bandy | Bandy version of fordroj-tills-hjalpen-kommer (same source); half rink, defenders skate backwards and steer towards the sarg, small-goal variant at the centre line | 2026-11-13 |
+| forsvara-som-ett-lag-bandy | bandy | Bandy version of forsvara-som-ett-lag (same source); half rink, offside, stroke-in over the sarg, red scores by skating over the centre line, diagram shows 6 of 8 blue | 2026-11-13 |
+| tva-mot-tva-pressa-och-tacka-bandy | bandy | Bandy version of tva-mot-tva-pressa-och-tacka (same source); area across the ice with the sarg as one side, score by skating over the line, stroke-in rule, keepers start with a throw | 2026-11-13 |
+| markera-ratt-fem-mot-fem-bandy | bandy | Bandy version of markera-ratt-fem-mot-fem (same source); whole rink or shortened with cones, attacks start with the keeper's throw, offside, out over sarg or end line | 2026-11-13 |
+| tack-ytan-framfor-mal-bandy | bandy | Bandy version of tack-ytan-framfor-mal (same source); half rink, cone gate just beyond the centre line, beat the defender along the sarg, counter by skating through the gate | 2026-11-13 |
+| sju-mot-fem-kom-hem-och-forsvara-bandy | bandy | Bandy version of sju-mot-fem-kom-hem-och-forsvara (same source); full rink in thirds with cones along the sarg, backs and midfielders skate home, corner or goal throw over the end line, 3 steps | 2026-11-13 |
+| malvakt-minska-vinkeln-sju-mot-sju-bandy | bandy | Bandy version of malvakt-minska-vinkeln-sju-mot-sju (same source); whole rink, breaks along the sarg, corners and stroke-ins, quick keeper throw, first-time shots in the penalty area as variant | 2026-11-13 |
+| malvakt-ny-skottlinje-efter-passningen-bandy | bandy | Bandy version of malvakt-ny-skottlinje-efter-passningen (same source); start at the centre line, second keeper throws out, sideways pushes on skates, steer rebounds to the side | 2026-11-13 |
+| kontring-med-uppflyttning-bandy | bandy | Bandy version of kontring-med-uppflyttning (same source); zones marked along the sarg, counter by lyra, 2v4+keeper, keeper's utkast to the new forward, restarts over kortlinje/sarg, offside | 2026-11-13 |
+| kontring-fran-mittre-tredjedelen-bandy | bandy | Bandy version of kontring-fran-mittre-tredjedelen (same source); retitled "Kontring från mittzonen", red libero/backar, utkast start and restarts, forwards time runs for offside | 2026-11-13 |
+| tre-zoner-kom-pa-forsvarssida-bandy | bandy | Bandy version of tre-zoner-kom-pa-forsvarssida (same source); zones span the ice between the penalty areas, finish on a keeper, defenders score by passing to the coach at the start line, sarg passes allowed | 2026-11-13 |
+| fyra-mot-tre-spela-dig-forbi-bandy | bandy | Bandy version of fyra-mot-tre-spela-dig-forbi (same source); small goals replaced by cone gates at the sarg, run in behind along the sarg timed for offside, sarg wall pass or snett inspel as progression | 2026-11-13 |
+| fyra-passningar-sedan-djupt-bandy | bandy | Bandy version of fyra-passningar-sedan-djupt (same source); middle zone across the rink, receiver may not be in the end zone before the pass, lyror allowed | 2026-11-13 |
+| spel-genom-lagdelarna-bandy | bandy | Bandy version of spel-genom-lagdelarna (same source); bandy line-up (libero, backar, halv, ytterhalvor, forwards), utkast start, shot on the far keeper, pass along the ice, off the sarg or lofted | 2026-11-13 |
+| underlapp-tva-mot-en-bandy | bandy | Bandy version of underlapp-tva-mot-en (same source); played from the sarg at the mittlinje, finish on a keeper, sarg wall pass in the variant | 2026-11-13 |
+| byt-plats-och-ga-pa-mal-bandy | bandy | Bandy version of byt-plats-och-ga-pa-mal (same source); 2 v 2 in one half with support at the centre line, offside timing added as a rule and coaching point, level 3 | 2026-11-13 |
+| bollinnehav-4-mot-4-plus-2-bandy | bandy | Bandy version of bollinnehav-4-mot-4-plus-2 (same source); zone across the ice board to board, jokers outside each end instead of the sides, a pass off the boards counts | 2026-11-13 |
+| stadstrafiken-bandy | bandy | Bandy version of stadstrafiken (same source); stick and ball on skates, stick-based signals plus a new "Farthinder" knee-bend signal, thief with stick plays the ball only, sticks-low safety point | 2026-11-13 |
+| behall-svansen-bandy | bandy | Bandy version of behall-svansen (same source); tail kept but tucked loosely, hunter without stick hunts with free hands and only pulls the tail, safety points added | 2026-11-13 |
+| frys-och-befria-med-boll-bandy | bandy | Bandy version of frys-och-befria-med-boll (same source); frozen with the blade on the ball, freed by a team-mate skating a lap round you with a ball, hunter passes along the ice only, no hand-rolling option | 2026-11-13 |
+| jagarna-i-mitten-bandy | bandy | Bandy version of jagarna-i-mitten (same source); changed to pairs passing past the hunters so it differs from Hökar och duvor, sticks-low safety rule, level 2 | 2026-11-13 |

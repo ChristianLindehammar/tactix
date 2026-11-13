@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "3139e9db-07b0-5ab0-8cd3-8bf924225fba",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Mark the right way – five v five",
+  "description": "Two teams of four outfield players and a keeper each. Use the whole rink, or shorten it with cones if five a side feels too thin. The teams take turns to attack: one team gets five attacks in a row, then you swap. Each attack starts with a throw from the team's own keeper. Offside applies.\n\nThe defending team marks and tries to win the ball. An attempt ends when the defence wins the ball, a goal is scored or the ball goes over the boards or the end line. Count goals and won balls.\n\nVariation: play on after a won ball so that both teams can counter several times in the same attempt – it only ends with a goal or when the ball goes out. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stay goal-side of your player, where you can see both the player and the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Close to the ball, mark tight; further away, drop off and help in the middle."
+    },
+    {
+      "id": "cp3",
+      "text": "Skate with runs in behind – be ready to step in with your stick and cut out the pass."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk: say who you are taking and when you hand a player over."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The blue keeper throws out to B. X gets close to B; the rest stay goal-side of their players.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.835
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.795,
+          "endX": 0.74,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D skates towards the ball and Z follows on the ball side. C skates in behind and Y goes with them. W tucks in.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.52,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.68
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.43,
+          "endX": 0.53,
+          "endY": 0.505
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.46,
+          "endY": 0.38
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.34,
+          "endX": 0.2,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes towards D, but Z reads it and cuts it out in front of D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.66,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.45
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.585,
+          "endX": 0.67,
+          "endY": 0.505
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:44:27.000Z",
+  "updatedAt": "2026-11-13T14:44:27.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

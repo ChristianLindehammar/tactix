@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 2,
+  "id": "d636318f-e050-5261-8aa8-983bc8b576df",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Tre lag – vinn tillbaka bollen direkt",
+  "description": "Dela gruppen i tre lika stora lag, till exempel tre lag om tre. Märk ut en ruta på ungefär 30 × 25 meter med koner mitt på isen. Två av lagen spelar ihop (blå) och håller bollen mot det tredje (röd) inne i rutan.\n\nNär röd vinner bollen vänder rollerna direkt: röd ska hålla bollen så länge som möjligt och blå ska ta tillbaka den på några sekunder. Räkna hur många passningar röd hinner slå. Byt vilket lag som är ensamt efter en minut, och kör omgångar på ungefär tre minuter med lugn åkning emellan.\n\nVariant: ställ två konmål utanför rutans kortsidor. Vinner röd bollen gör de poäng genom att åka med bollen genom ett av konmålen, och då får blå lämna rutan och åka hem för att skydda dem. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste spelare åker direkt på bollhållaren när bollen tappas – tänk tre sekunder."
+    },
+    {
+      "id": "cp2",
+      "text": "De andra stänger de korta passningarna så att den som pressas inte kan spela sig loss."
+    },
+    {
+      "id": "cp3",
+      "text": "Blir ni passerade: åk hem på rätt sida, mellan bollen och målet ni ska skydda."
+    },
+    {
+      "id": "cp4",
+      "text": "Med boll: gör rutan stor och stå med klubban och kroppen vänd ut mot ytan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå håller bollen i rutan. A spelar till B förbi X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.76
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "u2",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7
+        },
+        {
+          "id": "u3",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.68
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.53,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.32
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.32,
+          "endX": 0.69,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y bryter. B åker direkt på Y, och en blå stänger passningen till Z.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.76
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "u2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.7
+        },
+        {
+          "id": "u3",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.33,
+          "endX": 0.68,
+          "endY": 0.43
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.65,
+          "endX": 0.5,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B har tagit tillbaka bollen på några sekunder och blå spelar vidare.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.76
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.76
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48
+        },
+        {
+          "id": "u2",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.7
+        },
+        {
+          "id": "u3",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.7
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.4,
+          "endX": 0.27,
+          "endY": 0.335
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:11:52.000Z",
+  "updatedAt": "2026-11-13T14:11:52.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

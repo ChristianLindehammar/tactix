@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "ee8e0ce6-1297-54b9-9192-bac8c965e446",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Jägarna i mitten – passa förbi",
+  "description": "Markera en yta tvärs över isen med koner. Spelarna går ihop två och två med en boll per par och ställer upp på ena sidan. Ett par lägger undan sin boll och ställer sig i mitten – de är jägare.\n\nPå signal ska alla par ta sig över till andra sidan med bollen. Paren passar mellan sig för att komma förbi jägarna, som försöker vinna bollen eller peta ut den ur ytan. Ett par som blir av med bollen hämtar den, lägger den vid sidan och blir också jägare. Sedan åker alla tillbaka, och så fortsätter det tills bara ett par har kvar sin boll. De vinner omgången och börjar som jägare i nästa.\n\nJägarna får bara spela på bollen: klubban låg, inga slag mot klubbor eller ben. Variant: med udda antal åker en spelare ensam med boll och får passa till vilket par som helst. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa när jägaren bestämmer sig för bollföraren – inte för tidigt, inte för sent."
+    },
+    {
+      "id": "cp2",
+      "text": "Utan boll: åk ut i fri is bredvid eller snett framför bollföraren, så att passningen går förbi jägaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Huvudet uppe och bollen nära klubban när en jägare kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Jägare: samarbeta, stäng passningsvägen och spela bara på bollen med klubban låg."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Paren A–B och C–D åker mot andra sidan. Jägarna X och Y väntar i mitten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.76
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.7,
+          "endX": 0.22,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.8,
+          "endX": 0.44,
+          "endY": 0.64
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.86,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.7,
+          "endX": 0.58,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.86,
+          "label": "D"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.8,
+          "endX": 0.78,
+          "endY": 0.64
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.46,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X går mot A. A passar förbi X till B och åker vidare runt X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.61
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.545,
+          "endX": 0.45,
+          "endY": 0.465
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.165,
+          "y": 0.555,
+          "endX": 0.12,
+          "endY": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.54
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.42,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A och B är över med bollen. Y petar ut C:s och D:s boll ur ytan – de blir också jägare.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.78
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "k1",
+          "type": "arrow-dashed",
+          "x": 0.77,
+          "y": 0.565,
+          "endX": 0.92,
+          "endY": 0.62
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.95,
+          "y": 0.63
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T14:10:46.000Z",
+  "updatedAt": "2026-11-13T14:10:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
