@@ -35,8 +35,14 @@ const MIN_RATING_OPTIONS: RatingStars[] = [3, 4, 5];
 // Waits for typing to pause before asking the server
 const LIBRARY_QUERY_DELAY_MS = 300;
 
-type Source = 'mine' | 'library';
-const SOURCES: Source[] = ['mine', 'library'];
+type Source = 'mine' | 'library' | 'favorites';
+const SOURCES: Source[] = ['mine', 'library', 'favorites'];
+const SOURCE_LABELS: Record<Source, string> = {
+  mine: 'myExercises',
+  library: 'exerciseLibrary',
+  favorites: 'favorites',
+};
+const FAVORITE_COLOR = '#E53935';
 
 interface LibraryState {
   status: 'loading' | 'ready' | 'failed';
@@ -112,7 +118,9 @@ export default function ExerciseLibraryScreen() {
     locale,
   });
 
-  const inLibrary = source === 'library';
+  // The library and your favourites both come from the server
+  const inLibrary = source !== 'mine';
+  const inFavorites = source === 'favorites';
   // Ratings are only on this device so far, so the server can't filter or sort by them
   const sorts = inLibrary ? EXERCISE_SORTS.filter(option => option !== 'rating') : EXERCISE_SORTS;
   const librarySort: LibrarySort = sort === 'rating' ? 'updated' : sort;
@@ -135,12 +143,12 @@ export default function ExerciseLibraryScreen() {
     const query = ++latestQuery.current;
     setShared(current => ({ ...current, status: 'loading' }));
     try {
-      const page = await library.list(libraryFilter);
+      const page = await (inFavorites ? library.listFavorites : library.list)(libraryFilter);
       if (query === latestQuery.current) setShared({ status: 'ready', ...page });
     } catch {
       if (query === latestQuery.current) setShared(current => ({ ...current, status: 'failed' }));
     }
-  }, [libraryFilter]);
+  }, [libraryFilter, inFavorites]);
 
   useEffect(() => {
     if (!inLibrary) return;
@@ -164,7 +172,8 @@ export default function ExerciseLibraryScreen() {
     const query = latestQuery.current;
     setLoadingMore(true);
     try {
-      const page = await library.list({ ...libraryFilter, offset: shared.entries.length });
+      const list = inFavorites ? library.listFavorites : library.list;
+      const page = await list({ ...libraryFilter, offset: shared.entries.length });
       if (query === latestQuery.current) {
         setShared(current => ({ ...current, entries: [...current.entries, ...page.entries], total: page.total }));
       }
@@ -189,7 +198,24 @@ export default function ExerciseLibraryScreen() {
 
   const inputStyle = [styles.input, { borderColor: border, color: textColor }];
 
-  const renderCard = (item: Exercise, authorName?: string | null) => (
+  const renderFavorites = (entry: LibraryEntry) =>
+    entry.favoriteCount > 0 || entry.favorited ? (
+      <View
+        style={styles.favorites}
+        accessible
+        accessibilityLabel={t('favoriteCount', { count: entry.favoriteCount })}
+        testID={`favorites-${entry.exercise.id}`}
+      >
+        <MaterialIcons
+          name={entry.favorited ? 'favorite' : 'favorite-border'}
+          size={16}
+          color={FAVORITE_COLOR}
+        />
+        <ThemedText style={styles.favoriteCount}>{entry.favoriteCount}</ThemedText>
+      </View>
+    ) : null;
+
+  const renderCard = (item: Exercise, entry?: LibraryEntry) => (
     <Pressable
       accessibilityRole="button"
       onPress={() => router.push(`/exercises/${item.id}`)}
@@ -199,10 +225,11 @@ export default function ExerciseLibraryScreen() {
         <ThemedText type="defaultSemiBold" style={styles.cardTitleText}>
           {item.title}
         </ThemedText>
+        {entry && renderFavorites(entry)}
         {ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
       </View>
-      {authorName ? (
-        <ThemedText style={styles.cardDetail}>{t('byAuthor', { name: authorName })}</ThemedText>
+      {entry?.authorName ? (
+        <ThemedText style={styles.cardDetail}>{t('byAuthor', { name: entry.authorName })}</ThemedText>
       ) : null}
       <ThemedText style={styles.cardDetail}>{describeExercise(item, t)}</ThemedText>
       {item.focus.length > 0 && (
@@ -223,7 +250,9 @@ export default function ExerciseLibraryScreen() {
     if (shared.status === 'failed' && shared.entries.length === 0) {
       return (
         <View style={styles.message}>
-          <ThemedText style={styles.messageText}>{t('libraryLoadFailed')}</ThemedText>
+          <ThemedText style={styles.messageText}>
+            {t(inFavorites ? 'favoritesLoadFailed' : 'libraryLoadFailed')}
+          </ThemedText>
           <ThemedButton onPress={loadLibrary}>{t('tryAgain')}</ThemedButton>
         </View>
       );
@@ -240,7 +269,7 @@ export default function ExerciseLibraryScreen() {
         contentContainerStyle={listPadding}
         ListEmptyComponent={
           <ThemedText style={styles.messageText}>
-            {t(hasFilters ? 'noMatchingExercises' : 'libraryEmpty')}
+            {t(hasFilters ? 'noMatchingExercises' : inFavorites ? 'favoritesEmpty' : 'libraryEmpty')}
           </ThemedText>
         }
         ListFooterComponent={
@@ -250,7 +279,7 @@ export default function ExerciseLibraryScreen() {
             </ThemedButton>
           ) : null
         }
-        renderItem={({ item }) => renderCard(item.exercise, item.authorName)}
+        renderItem={({ item }) => renderCard(item.exercise, item)}
       />
     );
   };
@@ -309,11 +338,14 @@ export default function ExerciseLibraryScreen() {
         {SOURCES.map(option => (
           <FilterChip
             key={option}
-            label={t(option === 'mine' ? 'myExercises' : 'exerciseLibrary')}
+            label={t(SOURCE_LABELS[option])}
             testID={`source-${option}`}
             selected={source === option}
             onPress={() => {
               Keyboard.dismiss();
+              if (option === source) return;
+              // Never show the other list's exercises while this one loads
+              setShared({ status: 'loading', entries: [], total: 0 });
               setSource(option);
             }}
           />
@@ -552,6 +584,14 @@ const styles = StyleSheet.create({
   },
   cardTitleText: {
     flex: 1,
+  },
+  favorites: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+  },
+  favoriteCount: {
+    fontSize: 14,
   },
   cardDetail: {
     fontSize: 14,

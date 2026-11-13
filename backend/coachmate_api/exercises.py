@@ -107,25 +107,40 @@ def _write_exercise(exercise, owner_id, exists):
     cursor.close()
 
 
-def _listing(build, with_author=False):
+FAVORITE_STATS = (
+    '(SELECT COUNT(*) FROM exercise_favorites fc WHERE fc.exercise_id = e.id) AS favorite_count, '
+    'EXISTS (SELECT 1 FROM exercise_favorites fm WHERE fm.exercise_id = e.id AND fm.user_id = %s) AS favorited'
+)
+
+
+def listing_response(build, viewer_id=None):
+    """With a viewer, each exercise also carries its author's name, how many coaches saved it and
+    whether the viewer did."""
     try:
         where, params, order, limit, offset = build()
     except InvalidFilter:
         return jsonify({'error': 'invalidFilter'}), 400
 
     total = query_one(f'SELECT COUNT(*) AS total FROM exercises e WHERE {where}', params)['total']
-    author = ', u.display_name AS author_name' if with_author else ''
-    joined = 'JOIN users u ON u.id = e.owner_id' if with_author else ''
-    rows = query_all(
-        f'SELECT e.*{author} FROM exercises e {joined} WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
-        [*params, limit, offset],
-    )
+    if viewer_id is None:
+        rows = query_all(
+            f'SELECT e.* FROM exercises e WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
+            [*params, limit, offset],
+        )
+    else:
+        rows = query_all(
+            f'SELECT e.*, u.display_name AS author_name, {FAVORITE_STATS} FROM exercises e '
+            f'JOIN users u ON u.id = e.owner_id WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
+            [viewer_id, *params, limit, offset],
+        )
     focus = _focus_by_exercise([row['id'] for row in rows])
     exercises = []
     for row in rows:
         exercise = _to_exercise(row, focus.get(row['id'], []))
-        if with_author:
+        if viewer_id is not None:
             exercise['authorName'] = row['author_name']
+            exercise['favoriteCount'] = row['favorite_count']
+            exercise['favorited'] = bool(row['favorited'])
         exercises.append(exercise)
     return jsonify({'exercises': exercises, 'total': total})
 
@@ -134,14 +149,14 @@ def _listing(build, with_author=False):
 @require_user
 def list_exercises():
     """The caller's own exercises."""
-    return _listing(lambda: build_listing(request.args, g.user_id))
+    return listing_response(lambda: build_listing(request.args, g.user_id))
 
 
 @bp.get('/library')
 @require_user
 def library():
     """Public exercises from every coach. Browsing needs an account but not a plan."""
-    return _listing(lambda: build_library(request.args, g.user_id), with_author=True)
+    return listing_response(lambda: build_library(request.args, g.user_id), viewer_id=g.user_id)
 
 
 @bp.put('/exercises/<exercise_id>')

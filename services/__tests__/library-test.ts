@@ -30,13 +30,25 @@ describe('browsing the library', () => {
   it('gives each exercise with its author and the total', async () => {
     const exercise = buildExercise({ id: 'e1', ownerId: 'anna' });
     const { library } = setup(() =>
-      json(200, { exercises: [{ ...exercise, authorName: 'Coach Anna' }], total: 7 }),
+      json(200, {
+        exercises: [{ ...exercise, authorName: 'Coach Anna', favoriteCount: 3, favorited: true }],
+        total: 7,
+      }),
     );
 
     expect(await library.list({})).toEqual({
-      entries: [{ exercise, authorName: 'Coach Anna' }],
+      entries: [{ exercise, authorName: 'Coach Anna', favoriteCount: 3, favorited: true }],
       total: 7,
     });
+  });
+
+  it('counts no favourites when an older server leaves them out', async () => {
+    const exercise = buildExercise({ id: 'e1' });
+    const { library } = setup(() => json(200, { exercises: [exercise], total: 1 }));
+
+    const { entries } = await library.list({});
+
+    expect(entries[0]).toMatchObject({ favoriteCount: 0, favorited: false });
   });
 
   it('sends the filters the server understands, signed in', async () => {
@@ -172,6 +184,52 @@ describe('opening one exercise', () => {
 
   it('gives null for one that is gone or hidden', async () => {
     expect(await setup(() => json(404)).library.get('gone')).toBeNull();
+  });
+});
+
+describe('favourites', () => {
+  it('lists the exercises you saved, filtered, in every language', async () => {
+    const exercise = buildExercise({ id: 'e1' });
+    const { library, fetch } = setup(() =>
+      json(200, { exercises: [{ ...exercise, authorName: null, favoriteCount: 1, favorited: true }], total: 1 }),
+    );
+
+    const page = await library.listFavorites({ sport: 'soccer', language: 'sv' });
+
+    expect(fetch.mock.calls).toHaveLength(1);
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/favorites?sport=soccer');
+    expect(page).toEqual({
+      entries: [{ exercise, authorName: null, favoriteCount: 1, favorited: true }],
+      total: 1,
+    });
+  });
+
+  it('reads how many coaches saved an exercise and whether you did', async () => {
+    const { library, fetch } = setup(() => json(200, { favoriteCount: 4, favorited: false }));
+
+    expect(await library.getFavorite('e1')).toEqual({ favoriteCount: 4, favorited: false });
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/exercises/e1/favorite');
+  });
+
+  it('gives null when the server does not have the exercise', async () => {
+    expect(await setup(() => json(404)).library.getFavorite('local-only')).toBeNull();
+  });
+
+  it('saves and unsaves, giving the new count', async () => {
+    const { library, fetch } = setup((_url, init) =>
+      json(200, init?.method === 'PUT' ? { favoriteCount: 5, favorited: true } : { favoriteCount: 4, favorited: false }),
+    );
+
+    expect(await library.setFavorite('e1', true)).toEqual({ favoriteCount: 5, favorited: true });
+    expect(await library.setFavorite('e1', false)).toEqual({ favoriteCount: 4, favorited: false });
+    expect(fetch.mock.calls.map(([url, init]) => [url, init?.method])).toEqual([
+      ['https://api.test/exercises/e1/favorite', 'PUT'],
+      ['https://api.test/exercises/e1/favorite', 'DELETE'],
+    ]);
+  });
+
+  it('says so when saving fails', async () => {
+    expect(await errorCode(setup(() => json(503)).library.setFavorite('e1', true))).toBe('unavailable');
   });
 });
 

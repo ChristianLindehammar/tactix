@@ -30,9 +30,10 @@ jest.mock('expo-router/js-tabs', () => ({ useBottomTabBarHeight: () => 0 }));
 // The server is the boundary: the library service's own tests cover the requests
 jest.mock('@/services/library', () => ({
   ...jest.requireActual('@/services/library'),
-  library: { list: jest.fn() },
+  library: { list: jest.fn(), listFavorites: jest.fn() },
 }));
 const mockList = library.list as jest.Mock;
+const mockListFavorites = library.listFavorites as jest.Mock;
 
 const saved = async (overrides: Parameters<typeof buildExercise>[0]) =>
   exerciseRepository.save(
@@ -339,12 +340,17 @@ describe('exercise library', () => {
     expect(mockPush).toHaveBeenCalledWith('/exercises/edit');
   });
 
-  describe('the shared library', () => {
-    const entry = (overrides: Parameters<typeof buildExercise>[0], authorName: string | null = 'Coach Anna') => ({
-      exercise: buildExercise({ ownerId: 'anna', sport: 'soccer', ...overrides }),
-      authorName,
-    });
+  const entry = (
+    overrides: Parameters<typeof buildExercise>[0],
+    authorName: string | null = 'Coach Anna',
+    favorites: { favoriteCount: number; favorited: boolean } = { favoriteCount: 0, favorited: false },
+  ) => ({
+    exercise: buildExercise({ ownerId: 'anna', sport: 'soccer', ...overrides }),
+    authorName,
+    ...favorites,
+  });
 
+  describe('the shared library', () => {
     beforeEach(() => {
       mockList.mockReset();
       mockList.mockResolvedValue({ entries: [entry({ id: 'shared', title: 'Rondo' })], total: 1 });
@@ -444,6 +450,22 @@ describe('exercise library', () => {
       expect(screen.queryByText('Rondo')).toBeNull();
     });
 
+    it('shows how many coaches saved each exercise, and which ones you saved', async () => {
+      mockList.mockResolvedValue({
+        entries: [
+          entry({ id: 'popular', title: 'Popular' }, null, { favoriteCount: 12, favorited: true }),
+          entry({ id: 'unsaved', title: 'Unsaved' }, null),
+        ],
+        total: 2,
+      });
+      await openLibrary();
+      await screen.findByText('Popular');
+
+      expect(screen.getByLabelText('Saved by 12 coaches')).toBeTruthy();
+      expect(screen.getByText('12')).toBeTruthy();
+      expect(screen.queryByTestId('favorites-unsaved')).toBeNull();
+    });
+
     it('goes back to your own exercises', async () => {
       await saved({ title: 'My drill' });
       await openLibrary();
@@ -453,6 +475,96 @@ describe('exercise library', () => {
 
       expect(await screen.findByText('My drill')).toBeTruthy();
       expect(screen.queryByText('Rondo')).toBeNull();
+    });
+  });
+
+  describe('your favourites', () => {
+    beforeEach(() => {
+      mockList.mockReset().mockResolvedValue({ entries: [entry({ id: 'shared', title: 'Rondo' })], total: 1 });
+      mockListFavorites
+        .mockReset()
+        .mockResolvedValue({
+          entries: [entry({ id: 'saved', title: 'Saved drill' }, 'Coach Anna', { favoriteCount: 3, favorited: true })],
+          total: 1,
+        });
+    });
+
+    const openFavorites = async () => {
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      fireEvent.press(await screen.findByTestId('source-favorites'));
+    };
+
+    it('lists the exercises you saved, for the selected sport', async () => {
+      await openFavorites();
+
+      expect(await screen.findByText('Saved drill')).toBeTruthy();
+      expect(screen.getByText('By Coach Anna')).toBeTruthy();
+      expect(screen.getByLabelText('Saved by 3 coaches')).toBeTruthy();
+      expect(mockListFavorites).toHaveBeenLastCalledWith(expect.objectContaining({ sport: 'soccer' }));
+    });
+
+    it('filters them on the server like the library', async () => {
+      await openFavorites();
+      await screen.findByText('Saved drill');
+
+      fireEvent.press(screen.getByTestId('toggle-filters'));
+      fireEvent.press(screen.getByTestId('filter-focus-defence'));
+
+      await waitFor(() =>
+        expect(mockListFavorites).toHaveBeenLastCalledWith(expect.objectContaining({ focus: ['defence'] })),
+      );
+    });
+
+    it('explains how to add one when there are none', async () => {
+      mockListFavorites.mockResolvedValue({ entries: [], total: 0 });
+
+      await openFavorites();
+
+      expect(await screen.findByText(/No favourites yet/)).toBeTruthy();
+    });
+
+    it('opens a saved exercise', async () => {
+      await openFavorites();
+
+      fireEvent.press(await screen.findByText('Saved drill'));
+
+      expect(mockPush).toHaveBeenCalledWith('/exercises/saved');
+    });
+
+    it('asks again when you come back, so one you unsaved is gone', async () => {
+      await openFavorites();
+      await screen.findByText('Saved drill');
+      mockListFavorites.mockResolvedValue({ entries: [], total: 0 });
+
+      await act(async () => refocus());
+
+      expect(await screen.findByText(/No favourites yet/)).toBeTruthy();
+    });
+
+    it('says when they cannot be loaded, and tries again', async () => {
+      mockListFavorites.mockRejectedValueOnce(new LibraryError('offline'));
+      await openFavorites();
+
+      expect(await screen.findByText(/Could not load your favourites/)).toBeTruthy();
+      fireEvent.press(screen.getByText('Try again'));
+
+      expect(await screen.findByText('Saved drill')).toBeTruthy();
+    });
+
+    it('never shows library exercises while switching from the library', async () => {
+      let resolveFavorites: (page: unknown) => void = () => {};
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      fireEvent.press(await screen.findByTestId('source-library'));
+      await screen.findByText('Rondo');
+      mockListFavorites.mockReturnValue(new Promise(resolve => (resolveFavorites = resolve)));
+
+      fireEvent.press(screen.getByTestId('source-favorites'));
+
+      expect(screen.queryByText('Rondo')).toBeNull();
+      await act(async () =>
+        resolveFavorites({ entries: [entry({ id: 'saved', title: 'Saved drill' })], total: 1 }),
+      );
+      await waitFor(() => expect(screen.getByText('Saved drill')).toBeTruthy());
     });
   });
 });

@@ -21,6 +21,9 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | `PUT /exercises/<id>` | Yes | Creates or replaces an exercise. Only its owner can change it |
 | `GET /exercises/<id>` | Yes | Fetches an exercise. Any valid token can read by ID, for share links, unless reports have hidden it. Its author always can |
 | `GET /library` | Yes, no plan needed | Lists public exercises from every coach, with `authorName` on each. Leaves out hidden ones, those you reported and those by coaches you blocked |
+| `GET /favorites` | Yes, no plan needed | The exercises you saved, in every language, filtered like the library. Leaves out deleted and hidden ones, those you reported and those by coaches you blocked |
+| `GET /exercises/<id>/favorite` | Yes | `favoriteCount`, how many coaches saved it, and `favorited`, whether you did. Its author can ask too |
+| `PUT /exercises/<id>/favorite`, `DELETE /exercises/<id>/favorite` | Yes, no plan needed | Saves or unsaves it for you, and answers like the above. You can't save your own. Saving twice changes nothing, and unsaving works even once it's gone |
 | `POST /exercises/<id>/report` | Yes | Takes an optional `reason`, up to 1000 characters. Hides it from you at once, and from everyone after 3 coaches report it. The first report emails `MODERATOR_EMAIL` |
 | `POST /users/<id>/block`, `DELETE /users/<id>/block` | Yes | Blocks or unblocks a coach, by the `ownerId` on their exercises |
 
@@ -62,7 +65,8 @@ Extra error codes: `invalidId`, `teamExists`, `invalidChange`, `notOwner`, `owne
 ### Listing
 
 `GET /exercises` and `GET /library` return `{"exercises": [...], "total": 12}`, where `total` counts
-every match, not just this page. All of these are optional:
+every match, not just this page. `GET /library` and `GET /favorites` also give `authorName`,
+`favoriteCount` and `favorited` on each exercise. All of these are optional:
 
 | Parameter | Meaning |
 |---|---|

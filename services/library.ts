@@ -48,6 +48,15 @@ export interface LibraryEntry {
   exercise: Exercise;
   /** The name the author chose, or null if they haven't. */
   authorName: string | null;
+  /** How many coaches saved it as a favourite. */
+  favoriteCount: number;
+  /** Whether you did. */
+  favorited: boolean;
+}
+
+export interface FavoriteState {
+  favoriteCount: number;
+  favorited: boolean;
 }
 
 export interface LibraryPage {
@@ -115,12 +124,21 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
     return response;
   };
 
+  const readFavorite = (data: unknown): FavoriteState => {
+    const { favoriteCount, favorited } = (data ?? {}) as { favoriteCount?: unknown; favorited?: unknown };
+    return {
+      favoriteCount: typeof favoriteCount === 'number' ? favoriteCount : 0,
+      favorited: favorited === true,
+    };
+  };
+
   const readEntry = (data: unknown): LibraryEntry | null => {
     try {
       const authorName = (data as { authorName?: unknown }).authorName;
       return {
         exercise: parseExercise(data),
         authorName: typeof authorName === 'string' ? authorName : null,
+        ...readFavorite(data),
       };
     } catch (error) {
       // One exercise from a newer app version mustn't hide the rest of the page
@@ -147,16 +165,35 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
     return shown;
   };
 
+  const readPage = async (response: Response): Promise<LibraryPage> => {
+    const { exercises, total } = await expectOk(response).json();
+    return {
+      entries: (exercises as unknown[]).map(readEntry).filter((entry): entry is LibraryEntry => entry !== null),
+      total,
+    };
+  };
+
+  const favoritePath = (id: string) => `/exercises/${encodeURIComponent(id)}/favorite`;
+
   return {
     list: async ({ language, ...filter }: LibraryFilter): Promise<LibraryPage> => {
       const lang = language ? await languageToShow(filter.sport, language) : undefined;
-      const response = expectOk(await request(`/library${toQuery(filter, lang)}`));
-      const { exercises, total } = await response.json();
-      return {
-        entries: (exercises as unknown[]).map(readEntry).filter((entry): entry is LibraryEntry => entry !== null),
-        total,
-      };
+      return readPage(await request(`/library${toQuery(filter, lang)}`));
     },
+
+    /** The exercises you saved, in every language, so the language is ignored. */
+    listFavorites: async ({ language: _language, ...filter }: LibraryFilter): Promise<LibraryPage> =>
+      readPage(await request(`/favorites${toQuery(filter)}`)),
+
+    /** Null if the server doesn't have it: gone, hidden, or only on this device. */
+    getFavorite: async (id: string): Promise<FavoriteState | null> => {
+      const response = await request(favoritePath(id));
+      if (response.status === 404) return null;
+      return readFavorite(await expectOk(response).json());
+    },
+
+    setFavorite: async (id: string, favorited: boolean): Promise<FavoriteState> =>
+      readFavorite(await expectOk(await request(favoritePath(id), { method: favorited ? 'PUT' : 'DELETE' })).json()),
 
     /** Null if it was deleted, or hidden after reports. */
     get: async (id: string): Promise<Exercise | null> => {

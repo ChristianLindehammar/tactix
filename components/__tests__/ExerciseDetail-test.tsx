@@ -28,7 +28,7 @@ jest.mock('expo-router', () => {
 // The server is the boundary: the library service's own tests cover the requests
 jest.mock('@/services/library', () => ({
   ...jest.requireActual('@/services/library'),
-  library: { get: jest.fn(), report: jest.fn(), block: jest.fn() },
+  library: { get: jest.fn(), report: jest.fn(), block: jest.fn(), getFavorite: jest.fn(), setFavorite: jest.fn() },
 }));
 const mockLibrary = library as jest.Mocked<typeof library>;
 
@@ -42,6 +42,8 @@ describe('exercise detail', () => {
     mockLibrary.get.mockReset().mockResolvedValue(null);
     mockLibrary.report.mockReset().mockResolvedValue(undefined);
     mockLibrary.block.mockReset().mockResolvedValue(undefined);
+    mockLibrary.getFavorite.mockReset().mockResolvedValue(null);
+    mockLibrary.setFavorite.mockReset();
     await exerciseRepository.save(
       buildExercise({
         ownerId: await getCurrentUserId(),
@@ -493,5 +495,73 @@ describe('exercise detail', () => {
 
     expect(screen.queryByText('Copied from')).toBeNull();
     expect(mockLibrary.get).not.toHaveBeenCalled();
+  });
+
+  describe('favourites', () => {
+    beforeEach(() => {
+      mockId = 'shared';
+      mockLibrary.get.mockResolvedValue(
+        buildExercise({ id: 'shared', ownerId: 'anna', sport: 'soccer', title: 'Rondo' }),
+      );
+      mockLibrary.getFavorite.mockResolvedValue({ favoriteCount: 4, favorited: false });
+    });
+
+    it('shows how many coaches saved it', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Saved by 4 coaches')).toBeTruthy();
+      expect(mockLibrary.getFavorite).toHaveBeenCalledWith('shared');
+    });
+
+    it('saves it as a favourite, showing the new count', async () => {
+      mockLibrary.setFavorite.mockResolvedValue({ favoriteCount: 5, favorited: true });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Add to favourites'));
+
+      expect(await screen.findByText('Remove from favourites')).toBeTruthy();
+      expect(screen.getByText('Saved by 5 coaches')).toBeTruthy();
+      expect(mockLibrary.setFavorite).toHaveBeenCalledWith('shared', true);
+    });
+
+    it('removes it from your favourites', async () => {
+      mockLibrary.getFavorite.mockResolvedValue({ favoriteCount: 1, favorited: true });
+      mockLibrary.setFavorite.mockResolvedValue({ favoriteCount: 0, favorited: false });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Remove from favourites'));
+
+      expect(await screen.findByText('Add to favourites')).toBeTruthy();
+      expect(mockLibrary.setFavorite).toHaveBeenCalledWith('shared', false);
+      expect(screen.queryByText(/^Saved by/)).toBeNull();
+    });
+
+    it('says so when it cannot be saved, and keeps how it was', async () => {
+      mockLibrary.setFavorite.mockRejectedValue(new LibraryError('offline'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      fireEvent.press(await screen.findByText('Add to favourites'));
+
+      expect(await screen.findByText('Could not update your favourites.')).toBeTruthy();
+      expect(screen.getByText('Add to favourites')).toBeTruthy();
+      expect(screen.getByText('Saved by 4 coaches')).toBeTruthy();
+    });
+
+    it('offers nothing when the server cannot say, and still shows the exercise', async () => {
+      mockLibrary.getFavorite.mockRejectedValue(new LibraryError('signedOut'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Rondo')).toBeTruthy();
+      expect(screen.queryByTestId('toggle-favorite')).toBeNull();
+    });
+
+    it('lets the author see the count of their own exercise, but not save it', async () => {
+      mockId = 'exercise-1';
+      mockLibrary.getFavorite.mockResolvedValue({ favoriteCount: 1, favorited: false });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Saved by 1 coach')).toBeTruthy();
+      expect(screen.queryByTestId('toggle-favorite')).toBeNull();
+    });
   });
 });

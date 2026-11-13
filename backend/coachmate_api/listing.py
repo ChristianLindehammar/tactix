@@ -96,15 +96,18 @@ def build_listing(args, owner_id):
     return _build(args, ['e.owner_id = %s'], [owner_id])
 
 
+# Leaves out hidden exercises, those the viewer reported and those by coaches the viewer blocked
+NOT_UNWANTED = [
+    'e.hidden_at IS NULL',
+    'NOT EXISTS (SELECT 1 FROM exercise_reports r WHERE r.exercise_id = e.id AND r.reporter_id = %s)',
+    'NOT EXISTS (SELECT 1 FROM user_blocks b WHERE b.blocker_id = %s AND b.blocked_id = e.owner_id)',
+]
+
+
 def build_library(args, viewer_id):
-    """Every coach's public exercises, minus hidden ones, those the viewer reported and those by
-    coaches the viewer blocked. A language matches its regional variants too, so sv finds sv-FI."""
-    where = [
-        "e.visibility = 'public'",
-        'e.hidden_at IS NULL',
-        'NOT EXISTS (SELECT 1 FROM exercise_reports r WHERE r.exercise_id = e.id AND r.reporter_id = %s)',
-        'NOT EXISTS (SELECT 1 FROM user_blocks b WHERE b.blocker_id = %s AND b.blocked_id = e.owner_id)',
-    ]
+    """Every coach's public exercises, minus unwanted ones. A language matches its regional variants
+    too, so sv finds sv-FI."""
+    where = ["e.visibility = 'public'", *NOT_UNWANTED]
     params = [viewer_id, viewer_id]
     if 'lang' in args:
         language = args['lang'].lower()
@@ -113,3 +116,13 @@ def build_library(args, viewer_id):
         where.append("(e.locale = %s OR e.locale LIKE %s)")
         params.extend([language, f'{language}-%'])
     return _build(args, where, params)
+
+
+def build_favorites(args, viewer_id):
+    """The exercises the viewer saved, in every language, minus unwanted ones. One its author has
+    since made private stays, as the viewer could already open it by link."""
+    where = [
+        'EXISTS (SELECT 1 FROM exercise_favorites fv WHERE fv.exercise_id = e.id AND fv.user_id = %s)',
+        *NOT_UNWANTED,
+    ]
+    return _build(args, where, [viewer_id, viewer_id, viewer_id])

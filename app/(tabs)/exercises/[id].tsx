@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { Alert, ScrollView, StyleSheet, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -14,7 +15,7 @@ import { StarRating } from '@/components/StarRating';
 import { getCurrentUserId } from '@/services/currentUser';
 import { ratingRepository } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
-import { library } from '@/services/library';
+import { FavoriteState, library } from '@/services/library';
 import { Exercise, RatingStars } from '@/types/exercise';
 import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
@@ -50,11 +51,23 @@ export default function ExerciseDetailScreen() {
   const [failure, setFailure] = useState<string | null>(null);
   const [stepIndex, setStepIndex] = useState(0);
   const [origin, setOrigin] = useState<Origin | null>(null);
+  // Null when the server can't say: signed out, offline, or an exercise only on this device
+  const [favorite, setFavorite] = useState<FavoriteState | null>(null);
+  const [favoriteBusy, setFavoriteBusy] = useState(false);
 
   // Reloads on return from the editor, so edits show straight away
   useFocusEffect(
     useCallback(() => {
       let active = true;
+      // Apart from the exercise, which shows without it
+      library.getFavorite(id).then(
+        state => {
+          if (active) setFavorite(state);
+        },
+        () => {
+          if (active) setFavorite(null);
+        },
+      );
       // This device first, then the shared library, which is also where share links lead
       let localFailed = false;
       const found = exerciseRepository.get(id).then(
@@ -143,6 +156,19 @@ export default function ExerciseDetailScreen() {
     }
   };
 
+  const toggleFavorite = async () => {
+    if (!favorite || favoriteBusy) return;
+    setFailure(null);
+    setFavoriteBusy(true);
+    try {
+      setFavorite(await library.setFavorite(id, !favorite.favorited));
+    } catch {
+      setFailure(t('favoriteSaveFailed'));
+    } finally {
+      setFavoriteBusy(false);
+    }
+  };
+
   const clone = async () => {
     if (!exercise || !userId) return;
     setFailure(null);
@@ -197,6 +223,28 @@ export default function ExerciseDetailScreen() {
         onSelect={setStepIndex}
       />
       <ArrowLegend frames={exercise.frames} sport={exercise.sport} />
+
+      {favorite && !mine && (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityState={{ selected: favorite.favorited, disabled: favoriteBusy }}
+          disabled={favoriteBusy}
+          onPress={toggleFavorite}
+          style={styles.favoriteButton}
+          testID="toggle-favorite"
+          hitSlop={8}
+        >
+          <MaterialIcons
+            name={favorite.favorited ? 'favorite' : 'favorite-border'}
+            size={28}
+            color={FAVORITE_COLOR}
+          />
+          <ThemedText>{t(favorite.favorited ? 'removeFavorite' : 'addFavorite')}</ThemedText>
+        </Pressable>
+      )}
+      {favorite && favorite.favoriteCount > 0 && (
+        <ThemedText style={styles.summary}>{t('favoriteCount', { count: favorite.favoriteCount })}</ThemedText>
+      )}
 
       <View style={styles.section}>
         <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>
@@ -276,7 +324,15 @@ export default function ExerciseDetailScreen() {
   );
 }
 
+const FAVORITE_COLOR = '#E53935';
+
 const styles = StyleSheet.create({
+  favoriteButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    alignSelf: 'flex-start',
+  },
   message: {
     flex: 1,
     alignItems: 'center',
