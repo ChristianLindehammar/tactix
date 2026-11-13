@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "25db0c97-cccc-586c-a2b6-2d34d1a28f56",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Rebound battle – 3v3 around the paint",
+  "description": "Three attackers set up around the lane, for example on both wings and in one corner, and three defenders each guard one. The coach stands at the top with the ball. When the coach shoots, all three defenders have to find their player, make contact and box out, and then go for the ball. The attackers try to get past for an offensive rebound.\n\nScoring: the defence gets one point for every secured rebound passed out to the coach. If the attackers get the rebound they play on and get two points for a put-back. Play five shots, then the teams switch roles. With nine or more players, a third team waits outside and rotates in after each round.\n\nVariations: have the coach shoot from different spots so the rebounds land on different sides, or start the defence in help position so they first have to find their player. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Call \"shot!\" as the ball leaves the hand – then everyone knows it is time to box out."
+    },
+    {
+      "id": "cp2",
+      "text": "Contact first, ball second: all three must hold their player, or someone gets a free run at the rebound."
+    },
+    {
+      "id": "cp3",
+      "text": "Low and wide in the box-out, and try to move the attacker away from the basket."
+    },
+    {
+      "id": "cp4",
+      "text": "Attackers: move before the defender makes contact – round the side or with a fake."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "L shoots from the top. Defenders X, Y and Z are between their player and the basket.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.34
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.315,
+          "endX": 0.515,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The defenders have turned and boxed out. A tries to get round along the baseline and B over the top.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.16,
+          "label": "X"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.17,
+          "endX": 0.22,
+          "endY": 0.08,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.29,
+          "endX": 0.63,
+          "endY": 0.25,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X secures the rebound and passes out to L – one point to the defence.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.39,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.18,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

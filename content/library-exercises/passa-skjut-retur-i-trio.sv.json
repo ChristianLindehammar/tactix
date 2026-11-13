@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "id": "48681f31-0336-547d-a22c-061a6f5eb7dd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Trion – passa, skjut, ta retur",
+  "description": "Tre spelare och en boll per korg. En är skytt, en passar och en tar returer. Markera två skytteplatser med koner, till exempel vinge och snett framför korgen. Passaren står vid straffkastlinjens förlängning på andra sidan och returtagaren under korgen.\n\nSkytten tar emot passningen med fötterna redan riktade mot korgen och skjuter direkt. Efter varje skott roterar alla ett steg: skytten blir returtagare, returtagaren tar bollen och blir passare, och passaren går ut och blir skytt på den andra platsen. Nästa skytt skjuter alltså från den andra konen, så att alla växlar mellan platserna.\n\nStegring: räkna gruppens träffar på två minuter och försök slå rekordet, eller låt passaren gå ut med en hand i ansiktet (lätt closeout) efter passningen. Lättare: flytta konerna närmare korgen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skytten: visa händerna som mål och ha fötterna klara före passningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Fånga och skjut i en rörelse – ingen extra studs."
+    },
+    {
+      "id": "cp3",
+      "text": "Passaren: hård, rak passning till skyttens skottficka."
+    },
+    {
+      "id": "cp4",
+      "text": "Returtagaren: fånga bollen innan den studsar, oavsett träff eller miss."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passar till skytten A på vingen. B står under korgen och väntar på returen.",
+      "markers": [
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.252,
+          "endX": 0.31,
+          "endY": 0.195
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.12,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A skjuter direkt på mottagningen. Efter skottet roterar alla ett steg.",
+      "markers": [
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.315,
+          "y": 0.15
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.335,
+          "y": 0.14,
+          "endX": 0.485,
+          "endY": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.12,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Ny rotation: B tog returen och passar nu från korgen till C vid den andra konen. A går in under korgen för returen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.185
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.205,
+          "endX": 0.48,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.165,
+          "endX": 0.34,
+          "endY": 0.125
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

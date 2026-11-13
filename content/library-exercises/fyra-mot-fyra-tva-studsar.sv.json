@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "id": "eb0af498-6825-541c-94d6-8365538df467",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Fyra mot fyra – två studsar sen passa",
+  "description": "Spela 4 mot 4 på halvplan med en regel: varje spelare får dribbla högst två gånger innan bollen måste passas eller skjutas. En tredje studs är bolltapp och bollen går över till försvaret. Regeln tvingar fram snabba passningar, skärningar och bra avstånd mellan spelarna – den som inte har bollen måste röra på sig för att bli spelbar.\n\nSpela till exempel till fem poäng eller i tidsperioder och byt lag i försvar och anfall. Vinner försvaret bollen eller tar returen går de ut över trepoängslinjen innan de anfaller.\n\nVarianter: inga studsar alls, bara passningar; ett extra poäng för korg efter assist; tillåt obegränsat med studsar för en spelare i taget.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bestäm dig innan du får bollen – vem är fri om ett ögonblick?"
+    },
+    {
+      "id": "cp2",
+      "text": "Passa och skär direkt; den som står still blir lätt att försvara."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll avståndet: fyll den tomma platsen när en lagkamrat skär."
+    },
+    {
+      "id": "cp4",
+      "text": "Använd de två studsarna till att skapa en passningsvinkel, inte för att stå och studsa."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och skär direkt mot korgen. X följer med. A har inte studsat alls.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.425,
+          "y": 0.43
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.425
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.36,
+          "endX": 0.4,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.67,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.12,
+          "label": "W"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har fyllt hörnet och C toppen. B tar två studsar mot korgen och passar sedan till D på kanten.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.67,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.43
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.41,
+          "endX": 0.76,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.255,
+          "endX": 0.86,
+          "endY": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.12,
+          "label": "W"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

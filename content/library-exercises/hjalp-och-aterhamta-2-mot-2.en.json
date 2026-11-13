@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "id": "8aa5bd39-2d3c-517c-8d7b-b1069355cc16",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Help and get back – 2v2",
+  "description": "Play 2v2 in the half-court with one attacker at the top and one on the wing. The ball handler at the top drives to the basket. The wing defender (the help) steps into the driving lane – either a quick stunt at the ball or a real stop if the driver has beaten their own defender. When the ball is kicked out to the wing, the helper recovers to their player with a closeout.\n\nFrom there it is live until the offence scores or the defence wins the ball or the rebound. The next pairs come in; rotate so everyone plays offence and defence and both spots.\n\nStart at half speed with a set drive and kick-out before going live. Give the defence a point for every stop. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Help: have one foot in the driving lane before the drive comes – see ball and player."
+    },
+    {
+      "id": "cp2",
+      "text": "Show yourself clearly to the driver, but don't leave your own player wide open."
+    },
+    {
+      "id": "cp3",
+      "text": "Closeout: sprint the first steps, short quick steps at the end, hands up to the shot."
+    },
+    {
+      "id": "cp4",
+      "text": "Offence: read the help – if it comes, kick it out; if it stays home, finish yourself."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A drives past X towards the basket. Y steps into the driving lane to help.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.36
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.34,
+          "endX": 0.59,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.13,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.14,
+          "endX": 0.66,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A stops and kicks it out to B. Y recovers with a closeout on B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.635,
+          "y": 0.2,
+          "endX": 0.83,
+          "endY": 0.215
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.11,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.115,
+          "endX": 0.78,
+          "endY": 0.165
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Live 2v2: B attacks the closeout off the dribble, A moves to a new open spot. Play to a score or a stop.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.33,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.255,
+          "endX": 0.59,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.15,
+          "label": "Y"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

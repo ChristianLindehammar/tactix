@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "b3191625-148a-59a1-a195-6c2e0e6f3c06",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Returkampen – 3 mot 3 runt målområdet",
+  "description": "Tre anfallare ställer sig runt 3-sekundersområdet, till exempel på båda vingarna och i ena hörnan, och tre försvarare markerar var sin. Tränaren står på toppen med bollen. När tränaren skjuter ska alla tre försvarare hitta sin spelare, ta kontakt och blockera ut, och sedan gå efter bollen. Anfallarna försöker ta sig förbi och ta offensiv retur.\n\nPoäng: försvaret får en poäng för varje säkrad retur som passas ut till tränaren. Tar anfallarna returen spelar de vidare och får två poäng om de gör mål direkt. Kör fem skott, sedan byter lagen roller. Är ni nio eller fler väntar ett tredje lag utanför och byter in efter varje omgång.\n\nVarianter: låt tränaren skjuta från olika platser så att returerna hamnar på olika sidor, eller låt försvaret starta i hjälpläge så att de först måste hitta sin spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ropa \"skott!\" när bollen lämnar handen – då vet alla att det är dags att blockera ut."
+    },
+    {
+      "id": "cp2",
+      "text": "Kontakt först, boll sedan: alla tre måste hålla sin spelare, annars kommer någon fri till returen."
+    },
+    {
+      "id": "cp3",
+      "text": "Låg och bred i blockeringen, och försök flytta anfallaren bort från korgen."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfallare: rör dig innan försvararen får kontakt – runt sidan eller med en finta."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "L skjuter från toppen. Försvararna X, Y och Z står mellan sin spelare och korgen.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.34
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.315,
+          "endX": 0.515,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.73,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Försvararna har vänt och blockerat ut. A försöker runt längs baslinjen och B runt på ovansidan.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.16,
+          "label": "X"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.17,
+          "endX": 0.22,
+          "endY": 0.08,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.29,
+          "endX": 0.63,
+          "endY": 0.25,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X säkrar returen och passar ut till L – en poäng till försvaret.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.39,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.18,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.08,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.08,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

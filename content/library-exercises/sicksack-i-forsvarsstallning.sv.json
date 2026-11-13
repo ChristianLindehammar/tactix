@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 2,
+  "id": "4b416918-b460-5934-8095-96054862e104",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sicksack i försvarsställning",
+  "description": "Ställ ut koner i sicksack i två banor, en på varje sida, från baslinjen upp mot mittlinjen. Banan är så bred som avståndet mellan sidlinjen och 3-sekundersområdet. Spelarna ställer sig i två led på baslinjen. Första spelaren i varje led går ner i försvarsställning och glider med sidledsförflyttning diagonalt till första konen. Vid konen vänder spelaren höften (drop step) och glider vidare mot nästa kon, hela vägen till mittlinjen. Nästa spelare startar när den förra är vid andra konen. Jogga tillbaka längs sidlinjen.\n\nStegring: arbeta i par. Anfallaren dribblar i sicksack i halvfart och försvararen speglar rörelsen utan att stjäla bollen – fokus är fötterna. Byt roller efter varje bana. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Låg och bred – fötterna ska aldrig korsas eller slå ihop."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd med ett kort, snabbt steg bakåt med höften först, inte genom att resa dig upp."
+    },
+    {
+      "id": "cp3",
+      "text": "Händerna aktiva och huvudet stilla på samma höjd hela vägen."
+    },
+    {
+      "id": "cp4",
+      "text": "Med anfallare: ligg en armlängd framför och läs höften, inte bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och C glider i försvarsställning i sicksack mellan konerna och vänder höften vid varje kon. B och D startar när första spelaren är vid andra konen. Ledaren sätter igång med bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.83
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.74
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.65
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.56
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.83
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.74
+        },
+        {
+          "id": "c7",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.65
+        },
+        {
+          "id": "c8",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.93,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.895,
+          "endX": 0.28,
+          "endY": 0.845
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.815,
+          "endX": 0.14,
+          "endY": 0.755
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.725,
+          "endX": 0.28,
+          "endY": 0.665
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.92,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.93,
+          "label": "D"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.895,
+          "endX": 0.72,
+          "endY": 0.845
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.815,
+          "endX": 0.86,
+          "endY": 0.755
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.725,
+          "endX": 0.72,
+          "endY": 0.665
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.86,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.795
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Stegring: A och C dribblar i sicksack i halvfart. X och Y glider framför och speglar varje riktningsbyte.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.8
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.78,
+          "endX": 0.31,
+          "endY": 0.69,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.58,
+          "endX": 0.36,
+          "endY": 0.52
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.8
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.78,
+          "endX": 0.69,
+          "endY": 0.69,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.58,
+          "endX": 0.64,
+          "endY": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

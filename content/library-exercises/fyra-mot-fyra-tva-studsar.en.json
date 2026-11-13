@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "id": "5ccb33d4-26b2-551b-8677-dfad3ea025bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Four on four – two dribbles then pass",
+  "description": "Play 4v4 in the half-court with one rule: each player may dribble at most twice before the ball has to be passed or shot. A third dribble is a turnover and the ball goes to the defence. The rule forces quick passing, cutting and good spacing – players without the ball have to move to get open.\n\nPlay to five points or in timed periods and switch teams between offence and defence. When the defence wins the ball or the rebound, they take it out past the three-point line before attacking.\n\nVariants: no dribbles at all, passing only; an extra point for a basket off an assist; allow unlimited dribbles for one player at a time.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Decide before you catch – who will be open in a moment?"
+    },
+    {
+      "id": "cp2",
+      "text": "Pass and cut right away; a player who stands still is easy to guard."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep your spacing: fill the empty spot when a teammate cuts."
+    },
+    {
+      "id": "cp4",
+      "text": "Use your two dribbles to create a passing angle, not to stand and bounce the ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and cuts straight to the basket. X goes with them. A has not dribbled at all.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.425,
+          "y": 0.43
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.425
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.36,
+          "endX": 0.4,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.67,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.12,
+          "label": "W"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A has filled the corner and C the top. B takes two dribbles at the basket and then passes to D on the wing.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.67,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.43
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.41,
+          "endX": 0.76,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.255,
+          "endX": 0.86,
+          "endY": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.12,
+          "label": "W"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

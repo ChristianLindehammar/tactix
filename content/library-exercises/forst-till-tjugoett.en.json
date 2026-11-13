@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "id": "eefb932c-44db-5bab-9c6b-39f2602ec4c0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Exactly twenty-one – every player for themselves",
+  "description": "Three to five players at one basket with one ball. Everyone plays for themselves. One player starts with a shot from the free-throw line (or further out), worth 2 points. The ball is live straight away: everyone battles for the rebound, and whoever gets it may finish from where the rebound was taken for 1 point. The others may defend.\n\nAfter a make, the shooter takes the ball back out behind the free-throw line before the next attempt – the others may pressure there but not steal until the player has shot or started to dribble. On a miss, whoever wins the rebound takes over.\n\nFirst to exactly 21 points wins. Going over 21 sends you back to 13. More than five players: start a second game at the other basket. Variation: three-point shots are worth 3.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Box out after every shot – the rebound decides the game."
+    },
+    {
+      "id": "cp2",
+      "text": "Finish quickly and strongly after the rebound, with your feet under you."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep track of the score – sometimes you need a 1-point finish to avoid going over."
+    },
+    {
+      "id": "cp4",
+      "text": "Defend for real, but without fouling."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots from the free-throw line for 2 points. B and C take position for the rebound.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.21
+        },
+        {
+          "id": "sa",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.18,
+          "endX": 0.51,
+          "endY": 0.075
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.13,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B grabs the rebound and finishes straight away near the basket for 1 point. C tries to disrupt.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.415,
+          "y": 0.08
+        },
+        {
+          "id": "sb",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.072,
+          "endX": 0.488,
+          "endY": 0.058
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.5,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B scored and takes the ball out behind the free-throw line before the next attempt. A and C get ready to defend.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.145
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.25,
+          "endX": 0.48,
+          "endY": 0.34,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

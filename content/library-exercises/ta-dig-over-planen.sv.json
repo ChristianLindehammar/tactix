@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "d6267653-177c-519f-9a4b-0f82e0c9f3c6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Över planen – försvararna blir fler",
+  "description": "Alla spelare utom en eller två har en boll och ställer upp på ena baslinjen. Försvararna står utan boll i mittzonen mellan de två straffkastlinjerna (markera gärna med koner vid sidlinjerna). På tränarens signal dribblar alla samtidigt över planen till andra baslinjen. Försvararna får bara röra sig i mittzonen och försöker peta bort bollarna. Den som tappar bollen ut ur kontroll, går utanför sidlinjen eller tar den med händerna blir försvarare till nästa vända och ställer sin boll vid sidan.\n\nNästa vända går tillbaka åt andra hållet. Försvararna blir alltså fler för varje vända, och den eller de två som klarar sig sist vinner och börjar som försvarare i nästa omgång.\n\nVariation: bara svag hand, krav på en crossover inne i zonen, eller att den som tar sig över ska avsluta med lay-up. Smalare plan (inte ända ut till sidlinjerna) gör det svårare för dribblarna.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Läs försvararna innan du går in i zonen – leta efter luckorna."
+    },
+    {
+      "id": "cp2",
+      "text": "Skydda bollen med kroppen och håll den på sidan bort från försvararen."
+    },
+    {
+      "id": "cp3",
+      "text": "Byt tempo: lugnt in mot zonen, explosivt förbi försvararen."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvarare: samarbeta och stäng luckorna – peta på bollen, inte på armen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla dribblar på signal från baslinjen. X och Y försvarar i mittzonen mellan straffkastlinjerna.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.9,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.835
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.8,
+          "endX": 0.2,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.835
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.8,
+          "endX": 0.38,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.835
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.8,
+          "endX": 0.63,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.835
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.8,
+          "endX": 0.8,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A och D har tagit sig över, C är på väg. X petar bort bollen från B – B blir försvarare.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.295,
+          "y": 0.08
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.56
+        },
+        {
+          "id": "pb",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.56,
+          "endX": 0.26,
+          "endY": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.26
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.23,
+          "endX": 0.63,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.16
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Nästa vända går åt andra hållet och nu försvarar X, Y och B i zonen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.165
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.2,
+          "endX": 0.24,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.165
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.165
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.2,
+          "endX": 0.81,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

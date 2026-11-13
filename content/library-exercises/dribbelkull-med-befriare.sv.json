@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 2,
+  "id": "42e8116a-050d-5eea-82df-7121790ed0ef",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Frys med bollen – dribbelkull med befriare",
+  "description": "Alla spelare har en boll och dribblar fritt på en planhalva. En eller två kullare (utmärkta med västar) dribblar också, och försöker kulla de andra med fria handen. Den som blir kullad fryser på stället och håller bollen med båda händerna över huvudet. En lagkamrat befriar genom att dribbla ett varv runt den frysta spelaren, eller göra high five utan att tappa sin egen boll. Den som tappar bollen eller går utanför planhalvan räknas också som kullad.\n\nByt kullare var 45:e–60:e sekund, eller när alla är frysta. Kullarna får aldrig sluta dribbla.\n\nVariation: bara svag hand får användas, eller befriaren måste dribbla mellan benen på vägen runt. Fler kullare gör det svårare, större yta lättare.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blicken upp – du måste se både kullarna och kompisar som behöver hjälp."
+    },
+    {
+      "id": "cp2",
+      "text": "Skydda bollen med kroppen och armen när en kullare kommer nära."
+    },
+    {
+      "id": "cp3",
+      "text": "Byt tempo och riktning för att komma undan – låg studs när det blir trångt."
+    },
+    {
+      "id": "cp4",
+      "text": "Kullare: dribbla med kontroll och tvinga in spelarna mot sidlinjerna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla dribblar på planhalvan. Kullarna X och Y jagar, B och D dribblar undan.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.26
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.29,
+          "endX": 0.66,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.875,
+          "y": 0.36
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.33,
+          "endX": 0.8,
+          "endY": 0.19,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.315,
+          "y": 0.38
+        },
+        {
+          "id": "dy",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.35,
+          "endX": 0.27,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.1
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.13,
+          "endX": 0.5,
+          "endY": 0.17,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.15,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.11
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.205
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B blev kullad och fryser med bollen över huvudet. A dribblar runt B och befriar, medan Y jagar D.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.395
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.145
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.355
+        },
+        {
+          "id": "dy",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.43,
+          "endX": 0.44,
+          "endY": 0.43,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.13
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.16,
+          "endX": 0.71,
+          "endY": 0.27,
+          "bend": 0.08,
+          "waves": 2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.21,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.265,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

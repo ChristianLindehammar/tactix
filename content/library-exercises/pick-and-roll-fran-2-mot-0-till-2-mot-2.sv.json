@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 2,
+  "id": "e94d3463-2136-50f7-b77c-a56b9a8bfd5c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Screen och rulla – från 2 mot 0 till 2 mot 2",
+  "description": "Arbeta i par på halvplan. Bollföraren står på toppen och screenaren springer upp och sätter en screen på bollförarens sida, där försvararen skulle ha stått. Bollföraren väntar tills screenen står still, och dribblar sedan tätt förbi – axel mot axel så att ingen försvarare får plats emellan. Screenaren vänder och rullar mot korgen med händerna framme. Bollföraren läser: passa till den som rullar eller driv själv och lägg upp. Byt roller och sida.\n\nNär pick and roll sitter utan försvar läggs försvarare till och det blir 2 mot 2. Försvaret väljer att visa sig (screenarens försvarare kliver ut och bromsar bollföraren) eller byta. Anfallet läser försvaret och spelar fritt till poäng eller stopp.\n\nPick and roll heter samma sak på svenska. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Screenaren: bred, stilla och redo för kontakt – en screen i rörelse är en foul."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollföraren: vänta in screenen och gå axel mot axel så tätt att försvararen fastnar."
+    },
+    {
+      "id": "cp3",
+      "text": "Rulla direkt när bollföraren har passerat, med blicken mot bollen och en målhand."
+    },
+    {
+      "id": "cp4",
+      "text": "Läs försvaret: visar de sig – passa den som rullar; byter de – attackera den som blev fel."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B har satt en screen vid toppen. A dribblar tätt förbi, axel mot axel.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.46,
+          "endX": 0.27,
+          "endY": 0.37,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.31,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B rullar mot korgen och A passar i farten – eller driver själv och lägger upp.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.235
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.225,
+          "endX": 0.49,
+          "endY": 0.15
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.28,
+          "endX": 0.52,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "2 mot 2: Y kliver ut från B och visar sig mot A:s dribbling, X går över screenen och jagar A. B rullar mot korgen och A läser försvaret.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.46,
+          "endX": 0.27,
+          "endY": 0.4,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.35,
+          "endX": 0.4,
+          "endY": 0.39
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.41,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.245,
+          "endX": 0.24,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.13
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "bf265a6d-f191-5dd3-aff3-9765b16ea09a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Skydda din, peta bort deras",
+  "description": "Alla spelare har en boll och dribblar innanför trepoängslinjen. Målet är att hålla igång sin egen dribbling och samtidigt peta ut de andras bollar ur området. Den som tappar bollen, slutar dribbla eller kliver utanför linjen är ute.\n\nDen som är ute gör en snabb uppgift vid sidan, till exempel fem varv bollen runt midjan eller tio studsar med svag hand, och kommer sedan tillbaka in. Vill ni spela om vinnare räknar varje spelare hur många gånger hen åkt ut – lägst antal efter två minuter vinner. Ett annat alternativ är rak utslagning tills en spelare är kvar.\n\nKrymp området när det blir glest: först halva bågen, sedan bara 3-sekundersområdet. Stegring: bara svag hand.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribbla med handen längst bort från motståndaren – kroppen är din sköld."
+    },
+    {
+      "id": "cp2",
+      "text": "Låg studs och blicken uppe, så du ser vem som kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Peta med den fria handen bara när du själv har bollen under kontroll."
+    },
+    {
+      "id": "cp4",
+      "text": "Ha fötterna i rörelse – den som står still blir ett lätt mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla dribblar innanför trepoängslinjen. D närmar sig B för att peta bort bollen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.21
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.135
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.215,
+          "endX": 0.48,
+          "endY": 0.225,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D petar ut B:s boll ur området. B gör fem varv runt midjan vid sidan och kommer sedan tillbaka in.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.065
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.53,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.42
+        },
+        {
+          "id": "pb",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.3,
+          "endX": 0.36,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Området har krympt till 3-sekundersområdet. A och C kämpar om att vara sist kvar medan B gör sin uppgift.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.06
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.105
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.095
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

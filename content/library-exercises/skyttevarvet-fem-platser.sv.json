@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "37487725-5c40-595e-a051-513e096de26d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Skyttevarvet – fem platser",
+  "description": "Markera fem skytteplatser med koner precis innanför trepoängslinjen: vänster hörna, vänster vinge, toppen, höger vinge och höger hörna. Spelarna jobbar i par vid en korg – en skytt och en som tar returer och passar. Skytten börjar i ena hörnan och ska sätta ett skott från varje plats innan hen får gå vidare till nästa. Missar skytten två gånger på samma plats går hen vidare ändå, så att varvet inte fastnar.\n\nReturtagaren fångar bollen, oavsett om den går i eller inte, och passar ut till skytten på nästa plats. När skytten har gått hela varvet byter paret roller. Har ni fler par delar två par på en korg och startar i var sin hörna.\n\nStegring: tävla om vem som klarar varvet på minst antal skott, ta klocka, eller flytta konerna ut till trepoängslinjen för vana spelare. Lättare: kortare avstånd eller bara tre platser.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Var redo innan bollen kommer: händerna uppe, knäna böjda och fötterna mot korgen."
+    },
+    {
+      "id": "cp2",
+      "text": "Samma skottrörelse från varje plats – bara benen ändrar kraften."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll kvar handleden efter skottet och följ bollen med blicken."
+    },
+    {
+      "id": "cp4",
+      "text": "Returtagaren: passa i bröstvinkel till skytten så att hen kan skjuta direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A börjar i vänster hörna och skjuter. B står under korgen och tar returen.",
+      "markers": [
+        {
+          "id": "c_lw",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.19
+        },
+        {
+          "id": "c_top",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "c_rw",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.19
+        },
+        {
+          "id": "c_rc",
+          "type": "cone",
+          "x": 0.87,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.225,
+          "y": 0.06
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.06,
+          "endX": 0.48,
+          "endY": 0.058
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.13,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har satt skottet och flyttar till vänster vinge. B passar ut så att A kan skjuta direkt.",
+      "markers": [
+        {
+          "id": "c_lc",
+          "type": "cone",
+          "x": 0.13,
+          "y": 0.09
+        },
+        {
+          "id": "c_top",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.27
+        },
+        {
+          "id": "c_rw",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.19
+        },
+        {
+          "id": "c_rc",
+          "type": "cone",
+          "x": 0.87,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.125,
+          "endX": 0.17,
+          "endY": 0.165
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.185
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.19,
+          "endX": 0.31,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter från toppen och fortsätter sedan till höger vinge och höger hörna. Efter varvet byter A och B roller.",
+      "markers": [
+        {
+          "id": "c_lc",
+          "type": "cone",
+          "x": 0.13,
+          "y": 0.09
+        },
+        {
+          "id": "c_lw",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.19
+        },
+        {
+          "id": "c_rw",
+          "type": "cone",
+          "x": 0.78,
+          "y": 0.19
+        },
+        {
+          "id": "c_rc",
+          "type": "cone",
+          "x": 0.87,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.215
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.195,
+          "endX": 0.5,
+          "endY": 0.08
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.12,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

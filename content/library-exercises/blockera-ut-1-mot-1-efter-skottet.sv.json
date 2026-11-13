@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "id": "ae4e86c3-54b8-5680-a2f4-9e8d0da181c6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Gå ut, vänd och blockera – 1 mot 1 om returen",
+  "description": "Tränaren står på toppen med bollen. En anfallare står på vingen och en försvarare i hjälpläge vid 3-sekundersområdet. Försvararen gör en closeout mot anfallaren – snabba steg först, sedan korta steg med en hand uppe – som om anfallaren hade fått bollen.\n\nNär tränaren skjuter ropar försvararen \"skott!\", vänder sig, tar kontakt med anfallaren och blockerar ut. Anfallaren försöker ta sig förbi för att ta returen. Försvararen vinner när hen har säkrat bollen och passat ut till tränaren; tar anfallaren returen får hen försöka göra poäng direkt. Byt roller efter varje försök och låt nästa par komma in.\n\nStegring: låt anfallaren starta en rörelse mot korgen redan innan skottet, eller ge poäng – två till försvaret för en säkrad retur, en till anfallaren för en offensiv retur. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hitta din spelare först, sedan bollen – titta inte bara upp mot ringen."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd på främre foten och sätt rumpan och ryggen i anfallarens bröst."
+    },
+    {
+      "id": "cp3",
+      "text": "Bred bas och armarna ut – håll anfallaren bakom dig tills bollen kommer ner."
+    },
+    {
+      "id": "cp4",
+      "text": "Gå sedan efter bollen med båda händerna och skydda den innan du passar ut."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X startar i hjälpläge och gör closeout mot A på vingen. B och Y är nästa par.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.33
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.145,
+          "endX": 0.29,
+          "endY": 0.185
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.44,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "L skjuter. X vänder, tar kontakt och blockerar ut medan A försöker runt längs baslinjen.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.31,
+          "endX": 0.515,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.19,
+          "endX": 0.22,
+          "endY": 0.09,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X har hållit A bakom sig, säkrat returen och passar ut till L.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.18,
+          "endX": 0.5,
+          "endY": 0.31
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

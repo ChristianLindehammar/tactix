@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "d299b3d2-c113-5c4f-ae68-1c385b5e0317",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Across the court – the defenders multiply",
+  "description": "All players except one or two have a ball and line up on one baseline. The defenders stand without a ball in the middle zone between the two free-throw lines (mark it with cones at the sidelines). On the coach's signal everyone dribbles across the court to the other baseline at the same time. Defenders may only move inside the middle zone and try to poke the balls away. Anyone who loses control of the ball, steps out of bounds or picks the ball up becomes a defender for the next wave and puts their ball aside.\n\nThe next wave goes back the other way. The defence grows with every wave, and the last one or two dribblers left win and start as defenders in the next round.\n\nVariations: weak hand only, a crossover required inside the zone, or anyone who gets across finishes with a lay-up. A narrower court (not all the way to the sidelines) makes it harder for the dribblers.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Read the defenders before you enter the zone – look for the gaps."
+    },
+    {
+      "id": "cp2",
+      "text": "Protect the ball with your body and keep it on the side away from the defender."
+    },
+    {
+      "id": "cp3",
+      "text": "Change speed: calm up to the zone, explosive past the defender."
+    },
+    {
+      "id": "cp4",
+      "text": "Defenders: work together and close the gaps – poke at the ball, not the arm."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone dribbles from the baseline on the signal. X and Y defend in the middle zone between the free-throw lines.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.9,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.835
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.8,
+          "endX": 0.2,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.835
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.8,
+          "endX": 0.38,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.835
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.8,
+          "endX": 0.63,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.835
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.8,
+          "endX": 0.8,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A and D are across and C is on the way. X pokes the ball away from B – B becomes a defender.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.295,
+          "y": 0.08
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.56
+        },
+        {
+          "id": "pb",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.56,
+          "endX": 0.26,
+          "endY": 0.6
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.26
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.23,
+          "endX": 0.63,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.16
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The next wave goes the other way, and now X, Y and B defend in the zone.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.79
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.79
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.165
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.2,
+          "endX": 0.24,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.165
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.165
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.2,
+          "endX": 0.81,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

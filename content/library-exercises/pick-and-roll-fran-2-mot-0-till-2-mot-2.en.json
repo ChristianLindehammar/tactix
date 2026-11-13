@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 2,
+  "id": "79c8e6c2-ab02-56eb-831b-d6b0c681813d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Screen and roll – from 2v0 to 2v2",
+  "description": "Work in pairs in the half-court. The ball handler starts at the top and the screener runs up and sets a screen on the ball handler's side, where the defender would be. The ball handler waits for the screen to be set and then dribbles tight past it – shoulder to shoulder so no defender can squeeze through. The screener turns and rolls to the basket with hands ready. The ball handler reads: pass to the roller or take it all the way for a lay-up. Switch roles and sides.\n\nOnce the pick and roll works without defence, add defenders for 2v2. The defence chooses to show (the screener's defender steps out to slow the ball handler) or to switch. The offence reads the defence and plays live to a score or a stop.\n\nThe diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Screener: wide, still and ready for contact – a moving screen is a foul."
+    },
+    {
+      "id": "cp2",
+      "text": "Ball handler: wait for the screen and go shoulder to shoulder so tight the defender gets caught."
+    },
+    {
+      "id": "cp3",
+      "text": "Roll as soon as the ball handler is past, eyes on the ball and a target hand up."
+    },
+    {
+      "id": "cp4",
+      "text": "Read the defence: if they show, hit the roller; if they switch, attack the mismatch."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B has set a screen at the top. A dribbles tight past it, shoulder to shoulder.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.46,
+          "endX": 0.27,
+          "endY": 0.37,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.31,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B rolls to the basket and A passes in stride – or drives and lays it up.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.235
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.225,
+          "endX": 0.49,
+          "endY": 0.15
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.28,
+          "endX": 0.52,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "2v2: Y steps out from B and shows on A's dribble, X goes over the screen chasing A. B rolls to the basket and A reads the defence.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.505,
+          "y": 0.45
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.46,
+          "endX": 0.27,
+          "endY": 0.4,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.35,
+          "endX": 0.4,
+          "endY": 0.39
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.41,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.245,
+          "endX": 0.24,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.13
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "id": "a1954b5a-c473-5854-bd23-59a912e4c363",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Close out, turn and box out – 1v1 for the rebound",
+  "description": "The coach stands at the top with the ball. One attacker stands on the wing and a defender in help position by the lane. The defender closes out to the attacker – quick steps first, then short choppy steps with a hand up – as if the attacker had the ball.\n\nWhen the coach shoots, the defender calls \"shot!\", turns, makes contact with the attacker and boxes out. The attacker tries to get past to grab the rebound. The defender wins by securing the ball and passing it out to the coach; if the attacker gets the rebound they may try to score straight away. Switch roles after every go and let the next pair in.\n\nProgressions: let the attacker start a move towards the basket before the shot, or keep score – two to the defence for a secured rebound, one to the attacker for an offensive rebound. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Find your player first, then the ball – don't just look up at the rim."
+    },
+    {
+      "id": "cp2",
+      "text": "Pivot on the front foot and put your backside and back into the attacker's chest."
+    },
+    {
+      "id": "cp3",
+      "text": "Wide base and arms out – keep the attacker behind you until the ball comes down."
+    },
+    {
+      "id": "cp4",
+      "text": "Then go and get the ball with both hands and protect it before you pass out."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X starts in help position and closes out to A on the wing. B and Y are the next pair.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.33
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.145,
+          "endX": 0.29,
+          "endY": 0.185
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.44,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "L shoots. X turns, makes contact and boxes out while A tries to get round along the baseline.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.31,
+          "endX": 0.515,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.19,
+          "endX": 0.22,
+          "endY": 0.09,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X has kept A behind, secured the rebound and passes out to L.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.18,
+          "endX": 0.5,
+          "endY": 0.31
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

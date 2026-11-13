@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "bbd8249f-c604-5e02-ad1a-7cbbd523f397",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Guard yours, poke theirs",
+  "description": "Every player has a ball and dribbles inside the three-point line. The aim is to keep your own dribble alive while poking the other balls out of the area. Anyone who loses their ball, stops dribbling or steps outside the line is out.\n\nA player who is out does a quick task at the side, for example five ball wraps round the waist or ten weak-hand dribbles, and then comes back in. To play for a winner, each player counts how many times they have been out – the lowest total after two minutes wins. Another option is straight elimination until one player is left.\n\nShrink the area when it thins out: first half the arc, then only the paint. Progression: weak hand only.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribble with the hand furthest from your opponent – your body is the shield."
+    },
+    {
+      "id": "cp2",
+      "text": "Low dribble and eyes up so you see who is coming."
+    },
+    {
+      "id": "cp3",
+      "text": "Poke with your free hand only when your own ball is under control."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep your feet moving – a player standing still is an easy target."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Everyone dribbles inside the three-point line. D closes in on B to poke the ball away.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.21
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.135
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.215,
+          "endX": 0.48,
+          "endY": 0.225,
+          "bend": 0.02,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D pokes B's ball out of the area. B does five wraps round the waist at the side and then comes back in.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.07,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.07
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.15,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.11
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.065
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.53,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.42
+        },
+        {
+          "id": "pb",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.3,
+          "endX": 0.36,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The area has shrunk to the paint. A and C battle to be the last one in while B does the task.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.21
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.06
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.06
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.105
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.095
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

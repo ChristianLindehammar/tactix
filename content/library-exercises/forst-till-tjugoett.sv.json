@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "id": "4a39d278-e126-5a90-95f1-fbf31dc33dab",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Exakt tjugoett – alla mot alla",
+  "description": "Tre till fem spelare vid samma korg och en boll. Alla spelar för sig själva. En spelare börjar med ett skott från straffkastlinjen (eller längre ut), värt 2 poäng. Bollen är levande direkt: alla slåss om returen, och den som tar den får avsluta därifrån returen togs för 1 poäng. Övriga får försvara.\n\nEfter en träff tar skytten med sig bollen ut bakom straffkastlinjen innan nästa försök – där får de andra pressa men inte stjäla förrän hen har skjutit eller börjat dribbla. Går det inte i tar den som vinner returen över.\n\nFörst till exakt 21 poäng vinner. Hamnar man över 21 åker man tillbaka till 13. Fler än fem spelare: starta ett spel till vid andra korgen. Variation: trepoängsskott ger 3 poäng.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spärra ut efter varje skott – returen avgör spelet."
+    },
+    {
+      "id": "cp2",
+      "text": "Avsluta snabbt och starkt efter returen, med fötterna under dig."
+    },
+    {
+      "id": "cp3",
+      "text": "Räkna poängen – ibland måste du välja ett 1-poängsavslut för att inte gå över."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvara på riktigt, men utan att foula."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skjuter från straffkastlinjen för 2 poäng. B och C tar position för returen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.21
+        },
+        {
+          "id": "sa",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.18,
+          "endX": 0.51,
+          "endY": 0.075
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.13,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar returen och avslutar direkt nära korgen för 1 poäng. C försöker störa.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.415,
+          "y": 0.08
+        },
+        {
+          "id": "sb",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.072,
+          "endX": 0.488,
+          "endY": 0.058
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.5,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B träffade och tar bollen ut bakom straffkastlinjen innan nästa försök. A och C gör sig redo att försvara.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.145
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.25,
+          "endX": 0.48,
+          "endY": 0.34,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

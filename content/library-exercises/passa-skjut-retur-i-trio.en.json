@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "id": "255fe7b8-37bb-5697-a5a0-32ac6ad3ff54",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "The trio – pass, shoot, rebound",
+  "description": "Three players and one ball per basket. One shoots, one passes and one rebounds. Mark two shooting spots with cones, for example the wing and a slot spot in front of the basket. The passer stands level with the free-throw line on the other side and the rebounder under the basket.\n\nThe shooter catches the pass with the feet already facing the basket and shoots straight away. After every shot everyone rotates one step: the shooter becomes the rebounder, the rebounder takes the ball and becomes the passer, and the passer goes out to shoot from the other spot. So the next shooter uses the other cone and everyone switches between the spots.\n\nProgressions: count the group's makes in two minutes and try to beat the record, or have the passer follow the pass with a hand up (a soft closeout). Easier: move the cones closer to the basket. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Shooter: show your hands as a target and have your feet set before the pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Catch and shoot in one motion – no extra dribble."
+    },
+    {
+      "id": "cp3",
+      "text": "Passer: a firm, straight pass into the shooter's shot pocket."
+    },
+    {
+      "id": "cp4",
+      "text": "Rebounder: catch the ball before it bounces, make or miss."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passes to shooter A on the wing. B waits under the basket for the rebound.",
+      "markers": [
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.252,
+          "endX": 0.31,
+          "endY": 0.195
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.12,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A shoots on the catch. After the shot everyone rotates one step.",
+      "markers": [
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.315,
+          "y": 0.15
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.335,
+          "y": 0.14,
+          "endX": 0.485,
+          "endY": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.12,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Next round: B took the rebound and now passes from the basket to C at the other cone. A moves under the basket to rebound.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.185
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.205,
+          "endX": 0.48,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.165,
+          "endX": 0.34,
+          "endY": 0.125
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

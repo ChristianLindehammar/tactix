@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 2,
+  "id": "e3beb450-d81f-53e1-a857-18917589516d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Passa och gå mot korgen",
+  "description": "Två led: ett på toppen utanför trepoängslinjen, där alla har en boll, och ett på kanten. Första spelaren på toppen passar till kanten. Direkt efter passningen gör passaren en finta – ett kort steg bort från korgen – och skär sedan hårt mot korgen framför sin tänkta försvarare. Kantspelaren passar tillbaka i farten och passaren avslutar med lay-up.\n\nRotation: den som lade upp tar sin retur och ställer sig sist i kantledet. Kantspelaren springer till toppledet. Kör från båda sidor så att spelarna lägger upp med både höger och vänster hand.\n\nStegring: sätt en passiv försvarare på passaren, som ska vända bort blicken mot bollen när passningen går.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passa och gå direkt – vänta inte för att se var bollen tar vägen."
+    },
+    {
+      "id": "cp2",
+      "text": "Fintan säljer skärningen: ett kort, bestämt steg bort, sedan explosivt mot korgen."
+    },
+    {
+      "id": "cp3",
+      "text": "Skär framför försvararen och visa en tydlig målhand för passningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Kantspelaren passar dit skäraren är på väg, inte dit hen står."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till D på kanten. B och C väntar med var sin boll, E står näst på tur i kantledet.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.89,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.31,
+          "endX": 0.83,
+          "endY": 0.235
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A gör en finta bort från korgen och skär hårt mot korgen. D passar tillbaka i farten.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.89,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.34,
+          "endX": 0.39,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.28,
+          "endX": 0.54,
+          "endY": 0.14,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.765,
+          "y": 0.18
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.175,
+          "endX": 0.59,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar med lay-up, tar returen och går till kantledet. D springer till toppledet och B kör nästa.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.89,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.08
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.585,
+          "y": 0.075,
+          "endX": 0.515,
+          "endY": 0.06
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.26,
+          "endX": 0.68,
+          "endY": 0.58
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "id": "b62914ae-158e-5b68-a41b-5eaa58faa3c0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Pulsen uppe – två straffkast",
+  "description": "Spelarna går ihop två och två, ett par per korg (eller två par per korg om ni är många). Den ena sprintar från baslinjen till mittlinjen och tillbaka, går direkt till straffkastlinjen och skjuter två straffkast. Kompisen tar returerna och passar tillbaka.\n\nVarje miss ger skytten en extra löpning baslinje–mittlinje–baslinje innan rollerna byts. Räkna alla träffar i laget och sätt ett gemensamt mål, till exempel 30 träffar på 6 minuter, eller räkna hur många av 20 försök laget sätter.\n\nPoängen är att hitta samma rutin före varje straffkast även när pulsen är hög: andas ut, samma antal studsar, samma blick mot ringen. Stegring: längre löpning (baslinje–baslinje) eller en tredje straffkast som måste sitta.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Samma rutin varje gång – andas ut och ta dina studsar."
+    },
+    {
+      "id": "cp2",
+      "text": "Gå inte för snabbt till linjen: en lugn sekund vid linjen är värd mer än en snabb start."
+    },
+    {
+      "id": "cp3",
+      "text": "Böj benen – trötta skyttar skjuter korta, kraften kommer underifrån."
+    },
+    {
+      "id": "cp4",
+      "text": "Spring löpningen på riktigt, annars tränar du inte det som händer i matchen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A sprintar baslinje–mittlinje–baslinje. B väntar med bollen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.13,
+          "endX": 0.14,
+          "endY": 0.46
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.46,
+          "endX": 0.22,
+          "endY": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A skjuter två straffkast direkt efter löpningen. B tar returen och passar tillbaka.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.21
+        },
+        {
+          "id": "sa",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.18,
+          "endX": 0.51,
+          "endY": 0.075
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.49
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A missade ett och gör en extra löpning. B tar bollen till straffkastlinjen – nu är det B:s tur.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.13,
+          "endX": 0.14,
+          "endY": 0.46
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.46,
+          "endX": 0.22,
+          "endY": 0.13
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.49
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.165
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.2,
+          "endX": 0.52,
+          "endY": 0.25,
+          "bend": 0.02,
+          "waves": 2
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
