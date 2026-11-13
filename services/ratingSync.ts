@@ -93,14 +93,16 @@ export function createRatingSync({
     const response = await request('/ratings', { headers: authHeaders });
     const { ratings: theirs } = await response.json();
     const kept = await local.mergeMine(theirs);
-    await AsyncStorage.multiSet(kept.map(r => [settledKey(r.userId, r.exerciseId), r.updatedAt]));
+    if (kept.length > 0) {
+      await AsyncStorage.multiSet(kept.map(r => [settledKey(r.userId, r.exerciseId), r.updatedAt]));
+    }
   };
 
   const runPass = async () => {
     try {
       await pass();
     } catch (error) {
-      if (!(error instanceof SyncStopped)) console.warn('Rating sync failed:', error);
+      if (!(error instanceof SyncStopped)) console.warn('Rating sync failed:', error, (error as Error).cause ?? '');
     }
   };
 

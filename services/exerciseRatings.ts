@@ -97,6 +97,8 @@ export function createLocalRatingRepository(
           const old = here.get(rating.exerciseId);
           return !old || Date.parse(rating.updatedAt) > Date.parse(old.updatedAt);
         });
+      // AsyncStorage on a phone refuses an empty multiSet, though the test mock allows it
+      if (newer.length === 0) return newer;
       await withStorageErrors(() =>
         AsyncStorage.multiSet(
           newer.map(rating => [`${KEY_PREFIX}${userId}:${rating.exerciseId}`, JSON.stringify(rating)]),
