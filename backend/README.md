@@ -126,7 +126,9 @@ Needs Python 3.9 or newer and MariaDB 10.4 or newer.
 4. Run `python scripts/migrate.py`. Repeat this on every deploy.
 5. Point Passenger at `passenger_wsgi.py`, mounted at `/coachmate/api`.
 6. Check that `https://lindehammar-konsult.se/coachmate/api/health` answers `{"status":"ok"}`.
-7. Add `scripts/backup_db.sh` to cron.
+7. Add `scripts/backup_db.sh` to cron. Cron doesn't see settings made in the host's control panel, so
+   without a `.env` the script reads them from `~/.cl.selector/python-selector.json`, where CloudLinux's
+   Python app panel keeps them. The `SetEnv` lines the panel writes to `.htaccess` can be out of date.
 8. Set `MODERATOR_EMAIL` in `.env` to hear about reported exercises.
 9. For Apple sign-in, create a Sign in with Apple key under Keys at developer.apple.com, upload the `.p8` outside the web folder with `chmod 600`, and set the `APPLE_*` settings in `.env`. Without them, deleting an account can't revoke its Apple sign-in, which the App Store requires.
 
