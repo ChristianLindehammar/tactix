@@ -313,6 +313,62 @@ Internal only, not shown in the app. Each exercise reuses the idea of a drill. I
 | stegen-1-mot-1 | basketball | Classic 1-on-1 king of the court ladder game (general coaching knowledge). Own title; added short games to 2–3, winner up/loser down rules, dribble-limit and zone variants | 2026-11-13 |
 | vinnarna-stannar-3-mot-3 | basketball | Classic 3-on-3 winners stay game (general coaching knowledge). Own title "Gör mål och stå kvar"; added winners switching to defence, clear-past-the-arc rule after a stop, scoring variants | 2026-11-13 |
 | sprinta-tillbaka-5-mot-5 | basketball | Classic 5-on-5 transition defence sprint-back drill (general coaching knowledge). Own title; added stop-ball/protect-lane/match-up order, baseline-touch penalty for 3v5/4v5, points for stops | 2026-11-13 |
+| hokar-och-duvor-tvars-over-isen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill O-10. Own title; added cone lane layout, catch-and-become-hawk rotation and a with-ball variant | 2026-11-13 |
+| signalakning-i-led | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drills O-03–O-09. Own title; combined signal tasks, added ball handover to the new leader and slalom as harder variant | 2026-11-13 |
+| korsande-attor-fran-tva-koer | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-01. Own title; designed two-circle layout, side switching and progressions | 2026-11-13 |
+| full-fart-runt-mittcirkeln-och-skott | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-02. Own title; designed course round board cone and centre circle, mirrored second queue, coaching points | 2026-11-13 |
+| akbana-med-hela-varv-och-vaggspel | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-03. Own title; designed cone layout, side switching and with-ball progression | 2026-11-13 |
+| slalom-sargpass-och-dubbla-vaggspel | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-05. Own title; designed full-rink layout, start timing, passer rotation and coaching points | 2026-11-13 |
+| tre-skridskostationer | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-07. Own title; placed stations over the rink, added a ball lap, rewrote technique tips as coaching points | 2026-11-13 |
+| baklanges-mottagning-och-skott | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill S-08. Own title; designed layout, start timing, direction and passer switching | 2026-11-13 |
+| passningar-i-par-stilla-och-i-rorelse | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drills T-01 + T-03. Own title; standing and moving pair passing combined, added variants and receiving points | 2026-11-13 |
+| fart-in-i-passningen-och-avslut | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-05. Own title; own cone layout, added rotation detail and a defender progression | 2026-11-13 |
+| lagg-tillbaka-och-jaga-1-mot-1 | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-06. Own title; added end conditions, defending points and progressions | 2026-11-13 |
+| behall-bollen-i-ringen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-08 (stations I/II). Own title; added area size, coaching points and touch/pass-count progressions | 2026-11-13 |
+| overstegsakning-i-cirkel-med-bollen-bakat | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-08 (station IV). Own title; added direction change, two-ball and first-time variants, crossover points | 2026-11-13 |
+| vaggspel-och-lagg-tillbaka-till-skytten | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-11. Own title; added defender progression and timing points | 2026-11-13 |
+| lang-passning-runda-konen-och-skott | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-12. Own title; own layout with passers near the end line, added coaching points | 2026-11-13 |
+| overlapp-langs-sargen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill T-14. Own title; added far-post rebound, both sides and a 2v1 progression | 2026-11-13 |
+| lyror-i-fyrkant-och-lyrtennis | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drills F-06 + F-10. Own title; square and tennis combined as a variant, added technique points | 2026-11-13 |
+| passning-och-1-mot-1-genom-porten | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill A-03. Own title; added gate layout, groups, rotation, narrower-gate and later-defender variants | 2026-11-13 |
+| lyra-over-sargbiten | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill A-04. Own title; added layout, rotation, first-time-finish and defender variants, coaching points | 2026-11-13 |
+| utkast-lagg-tillbaka-och-2-mot-1 | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill A-05. Own title; added full-rink layout, centre-circle option for big rinks, coaching points | 2026-11-13 |
+| hart-snett-inspel-fran-sargen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill A-08. Own title; added layout, side switch, defender variant, coaching points | 2026-11-13 |
+| vand-over-banan-och-djupledspass | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill A-13. Own title; added full-rink layout with two goalkeepers, third-player progression, coaching points | 2026-11-13 |
+| styr-ut-mot-hornflaggan-1-mot-1 | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill F-01. Own title; clarified roles, added layout, competition scoring, coaching points | 2026-11-13 |
+| backarna-vander-i-bage-2-mot-2 | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill F-03. Own title; added cone box layout, play-until rule, late-start variant, coaching points | 2026-11-13 |
+| ett-mot-tva-styr-mot-sargen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill F-09. Own title; added cone-line boundary by the board, win condition, variant, coaching points | 2026-11-13 |
+| horna-till-skytten-vid-frislagsringen | bandy | Røa IL bandy coach handbook (7-a-side 12–13), set pieces (coach-evening slides). Own title; added corner line-up per bandy rules, rebound players, free-stroke variant | 2026-11-13 |
+| alla-over-mitten-4-mot-4 | bandy | Røa IL bandy coach handbook (7-a-side 12–13), coaching tips (coach-evening slides). Own title; built a 4v4 game around the everyone-over-halfway rule, scoring ideas, parallel games | 2026-11-13 |
+| malvakt-utkast-till-medspelare | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-01. Own title; added throw types, player at speed into skating line, opponent variant | 2026-11-13 |
+| malvakt-vand-och-radda | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-04. Own title; added pile layout, set sizes, progressions | 2026-11-13 |
+| malvakt-skridskoraddning | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-05. Own title; added technique, sets per side, rebound direction | 2026-11-13 |
+| malvakt-tre-skott-i-rad | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-06. Own title; added get-set cue, set count, varied order, rebound control | 2026-11-13 |
+| malvakt-ensam-med-anfallare | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-07. Own title; added live 1v1, body feint, rotation, coaching points | 2026-11-13 |
+| malvakt-lyra-och-skott | bandy | Røa IL bandy coach handbook (7-a-side 12–13), drill K-10. Own title; added catch/backing technique, variations, reps | 2026-11-13 |
+| passa-over-och-stall-dig-sist | bandy | Høvik IF bandy leader handbook, p.17 exercise 4. Own title; zigzag pass between two facing lines, added progressions (distance, one-touch, two balls) | 2026-11-13 |
+| stafett-lamna-bollen-vid-konen | bandy | Høvik IF bandy leader handbook, p.18 exercise 6. Own title; ball relay, added team sizes, distance, win condition and slalom variant | 2026-11-13 |
+| fintar-i-par-tyngdbyte-och-dolj-bollen | bandy | Høvik IF bandy leader handbook, p.21 fakes in pairs. Own title; two fakes as separate frames, added role swaps, progression to live defending and coaching points | 2026-11-13 |
+| jonglera-pa-klubban-och-skjut | bandy | Høvik IF bandy leader handbook, p.19 shooting/stick juggling. Own title; shots at a goalkeeper one at a time, pairs in the other half, added forehand/backhand and aim-first points | 2026-11-13 |
+| triangelpassning-framat-och-bakat | bandy | Høvik IF bandy leader handbook, p.20 three-player triangle. Own title; pass order A–B–C–A, added moving to keep depth and touch progressions | 2026-11-13 |
+| uppspel-fran-utkastet-med-tre-spelare | bandy | Høvik IF bandy leader handbook, øvelse 1. Own title; added start positions, offside curve as a coaching point, side swap and a defender progression | 2026-11-13 |
+| bollvinst-i-sargkorridoren | bandy | Høvik IF bandy leader handbook, øvelse 2. Own title; added cone-channel layout, defender angle from behind, clearance away from goal, role swap and coaching points | 2026-11-13 |
+| forsvarsfemman-flyttar-bollen | bandy | Høvik IF bandy leader handbook, øvelse 3. Own title; added the five roles, a risky cross-goal pass as the interception moment, forward rotation and coaching points | 2026-11-13 |
+| vand-spelet-tva-ganger-tre-mot-malvakt | bandy | Høvik IF bandy leader handbook, øvelse 4. Own title; added start positions, side swap, defender progression and coaching points on the drop pass | 2026-11-13 |
+| ta-ner-lyran-i-straffomradet | bandy | Høvik IF bandy leader handbook, øvelse 6. Own title; chose the side of the lofted ball and the run lines, added coaching points on spacing and bringing the ball down | 2026-11-13 |
+| forsvara-hornan-alla-har-en-uppgift | bandy | Høvik IF bandy leader handbook, øvelse 7 (corner against). Own title; simplified to four defenders with one job each, variant with more defenders, attacking set-up, number of corners and coaching points | 2026-11-13 |
+| lagg-tillbaka-vand-upp-4-mot-3 | bandy | Høvik IF bandy leader handbook, øvelse 8. Own title; added start positions, crossing runs drawn step by step, side swap and coaching points | 2026-11-13 |
+| skar-och-balans-for-de-yngsta | bandy | Frem 31 bandy basics for ages 6–10, 2.1.3–2.1.4. Own title; cone-marked stride zone, four numbered glide tasks, added a final run with a ball | 2026-11-13 |
+| overstegsskola-runt-konen-och-i-sicksack | bandy | Frem 31 bandy basics for ages 6–10, 2.1.6. Own title; standing side steps to cone circling and a zigzag cone line, added cone spacing and the ball progression | 2026-11-13 |
+| forsta-stegen-baklanges | bandy | Frem 31 bandy basics for ages 6–10, 2.1.7. Own title; pair pushing then C-cuts from a line, added safety point and stick/ball progression | 2026-11-13 |
+| fyra-portar-pa-tranarens-rop | bandy | Finnish Bandy Federation youth coach programme, programme 1 warm-up. Own title; four corner gates called by the coach, added gate naming and variants | 2026-11-13 |
+| kamp-om-bollen-skott-fore-konlinjen | bandy | Finnish Bandy Federation youth coach programme, page 8 battle for the ball and shot. Own title; added coach position, swapping sides, end of duel and pass variants | 2026-11-13 |
+| bollhamtaren-intervall-i-trio | bandy | Finnish Bandy Federation youth coach programme, page 5 conditioning and page 7 variant. Own title; added rink layout, rotation, rounds and coaching points | 2026-11-13 |
+| fran-utkast-till-2-mot-2-i-steg | bandy | Finnish Bandy Federation youth coach programme, programme 4 points 4–7. Own title; combined into one progressive full-rink drill, added roles, rotation and starts from both goals | 2026-11-13 |
+| backen-overlappar-till-kortlinjen | bandy | Finnish Bandy Federation youth coach programme, programme 3 build-up and finishing drill. Own title; interpreted as the back overlapping to the end line, added positions, rebound runner and defender progression | 2026-11-13 |
+| passning-retur-fart-och-skott | bandy | Finnish Bandy Federation youth coach programme, programme 6 shot from a pass. Own title; added passer, positions and rotation for the three steps | 2026-11-13 |
+| lyra-over-liberon-till-yttern | bandy | Finnish Bandy Federation youth coach programme, page 14 game drill. Own title; added layout, mirroring both ways, rotation and coaching points | 2026-11-13 |
+| tre-mot-tre-intervaller-stoppa-pa-linjen | bandy | Finnish Bandy Federation youth coach programme, page 5 interval game. Own title; added area, scoring by stopping the ball on the line and rule variants | 2026-11-13 |
 
 ## Leader drawn as a player "L"
 

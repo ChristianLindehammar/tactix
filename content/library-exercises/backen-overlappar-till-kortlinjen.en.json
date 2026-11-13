@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "id": "1c41c14f-5f2c-5a4b-98b5-3532c800e3bf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "The back overlaps to the end line",
+  "description": "Half rink with a goalkeeper. Back A starts with the ball in the middle just inside the centre line, midfielder C stands centrally a little outside the penalty area and forward B out on the left.\n\nA passes to C and immediately skates in a curve out towards the right side. C plays a one-touch give-and-go into the space in front of A along the board. A carries the ball all the way down to the end line and plays an angled pass back. Meanwhile B has skated in towards the penalty area and finishes with a first-time shot. C follows in towards goal for any rebound.\n\nSwap roles after each attack and work on both sides. Progression: a passive and then an active defender tracking B. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The back sets off straight after the pass – the overlap has to come at full speed."
+    },
+    {
+      "id": "cp2",
+      "text": "Play the return pass in front of A, not at A."
+    },
+    {
+      "id": "cp3",
+      "text": "Play the cut-back hard along the ice and angled back, away from the goalkeeper."
+    },
+    {
+      "id": "cp4",
+      "text": "B: time your run so you are at speed when the ball arrives – not too early."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to C and skates in a curve out towards the right side.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.46
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.535,
+          "y": 0.4,
+          "endX": 0.57,
+          "endY": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.4,
+          "endX": 0.76,
+          "endY": 0.32,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C plays the give-and-go into the space along the board and A skates onto the ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.645,
+          "y": 0.295,
+          "endX": 0.8,
+          "endY": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.34,
+          "endX": 0.82,
+          "endY": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A has reached the end line and plays the cut-back. B skates in.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.105
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.135,
+          "endX": 0.49,
+          "endY": 0.26
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.225,
+          "y": 0.385,
+          "endX": 0.38,
+          "endY": 0.375
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.24,
+          "endX": 0.5,
+          "endY": 0.03
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

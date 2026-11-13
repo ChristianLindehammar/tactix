@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 2,
+  "id": "17196f9e-967f-5652-9df5-6fd7b5b7165c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Down the board and a hard diagonal ball",
+  "description": "Group A stands in the middle of the half with the balls, group B by the right board. A cone is placed a little outside the penalty area.\n\nA passes to B, who takes it at speed and carries on along the board towards the corner flag. Meanwhile A skates round the cone and heads for goal. Near the corner B plays a hard diagonal pass back into the rink and A finishes – first-time shot, drag or deflection. Rotation: A goes to B and B to A.\n\nSwitch sides after a while so the cross comes from both wings. Variant: add a defender who follows A. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full speed along the board – the first touch must not slow B down."
+    },
+    {
+      "id": "cp2",
+      "text": "A times the run and heads for goal as B nears the corner."
+    },
+    {
+      "id": "cp3",
+      "text": "The cross should be hard and angled back in front of goal, not at the goalkeeper."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish first time – there is no time to bring the ball down."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B, who is skating along the board.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.535,
+          "y": 0.56
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.615,
+          "y": 0.515,
+          "endX": 0.82,
+          "endY": 0.4
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.491,
+          "endX": 0.86,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skates at full speed towards the corner flag. A rounds the cone and heads for goal.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.299
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.23,
+          "endX": 0.86,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.404,
+          "y": 0.493,
+          "endX": 0.48,
+          "endY": 0.28,
+          "bend": -0.12,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B plays a hard diagonal ball to A, who finishes first time.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.708,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.641,
+          "y": 0.173,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.519,
+          "y": 0.26,
+          "endX": 0.505,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

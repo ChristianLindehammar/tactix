@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 2,
+  "id": "1c0b11f1-d0f1-5f76-ba94-e19e0e911bc2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Slalom, board pass and two give-and-goes",
+  "description": "Set up a slalom of three cones a little in from one board and a cone level with the penalty area. Two passers, B and C, stand out on the ice – coaches or players. The players queue below the slalom cones with a ball each.\n\nA slaloms with the ball between the cones, plays the ball off the board and collects it on the other side. A passes to B, rounds the cone at full speed and takes the return from B on the move. A skates about ten metres, passes to C, gets the ball back and skates calmly back to the queue with the ball. The next player starts when A has passed to B.\n\nMirror the course the next round so everything is done the other way. Change passers after a few laps. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ball close to the stick in the slalom and eyes up between the cones."
+    },
+    {
+      "id": "cp2",
+      "text": "Play off the board at an angle so the ball comes out in front of you."
+    },
+    {
+      "id": "cp3",
+      "text": "Speed up round the cone before the return – take the ball at full speed."
+    },
+    {
+      "id": "cp4",
+      "text": "Pass with soft hands and follow through."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "passing",
+    "conditioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slaloms with the ball between the cones.",
+      "markers": [
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "s2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "s3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.13
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.78
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.75,
+          "endX": 0.47,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.66,
+          "endX": 0.14,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.57,
+          "endX": 0.48,
+          "endY": 0.46,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.46,
+          "endX": 0.4,
+          "endY": 0.36,
+          "bend": 0.015,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays the ball off the board and collects it.",
+      "markers": [
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "s2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "s3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.13
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.16,
+          "y": 0.34,
+          "endX": 0.025,
+          "endY": 0.29
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.025,
+          "y": 0.29,
+          "endX": 0.16,
+          "endY": 0.22
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.3,
+          "endX": 0.24,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes to B, rounds the cone at full speed and takes the return.",
+      "markers": [
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "s2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "s3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.13
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.255,
+          "endX": 0.58,
+          "endY": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.19,
+          "endX": 0.46,
+          "endY": 0.14,
+          "bend": -0.14,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.3,
+          "endX": 0.5,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A passes to C, gets the ball back and skates calmly back to the queue.",
+      "markers": [
+        {
+          "id": "s1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "s2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "s3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.46
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.13
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "pc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.23,
+          "endX": 0.82,
+          "endY": 0.32
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.3,
+          "endX": 0.69,
+          "endY": 0.25,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.26,
+          "endX": 0.45,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 5
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

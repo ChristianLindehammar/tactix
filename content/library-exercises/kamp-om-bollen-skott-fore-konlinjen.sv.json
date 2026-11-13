@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "id": "50b62e15-bb78-5ebe-a42c-4444366bdbff",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Kamp om bollen – skott före konlinjen",
+  "description": "Ställ två koner en bit utanför straffområdet så att de bildar en linje tvärs över banan. Målvakt i mål. Spelarna står parvis bredvid varandra en bit ute på planhalvan, tränaren står vid sidan med bollarna.\n\nTränaren spelar ut en boll framåt mot målet och båda i paret startar samtidigt. Den som hinner först till bollen anfaller och ska skjuta innan konlinjen, den andra försöker stoppa skottet genom att ta bollen, störa klubban eller täcka skottet. Kampen är slut efter skottet eller när försvararen har vunnit bollen. Nästa par startar direkt, byt sida i paret efter varje försök.\n\nVariant: tränaren varierar passningen – rakt fram, snett mot sargen eller lite bakåt – så att spelarna måste läsa bollen innan de väljer väg. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Reagera direkt på passningen – första skäret avgör ofta kampen."
+    },
+    {
+      "id": "cp2",
+      "text": "Vinner du bollen: skydda den med kroppen och skjut snabbt, innan konlinjen."
+    },
+    {
+      "id": "cp3",
+      "text": "Kommer du tvåa: åk in på insidan, mellan anfallaren och målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvara med klubban på isen – inga slag mot klubba eller ben."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tränaren spelar ut bollen framåt och A och X startar samtidigt mot den.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.22
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.4,
+          "label": "L"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.355,
+          "endX": 0.57,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.53,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.47,
+          "endX": 0.53,
+          "endY": 0.33
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.47,
+          "endX": 0.64,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A hann först och skjuter innan konlinjen. X jagar och försöker täcka skottet.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.22
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.46,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.26,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.36,
+          "endX": 0.6,
+          "endY": 0.27
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

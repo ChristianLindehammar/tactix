@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 2,
+  "id": "49313af9-466f-5446-9520-d736bb44fea8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Give-and-go and drop to the shooter",
+  "description": "Two queues, A and B, a little inside the centre line. Goalkeeper in goal. A starts with the ball.\n\nA plays a give-and-go with B and takes the return at speed. Then A slows down while B speeds up and skates in behind A. A drops the ball back to B, who arrives at full speed and shoots. A keeps going towards goal to pick up any rebound.\n\nSwap queues after each go. Progression: a defender starts from the penalty area and tries to disrupt, so A has to choose between the drop pass and going alone. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep your distance – if B gets too close to A there is no room to shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "Drop the ball clearly backwards so B can choose to shoot first time or take another stride."
+    },
+    {
+      "id": "cp3",
+      "text": "B times the run: behind A just as the ball is dropped."
+    },
+    {
+      "id": "cp4",
+      "text": "A always follows up for the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and keeps skating forward.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.435
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.435,
+          "endX": 0.66,
+          "endY": 0.4
+        },
+        {
+          "id": "r0",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.44,
+          "endX": 0.32,
+          "endY": 0.34
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B returns it in front of A – the give-and-go is done.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.3,
+          "endX": 0.4,
+          "endY": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.315
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.42,
+          "endY": 0.24
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A slows down and drops the ball back to B, who skates in behind at full speed.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.62,
+          "endY": 0.41
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.46,
+          "endX": 0.65,
+          "endY": 0.36
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B shoots. A heads for goal for a possible rebound.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.22,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.2,
+          "endX": 0.41,
+          "endY": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

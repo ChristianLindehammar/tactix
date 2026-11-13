@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "84be2a87-13fb-550b-8235-4228aa33b960",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lofted pass over the board",
+  "description": "Place two cones a little outside the penalty area, one on each side. Lay a loose piece of board (or another low obstacle) between them – the two cones in the middle show where it lies. Group A stands behind the left cone with balls, group B behind the right cone.\n\nA skates round their cone with the ball and plays a lofted pass over the board to B, who has rounded the other cone at the same time and is heading for goal. B brings the ball down and finishes. Rotation: A goes to B and B to A.\n\nThe board forces a real lofted ball. Variant: finish first time, or add a defender who starts at the goal. Switch sides so everyone lofts in both directions. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Timing: B should come into the rink at speed just as the ball is lofted."
+    },
+    {
+      "id": "cp2",
+      "text": "Get the blade under the ball – it must clear the board and land in front of B."
+    },
+    {
+      "id": "cp3",
+      "text": "B brings the ball down softly with the stick or skate and looks at the goal straight away."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish quickly – shot, drag or deflection depending on the situation."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates round their cone with the ball. B rounds the other cone.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.599
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.266,
+          "y": 0.534,
+          "endX": 0.24,
+          "endY": 0.42,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.731,
+          "y": 0.632,
+          "endX": 0.76,
+          "endY": 0.44,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lofts the ball over the board to B, who is heading for goal.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.455,
+          "y": 0.379,
+          "endX": 0.64,
+          "endY": 0.34,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B brings the ball down and finishes.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.606,
+          "y": 0.271
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.205,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

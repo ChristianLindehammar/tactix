@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "5c959fd6-cb0b-581a-889e-54c68282770f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Pass and 1v1 through the gate",
+  "description": "Place two cones as a gate a little outside the penalty area. Group A stands by the left board with balls, group B by the right board and group C (defenders) near the goal. A skates a few metres with the ball and plays a hard pass to B, who skates into the rink. B attacks through the gate and tries to score while C comes out and defends 1v1.\n\nThe defender should not just back straight off but swing up in an arc and skate with the attacker, side by side, steering them away from the middle. Rotation: A goes to B, B to C and C to A.\n\nVariant: a narrower gate makes it harder for the attacker, or let C start further back so the attacker gets up to speed. Switch sides after a while. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hard, flat passes – the receiver should not have to slow down."
+    },
+    {
+      "id": "cp2",
+      "text": "The attacker takes the ball at speed and heads straight for the gate."
+    },
+    {
+      "id": "cp3",
+      "text": "The defender skates with the attacker in an arc instead of just backing off."
+    },
+    {
+      "id": "cp4",
+      "text": "The defender keeps the stick on the ice and the body between the attacker and the goal."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates a few metres with the ball while B skates into the rink.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.274,
+          "y": 0.391
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.379,
+          "y": 0.395,
+          "endX": 0.53,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.798,
+          "y": 0.423,
+          "endX": 0.66,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays a hard pass to B. C moves out towards the gate.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.514,
+          "y": 0.371
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.613,
+          "y": 0.36,
+          "endX": 0.765,
+          "endY": 0.343
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B attacks through the gate. C swings round in an arc and skates with B instead of backing off.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.35
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.554,
+          "y": 0.281,
+          "endX": 0.56,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.398,
+          "y": 0.296,
+          "endX": 0.44,
+          "endY": 0.14,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

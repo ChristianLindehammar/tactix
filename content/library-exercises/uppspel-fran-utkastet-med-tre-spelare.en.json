@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "id": "d82aeb84-f3f3-512f-9350-5ce473bd01a2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Build-up from the throw-out with three players",
+  "description": "Full rink with a goalkeeper in each goal. Three players start the build-up: A (forward or midfielder) by the left board in their own half, B (wide half) down by the end line on the right and C (forward or midfielder) on the right side up by the centre line.\n\nA skates down along the board, takes the goalkeeper's throw-out, carries the ball inside and hits a hard ball across to B, who has picked up speed from the end line. B carries the ball upfield and inside. C first skates towards their own goal to build up speed, turns and comes at full speed along the right board, where B plays the ball into their path. Then it is free play to goal with all three. The next trio starts from the other side.\n\nProgression: add one or two defenders in the opposition half. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Never stop after a pass – keep skating into the attack."
+    },
+    {
+      "id": "cp2",
+      "text": "Watch the offside line: hold back by skating a wider curve instead of stopping."
+    },
+    {
+      "id": "cp3",
+      "text": "C only turns when the ball is on its way to B, so the speed is there when the pass arrives."
+    },
+    {
+      "id": "cp4",
+      "text": "Play the pass in front of the receiver, into their skating line."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates down along the board and takes the throw-out. B starts from the end line and C skates towards their own goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.84,
+          "endX": 0.2,
+          "endY": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.64,
+          "endX": 0.14,
+          "endY": 0.75
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.84,
+          "endX": 0.68,
+          "endY": 0.7
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.46,
+          "endX": 0.86,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball inside. B skates upfield and C has turned and is building speed along the board.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.672
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.64,
+          "endX": 0.51,
+          "endY": 0.55,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.66,
+          "endX": 0.66,
+          "endY": 0.52
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.54,
+          "endX": 0.86,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A hits a hard ball across to B and keeps skating – in a curve out wide so as not to end up offside.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.352,
+          "y": 0.64
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.445,
+          "y": 0.64,
+          "endX": 0.62,
+          "endY": 0.62
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.58,
+          "endX": 0.24,
+          "endY": 0.42,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.44,
+          "endX": 0.88,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B has carried the ball up and inside and plays C along the board. Free play to goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.352
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.29,
+          "endX": 0.78,
+          "endY": 0.17
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.54,
+          "endY": 0.22
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.28,
+          "endX": 0.86,
+          "endY": 0.16
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.36,
+          "endX": 0.38,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

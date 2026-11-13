@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 2,
+  "id": "063338df-1aed-5b7e-9577-669b99e21850",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Drop pass, turn upfield and 4v3",
+  "description": "Full rink with a goalkeeper in each goal. Four attackers: A (forward or midfielder) centrally in their own half, B (forward or midfielder) down by the right board and C and D on each side by the centre line. Three defenders wait in the opposition half.\n\nA skates towards the throw-out, takes it and carries the ball across the rink to switch play. B has picked up speed along the board and cuts inside. 8–10 metres from the board, A drops the ball for B, turns straight upfield at once and accelerates. B carries the ball a little further before turning upfield and hitting a hard pass to A. Meanwhile C and D have skated across the rink, crossed each other and turned upfield along the opposite boards to give width and be available. Then it is 4v3 to goal.\n\nStart with three defenders and add more as it goes, up to five. Run it from both sides. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: drop the ball and turn upfield straight away – hesitating ruins the whole idea."
+    },
+    {
+      "id": "cp2",
+      "text": "B: have speed when the ball is dropped, and hit the pass hard and in front of A."
+    },
+    {
+      "id": "cp3",
+      "text": "C and D: cross at full speed and turn up close to the board so the play is wide."
+    },
+    {
+      "id": "cp4",
+      "text": "In the 4v3: skate at the defenders and pass to whoever is free."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "attack",
+    "passing",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to A, who skates towards the ball.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.8,
+          "endX": 0.42,
+          "endY": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.62,
+          "endX": 0.32,
+          "endY": 0.73
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball across the rink. B skates up along the board, C and D skate across and cross each other.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.72
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.71,
+          "endX": 0.74,
+          "endY": 0.65,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.64,
+          "endX": 0.86,
+          "endY": 0.54
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.49,
+          "endX": 0.42,
+          "endY": 0.46
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A drops the ball for B and turns straight upfield. C and D turn up along the boards.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.72
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.63,
+          "endX": 0.62,
+          "endY": 0.48
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.51,
+          "endX": 0.68,
+          "endY": 0.64
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.38,
+          "endX": 0.86,
+          "endY": 0.28
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.4,
+          "endX": 0.14,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B hits a hard pass to A. 4v3 to goal.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.521
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.46,
+          "endX": 0.52,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.4,
+          "endX": 0.47,
+          "endY": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.3,
+          "endX": 0.86,
+          "endY": 0.16
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.3,
+          "endX": 0.14,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

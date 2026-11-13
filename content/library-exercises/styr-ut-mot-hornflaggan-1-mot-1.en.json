@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "c0db2c52-eb41-57f6-9cc0-8aad55045c6c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "1v1: steer them to the corner",
+  "description": "Two groups, each with a cone a little outside the penalty area: X (defenders) on the left with the balls, A (attackers) on the right. A goalkeeper is in goal.\n\nX passes to A, who skates towards the ball. A receives, rounds their cone and attacks the goal. At the same time X rounds their cone and meets them. The attacker tries to get past and finish; the defender skates with them in an arc and steers them out towards the corner flag, away from the goal. Rotation: X goes to A and A to X.\n\nCompetition: a point to the defender if the attacker is forced into the corner without getting a shot off. Switch sides after a while. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The defender takes the inside line, between the attacker and the goal."
+    },
+    {
+      "id": "cp2",
+      "text": "Never let the attacker get behind you – better a little too far out than beaten on the inside."
+    },
+    {
+      "id": "cp3",
+      "text": "Skate with them in an arc and steer – do not charge straight at the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "The attacker uses speed and a dummy to get in towards the middle."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X passes to A, who skates towards the ball.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.375,
+          "y": 0.54
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.475,
+          "y": 0.545,
+          "endX": 0.7,
+          "endY": 0.555
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A receives and rounds their cone. X rounds their cone and meets A.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.738,
+          "y": 0.467
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.716,
+          "y": 0.403,
+          "endX": 0.66,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.247,
+          "y": 0.477,
+          "endX": 0.36,
+          "endY": 0.22,
+          "bend": -0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X skates on the inside and steers A out towards the corner flag.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.49,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.774,
+          "y": 0.201
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.812,
+          "y": 0.141,
+          "endX": 0.87,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.566,
+          "y": 0.207,
+          "endX": 0.72,
+          "endY": 0.12
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

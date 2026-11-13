@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "id": "515fc0ca-969b-5392-b73b-aed4614eda60",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Long pass, round the cone and shoot",
+  "description": "Two queues, A on the left and C on the right, at the centre line. Two passers, B and D, stand far up near the end line, one on each side. One cone per side a little outside the penalty area, and a goalkeeper in goal.\n\nA skates off with the ball and, on the move, plays a long pass diagonally across the rink to B. A carries on to the cone, rounds it, and B plays the ball back so A can take it at speed and shoot from distance – the shot should come from outside the penalty spot. Then C starts and plays the same with D. The two sides alternate.\n\nAfter the shot, A and C swap queues. B and D are replaced when the coach says so. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Have speed on your skates already when you play the long pass."
+    },
+    {
+      "id": "cp2",
+      "text": "The long pass should be firm and along the ice, straight onto the passer's stick."
+    },
+    {
+      "id": "cp3",
+      "text": "The passer plays the return in front of the shooter, not at them."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot from outside the penalty spot – the long-range shot is what we train."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays a long pass to B on the move.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.33
+        },
+        {
+          "id": "cc",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.33
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.44
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.43,
+          "endX": 0.8,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A rounds the cone, B plays it back in front of A.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.33
+        },
+        {
+          "id": "cc",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.33
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.34,
+          "endX": 0.4,
+          "endY": 0.32,
+          "bend": -0.12,
+          "waves": 1
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.25,
+          "endX": 0.46,
+          "endY": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots from outside the penalty spot. C sets off with the ball to play the long pass to D.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.33
+        },
+        {
+          "id": "cc",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.33
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.48
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.44,
+          "endX": 0.55,
+          "endY": 0.36,
+          "bend": 0.015,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

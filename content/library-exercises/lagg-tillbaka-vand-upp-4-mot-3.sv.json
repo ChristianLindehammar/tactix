@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 2,
+  "id": "2b2b233d-7293-533b-a8aa-3fdd927160dd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lägg tillbaka, vänd upp och 4 mot 3",
+  "description": "Helplan med en målvakt i varje mål. Fyra anfallare: A (forward eller mittfältare) centralt på egen planhalva, B (forward eller mittfältare) nere vid högra sargen och C och D på varsin kant vid mittlinjen. Tre försvarare väntar på motståndarens planhalva.\n\nA åker emot och får utkastet, och för bollen tvärs över banan för att vända spelet. B har tagit fart upp längs sargen och skär in i banan. 8–10 meter från sargen lägger A tillbaka bollen till B, vänder direkt rakt upp i banan och sätter fart. B för bollen en bit till innan hen vänder upp och slår en hård passning till A. Under tiden har C och D åkt på tvärs över banan, korsat varandra och vänt upp längs var sin sarg för att ge bredd och vara spelbara. Sedan spelas 4 mot 3 mot mål.\n\nBörja med tre försvarare och lägg till fler efter hand, upp till fem. Kör från båda sidor. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: lägg tillbaka bollen och vänd uppåt direkt – tvekan tar bort hela vitsen."
+    },
+    {
+      "id": "cp2",
+      "text": "B: ha fart när bollen läggs och slå passningen hårt och framför A."
+    },
+    {
+      "id": "cp3",
+      "text": "C och D: korsa i full fart och vänd upp nära sargen så att planen blir bred."
+    },
+    {
+      "id": "cp4",
+      "text": "I 4 mot 3: åk på försvararna och spela till den som är fri."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "attack",
+    "passing",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut till A som åker emot bollen.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.8,
+          "endX": 0.42,
+          "endY": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.62,
+          "endX": 0.32,
+          "endY": 0.73
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A för bollen tvärs över banan. B åker upp längs sargen, C och D åker på tvärs och korsar varandra.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.72
+        },
+        {
+          "id": "dr",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.71,
+          "endX": 0.74,
+          "endY": 0.65,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.64,
+          "endX": 0.86,
+          "endY": 0.54
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.49,
+          "endX": 0.42,
+          "endY": 0.46
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.43,
+          "endX": 0.58,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A lägger tillbaka till B och vänder rakt upp i banan. C och D vänder upp längs sargerna.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.72
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.63,
+          "endX": 0.62,
+          "endY": 0.48
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.51,
+          "endX": 0.68,
+          "endY": 0.64
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.38,
+          "endX": 0.86,
+          "endY": 0.28
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.4,
+          "endX": 0.14,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B slår en hård passning till A. 4 mot 3 mot mål.",
+      "markers": [
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.521
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.46,
+          "endX": 0.52,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.4,
+          "endX": 0.47,
+          "endY": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.3,
+          "endX": 0.86,
+          "endY": 0.16
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.3,
+          "endX": 0.14,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

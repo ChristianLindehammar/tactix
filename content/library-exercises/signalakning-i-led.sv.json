@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "8ea7f4a0-2ed8-5b2a-b55e-ab77b0548860",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Signalåkning i led",
+  "description": "Spelarna åker i lugnt tempo i ett led runt isen med ett par meters avstånd. Den främste har en boll. När tränaren blåser eller ropar gör alla uppgiften så snabbt de kan och åker sedan vidare: vänd och åk baklänges, sätt en hand i isen, gå ner på ett knä och upp igen, eller några snabba springsteg på skridskorna. Tränaren blandar signalerna så att spelarna måste lyssna.\n\nFortsättning: på signal spurtar den bakerste på utsidan av ledet fram till täten. Den gamla tätspelaren passar över bollen och den nya leder ledet tills nästa signal. Svårare variant: den bakerste åker slalom mellan de andra i ledet fram till täten – då behövs extra stort avstånd. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll avståndet i ledet så att ingen åker på någon framför vid en signal."
+    },
+    {
+      "id": "cp2",
+      "text": "Upp från knät eller isen direkt – första skäret ska komma med en gång."
+    },
+    {
+      "id": "cp3",
+      "text": "Låg ställning i vändningen till baklänges, rumpan ner och blicken upp."
+    },
+    {
+      "id": "cp4",
+      "text": "Spurta med korta skär i starten och längre skär när farten kommer."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledet åker framåt. A har bollen. På signal gör alla övningen, till exempel vänder och åker baklänges.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.2,
+          "endX": 0.11,
+          "endY": 0.09,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "På signal spurtar D på utsidan av ledet fram till täten och tar över bollen från A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.26
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.66,
+          "endX": 0.4,
+          "endY": 0.18
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: D åker slalom mellan de andra i ledet fram till täten.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.26
+        },
+        {
+          "id": "s1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.63,
+          "endX": 0.41,
+          "endY": 0.54
+        },
+        {
+          "id": "s2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.51,
+          "endX": 0.12,
+          "endY": 0.42
+        },
+        {
+          "id": "s3",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.38,
+          "endX": 0.4,
+          "endY": 0.3
+        },
+        {
+          "id": "s4",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.26,
+          "endX": 0.3,
+          "endY": 0.14
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

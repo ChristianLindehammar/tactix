@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "id": "cd2c3fe5-840d-5c41-9f4b-7f73a6c15943",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Jonglera på klubban och skjut",
+  "description": "Varje spelare har en boll en bit framför målet. Spelarna lyfter upp bollen och studsar den på klubbladet så många gånger de klarar. Sedan skjuter de mot mål: a) efter flera studsar, b) efter bara en studs, c) direkt på volley när bollen kommer ner. En spelare i taget skjuter så att målvakten hinner ställa sig.\n\nAndra delen görs i par på andra halvan: spelarna slår bollen i luften till varandra och tar emot med klubban. Variera avståndet och hur många studsar man får göra innan bollen går tillbaka.\n\nÖva både forehand och backhand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta på bollen hela tiden, även i skottet."
+    },
+    {
+      "id": "cp2",
+      "text": "Mjuka händer och vinklat klubblad när du studsar."
+    },
+    {
+      "id": "cp3",
+      "text": "Lite böjda knän och följ med i slaget."
+    },
+    {
+      "id": "cp4",
+      "text": "Sikta på att träffa mål – hårdheten kommer senare."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A har studsat bollen flera gånger på klubban och skjuter. B jonglerar och väntar på sin tur.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.455,
+          "y": 0.352
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.541
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.462,
+          "y": 0.284,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lyfter bollen, låter den studsa en gång och skjuter – eller tar den direkt på volley.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.332
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.537,
+          "y": 0.267,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "I par: bollen slås i luften till kamraten, som tar emot med klubban och slår tillbaka.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.64
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.84,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.84
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.84,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.435,
+          "y": 0.64,
+          "endX": 0.71,
+          "endY": 0.64,
+          "bend": -0.05,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.435,
+          "y": 0.84,
+          "endX": 0.71,
+          "endY": 0.84,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

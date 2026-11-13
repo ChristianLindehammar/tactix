@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "id": "3161b37b-5abc-518a-9244-013a9dbf5bf3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Passa över och ställ dig sist",
+  "description": "Dela gruppen i två led, A och B, som står mitt emot varandra med 8–10 meter emellan. Den första i A-ledet har bollen.\n\nFörsta A passar tvärs över till första B, som stoppar bollen och passar snett tillbaka till nummer två i A-ledet. Den som har passat åker runt och ställer sig sist i sitt eget led. Så fortsätter bollen i sicksack längs leden, och alla får många bolltouch utan att stå still länge.\n\nStegring: längre avstånd, spela direkt utan att stoppa, eller två bollar samtidigt. Ha flera par led igång om gruppen är stor. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stoppa bollen med klubban innan du spelar vidare."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta på den du ska passa till och passa längs isen."
+    },
+    {
+      "id": "cp3",
+      "text": "Klubban i isen och redo innan bollen kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Åk direkt till slutet av ledet så att det går undan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Första A passar tvärs över till första B.",
+      "markers": [
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.301
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.37,
+          "endX": 0.3,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B stoppar bollen och passar till nästa A. Den första A åker bakom ledet och ställer sig sist.",
+      "markers": [
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.519
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.344,
+          "y": 0.46,
+          "endX": 0.48,
+          "endY": 0.28
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.13,
+          "endX": 0.86,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Nästa A passar till nästa B, och B-spelaren som har passat åker och ställer sig sist.",
+      "markers": [
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.301
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.5,
+          "endY": 0.55
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.69,
+          "endX": 0.86,
+          "endY": 0.69
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

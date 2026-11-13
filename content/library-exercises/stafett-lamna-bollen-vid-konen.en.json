@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "f23fd3d6-7221-5f61-b0c9-27d2d60dfe56",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Relay – leave the ball at the cone",
+  "description": "Split the players into teams of 3–5 lined up side by side. Put a cone 15–20 metres in front of each line. The first player in each line has a ball.\n\nOn the signal the first player carries the ball to the cone, stops and leaves it there, then sprints back without the ball and taps the next player on the shoulder. That player skates out, fetches the ball and carries it back to the player now at the front of the line, who takes it out to the cone again. Each player joins the back after their turn. The first team to complete a full round wins.\n\nVariant: round the cone before leaving the ball, or put out two cones to slalom through. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The ball must lie still at the cone – stop before you leave it."
+    },
+    {
+      "id": "cp2",
+      "text": "Short, quick strides at the start, stick in one hand when you sprint without the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep the ball close to the stick even at speed."
+    },
+    {
+      "id": "cp4",
+      "text": "Cheer your team-mates on and go straight to the back of the line."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The first player in each line carries the ball towards the cone.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.619
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.619
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.55,
+          "endX": 0.3,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.55,
+          "endX": 0.7,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The ball stays at the cone. The player sprints back and taps the next player on the shoulder.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.37
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.76,
+          "label": "B"
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.88,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.37
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.549,
+          "endX": 0.3,
+          "endY": 0.68
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.549,
+          "endX": 0.7,
+          "endY": 0.68
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The next player has fetched the ball and carries it back to the player at the front of the line.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.318,
+          "y": 0.406
+        },
+        {
+          "id": "a3",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.682,
+          "y": 0.406
+        },
+        {
+          "id": "b3",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.88,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.313,
+          "y": 0.471,
+          "endX": 0.3,
+          "endY": 0.63,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.687,
+          "y": 0.471,
+          "endX": 0.7,
+          "endY": 0.63,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

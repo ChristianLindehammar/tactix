@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 2,
+  "id": "6b7180b9-b527-5d9d-8d5c-a631c934578e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Throw-out, drop pass and 2v1",
+  "description": "Three groups: A and B attack, C defends. The coach stands in the near goal as goalkeeper with the balls, and a goalkeeper is in the far goal. C waits just outside the centre circle.\n\nThe coach throws the ball out to A, who skates towards it. At the same time B swings round in a wide arc and arrives at speed. A drops the ball back towards their own goal to B, who carries it upfield with the speed. A turns and joins. A and B play 2v1 against C and finish. Rotation: A goes to B, B to C and C to A.\n\nSwitch sides after a while. Encourage creativity in the attack – give-and-go, crossing runs, dummies. On a big rink the coach can throw out from the centre circle instead. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B skates a proper arc so they are at full speed when the ball is dropped back."
+    },
+    {
+      "id": "cp2",
+      "text": "A drops the ball back and to the side, so B can take it without slowing down."
+    },
+    {
+      "id": "cp3",
+      "text": "In the 2v1: skate at the defender and pass when they commit."
+    },
+    {
+      "id": "cp4",
+      "text": "C tries to steer the ball carrier towards the board while keeping an eye on the other attacker."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach throws out to A, who skates towards the ball. B swings round in an arc.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.337,
+          "y": 0.835,
+          "endX": 0.32,
+          "endY": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.265,
+          "y": 0.555,
+          "endX": 0.29,
+          "endY": 0.66
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.722,
+          "y": 0.584,
+          "endX": 0.68,
+          "endY": 0.74,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A drops the ball back to B and turns upfield.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.414,
+          "y": 0.749
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.517,
+          "y": 0.761,
+          "endX": 0.68,
+          "endY": 0.78
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.611,
+          "endX": 0.3,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B carries the ball upfield with speed, A skates alongside. C waits.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.639
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.736,
+          "y": 0.572,
+          "endX": 0.68,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.411,
+          "endX": 0.3,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B draws C and passes to A, who finishes.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.566,
+          "y": 0.351
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.469,
+          "y": 0.335,
+          "endX": 0.32,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.289,
+          "y": 0.279,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

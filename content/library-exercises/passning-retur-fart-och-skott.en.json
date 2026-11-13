@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "id": "368b58d3-2777-5ed2-ad58-56da91148f69",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Pass, return, accelerate and shoot",
+  "description": "Half rink with a goalkeeper. The shooters queue up wide in the half, and a passer (B) stands to the right outside the penalty area. The drill has three steps.\n\n1. Stationary ball: place balls about one metre outside the penalty area. The shooter skates in and shoots the stationary ball. 2. Pass – return – accelerate – shoot: the shooter passes to B, accelerates and gets a pass back into their skating line, carries the ball a couple of strides and shoots. 3. The same, but now the shooter starts straight in front of goal and B stands to the left.\n\nThe shooter collects the ball and takes the passer's place; the passer joins the back of the queue. Switch sides after a while. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Accelerate straight after the pass – the shot should come at speed."
+    },
+    {
+      "id": "cp2",
+      "text": "Take the ball on the first touch into your skating line, not stop-and-shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "Look at the goal before you shoot and aim low and close to the post."
+    },
+    {
+      "id": "cp4",
+      "text": "Passer: play the return in front of the shooter, not behind."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Step 1: A skates in and shoots the stationary ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.24,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.225,
+          "y": 0.425,
+          "endX": 0.34,
+          "endY": 0.33
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.6,
+          "label": "A"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Step 2: A passes to B and accelerates. B plays it back into A's skating line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.42,
+          "endX": 0.66,
+          "endY": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.635,
+          "y": 0.255,
+          "endX": 0.46,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.265,
+          "y": 0.385,
+          "endX": 0.4,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A carries the ball and shoots at speed.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.24,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Step 3: the same from straight in front – A passes to B on the left, skates round and gets the return in front of goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.375,
+          "endX": 0.31,
+          "endY": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.29
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.5,
+          "endX": 0.6,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

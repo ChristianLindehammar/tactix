@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "id": "b3e1b64d-77a8-5920-85ee-80e7c4840429",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Full fart runt mittcirkeln och skott",
+  "description": "Spelarna står i två köer vid sargerna på var sin sida, strax på egen sida om mittlinjen. En kon står längs varje sarg en bit upp mot målet. Tränaren lägger en stillaliggande boll en bit utanför straffområdet och har fler bollar redo. Målvakt i målet.\n\nA åker i full fart upp till konen, rundar den, åker tillbaka ner och runt mittcirkeln och kommer upp mot bollen och skjuter direkt mot mål. När A skjuter startar B från andra sidan och åker samma bana spegelvänt. Tränaren lägger ut en ny boll efter varje skott. Byt kö efter varje tur.\n\nStarta inte för tätt – målvakten ska hinna ställa sig inför varje skott. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Högt tempo hela vägen – det är en skridskoövning med avslut."
+    },
+    {
+      "id": "cp2",
+      "text": "Luta in och håll farten runt konen och runt cirkeln."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta på bollen när du skjuter, du vet var målet är."
+    },
+    {
+      "id": "cp4",
+      "text": "Hämta din boll om skottet går utanför."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "conditioning",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker i full fart upp till konen och rundar den.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.56,
+          "endX": 0.08,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.27,
+          "endX": 0.26,
+          "endY": 0.36,
+          "bend": -0.07,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A åker ner och runt mittcirkeln.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.47,
+          "endX": 0.48,
+          "endY": 0.61,
+          "bend": 0.08,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.61,
+          "endX": 0.65,
+          "endY": 0.46,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter den stillaliggande bollen mot mål. Samtidigt startar B från andra sidan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.32
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.32
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.26,
+          "endX": 0.5,
+          "endY": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.56,
+          "endX": 0.82,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

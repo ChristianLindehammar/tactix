@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 2,
+  "id": "4f2b3574-6e42-5284-9769-1a0bc809b0bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Utkast, lägg tillbaka och 2 mot 1",
+  "description": "Tre grupper: A och B anfaller, C försvarar. Tränaren står i det egna målet som målvakt med bollar, och en målvakt står i det bortre målet. C väntar strax utanför mittcirkeln.\n\nTränaren kastar ut bollen till A som åker emot den. Samtidigt svänger B i en vid båge och kommer i fart. A lägger tillbaka bollen hemåt till B, som tar den med farten upp i banan. A vänder och åker också upp. A och B spelar 2 mot 1 mot C och avslutar. Rotation: A går till B, B till C och C till A.\n\nByt sida efter en stund. Uppmuntra fantasi i anfallet – väggspel, korsningar, fintar. Är banan stor kan tränaren kasta ut från mittcirkeln i stället. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B åker en ordentlig båge så att hen kommer i full fart när bollen läggs tillbaka."
+    },
+    {
+      "id": "cp2",
+      "text": "A lägger tillbaka hemåt, snett bakåt, så att B kan ta bollen utan att bromsa."
+    },
+    {
+      "id": "cp3",
+      "text": "I 2 mot 1: åk på försvararen och spela när hen bestämmer sig."
+    },
+    {
+      "id": "cp4",
+      "text": "C ska försöka styra den bollförande mot sargen och ändå hålla koll på den andra."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tränaren kastar ut till A som åker emot bollen. B svänger i en båge.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.337,
+          "y": 0.835,
+          "endX": 0.32,
+          "endY": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.265,
+          "y": 0.555,
+          "endX": 0.29,
+          "endY": 0.66
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.722,
+          "y": 0.584,
+          "endX": 0.68,
+          "endY": 0.74,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lägger tillbaka bollen hemåt till B och vänder upp i banan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.414,
+          "y": 0.749
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.517,
+          "y": 0.761,
+          "endX": 0.68,
+          "endY": 0.78
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.611,
+          "endX": 0.3,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar bollen med farten upp i banan, A åker bredvid. C väntar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.639
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.736,
+          "y": 0.572,
+          "endX": 0.68,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.411,
+          "endX": 0.3,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B drar på sig C och passar till A som avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.566,
+          "y": 0.351
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.469,
+          "y": 0.335,
+          "endX": 0.32,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.289,
+          "y": 0.279,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

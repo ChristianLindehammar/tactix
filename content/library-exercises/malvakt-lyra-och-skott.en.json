@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "id": "a2fc932d-8e82-5381-a2ea-1b55266e5728",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lofted ball over the goalkeeper, then a quick shot",
+  "description": "Place two cones a little way out in front of the goal, one on each side. The coach stands outside the penalty area with balls. The goalkeeper skates out from the goal line, and when they are level with the cones the coach hits or throws a lofted ball towards the goal.\n\nThe goalkeeper backs in and takes the lofted ball. Straight after, the coach shoots a new ball. The goalkeeper has to get quickly from the lofted ball into the right position for the shot – a couple of strides out from the goal line – and glide out towards the shot with equal weight on both skates.\n\nVary how far out the cones are and how high the lofted ball is. Do 6–8 reps with rest in between.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Back in with your eyes on the ball – do not turn your back."
+    },
+    {
+      "id": "cp2",
+      "text": "Catch the lofted ball with both hands high in front of your body."
+    },
+    {
+      "id": "cp3",
+      "text": "After the lofted ball: a couple of strides out again to cut down the angle for the shot."
+    },
+    {
+      "id": "cp4",
+      "text": "Equal weight on both skates as you glide towards the shot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 1,
+  "maxPlayers": 2,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper has skated out level with the cones – the coach hits a lofted ball over them towards the goal.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.35
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.035,
+          "bend": 0.09,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper has backed in and caught the lofted ball. The coach gets a new ball ready straight away.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.165
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.385
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper has taken a couple of strides out again – the coach shoots a new ball straight away.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.385
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.32,
+          "endX": 0.48,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

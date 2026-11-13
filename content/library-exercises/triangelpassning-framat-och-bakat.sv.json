@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "id": "4f173fbf-ea52-530c-b75e-51d71d9f876d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Triangelpassning framåt och bakåt",
+  "description": "Tre spelare och en boll. Spelarna ställer sig i en triangel med djup, så att en står längre bak och två längre fram på olika höjd – inte alla tre på en rad. Bollen går framåt och bakåt i triangeln, inte bara åt sidan.\n\nA spelar fram till B, B spelar vidare fram till C och C spelar tillbaka till A. Den som ska ta emot visar med klubban var hen vill ha bollen. Efter en stund får spelarna röra sig: den som har passat åker till en ny plats så att triangeln hela tiden har djup.\n\nStegring: spela på två touch, sedan direkt. Gör flera trianglar samtidigt på isen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Visa med klubban var du vill ha bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Stoppa bollen och se upp innan du passar vidare."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll djup i triangeln – stå inte på samma linje som de andra."
+    },
+    {
+      "id": "cp4",
+      "text": "Passa framför kamratens klubba så att hen kan fortsätta framåt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar fram till B, som visar med klubban var bollen ska komma.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.659
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.419,
+          "y": 0.615,
+          "endX": 0.3,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar emot och spelar vidare framåt till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.378,
+          "y": 0.414
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.474,
+          "y": 0.396,
+          "endX": 0.66,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar tillbaka till A. B åker till en ny plats så att triangeln behåller djupet.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.401
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.682,
+          "y": 0.465,
+          "endX": 0.55,
+          "endY": 0.69
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.271,
+          "y": 0.415,
+          "endX": 0.3,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

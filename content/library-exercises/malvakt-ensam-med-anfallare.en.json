@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "id": "38564985-0898-5698-adbc-6fb83b9e0fea",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Alone with the attacker – steer to the side",
+  "description": "Put a cone in the penalty area in front of the goal to mark roughly where the goalkeeper meets the attacker. The coach or a player skates with the ball from the centre line straight at goal. The goalkeeper skates out towards the cone and then backs in towards the goal at the same pace as the attacker comes in.\n\nMeanwhile the goalkeeper tries to steer the attacker to one side by standing slightly off-centre and showing an opening that is not really there – a body feint. The aim is to get the attacker into a narrow angle where the goalkeeper covers the goal. The attacker tries to score, so it is a real 1v1.\n\nMove the cone closer in or further out so the goalkeeper feels the difference. With more players, they take turns as the attacker. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Come out early and back in at the same speed as the attacker – never stand still."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand slightly off-centre so the attacker picks the side you want."
+    },
+    {
+      "id": "cp3",
+      "text": "Stay between the ball and the middle of the goal all the way in."
+    },
+    {
+      "id": "cp4",
+      "text": "Make the attacker commit – do not go down on the ice too early."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "positioning",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates at goal with the ball. The goalkeeper skates out from the goal towards the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.395
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.33,
+          "endX": 0.43,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper backs in in step with A, standing off-centre so A is steered out to the right.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.635,
+          "y": 0.315
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.26,
+          "endX": 0.75,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A is in a narrow angle – the goalkeeper covers the near post and saves.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.725,
+          "y": 0.235
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.185,
+          "endX": 0.53,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

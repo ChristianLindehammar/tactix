@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "3e202606-e7d8-5f70-b40b-de6367ef3cee",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Passning och 1 mot 1 genom porten",
+  "description": "Ställ två koner som en port en bit utanför straffområdet. Grupp A står vid vänster sarg med bollar, grupp B vid höger sarg och grupp C (försvarare) vid målet. A åker några meter med bollen och slår en hård passning till B som åker in i banan. B anfaller genom porten och försöker göra mål, C möter och försvarar 1 mot 1.\n\nFörsvararen ska inte bara backa rakt bakåt utan svänga upp i en båge och åka med anfallaren, sida vid sida, och styra hen bort från mitten. Rotation: A blir B, B blir C och C går till A.\n\nVariant: smalare port gör det svårare för anfallaren, eller låt C starta längre bak så att anfallaren får fart. Byt sida efter en stund. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hårda och raka passningar – mottagaren ska slippa sakta in."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfallaren tar emot i fart och går direkt mot porten."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvararen åker med i en båge i stället för att bara backa."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvararen håller klubban i isen och kroppen mellan anfallaren och målet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker några meter med bollen medan B åker in i banan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.274,
+          "y": 0.391
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.379,
+          "y": 0.395,
+          "endX": 0.53,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.798,
+          "y": 0.423,
+          "endX": 0.66,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår en hård passning till B. C åker ut mot porten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.514,
+          "y": 0.371
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.613,
+          "y": 0.36,
+          "endX": 0.765,
+          "endY": 0.343
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B anfaller genom porten mot mål. C svänger i en båge och åker med i stället för att backa.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.28
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.35
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.554,
+          "y": 0.281,
+          "endX": 0.56,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.398,
+          "y": 0.296,
+          "endX": 0.44,
+          "endY": 0.14,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

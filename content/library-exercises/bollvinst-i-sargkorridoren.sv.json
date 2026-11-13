@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "id": "05e1865e-28c1-5b0c-8f9e-b4bd286281e2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Bollvinst i sargkorridoren",
+  "description": "Helplan med en målvakt i varje mål. Ställ en rad koner en bit in från högra sargen på motståndarens planhalva, så att det blir en korridor längs sargen. B (ytterhalv) står nere vid egen kortlinje, A (forward eller mittfältare) i mitten av egen planhalva och försvararen X centralt uppe vid mittlinjen.\n\nMålvakten kastar ut till B, som tar fart längs sargen. B för bollen några meter och slår en hård markpassning framåt längs sargen till A, som åker i fart ut från mitten mot sargen. A tar med bollen in i korridoren och försöker hålla farten hela vägen mot mål. X startar samtidigt som A, kommer in snett bakifrån, styr ut A mot sargen och vinner bollen. Övningen är slut när X har rensat eller när A har skjutit.\n\nKör från båda sidor och byt roller efter några varv. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "X: kom inte in framför anfallaren – lägg dig strax bakom och innanför och styr ut mot sargen."
+    },
+    {
+      "id": "cp2",
+      "text": "X: ta bollen när den är längst från anfallarens klubba, och rensa sedan bort från målet."
+    },
+    {
+      "id": "cp3",
+      "text": "A: håll farten genom korridoren och skydda bollen med kroppen."
+    },
+    {
+      "id": "cp4",
+      "text": "B: hård markpassning som inte studsar, framför A i åkriktningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut till B som tar fart längs sargen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.83,
+          "endX": 0.8,
+          "endY": 0.7
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.88,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.82,
+          "endX": 0.86,
+          "endY": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en hård markpassning längs sargen. A åker ut mot sargen och X startar samtidigt.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.621
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.86,
+          "y": 0.56,
+          "endX": 0.84,
+          "endY": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.55,
+          "endX": 0.76,
+          "endY": 0.47,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.44,
+          "endX": 0.56,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A för bollen in i korridoren. X kommer snett bakifrån och styr ut mot sargen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.321
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.26,
+          "endX": 0.85,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.48,
+          "endX": 0.73,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X har vunnit bollen och rensar längs sargen, bort från målet.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.339
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.4,
+          "endX": 0.84,
+          "endY": 0.6
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

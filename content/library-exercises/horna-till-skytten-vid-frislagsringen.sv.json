@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "132e8430-d04d-539a-84ff-aeee131fa258",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Hörna till skytten vid frislagsringen",
+  "description": "Öva hörnan som en fast situation. Det försvarande laget ställer upp bakom sin mållinje, med målvakten i mål, och får inte gå in i banan förrän hörnan är slagen. Det anfallande laget står utanför straffområdet. Skytten (B) ställer sig vid frislagsringen så att hen har fri vinkel mot målet.\n\nA för bollen från hörnan längs isen till skytten, som skjuter direkt. Skytten tittar bara på bollen, inte på försvararna som åker ut. C och D följer upp mot mål för returer. Turas om att slå hörnan och skjuta; låt sedan försvararna åka ut på riktigt.\n\nVariant – frislag ute på banan: en spelare vid bollen och två skyttar. Spelaren vid bollen för den till den skytt som kommer i fart, och den andra följer upp. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hörnan ska vara jämn och lagom hård, längs isen rakt in i skyttens slagyta."
+    },
+    {
+      "id": "cp2",
+      "text": "Skytten tittar bara på bollen – inte på försvararna som åker ut."
+    },
+    {
+      "id": "cp3",
+      "text": "Övriga spelare följer upp mot mål för returer."
+    },
+    {
+      "id": "cp4",
+      "text": "Bestäm i förväg vem som skjuter och vem som följer upp, så vet alla sin uppgift."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "shooting",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Försvararna står vid mållinjen. A för bollen från hörnan till skytten B vid frislagsringen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.065
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.065
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.69,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.075
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.12,
+          "endX": 0.635,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skjuter direkt med blicken på bollen. C följer upp mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.065
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.065
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.69,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.643,
+          "y": 0.238
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.603,
+          "y": 0.175,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.362,
+          "y": 0.233,
+          "endX": 0.4,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant, frislag: en spelare vid bollen och två skyttar. Bollen förs till skytten som kommer i fart.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.22
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.399
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.598,
+          "y": 0.375,
+          "endX": 0.74,
+          "endY": 0.34
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.785,
+          "y": 0.385,
+          "endX": 0.7,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

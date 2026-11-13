@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 2,
+  "id": "abd52cd8-75b7-52f2-bf34-f6885af9701c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "1v2: steer towards the board",
+  "description": "Three groups: A attacks with a ball, X and Y defend. Place a line of cones a little in from the right board, from the penalty area up towards the centre line. The cone line is a boundary the attacker must not cross. A goalkeeper is in goal.\n\nA starts with the ball and skates towards goal. X and Y skate up in an arc towards the attacker, X first and Y a little later and deeper. They go with A and try to steer them out towards the cone line and the board. If A gets past X, Y takes over and X skates back into the rink on the inside. If A goes outside the cones, the defence wins. Rotation: A goes to X, X to Y and Y to A.\n\nVariant: move the cone line closer to the middle to make it harder for the attacker. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The defenders skate with the attacker and steer – do not charge straight in."
+    },
+    {
+      "id": "cp2",
+      "text": "Do not start backing off too early; meet the attacker high up the rink."
+    },
+    {
+      "id": "cp3",
+      "text": "Timing for the second defender: close enough to help, not so close that both are beaten at once."
+    },
+    {
+      "id": "cp4",
+      "text": "If the first defender is beaten – skate back into the rink on the inside."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A starts with the ball. X and Y skate up in an arc towards the attacker, Y a little later and deeper.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.559
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.448,
+          "y": 0.494,
+          "endX": 0.46,
+          "endY": 0.39,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.606,
+          "y": 0.265,
+          "endX": 0.58,
+          "endY": 0.38,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.311,
+          "y": 0.202,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X skates with A and steers towards the cone line. Y covers on the inside.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.594,
+          "y": 0.351
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.642,
+          "y": 0.294,
+          "endX": 0.72,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.484,
+          "y": 0.23,
+          "endX": 0.6,
+          "endY": 0.14
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.329,
+          "y": 0.19,
+          "endX": 0.48,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "If A gets past X, Y takes over and X skates back into the rink on the inside.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.199
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.503,
+          "y": 0.358,
+          "endX": 0.36,
+          "endY": 0.28
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

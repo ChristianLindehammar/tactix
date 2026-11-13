@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "593fe2f2-c402-53fa-bab0-26316260c74c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Turn across, drop and through ball",
+  "description": "Two groups, A and B, plus a goalkeeper in each goal. A and B start on the same wing in their own half, B deeper towards their own goal.\n\nThe goalkeeper throws out to A, who skates towards the ball. A turns in and skates across the rink. B sets off at the same time and must be at high speed. A drops the ball back towards their own goal to B and turns upfield. Both head for the far goal; B plays a through ball to A, who finishes. Rotation: A goes to B and B to A.\n\nProgression: a third player skates across, takes the throw-out and passes to A. Switch sides after a while. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B must be at full speed before the drop pass – A must be at full speed after it."
+    },
+    {
+      "id": "cp2",
+      "text": "Drop the ball back so B can take it forward without slowing down."
+    },
+    {
+      "id": "cp3",
+      "text": "B may need to hold back slightly after receiving so A gets ahead before the final pass."
+    },
+    {
+      "id": "cp4",
+      "text": "Play the through ball in front of A, into the space they are skating into."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to A, who skates towards the ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.655,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.588,
+          "y": 0.882,
+          "endX": 0.36,
+          "endY": 0.7
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.255,
+          "y": 0.555,
+          "endX": 0.28,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns in and skates across the rink. B sets off at high speed behind.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.66
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.532,
+          "y": 0.644,
+          "endX": 0.68,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.182,
+          "y": 0.763,
+          "endX": 0.31,
+          "endY": 0.83,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A drops the ball back to B and turns upfield. B follows up with the ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.566,
+          "y": 0.689
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.486,
+          "y": 0.728,
+          "endX": 0.36,
+          "endY": 0.79
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.692,
+          "y": 0.555,
+          "endX": 0.72,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B plays a through ball in front of A, who finishes.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.339
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.485,
+          "y": 0.304,
+          "endX": 0.64,
+          "endY": 0.24
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.722,
+          "y": 0.376,
+          "endX": 0.66,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.24,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

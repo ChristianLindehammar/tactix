@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "586e6fa5-04bd-5468-a95a-aacbe85fb126",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lyra över sargbiten",
+  "description": "Ställ två koner en bit utanför straffområdet, en på varje sida. Lägg en lös sargbit (eller något annat lågt hinder) mellan dem – de två konerna i mitten visar var den ligger. Grupp A står bakom vänster kon med bollar, grupp B bakom höger kon.\n\nA åker runt sin kon med bollen och lyrar en passning över sargbiten till B, som samtidigt har rundat den andra konen och åker in mot mål. B tar ner bollen och avslutar. Rotation: A går till B och B till A.\n\nSargbiten tvingar fram en riktig lyra. Variant: avsluta med direktskott, eller låt en försvarare starta vid målet. Byt sida så att alla får lyra åt båda hållen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Timing: B ska komma i fart in mot banan precis när lyran slås."
+    },
+    {
+      "id": "cp2",
+      "text": "Lyra med öppet blad under bollen – den ska gå över sargbiten och landa framför B."
+    },
+    {
+      "id": "cp3",
+      "text": "B tar ner bollen mjukt med klubban eller skridskon och har blicken upp mot målet direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta snabbt – skott, dragning eller styrning beroende på läget."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker runt sin kon med bollen. B rundar den andra konen.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.599
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.266,
+          "y": 0.534,
+          "endX": 0.24,
+          "endY": 0.42,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.731,
+          "y": 0.632,
+          "endX": 0.76,
+          "endY": 0.44,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lyrar bollen över sargbiten till B som är på väg in mot mål.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.4
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.455,
+          "y": 0.379,
+          "endX": 0.64,
+          "endY": 0.34,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar ner bollen och avslutar.",
+      "markers": [
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.52
+        },
+        {
+          "id": "w1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "w2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.44
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.606,
+          "y": 0.271
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.205,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

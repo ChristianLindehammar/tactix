@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "2146e331-a530-53e5-86d1-2ac7457d0d36",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fyra portar på tränarens rop",
+  "description": "Ställ upp fyra portar med två koner i varje, en i varje hörn av ytan, och ge dem namn: A och B uppe, C och D nere. Alla spelare har en boll och åker fritt i mitten.\n\nTränaren ropar en port. Alla för bollen dit, åker igenom porten och rundar den, och åker tillbaka mot mitten. Innan de är framme ropar tränaren nästa port. Eftersom alla åker mot samma port samtidigt måste spelarna ha huvudet uppe och se var de andra är, så att ingen krockar.\n\nVariant: ropa två portar i följd, låt spelarna byta boll med någon i mitten, eller ropa en färg i stället för en bokstav. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Huvudet uppe – titta på isen, inte bara på bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen nära klubban när det blir trångt vid porten."
+    },
+    {
+      "id": "cp3",
+      "text": "Lyssna på tränaren och byt riktning direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Använd överstegsåkning när du rundar porten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tränaren ropar A, porten uppe till vänster. Alla för bollen dit.",
+      "markers": [
+        {
+          "id": "g1a",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.2
+        },
+        {
+          "id": "g1b",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.2
+        },
+        {
+          "id": "g2a",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.2
+        },
+        {
+          "id": "g2b",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.2
+        },
+        {
+          "id": "g3a",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.8
+        },
+        {
+          "id": "g3b",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.8
+        },
+        {
+          "id": "g4a",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.8
+        },
+        {
+          "id": "g4b",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.399
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.528,
+          "y": 0.418
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.419
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.278,
+          "y": 0.332,
+          "endX": 0.24,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.471,
+          "y": 0.361,
+          "endX": 0.37,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.142,
+          "y": 0.352,
+          "endX": 0.18,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Spelarna har rundat porten. Tränaren ropar D, porten nere till höger, och alla vänder dit.",
+      "markers": [
+        {
+          "id": "g1a",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.2
+        },
+        {
+          "id": "g1b",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.2
+        },
+        {
+          "id": "g2a",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.2
+        },
+        {
+          "id": "g2b",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.2
+        },
+        {
+          "id": "g3a",
+          "type": "cone",
+          "x": 0.16,
+          "y": 0.8
+        },
+        {
+          "id": "g3b",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.8
+        },
+        {
+          "id": "g4a",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.8
+        },
+        {
+          "id": "g4b",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.3
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.303,
+          "y": 0.362
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.37
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.283,
+          "y": 0.582
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.348,
+          "y": 0.42,
+          "endX": 0.5,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.616,
+          "y": 0.434,
+          "endX": 0.72,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.348,
+          "y": 0.636,
+          "endX": 0.5,
+          "endY": 0.76,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

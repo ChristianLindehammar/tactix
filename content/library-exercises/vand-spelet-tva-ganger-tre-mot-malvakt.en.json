@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "id": "3676d68f-5c92-55c0-be50-a76f03a658fc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Switch play twice – three against the goalkeeper",
+  "description": "Full rink with a goalkeeper in each goal. Attackers in threes: A by the left board in their own half, B on the right side and C on the left side further up towards the centre line.\n\nA skates at speed into the rink and takes the throw-out. A carries the ball almost all the way across to the other side and drops it back to B, who is coming the other way. A carries on out towards the board so as not to end up offside. B carries the ball almost all the way back across the rink and drops it to C, who has picked up speed into the rink. Now it is free play for all three against the goalkeeper.\n\nThe drill trains switching play from side to side and dropping the ball back at the right moment. The next trio starts from the other side. Progression: one or two defenders starting at the centre line. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Leave the drop pass still and easy to take for the player coming the other way."
+    },
+    {
+      "id": "cp2",
+      "text": "The player coming to meet the ball must have speed when it is dropped – time the start."
+    },
+    {
+      "id": "cp3",
+      "text": "After dropping the ball: carry on out wide and give width instead of stopping."
+    },
+    {
+      "id": "cp4",
+      "text": "Lift your head as you carry the ball across the rink so you see the next player."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to A, who comes at speed into the rink.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.84,
+          "endX": 0.25,
+          "endY": 0.73
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.62,
+          "endX": 0.18,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball across the rink. B comes the other way.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.72
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.7,
+          "endY": 0.68,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.61,
+          "endX": 0.64,
+          "endY": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A drops the ball for B and carries on to the board. B carries the ball across and C sets off.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.7
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.56,
+          "endX": 0.86,
+          "endY": 0.44
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.7,
+          "endX": 0.28,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.48,
+          "endX": 0.2,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B has dropped the ball for C. Free play for all three to goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.441
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.38,
+          "endX": 0.48,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.54,
+          "endX": 0.16,
+          "endY": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.5,
+          "endX": 0.8,
+          "endY": 0.32
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "id": "c6a1bd7a-a0e6-50e3-bee4-b4848493cba0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "The ball fetcher – interval in threes",
+  "description": "Players work in threes. A and B face each other about 20 metres apart, each with a ball. C is the ball fetcher and starts in the middle. Several threes can work at the same time all over the ice.\n\nA pushes their ball a couple of metres out in front. C sprints to it, collects it and passes it back to A, turns and sprints towards B, who has pushed their ball out in the meantime. It carries on back and forth for one minute. Then C rests for two minutes while A and B take turns as the fetcher – that way everyone gets the right balance of work and rest. Do 3–4 rounds.\n\nHigh-intensity variant: A and B stand closer and play short passes that C fetches and returns, 30 seconds of work and one minute of rest. Swap roles after each work period. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full speed for the whole work period – the rest comes afterwards."
+    },
+    {
+      "id": "cp2",
+      "text": "Stop with control at the ball and turn on the right edge."
+    },
+    {
+      "id": "cp3",
+      "text": "Make the return pass good enough that A or B does not have to skate after it."
+    },
+    {
+      "id": "cp4",
+      "text": "A and B: push the ball out as soon as C turns, so the tempo stays high."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A has pushed their ball out. C sprints to it from B's side.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.6,
+          "endX": 0.56,
+          "endY": 0.43,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.78
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C passes the ball back to A, turns and sprints for the ball B has pushed out.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.5,
+          "endY": 0.22
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.46,
+          "endX": 0.58,
+          "endY": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "id": "8bcc31f9-dbf3-5e1c-aead-65a2878fa09f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Passning, retur, fart och skott",
+  "description": "Halvplan med målvakt. Skyttarna står i kö snett ute på planhalvan, en passare (B) står till höger utanför straffområdet. Övningen har tre steg.\n\n1. Stillaliggande boll: lägg bollar ungefär en meter utanför straffområdet. Skytten åker in och skjuter den liggande bollen. 2. Passning – retur – fart – skott: skytten passar B, ökar farten och får tillbaka en passning i åkriktningen, tar med bollen ett par skär och skjuter. 3. Samma sak, men nu startar skytten rakt framför mål och B står till vänster.\n\nSkytten hämtar bollen och går till passarens plats, passaren ställer sig sist i kön. Byt sida efter en stund. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Öka farten direkt efter passningen – skottet ska komma i fart."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta med bollen på första touchen i åkriktningen, inte stopp och skott."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta på målet innan du skjuter och sikta lågt och nära stolpen."
+    },
+    {
+      "id": "cp4",
+      "text": "Passaren: lägg returen framför skytten, inte bakom."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Steg 1: A åker in och skjuter den stillaliggande bollen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.24,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.225,
+          "y": 0.425,
+          "endX": 0.34,
+          "endY": 0.33
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.6,
+          "label": "A"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Steg 2: A passar B och ökar farten. B spelar tillbaka i A:s åkriktning.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.42,
+          "endX": 0.66,
+          "endY": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.635,
+          "y": 0.255,
+          "endX": 0.46,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.265,
+          "y": 0.385,
+          "endX": 0.4,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A tar med bollen och skjuter i fart.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.24,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Steg 3: samma sak rakt framifrån – A passar B till vänster, åker runt och får returen framför mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.375,
+          "endX": 0.31,
+          "endY": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.29
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.5,
+          "endX": 0.6,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

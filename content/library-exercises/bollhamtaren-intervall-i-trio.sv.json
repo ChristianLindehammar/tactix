@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "id": "09425014-378a-5934-ae65-3377d579f60a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Bollhämtaren – intervall i trio",
+  "description": "Spelarna går ihop tre och tre. A och B står mitt emot varandra med ungefär 20 meters avstånd och har var sin boll. C är bollhämtare och börjar i mitten. Flera trior kan köra samtidigt över hela isen.\n\nA puttar ut sin boll ett par meter framför sig. C sprintar dit, tar bollen och spelar tillbaka den till A, vänder och sprintar mot B som under tiden har puttat ut sin boll. Så fortsätter det fram och tillbaka i en minut. Sedan vilar C i två minuter medan A och B i tur och ordning blir bollhämtare – på så sätt får alla rätt förhållande mellan arbete och vila. Kör 3–4 varv.\n\nVariant med mjölksyra: A och B står närmare och spelar korta passningar som C hämtar och lämnar tillbaka, 30 sekunders arbete och en minuts vila. Byt roller efter varje arbetsperiod. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full fart hela arbetsperioden – vilan kommer efteråt."
+    },
+    {
+      "id": "cp2",
+      "text": "Bromsa kontrollerat vid bollen och vänd på rätt skär."
+    },
+    {
+      "id": "cp3",
+      "text": "Passningen tillbaka ska vara så bra att A eller B inte behöver åka efter den."
+    },
+    {
+      "id": "cp4",
+      "text": "A och B: putta ut bollen direkt när C vänder, så att tempot hålls uppe."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A har puttat ut sin boll. C sprintar dit från B:s sida.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.6,
+          "endX": 0.56,
+          "endY": 0.43,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.78
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C spelar tillbaka bollen till A, vänder och sprintar mot B:s utputtade boll.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.38
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.5,
+          "endY": 0.22
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.46,
+          "endX": 0.58,
+          "endY": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

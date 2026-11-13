@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "id": "fe43b3f3-4ee8-5a97-ae8a-a80648e657fd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fintar i par – tyngdbyte och dölj bollen",
+  "description": "Spelarna går ihop två och två med en boll per par, spridda över isen. Anfallaren A åker med bollen mot X, som försvarar halvaktivt i början. Öva två fintar:\n\nFint 1 – tyngdbyte: A för över kroppsvikten åt ena hållet som om hen ska gå förbi där. När X följer med byter A snabbt tyngd och går förbi på andra sidan. Fint 2 – dölj bollen: A drar bollen bakåt och gömmer den bakom skridskorna, vänder sidan mot X, skyddar bollen med kroppen och åker förbi.\n\nByt roll efter 4–5 försök. Stegring: X försvarar på riktigt, eller A ska föra bollen över en linje bakom X. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör finten med hela kroppen – axlar och huvud ska också \"ljuga\"."
+    },
+    {
+      "id": "cp2",
+      "text": "Finta i lagom avstånd, ungefär en klubblängd från försvararen."
+    },
+    {
+      "id": "cp3",
+      "text": "Öka farten direkt när du har kommit förbi."
+    },
+    {
+      "id": "cp4",
+      "text": "När bollen döljs ska kroppen vara mellan försvararen och bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker med bollen mot X.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.659
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.59,
+          "endX": 0.5,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Fint 1: A visar höger med kroppen, X följer med – A byter tyngd och går förbi på vänster sida.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.459
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.665,
+          "y": 0.28,
+          "endX": 0.84,
+          "endY": 0.28
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.457,
+          "y": 0.4,
+          "endX": 0.28,
+          "endY": 0.16,
+          "bend": -0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Fint 2: A har dragit bollen bakåt bakom skridskorna, skyddar den med kroppen och går förbi på andra sidan.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.555
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.491,
+          "endX": 0.72,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "id": "1c973179-f08f-554c-8a1d-ef47b9e388d1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lyra över målvakten och snabbt skott",
+  "description": "Ställ två koner en bit ut framför målet, en på var sida. Tränaren står utanför straffområdet med bollar. Målvakten åker ut från mållinjen och när hen är i höjd med konerna slår eller kastar tränaren en lyra mot målet.\n\nMålvakten backar hem och tar lyran. Direkt efter kommer ett skott från tränaren med en ny boll. Målvakten ska snabbt ta sig från lyran till rätt position för skottet – ett par skär ut från mållinjen – och glida ut mot skottet med lika mycket vikt på båda skridskorna.\n\nVariera hur långt ut konerna står och hur hög lyran är. Kör 6–8 repetitioner med vila emellan.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Backa hem med blicken på bollen – vänd inte ryggen till."
+    },
+    {
+      "id": "cp2",
+      "text": "Fånga lyran med båda händerna högt framför kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Efter lyran: ett par skär ut igen, så att du minskar vinkeln för skottet."
+    },
+    {
+      "id": "cp4",
+      "text": "Lika mycket vikt på båda skridskorna när du glider mot skottet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 1,
+  "maxPlayers": 2,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten har åkt ut i höjd med konerna – tränaren slår en lyra över hen mot målet.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.35
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.035,
+          "bend": 0.09,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten har backat hem och fångat lyran. Tränaren gör direkt en ny boll klar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.165
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.385
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten har tagit ett par skär ut igen – tränaren skjuter direkt med en ny boll.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "L"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.385
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.32,
+          "endX": 0.48,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

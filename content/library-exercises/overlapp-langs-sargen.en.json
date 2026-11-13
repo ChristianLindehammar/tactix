@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "b577bf7f-3c71-5db4-be0e-8947406b597d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Overlap along the board",
+  "description": "Two queues, A and B, just inside the centre line. Goalkeeper in goal. A has the ball.\n\nA carries the ball diagonally out towards the board. Almost at the same time B sets off at high speed, skates behind A and up the outside along the board. When B is level with A, A plays the ball diagonally forward towards the board. B takes it at full speed, cuts in towards goal and shoots. A keeps the speed down during the overlap and then heads for the far post for a rebound.\n\nSwap queues after each go and run it from both sides. Progression: a defender stands in the way and has to choose between A and B, making it 2v1. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B comes behind and outside A – never in front."
+    },
+    {
+      "id": "cp2",
+      "text": "Play the ball when B is level with A, diagonally forward so B can take it at full speed."
+    },
+    {
+      "id": "cp3",
+      "text": "A slows down and draws the defence; speed is B's advantage."
+    },
+    {
+      "id": "cp4",
+      "text": "B brings the ball off the board and angles in towards goal before the shot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball diagonally towards the board. B starts and skates behind A on the outside.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.36,
+          "endX": 0.3,
+          "endY": 0.28,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.62,
+          "endX": 0.12,
+          "endY": 0.42,
+          "bend": -0.07,
+          "waves": 1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B is level with A – A plays the ball diagonally forward along the board.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.15,
+          "endX": 0.13,
+          "endY": 0.09
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.26,
+          "endX": 0.1,
+          "endY": 0.16
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B takes it at speed, cuts in towards goal and shoots. A heads for the far post.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.175
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.25,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.22,
+          "endX": 0.5,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.38,
+          "endX": 0.66,
+          "endY": 0.24
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

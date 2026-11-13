@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "id": "a67168dc-bf56-5045-bd3c-c6dcefe83ed2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Ensam med anfallaren – styr åt sidan",
+  "description": "Ställ en kon i straffområdet framför målet som markerar ungefär var målvakten ska möta anfallaren. Tränaren eller en spelare åker med boll från mittlinjen rakt mot mål. Målvakten åker ut mot konen och backar sedan hem mot målet i samma takt som anfallaren kommer.\n\nUnder tiden försöker målvakten styra anfallaren åt ena sidan genom att stå lite förskjuten och visa en öppning som inte finns – en fint med kroppen. Målet är att anfallaren hamnar i en snäv vinkel där målvakten täcker målet. Anfallaren försöker göra mål, så det blir riktigt 1 mot 1.\n\nFlytta konen närmare eller längre ut så att målvakten känner skillnaden. Har ni flera spelare turas de om som anfallare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gå ut tidigt och backa hem i samma fart som anfallaren – stå aldrig still."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå lite förskjuten så att anfallaren väljer den sida du vill."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll dig mellan bollen och mitten av målet hela vägen in."
+    },
+    {
+      "id": "cp4",
+      "text": "Vänta ut anfallaren – gå inte ner på isen för tidigt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "positioning",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker mot mål med bollen. Målvakten åker ut från målet mot konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.395
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.33,
+          "endX": 0.43,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten backar hem i takt med A och står förskjuten så att A styrs ut mot höger.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.635,
+          "y": 0.315
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.26,
+          "endX": 0.75,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A har hamnat i en snäv vinkel – målvakten täcker den nära stolpen och räddar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.725,
+          "y": 0.235
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.185,
+          "endX": 0.53,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "id": "c998739e-2af3-511b-956e-dd172cfced3a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Throw-outs to a teammate",
+  "description": "The goalkeeper has a pile of balls in the goal. The coach stands in different places on the ice, for example by the board level with the penalty area, out wide towards the centre line or in the middle. The goalkeeper throws the ball out to the coach, either straight from the goal or after skating out to the penalty spot and throwing from there.\n\nThe coach decides the type of throw-out: a low underarm throw along the ice to a nearby teammate or a high, long throw to someone further away. Finish with a player coming at speed from below along the board, and the goalkeeper throws into their skating line so they can carry the ball on without losing speed. Change places after a few throws.\n\nVariant: an opponent stands in the way and the goalkeeper has to pick the free player. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up before you throw – pick the free player and release quickly."
+    },
+    {
+      "id": "cp2",
+      "text": "Along the ice: a low underarm throw so the ball does not bounce."
+    },
+    {
+      "id": "cp3",
+      "text": "To a player at speed: throw in front of them, not at them."
+    },
+    {
+      "id": "cp4",
+      "text": "Get back into the goal quickly after a throw-out from the penalty spot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws a low underarm ball along the ice to the coach by the board.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.36,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper has skated out to the penalty spot and throws a high, long throw-out.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.146
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.146
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.2,
+          "endX": 0.78,
+          "endY": 0.4,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A comes at speed along the board – the goalkeeper throws in front of them, into their skating line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.49,
+          "endX": 0.15,
+          "endY": 0.36
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.32,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

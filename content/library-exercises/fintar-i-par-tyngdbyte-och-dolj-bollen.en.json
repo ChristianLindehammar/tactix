@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "id": "56f7a027-6a1c-5933-b55a-d0bc74ff7de7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Fakes in pairs – weight shift and hide the ball",
+  "description": "Players pair up with one ball per pair, spread over the ice. Attacker A skates with the ball towards X, who defends at half pace to start with. Practise two fakes:\n\nFake 1 – weight shift: A shifts their weight to one side as if to go past there. When X follows, A quickly shifts back and goes past on the other side. Fake 2 – hide the ball: A pulls the ball back and hides it behind the skates, turns side-on to X, shields the ball with the body and skates past.\n\nSwap roles after 4–5 tries. Progression: X defends for real, or A has to carry the ball over a line behind X. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sell the fake with the whole body – shoulders and head should \"lie\" too."
+    },
+    {
+      "id": "cp2",
+      "text": "Fake at the right distance, about a stick length from the defender."
+    },
+    {
+      "id": "cp3",
+      "text": "Accelerate as soon as you are past."
+    },
+    {
+      "id": "cp4",
+      "text": "When you hide the ball, keep your body between the defender and the ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates with the ball towards X.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.659
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.59,
+          "endX": 0.5,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Fake 1: A shows right with the body, X follows – A shifts weight and goes past on the left.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.459
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.665,
+          "y": 0.28,
+          "endX": 0.84,
+          "endY": 0.28
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.457,
+          "y": 0.4,
+          "endX": 0.28,
+          "endY": 0.16,
+          "bend": -0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Fake 2: A has pulled the ball back behind the skates, shields it with the body and goes past on the other side.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.555
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.491,
+          "endX": 0.72,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

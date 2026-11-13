@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "id": "08099799-129c-5855-accc-e95808956d4b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Utkast till medspelare",
+  "description": "Målvakten har en hög bollar i målet. Tränaren ställer sig på olika platser ute på isen, till exempel vid sargen i höjd med straffområdet, ute på kanten mot mittlinjen eller centralt. Målvakten kastar ut bollen till tränaren, antingen direkt från målet eller efter att ha åkt ut till straffpunkten och kastat därifrån.\n\nTränaren bestämmer typ av utkast: ett lågt underhandskast längs isen till en nära medspelare eller ett högt, långt kast till någon längre bort. Avsluta med att en spelare kommer i fart nerifrån längs sargen och målvakten kastar ut i åkriktningen så att spelaren kan ta med sig bollen utan att tappa fart. Byt plats efter några kast.\n\nVariant: en motspelare står i vägen och målvakten måste välja den fria spelaren. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp innan du kastar – välj den fria spelaren och kasta direkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Längs isen: lågt underhandskast så att bollen inte studsar."
+    },
+    {
+      "id": "cp3",
+      "text": "Till en spelare i fart: kasta framför hen, inte på hen."
+    },
+    {
+      "id": "cp4",
+      "text": "Kom snabbt tillbaka till målet efter ett utkast från straffpunkten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ett lågt underhandskast längs isen till tränaren vid sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.36,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten har åkt ut till straffpunkten och kastar ett högt, långt utkast.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.146
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.146
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.2,
+          "endX": 0.78,
+          "endY": 0.4,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A kommer i fart längs sargen – målvakten kastar framför hen i åkriktningen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.49,
+          "endX": 0.15,
+          "endY": 0.36
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.32,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

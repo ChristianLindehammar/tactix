@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "id": "5367a8f6-f11f-5938-9d91-662db053befb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Försvara hörnan – alla har en uppgift",
+  "description": "Hörnförsvar mot ett anfallande lag med en hörnläggare (A) och tre skyttar (B, C, D) utanför straffområdet. Försvararna ställer upp bakom mållinjen på bestämda platser, målvakten i mål.\n\nVarje försvarare har en uppgift som bestäms innan hörnan slås: X åker rakt ut och täcker skytt 1 (B), W tar skytt 2 (C) och Y tar skytt 3 (D). Z åker in framför målet vid den främre stolpen och blir sedan städare: hen rensar bort alla bollar som hamnar framför mål. När bollen är slagen åker alla ut samtidigt och med full fart. Med fler försvarare skickar ni två mot skytt 1 och låter en spelare stanna vid stolpen medan en annan är ren städare.\n\nSlå 10–15 hörnor från varje sida, byt sedan anfallare och försvarare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bestäm uppgifterna innan hörnan slås – alla vet vilken skytt de ska ta."
+    },
+    {
+      "id": "cp2",
+      "text": "Starta på hörnläggarens slag och åk rakt mot skytten, inte mot bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Täck skottet med kroppen och klubban, men vänd inte ryggen till."
+    },
+    {
+      "id": "cp4",
+      "text": "Städaren rensar direkt ut mot sidan – aldrig tvärs framför eget mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Försvararna står bakom mållinjen. A slår hörnan längs isen till skytt 1 (B).",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.065,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.325,
+          "y": 0.065,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.065,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.845,
+          "y": 0.065,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.269,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.17
+        },
+        {
+          "id": "h",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.21,
+          "endX": 0.52,
+          "endY": 0.34
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Alla åker ut samtidigt: X mot B, W mot C, Y mot D och Z in vid främre stolpen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.065,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.325,
+          "y": 0.065,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.065,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.845,
+          "y": 0.065,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.268,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.125,
+          "endX": 0.5,
+          "endY": 0.24
+        },
+        {
+          "id": "rw",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.125,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.125,
+          "endX": 0.72,
+          "endY": 0.32
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.12,
+          "endX": 0.64,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Skottet är täckt och returen hamnar framför mål – Z rensar ut mot sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.28,
+          "label": "W"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.27
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.27,
+          "endX": 0.92,
+          "endY": 0.22
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "A"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

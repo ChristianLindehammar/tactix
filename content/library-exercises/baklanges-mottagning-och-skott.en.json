@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "id": "a3d6eceb-a627-5871-b541-9cd900b9df11",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Backwards reception and shot",
+  "description": "Split the players into two queues, A and B, by the boards just below the centre line. Two passers, C and D, stand in the middle with balls. A cone stands on each side a way up towards the goal. Goalkeeper in goal.\n\nA skates forwards at high speed towards the cone, turns at the cone and carries on backwards. C passes and A receives the ball while skating backwards, turns forwards with the ball and shoots at goal. B starts when A has received and gets their pass from D. Join the back of the same queue afterwards.\n\nChange direction after a while so the turns are made both ways, and swap passers. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "High tempo into the cone – the turn is made at speed."
+    },
+    {
+      "id": "cp2",
+      "text": "Stick on the ice and eyes on the passer while skating backwards."
+    },
+    {
+      "id": "cp3",
+      "text": "Receive the ball in front of your body so you can turn at once."
+    },
+    {
+      "id": "cp4",
+      "text": "Turn forwards with the first stride and shoot before the goalkeeper is set."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates forwards at high speed towards the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.52
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.54,
+          "endX": 0.24,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns at the cone and skates backwards. C passes.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.52
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.42,
+          "endX": 0.21,
+          "endY": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.46,
+          "endX": 0.29,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A turns forwards with the ball and shoots. B sets off towards their cone and will get a pass from D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.445,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.54,
+          "endX": 0.77,
+          "endY": 0.44
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

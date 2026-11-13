@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 2,
+  "id": "ee37617e-f078-5a56-84c4-0d9588eff440",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Ett mot två – styr mot sargen",
+  "description": "Tre grupper: A anfaller med boll, X och Y försvarar. Ställ en rad koner en bit in från höger sarg, från straffområdet och upp mot mittlinjen. Konraden är en gräns som anfallaren inte får åka utanför. En målvakt står i mål.\n\nA startar med boll och åker mot mål. X och Y åker upp i en båge mot anfallaren, X först och Y lite senare och djupare. De går med A och försöker styra ut hen mot konraden och sargen. Tar sig A förbi X, tar Y över och X åker tillbaka in i banan på insidan. Åker A utanför konerna, vinner försvaret. Rotation: A går till X, X till Y och Y till A.\n\nVariant: flytta konraden närmare mitten för att göra det svårare för anfallaren. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvararna åker med anfallaren och styr – rusa inte rakt på."
+    },
+    {
+      "id": "cp2",
+      "text": "Börja inte backa för tidigt; möt anfallaren högt i banan."
+    },
+    {
+      "id": "cp3",
+      "text": "Timing för den andra försvararen: nära nog att hjälpa, inte så nära att båda passeras på en gång."
+    },
+    {
+      "id": "cp4",
+      "text": "Blir den första försvararen passerad – åk tillbaka in i banan på insidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A startar med boll. X och Y åker upp i en båge mot anfallaren, Y lite senare och djupare.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.559
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.448,
+          "y": 0.494,
+          "endX": 0.46,
+          "endY": 0.39,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.606,
+          "y": 0.265,
+          "endX": 0.58,
+          "endY": 0.38,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.311,
+          "y": 0.202,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X åker med A och styr ut mot konraden. Y täcker på insidan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.594,
+          "y": 0.351
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.642,
+          "y": 0.294,
+          "endX": 0.72,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.484,
+          "y": 0.23,
+          "endX": 0.6,
+          "endY": 0.14
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.329,
+          "y": 0.19,
+          "endX": 0.48,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Kommer A förbi X tar Y över, och X åker tillbaka in i banan på insidan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.14
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.42
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.199
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.503,
+          "y": 0.358,
+          "endX": 0.36,
+          "endY": 0.28
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

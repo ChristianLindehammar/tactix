@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "id": "be873f53-4fd6-524d-bbf6-54aeb37c4352",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Vänd spelet två gånger – tre mot målvakt",
+  "description": "Helplan med en målvakt i varje mål. Tre och tre anfallare: A vid vänster sarg på egen planhalva, B på höger kant och C på vänster kant högre upp mot mittlinjen.\n\nA åker i fart in i banan och får utkastet. A tar med bollen nästan hela vägen över till andra sidan och lägger tillbaka den till B, som kommer emot. A fortsätter ut mot sargen för att inte hamna i offside. B för bollen nästan hela vägen tillbaka över banan och lägger tillbaka till C, som har tagit fart in i banan. Nu är det fritt spel för alla tre mot målvakten.\n\nÖvningen tränar att vända spelet från kant till kant och att lägga tillbaka bollen i rätt läge. Nästa trio startar från andra sidan. Stegring: en eller två försvarare som startar vid mittlinjen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lägg tillbaka bollen så att den ligger still och lätt att ta för den som kommer emot."
+    },
+    {
+      "id": "cp2",
+      "text": "Den som kommer emot ska ha fart när bollen läggs – starta i rätt ögonblick."
+    },
+    {
+      "id": "cp3",
+      "text": "Efter att ha lagt tillbaka: fortsätt ut mot kanten och ge bredd i stället för att stanna."
+    },
+    {
+      "id": "cp4",
+      "text": "Lyft blicken när du för bollen tvärs över banan så att du ser nästa spelare."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut till A som kommer i fart in i banan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.84,
+          "endX": 0.25,
+          "endY": 0.73
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.62,
+          "endX": 0.18,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A för bollen tvärs över banan. B åker emot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.72
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.71,
+          "endX": 0.7,
+          "endY": 0.68,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.61,
+          "endX": 0.64,
+          "endY": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A lägger tillbaka till B och fortsätter ut mot sargen. B för bollen över banan och C startar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.7
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.56,
+          "endX": 0.86,
+          "endY": 0.44
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.7,
+          "endX": 0.28,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.48,
+          "endX": 0.2,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B har lagt tillbaka till C. Fritt spel för alla tre mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.54,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.441
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.38,
+          "endX": 0.48,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.54,
+          "endX": 0.16,
+          "endY": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.5,
+          "endX": 0.8,
+          "endY": 0.32
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

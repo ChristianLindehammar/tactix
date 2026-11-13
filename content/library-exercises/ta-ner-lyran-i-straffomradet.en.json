@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "59253f4d-aeb6-5a78-bb23-fdbdfd0edab8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Bring down the lofted ball in the box",
+  "description": "Half rink with a goalkeeper. Put balls at both sides just above the centre line; one player (A) hits lofted balls from there in towards the penalty area. The attackers stand on each side of the rink by the centre line. One defender (X) at a time stands in front of the penalty area, the other defenders wait their turn.\n\nTwo attackers (B, C) start from the same side, skate along the board and then cut inside with a clear gap between them. A hits a lofted ball from the opposite side in between them. The third attacker (D) starts from A's side and skates more straight into the rink to pick up a rebound or a ball that is laid back. Play until the ball is in the goal or the defender has cleared.\n\nRun it from both sides. The defenders take turns, one per attack. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B and C: keep a gap between you as you cut in – it spreads the defence and gives two chances to bring the ball down."
+    },
+    {
+      "id": "cp2",
+      "text": "Bring the lofted ball down with your stick or body so it drops in front of you, not behind."
+    },
+    {
+      "id": "cp3",
+      "text": "D: arrive centrally at the right time, ready for a rebound or a ball laid back."
+    },
+    {
+      "id": "cp4",
+      "text": "A: hit the lofted ball into the space in front of the attackers, not at them."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B and C skate along the left board. A is at the balls on the other side and D waits.",
+      "markers": [
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.3,
+          "endX": 0.1,
+          "endY": 0.18
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.54,
+          "endX": 0.1,
+          "endY": 0.43
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B and C cut in with a gap between them, A hits the lofted ball in between and D skates into the rink.",
+      "markers": [
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.43,
+          "endX": 0.44,
+          "endY": 0.26,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.21,
+          "endX": 0.36,
+          "endY": 0.18,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.36,
+          "endX": 0.37,
+          "endY": 0.32,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.29,
+          "endX": 0.64,
+          "endY": 0.31
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.22,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C has brought the ball down and shoots. B and D follow up towards goal for rebounds.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.395,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.465,
+          "y": 0.328
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.265,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.18,
+          "endX": 0.4,
+          "endY": 0.1
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.32,
+          "endX": 0.58,
+          "endY": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.42,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 2,
+  "id": "fbe2e626-b684-5e9c-a8aa-1a245896bb1a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Hårt snett inspel från sargen",
+  "description": "Grupp A står i mitten av planhalvan med bollar, grupp B vid höger sarg. En kon står en bit utanför straffområdet.\n\nA passar till B som tar emot i fart och fortsätter i full fart längs sargen mot hörnflaggan. Under tiden åker A runt konen och in mot mål. Nära hörnet slår B en hård passning snett bakåt in i banan, och A avslutar – direktskott, dragning eller styrning. Rotation: A går till B och B till A.\n\nByt sida efter en stund så att inspelen kommer från båda kanterna. Variant: lägg till en försvarare som följer A. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full fart längs sargen – mottagningen får inte sakta ner B."
+    },
+    {
+      "id": "cp2",
+      "text": "A väntar in rätt läge och åker in mot mål när B närmar sig hörnet."
+    },
+    {
+      "id": "cp3",
+      "text": "Inspelet ska vara hårt och gå snett bakåt in framför målet, inte mot målvakten."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta direkt – det finns ingen tid att ta ner bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B som åker längs sargen.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.535,
+          "y": 0.56
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.615,
+          "y": 0.515,
+          "endX": 0.82,
+          "endY": 0.4
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.491,
+          "endX": 0.86,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B åker i full fart mot hörnflaggan. A rundar konen och åker in mot mål.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.299
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.23,
+          "endX": 0.86,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.404,
+          "y": 0.493,
+          "endX": 0.48,
+          "endY": 0.28,
+          "bend": -0.12,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B slår ett hårt, snett inspel till A som avslutar direkt.",
+      "markers": [
+        {
+          "id": "ck",
+          "type": "cone",
+          "x": 0.43,
+          "y": 0.39
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.14,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.708,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.641,
+          "y": 0.173,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.519,
+          "y": 0.26,
+          "endX": 0.505,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

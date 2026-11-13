@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "885f1131-2063-5c38-b805-1e0e723d6d5e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lyror i fyrkant och lyrtennis",
+  "description": "Dela spelarna i fyra grupper som ställer sig i hörnen av en stor rektangel – långsidorna längs banan, kortsidorna tvärs över. Ha extra bollar hos B och D.\n\nA slår en lång lyra till B. B tar ner bollen, får kontroll och spelar en passning längs isen till C. C slår en lång lyra tillbaka till D, som tar ner bollen och passar längs isen till A. Efter sin tur byter A och D grupp, liksom B och C.\n\nVariant – lyrtennis: spelarna står i par på 8–10 meters avstånd. A lyfter bollen till B, som slår tillbaka den direkt i luften eller efter en studs. Byt roller när tränaren säger till. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lyran: bladet under bollen och ett följ-med uppåt – inte ett hugg."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta ner bollen med mjuk klubba eller kroppen och få den till isen snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Ställ dig i bollens bana i tid och flytta fötterna, inte bara klubban."
+    },
+    {
+      "id": "cp4",
+      "text": "Passningen längs isen efter nedtagningen ska vara lika noggrann som lyran."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång lyra till B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.74
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.68,
+          "endX": 0.33,
+          "endY": 0.32,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar ner bollen och passar längs isen till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.26,
+          "endX": 0.66,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C lyfter en lång lyra till D. D tar ner och passar längs isen till A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.32,
+          "endX": 0.67,
+          "endY": 0.66,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.74
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.74,
+          "endX": 0.34,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Lyrtennis: paren lyfter bollen till varandra och slår tillbaka direkt.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.29,
+          "endX": 0.66,
+          "endY": 0.29,
+          "bend": -0.05,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.62
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.61,
+          "endX": 0.34,
+          "endY": 0.61,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

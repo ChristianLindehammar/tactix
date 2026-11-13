@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "id": "66582d11-1896-50b6-8daf-ba7422115228",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "3 mot 3 i intervaller – stoppa bollen på linjen",
+  "description": "Markera en begränsad yta med fyra koner, till exempel tvärs över banan på båda sidor om mittlinjen. Två lag om tre spelar mot varandra. Varje lag anfaller mot motståndarnas kortsida och gör poäng genom att stoppa bollen på linjen mellan konerna.\n\nSpela tre minuter i högt tempo, vila en minut och kör igen – totalt 5–6 omgångar. Under vilan dricker spelarna och tränaren ger en kort instruktion. Har ni fler spelare kan flera ytor köras samtidigt.\n\nRegler att variera: max tre touch per spelare, eller att alla i laget måste ha varit över mittlinjen innan poängen räknas. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hela laget jobbar hela tiden – visa dig för passning eller ta tillbaka bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela bollen snabbt till den som står fri, i stället för att dribbla in i försvararna."
+    },
+    {
+      "id": "cp3",
+      "text": "Vid bolltapp: närmaste spelare pressar direkt, de andra täcker passningsvägarna."
+    },
+    {
+      "id": "cp4",
+      "text": "Håll ytan bred – stå inte tre spelare på samma ställe."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "conditioning",
+    "passing",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B och C åker in i luckan mellan X och Z.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.62
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.62,
+          "endX": 0.71,
+          "endY": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.53,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.47,
+          "endX": 0.45,
+          "endY": 0.38
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.45,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.35,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar C, som har kommit loss, och kan åka mot linjen och stoppa bollen där.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.55,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.45
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.43,
+          "endX": 0.5,
+          "endY": 0.39
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "1a2e5a8d-5e8e-55d8-88a7-f502011ed40c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Ta ner lyran i straffområdet",
+  "description": "Halvplan med målvakt. Lägg bollar vid båda kanterna strax ovanför mittlinjen; en spelare (A) slår lyror därifrån in mot straffområdet. Anfallarna står på varsin sida av planen vid mittlinjen. En försvarare (X) i taget står framför straffområdet, de andra försvararna väntar på tur.\n\nTvå anfallare (B, C) startar från samma sida, åker längs sargen och skär sedan in i banan med ett tydligt avstånd mellan sig. A slår en lyra från motsatt sida in mellan dem. Den tredje anfallaren (D) startar från A:s sida och åker mer rakt in i banan för att ta en retur eller en boll som läggs tillbaka. Spela tills bollen ligger i mål eller försvararen har rensat.\n\nKör från båda sidor. Försvararna turas om, en per anfall. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B och C: håll avstånd till varandra när ni skär in – det sprider försvaret och ger två chanser att ta ner bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta ner lyran med klubban eller kroppen så att den hamnar framför dig, inte bakom."
+    },
+    {
+      "id": "cp3",
+      "text": "D: kom in centralt i rätt tid, redo för retur eller en tillbakalagd boll."
+    },
+    {
+      "id": "cp4",
+      "text": "A: slå lyran ut i ytan framför anfallarna, inte på dem."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B och C åker längs vänstra sargen. A står vid bollarna på andra sidan och D väntar.",
+      "markers": [
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.3,
+          "endX": 0.1,
+          "endY": 0.18
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.54,
+          "endX": 0.1,
+          "endY": 0.43
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B och C skär in med avstånd mellan sig, A slår lyran in mellan dem och D åker in i banan.",
+      "markers": [
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.47
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.43,
+          "endX": 0.44,
+          "endY": 0.26,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.21,
+          "endX": 0.36,
+          "endY": 0.18,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.36,
+          "endX": 0.37,
+          "endY": 0.32,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.29,
+          "endX": 0.64,
+          "endY": 0.31
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.22,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C har tagit ner bollen och skjuter. B och D följer upp mot mål för returer.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.395,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.465,
+          "y": 0.328
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.265,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.18,
+          "endX": 0.4,
+          "endY": 0.1
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.32,
+          "endX": 0.58,
+          "endY": 0.18
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.42,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

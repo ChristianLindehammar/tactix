@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "id": "32e06d68-2a6b-5b32-afd3-e0c39481d1f1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Juggle on the stick and shoot",
+  "description": "Each player has a ball a little way out from the goal. Players lift the ball and bounce it on the stick blade as many times as they can, then shoot at goal: a) after several bounces, b) after just one bounce, c) on the volley as the ball comes down. One player shoots at a time so the goalkeeper can get set.\n\nThe second part is done in pairs in the other half: players play the ball in the air to each other and take it with the stick. Vary the distance and how many bounces are allowed before the ball goes back.\n\nWork on both forehand and backhand. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Watch the ball all the time, also when you shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "Soft hands and an angled blade when you bounce the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Knees slightly bent, and follow through on the strike."
+    },
+    {
+      "id": "cp4",
+      "text": "Aim to hit the target – power comes later."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A has bounced the ball several times on the stick and shoots. B juggles and waits for their turn.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.455,
+          "y": 0.352
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.541
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.462,
+          "y": 0.284,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B lifts the ball, lets it bounce once and shoots – or hits it straight on the volley.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.332
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.537,
+          "y": 0.267,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "In pairs: the ball is played in the air to a partner, who takes it with the stick and plays it back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.64
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.64,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.84,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.84
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.84,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.435,
+          "y": 0.64,
+          "endX": 0.71,
+          "endY": 0.64,
+          "bend": -0.05,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.435,
+          "y": 0.84,
+          "endX": 0.71,
+          "endY": 0.84,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

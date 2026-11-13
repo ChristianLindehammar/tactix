@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 2,
+  "id": "1ee70af4-a286-512e-be9a-5dc930a9e8df",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Skating course with full turns and give-and-go",
+  "description": "Place three cones in a row from your own half up towards the goal and a fourth cone along the board level with the penalty area. The players queue below the cones. One coach stands in the middle with balls for the give-and-go, another coach puts out balls for the finish. Goalkeeper in goal.\n\nA skates forwards along the cones and makes a full turn to the right in the gap between the first and second cone and a full turn to the left between the second and third. After the last cone A gets a pass from the coach and plays it straight back. A carries on round the fourth cone, takes the ball lying there and shoots at the goalkeeper. The next player starts when A has done the give-and-go. Anyone who shoots wide fetches their own ball.\n\nSwitch sides after a while so the give-and-go goes the other way. Progression: A carries the ball the whole course and does the turns with it. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Turns both ways – train your weak side too."
+    },
+    {
+      "id": "cp2",
+      "text": "Stick on the ice the whole time so you are ready for the pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Play the give-and-go back first time and skate on at full speed."
+    },
+    {
+      "id": "cp4",
+      "text": "Look at the ball when you shoot and follow up the shot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "conditioning",
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skates forwards along the cones: a full turn right between cones 1 and 2, left between 2 and 3.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.56
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.22
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "L"
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "bl2",
+          "type": "ball",
+          "x": 0.87,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.74,
+          "endX": 0.16,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Give-and-go: the coach passes to A, who plays it straight back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.56
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.22
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "L"
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "bl2",
+          "type": "ball",
+          "x": 0.87,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.465
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.44,
+          "endX": 0.25,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.32,
+          "endX": 0.59,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rounds the fourth cone, takes the ball lying there and shoots at the goalkeeper.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.68
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.56
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.18,
+          "y": 0.22
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "L"
+        },
+        {
+          "id": "l2",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "L"
+        },
+        {
+          "id": "bl2",
+          "type": "ball",
+          "x": 0.87,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.28
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.27,
+          "endX": 0.32,
+          "endY": 0.25,
+          "bend": -0.16,
+          "waves": 1
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.225,
+          "endX": 0.49,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

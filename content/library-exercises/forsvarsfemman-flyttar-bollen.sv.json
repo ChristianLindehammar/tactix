@@ -1,0 +1,385 @@
+{
+  "schemaVersion": 2,
+  "id": "13958a55-6ae2-5b8b-9f6e-230519e65f69",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Försvarsfemman flyttar bollen",
+  "description": "Ställ upp försvarsfemman som i match framför det egna målet: liberon (A), de två backarna (B, C) och de två ytterhalvorna (D, E). Målvakten står i mål. Två forwards (X, Y) står framför femman.\n\nFemman låter bollen gå från den ena sidan till den andra och tillbaka. Forwardsen styr spelet: de följer bollen och flyttar sig mellan passningsvägarna, men går inte in i närkamper. Bara när en passning är chansartad – för långsam, för kort eller tvärs framför eget mål – får de bryta. Lyckas de ta bollen åker de direkt mot mål och skjuter.\n\nFemman ska aldrig stå still: åk ut och in i banan och gör er spelbara hela tiden. Byt forwards efter 2–3 minuter. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Femman: rör er hela tiden så att bollhållaren alltid har två passningsalternativ."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela fast och bestämt – en löst slagen passning tvärs framför målet är den farligaste."
+    },
+    {
+      "id": "cp3",
+      "text": "Forwards: styr bollen åt ett håll med kroppen och klubban, gå inte in och tackla."
+    },
+    {
+      "id": "cp4",
+      "text": "Forwards: bryt bara när passningen är chansartad, och ta då snabbt vägen mot mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "positioning",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ytterhalven D spelar till liberon. X och Y flyttar med bollen utan att gå på.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.79,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.73,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.55,
+          "label": "E"
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.617
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.66,
+          "endX": 0.42,
+          "endY": 0.74
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.56,
+          "endX": 0.44,
+          "endY": 0.66
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.48,
+          "endX": 0.65,
+          "endY": 0.59
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Liberon vänder spelet till högra ytterhalven E. Y följer efter och X stänger mitten.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.79,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.73,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.55,
+          "label": "E"
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.7
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.68,
+          "y": 0.66,
+          "endX": 0.8,
+          "endY": 0.585
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.64,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.58,
+          "endX": 0.54,
+          "endY": 0.48
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.54,
+          "endX": 0.78,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Backen C slår en chansartad passning tvärs framför målet – Y åker in i passningsvägen och bryter.",
+      "markers": [
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.55,
+          "label": "E"
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.7
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.7,
+          "endX": 0.32,
+          "endY": 0.72
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.68,
+          "endX": 0.41,
+          "endY": 0.78
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y har bollen och skjuter direkt mot mål.",
+      "markers": [
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.55,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.55,
+          "label": "E"
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.475,
+          "y": 0.727
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.79,
+          "endX": 0.49,
+          "endY": 0.97
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "24ff7bde-b33b-5d97-8cc6-3d47d74aed52",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Överlapp längs sargen",
+  "description": "Två köer, A och B, strax innanför mittlinjen. Målvakt i mål. A har bollen.\n\nA för bollen snett ut mot sargen. Nästan samtidigt startar B i hög fart, skrinnar bakom A och upp på utsidan längs sargen. När B är i höjd med A spelar A bollen snett framåt ut mot sargen. B tar emot i full fart, går in mot mål och avslutar. A håller nere farten under överlappet och går sedan in mot bortre stolpen för en retur.\n\nByt köer efter varje försök och kör från båda sidor. Stegring: en back står i vägen och måste välja mellan A och B, så att det blir 2 mot 1. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "B kommer bakom och utanför A – aldrig framför."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen spelas när B är jämsides med A, snett framåt så att B kan ta den i full fart."
+    },
+    {
+      "id": "cp3",
+      "text": "A håller ner farten och drar till sig försvaret; farten är B:s fördel."
+    },
+    {
+      "id": "cp4",
+      "text": "B tar ut bollen ur sargläget och vinklar in mot mål innan avslutet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A för bollen snett ut mot sargen. B startar och skrinnar bakom A på utsidan.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.36,
+          "endX": 0.3,
+          "endY": 0.28,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.62,
+          "endX": 0.12,
+          "endY": 0.42,
+          "bend": -0.07,
+          "waves": 1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B är i höjd med A – A spelar bollen snett framåt längs sargen.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.25,
+          "y": 0.15,
+          "endX": 0.13,
+          "endY": 0.09
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.26,
+          "endX": 0.1,
+          "endY": 0.16
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar emot i fart, går in mot mål och avslutar. A går mot bortre stolpen.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.175
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.25,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.22,
+          "endX": 0.5,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.38,
+          "endX": 0.66,
+          "endY": 0.24
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.76,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

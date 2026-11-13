@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 2,
+  "id": "965dd8c3-11f9-5e20-9b0a-84d956d247f5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "2v2: defenders turn and go with",
+  "description": "Place four cones as a box in front of the penalty area. Attackers A and B start in line with the box with a ball. Defenders C and D stand out by each board, level with the box. A goalkeeper is in goal.\n\nA and B skate towards the box. At the same time C and D come in from each side, between the cones. They must turn in an arc and skate with the attackers towards their own goal, not stop and wait. Then play 2v2 until a goal, a save or the ball is won. Rotation: A and B swap, C and D swap sides. After a while attack and defence change roles.\n\nVariant: let the defenders start a little later so they have to chase back. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The defenders turn in an arc and go with the attackers – never straight at the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk to each other: one takes the ball carrier, the other covers the second attacker and the space in front of goal."
+    },
+    {
+      "id": "cp3",
+      "text": "Steer the ball carrier towards the board, away from the middle."
+    },
+    {
+      "id": "cp4",
+      "text": "The attackers use the width and pass when a defender commits."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B skate towards the box. C and D come in between the cones from each side and turn in an arc.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.26
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.26
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.559
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.09,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.91,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.388,
+          "y": 0.494,
+          "endX": 0.4,
+          "endY": 0.39,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.634,
+          "y": 0.591,
+          "endX": 0.62,
+          "endY": 0.42
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.183,
+          "y": 0.356,
+          "endX": 0.4,
+          "endY": 0.3,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.817,
+          "y": 0.356,
+          "endX": 0.6,
+          "endY": 0.3,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The defenders skate with the attackers. A passes to B and D goes with B.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.26
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.26
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.319
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.442,
+          "y": 0.334,
+          "endX": 0.62,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots if a chance opens. C and D work together in front of goal.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.46
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.46
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.26
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.26
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.586,
+          "y": 0.331
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.571,
+          "y": 0.263,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

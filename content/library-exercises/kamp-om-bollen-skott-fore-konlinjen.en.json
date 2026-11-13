@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "id": "1d03ce78-7e5f-5a21-88da-c27fe7b54ed2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Battle for the ball – shoot before the cone line",
+  "description": "Place two cones a little outside the penalty area so they form a line across the rink. Goalkeeper in goal. The players stand in pairs side by side some way out in the half, and the coach stands to the side with the balls.\n\nThe coach plays a ball forward towards the goal and both players in the pair set off at the same time. Whoever reaches the ball first attacks and has to shoot before the cone line; the other tries to stop the shot by winning the ball, disturbing the stick or blocking the shot. The duel ends with the shot or when the defender has won the ball. The next pair goes straight away; swap sides within the pair after each attempt.\n\nVariant: the coach varies the pass – straight ahead, angled towards the board or slightly backwards – so the players have to read the ball before choosing their line. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "React to the pass at once – the first push often decides the duel."
+    },
+    {
+      "id": "cp2",
+      "text": "If you win the ball: shield it with your body and shoot quickly, before the cone line."
+    },
+    {
+      "id": "cp3",
+      "text": "If you are second: skate in on the inside, between the attacker and the goal."
+    },
+    {
+      "id": "cp4",
+      "text": "Defend with your stick on the ice – no hitting sticks or legs."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach plays the ball forward and A and X set off for it at the same time.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.22
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.4,
+          "label": "L"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.355,
+          "endX": 0.57,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.53,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.47,
+          "endX": 0.53,
+          "endY": 0.33
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.47,
+          "endX": 0.64,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A got there first and shoots before the cone line. X chases and tries to block the shot.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.22
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.46,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.26,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.36,
+          "endX": 0.6,
+          "endY": 0.27
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

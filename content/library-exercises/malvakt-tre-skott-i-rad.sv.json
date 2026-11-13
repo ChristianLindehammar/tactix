@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "id": "d190c1a3-df23-5f62-b774-5740d67e5c2e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Tre skott i rad",
+  "description": "Lägg tre bollar på rad strax utanför straffområdet, ett par meter mellan varje. Tränaren skjuter boll ett, målvakten räddar, tränaren skjuter boll två så snart målvakten är på plats igen, och sedan boll tre. Skotten kommer tätt men målvakten ska hinna ställa sig rätt mellan varje.\n\nLägg tillbaka bollarna och kör en ny serie, 4–6 serier med vila emellan. Variera ordningen, till exempel mitten först eller från höger till vänster.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Efter räddningen: upp i grundposition direkt, med blicken på nästa boll."
+    },
+    {
+      "id": "cp2",
+      "text": "Flytta dig i sidled så att du står rätt mot den nya bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Rensa returen åt sidan eller fånga bollen – ingen retur framför målet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 1,
+  "maxPlayers": 2,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tränaren skjuter den första bollen.",
+      "markers": [
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.28
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.355,
+          "y": 0.22,
+          "endX": 0.49,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Direkt när målvakten är på plats kommer skott två från mitten.",
+      "markers": [
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.22,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Skott tre från höger – målvakten har flyttat sig och står rätt mot bollen.",
+      "markers": [
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.28
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.38,
+          "label": "L"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.645,
+          "y": 0.22,
+          "endX": 0.51,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

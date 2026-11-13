@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 2,
+  "id": "ed7dfd06-76e9-59a4-8820-98701b043ed4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Väggspel och lägg tillbaka till skytten",
+  "description": "Två köer, A och B, en bit innanför mittlinjen. Målvakt i mål. A startar med bollen.\n\nA spelar väggspel med B och tar emot returen i fart. Sedan sänker A tempot medan B ökar och skrinnar snett in bakom A. A lägger tillbaka bollen bakåt till B, som kommer i full fart och avslutar. A fortsätter mot mål och tar returen om det blir någon.\n\nByt köer efter varje försök. Stegring: en back startar från straffområdet och försöker störa, så att A måste välja mellan att lägga tillbaka och att gå själv. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll avstånd – kommer B för nära A finns ingen yta att skjuta i."
+    },
+    {
+      "id": "cp2",
+      "text": "Lägg bollen tydligt bakåt så att B kan välja om hen ska skjuta direkt eller ta ett skär till."
+    },
+    {
+      "id": "cp3",
+      "text": "B tajmar löpningen: bakom A precis när bollen läggs."
+    },
+    {
+      "id": "cp4",
+      "text": "A följer alltid upp för returen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar till B och skrinnar vidare framåt.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.435
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.435,
+          "endX": 0.66,
+          "endY": 0.4
+        },
+        {
+          "id": "r0",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.44,
+          "endX": 0.32,
+          "endY": 0.34
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar tillbaka framför A – väggspelet är klart.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.3,
+          "endX": 0.4,
+          "endY": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.315
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.3,
+          "endX": 0.42,
+          "endY": 0.24
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.62,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A sänker farten och lägger tillbaka bollen till B, som skrinnar in bakom i full fart.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.62,
+          "endY": 0.41
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.46,
+          "endX": 0.65,
+          "endY": 0.36
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B avslutar. A går mot mål för en eventuell retur.",
+      "markers": [
+        {
+          "id": "mv",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.22,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.2,
+          "endX": 0.41,
+          "endY": 0.1
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 2,
+  "id": "b9172a56-b895-559c-8505-516e94db4722",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lyra över liberon till yttern",
+  "description": "Helplan med målvakt i båda målen. Två ytterhalvor, A och B, står på var sin sida utanför eget straffområde. En libero, X, står passivt några meter framför straffområdet. Ytterforwardarna C och D väntar på var sin kant en bit ner mot mittlinjen.\n\nMålvakten kastar ut till A eller B. Den som får bollen slår direkt en lång lyra snett över banan till motsatt kant, över liberon. Ytterforwarden på den sidan accelererar i full fart, tar ner bollen utan att tappa farten och avslutar mot mål – med skott eller genom att dra in och göra mål själv.\n\nRotera roller efter några försök, och växla så att lyran går åt båda hållen. Det är svårt att ta ner en lyra i full fart, så ge övningen tid. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lyran ska gå högt över liberon och landa framför yttern, i åkriktningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Yttern startar när utkastet går – full fart innan bollen landar."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta ner bollen mjukt med klubban och fortsätt framåt på samma touch."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta snabbt – välj skott eller dragning efter vad målvakten gör."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "ballControl",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.87
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.825,
+          "endX": 0.21,
+          "endY": 0.755
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår en lång lyra över liberon till höger kant. D accelererar mot bollen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.69
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.655,
+          "endX": 0.8,
+          "endY": 0.3,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.44,
+          "endX": 0.86,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D har tagit ner bollen i fart och skjuter – eller drar in mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.25,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

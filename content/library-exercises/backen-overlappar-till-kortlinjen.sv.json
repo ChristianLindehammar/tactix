@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "id": "0fc6683a-f64b-5960-8060-ad58295e7e79",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Backen överlappar till kortlinjen",
+  "description": "Halvplan med målvakt. Backen A startar med bollen centralt strax innanför mittlinjen, mittfältaren C står centralt en bit utanför straffområdet och forwarden B ute till vänster.\n\nA passar C och åker direkt i en båge ut mot högerkanten. C spelar ett väggspel på ett touch ut i ytan framför A längs sargen. A tar med bollen hela vägen ner till kortlinjen och slår ett inspel snett bakåt. Under tiden har B åkt in mot straffområdet och avslutar med direktskott. C följer efter mot mål för en eventuell retur.\n\nByt roller efter varje anfall och kör åt båda hållen. Stegring: en passiv och sedan aktiv försvarare som följer B. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Backen startar direkt efter passningen – överlappet måste komma i full fart."
+    },
+    {
+      "id": "cp2",
+      "text": "Väggspelet läggs framför A, inte på A."
+    },
+    {
+      "id": "cp3",
+      "text": "Inspelet slås snett bakåt och hårt längs isen, bort från målvakten."
+    },
+    {
+      "id": "cp4",
+      "text": "B: tajma löpningen så att du kommer i fart när bollen kommer – inte för tidigt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar C och åker i en båge ut mot högerkanten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.51,
+          "y": 0.46
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.535,
+          "y": 0.4,
+          "endX": 0.57,
+          "endY": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.4,
+          "endX": 0.76,
+          "endY": 0.32,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C spelar väggspel ut i ytan längs sargen och A åker på bollen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.34
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.645,
+          "y": 0.295,
+          "endX": 0.8,
+          "endY": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.34,
+          "endX": 0.82,
+          "endY": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A har nått kortlinjen och slår inspelet snett bakåt. B åker in.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.105
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.135,
+          "endX": 0.49,
+          "endY": 0.26
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.225,
+          "y": 0.385,
+          "endX": 0.38,
+          "endY": 0.375
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.24,
+          "endX": 0.5,
+          "endY": 0.03
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.42,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

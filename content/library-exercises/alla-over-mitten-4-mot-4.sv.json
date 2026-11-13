@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "2a5311cf-f347-51a1-8adc-653dbf304ae2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Alla över mitten 4 mot 4",
+  "description": "Spela 4 mot 4 på en del av isen kring mittlinjen, med ett litet mål i varje ände. Markera ytan med koner. Inga målvakter.\n\nRegel: ett mål räknas bara om alla i det anfallande laget är över mittlinjen när bollen går in. Det tvingar hela laget att följa med upp i anfallet och ger fler passningsalternativ. Tränaren berömmer passningskombinationer och försök till samspel mer än själva målen – räkna gärna antal passningar i rad eller utse dagens finaste anfall.\n\nByt lag och positioner ofta så att alla är i rörelse. Fler spelare: spela flera matcher bredvid varandra. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Alla följer med upp – ingen står kvar bakom mitten."
+    },
+    {
+      "id": "cp2",
+      "text": "Rör dig hela tiden och erbjud dig för bollföraren."
+    },
+    {
+      "id": "cp3",
+      "text": "Försök spela ihop er fram i stället för att åka själv."
+    },
+    {
+      "id": "cp4",
+      "text": "När bollen tappas: åk hem snabbt så att laget blir helt igen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blått lag bygger upp i egen halva. Två spelare rör sig för att erbjuda sig.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.28
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.72
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.72
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.72,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.455,
+          "y": 0.62
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.46
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.36
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.62,
+          "endX": 0.71,
+          "endY": 0.62
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.275,
+          "y": 0.395,
+          "endX": 0.3,
+          "endY": 0.29
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.665,
+          "y": 0.395,
+          "endX": 0.64,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Alla blå är över mittlinjen – en spelare spelar fram en lagkamrat som avslutar, och målet räknas.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.28
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.72
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.72
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.72,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.45
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.49,
+          "y": 0.49
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.33
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.46
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.655,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.36
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.57
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.58
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.604,
+          "y": 0.4,
+          "endX": 0.51,
+          "endY": 0.29
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.68,
+          "endX": 0.235,
+          "endY": 0.51
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

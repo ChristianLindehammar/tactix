@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "09bbf744-0f22-508f-a8ec-c5b595a4bc3f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Passningar i par – stilla och i rörelse",
+  "description": "Spelarna går ihop två och två med en boll per par. Börja stillastående på 5–8 meters avstånd och slå passningar fram och tillbaka. Bollen ska stoppas och kontrolleras innan den spelas tillbaka. Passningen skjuts iväg med klubban längs isen i stället för att slås.\n\nNär det sitter skrinnar paren över eller längs banan sida vid sida med samma avstånd och passar under tiden. Passningen ska landa framför medspelarens klubba så att hen kan ta emot utan att tappa fart. Vänd vid sargen eller kortlinjen och fortsätt tillbaka.\n\nVariant: bara direktpassningar, eller byt sida i paret så att båda får passa åt båda hållen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Klubban på isen och bladet vinklat mot medspelaren – visa var du vill ha bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Mjuka upp mottagningen: ge efter lite med klubban när bollen kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut iväg bollen med fasta, raka passningar – inga hugg."
+    },
+    {
+      "id": "cp4",
+      "text": "Blicken upp och ögonkontakt innan du passar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 22,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Stillastående: A och B, C och D passar fram och tillbaka och stoppar bollen innan den går tillbaka.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.28
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.28,
+          "endX": 0.66,
+          "endY": 0.28
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.68
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.68,
+          "endX": 0.34,
+          "endY": 0.68
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "I rörelse: A passar snett framåt så att bollen hamnar framför B:s klubba medan båda skrinnar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.74
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.67,
+          "endX": 0.22,
+          "endY": 0.44
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.63,
+          "endX": 0.78,
+          "endY": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.69,
+          "endX": 0.68,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar emot i fart och passar tillbaka framför A. Paren fortsätter över hela banan.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.46
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.43,
+          "endX": 0.22,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.39,
+          "endX": 0.78,
+          "endY": 0.17
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.41,
+          "endX": 0.32,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

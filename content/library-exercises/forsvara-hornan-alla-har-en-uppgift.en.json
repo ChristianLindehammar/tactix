@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "id": "ad6253a6-aee2-5a4b-91c4-ebe82e65a590",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Defend the corner – everyone has a job",
+  "description": "Corner defence against an attacking side with a corner taker (A) and three shooters (B, C, D) outside the penalty area. The defenders line up behind the goal line in set places, the goalkeeper in goal.\n\nEvery defender has a job that is agreed before the corner is taken: X skates straight out and blocks shooter 1 (B), W takes shooter 2 (C) and Y takes shooter 3 (D). Z goes in front of goal at the near post and then becomes the sweeper, clearing every ball that ends up in front of goal. When the corner is struck, everyone goes out at the same time and at full speed. With more defenders, send two at shooter 1 and let one player stay at the post while another is a pure sweeper.\n\nTake 10–15 corners from each side, then swap attackers and defenders. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Agree the jobs before the corner is taken – everyone knows which shooter is theirs."
+    },
+    {
+      "id": "cp2",
+      "text": "Go on the corner taker's strike and skate straight at the shooter, not at the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Block the shot with your body and stick, but do not turn your back."
+    },
+    {
+      "id": "cp4",
+      "text": "The sweeper clears straight out to the side – never across the front of your own goal."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The defenders stand behind the goal line. A plays the corner along the ice to shooter 1 (B).",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.065,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.325,
+          "y": 0.065,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.065,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.845,
+          "y": 0.065,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.269,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.17
+        },
+        {
+          "id": "h",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.21,
+          "endX": 0.52,
+          "endY": 0.34
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Everyone goes out at once: X at B, W at C, Y at D and Z in at the near post.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.065,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.325,
+          "y": 0.065,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.065,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.845,
+          "y": 0.065,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.268,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.125,
+          "endX": 0.5,
+          "endY": 0.24
+        },
+        {
+          "id": "rw",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.125,
+          "endX": 0.2,
+          "endY": 0.3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.125,
+          "endX": 0.72,
+          "endY": 0.32
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.12,
+          "endX": 0.64,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The shot is blocked and the rebound lands in front of goal – Z clears it out towards the board.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.28,
+          "label": "W"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.27
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.27,
+          "endX": 0.92,
+          "endY": 0.22
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "A"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

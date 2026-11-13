@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "09bb4498-8f7e-5d89-9792-50b7f5ca592d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "4v4: everyone over halfway",
+  "description": "Play 4v4 on part of the ice around the centre line, with a small goal at each end. Mark the area with cones. No goalkeepers.\n\nRule: a goal only counts if everyone on the attacking team is over the centre line when the ball goes in. This makes the whole team join the attack and gives the ball carrier more options. The coach praises passing combinations and attempts at combination play more than the goals themselves – count passes in a row or pick the best attack of the day.\n\nChange teams and positions often so everyone keeps moving. More players: run several games side by side. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Everyone joins the attack – nobody stays behind the halfway line."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep moving and offer yourself to the ball carrier."
+    },
+    {
+      "id": "cp3",
+      "text": "Try to pass your way forward instead of going it alone."
+    },
+    {
+      "id": "cp4",
+      "text": "When the ball is lost: get back quickly so the team is whole again."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The blue team builds up in its own half. Two players move to offer themselves.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.28
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.72
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.72
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.72,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.455,
+          "y": 0.62
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.46
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.36
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.62,
+          "endX": 0.71,
+          "endY": 0.62
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.275,
+          "y": 0.395,
+          "endX": 0.3,
+          "endY": 0.29
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.665,
+          "y": 0.395,
+          "endX": 0.64,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "All the blue players are over the centre line – one sets up another to score, and the goal counts.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.28
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.28
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.72
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.72
+        },
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.28
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.72,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.45
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.49,
+          "y": 0.49
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.33
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.81,
+          "y": 0.46
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.655,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.36
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.57
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.58
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.604,
+          "y": 0.4,
+          "endX": 0.51,
+          "endY": 0.29
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.68,
+          "endX": 0.235,
+          "endY": 0.51
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "id": "19b9765b-520c-57fb-b5f1-326f32eb782d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Triangle passing forwards and back",
+  "description": "Three players and one ball. The players form a triangle with depth: one further back and two further forward at different heights – not all three in a row. The ball goes forwards and backwards in the triangle, not just sideways.\n\nA passes forward to B, B passes on forward to C, and C passes back to A. The receiver shows with the stick where they want the ball. After a while the players start moving: whoever has passed skates to a new spot so the triangle always keeps its depth.\n\nProgression: two touches, then one touch. Run several triangles on the ice at once. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show with the stick where you want the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Stop the ball and look up before passing on."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep depth in the triangle – don't stand in line with the others."
+    },
+    {
+      "id": "cp4",
+      "text": "Pass in front of your team-mate's stick so they can keep going forward."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes forward to B, who shows with the stick where the ball should go.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.659
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.419,
+          "y": 0.615,
+          "endX": 0.3,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B takes the ball and passes on forward to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.378,
+          "y": 0.414
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.474,
+          "y": 0.396,
+          "endX": 0.66,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes back to A. B skates to a new spot so the triangle keeps its depth.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.401
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.682,
+          "y": 0.465,
+          "endX": 0.55,
+          "endY": 0.69
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.271,
+          "y": 0.415,
+          "endX": 0.3,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

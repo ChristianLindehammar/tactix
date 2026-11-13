@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "id": "ba465274-96d3-5c5a-ada7-887b187eeb97",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Uppspel från utkastet med tre spelare",
+  "description": "Helplan med en målvakt i varje mål. Tre spelare startar uppspelet: A (forward eller mittfältare) vid vänster sarg på egen planhalva, B (ytterhalv) nere vid kortlinjen på höger sida och C (forward eller mittfältare) på höger kant uppe vid mittlinjen.\n\nA åker ner längs sargen och får utkastet från målvakten, tar med bollen in i banan och slår en hård boll tvärs över till B, som har tagit fart upp från kortlinjen. B för bollen uppåt och in i banan. C åker först ner mot det egna målet för att få fart, vänder och kommer i full fart längs högra sargen, där B spelar bollen framför hen. Sedan är det fritt spel mot mål med alla tre. Nästa trio startar från andra sidan.\n\nStegring: sätt in en eller två försvarare på motståndarens planhalva. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stanna aldrig efter en passning – åk vidare in i anfallet."
+    },
+    {
+      "id": "cp2",
+      "text": "Akta offside: håll igen genom att åka en större båge i stället för att stanna."
+    },
+    {
+      "id": "cp3",
+      "text": "C vänder först när bollen är på väg till B, så att farten finns när passningen kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Slå passningen framför mottagaren i åkriktningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker ner längs sargen och får utkastet. B startar från kortlinjen och C åker ner mot eget mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.84,
+          "endX": 0.2,
+          "endY": 0.74
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.64,
+          "endX": 0.14,
+          "endY": 0.75
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.9,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.84,
+          "endX": 0.68,
+          "endY": 0.7
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.46,
+          "endX": 0.86,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar med bollen in i banan. B åker uppåt och C har vänt och tar fart längs sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.672
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.64,
+          "endX": 0.51,
+          "endY": 0.55,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.66,
+          "endX": 0.66,
+          "endY": 0.52
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.54,
+          "endX": 0.86,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A slår en hård boll tvärs över till B och fortsätter åka – i en båge ut mot kanten för att inte hamna i offside.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.352,
+          "y": 0.64
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.445,
+          "y": 0.64,
+          "endX": 0.62,
+          "endY": 0.62
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.58,
+          "endX": 0.24,
+          "endY": 0.42,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.44,
+          "endX": 0.88,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B har fört bollen uppåt och in och spelar till C längs sargen. Fritt spel mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.352
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.29,
+          "endX": 0.78,
+          "endY": 0.17
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.54,
+          "endY": 0.22
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.28,
+          "endX": 0.86,
+          "endY": 0.16
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.36,
+          "endX": 0.38,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

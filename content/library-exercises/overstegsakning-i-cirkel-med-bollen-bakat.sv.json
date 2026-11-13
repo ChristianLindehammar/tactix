@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "id": "c0272faf-f79e-529e-9776-ad5483dcd4bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Överstegsåkning i cirkel med bollen bakåt",
+  "description": "5–6 spelare ställer upp på en cirkel, gärna runt mittcirkeln eller en ring av koner med ungefär 10 meters diameter. Alla skrinnar åt samma håll med överstegsåkning. En spelare har bollen.\n\nBollföraren passar eller lägger tillbaka bollen till spelaren bakom sig. Den som tar emot för bollen några skär och skickar den vidare bakåt till nästa. Bollen vandrar alltså åt motsatt håll mot åkriktningen.\n\nByt åkriktning efter en stund så att båda benen får jobba. Stegring: två bollar i cirkeln samtidigt, eller direktpassning bakåt utan att stanna bollen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Djupa knän och kraftiga överkliv – ytterbenet trycker under kroppen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll farten jämn så att avståndet mellan spelarna blir detsamma."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta bakåt över axeln innan du lägger tillbaka bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Mottagaren håller klubban på isen och visar var bollen ska komma."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla skrinnar moturs runt cirkeln med överstegsåkning. A har bollen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.21,
+          "y": 0.44,
+          "label": "E"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.31,
+          "endX": 0.27,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.38,
+          "endX": 0.62,
+          "endY": 0.31,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.5,
+          "endX": 0.25,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.7,
+          "endX": 0.59,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.62,
+          "endX": 0.79,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lägger tillbaka bollen till B, som skrinnar bakom.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.21,
+          "endX": 0.84,
+          "endY": 0.36,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.21,
+          "y": 0.44,
+          "label": "E"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B har bollen och skickar den vidare bakåt till C. Bollen går runt hela cirkeln.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.21,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.21,
+          "endX": 0.84,
+          "endY": 0.36,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.79,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.66,
+          "label": "E"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

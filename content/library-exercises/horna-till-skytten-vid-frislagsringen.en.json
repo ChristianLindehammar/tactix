@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "1075fcfc-1527-5868-a3d2-1db09152cc3f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Corner to the shooter at the ring",
+  "description": "Practise the corner as a set piece. The defending team lines up behind its goal line, with the goalkeeper in goal, and may not come into the rink until the corner is taken. The attacking team stands outside the penalty area. The shooter (B) stands at the free-stroke ring with a clear angle at the goal.\n\nA pushes the ball from the corner along the ice to the shooter, who strikes first time. The shooter watches only the ball, not the defenders rushing out. C and D follow in for rebounds. Take turns at taking the corner and shooting; then let the defenders rush out for real.\n\nVariant – free stroke out on the rink: one player at the ball and two shooters. The player at the ball pushes it to the shooter arriving at speed, and the other follows in. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The corner should be smooth and firm, along the ice right into the shooter’s hitting zone."
+    },
+    {
+      "id": "cp2",
+      "text": "The shooter watches only the ball – not the defenders rushing out."
+    },
+    {
+      "id": "cp3",
+      "text": "The other players follow in for rebounds."
+    },
+    {
+      "id": "cp4",
+      "text": "Decide beforehand who shoots and who follows in, so everyone knows their job."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "shooting",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The defenders stand at the goal line. A pushes the ball from the corner to the shooter B at the free-stroke ring.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.065
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.065
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.69,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.075
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.12,
+          "endX": 0.635,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B shoots first time, eyes on the ball. C follows in towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "d1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.065
+        },
+        {
+          "id": "d2",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.065
+        },
+        {
+          "id": "d3",
+          "type": "opponent",
+          "x": 0.69,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.643,
+          "y": 0.238
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.603,
+          "y": 0.175,
+          "endX": 0.51,
+          "endY": 0.03
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.362,
+          "y": 0.233,
+          "endX": 0.4,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant, free stroke: one player at the ball and two shooters. The ball goes to the shooter arriving at speed.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "w1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.22
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.399
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.598,
+          "y": 0.375,
+          "endX": 0.74,
+          "endY": 0.34
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.785,
+          "y": 0.385,
+          "endX": 0.7,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

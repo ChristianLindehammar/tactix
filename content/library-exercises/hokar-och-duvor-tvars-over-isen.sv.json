@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 2,
+  "id": "62da799e-8984-5091-91dc-83c7ef5d6038",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Hökar och duvor tvärs över isen",
+  "description": "Markera en korridor tvärs över isen med koner, ungefär en tredjedel av planens längd bred, så att det inte går att åka undan hur långt som helst. Alla duvor står vid ena sargen med klubban i handen. En eller två hökar börjar i mitten.\n\nPå tränarens signal åker duvorna över till andra sargen. Den som blir tagen av en hök blir själv hök till nästa åktur. Fortsätt fram och tillbaka tills bara en eller två duvor är kvar – de börjar som hökar i nästa omgång.\n\nVariant: duvorna åker med varsin boll. Höken tar en duva genom att vinna eller peta bort bollen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Låg skridskoställning och korta, snabba skär i starten."
+    },
+    {
+      "id": "cp2",
+      "text": "Huvudet uppe – se både hökarna och de andra duvorna så att ingen krockar."
+    },
+    {
+      "id": "cp3",
+      "text": "Byt riktning med kraftiga skär när en hök kommer, inte genom att stanna."
+    },
+    {
+      "id": "cp4",
+      "text": "Klubban i en hand och bladet nere mot isen hela tiden."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "conditioning",
+    "ballControl"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "På signal åker duvorna A, B och C tvärs över isen inom konerna. Höken X försöker ta någon.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.71
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.38,
+          "endX": 0.84,
+          "endY": 0.38
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.5,
+          "endX": 0.44,
+          "endY": 0.5
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.62,
+          "endX": 0.84,
+          "endY": 0.62
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.455,
+          "endX": 0.52,
+          "endY": 0.41
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.84
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B blev tagen och är nu hök. Duvorna åker tillbaka och nu jagar två hökar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.71
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.38,
+          "endX": 0.16,
+          "endY": 0.38
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.62,
+          "endX": 0.16,
+          "endY": 0.62
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.56,
+          "endX": 0.66,
+          "endY": 0.66
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.44,
+          "endX": 0.34,
+          "endY": 0.34
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.84
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant: varje duva åker med boll. Höken ska vinna eller peta bort bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.71
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.38
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.38,
+          "endX": 0.84,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.5
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.5,
+          "endX": 0.54,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.62
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.62,
+          "endX": 0.84,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.455,
+          "endX": 0.58,
+          "endY": 0.395
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

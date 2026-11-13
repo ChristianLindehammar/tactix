@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 2,
+  "id": "f6cf8261-c705-5bf7-b455-506dee567652",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Keep the ball in the ring",
+  "description": "Split the team into groups of 4–6 players. Each group gets a ring or a square marked with cones, about 10×10 metres. The players on the outside pass among themselves while one or two in the middle try to intercept: 3v1 or 4v2.\n\nWhoever plays the pass that is cut out, or loses the ball, swaps places with the player who won it. Play in short spells and make sure everyone gets a turn in the middle.\n\nProgression: two touches maximum, a smaller area, or count passes in a row – ten passes scores a point. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The pass comes first: right pace and straight onto the team-mate's stick."
+    },
+    {
+      "id": "cp2",
+      "text": "Eyes up – know where the middle player is before the ball arrives."
+    },
+    {
+      "id": "cp3",
+      "text": "Outside players move along their side to open a passing lane."
+    },
+    {
+      "id": "cp4",
+      "text": "The middle players work together: one presses, the other closes the next pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Top, 3v1: A, B and C pass around while X tries to intercept. Bottom, 4v2 with Y and Z in the middle.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.86,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.86,
+          "label": "G"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.09,
+          "y": 0.335
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.15,
+          "y": 0.29,
+          "endX": 0.4,
+          "endY": 0.17
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.6
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.6,
+          "endX": 0.68,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes towards C but X reads it and cuts it out.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.86,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.86,
+          "label": "G"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.91,
+          "y": 0.335
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.29,
+          "endX": 0.6,
+          "endY": 0.17
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.245,
+          "endX": 0.67,
+          "endY": 0.18
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.6
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.6,
+          "endX": 0.32,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B swaps places with X and goes into the middle. Play carries straight on.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.91,
+          "y": 0.335
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.85,
+          "y": 0.29,
+          "endX": 0.6,
+          "endY": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.86,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.86,
+          "label": "G"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "bg",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.86
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.86,
+          "endX": 0.32,
+          "endY": 0.86
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

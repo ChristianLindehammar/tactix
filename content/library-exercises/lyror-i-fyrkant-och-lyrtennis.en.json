@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "1ae5f390-7a8a-5da5-9106-ea4cab3f9b6d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lofted balls in a square and lofted tennis",
+  "description": "Split the players into four groups standing at the corners of a big rectangle – the long sides run along the rink, the short sides across it. Keep spare balls with B and D.\n\nA plays a long lofted ball to B. B brings it down, gets control and passes along the ice to C. C lofts it long back to D, who brings it down and passes along the ice to A. After their turn, A and D swap groups, and so do B and C.\n\nVariant – lofted tennis: players stand in pairs 8–10 metres apart. A lofts the ball to B, who plays it straight back in the air or after one bounce. Swap roles when the coach says so. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The lofted ball: blade under the ball and a follow-through upwards – no chopping."
+    },
+    {
+      "id": "cp2",
+      "text": "Bring the ball down with a soft stick or the body and get it onto the ice quickly."
+    },
+    {
+      "id": "cp3",
+      "text": "Get into the line of the ball early and move your feet, not just the stick."
+    },
+    {
+      "id": "cp4",
+      "text": "The ice pass after the control must be as accurate as the lofted ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays a long lofted ball to B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.74
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.68,
+          "endX": 0.33,
+          "endY": 0.32,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B brings it down and passes along the ice to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.26,
+          "endX": 0.66,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C lofts it long to D. D brings it down and passes along the ice to A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "c2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.16,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.32,
+          "endX": 0.67,
+          "endY": 0.66,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.74
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.74,
+          "endX": 0.34,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Lofted tennis: the pairs loft the ball to each other and play it straight back.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.29,
+          "endX": 0.66,
+          "endY": 0.29,
+          "bend": -0.05,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.62
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.61,
+          "endX": 0.34,
+          "endY": 0.61,
+          "bend": -0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

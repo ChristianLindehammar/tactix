@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "575e5845-686a-59eb-b327-c5f2f82b17fc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Styr ut mot hörnflaggan 1 mot 1",
+  "description": "Två grupper med var sin kon en bit utanför straffområdet: X (försvarare) till vänster med bollar, A (anfallare) till höger. En målvakt står i mål.\n\nX passar till A som åker emot bollen. A tar emot, rundar sin kon och anfaller mot mål. X rundar samtidigt sin kon och möter. Anfallaren försöker ta sig förbi och avsluta; försvararen åker med i en båge och styr ut anfallaren mot hörnflaggan, bort från målet. Rotation: X går till A och A till X.\n\nTävling: poäng till försvararen om anfallaren tvingas ut i hörnet utan att få skjuta. Byt sida efter en stund. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvararen lägger sig på insidan, mellan anfallaren och målet."
+    },
+    {
+      "id": "cp2",
+      "text": "Släpp aldrig anfallaren bakom ryggen – hellre en bit för långt ut än förbi på insidan."
+    },
+    {
+      "id": "cp3",
+      "text": "Åk med i en båge och styr – rusa inte rakt in mot bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfallaren använder farten och en fint för att komma in mot mitten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X passar till A som åker emot bollen.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "bx",
+          "type": "ball",
+          "x": 0.375,
+          "y": 0.54
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.475,
+          "y": 0.545,
+          "endX": 0.7,
+          "endY": 0.555
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar emot och rundar sin kon. X rundar sin kon och möter.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.738,
+          "y": 0.467
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.716,
+          "y": 0.403,
+          "endX": 0.66,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.247,
+          "y": 0.477,
+          "endX": 0.36,
+          "endY": 0.22,
+          "bend": -0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X åker med på insidan och styr ut A mot hörnflaggan.",
+      "markers": [
+        {
+          "id": "cx",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.36
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.38
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.49,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.774,
+          "y": 0.201
+        },
+        {
+          "id": "x2",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.812,
+          "y": 0.141,
+          "endX": 0.87,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.566,
+          "y": 0.207,
+          "endX": 0.72,
+          "endY": 0.12
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

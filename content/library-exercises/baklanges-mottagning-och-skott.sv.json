@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "id": "03bb37ed-ef34-5b83-9c56-7f769c6f8799",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Baklängesmottagning och skott",
+  "description": "Spelarna delas i två köer, A och B, vid sargerna strax nedanför mittlinjen. Två passare, C och D, står centralt med bollar. En kon står på varje sida en bit upp mot målet. Målvakt i målet.\n\nA åker i hög fart framåt mot konen, vänder vid konen och fortsätter baklänges. C passar och A tar emot bollen medan hen åker baklänges, vänder framåt med bollen och skjuter mot mål. B startar när A har tagit emot och får sin passning från D. Ställ dig sist i samma kö efteråt.\n\nByt riktning efter en stund så att vändningarna görs åt båda hållen, och byt passare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Högt tempo in mot konen – vändningen ska göras i fart."
+    },
+    {
+      "id": "cp2",
+      "text": "Klubban på isen och blicken mot passaren när du åker baklänges."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot bollen framför kroppen så att du kan vända direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Vänd framåt med första skäret och skjut innan målvakten hinner ställa sig."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A åker framåt i hög fart mot konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.52
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.54,
+          "endX": 0.24,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder vid konen och åker baklänges. C passar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.52
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.42,
+          "endX": 0.21,
+          "endY": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.46,
+          "endX": 0.29,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A vänder framåt med bollen och skjuter. B startar mot sin kon och får sedan passning från D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "ca",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.38
+        },
+        {
+          "id": "cb",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.38
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "a2",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b2",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.445,
+          "y": 0.18,
+          "endX": 0.49,
+          "endY": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.81,
+          "y": 0.54,
+          "endX": 0.77,
+          "endY": 0.44
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.52
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

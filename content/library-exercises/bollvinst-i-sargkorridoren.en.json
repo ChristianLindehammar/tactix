@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "id": "1c6c7656-0c4f-54d1-9330-c601dd69af4d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Win the ball in the board channel",
+  "description": "Full rink with a goalkeeper in each goal. Place a line of cones a little way in from the right board in the opposition half, making a channel along the board. B (wide half) stands down by their own end line, A (forward or midfielder) in the middle of their own half and the defender X centrally up by the centre line.\n\nThe goalkeeper throws out to B, who picks up speed along the board. B carries the ball a few metres and hits a hard ground pass forward along the board to A, who is skating at speed from the middle out towards the board. A takes the ball into the channel and tries to keep the speed all the way to goal. X sets off at the same time as A, comes in at an angle from behind, steers A towards the board and wins the ball. The drill ends when X has cleared or A has shot.\n\nRun it from both sides and swap roles after a few turns. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "X: do not get in front of the attacker – stay just behind and inside and steer them towards the board."
+    },
+    {
+      "id": "cp2",
+      "text": "X: take the ball when it is furthest from the attacker's stick, then clear it away from goal."
+    },
+    {
+      "id": "cp3",
+      "text": "A: keep your speed through the channel and shield the ball with your body."
+    },
+    {
+      "id": "cp4",
+      "text": "B: a hard ground pass that does not bounce, in front of A in their skating line."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to B, who picks up speed along the board.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.615,
+          "y": 0.865
+        },
+        {
+          "id": "t",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.83,
+          "endX": 0.8,
+          "endY": 0.7
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.88,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.82,
+          "endX": 0.86,
+          "endY": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B hits a hard ground pass along the board. A skates out towards the board and X sets off at the same time.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.621
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.86,
+          "y": 0.56,
+          "endX": 0.84,
+          "endY": 0.44
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.55,
+          "endX": 0.76,
+          "endY": 0.47,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.44,
+          "endX": 0.56,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A carries the ball into the channel. X comes in at an angle from behind and steers them towards the board.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.321
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.26,
+          "endX": 0.85,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.48,
+          "endX": 0.73,
+          "endY": 0.28
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X has won the ball and clears it along the board, away from goal.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.4
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.29
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.339
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.4,
+          "endX": 0.84,
+          "endY": 0.6
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

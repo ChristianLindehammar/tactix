@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 2,
+  "id": "9be9e1db-e1d8-51a2-bcb2-705a734b1fd7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Lofted ball over the libero to the winger",
+  "description": "Full rink with a goalkeeper in each goal. Two wide halves, A and B, stand one on each side outside their own penalty area. A libero, X, stands passively a few metres in front of the penalty area. Wing forwards C and D wait out wide, one on each side, some way down towards the centre line.\n\nThe goalkeeper throws out to A or B. Whoever gets the ball hits a long lofted ball straight away, diagonally across the rink to the opposite side, over the libero. The wing forward on that side accelerates at full speed, brings the ball down without losing speed and finishes – with a shot or by carrying it in and scoring.\n\nRotate roles after a few attempts, and switch so the lofted ball goes both ways. Bringing a lofted ball down at full speed is hard, so give the drill time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The lofted ball should go high over the libero and land in front of the winger, in their skating line."
+    },
+    {
+      "id": "cp2",
+      "text": "The winger sets off when the throw-out goes – full speed before the ball lands."
+    },
+    {
+      "id": "cp3",
+      "text": "Bring the ball down softly with the stick and keep going forward on the same touch."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish quickly – pick a shot or a dribble depending on what the goalkeeper does."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "ballControl",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws out to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.385,
+          "y": 0.87
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.825,
+          "endX": 0.21,
+          "endY": 0.755
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A hits a long lofted ball over the libero to the right side. D accelerates towards the ball.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.69
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.655,
+          "endX": 0.8,
+          "endY": 0.3,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.44,
+          "endX": 0.86,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D has brought the ball down at speed and shoots – or carries it in towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.065
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.935
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.25,
+          "endX": 0.52,
+          "endY": 0.03
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

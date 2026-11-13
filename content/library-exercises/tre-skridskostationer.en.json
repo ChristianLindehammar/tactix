@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "id": "3c2afc37-073a-5647-a1d2-b44e5fdccc01",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "bandy",
+  "title": "Three skating stations",
+  "description": "Split the group into three teams, each starting at its own station, and rotate after 6–8 minutes: station 1 to 2, 2 to 3 and 3 to 1.\n\nStation 1 – crossovers: the players skate round the centre circle with crossovers, forwards and then backwards. On the signal everyone changes direction. Last lap with a ball. Station 2 – start and stop: a relay with two teams. The player sprints to the cone, stops sharply, sprints back and tags the next one. Station 3 – forwards, stop, backwards: a relay where the player skates forwards to the cone, stops and skates backwards back. Make the distance longer each round.\n\nA coach at each station counts and encourages. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Crossovers: edge your skates, turn your upper body in towards the circle and push off with the inside leg."
+    },
+    {
+      "id": "cp2",
+      "text": "Start: short, quick strides at first and stick in one hand."
+    },
+    {
+      "id": "cp3",
+      "text": "Stop: rise a little, bend your knees and turn your skates across against the ice."
+    },
+    {
+      "id": "cp4",
+      "text": "Backwards: low position, sit down and keep your head up."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "conditioning"
+  ],
+  "durationMinutes": 24,
+  "minPlayers": 9,
+  "maxPlayers": 24,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Station 1: crossovers round the centre circle, forwards and backwards. Last lap with a ball.",
+      "markers": [
+        {
+          "id": "s1a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.385,
+          "label": "A"
+        },
+        {
+          "id": "s1ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.285
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.08
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.08
+        },
+        {
+          "id": "t2a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "t2a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "t2b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "t2b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.92
+        },
+        {
+          "id": "u2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.92
+        },
+        {
+          "id": "t3a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "t3a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "t3b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "E"
+        },
+        {
+          "id": "t3b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.58,
+          "label": "E"
+        },
+        {
+          "id": "a1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.56,
+          "endX": 0.6,
+          "endY": 0.565,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "a2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.44,
+          "endX": 0.58,
+          "endY": 0.34,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "a3",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.275,
+          "endX": 0.3,
+          "endY": 0.36,
+          "bend": 0.015,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Station 2: start and stop – sprint to the cone, stop sharply and sprint back to the team.",
+      "markers": [
+        {
+          "id": "s1a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.385,
+          "label": "A"
+        },
+        {
+          "id": "s1ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.285
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.08
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.08
+        },
+        {
+          "id": "t2a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "t2a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "t2b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "t2b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.92
+        },
+        {
+          "id": "u2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.92
+        },
+        {
+          "id": "t3a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "t3a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "t3b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "E"
+        },
+        {
+          "id": "t3b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.58,
+          "label": "E"
+        },
+        {
+          "id": "b1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.13
+        },
+        {
+          "id": "b2",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.13,
+          "endX": 0.26,
+          "endY": 0.24
+        },
+        {
+          "id": "c1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.24,
+          "endX": 0.8,
+          "endY": 0.13
+        },
+        {
+          "id": "c2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.13,
+          "endX": 0.74,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Station 3: skate forwards to the cone, stop and skate backwards back to the team.",
+      "markers": [
+        {
+          "id": "s1a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "s1c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.385,
+          "label": "A"
+        },
+        {
+          "id": "s1ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.285
+        },
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.08
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.08
+        },
+        {
+          "id": "t2a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "t2a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "t2b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "t2b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "u1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.92
+        },
+        {
+          "id": "u2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.92
+        },
+        {
+          "id": "t3a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "t3a2",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "t3b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "E"
+        },
+        {
+          "id": "t3b2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.58,
+          "label": "E"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.76,
+          "endX": 0.2,
+          "endY": 0.87
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.87,
+          "endX": 0.26,
+          "endY": 0.76
+        },
+        {
+          "id": "e1",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.76,
+          "endX": 0.8,
+          "endY": 0.87
+        },
+        {
+          "id": "e2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.87,
+          "endX": 0.74,
+          "endY": 0.76
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
