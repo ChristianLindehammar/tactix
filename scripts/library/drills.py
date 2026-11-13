@@ -37,8 +37,8 @@ def O(id, x, y, label=None):
 
 
 def L(id, x, y):
-    """The leader/coach. Drawn as a blue player labelled L until coaches have the app with coach markers."""
-    return P(id, x, y, 'L')
+    """The leader/coach: the green whistle marker, with no label (a label would replace the whistle)."""
+    return {'id': id, 'type': 'coach', 'x': x, 'y': y}
 
 
 def B(id, x, y):
