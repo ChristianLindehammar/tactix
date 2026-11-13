@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "id": "a47dd196-123b-51ce-9f68-fb8efdba61c2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fintar ett mot ett i par",
+  "description": "Spelarna går ihop två och två med en boll per par. Alla par delar på en yta på ungefär 20 × 20 meter. Den ena har bollen och övar sina fintar och dribblingar mot den andra, som försvarar.\n\nAnfallaren driver mot försvararen, säljer en fint och tar sig förbi med bollen under kontroll. Försvararen försöker bryta. När försvararen vinner bollen byter de uppgifter direkt, och den nya anfallaren vänder upp och går på igen.\n\nTävling: varje spelare räknar själv hur många fintar som tar hen förbi. Vem har flest när ledaren blåser av efter en minut? Byt par mellan omgångarna. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gå på försvararen med fart – finten fungerar bäst när hen måste ta ställning."
+    },
+    {
+      "id": "cp2",
+      "text": "Gör fintar med hela kroppen: axlar, blick och ett tydligt kliv åt fel håll."
+    },
+    {
+      "id": "cp3",
+      "text": "Ändra riktning och tempo direkt efter finten."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvarare: stå på tå, lite snett, och vänta på att bollen lämnar foten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot X, som kliver fram och möter.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.69
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.65,
+          "endX": 0.5,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.35,
+          "endX": 0.5,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A fintar åt vänster och tar sig förbi på höger sida.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.51
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.48,
+          "endX": 0.75,
+          "endY": 0.27,
+          "bend": 0.06,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.38,
+          "endX": 0.32,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X bryter. Rollerna byts och X driver iväg som ny anfallare.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.48
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.5,
+          "endX": 0.78,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

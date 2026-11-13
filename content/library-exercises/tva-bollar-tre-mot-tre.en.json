@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "id": "97ce7a40-a239-5c7a-be6d-e39ed1e68ac5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Two balls – three v three",
+  "description": "Play three v three in an area of about 25 × 20 metres with a wide cone goal on each short side, almost as wide as the pitch. Two balls are in play at the same time. You score by dribbling the ball over the opponents' goal line between the cones, or rolling it in from close range.\n\nWith two balls there are more duels and more chances to dribble, and everyone has to keep checking where both balls are. Encourage the players to take on their opponent with feints and to dribble a lot. When a ball has gone in, the other team restarts with it from their own goal line.\n\nVariants: decide whether passing is allowed or only dribbling. Try three balls at once with three players per team. Give a bonus point for a feint or dribble that takes the player past an opponent before scoring. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Take on your opponent with pace – don't stop and wait."
+    },
+    {
+      "id": "cp2",
+      "text": "Feint, then change pace: go past on the side where the defender isn't."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep track of both balls, even when you don't have one."
+    },
+    {
+      "id": "cp4",
+      "text": "Opponents have a ball near your goal? Help win it back."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Two balls in play. A dribbles at X, and Y dribbles towards the blue goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.49
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.45,
+          "endX": 0.3,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.51
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.55,
+          "endX": 0.74,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A feints past X and dribbles towards goal. B steps in on Y's ball and wins it.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.31
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.27,
+          "endX": 0.48,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.75
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A has scored. B passes on to C, so blue attacks with the second ball.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.08
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.57
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.53,
+          "endX": 0.63,
+          "endY": 0.43
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

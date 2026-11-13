@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "id": "850c8057-429d-5ae1-8504-abf65d9bfaf9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Försvara hörnan och kontra",
+  "description": "En plan på ungefär 50 × 40 meter med ett stort mål och målvakt i ena änden och två små mål i den andra. Fyra blå anfallare – en slår hörnan – mot fyra röda försvarare och målvakten.\n\nBlå försöker göra mål på hörnan. Röd ska rensa eller vinna bollen, och kontrar sedan direkt mot de två små målen. Därefter slås nästa hörna. Varje lag får fem hörnor, sedan byter lagen. Byt också kant och uppgifter inom laget, så att alla får prova att stå vid stolpen, markera och vara kontringsspelare.\n\nMed fler spelare: spela fem mot fem eller sex mot sex. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bestäm före hörnan vem som står vid första stolpen och vem som tar vem."
+    },
+    {
+      "id": "cp2",
+      "text": "Se både bollen och din spelare, och gå själv mot bollen – vänta inte på den."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakten ropar tidigt: ”Jag!” eller ”Bort!”."
+    },
+    {
+      "id": "cp4",
+      "text": "När ni vinner bollen: spela snabbt ut till den som står högst upp och kontra."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "setPieces",
+    "defence",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår hörnan in mot straffpunkten. B och C startar sina löpningar; W bevakar ytan vid första stolpen och X och Y håller koll på både boll och spelare.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.04
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.95,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.53,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.8,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.93
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.92,
+          "endX": 0.46,
+          "endY": 0.79
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.66,
+          "endX": 0.18,
+          "endY": 0.72
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.6,
+          "endX": 0.5,
+          "endY": 0.76
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X kliver in framför C, är först på bollen och skallar ut till Z, som står kvar högt upp.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.04
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.95,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.8,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.71,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.62
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.6,
+          "endX": 0.72,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z kontrar och driver in bollen i det lilla målet.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.2,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.8,
+          "y": 0.04
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.95,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.73,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.7,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.8,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.71,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.45,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.36
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.32,
+          "endX": 0.8,
+          "endY": 0.1,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

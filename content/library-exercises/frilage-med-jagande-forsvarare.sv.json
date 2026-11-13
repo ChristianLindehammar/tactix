@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "id": "ba766849-66b2-567b-8906-fee538839eb7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Friläge med jagande försvarare",
+  "description": "Två mål med målvakter, ungefär 35 meter isär. Bredvid det ena målet står två korta led: anfallare på ena sidan och försvarare på den andra. Målvakten i startmålet rullar ut bollen snett framåt. Anfallaren startar direkt och tar bollen, och försvararen startar en bit efter – när anfallaren rör bollen första gången – och jagar ikapp för att bryta.\n\nAnfallaren ska göra mål på friläget: placera skottet, dribbla runt målvakten eller lyfta bollen över en målvakt som rusar ut. Försvararen får inte glidtackla bakifrån. Vinner försvararen bollen får hen kontra mot startmålet. Byt led och uppgift efter varje försök. Starta ibland på rop från målvakten eller ledaren i stället, så att spelarna måste reagera.\n\nTävling: två lag, där varje lag turas om att anfalla. Flest mål vinner. Justera försprånget så att anfallaren hinner fram men ändå känner försvararen i nacken. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Första touchen långt framåt i farten – sedan färre och kortare touchar närmare mål."
+    },
+    {
+      "id": "cp2",
+      "text": "Kolla över axeln var försvararen är, och ställ dig mellan försvararen och bollen om hen kommer ikapp."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta på målvakten: står hen kvar, placera; rusar hen ut, dribbla runt eller lyft."
+    },
+    {
+      "id": "cp4",
+      "text": "Bestäm dig i tid – stressa inte, men vänta inte heller tills försvararen är ikapp."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten rullar ut bollen. A startar och möter den. X väntar tills A rör bollen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.86,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.77,
+          "endX": 0.56,
+          "endY": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.82,
+          "endX": 0.6,
+          "endY": 0.67
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver mot mål i full fart. X jagar ikapp från sidan.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.86,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.55
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.51,
+          "endX": 0.55,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.82,
+          "endX": 0.44,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten kommer ut och A placerar skottet vid sidan av. Nästa gång ställer sig A i försvararledet och X i anfallarledet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.18,
+          "endX": 0.53,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

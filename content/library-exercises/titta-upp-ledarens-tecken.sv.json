@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "id": "414a7cfa-d65e-5d08-9f20-a206d77ab75a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Titta upp – ledarens tecken",
+  "description": "Sprid ut koner på en yta på ungefär 20 × 20 meter. Alla har varsin boll och driver den fritt mellan och runt konerna, på olika sätt: med insidan, utsidan, sulan och båda fötterna. Ledaren står vid sidan och säger ingenting – i stället visar hen tecken med armarna.\n\nArmen rakt upp: stanna och sätt foten på bollen. Armen snurrar: vänd 180 grader och driv tillbaka med full fart några meter. Armen pekar åt ett håll: driv åt det hållet. Båda armarna i kors: gör en fint vid närmaste kon. Den som missar ett tecken har inte tittat upp – det är hela poängen med leken.\n\nVarianter: bestäm vilken fot eller vilka tillslag som gäller, eller lägg till fler tecken, till exempel en tempoväxling eller en viss fint. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp mellan touchar – bollen ska kännas, inte ses hela tiden."
+    },
+    {
+      "id": "cp2",
+      "text": "Små touchar när det är trångt, längre när ytan är fri."
+    },
+    {
+      "id": "cp3",
+      "text": "Sulan på bollen direkt när armen åker upp – stå still med kontroll."
+    },
+    {
+      "id": "cp4",
+      "text": "Vänd med bollen nära foten och öka farten efter vändningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Alla driver mellan konerna. Ledaren står vid sidan och visar tecken.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.58,
+          "y": 0.14
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.56
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.74
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.74
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.18
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.2,
+          "endX": 0.44,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.33
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.3,
+          "endX": 0.82,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.7,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.61
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.58,
+          "endX": 0.18,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.81
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.77,
+          "endX": 0.84,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren sträcker upp armen. Alla stannar med foten på bollen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.58,
+          "y": 0.14
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.56
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.74
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.74
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.21
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.52
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Ledaren snurrar med armen. Alla vänder 180 grader och driver tillbaka med fart.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.38
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.58,
+          "y": 0.14
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.56
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.74
+        },
+        {
+          "id": "k5",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.74
+        },
+        {
+          "id": "k6",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.2
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.19,
+          "endX": 0.1,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.39
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.43,
+          "endX": 0.62,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.64
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.67,
+          "endX": 0.46,
+          "endY": 0.77,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.81
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.84,
+          "endX": 0.6,
+          "endY": 0.84,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

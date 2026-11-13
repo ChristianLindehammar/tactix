@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "id": "a023927c-15bb-5c55-968e-ce4b38f045fd",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – crosses under challenge",
+  "description": "Two goalkeepers and a coach or outfield player with balls out wide. One keeper is in goal. The other is a striker and starts right next to the keeper in the six-yard box, as at a corner.\n\nThe coach crosses from different spots on both wings. The striker tries to score from the cross or the rebound and may challenge the keeper – shoulder to shoulder and always within the laws, never with hands or in the back. The keeper gets past the striker, takes the ball in the air and throws it straight out wide.\n\nSwap roles after about eight crosses. Start with gentle challenges and build up. Harder: two strikers, one standing in the way and one arriving at speed. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand so you can see both the ball and the striker – never with your back to them."
+    },
+    {
+      "id": "cp2",
+      "text": "Take the first step towards the ball early, before the striker can block your path."
+    },
+    {
+      "id": "cp3",
+      "text": "Lift the knee nearest the striker and take the ball at its highest point with both hands."
+    },
+    {
+      "id": "cp4",
+      "text": "Call loud and short. If you can't catch it, punch the ball high and wide."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 3,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach dribbles down the wing. A stands close to the keeper.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.14,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.26,
+          "endX": 0.15,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach crosses. The keeper steps out to the ball and A challenges.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.17,
+          "endX": 0.37,
+          "endY": 0.21,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.145,
+          "endX": 0.43,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.17,
+          "endX": 0.52,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper takes the ball despite the challenge and throws it out wide.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.19
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.16
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.17,
+          "endX": 0.85,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

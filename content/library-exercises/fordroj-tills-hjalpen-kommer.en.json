@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 2,
+  "id": "8ce4367f-dbec-5b7a-8cb9-47ea7500cb1a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Delay until help arrives",
+  "description": "Three v three to one goal with a keeper, on an area of about 30 × 45 metres. A free player (J) starts with the ball at the back and always plays with the attacking team. One defender (Z) starts behind the attackers, next to J. The other two defenders must delay the attack until Z has got back goal-side – only then do they go in for the ball.\n\nAn attempt ends with a goal, a won ball or when the ball goes out. Three attempts per team, then the teams swap roles. Change the free player after each round.\n\nVariation: when the defenders win the ball they can score in a small goal by the starting line. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Drop back and buy time – stay a few metres off the ball carrier and don't get passed."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand at an angle that pushes the ball carrier out wide, away from goal."
+    },
+    {
+      "id": "cp3",
+      "text": "The player coming from behind sprints back goal-side, not straight at the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk: call when you are in position, so the nearest defender knows it is time to attack."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J passes to B. Z sprints back from behind; X and Y drop off and delay.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.1,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.2,
+          "endX": 0.46,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.14,
+          "endX": 0.56,
+          "endY": 0.62
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.56,
+          "endX": 0.34,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.54,
+          "endX": 0.72,
+          "endY": 0.63
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.31,
+          "endX": 0.2,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B dribbles towards goal. X steps towards B but keeps a distance; Z is nearly back.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.36,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.65,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.51,
+          "endX": 0.48,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.69,
+          "endX": 0.42,
+          "endY": 0.72
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.4,
+          "endX": 0.56,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z is in position – now X goes in and wins the ball.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.49,
+          "y": 0.67
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.74,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.72,
+          "endX": 0.44,
+          "endY": 0.69
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

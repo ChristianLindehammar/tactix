@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "381022e6-af2c-5da8-8ea0-cb7771e2a548",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – placering vid spel från kanten",
+  "description": "Två målvakter och en ledare eller utespelare. En målvakt står i mål, den andra är anfallare centralt utanför straffområdet. Ledaren har bollarna ute på en kant.\n\nLedaren driver mot kortlinjen och spelar in bollen framför mål från olika lägen – längs marken, bakåt mot straffpunkten eller hårt mot första stolpen. Anfallaren försöker avsluta direkt eller på retur. Ibland skjuter ledaren själv från snäv vinkel nära kortlinjen. Målvakten flyttar med bollen och hittar rätt läge för varje situation.\n\nByt kant efter några bollar och byt roller mellan målvakterna efter ungefär åtta bollar. Gör det svårare efterhand med hårdare inspel och snabbare avslut. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Flytta med bollen: när den närmar sig kortlinjen ska du närmare första stolpen."
+    },
+    {
+      "id": "cp2",
+      "text": "Täck första stolpen vid skott från snäv vinkel – ingen boll mellan dig och stolpen."
+    },
+    {
+      "id": "cp3",
+      "text": "Stå stilla och i balans när bollen spelas in – inte på väg någonstans."
+    },
+    {
+      "id": "cp4",
+      "text": "Kan du inte hålla bollen, styr den bort från mål och ut åt sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren driver längs kanten. Målvakten följer bollen i sidled.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.18,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.25,
+          "endX": 0.2,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren spelar in bollen bakåt till A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.39,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.16,
+          "endX": 0.57,
+          "endY": 0.21
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.35,
+          "endX": 0.62,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A avslutar direkt. Målvakten ställer om från första stolpen och går mot skottet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.17,
+          "endX": 0.55,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Från andra kanten: ledaren skjuter mot första stolpen, där målvakten står och räddar.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.22
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.12,
+          "endX": 0.66,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "id": "c7065462-0d56-5eb2-8784-4f086237a69b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Underlap – two v one",
+  "description": "The players work in groups of three with one ball: a ball carrier, a team-mate and a defender. Each group has an area of about 20 × 25 metres, and the attackers score by taking the ball over the far line.\n\nThe ball carrier dribbles forward on the outside and draws the defender towards them. The team-mate starts behind and runs on the inside – between the ball carrier and the middle – past the defender. The ball carrier plays the ball into that run and the team-mate takes it over the line. The defender is fairly passive at first. Swap roles after every attempt so everyone is ball carrier, team-mate and defender.\n\nVariation: the defender is fully active, and the ball carrier may also fake the pass and dribble when the defender goes with the underlap. Whoever wins the ball becomes an attacker and the player who lost it goes in as defender. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ball carrier: run at the defender so they have to commit – that opens the inside."
+    },
+    {
+      "id": "cp2",
+      "text": "Team-mate: time your run and call when you arrive on the inside."
+    },
+    {
+      "id": "cp3",
+      "text": "Play the pass in front of the team-mate, into the run, not behind."
+    },
+    {
+      "id": "cp4",
+      "text": "If the defender drops off to cover the underlap, dribble yourself or fake the pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles forward on the outside. X steps out towards A.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.67
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.63,
+          "endX": 0.73,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.31,
+          "endX": 0.58,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X takes A. B starts the underlap on the inside, past X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.44
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.78,
+          "endX": 0.45,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A plays the ball in front of B, who carries on running.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.4,
+          "endX": 0.48,
+          "endY": 0.2,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.34,
+          "endX": 0.46,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B takes the ball over the line. Next attempt: A defends, X is the team-mate and B the ball carrier.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.14,
+          "endX": 0.46,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

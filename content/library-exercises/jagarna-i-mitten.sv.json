@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "id": "bce21ef9-f130-5d59-aca7-624c7f53193b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Jägarna i mitten",
+  "description": "Markera en yta på ungefär 20 × 15 meter med koner. Alla spelare har varsin boll och står på ena kortsidan, utom en eller två som lägger undan sin boll och ställer sig i mitten. De är jägare.\n\nPå signal driver alla med boll över till andra sidan. Jägarna försöker sparka ut så många bollar som möjligt ur ytan. Den som blir av med bollen hämtar den, lägger den vid sidan och blir själv jägare. Sedan driver alla tillbaka, och så fortsätter det tills bara en eller några få har kvar sin boll. De vinner omgången och börjar som jägare i nästa.\n\nVariant: kör tills alla har förlorat sin boll, och låt fler starta i mitten så att alla får vara jägare någon gång. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll bollen nära foten när en jägare kommer – små tillslag."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta upp och driv mot den lediga ytan, bort från jägarna."
+    },
+    {
+      "id": "cp3",
+      "text": "Ställ kroppen mellan jägaren och bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Jägare: samarbeta och stäng vägen för samma spelare."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A–D driver mot andra sidan. X och Y jagar i mitten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.41,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.59,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.75
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.75
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.75
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.75
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.71,
+          "endX": 0.2,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.71,
+          "endX": 0.41,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.71,
+          "endX": 0.59,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.71,
+          "endX": 0.8,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y når C:s boll och sparkar ut den ur ytan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.41
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.59
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.55
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.37
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.44,
+          "endX": 0.57,
+          "endY": 0.5
+        },
+        {
+          "id": "k1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.57,
+          "endX": 0.91,
+          "endY": 0.67
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C blir jägare. Resten är framme och driver snart tillbaka.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.25
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.25
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.25
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.93,
+          "y": 0.68
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

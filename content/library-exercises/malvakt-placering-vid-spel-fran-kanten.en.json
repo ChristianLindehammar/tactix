@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "fe06b0b6-cca6-5caa-b710-6d1fb7fcfe7b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – positioning for play from the wing",
+  "description": "Two goalkeepers and a coach or outfield player. One goalkeeper is in goal, the other plays as an attacker centrally outside the penalty area. The coach has the balls out on one wing.\n\nThe coach dribbles towards the byline and plays the ball in front of goal from different positions – along the ground, cut back towards the penalty spot or hard at the near post. The attacker tries to finish first time or from a rebound. Now and then the coach shoots from a tight angle near the byline. The goalkeeper moves with the ball and finds the right position for each situation.\n\nChange wings after a few balls and swap the goalkeepers after about eight balls. Make it harder as you go with firmer balls in and quicker finishes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move with the ball: the closer it gets to the byline, the closer you go to the near post."
+    },
+    {
+      "id": "cp2",
+      "text": "Cover the near post on shots from a tight angle – no gap between you and the post."
+    },
+    {
+      "id": "cp3",
+      "text": "Be still and balanced when the ball is played in – not on your way somewhere."
+    },
+    {
+      "id": "cp4",
+      "text": "If you can't hold the ball, steer it away from goal and out to the side."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach dribbles down the wing. The goalkeeper follows the ball across the goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.18,
+          "y": 0.38
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.25,
+          "endX": 0.2,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach cuts the ball back to A.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.39,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.16,
+          "endX": 0.57,
+          "endY": 0.21
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.35,
+          "endX": 0.62,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots first time. The goalkeeper readjusts from the near post and goes for the shot.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.17,
+          "endX": 0.55,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "From the other wing: the coach shoots at the near post, where the goalkeeper is waiting and saves.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.22
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.12,
+          "endX": 0.66,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

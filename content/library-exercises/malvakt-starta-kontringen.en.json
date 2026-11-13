@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "id": "def9f8ee-f36e-5afc-a7e5-a2a0c20a91bb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – start the counter",
+  "description": "Two goalkeepers and a coach or outfield player with balls. One keeper is in goal, the other is the counter-attacker and stands at the corner of the box. The coach stands at an angle in front of goal.\n\nThe coach plays the ball in front of goal from different spots: shots, low balls and high crosses. The keeper catches or saves. As soon as the keeper has the ball, the counter-attacker sprints towards the halfway line, and the keeper must find the run beyond halfway – with a throw, a goal kick from the hands or a side volley. The ball goes ahead of the player, not to their feet.\n\nSwap roles after six balls. Variant: the coach plays a back pass instead, and the keeper takes the ball to the side and plays the counter pass with the foot. Switch the counter-attacker to the other side too. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Secure the ball first – a dropped ball means no counter."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up as soon as you have the ball and see where the run is going."
+    },
+    {
+      "id": "cp3",
+      "text": "Put the ball ahead of the player so they can take it on at full speed."
+    },
+    {
+      "id": "cp4",
+      "text": "Pick the right distribution: throw when it is close and safe, kick when it is far."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "focus": [
+    "goalkeeping",
+    "transition"
+  ],
+  "difficulty": 3,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach plays the ball in front of goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.27,
+          "endX": 0.42,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The keeper catches the ball. A sprints straight for the halfway line.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.745,
+          "y": 0.285,
+          "endX": 0.71,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper kicks the ball ahead of A, beyond the halfway line.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.53,
+          "endX": 0.78,
+          "endY": 0.65
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.15,
+          "endX": 0.85,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Variant: the coach has played it back. The keeper has taken the ball wide and passes with the foot ahead of A on the other wing.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.66,
+          "y": 0.3
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.47,
+          "endX": 0.14,
+          "endY": 0.6
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.25,
+          "endX": 0.21,
+          "endY": 0.64
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

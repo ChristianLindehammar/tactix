@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 2,
+  "id": "8604e4f5-6e2f-53fd-a626-b59679e98535",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – minska vinkeln i sju mot sju",
+  "description": "Matchspel sju mot sju med målvakter på en plan på ungefär 50 × 35 meter. Ledaren bestämmer för varje period vilken typ av mål som ger dubbla poäng, så att målvakterna får många avslut av just det slaget.\n\nTill exempel: mål från snäv vinkel efter ett genombrott på kanten, mål i friläge eller mål på skott utifrån. Byt typ efter ungefär fem minuter. Målvakterna jobbar hela tiden med att flytta med bollen och gå ut mot skytten så att vinkeln blir så liten som möjligt.\n\nSpela med offside om laget brukar göra det i match. Variant: räkna bara mål med en touch i straffområdet, så att det blir fler avslut på nära håll. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå på linjen mellan bollen och mitten av målet."
+    },
+    {
+      "id": "cp2",
+      "text": "Gå ut mot skytten när bollen kommer närmare – men stanna och stå i balans när skottet går."
+    },
+    {
+      "id": "cp3",
+      "text": "Vid snäv vinkel: täck första stolpen och låt skytten se så lite mål som möjligt."
+    },
+    {
+      "id": "cp4",
+      "text": "Upp på fötter direkt och starta spelet igen när du har bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver längs vänsterkanten mot straffområdet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.39
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.35,
+          "endX": 0.16,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har kommit förbi X och driver in i straffområdet från snäv vinkel. Målvakten flyttar mot första stolpen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.25
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.21,
+          "endX": 0.22,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.1,
+          "endX": 0.39,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter, men målvakten har stängt vinkeln och räddar vid första stolpen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.118,
+          "endX": 0.39,
+          "endY": 0.11
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

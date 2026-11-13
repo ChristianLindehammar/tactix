@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "9b529b09-e3a7-594b-9264-491cdc6771bb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Byt plats och gå på mål",
+  "description": "Två anfallare mot två försvarare mot ett mål med målvakt, ungefär 30 meter ut från mål. Bakom anfallarna står två understödsspelare med bollarna. De spelar in bollen och kan användas för tillbakaspel, men går inte själva in i spelet.\n\nAnfallarna rör sig mycket och byter plats med varandra – till exempel genom att löpa på kryss – för att bli av med sin försvarare och komma fria mot mål. Försvararna är lagom aktiva i början. Försöket är slut vid mål, när försvararna vinner bollen eller när den går ut. Byt efter några försök parvis: anfallarna blir understöd, understödet försvarare och försvararna anfallare.\n\nVariant: helt aktiva försvarare, och tävla paren emellan. Vid mål får både anfallarna och understödsspelarna poäng. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Byt plats i fart – en löpning drar med sig en försvarare och öppnar ytan för den andra."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd understödet: spela tillbaka hellre än att tappa bollen i trängsel."
+    },
+    {
+      "id": "cp3",
+      "text": "Löp på kryss och ropa, så att ni inte springer till samma yta."
+    },
+    {
+      "id": "cp4",
+      "text": "Understöd: spela in bollen i rätt ögonblick, framför den som löper."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C spelar in till A, som har kommit ner mot bollen. X följer med.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.71
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.31,
+          "y": 0.68,
+          "endX": 0.35,
+          "endY": 0.53
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lägger tillbaka till D. B löper diagonalt in mot mitten och tar med sig Y.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.61
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.63,
+          "endX": 0.64,
+          "endY": 0.73
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.41,
+          "endX": 0.44,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A byter plats med B och löper ut till höger, där ytan nu är tom. D spelar in i löpningen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.71
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.5,
+          "endX": 0.72,
+          "endY": 0.36
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.67,
+          "endX": 0.75,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A avslutar vid sidan av målvakten.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.22,
+          "endX": 0.56,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "id": "89d59903-9a9e-553a-90a6-f3a930ded15b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – new shooting line after the pass",
+  "description": "A goalkeeper in goal, two attackers with a ball about 30 metres out, and a defender who starts from different places – from the side, from behind or in front of the attackers. With two keepers, the other one can be the defender, and then you swap.\n\nThe attackers go at goal and must finish. They may pass once, but in good time before the shot. The defender tries to block the first shooting chance, so the attackers usually have to pass. The keeper moves with the ball and quickly finds the new shooting line after the pass.\n\nSwap keepers after six attacks. Harder: two defenders, or let the attackers choose whether they pass or shoot straight away. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move with the ball when it is passed – small, quick side steps."
+    },
+    {
+      "id": "cp2",
+      "text": "Be set and still with both feet on the ground when the shot comes."
+    },
+    {
+      "id": "cp3",
+      "text": "Read the defender: if they cover one side, the shot will probably come on the other."
+    },
+    {
+      "id": "cp4",
+      "text": "Follow the shot – expect a rebound from the other attacker."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at goal and B goes along. X starts from the side to block the shot.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.42
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.38,
+          "endX": 0.29,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.475,
+          "endX": 0.71,
+          "endY": 0.39
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.29,
+          "endX": 0.43,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X blocks A's shooting line, so A passes to B. The keeper moves with the ball.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.333,
+          "endX": 0.66,
+          "endY": 0.345
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.1,
+          "endX": 0.57,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots first time. The keeper has found the new shooting line and saves. A follows up.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.26
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.225,
+          "endX": 0.62,
+          "endY": 0.145
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.285,
+          "endX": 0.3,
+          "endY": 0.19
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

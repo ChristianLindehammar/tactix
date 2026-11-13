@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 2,
+  "id": "e1a1f736-2b17-5a66-bcb3-2d6984d28393",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – flytta upp med bollen",
+  "description": "Två målvakter och en ledare eller utespelare med bollar vid mittlinjen. En målvakt står i mål, den andra är anfallare ungefär 25 meter från mål.\n\nLedaren driver framåt från olika lägen långt ut på planen – från vänster, rakt framifrån eller från höger – och slår sedan en boll i djupled in bakom anfallaren. Målvakten ska ha flyttat upp i takt med bollen, så att hen redan står rätt när bollen slås. Anfallaren försöker hinna först eller ta returen. Målvakten tar bollen med händerna i straffområdet, men utanför straffområdet måste hen spela undan den med foten.\n\nByt roller mellan målvakterna efter sex bollar. Gör det svårare med hårdare bollar, lobbar över målvakten och en anfallare som startar närmare mål. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ju längre bort bollen är, desto längre ut från mållinjen ska du stå."
+    },
+    {
+      "id": "cp2",
+      "text": "Flytta med bollen och stå still i balans precis när den slås."
+    },
+    {
+      "id": "cp3",
+      "text": "Bestäm dig tidigt: kom ut och ta bollen, eller backa och var redo för skottet."
+    },
+    {
+      "id": "cp4",
+      "text": "Utanför straffområdet – spela bollen långt ut åt sidan, inte rakt fram."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren driver framåt. Målvakten flyttar upp i takt med bollen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.46,
+          "endX": 0.34,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.15,
+          "endX": 0.455,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren slår bollen i djupled. A startar mot bollen och målvakten går ut.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.21
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.34,
+          "y": 0.45
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.35
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.33,
+          "endX": 0.68,
+          "endY": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.355,
+          "endX": 0.69,
+          "endY": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.19,
+          "endX": 0.57,
+          "endY": 0.155
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten hinner först och tar bollen inne i straffområdet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.34,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Hamnar bollen utanför straffområdet spelar målvakten undan den åt sidan med foten.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.24
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.48
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.34,
+          "endX": 0.5,
+          "endY": 0.36
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.35,
+          "endX": 0.1,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

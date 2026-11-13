@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "id": "6fedded3-19f6-53f2-b04e-98a40f4e9f62",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – ny skottlinje efter passningen",
+  "description": "En målvakt i mål, två anfallare med boll ungefär 30 meter från mål och en försvarare som startar från olika ställen – från sidan, bakifrån eller framför anfallarna. Är ni två målvakter kan den andra vara försvarare, och sedan byter ni.\n\nAnfallarna går mot mål och ska avsluta. De får passa en gång, men i god tid före skottet. Försvararen försöker täcka den första skottchansen, så att anfallarna oftast måste passa. Målvakten flyttar med bollen och hittar snabbt den nya skottlinjen efter passningen.\n\nByt målvakt efter sex anfall. Svårare: två försvarare, eller låt anfallarna välja själva om de passar eller skjuter direkt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Flytta med bollen när den passas – små, snabba steg i sidled."
+    },
+    {
+      "id": "cp2",
+      "text": "Var på plats och stå still med båda fötterna i marken när skottet går."
+    },
+    {
+      "id": "cp3",
+      "text": "Läs försvararen: täcker hen ena sidan, kommer skottet troligen på den andra."
+    },
+    {
+      "id": "cp4",
+      "text": "Följ upp skottet – räkna med en retur från den andra anfallaren."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot mål och B följer med. X startar från sidan för att täcka skottet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.42
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.38,
+          "endX": 0.29,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.475,
+          "endX": 0.71,
+          "endY": 0.39
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.29,
+          "endX": 0.43,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X täcker A:s skottlinje, så A passar B. Målvakten flyttar med bollen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.333,
+          "endX": 0.66,
+          "endY": 0.345
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.1,
+          "endX": 0.57,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt. Målvakten har hittat den nya skottlinjen och räddar. A följer upp.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.35,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.26
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.225,
+          "endX": 0.62,
+          "endY": 0.145
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.285,
+          "endX": 0.3,
+          "endY": 0.19
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

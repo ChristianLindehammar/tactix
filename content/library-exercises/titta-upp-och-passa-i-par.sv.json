@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "id": "eafc6486-c25b-5bfb-b07b-b3dab493401f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Titta upp och passa i par",
+  "description": "Markera en rektangel på ungefär 30 × 40 meter utan mål. Spelarna går ihop två och två och varje par har en boll. Alla rör sig hela tiden i ytan och passar med sin partner, samtidigt som de andra paren springer och passar kors och tvärs.\n\nInnan passningen går ska passaren och mottagaren ha fått ögonkontakt. Mottagaren visar sig i en ledig yta och passaren väntar in rätt ögonblick, när ingen annan spelare eller boll är i vägen. Börja i gångtakt och öka farten efterhand.\n\nVariant: båda i paret har var sin boll och passar till varandra samtidigt. Det kräver att båda tittar upp och bestämmer sig för samma ögonblick. Fler par i samma yta gör det svårare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lyft blicken innan du får bollen – veta var din partner är och var de andra är på väg."
+    },
+    {
+      "id": "cp2",
+      "text": "Sök ögonkontakt och passa först när ni ser varandra."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta med bollen med första touchen och titta upp igen direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Mottagaren: rör dig hela tiden och visa dig där passningsvägen är fri."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tre par: A–B, C–D och E–F. A ser B och passar. C och E driver vidare och letar efter sin partner.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.37
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.2
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.54
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.41,
+          "endX": 0.28,
+          "endY": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.2,
+          "endX": 0.44,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.58,
+          "endX": 0.6,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B har tagit emot. C ser D och passar, och E spelar till F. A löper ut i ledig yta för att visa sig.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.72,
+          "label": "F"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.59
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.29
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.65
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.24,
+          "endX": 0.28,
+          "endY": 0.14
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.31,
+          "endX": 0.71,
+          "endY": 0.52
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.66,
+          "endX": 0.75,
+          "endY": 0.7
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Variant med en boll var: A och B passar till varandra samtidigt. C driver vidare och letar efter D.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.75,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.62
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.29
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.33,
+          "endX": 0.56,
+          "endY": 0.58,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.59,
+          "endX": 0.38,
+          "endY": 0.34,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.33,
+          "endX": 0.84,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

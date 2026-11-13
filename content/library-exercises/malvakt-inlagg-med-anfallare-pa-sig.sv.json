@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "id": "98a415f5-aad5-5802-8aef-ea1c30e4d8cf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – inlägg med anfallare på sig",
+  "description": "Två målvakter och en ledare eller utespelare med bollar ute på kanten. En målvakt står i mål. Den andra är anfallare och startar alldeles intill målvakten i målområdet, som vid en hörna.\n\nLedaren slår inlägg från olika lägen på båda kanterna. Anfallaren försöker göra mål på inlägget eller på retur och får gå in i närkamp med målvakten – med axeln och alltid inom reglerna, aldrig med händer eller i ryggen. Målvakten tar sig förbi anfallaren, tar bollen i luften och kastar direkt ut till sidan.\n\nByt roller efter ungefär åtta inlägg. Börja med lugn närkamp och öka den efterhand. Svårare: två anfallare, där den ena står i vägen och den andra kommer i fart. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ställ dig så att du ser både bollen och anfallaren – inte med ryggen mot hen."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta första steget mot bollen tidigt, innan anfallaren hinner stänga vägen."
+    },
+    {
+      "id": "cp3",
+      "text": "Lyft knät närmast anfallaren och ta bollen på högsta punkt med båda händerna."
+    },
+    {
+      "id": "cp4",
+      "text": "Ropa högt och kort. Hinner du inte fånga, boxa bollen högt och långt ut åt sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 3,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren driver längs kanten. A står tätt intill målvakten.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.14,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.26,
+          "endX": 0.15,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren slår inlägget. Målvakten kliver ut mot bollen och A går in i närkamp.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.17,
+          "endX": 0.37,
+          "endY": 0.21,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.145,
+          "endX": 0.43,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.17,
+          "endX": 0.52,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten tar bollen trots närkampen och kastar ut till sidan.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.19
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.16
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.17,
+          "endX": 0.85,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

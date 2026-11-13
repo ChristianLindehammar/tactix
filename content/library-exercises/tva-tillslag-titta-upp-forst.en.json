@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 2,
+  "id": "3b2eee6f-589f-555c-b24e-fdf969167f46",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Two touches – look up first",
+  "description": "Four v four with a goalkeeper in each team on a small pitch with two 5-a-side goals. Each player may touch the ball at most twice (three times for younger or less experienced players). A goal only counts if the ball is rolled or passed in from about ten metres or closer – so the team has to play its way forward instead of shooting from distance.\n\nPlay in spells of three to four minutes. Variation: one touch only, but the player who wins the ball from the other team may touch it freely. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Look up before the ball arrives – know where it is going before you receive it."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep moving so that the player on the ball always has someone to pass to."
+    },
+    {
+      "id": "cp3",
+      "text": "Stand where there is an open passing lane, not behind an opponent."
+    },
+    {
+      "id": "cp4",
+      "text": "Your first touch should set the ball up for the next pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A is under pressure and passes to B. C and D move to get free.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.655,
+          "endX": 0.44,
+          "endY": 0.69
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.455,
+          "endX": 0.28,
+          "endY": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.26,
+          "endX": 0.4,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes first time to C. D gets into the space in front of goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.26,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.6
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.565,
+          "endX": 0.3,
+          "endY": 0.41
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.18,
+          "endX": 0.6,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C finds D, who finishes from close range.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.57,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.33,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.21,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.22,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.45,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.371,
+          "y": 0.273
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.411,
+          "y": 0.263,
+          "endX": 0.58,
+          "endY": 0.23
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.17,
+          "endX": 0.55,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

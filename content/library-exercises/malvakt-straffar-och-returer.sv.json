@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "7502db9b-f6af-5fae-8dc5-b00d2bf5e9f9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – straffar och returer",
+  "description": "En målvakt i mål och några utespelare uppdelade i två lag. Alla utom straffläggaren ställer sig utanför straffområdet.\n\nLagen slår straffar varannan gång och tävlar om flest mål. Både straffläggaren och de andra får gå in och göra mål på retur, precis som i en match – men först när straffen är slagen. Målvakten provar olika sätt att agera på straffen och har stort fokus på returen: antingen få bort bollen långt ut åt sidan eller ta den själv.\n\nVariant: en målvakt per lag, så att målvakterna turas om i mål och tävlar mot varandra. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Prova olika sätt: stå still länge, eller gör ett litet mothopp precis när bollen slås."
+    },
+    {
+      "id": "cp2",
+      "text": "Läs straffläggarens ansats och höft för att se var bollen ska."
+    },
+    {
+      "id": "cp3",
+      "text": "Räddar du men inte kan hålla bollen – styr den långt ut åt sidan, aldrig tillbaka in i straffområdet."
+    },
+    {
+      "id": "cp4",
+      "text": "Upp på fötter direkt efter räddningen och var redo för nästa avslut."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 11,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C slår straffen. A, X, B och Y väntar utanför straffområdet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.87,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.17,
+          "endX": 0.36,
+          "endY": 0.06
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten räddar. Alla rusar in på returen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.18
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.26,
+          "endX": 0.26,
+          "endY": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.6,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten hinner först och styr bort bollen ut åt sidan.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.1,
+          "endX": 0.04,
+          "endY": 0.12
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

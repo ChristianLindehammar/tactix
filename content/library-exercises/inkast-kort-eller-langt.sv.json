@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "id": "92769edf-ed95-502a-b908-2aaf84870c2b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Inkast vid straffområdet – kort eller långt",
+  "description": "En målvakt och åtta utespelare: fyra anfallare mot fyra försvarare som spelar på riktigt. Inkastet tas från sidlinjen i höjd med motståndarnas straffområde. Anfallarna kommer överens om en lösning innan varje inkast och prövar både korta och långa varianter.\n\nKort inkast: en spelare kommer emot och tar emot nära linjen, och laget söker sedan ett snabbt inspel framför mål – direkt eller efter ett väggspel med inkastaren. Långt inkast: bollen kastas långt in i straffområdet, där en spelare går upp och skarvar eller avslutar och de andra attackerar bortre stolpen och returytan. Försöket är slut vid mål, när bollen går ut eller när försvararna vinner den och spelar bort den från straffområdet.\n\nByt anfall och försvar efter några försök, byt inkastare och ta inkasten från båda kanterna. Tävling: fyra mot fyra, tio inkast var, och räkna målen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör er innan bollen kastas – en spelare som står still är lätt att markera."
+    },
+    {
+      "id": "cp2",
+      "text": "Kort inkast: kom emot i fart och ta första touchen bort från försvararen."
+    },
+    {
+      "id": "cp3",
+      "text": "Långt inkast: bestäm i förväg vem som går upp på första bollen och vem som tar bortre stolpen."
+    },
+    {
+      "id": "cp4",
+      "text": "Inkastaren: gå in i planen direkt efter kastet och bli ett passningsalternativ."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "setPieces",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Kort inkast: B kommer emot mot sidlinjen och A kastar till B:s fötter.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.5,
+          "endX": 0.26,
+          "endY": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.31,
+          "endX": 0.23,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår ett direkt inspel framför mål. C löper mot första stolpen och D mot bortre.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.4,
+          "endX": 0.36,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.22,
+          "endX": 0.4,
+          "endY": 0.15
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.63,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Långt inkast: A kastar in i ytan vid första stolpen där C ska skarva eller avsluta. D attackerar bortre stolpen och B går in mot returytan.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.27
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.25,
+          "endX": 0.38,
+          "endY": 0.16,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.63,
+          "endY": 0.15
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.45,
+          "endX": 0.28,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 2,
+  "id": "e63d413c-2e0b-5a39-bcc8-99f517dc225d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – step up with the ball",
+  "description": "Two goalkeepers and a coach or outfield player with balls at the halfway line. One keeper is in goal, the other is a striker about 25 metres from goal.\n\nThe coach dribbles forward from different spots far up the pitch – from the left, straight on or from the right – and then plays a ball in behind the striker. The keeper should have moved up with the ball, so they are already in the right place when it is played. The striker tries to get there first or score from the rebound. The keeper takes the ball with the hands inside the box, but outside the box they must clear it with the feet.\n\nSwap the keepers after six balls. Make it harder with firmer balls, lobs over the keeper and a striker who starts closer to goal. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The further away the ball is, the further off your line you stand."
+    },
+    {
+      "id": "cp2",
+      "text": "Move with the ball and be still and balanced just as it is played."
+    },
+    {
+      "id": "cp3",
+      "text": "Decide early: come out and take the ball, or drop back and be ready for the shot."
+    },
+    {
+      "id": "cp4",
+      "text": "Outside the box – clear the ball long and wide, not straight ahead."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "focus": [
+    "goalkeeping"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach dribbles forward. The keeper moves up with the ball.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.3,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.46,
+          "endX": 0.34,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.15,
+          "endX": 0.455,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach plays the ball in behind. A sets off and the keeper comes out.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.21
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.34,
+          "y": 0.45
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.35
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.33,
+          "endX": 0.68,
+          "endY": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.355,
+          "endX": 0.69,
+          "endY": 0.25
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.19,
+          "endX": 0.57,
+          "endY": 0.155
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper gets there first and takes the ball inside the box.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.34,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "If the ball ends up outside the box, the keeper clears it wide with the feet.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.24
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.48
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.34,
+          "endX": 0.5,
+          "endY": 0.36
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.35,
+          "endX": 0.1,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

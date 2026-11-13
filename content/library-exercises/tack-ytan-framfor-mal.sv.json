@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 2,
+  "id": "8428b08d-b1a3-5acb-aff3-042ff8f6a70d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Täck ytan framför mål",
+  "description": "En plan på ungefär 40 × 50 meter med ett stort mål och målvakt i ena änden och en konport, ungefär åtta meter bred, i den andra. Fyra blå anfallare mot fyra röda försvarare. Anfallet startar alltid med en passning från A, som står vid konporten.\n\nRöd ska täcka de farliga ytorna och bryta. Vinner röd bollen kontrar de och gör poäng genom att driva bollen genom konporten. Försöket är slut efter kontringen, vid mål eller när bollen går ut. Byt anfall och försvar efter tio försök.\n\nStanna gärna spelet med ett ”Stopp!” och låt försvararna själva se efter: är ytan bakom den som pressar täckt? Variant: spela vidare efter brytningar, så att båda lagen kan vinna bollen flera gånger i samma försök. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den som är närmast bollen går ut – nästa försvarare ställer sig snett bakom och täcker."
+    },
+    {
+      "id": "cp2",
+      "text": "Spelarna längre bort drar in mot mitten; ytan framför mål ska aldrig stå tom."
+    },
+    {
+      "id": "cp3",
+      "text": "Flytta medan bollen rullar, inte när den redan har kommit fram."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata: ”Jag går!” och ”Jag täcker!”."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "positioning",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar till B. W går ut mot B, Y flyttar snett bakom W och X drar in mot mitten.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.035
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.27,
+          "endX": 0.23,
+          "endY": 0.35
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.48,
+          "endX": 0.22,
+          "endY": 0.43
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.665,
+          "endX": 0.29,
+          "endY": 0.6
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.5,
+          "endX": 0.6,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver förbi W längs kanten.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.035
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.29,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.48
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.52,
+          "endX": 0.13,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y har täckt ytan och tar bollen från B. Y spelar direkt fram till X.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.035
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.62
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.6,
+          "endX": 0.57,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X kontrar och driver bollen genom konporten – poäng till röd.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.035
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.035
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.35
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.31,
+          "endX": 0.56,
+          "endY": 0.09,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

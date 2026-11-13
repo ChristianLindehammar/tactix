@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "id": "8aa534aa-4a5d-59b1-99ec-692bd197c513",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – ta inlägget",
+  "description": "Två målvakter och en ledare eller utespelare. En målvakt står i mål och den andra är anfallare framför straffområdet. Ledaren har bollarna ute på kanten.\n\nLedaren slår inlägg från olika lägen på båda kanterna: tidigt från långt ut, nära kortlinjen, höga mot bortre stolpen och hårda mot första. Anfallaren försöker göra mål på inlägget eller på retur, men får inte gå in i målvakten. Målvakten bestämmer sig för om hen ska gå ut eller stanna, tar bollen i luften och sätter direkt igång spelet ut till sidan.\n\nByt roller mellan målvakterna efter ungefär åtta inlägg. Höj svårighetsgraden efterhand: hårdare inlägg, fler varianter och till slut en anfallare som får störa. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå en bit ut från mållinjen, lite mot bortre stolpen, med öppen kropp mot bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bestäm dig tidigt och ropa högt – \"Målvakt!\" eller \"Bort!\"."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta bollen på högsta punkt med armarna sträckta, och lyft knät närmast anfallaren."
+    },
+    {
+      "id": "cp4",
+      "text": "Kan du inte fånga, boxa bollen högt och långt ut åt sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren driver längs kanten. A söker sig in mot mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.14,
+          "y": 0.32
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.23
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.19,
+          "endX": 0.15,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.3,
+          "endX": 0.56,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren slår ett högt inlägg. Målvakten går ut mot bollen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.21
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.13,
+          "endX": 0.44,
+          "endY": 0.19,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten tar bollen i luften och sätter igång spelet ut till sidan.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.21
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.15,
+          "endX": 0.86,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

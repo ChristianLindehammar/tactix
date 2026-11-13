@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "id": "f95fcd49-ccac-59d4-9d92-60dfd75cbe79",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – starta kontringen",
+  "description": "Två målvakter och en ledare eller utespelare med bollar. En målvakt står i mål, den andra är kontringsspelare och står vid straffområdets hörn. Ledaren står snett framför mål.\n\nLedaren spelar in bollen framför mål från olika lägen: skott, låga inspel och höga inlägg. Målvakten fångar eller räddar. Så fort målvakten har bollen sprintar kontringsspelaren mot mittlinjen, och målvakten ska få fram bollen i löpningen bortom mittlinjen – med ett utkast, en utspark eller en sidvolley. Bollen ska komma framför spelaren, inte till fötterna.\n\nByt roller efter sex bollar. Variant: ledaren spelar en tillbakapassning i stället, och målvakten tar med sig bollen åt sidan och slår kontringspassningen med foten. Byt också sida på kontringsspelaren. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Säkra bollen först – en tappad boll ger ingen kontring."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta upp direkt när du har bollen och se var löpningen är på väg."
+    },
+    {
+      "id": "cp3",
+      "text": "Lägg bollen framför spelaren så att hen kan ta med sig den i full fart."
+    },
+    {
+      "id": "cp4",
+      "text": "Välj rätt utspel: kast när det är nära och säkert, spark när det är långt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "focus": [
+    "goalkeeping",
+    "transition"
+  ],
+  "difficulty": 3,
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren spelar in bollen framför mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.27,
+          "endX": 0.42,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten fångar bollen. A sprintar direkt mot mittlinjen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.745,
+          "y": 0.285,
+          "endX": 0.71,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten sparkar ut bollen framför A, bortom mittlinjen.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.2,
+          "y": 0.4
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.53,
+          "endX": 0.78,
+          "endY": 0.65
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.15,
+          "endX": 0.85,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Variant: ledaren har spelat tillbaka. Målvakten har tagit med sig bollen och passar med foten framför A på andra kanten.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.12
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.66,
+          "y": 0.3
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.47,
+          "endX": 0.14,
+          "endY": 0.6
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.4,
+          "y": 0.25,
+          "endX": 0.21,
+          "endY": 0.64
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

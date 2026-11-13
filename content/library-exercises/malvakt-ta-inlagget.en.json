@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "id": "4b02fedb-0b1c-55e6-85d6-3d704f8444fa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – claim the cross",
+  "description": "Two goalkeepers and a coach or outfield player. One goalkeeper is in goal and the other plays as an attacker in front of the penalty area. The coach has the balls out on the wing.\n\nThe coach crosses from different positions on both wings: early from deep, close to the byline, high to the far post and driven to the near post. The attacker tries to score from the cross or a rebound, but may not challenge the goalkeeper. The goalkeeper decides whether to come or stay, takes the ball in the air and restarts play straight away out to the side.\n\nSwap the goalkeepers after about eight crosses. Make it harder as you go: firmer crosses, more variety and finally an attacker who is allowed to challenge. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Start a little off your line, slightly towards the far post, with your body open to the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Decide early and call loudly – \"Keeper!\" or \"Away!\"."
+    },
+    {
+      "id": "cp3",
+      "text": "Take the ball at its highest point with arms stretched, and lift the knee nearest the attacker."
+    },
+    {
+      "id": "cp4",
+      "text": "If you can't catch it, punch the ball high and wide."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach dribbles down the wing. A makes for the goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.09
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.14,
+          "y": 0.32
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.23
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.19,
+          "endX": 0.15,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.3,
+          "endX": 0.56,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach puts in a high cross. The goalkeeper comes for the ball.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.21
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.13,
+          "endX": 0.44,
+          "endY": 0.19,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper takes the ball in the air and restarts play out to the side.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.21
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.15,
+          "endX": 0.86,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

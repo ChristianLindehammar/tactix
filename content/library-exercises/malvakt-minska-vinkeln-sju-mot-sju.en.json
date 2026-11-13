@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 2,
+  "id": "9f6f51a4-7541-5272-9a5d-ff46809fba30",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – narrow the angle in seven-a-side",
+  "description": "Seven-a-side with goalkeepers on a pitch of about 50 × 35 metres. For each period the coach decides which kind of goal counts double, so the keepers face plenty of finishes of that type.\n\nFor example: goals from a tight angle after a run down the wing, goals from one-on-ones or goals from long shots. Change the type after about five minutes. The keepers keep moving with the ball and coming out towards the shooter to make the angle as small as possible.\n\nPlay with offside if the team does in matches. Variant: goals only count from one touch inside the box, which gives more close-range finishes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand on the line between the ball and the centre of the goal."
+    },
+    {
+      "id": "cp2",
+      "text": "Come out towards the shooter as the ball gets closer – but stop and be balanced when the shot comes."
+    },
+    {
+      "id": "cp3",
+      "text": "From a tight angle: cover the near post and let the shooter see as little goal as possible."
+    },
+    {
+      "id": "cp4",
+      "text": "Get up at once and restart play when you have the ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles down the left wing towards the box.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.39
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.35,
+          "endX": 0.16,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A has got past X and dribbles into the box from a tight angle. The keeper moves to the near post.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.25
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.21,
+          "endX": 0.22,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.1,
+          "endX": 0.39,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots, but the keeper has closed the angle and saves at the near post.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "goal2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.24
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.44
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.5
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.78
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.118,
+          "endX": 0.39,
+          "endY": 0.11
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

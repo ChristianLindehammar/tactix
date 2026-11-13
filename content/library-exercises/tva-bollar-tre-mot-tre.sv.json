@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "id": "bfcbdbbe-3b04-5284-a711-5f1fe3fd1a1d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Två bollar – tre mot tre",
+  "description": "Spela tre mot tre på en yta på ungefär 25 × 20 meter med ett brett konmål på varje kortsida, nästan lika brett som planen. Två bollar är i spel samtidigt. Man gör mål genom att driva in bollen över motståndarnas mållinje mellan konerna, eller rulla in den från nära håll.\n\nMed två bollar blir det fler dueller och fler lägen att dribbla, och alla måste hela tiden titta efter var båda bollarna är. Uppmuntra spelarna att gå på sin motspelare med fintar och att driva mycket med bollen. När en boll har gått i mål startar det andra laget med den från sin egen mållinje.\n\nVarianter: bestäm om spelarna får passa eller bara driva. Prova tre bollar samtidigt med tre spelare per lag. Ge en extrapoäng för en fint eller dribbling som tar spelaren förbi en motståndare innan målet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gå på motspelaren med fart – stanna inte och vänta."
+    },
+    {
+      "id": "cp2",
+      "text": "Fint, sedan tempoväxling: kliv förbi på den sida där försvararen inte är."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll koll på båda bollarna, även när du själv inte har någon."
+    },
+    {
+      "id": "cp4",
+      "text": "Har motståndarna bollen nära ert mål? Hjälp till att vinna tillbaka den."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Två bollar i spel. A driver mot X, och Y driver mot blå lagets mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.49
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.45,
+          "endX": 0.3,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.51
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.55,
+          "endX": 0.74,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A fintar bort X och driver mot målet. B går in i Ys boll och vinner den.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.31
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.27,
+          "endX": 0.48,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.75
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A har gjort mål. B passar vidare till C, så att blått anfaller med den andra bollen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.12
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.08
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.57
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.53,
+          "endX": 0.63,
+          "endY": 0.43
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

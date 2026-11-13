@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "id": "db41ab25-0f0a-5cff-8dc8-ff8dd87a8fab",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Stop the turn – one v one",
+  "description": "An area of about 30 × 40 metres with a full-size goal and goalkeeper. The passers stand in a short line at the far end and the defenders in a short line by a cone at the side. Attacker B stands with their back to goal and defender X behind, on the goal side.\n\nA plays the ball in to B, who tries to turn and score. X must stop the turn and win the ball at the right moment, with no help from anyone. If X wins the ball, X scores a point by passing it back to A.\n\nRotation after each attempt: A becomes the attacker, B joins the defenders' line and X joins the passers. Competition: every player counts their goals and the balls they win. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stay close – an arm's length behind – so the attacker feels you, but not so close they can spin round you."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand slightly to one side and shut the turn that way."
+    },
+    {
+      "id": "cp3",
+      "text": "Watch the ball, not the body feints."
+    },
+    {
+      "id": "cp4",
+      "text": "Go in for the ball when the touch is too heavy or the attacker looks down."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays the ball in. B comes towards it and X follows tight behind.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.431,
+          "y": 0.157
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.451,
+          "y": 0.187,
+          "endX": 0.46,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.4,
+          "endX": 0.45,
+          "endY": 0.33
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.5,
+          "endX": 0.54,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B receives and tries to turn to the left. X moves across and closes it.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.25,
+          "endX": 0.3,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.45,
+          "endX": 0.32,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X wins the ball and passes it back to A – a point for X. Now everyone changes role.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.32
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.29,
+          "endX": 0.32,
+          "endY": 0.17
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

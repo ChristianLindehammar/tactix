@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "id": "71f5fbdc-8226-52f9-a8cb-fd2c17893315",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – styr försvararen med rösten",
+  "description": "En målvakt i mål, en ledare eller utespelare med bollar ute på kanten, en anfallare och en försvarare som markerar anfallaren. Är ni två målvakter kan den andra vara anfallare, och sedan byter ni.\n\nLedaren driver längs kanten och slår olika inspel framför mål: låga, höga, mot första och mot bortre stolpen. Anfallaren försöker göra mål och försvararen ska bryta. Målvakten pratar hela tiden med försvararen: var hen ska stå, och vem som tar bollen när den kommer. Kom överens om några korta ord före övningen, till exempel \"Målvakt!\" (jag tar den), \"Bort!\" (rensa), \"Gå med!\" (följ anfallaren) och \"Ut!\" (kliv upp).\n\nByt målvakt efter åtta bollar. Svårare: en anfallare till, eller att försvararen bara får agera på målvaktens rop. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Prata tidigt – innan bollen slås, inte när den redan är på väg."
+    },
+    {
+      "id": "cp2",
+      "text": "Korta, tydliga ord och en hög röst. Säg samma sak varje gång."
+    },
+    {
+      "id": "cp3",
+      "text": "Ropar du \"Målvakt!\" ska du också ta bollen – bestäm dig och gå."
+    },
+    {
+      "id": "cp4",
+      "text": "Beröm försvararen efter en bra brytning, så att samarbetet sätter sig."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "difficulty": 4,
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 5,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Ledaren driver längs kanten. Målvakten ropar \"Gå med!\" och X följer A mot mål.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.34
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.3,
+          "endX": 0.16,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.34,
+          "endX": 0.63,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.27,
+          "endX": 0.51,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Ledaren slår ett lågt inspel framför målvakten. Målvakten ser att hen inte når bollen och ropar \"Bort!\".",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.16,
+          "y": 0.31
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.49,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.2,
+          "endX": 0.35,
+          "endY": 0.16,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.22,
+          "endX": 0.57,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X hinner före A och rensar bollen ut åt sidan.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.16,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.15
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.155,
+          "endX": 0.07,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

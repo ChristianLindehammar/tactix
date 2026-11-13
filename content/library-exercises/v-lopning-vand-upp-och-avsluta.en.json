@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "id": "52a8066c-7154-56bc-b264-3458c5242846",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "V-run – turn and finish",
+  "description": "A striker (A) stands with their back to goal and a defender (X) close behind, about 25 metres from a full-size goal with a keeper. A support player (B) has the ball further back, and the others queue behind B.\n\nA makes V-runs – first a few steps towards goal, then sharply back towards the ball – to create space. B always plays one touch and only moves sideways, never past A. When A gets the ball facing goal, A finishes. The defender is half-active: follows and gets in the way but does not win the ball. Rotate A → X → B → the queue.\n\nVariation: the defender goes live but may only mark from behind, and must win the ball before A has turned. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sell the first part of the V – take the defender with you before you turn."
+    },
+    {
+      "id": "cp2",
+      "text": "Change direction sharply and accelerate out of the turn."
+    },
+    {
+      "id": "cp3",
+      "text": "Feel where the defender is: if you can't turn, lay it back and make a new run."
+    },
+    {
+      "id": "cp4",
+      "text": "B: play one touch and stay behind A."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A starts the V-run by moving away, diagonally towards goal, taking X along.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.645
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.41,
+          "endX": 0.37,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns sharply and comes back towards the ball. B passes into the run.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.417,
+          "y": 0.678
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.375,
+          "endX": 0.31,
+          "endY": 0.52
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.387,
+          "y": 0.658,
+          "endX": 0.33,
+          "endY": 0.59
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X is tight, so A lays it straight back to B, who moves sideways. A sets off again the other way.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.41,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.601
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.621,
+          "endX": 0.6,
+          "endY": 0.68
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.75,
+          "endX": 0.65,
+          "endY": 0.75
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.5,
+          "endX": 0.55,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes first time into A's run. A receives facing goal past X and finishes.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.39,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.65
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.62,
+          "endX": 0.61,
+          "endY": 0.53
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.41,
+          "endX": 0.46,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

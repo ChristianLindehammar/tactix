@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "id": "1faba252-9f06-5890-826e-13cf74e0500a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Steal it on the heavy touch",
+  "description": "An area of about 30 × 40 metres with a full-size goal and goalkeeper. The attackers stand in a short line at the far end, each with a ball. Defender X waits in the middle of the pitch.\n\nA dribbles straight at goal and takes on X. X must slow A down and go in to win the ball at the right moment – there is no help behind X. It counts as a won ball once X has it under control. After the attempt A becomes the new defender and X joins the back of the line.\n\nCompetition: each player defends, for example, three times in a row. Most balls won wins – and the attackers count their goals. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Close down quickly, but slow down in good time and get side-on."
+    },
+    {
+      "id": "cp2",
+      "text": "Steer the attacker one way, ideally out wide and away from goal."
+    },
+    {
+      "id": "cp3",
+      "text": "Wait for the moment: go in when the ball is furthest from the attacker's foot."
+    },
+    {
+      "id": "cp4",
+      "text": "Get your whole body between the attacker and the ball – not just one foot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at X. X steps up to meet A.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.19
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.23,
+          "endX": 0.38,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.54,
+          "endX": 0.46,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X stands at an angle and steers A out wide. X moves with A, side-on.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.43
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.46,
+          "endX": 0.26,
+          "endY": 0.57,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.54,
+          "endX": 0.38,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A's touch is too heavy. X steps in between A and the ball and wins it. A becomes the new defender.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.64,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.7
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.66,
+          "endX": 0.3,
+          "endY": 0.69
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

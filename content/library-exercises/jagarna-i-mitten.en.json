@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "id": "34e2ba94-bb3d-5f18-b698-46711be6eeff",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Hunters in the middle",
+  "description": "Mark out an area of about 20 × 15 metres with cones. Every player has a ball and lines up on one short side, except one or two who put their ball aside and stand in the middle. They are the hunters.\n\nOn the signal everyone with a ball dribbles across to the other side. The hunters try to kick as many balls as they can out of the area. A player who loses the ball fetches it, puts it aside and becomes a hunter too. Then everyone dribbles back, and so on until only one or a few still have their ball. They win the round and start as hunters in the next one.\n\nVariant: play until everyone has lost their ball, and start with more players in the middle so that everyone gets a turn as a hunter. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball close to your foot when a hunter comes – small touches."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up and dribble into the free space, away from the hunters."
+    },
+    {
+      "id": "cp3",
+      "text": "Put your body between the hunter and the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Hunters: work together and cut off the same player."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A–D dribble to the other side. X and Y hunt in the middle.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.41,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.59,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.75
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.75
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.75
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.75
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.35,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.71,
+          "endX": 0.2,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.71,
+          "endX": 0.41,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.71,
+          "endX": 0.59,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.71,
+          "endX": 0.8,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Y reaches C's ball and kicks it out of the area.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.41
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.59
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.55
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.37
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.44,
+          "endX": 0.57,
+          "endY": 0.5
+        },
+        {
+          "id": "k1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.57,
+          "endX": 0.91,
+          "endY": 0.67
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C becomes a hunter. The others have made it across and will soon dribble back.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.16
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.16
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.84
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.25
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.25
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.25
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.93,
+          "y": 0.68
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

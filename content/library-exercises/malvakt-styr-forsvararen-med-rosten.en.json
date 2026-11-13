@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "id": "d658323f-f2f1-5295-b3a3-805a39145ede",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – direct the defender with your voice",
+  "description": "A goalkeeper in goal, a coach or outfield player with balls out wide, a striker and a defender marking the striker. With two keepers, the other one can be the striker, and then you swap.\n\nThe coach dribbles down the wing and plays different balls in front of goal: low, high, to the near and to the far post. The striker tries to score and the defender must intercept. The keeper talks to the defender all the time: where to stand, and who takes the ball when it comes. Agree on a few short words before you start, such as \"Keeper!\" (mine), \"Away!\" (clear it), \"Go with him!\" (track the striker) and \"Out!\" (step up).\n\nSwap keepers after eight balls. Harder: an extra striker, or the defender may only act on the keeper's call. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Talk early – before the ball is played, not when it is already on its way."
+    },
+    {
+      "id": "cp2",
+      "text": "Short, clear words and a loud voice. Say the same thing every time."
+    },
+    {
+      "id": "cp3",
+      "text": "If you call \"Keeper!\", you must take the ball – make up your mind and go."
+    },
+    {
+      "id": "cp4",
+      "text": "Praise the defender after a good interception so the teamwork sticks."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "difficulty": 4,
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 5,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach dribbles down the wing. The keeper calls \"Go with him!\" and X tracks A towards goal.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.34
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.3,
+          "endX": 0.16,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.34,
+          "endX": 0.63,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.27,
+          "endX": 0.51,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The coach plays a low ball in front of the keeper. The keeper sees it is out of reach and calls \"Away!\".",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.16,
+          "y": 0.31
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.49,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.2,
+          "endX": 0.35,
+          "endY": 0.16,
+          "bend": 0.02,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.22,
+          "endX": 0.57,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X gets there before A and clears the ball wide.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.16,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.57,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.15
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.155,
+          "endX": 0.07,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:50.000Z",
+  "updatedAt": "2026-11-13T13:31:50.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

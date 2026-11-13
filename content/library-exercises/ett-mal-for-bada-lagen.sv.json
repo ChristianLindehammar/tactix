@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "aed36a4d-79c2-5cdb-8868-bcecbc870a9e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ett mål för båda lagen",
+  "description": "Sju spelare, en boll och ett mål på en yta på ungefär 25 × 25 meter. En står i mål och de andra sex spelar tre mot tre. Målvakten står med ryggen mot planen och kastar ut bollen bakåt, så att ingen vet vart den tar vägen.\n\nLaget som får tag i bollen anfaller och försöker göra mål, och det andra laget försvarar tills de vinner bollen – då anfaller de i stället, mot samma mål och samma målvakt. Efter ett mål eller en räddning kastar målvakten ut igen. Byt målvakt efter varje eller vartannat mål, eller var tredje minut, så att alla får stå.\n\nVariant: bara laget som vinner bollen efter utkastet får göra mål. Vinner det andra laget bollen passar de den till målvakten, som kastar ut på nytt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Snabbt fram till bollen när den kastas – och snabbt om när den byter lag."
+    },
+    {
+      "id": "cp2",
+      "text": "Finta, dribbla och passa: det finns många sätt att ta sig till mål."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: ställ dig mellan bollen och målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakt: flytta med bollen och var redo – skottet kan komma från alla håll."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 1,
+  "focus": [
+    "attack",
+    "defence",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut bollen bakåt. A och X springer mot den.",
+      "markers": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.04
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.04
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.7
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.4
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.43,
+          "endX": 0.42,
+          "endY": 0.41
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.5,
+          "endX": 0.47,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A hinner först och passar till B. Z kommer tillbaka för att försvara.",
+      "markers": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.04
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.04
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.7
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.33
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.32,
+          "endX": 0.66,
+          "endY": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.22,
+          "endX": 0.38,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter vid sidan av målvakten. Vinner rött bollen anfaller de mot samma mål.",
+      "markers": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.04
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.04
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.1,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.9,
+          "y": 0.7
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.19
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.15,
+          "endX": 0.54,
+          "endY": 0.05
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

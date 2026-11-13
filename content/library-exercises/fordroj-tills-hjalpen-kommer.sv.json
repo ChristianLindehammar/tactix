@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 2,
+  "id": "e545b87f-2d3c-5b58-a6fe-0d49271e6ffc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fördröj tills hjälpen är på plats",
+  "description": "Tre mot tre mot ett mål med målvakt, på en yta på ungefär 30 × 45 meter. En fri spelare (J) börjar med bollen längst bak och spelar alltid med det anfallande laget. En av försvararna (Z) startar bakom anfallarna, bredvid J. De två andra försvararna ska fördröja anfallet tills Z har hunnit hem på försvarssidan – först då går de in i närkamp.\n\nFörsöket är slut vid mål, brytning eller när bollen går ut. Tre försök per lag, sedan byter lagen roller. Byt fri spelare efter varje omgång.\n\nVariant: försvararna får göra mål i ett litet mål vid startlinjen när de har vunnit bollen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Backa hem och vinn tid – stå några meter från bollhållaren och låt dig inte passeras."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå snett så att bollhållaren styrs ut mot sidan, bort från mål."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som kommer bakifrån sprintar hem på målsidan, inte rakt mot bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata: säg till när du är på plats, så vet närmaste försvarare att det är dags att attackera."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J spelar till B. Z sprintar hem bakifrån; X och Y backar och fördröjer.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.1,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.17
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.2,
+          "endX": 0.46,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.14,
+          "endX": 0.56,
+          "endY": 0.62
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.56,
+          "endX": 0.34,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.54,
+          "endX": 0.72,
+          "endY": 0.63
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.31,
+          "endX": 0.2,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver mot mål. X kliver mot B men håller avståndet; Z är nästan hemma.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.36,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.65,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.51,
+          "endX": 0.48,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.69,
+          "endX": 0.42,
+          "endY": 0.72
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.4,
+          "endX": 0.56,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z är på plats – nu går X in i närkamp och tar bollen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.49,
+          "y": 0.67
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.74,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.72,
+          "endX": 0.44,
+          "endY": 0.69
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

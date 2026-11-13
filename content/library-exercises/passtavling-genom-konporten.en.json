@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "id": "7731b8f4-65a5-54aa-860e-9dd871eb02a6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Pass race through the gate",
+  "description": "Split the players into teams of four to six. Each team gets a cone gate, about 2 metres wide, and splits into two lines on either side of it, about 10 metres apart. The first player in one line passes through the gate to the first player in the other line, then runs to the back of their own line.\n\nThe receiver may only touch the ball twice: one touch to control it and one to pass it back through the gate. All the teams go at the same time and count their passes out loud. The team with the most good passes when the coach blows the whistle after one or two minutes wins. A pass that misses the gate does not count.\n\nVariants: control with one foot and pass with the other, or decide beforehand which foot does what. Move the lines further apart for longer passes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Step towards the ball instead of waiting for it."
+    },
+    {
+      "id": "cp2",
+      "text": "Put the first touch a little in front of you, so the pass can follow straight away."
+    },
+    {
+      "id": "cp3",
+      "text": "Pass with the inside of the foot, standing foot beside the ball and toes pointing at the gate."
+    },
+    {
+      "id": "cp4",
+      "text": "Speed is good – but a pass outside the gate costs more than it gains."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and X pass through their gates and run to the back of their lines.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.5
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.5
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.5
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.84,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.63
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.63
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.59,
+          "endX": 0.3,
+          "endY": 0.34
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.59,
+          "endX": 0.7,
+          "endY": 0.34
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.74,
+          "endX": 0.17,
+          "endY": 0.9
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.74,
+          "endX": 0.83,
+          "endY": 0.9
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C and Z control with the first touch and pass back with the second. Then they run to the back of their lines.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.5
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.37,
+          "y": 0.5
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.63,
+          "y": 0.5
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.93,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.75,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.16,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.93,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.75,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.37
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.37
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.41,
+          "endX": 0.3,
+          "endY": 0.66
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.41,
+          "endX": 0.7,
+          "endY": 0.66
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.26,
+          "endX": 0.17,
+          "endY": 0.08
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.26,
+          "endX": 0.83,
+          "endY": 0.08
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "8eeb581b-86cb-5401-9786-d615ccb8f44e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Four v one – touch it and swap",
+  "description": "A square of about 15 × 15 metres. Four players keep the ball from one player in the middle. With more players, play six against two in the same square.\n\nBefore you start, decide what the middle player has to do to get out: win the ball, put it out of the square, or just touch it. The player whose pass went wrong goes into the middle. If nobody manages it for a while, swap anyway. With two in the middle, the one who won the ball comes out, or the one who has been in longest.\n\nVariants: give extra points for what you want to practise, such as a first-time pass or a pass with the outside of the foot. Limit the number of touches, or require two touches every time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move along your side so you are always an option for the player on the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Open your body when you receive so you can see the next pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Play away from the middle player – pass on the side where they are not."
+    },
+    {
+      "id": "cp4",
+      "text": "Middle player: show one way and read the next pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "D passes to C. X shifts towards the ball.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.62,
+          "endX": 0.8,
+          "endY": 0.55
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.52,
+          "endX": 0.63,
+          "endY": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C plays it first time on to A, past X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.57,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.41
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.39,
+          "endX": 0.56,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes towards B but X touches the ball – A goes into the middle.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.38
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.31,
+          "endX": 0.39,
+          "endY": 0.35
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.46,
+          "endX": 0.4,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

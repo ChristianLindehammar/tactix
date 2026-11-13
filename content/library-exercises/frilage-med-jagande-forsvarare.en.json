@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "id": "8cac3993-c745-576f-b683-fec97ad8186e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Breakaway with a chasing defender",
+  "description": "Two goals with goalkeepers, about 35 metres apart. Beside one goal stand two short lines: attackers on one side and defenders on the other. The goalkeeper in the starting goal rolls the ball out diagonally forward. The attacker sets off straight away and takes the ball; the defender starts a moment later – when the attacker first touches the ball – and chases to win it.\n\nThe attacker has to score from the breakaway: place the shot, dribble round the keeper, or chip a keeper who rushes out. The defender may not slide in from behind. If the defender wins the ball, they can counter towards the starting goal. Swap lines and roles after every attempt. Sometimes start on a call from the goalkeeper or the coach instead, so the players have to react.\n\nCompetition: two teams taking turns to attack. Most goals wins. Adjust the head start so the attacker gets there but still feels the defender close behind. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "First touch well out in front at full speed – then fewer and shorter touches near goal."
+    },
+    {
+      "id": "cp2",
+      "text": "Check over your shoulder for the defender, and get between them and the ball if they catch up."
+    },
+    {
+      "id": "cp3",
+      "text": "Watch the goalkeeper: if they stay, place it; if they rush out, go round or chip."
+    },
+    {
+      "id": "cp4",
+      "text": "Decide in time – don't rush, but don't wait until the defender has caught you either."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper rolls the ball out. A sets off to meet it. X waits until A touches the ball.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.86,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.81
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.77,
+          "endX": 0.56,
+          "endY": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.82,
+          "endX": 0.6,
+          "endY": 0.67
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A drives at goal at full speed. X chases from the side.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.86,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.55
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.51,
+          "endX": 0.55,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.82,
+          "endX": 0.44,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper comes out and A places the shot beside them. Next time A joins the defenders' line and X the attackers'.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk1",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.12
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.86,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.18,
+          "endX": 0.53,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "59657d17-6ef2-51b9-b8c3-5b8e6ab30a65",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – penalties and rebounds",
+  "description": "One goalkeeper in goal and some outfield players split into two teams. Everyone except the penalty taker waits outside the penalty area.\n\nThe teams take penalties in turn and compete for the most goals. Both the taker and the others may run in and score from a rebound, just as in a match – but only once the kick has been taken. The goalkeeper tries different ways of dealing with the penalty and pays close attention to the rebound: either get the ball far away to the side or hold on to it.\n\nVariant: one goalkeeper per team, so the goalkeepers take turns in goal and compete against each other. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Try different ways: stay still for a long time, or make a small hop just as the ball is struck."
+    },
+    {
+      "id": "cp2",
+      "text": "Read the taker's run-up and hips to see where the ball is going."
+    },
+    {
+      "id": "cp3",
+      "text": "If you save but can't hold it – push it far out to the side, never back into the penalty area."
+    },
+    {
+      "id": "cp4",
+      "text": "Get up straight after the save and be ready for the next shot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 11,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C takes the penalty. A, X, B and Y wait outside the penalty area.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.87,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.17,
+          "endX": 0.36,
+          "endY": 0.06
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper saves. Everyone runs in for the rebound.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.18
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.26,
+          "endX": 0.26,
+          "endY": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.6,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper gets there first and pushes the ball out to the side.",
+      "markers": [
+        {
+          "id": "goal1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.1,
+          "endX": 0.04,
+          "endY": 0.12
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

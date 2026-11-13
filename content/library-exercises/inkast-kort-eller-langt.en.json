@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "id": "fcb38ebe-d0b6-527b-b9d3-c3b2740ffebf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Throw-ins by the box – short or long",
+  "description": "One goalkeeper and eight outfield players: four attackers against four defenders who play for real. The throw-in is taken from the touchline level with the opponents' penalty area. The attackers agree on a plan before each throw and try both short and long options.\n\nShort throw: a player comes towards the ball and receives near the line, and the team then looks for a quick ball in front of goal – first time or after a one-two with the thrower. Long throw: the ball is thrown deep into the box, where one player goes up to flick it on or finish and the others attack the far post and the rebound area. An attempt ends with a goal, when the ball goes out or when the defenders win it and play it away from the box.\n\nSwap attack and defence after a few attempts, change the thrower and take throws from both sides. Competition: four v four, ten throws each, and count the goals. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move before the ball is thrown – a player standing still is easy to mark."
+    },
+    {
+      "id": "cp2",
+      "text": "Short throw: come towards the ball at speed and take your first touch away from the defender."
+    },
+    {
+      "id": "cp3",
+      "text": "Long throw: decide beforehand who goes for the first ball and who attacks the far post."
+    },
+    {
+      "id": "cp4",
+      "text": "Thrower: step onto the pitch straight after the throw and become a passing option."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "setPieces",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Short throw: B comes towards the touchline and A throws to B's feet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.5,
+          "endX": 0.26,
+          "endY": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.31,
+          "endX": 0.23,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays a first-time ball in front of goal. C runs to the near post and D to the far post.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.4,
+          "endX": 0.36,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.22,
+          "endX": 0.4,
+          "endY": 0.15
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.63,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Long throw: A throws into the near-post area where C flicks it on or finishes. D attacks the far post and B moves in for the rebound.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.06,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.27
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.25,
+          "endX": 0.38,
+          "endY": 0.16,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.28,
+          "endX": 0.63,
+          "endY": 0.15
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.45,
+          "endX": 0.28,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

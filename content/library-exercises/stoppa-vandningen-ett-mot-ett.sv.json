@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "id": "064d09f2-5c83-5e72-9e3a-8e8b15b2b865",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Stoppa vändningen – ett mot ett",
+  "description": "En yta på ungefär 30 × 40 meter med ett stort mål och målvakt. Passningsspelarna står i ett kort led i bortre änden och försvararna i ett kort led vid en kon på sidan. Anfallaren B står med ryggen mot mål och försvararen X bakom, på målsidan.\n\nA spelar in bollen till B, som försöker vända upp och göra mål. X ska hindra vändningen och vinna bollen i rätt ögonblick, utan hjälp från någon. Vinner X bollen gör X poäng genom att spela tillbaka till A.\n\nByte efter varje försök: A blir anfallare, B går till försvararnas led och X går till passningsledet. Tävling: varje spelare räknar sina mål och sina bollvinster. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå nära – en armlängd bakom – så att anfallaren känner dig, men inte så nära att hen kan snurra runt dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå lite på sidan och stäng vändningen åt ena hållet."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta på bollen, inte på kroppsfinterna."
+    },
+    {
+      "id": "cp4",
+      "text": "Gå in och ta bollen när touchen blir för lång eller anfallaren tittar ner."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar in bollen. B kommer mot bollen och X följer med tätt bakom.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.431,
+          "y": 0.157
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.451,
+          "y": 0.187,
+          "endX": 0.46,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.4,
+          "endX": 0.45,
+          "endY": 0.33
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.5,
+          "endX": 0.54,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar emot och försöker vända åt vänster. X flyttar med och stänger.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.25,
+          "endX": 0.3,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.45,
+          "endX": 0.32,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X vinner bollen och spelar tillbaka till A – poäng till X. Nu byter alla uppgift.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.36
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.32
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.29,
+          "endX": 0.32,
+          "endY": 0.17
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

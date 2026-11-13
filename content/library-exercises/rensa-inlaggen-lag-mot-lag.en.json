@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "1bd6e63e-c7e1-562f-abfb-cbeadf83c2bf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Clear the crosses – team v team",
+  "description": "Two teams of three players each and a goalkeeper in a full-size goal. In each team one player is the winger who crosses, the other two attack in the box. The teams take turns to attack and defend: when blue attack from the left, red defend with two players and the keeper, and then red attack from the right.\n\nThe winger varies the cross: hard along the ground, high to the far post or cut back towards the penalty spot. The defenders and the keeper work together to win the ball. Count goals per team. Swap roles within the teams and let the teams change wing after a while.\n\nVariation: three v three or four v four in front of goal, with the winger as an extra player. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand where you can see both the ball and your attacker – turn your body towards the pitch."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the attacker on your outside and get to the ball first."
+    },
+    {
+      "id": "cp3",
+      "text": "Keeper: call early – \"Keeper!\" or \"Away!\" – so everyone knows who takes the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Clear high and wide, towards the touchline – never back across the middle."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles down the wing. B and C start their runs and X and Y go with them.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.07,
+          "y": 0.46
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.33,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.07,
+          "y": 0.42,
+          "endX": 0.07,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.41,
+          "endX": 0.26,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.41,
+          "endX": 0.75,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A crosses towards the far post where C is arriving.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.23,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.19,
+          "y": 0.25,
+          "endX": 0.68,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y gets there first and clears it wide. Next attack: Z from the right, and red attack.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.12
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.12,
+          "endX": 0.94,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "2979c8b1-6dbd-534f-a94f-f63169e9a45d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Rensa inläggen – lag mot lag",
+  "description": "Två lag med tre spelare i varje och en målvakt i ett stort mål. I varje lag är en spelare kantspelare och slår inlägg, de andra två anfaller i straffområdet. Lagen anfaller och försvarar varannan gång: när blått anfaller från vänster försvarar rött med två spelare och målvakten, och sedan anfaller rött från höger.\n\nKantspelaren varierar inläggen: hårt längs marken, högt mot bortre stolpen eller tillbaka mot straffpunkten. Försvararna och målvakten samarbetar för att bryta. Räkna mål per lag. Byt roller inom lagen och låt lagen byta kant efter en stund.\n\nVariant: tre mot tre eller fyra mot fyra framför mål, med kantspelaren som extra spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå så att du ser både bollen och din anfallare – vrid kroppen mot planen."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll anfallaren på din utsida och var först till bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakten: ropa tidigt ”Jag!” eller ”Bort!” så att alla vet vem som tar bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Rensa högt och brett, ut mot kanten – aldrig tillbaka genom mitten."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver längs kanten. B och C startar sina löpningar och X och Y följer med.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.55,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.07,
+          "y": 0.46
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.45,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.33,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.07,
+          "y": 0.42,
+          "endX": 0.07,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.41,
+          "endX": 0.26,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.41,
+          "endX": 0.75,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A slår inlägget mot bortre stolpen där C är på väg in.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.23,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.19,
+          "y": 0.25,
+          "endX": 0.68,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y kommer först och rensar ut mot kanten. Nästa anfall: Z från höger och rött anfaller.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.12
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.12,
+          "endX": 0.94,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "id": "f733d6d2-b538-5bce-92fc-aa3fe62b2022",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Feints 1 v 1 in pairs",
+  "description": "Players pair up with one ball per pair. All the pairs share an area of about 20 × 20 metres. One player has the ball and practises feints and dribbles against the other, who defends.\n\nThe attacker dribbles at the defender, sells a feint and gets past with the ball under control. The defender tries to win the ball. When the defender wins it the roles swap straight away, and the new attacker turns and goes again.\n\nCompetition: each player counts how many feints get them past. Who has the most when the coach blows the whistle after a minute? Change partners between rounds. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack the defender with pace – a feint works best when they have to commit."
+    },
+    {
+      "id": "cp2",
+      "text": "Feint with your whole body: shoulders, eyes and a clear step the wrong way."
+    },
+    {
+      "id": "cp3",
+      "text": "Change direction and speed straight after the feint."
+    },
+    {
+      "id": "cp4",
+      "text": "Defender: stay on your toes, slightly side-on, and wait for the ball to leave the foot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at X, who steps up to meet A.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.69
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.65,
+          "endX": 0.5,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.35,
+          "endX": 0.5,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A feints to the left and goes past on the right.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.51
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.48,
+          "endX": 0.75,
+          "endY": 0.27,
+          "bend": 0.06,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.38,
+          "endX": 0.32,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X wins the ball. The roles swap and X dribbles away as the new attacker.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.22
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.22
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.48
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.5,
+          "endX": 0.78,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

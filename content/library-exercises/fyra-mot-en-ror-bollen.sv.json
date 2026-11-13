@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "18233679-116b-53d6-8f11-39fd00f4c052",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fyra mot en – rör bollen och byt",
+  "description": "En kvadrat på ungefär 15 × 15 meter. Fyra spelare håller bollen mot en spelare i mitten. Är ni fler spelar ni sex mot två i samma kvadrat.\n\nBestäm innan ni startar vad mittspelaren måste klara för att få gå ut: vinna bollen, få ut den ur kvadraten eller bara röra den. Den som slog passningen som gick fel går in i mitten. Lyckas ingen på en stund byter ni ändå. Med två i mitten går den ut som bröt, eller den som varit inne längst.\n\nVarianter: ge extra poäng för det ni vill öva på, till exempel en direktpassning eller en passning med utsidan. Begränsa antalet tillslag, eller kräv två tillslag varje gång. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör dig längs din sida så att du alltid är spelbar för den med bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Öppna kroppen när du tar emot så att du ser nästa passning."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela bort från mittspelaren – passa på den sida där hen inte är."
+    },
+    {
+      "id": "cp4",
+      "text": "Mittspelaren: styr åt ett håll och läs nästa passning."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "D passar till C. X flyttar mot bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.62,
+          "endX": 0.8,
+          "endY": 0.55
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.52,
+          "endX": 0.63,
+          "endY": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C spelar direkt vidare till A, förbi X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.57,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.41
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.39,
+          "endX": 0.56,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar mot B men X rör bollen – A går in i mitten.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.3
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.7
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.38
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.31,
+          "endX": 0.39,
+          "endY": 0.35
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.46,
+          "endX": 0.4,
+          "endY": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:16:46.000Z",
+  "updatedAt": "2026-11-13T13:16:46.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

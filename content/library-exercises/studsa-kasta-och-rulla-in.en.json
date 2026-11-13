@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 2,
+  "id": "51f14ebb-436c-5220-8223-c4cd517684cf",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bounce, throw and roll it in",
+  "description": "A handball-style game as a warm-up. Split the children into small teams, for example three v three, in an area of about 20 × 15 metres with a cone goal on each short side. The ball is only played with the hands, and the player with the ball must bounce it once on the ground before throwing it on to a team-mate or scoring. You score by rolling the ball between the cones from no more than a couple of metres away.\n\nThe ball goes to the other team if it bounces after a pass, if someone catches it in the air, or if the player on the ball forgets to bounce it. Defenders may also stop the ball with their foot as it rolls towards goal. After a goal, the other team starts from their own goal.\n\nVariants: a goal only counts if the ball bounces over the goal line. To bring it closer to football, pass with the hands but roll the ball into the goal with the foot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spread out so the player with the ball has someone to throw to."
+    },
+    {
+      "id": "cp2",
+      "text": "Move into free space instead of standing behind an opponent."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up before you bounce – know where the ball is going."
+    },
+    {
+      "id": "cp4",
+      "text": "Get close to the goal before you roll it in; it is easier to hit."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A bounces the ball and throws to B. C moves up to offer a pass.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.82
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.55
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.54,
+          "endX": 0.54,
+          "endY": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.63,
+          "endX": 0.8,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B bounces it and throws on to C. A moves forward after the pass.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.82
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.42,
+          "endX": 0.74,
+          "endY": 0.41
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.59,
+          "endX": 0.3,
+          "endY": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C bounces it and rolls it into the cone goal. Y tries to stop it with a foot.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.18
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.18
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.82
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.82
+        },
+        {
+          "id": "g1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.18
+        },
+        {
+          "id": "g2",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.18
+        },
+        {
+          "id": "g3",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.82
+        },
+        {
+          "id": "g4",
+          "type": "cone",
+          "x": 0.6,
+          "y": 0.82
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.235,
+          "endX": 0.5,
+          "endY": 0.19
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.27,
+          "endX": 0.4,
+          "endY": 0.23
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:30:58.000Z",
+  "updatedAt": "2026-11-13T13:30:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

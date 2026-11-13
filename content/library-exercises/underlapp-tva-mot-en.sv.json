@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "id": "295a9172-f89b-5a84-a125-5854286281bc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Underlapp – två mot en",
+  "description": "Spelarna jobbar i grupper om tre med en boll: en bollhållare, en medspelare och en försvarare. Varje grupp har en yta på ungefär 20 × 25 meter, och anfallarna gör poäng genom att föra bollen över bortre linjen.\n\nBollhållaren driver framåt utåt kanten och drar försvararen mot sig. Medspelaren startar bakom och löper på insidan – mellan bollhållaren och mitten – förbi försvararen. Bollhållaren spelar in bollen i löpningen, och medspelaren tar med sig den över linjen. Försvararen är ganska passiv i början. Byt roller efter varje försök så att alla får vara bollhållare, medspelare och försvarare.\n\nVariant: försvararen spelar helt aktivt, och bollhållaren får också passningsfinta och dribbla själv när försvararen tar underlappet. Den som bryter blir anfallare och den som förlorade bollen går in som försvarare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollhållaren: driv mot försvararen så att hen måste ta dig – då öppnas insidan."
+    },
+    {
+      "id": "cp2",
+      "text": "Medspelaren: starta löpningen i rätt läge och ropa när du kommer på insidan."
+    },
+    {
+      "id": "cp3",
+      "text": "Spela passningen framför medspelaren, i löpningen och inte bakom."
+    },
+    {
+      "id": "cp4",
+      "text": "Släpper försvararen dig för att ta underlappet – driv själv eller passningsfinta."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver framåt utåt kanten. X kliver ut mot A.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.76,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.67
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.63,
+          "endX": 0.73,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.31,
+          "endX": 0.58,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X tar A. B startar underlappet på insidan, förbi X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.44
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.78,
+          "endX": 0.45,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A spelar in bollen framför B, som fortsätter i löpningen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.61,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.4,
+          "endX": 0.48,
+          "endY": 0.2,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.34,
+          "endX": 0.46,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B tar med bollen över linjen. Nästa försök: A blir försvarare, X medspelare och B bollhållare.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.12
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.12
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.88
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.14,
+          "endX": 0.46,
+          "endY": 0.05,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:31:18.000Z",
+  "updatedAt": "2026-11-13T13:31:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

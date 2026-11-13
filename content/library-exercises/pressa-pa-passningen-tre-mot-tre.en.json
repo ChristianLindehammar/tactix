@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "id": "1cbb96d2-c238-5d5a-a92f-69e24d217415",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Press on the pass – three v three",
+  "description": "An area of about 30 × 40 metres with a full-size goal and goalkeeper at one end and two small goals at the other. Three blue attackers plus a free player, J, against three red defenders. J always starts with the ball and may only support from behind – J may not score or dribble past anyone.\n\nRed press whoever receives the ball and try to win it. When red win the ball they score in either of the small goals. Red also get a point every time blue are forced to play back to J. The attempt ends when red win the ball, after a goal or when the ball goes out. Change the free player after a few attempts and swap attack and defence after ten.\n\nEasier: take away the small goals, so the attempt ends as soon as red win the ball. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Set off as the pass is played – be there when the ball arrives."
+    },
+    {
+      "id": "cp2",
+      "text": "Slow down over the last few metres and get side-on so you are not beaten."
+    },
+    {
+      "id": "cp3",
+      "text": "Stand at an angle and steer the player on the ball towards your teammates."
+    },
+    {
+      "id": "cp4",
+      "text": "The other two move with the ball, ready to take over."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J passes to A. X sets off towards A while the ball is rolling; Y and Z shift across.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.14,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.86,
+          "y": 0.04
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.14
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.165,
+          "endX": 0.23,
+          "endY": 0.26
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.23,
+          "endY": 0.39
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.54,
+          "endX": 0.4,
+          "endY": 0.5
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.48,
+          "endX": 0.63,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X is close before A can turn and shuts off the outside. A has to dribble inside, where Y is waiting.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.14,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.86,
+          "y": 0.04
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.21
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.2,
+          "endX": 0.35,
+          "endY": 0.22,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A turns inside but X stays tight, takes the ball and scores in the small goal.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.14,
+          "y": 0.04
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.86,
+          "y": 0.04
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.238,
+          "y": 0.255
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.208,
+          "y": 0.225,
+          "endX": 0.17,
+          "endY": 0.08
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:32:37.000Z",
+  "updatedAt": "2026-11-13T13:32:37.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

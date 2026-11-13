@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "id": "9e392ce1-f130-5fc3-9c66-6de66d616f3a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "V-löpning – vänd upp och avsluta",
+  "description": "En anfallare (A) står med ryggen mot mål och en försvarare (X) tätt bakom sig, cirka 25 meter från ett stort mål med målvakt. En understödjande spelare (B) har bollen längre bak, och resten väntar i kö bakom B.\n\nA gör V-löpningar – först en bit mot mål, sedan tvärt tillbaka mot bollen – för att skapa yta. B spelar alltid med ett tillslag och flyttar sig bara i sidled, aldrig förbi A. När A får bollen rättvänd avslutar A. Försvararen är halvaktiv: följer med och stör men tar inte bollen. Rotera A → X → B → kön.\n\nVariant: försvararen blir aktiv men får bara markera bakifrån, och måste vinna bollen innan A har vänt upp. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sälj första delen av V:et – ta med dig försvararen innan du vänder."
+    },
+    {
+      "id": "cp2",
+      "text": "Ändra riktning tvärt och öka farten ut ur vändningen."
+    },
+    {
+      "id": "cp3",
+      "text": "Känn var försvararen står: kom inte rättvänd – lägg tillbaka och gör en ny löpning."
+    },
+    {
+      "id": "cp4",
+      "text": "B: spela på ett tillslag och håll dig bakom A."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A börjar V-löpningen med att gå bort, snett mot mål, och tar med sig X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.645
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.41,
+          "endX": 0.37,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder tvärt och kommer tillbaka mot bollen. B spelar in i löpningen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.417,
+          "y": 0.678
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.375,
+          "endX": 0.31,
+          "endY": 0.52
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.387,
+          "y": 0.658,
+          "endX": 0.33,
+          "endY": 0.59
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X sitter tätt, så A lägger tillbaka direkt till B, som flyttar sig i sidled. A drar iväg på nytt åt andra hållet.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.41,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.601
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.621,
+          "endX": 0.6,
+          "endY": 0.68
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.75,
+          "endX": 0.65,
+          "endY": 0.75
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.5,
+          "endX": 0.55,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B spelar direkt in i A:s löpning. A tar emot rättvänd förbi X och avslutar.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.9,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.9,
+          "label": "D"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.12
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.39,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.65
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.62,
+          "endX": 0.61,
+          "endY": 0.53
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.41,
+          "endX": 0.46,
+          "endY": 0.04
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T13:17:04.000Z",
+  "updatedAt": "2026-11-13T13:17:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
