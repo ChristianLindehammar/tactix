@@ -450,6 +450,29 @@ describe('exercise library', () => {
       expect(screen.queryByText('Rondo')).toBeNull();
     });
 
+    it('sorts by the most saved on the server', async () => {
+      await openLibrary();
+      await screen.findByText('Rondo');
+
+      fireEvent.press(screen.getByTestId('sort-favorites'));
+
+      await waitFor(() =>
+        expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ sort: 'favorites' })),
+      );
+    });
+
+    it('offers sorting by the most saved only in the library, as your own are not counted', async () => {
+      await saved({ title: 'My drill' });
+      await openLibrary();
+      await screen.findByText('Rondo');
+      fireEvent.press(screen.getByTestId('sort-favorites'));
+
+      fireEvent.press(screen.getByTestId('source-mine'));
+
+      expect(await screen.findByText('My drill')).toBeTruthy();
+      expect(screen.queryByTestId('sort-favorites')).toBeNull();
+    });
+
     it('shows how many coaches saved each exercise, and which ones you saved', async () => {
       mockList.mockResolvedValue({
         entries: [

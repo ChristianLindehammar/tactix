@@ -265,6 +265,7 @@ export default {
     rating: 'Högst betyg',
     title: 'Titel A–Ö',
     difficulty: 'Svårighetsgrad',
+    favorites: 'Mest sparade',
   },
   focusTags: {
     passing: 'Passningar',

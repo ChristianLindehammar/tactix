@@ -265,6 +265,7 @@ export default {
     rating: 'Highest rated',
     title: 'Title A–Z',
     difficulty: 'Difficulty',
+    favorites: 'Most saved',
   },
   focusTags: {
     passing: 'Passing',

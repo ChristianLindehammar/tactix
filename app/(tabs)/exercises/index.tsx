@@ -71,7 +71,7 @@ export default function ExerciseLibraryScreen() {
   const [difficulties, setDifficulties] = useState<ExerciseDifficulty[]>([]);
   const [phase, setPhase] = useState<ExercisePhase | undefined>();
   const [minRating, setMinRating] = useState<RatingStars | undefined>();
-  const [sort, setSort] = useState<ExerciseSort>('updated');
+  const [sort, setSort] = useState<ExerciseSort | 'favorites'>('updated');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [source, setSource] = useState<Source>('mine');
   const [shared, setShared] = useState<LibraryState>({ status: 'loading', entries: [], total: 0 });
@@ -114,15 +114,19 @@ export default function ExerciseLibraryScreen() {
     phase,
     minRating,
     ratings,
-    sort,
+    // Only the server knows how many coaches saved an exercise
+    sort: sort === 'favorites' ? 'updated' : sort,
     locale,
   });
 
   // The library and your favourites both come from the server
   const inLibrary = source !== 'mine';
   const inFavorites = source === 'favorites';
-  // Ratings are only on this device so far, so the server can't filter or sort by them
-  const sorts = inLibrary ? EXERCISE_SORTS.filter(option => option !== 'rating') : EXERCISE_SORTS;
+  // Ratings are only on this device so far, so the server can't filter or sort by them, and only the
+  // server knows how many coaches saved an exercise
+  const sorts: (ExerciseSort | 'favorites')[] = inLibrary
+    ? [...EXERCISE_SORTS.filter(option => option !== 'rating'), 'favorites']
+    : [...EXERCISE_SORTS];
   const librarySort: LibrarySort = sort === 'rating' ? 'updated' : sort;
   const libraryFilter = useMemo(
     () => ({

@@ -25,8 +25,8 @@ export class LibraryError extends Error {
   }
 }
 
-/** The sorts the server offers. Ratings aren't on the server yet. */
-export type LibrarySort = 'updated' | 'title' | 'difficulty';
+/** The sorts the server offers. Ratings aren't on the server yet. Favourites puts the most saved first. */
+export type LibrarySort = 'updated' | 'title' | 'difficulty' | 'favorites';
 
 export interface LibraryFilter {
   sport?: Sport;

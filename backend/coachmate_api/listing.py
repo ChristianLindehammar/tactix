@@ -1,5 +1,6 @@
 """Turns the query string of GET /exercises and GET /library into SQL. Same meaning as filterExercises in
-utils/filterExercises.ts, except sorting by rating, which needs ratings on the server first.
+utils/filterExercises.ts, except sorting by rating, which needs ratings on the server first, and sorting
+by how many coaches saved an exercise, which only the server knows.
 Only values from the caller become query parameters; the SQL text comes from this file."""
 import re
 
@@ -15,6 +16,8 @@ SORTS = {
     'updated': 'e.updated_at DESC, e.id',
     'title': 'e.title, e.updated_at DESC, e.id',
     'difficulty': 'e.difficulty, e.updated_at DESC, e.id',
+    # The most saved first
+    'favorites': '(SELECT COUNT(*) FROM exercise_favorites fs WHERE fs.exercise_id = e.id) DESC, e.updated_at DESC, e.id',
 }
 
 

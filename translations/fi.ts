@@ -265,6 +265,7 @@ export default {
     rating: 'Paras arvosana',
     title: 'Otsikko A–Ö',
     difficulty: 'Vaikeustaso',
+    favorites: 'Eniten tallennetut',
   },
   focusTags: {
     passing: 'Syötöt',

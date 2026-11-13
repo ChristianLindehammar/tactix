@@ -204,6 +204,14 @@ describe('favourites', () => {
     });
   });
 
+  it('sorts by the most saved', async () => {
+    const { library, fetch } = setup(() => json(200, { exercises: [], total: 0 }));
+
+    await library.list({ sort: 'favorites' });
+
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?sort=favorites');
+  });
+
   it('reads how many coaches saved an exercise and whether you did', async () => {
     const { library, fetch } = setup(() => json(200, { favoriteCount: 4, favorited: false }));
 

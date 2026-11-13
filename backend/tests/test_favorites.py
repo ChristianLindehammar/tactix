@@ -224,6 +224,30 @@ class TestInTheLibrary:
         assert 'favoriteCount' not in own
 
 
+class TestSortingByFavorites:
+    def test_puts_the_most_saved_first_and_the_latest_edit_first_within_a_tie(self, client, register, me, publish):
+        once = publish(title='Once', updatedAt='2026-11-03T12:00:00.000Z')
+        twice = publish(title='Twice', updatedAt='2026-11-03T10:00:00.000Z')
+        publish(title='Never old', updatedAt='2026-11-03T09:00:00.000Z')
+        publish(title='Never new', updatedAt='2026-11-03T11:00:00.000Z')
+        favorite(client, once, register())
+        favorite(client, twice, register())
+        favorite(client, twice, register())
+
+        response = client.get('/library?sort=favorites', headers=me)
+
+        assert [e['title'] for e in response.get_json()['exercises']] == ['Twice', 'Once', 'Never new', 'Never old']
+
+    def test_sorts_your_favourites_too(self, client, register, me, publish):
+        less = publish(title='Less')
+        more = publish(title='More')
+        favorite(client, less, me)
+        favorite(client, more, me)
+        favorite(client, more, register())
+
+        assert favorite_titles(client, me, '?sort=favorites') == ['More', 'Less']
+
+
 class TestDeletingAccounts:
     def test_a_coach_who_saved_exercises_can_delete_their_account(self, client, register, publish):
         coach = register()

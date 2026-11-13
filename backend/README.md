@@ -74,7 +74,7 @@ every match, not just this page. `GET /library` and `GET /favorites` also give `
 | `focus`, `difficulty` | Matches any chosen value; repeat the parameter for more |
 | `players` | Fits the exercise's player range. An empty end of the range is open |
 | `search` | Title, description and custom tags, ignoring case and accents |
-| `sort` | `updated` (default), `title` or `difficulty`, with the latest edit first within a tie |
+| `sort` | `updated` (default), `title`, `difficulty` or `favorites` (most saved first), with the latest edit first within a tie |
 | `lang` | Library only. The language the exercise was written in, such as `sv`, which also finds `sv-FI` |
 | `limit`, `offset` | Page size 1–100 (default 50), and where to start |
 
