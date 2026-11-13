@@ -24,6 +24,8 @@ interface ArrowMarkerProps {
   curve?: ArrowCurve;
   /** Shows the middle dot that curves the arrow. */
   curveEditable?: boolean;
+  /** Shows the dots at both ends that move the arrow. Off when the diagram is only for viewing. */
+  showHandles?: boolean;
   containerSize: { width: number; height: number };
   color?: string;
   onDragEnd: (id: string, x: number, y: number, endX: number, endY: number) => void;
@@ -49,6 +51,7 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
   dashed,
   curve,
   curveEditable = false,
+  showHandles = true,
   containerSize,
   color = '#FFFFFF',
   onDragEnd,
@@ -210,10 +213,14 @@ export const ArrowMarker: React.FC<ArrowMarkerProps> = ({
           strokeDasharray={dashed ? '8,6' : undefined}
         />
         <Polygon points={headPoints} fill={color} />
-        {/* Visible tail dot */}
-        <Circle cx={sx} cy={sy} r={6} fill={color} opacity={0.6} />
-        {/* Visible head dot */}
-        <Circle cx={ex} cy={ey} r={6} fill={color} opacity={0.6} />
+        {showHandles && (
+          <>
+            {/* Visible tail dot */}
+            <Circle testID={`arrow-tail-handle-${id}`} cx={sx} cy={sy} r={6} fill={color} opacity={0.6} />
+            {/* Visible head dot */}
+            <Circle testID={`arrow-head-handle-${id}`} cx={ex} cy={ey} r={6} fill={color} opacity={0.6} />
+          </>
+        )}
         {/* Where the middle dot snaps for each number of waves */}
         {curving && waveSnapPoints(start, end, liveCurve?.bend ?? 0, courtWidth).map(point => (
           <Circle

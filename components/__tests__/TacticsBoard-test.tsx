@@ -199,6 +199,24 @@ describe('TacticsBoard', () => {
     });
   });
 
+  describe('arrow end handles', () => {
+    const arrow = createArrowMarker('arrow-solid', 0.2, 0.2, 0.8, 0.8);
+
+    it('show at both ends of an arrow while editing', async () => {
+      await renderBoard({ value: [arrow] });
+
+      expect(screen.getByTestId(`arrow-tail-handle-${arrow.id}`)).toBeTruthy();
+      expect(screen.getByTestId(`arrow-head-handle-${arrow.id}`)).toBeTruthy();
+    });
+
+    it('are hidden on a read-only diagram', async () => {
+      await renderBoard({ value: [arrow], readOnly: true });
+
+      expect(screen.queryByTestId(`arrow-tail-handle-${arrow.id}`)).toBeNull();
+      expect(screen.queryByTestId(`arrow-head-handle-${arrow.id}`)).toBeNull();
+    });
+  });
+
   describe('curving arrows', () => {
     const arrow = createArrowMarker('arrow-solid', 0.2, 0.2, 0.8, 0.8);
     const handle = `arrow-curve-handle-${arrow.id}`;

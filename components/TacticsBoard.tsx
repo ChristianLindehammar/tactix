@@ -473,6 +473,7 @@ export function TacticsBoard({
                     : undefined
                 }
                 curveEditable={enableCurves && !readOnly && !addingType}
+                showHandles={!readOnly}
                 onCurvingChange={setCurving}
                 onCurveEnd={(id, curve) => {
                   update(markers =>
