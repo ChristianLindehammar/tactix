@@ -227,6 +227,7 @@ export default {
   phase: 'Del av passet',
   diagram: 'Skiss',
   editDiagram: 'Redigera skiss',
+  showDiagramFullScreen: 'Visa skissen i helskärm',
   searchExercises: 'Sök övningar',
   playerCountFilter: 'Antal spelare',
   noExercises: 'Inga övningar än',

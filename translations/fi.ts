@@ -227,6 +227,7 @@ export default {
   phase: 'Harjoituksen osa',
   diagram: 'Kaavio',
   editDiagram: 'Muokkaa kaaviota',
+  showDiagramFullScreen: 'Näytä kaavio koko näytöllä',
   searchExercises: 'Hae harjoitteita',
   playerCountFilter: 'Pelaajien määrä',
   noExercises: 'Ei vielä harjoitteita',

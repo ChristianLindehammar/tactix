@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { act, fireEvent, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen, within } from '@testing-library/react-native';
 
 import ExerciseDetailScreen from '@/app/(tabs)/exercises/[id]';
 import { getCurrentUserId } from '@/services/currentUser';
@@ -114,6 +114,23 @@ describe('exercise detail', () => {
       expect(screen.getByText('Go')).toBeTruthy();
       expect(screen.queryByText('Set up')).toBeNull();
       expect(screen.getByLabelText('Player')).toBeTruthy();
+    });
+
+    it('opens the diagram full screen on the selected step, and steps there carry back', async () => {
+      renderExerciseScreen(<ExerciseDetailScreen />);
+      fireEvent.press(await screen.findByLabelText('Step 2'));
+
+      fireEvent.press(screen.getByLabelText('Show diagram full screen'));
+      const fullScreen = within(screen.getByTestId('diagram-full-screen'));
+      expect(fullScreen.getByText('Go')).toBeTruthy();
+      expect(fullScreen.getByLabelText('Step 2').props.accessibilityState.selected).toBe(true);
+
+      fireEvent.press(fullScreen.getByLabelText('Step 1'));
+      expect(fullScreen.getByText('Set up')).toBeTruthy();
+
+      fireEvent.press(fullScreen.getByLabelText('Close'));
+      expect(screen.queryByTestId('diagram-full-screen')).toBeNull();
+      expect(screen.getByLabelText('Step 1').props.accessibilityState.selected).toBe(true);
     });
   });
 

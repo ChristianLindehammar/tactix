@@ -18,6 +18,7 @@ import { usePreventRemove } from 'expo-router/react-navigation';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { FilterChip } from '@/components/FilterChip';
+import { ExerciseDiagram } from '@/components/ExerciseDiagram';
 import { StepTabs } from '@/components/StepTabs';
 import { TacticsBoard } from '@/components/TacticsBoard';
 import { ThemedButton } from '@/components/ThemedButton';
@@ -269,19 +270,7 @@ export default function ExerciseEditorScreen() {
 
         <View style={styles.field}>
           <ThemedText type="defaultSemiBold">{t('diagram')}</ThemedText>
-          {draft.steps.length > 1 && (
-            <StepTabs count={draft.steps.length} selected={stepIndex} onSelect={setStepIndex} />
-          )}
-          <View style={styles.preview}>
-            <TacticsBoard
-              sport={sport}
-              value={step.markers}
-              onChange={markers => updateStep({ markers })}
-              readOnly
-              requireBall={false}
-            />
-          </View>
-          {step.note.trim() !== '' && <ThemedText>{step.note}</ThemedText>}
+          <ExerciseDiagram sport={sport} steps={draft.steps} selected={stepIndex} onSelect={setStepIndex} />
           <ThemedButton onPress={() => setDiagramOpen(true)}>{t('editDiagram')}</ThemedButton>
         </View>
 
@@ -470,9 +459,6 @@ const styles = StyleSheet.create({
   error: {
     color: '#D32F2F',
     fontSize: 14,
-  },
-  preview: {
-    height: 260,
   },
   chips: {
     flexDirection: 'row',

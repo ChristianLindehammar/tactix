@@ -227,6 +227,7 @@ export default {
   phase: 'Phase',
   diagram: 'Diagram',
   editDiagram: 'Edit diagram',
+  showDiagramFullScreen: 'Show diagram full screen',
   searchExercises: 'Search exercises',
   playerCountFilter: 'Number of players',
   noExercises: 'No exercises yet',

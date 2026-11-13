@@ -3,9 +3,8 @@ import { Alert, ScrollView, StyleSheet, View } from 'react-native';
 import { Stack, useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { StepTabs } from '@/components/StepTabs';
 import { ArrowLegend } from '@/components/ArrowLegend';
-import { TacticsBoard } from '@/components/TacticsBoard';
+import { ExerciseDiagram } from '@/components/ExerciseDiagram';
 import { ThemedButton } from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -20,8 +19,6 @@ import { Exercise, RatingStars } from '@/types/exercise';
 import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
 import { sportKey } from '@/utils/sportWording';
-
-const noop = () => {};
 
 /** Where a copy came from: its title, gone (deleted or hidden), or unknown when it couldn't be looked up. */
 type Origin = { id: string } & ({ state: 'found'; title: string } | { state: 'gone' } | { state: 'unknown' });
@@ -183,9 +180,6 @@ export default function ExerciseDetailScreen() {
   // device holds a copy because its author once used it, or one opened from the server by link
   const reportable = !mine && (fromLibrary || exercise.visibility === 'public');
 
-  // The exercise may have reloaded with fewer steps
-  const step = exercise.frames[stepIndex] ?? exercise.frames[0];
-
   return (
     <ScrollView
       style={{ backgroundColor: background }}
@@ -196,20 +190,13 @@ export default function ExerciseDetailScreen() {
       <ThemedText type="title">{exercise.title}</ThemedText>
       <ThemedText style={styles.summary}>{describeExercise(exercise, t)}</ThemedText>
 
-      {exercise.frames.length > 1 && (
-        <StepTabs count={exercise.frames.length} selected={stepIndex} onSelect={setStepIndex} />
-      )}
-      <View style={styles.diagram}>
-        <TacticsBoard
-          sport={exercise.sport}
-          value={step.markers}
-          onChange={noop}
-          readOnly
-          requireBall={false}
-        />
-      </View>
+      <ExerciseDiagram
+        sport={exercise.sport}
+        steps={exercise.frames}
+        selected={stepIndex}
+        onSelect={setStepIndex}
+      />
       <ArrowLegend frames={exercise.frames} sport={exercise.sport} />
-      {step.note ? <ThemedText>{step.note}</ThemedText> : null}
 
       <View style={styles.section}>
         <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>
@@ -302,9 +289,6 @@ const styles = StyleSheet.create({
   },
   summary: {
     opacity: 0.75,
-  },
-  diagram: {
-    height: 360,
   },
   section: {
     gap: 4,
