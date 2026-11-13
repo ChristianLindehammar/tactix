@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 2,
+  "id": "e1e2fc68-b381-5586-bfec-65f3d67e638b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Kontring med uppflyttning",
+  "description": "Planen delas i tre zoner: varje lag har sin egen planhalva och mellan dem en smal mittzon runt mittlinjen, markerad med koner längs sargerna. Varje lag har en hel femma plus målvakt: fyra spelare i egen zon och en anfallare i mittzonen. Två spelare från motståndarlaget anfaller i din zon, så det blir 2 mot 4 plus målvakt.\n\nDet övertaliga laget ska vinna bollen och kontra via sin anfallare i mittzonen. Två spelare – anfallaren och en som följer med – tar sig in i motståndarnas zon. Där är de undertaliga, och övningen vänder åt andra hållet. De två som tappade bollen springer direkt hem till sin zon och hjälper till att vinna tillbaka den. En av dem stannar i mittzonen som ny anfallare. Tar målvakten bollen kastar hen ut den direkt – tänk på att utkastet inte får gå över mittlinjen i luften.\n\nStarta gärna enklare utan motstånd: laget slår tre passningar i egen zon, spelar upp på anfallaren och fyra spelare flyttar upp till andra zonen. Är ni fler än tolv byter ni femmor ungefär varje minut.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Första passningen efter bollvinst – framåt till anfallaren om den är spelbar."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfallaren: gör dig spelbar redan innan bollen vinns, med klubban i golvet."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som följer med springer direkt, utan att vänta på att se hur det går."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar ni bollen: spring hem på kortaste vägen och hjälp laget att vinna tillbaka den."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd X och Y anfaller i blå lagets zon, 2 mot 4. A tar bollen från X.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.74
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.73,
+          "endX": 0.28,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar direkt upp till anfallaren F i mittzonen. B springer med.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.67,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.61,
+          "endX": 0.31,
+          "endY": 0.535
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.8,
+          "endX": 0.53,
+          "endY": 0.62,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "F tar med sig bollen in i röda lagets zon, B följer med. X och Y springer hem.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.47,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.405
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.64,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.31,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.52,
+          "endX": 0.6,
+          "endY": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.62,
+          "endX": 0.46,
+          "endY": 0.54
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.6,
+          "endX": 0.8,
+          "endY": 0.53
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Nu är blå undertaliga, 2 mot 4 plus målvakt. Y har sprungit hem och X stannat som ny anfallare – röd vinner bollen och kontrar via X.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.25
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.22
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.27
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.31,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.37,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.335
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.68,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:03:04.000Z",
+  "updatedAt": "2026-11-13T15:03:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

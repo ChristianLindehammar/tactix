@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 2,
+  "id": "d7862652-d68e-5627-89fc-947b4bb3c42e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Counter by pushing up",
+  "description": "The court is split into three zones: each team has its own half, with a narrow middle zone around the centre line between them, marked with cones along the boards. Each team has a full line of five plus a goalkeeper: four players in their own zone and one forward in the middle zone. Two players from the other team attack in your zone, so it is 2v4 plus the goalkeeper.\n\nThe team with more players must win the ball and counter through its forward in the middle zone. Two players – the forward and one who joins – get into the opponents' zone. There they are outnumbered, and the drill turns the other way. The two who lost the ball run straight back to their zone and help win it back. One of them stays in the middle zone as the new forward. If the goalkeeper gets the ball they throw it out at once – remember the throw may not cross the centre line in the air.\n\nStart simpler without opposition: the team makes three passes in its own zone, plays up to the forward and four players move up to the other zone. With more than twelve players, change lines about every minute.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The first pass after winning the ball – forward to the forward if they are open."
+    },
+    {
+      "id": "cp2",
+      "text": "Forward: get open before the ball is won, with your stick on the floor."
+    },
+    {
+      "id": "cp3",
+      "text": "The player who joins goes at once, without waiting to see what happens."
+    },
+    {
+      "id": "cp4",
+      "text": "If you lose the ball: run back the shortest way and help the team win it back."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red X and Y attack in blue's zone, 2v4. A takes the ball from X.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.74
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.73,
+          "endX": 0.28,
+          "endY": 0.74
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays it straight up to the forward F in the middle zone. B joins.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.83,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.67,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.61,
+          "endX": 0.31,
+          "endY": 0.535
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.8,
+          "endX": 0.53,
+          "endY": 0.62,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "F carries the ball into red's zone, B follows. X and Y run back.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.25
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.28
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.47,
+          "label": "F"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.405
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.64,
+          "label": "Y"
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.31,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.52,
+          "endX": 0.6,
+          "endY": 0.4
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.62,
+          "endX": 0.46,
+          "endY": 0.54
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.6,
+          "endX": 0.8,
+          "endY": 0.53
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Now blue are outnumbered, 2v4 plus the goalkeeper. Y has run back and X has stayed up as the new forward – red win the ball and counter through X.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.42
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.05,
+          "y": 0.58
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.95,
+          "y": 0.58
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "d1",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76
+        },
+        {
+          "id": "d2",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.25
+        },
+        {
+          "id": "t2",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.22
+        },
+        {
+          "id": "t3",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.27
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.31,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.71,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.37,
+          "label": "F"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.335
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.36,
+          "endX": 0.68,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:03:04.000Z",
+  "updatedAt": "2026-11-13T15:03:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

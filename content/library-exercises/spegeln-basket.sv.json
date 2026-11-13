@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "id": "f664e127-ceb3-5ecc-b977-88b6476812f4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Spegeln – glidsteg mot en anfallare",
+  "description": "Ställ ut två korridorer på planhalvan med en kon i varje ände, ungefär fyra meter breda. Spelarna går ihop i par: anfallaren står med ryggen mot mittlinjen och försvararen en armlängd framför, mellan anfallaren och korgen. Anfallaren rör sig i sidled mellan konerna, byter tempo och riktning och fintar med axlar och höfter. Försvararen speglar varje rörelse i försvarsställning med glidsteg, utan att korsa fötterna och utan att resa sig. Kör 15–20 sekunder, byt roller, och låt nästa par komma in.\n\nStegring: först utan boll, sedan dribblar anfallaren i sidled. Sista steget: när tränaren klappar i händerna blir det live 1 mot 1 mot korgen, ett par i taget. Variant: anfallaren börjar utan boll vid konen, tränaren passar och försvararen gör en closeout från korgen innan speglingen börjar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Låg och bred – fötterna korsas aldrig, glid med korta steg och led med foten åt det håll du ska."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta på anfallarens höft och mage, inte på bollen eller huvudet."
+    },
+    {
+      "id": "cp3",
+      "text": "Huvudet på samma höjd hela tiden – den som studsar upp och ner kommer för sent."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfallaren: variera tempot och testa att stanna tvärt – det är du som gör spegeln bättre."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Utan boll: A och C glider i sidled mellan konerna. X och Y speglar med glidsteg i försvarsställning. Tränaren står vid mittlinjen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.335
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.41,
+          "y": 0.335
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.335
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.93,
+          "y": 0.335
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.4,
+          "endX": 0.31,
+          "endY": 0.4
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.27,
+          "endX": 0.31,
+          "endY": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.83,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.83,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.4,
+          "endX": 0.69,
+          "endY": 0.4
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.27,
+          "endX": 0.69,
+          "endY": 0.27
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.515
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Med boll: A och C dribblar i sidled och byter riktning. X och Y följer utan att korsa fötterna och utan att gå efter bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.335
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.41,
+          "y": 0.335
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.335
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.93,
+          "y": 0.335
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.465
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.4,
+          "endX": 0.16,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.27,
+          "endX": 0.16,
+          "endY": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.465
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.4,
+          "endX": 0.84,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.27,
+          "endX": 0.84,
+          "endY": 0.27
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Tränaren klappar: live 1 mot 1 mot korgen. A driver, X glider med och stänger vägen till korgen. C och Y väntar på sin tur.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.07,
+          "y": 0.335
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.41,
+          "y": 0.335
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.59,
+          "y": 0.335
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.93,
+          "y": 0.335
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.17,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.465
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.38,
+          "endX": 0.35,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.25,
+          "endX": 0.34,
+          "endY": 0.16
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.83,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.465
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.83,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.45
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:00:45.000Z",
+  "updatedAt": "2026-11-13T15:00:45.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

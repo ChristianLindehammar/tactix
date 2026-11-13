@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 2,
+  "id": "26e14d8b-db1e-531b-9247-e853952277e8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Three teams – win the ball back at once",
+  "description": "Split the group into three equal teams, for example three teams of three. Two teams play together (blue) and keep the ball against the third (red) in an area in the middle of the court: the full width between the boards and about 15 metres long, marked with cones. The boards are in play, so a pass off the boards is allowed.\n\nWhen red win the ball the teams swap roles at once: red try to keep it as long as they can and blue must win it back within a few seconds. Count how many passes red manage. If the ball leaves the area, the coach plays a new ball straight in to the team that did not knock it out. Change which team is on its own after a minute, and play rounds of about three minutes.\n\nVariation: put a goalkeeper in each goal. If red win the ball they may leave the area and shoot at either goal, and blue run back to defend. The goalkeepers play with blue. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Whoever is nearest when the ball is lost goes straight at the ball carrier – think three seconds."
+    },
+    {
+      "id": "cp2",
+      "text": "The others close the nearest passing lanes, including the pass off the boards."
+    },
+    {
+      "id": "cp3",
+      "text": "If you are beaten: run back on the right side of the ball, between the ball and the goal."
+    },
+    {
+      "id": "cp4",
+      "text": "With the ball: make the area big and show for a pass with your stick on the floor."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue have the ball, six against three. A passes to B. The coach stands by the boards with spare balls.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.355,
+          "endX": 0.68,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Red Y picks off the pass and plays on to Z. Now red must keep the ball.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.39,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.46
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.48,
+          "endX": 0.48,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Blue press at once: the nearest player goes at the ball and the others close the passes.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.53,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.53,
+          "endX": 0.3,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.665,
+          "endX": 0.48,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.44,
+          "endX": 0.36,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Variation with goalkeepers: red have won the ball and carry it towards goal. Blue run back to get there first.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.55
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.68
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.71,
+          "endX": 0.46,
+          "endY": 0.79,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.68,
+          "endX": 0.62,
+          "endY": 0.79,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:03:04.000Z",
+  "updatedAt": "2026-11-13T15:03:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

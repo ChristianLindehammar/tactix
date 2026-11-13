@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 2,
+  "id": "fdc42c21-e8b7-5f6a-b048-a1f0dff98b88",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Tre lag – vinn tillbaka bollen direkt",
+  "description": "Dela gruppen i tre lag med lika många spelare, till exempel tre lag om tre. Två av lagen spelar tillsammans (blå) och håller bollen mot det tredje (röd) på en yta mitt på planen: hela bredden mellan sargerna och ungefär 15 meter lång, markerad med koner. Sargen är med i spelet, så en passning via sargen är tillåten.\n\nNär röd vinner bollen byter lagen roll direkt: röd försöker hålla bollen så länge som möjligt och blå ska ta tillbaka den inom några sekunder. Räkna hur många passningar röd hinner slå. Går bollen utanför ytan spelar ledaren direkt in en ny boll till laget som inte slog ut den. Byt vilket lag som är ensamt efter en minut, och kör omgångar på cirka tre minuter.\n\nVariant: ställ en målvakt i varje mål. Vinner röd bollen får de lämna ytan och avsluta på vilket mål de vill, och blå springer hem för att försvara. Målvakterna spelar med blå. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den som är närmast när bollen tappas går direkt på bollhållaren – tänk tre sekunder."
+    },
+    {
+      "id": "cp2",
+      "text": "Övriga stänger de närmaste passningsvägarna, även passningen via sargen."
+    },
+    {
+      "id": "cp3",
+      "text": "Blir ni passerade: spring hem på rätt sida om bollen, mellan bollen och målet."
+    },
+    {
+      "id": "cp4",
+      "text": "Med boll: gör ytan stor och erbjud dig med klubban i golvet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "transition",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå har bollen, sex mot tre. A passar till B. Ledaren står vid sargen med extra bollar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.355,
+          "endX": 0.68,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Röd Y bryter passningen och spelar vidare till Z. Nu ska röd hålla bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.45,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.39,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.46
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.48,
+          "endX": 0.48,
+          "endY": 0.55
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Blå pressar direkt: närmaste spelare går på bollen och de andra stänger passningarna.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.53,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.53,
+          "endX": 0.3,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.665,
+          "endX": 0.48,
+          "endY": 0.65
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.44,
+          "endX": 0.36,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Variant med målvakter: röd har vunnit bollen och driver mot mål. Blå springer hem för att hinna före.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.29
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.29
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.71
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.71
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.19
+        },
+        {
+          "id": "gk1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.87
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.64
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.64
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.55
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.47,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.68
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.71,
+          "endX": 0.46,
+          "endY": 0.79,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.68,
+          "endX": 0.62,
+          "endY": 0.79,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:03:04.000Z",
+  "updatedAt": "2026-11-13T15:03:04.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
