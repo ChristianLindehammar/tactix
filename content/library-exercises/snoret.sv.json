@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "id": "772addb3-f379-56d5-9198-df81d12f24eb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Snöret – två bollar i rullning",
+  "description": "Ett mål med målvakt. Ett led i varje hörn bredvid målet, med bollar. På mittlinjen står två spelare som passar en boll fram och tillbaka hela tiden – det är snöret. Vid sargen i var ände av mittlinjen står ett led till.\n\nDen som just har passat snörbollen sticker mot mål. Hörnspelaren på samma sida passar in i löpningen, och löparen skjuter direkt. Samtidigt kliver nästa spelare från mittlinjeledet in på den lediga platsen och tar emot snöret. Nu är det den andra snörspelaren som har passat – hen sticker åt sitt håll, och så växlar det vänster och höger. Två bollar är i spel hela tiden.\n\nRotation: mittlinjeledet, snöret, skott, hörnet på samma sida, passa in – och sedan till mittlinjeledet på andra sidan. Var du på vänster går du till höger, så byter alla sida av sig själva och skjuter från båda hållen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Snöret får aldrig stanna – passa direkt eller på två tillslag."
+    },
+    {
+      "id": "cp2",
+      "text": "Stick direkt efter passningen, med fart mot mål."
+    },
+    {
+      "id": "cp3",
+      "text": "Hörnpassningen läggs framför löparen, i farten."
+    },
+    {
+      "id": "cp4",
+      "text": "Den som kliver in på mittlinjen gör sig spelbar direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 9,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Snöret går mellan C och D. C passar till D och sticker mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "f2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.24
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.5,
+          "endX": 0.63,
+          "endY": 0.5
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.45,
+          "endX": 0.35,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar från hörnet in i C:s löpning. E kliver in från sidan på C:s plats.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "f2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.24
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.4
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.26,
+          "endX": 0.36,
+          "endY": 0.3
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.55,
+          "endX": 0.26,
+          "endY": 0.54,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C skjuter direkt. D passar snöret vidare till E.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "f2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.24
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.27
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "sh",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.24,
+          "endX": 0.44,
+          "endY": 0.08
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.5,
+          "endX": 0.37,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D har passat och sticker på högersidan. B passar in i löpningen, och F kliver in på D:s plats.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "e2",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.62
+        },
+        {
+          "id": "f2",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.24
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "bs",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.5
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "F"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.26,
+          "endX": 0.64,
+          "endY": 0.3
+        },
+        {
+          "id": "rf",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.55,
+          "endX": 0.74,
+          "endY": 0.54,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:58:58.000Z",
+  "updatedAt": "2026-11-13T15:58:58.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

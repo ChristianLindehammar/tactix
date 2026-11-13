@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "id": "84ae0b5d-b1ac-506f-a6ce-fcbdb7b336f2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Backskott – skott, överlämning och 2 mot 1",
+  "description": "Ett mål med målvakt. Backarna står i ett led mitt på mittlinjen, gärna de som spelar back till vardags. Anfallarna står i ett led i varje hörn bredvid målet, och bollarna ligger i ena hörnet.\n\nFörsta backen tar några steg framåt med bollen och skjuter. Samtidigt sticker de två första i hörnleden i en båge in mot mitten. Den med boll gör en överlämning – lämnar bollen stilla – och den andra tar den med sig. Nu är det 2 mot 1 mot backen, som efter skottet backar hem och försvarar. Anfallarna håller bredd och kan passa till varandra och skjuta, eller avsluta själva.\n\nEfter anfallet går backen tillbaka till backledet, och anfallarna byter hörn så att alla får gå både med och utan boll. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Backen skjuter lågt och hårt – och går direkt hem i försvarsposition."
+    },
+    {
+      "id": "cp2",
+      "text": "Överlämningen: lämna bollen stilla, den som tar över kommer i fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfallarna håller bredd så att backen inte kan täcka båda."
+    },
+    {
+      "id": "cp4",
+      "text": "Backen styr bollhållaren utåt och läser passningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "defence",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Backen C tar några steg framåt med bollen från mittlinjen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.41
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.59,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.5,
+          "endY": 0.29,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C skjuter. A (med boll) och B sticker i en båge in mot mitten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.28
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "sh",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.25,
+          "endX": 0.44,
+          "endY": 0.08
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.28,
+          "endX": 0.33,
+          "endY": 0.44,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.28,
+          "endX": 0.67,
+          "endY": 0.44,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Överlämning i mitten: A lämnar bollen och B tar den. Båda går ut i bredd, och C backar hem.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.2
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.38,
+          "endX": 0.74,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.38,
+          "endX": 0.22,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 mot 1. B kan passa till A som skjuter, eller skjuta själv.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.37
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.36,
+          "endX": 0.27,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T16:13:22.000Z",
+  "updatedAt": "2026-11-13T16:13:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

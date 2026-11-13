@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "id": "16ac2033-af57-5358-8c13-aae69efb4dce",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Dubbeldonken – M-et med två passningar",
+  "description": "Samma upplägg som Donken (M-et): två led, ett i varje hörn bredvid målet, och en kon på var sida en bit ut. Men här får varje spelare tre uppgifter på sin sida: passa från hörnet, ta emot halvvägs och passa vidare, och till sist springa runt konen och skjuta.\n\nDen första i vänstra ledet springer ner och runt konen. Nästa i vänstra ledet passar tvärs över till den högra spelaren, som har sprungit halvvägs ner. Hen slår en diagonalpass till löparen vid konen, som vänder och skjuter direkt. Sedan fortsätter den högra spelaren runt sin kon och får passningen från vänster spelare, som nu står halvvägs – och så rullar det på åt båda hållen. Efter avslutet går skytten till det andra ledet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Passningarna längs golvet, till bladet."
+    },
+    {
+      "id": "cp2",
+      "text": "Mittspelaren tar emot med kroppen vänd mot konen och spelar vidare snabbt."
+    },
+    {
+      "id": "cp3",
+      "text": "Löparen vänder hårt runt konen och visar med klubban var bollen ska komma."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt – ta inte emot först."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passar från vänstra hörnet till B, som har sprungit halvvägs ner. A springer ner och runt konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.13
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.14,
+          "endX": 0.79,
+          "endY": 0.29
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.29,
+          "endX": 0.24,
+          "endY": 0.49
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.5,
+          "endX": 0.39,
+          "endY": 0.42,
+          "bend": 0.025,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en diagonalpass till A, som har vänt vid konen. C springer halvvägs ner på sin sida.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.13
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.31,
+          "endX": 0.43,
+          "endY": 0.37
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.18,
+          "endX": 0.14,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter direkt. B fortsätter runt den högra konen, och D passar från hörnet till C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.13
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.28,
+          "endX": 0.42,
+          "endY": 0.08
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.15,
+          "endX": 0.21,
+          "endY": 0.29
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.35,
+          "endX": 0.76,
+          "endY": 0.49
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.5,
+          "endX": 0.61,
+          "endY": 0.42,
+          "bend": -0.025,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C slår diagonalpassen till B, som skjuter. D springer halvvägs ner, och så fortsätter det.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.44
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.44
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.13,
+          "label": "D"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.26,
+          "y": 0.3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.31,
+          "endX": 0.57,
+          "endY": 0.37
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.18,
+          "endX": 0.86,
+          "endY": 0.25
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T15:37:57.000Z",
+  "updatedAt": "2026-11-13T15:37:57.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

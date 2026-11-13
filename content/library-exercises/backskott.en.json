@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "id": "f0c0ea72-a5aa-54ef-9221-12dc96321a9a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Backskott – the defender's shot, handoff and 2 v 1",
+  "description": "One goal with a goalkeeper. The defenders stand in a line in the middle of the centre line, ideally the players who play in defence. The forwards stand in a line in each corner beside the goal, and the balls are in one corner.\n\nThe first defender takes a few steps forward with the ball and shoots. At the same time the first players in the corner lines set off in an arc towards the middle. The one with the ball makes a handoff – leaves the ball still – and the other takes it on. Now it is 2 against 1 against the defender, who drops back to defend after the shot. The forwards keep their width and can pass to each other and shoot, or finish themselves.\n\nAfter the attack the defender returns to the defenders' line, and the forwards switch corners so everyone goes both with and without the ball. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The defender shoots low and hard – then goes straight back into a defending position."
+    },
+    {
+      "id": "cp2",
+      "text": "The handoff: leave the ball still, and the one taking over arrives at speed."
+    },
+    {
+      "id": "cp3",
+      "text": "The forwards keep their width so the defender cannot cover both."
+    },
+    {
+      "id": "cp4",
+      "text": "The defender steers the ball carrier wide and reads the pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "defence",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The defender C takes a few steps forward with the ball from the centre line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.41
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.59,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "dc",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.5,
+          "endY": 0.29,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C shoots. A (with a ball) and B set off in an arc towards the middle.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.28
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "sh",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.25,
+          "endX": 0.44,
+          "endY": 0.08
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.28,
+          "endX": 0.33,
+          "endY": 0.44,
+          "bend": 0.04,
+          "waves": 3
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.28,
+          "endX": 0.67,
+          "endY": 0.44,
+          "bend": -0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Handoff in the middle: A leaves the ball and B takes it. Both spread wide, and C drops back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.42
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.2
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.38,
+          "endX": 0.74,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.38,
+          "endX": 0.22,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 against 1. B can pass to A, who shoots, or shoot themselves.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.13
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11
+        },
+        {
+          "id": "q2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.68
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.37
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.36,
+          "endX": 0.27,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T16:13:22.000Z",
+  "updatedAt": "2026-11-13T16:13:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
