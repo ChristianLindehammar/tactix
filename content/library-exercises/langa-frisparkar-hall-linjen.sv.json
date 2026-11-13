@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "86007deb-7220-5072-b1a3-7e08546a91d0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Långa frisparkar – håll linjen",
+  "description": "Halvplan med ett mål och en målvakt. Röd försvarar med fem spelare och målvakten. Blå har fyra anfallare och en frisparksläggare. Markera fyra frisparkslägen med koner, 30–40 meter från mål: två ute vid kanterna och två snett framifrån. Tränaren står vid mittlinjen.\n\nBlå slår en lång frispark i taget, från ett nytt läge varje gång. Före sparken bestämmer röd och målvakten hur högt linjen ska stå, vem som tar vem och vem som stannar högre upp för att ta andrabollar. Röd får en poäng när de vunnit bollen och spelat den till tränaren eller drivit den över mittlinjen. Blå får två poäng för mål. Efter tio frisparkar byter lagen uppgift.\n\nPröva att försvara med zonmarkering den ena omgången och med spelarmarkering den andra, och jämför. Variant: spela med offside – då ska hela linjen kliva upp samtidigt när bollen är rensad. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten bestämmer hur högt linjen står, så att det finns plats att gå ut på bollar bakom den."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå i linje och följ med anfallarna tillbaka när bollen slås – ingen springer i förväg."
+    },
+    {
+      "id": "cp3",
+      "text": "Rensa högt och brett, gärna ut mot en kant."
+    },
+    {
+      "id": "cp4",
+      "text": "Kliv upp tillsammans direkt efter rensningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "setPieces",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 11,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång frispark in mot straffområdet. Röd står i linje, och W och X följer med B och C bakåt när bollen slås.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.42
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.22,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.37,
+          "endX": 0.47,
+          "endY": 0.17
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.18,
+          "endX": 0.34,
+          "endY": 0.11
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.18,
+          "endX": 0.6,
+          "endY": 0.11
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.27,
+          "endX": 0.52,
+          "endY": 0.17
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.27,
+          "endX": 0.7,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X vinner duellen och nickar ut bollen mot kanten, till Z.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.14,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.12
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.16,
+          "endX": 0.84,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z driver mot tränaren vid mittlinjen medan hela försvarslinjen kliver upp tillsammans.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.14,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.747,
+          "y": 0.474
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.707,
+          "y": 0.494,
+          "endX": 0.62,
+          "endY": 0.51,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.34
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.34,
+          "endY": 0.31
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.21,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "r8",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.23,
+          "endX": 0.74,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

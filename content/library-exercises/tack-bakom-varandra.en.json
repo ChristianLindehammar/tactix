@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "61a1f8bc-7316-5819-aab1-4eb9b24dd5b3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Cover behind each other",
+  "description": "An area of about 30 × 40 metres with a small goal at each end. Four against four. The defending team always puts one of its players in goal, so out on the pitch three defend against two attackers. The attackers' other two players are support players: they may only pass, with two touches at most, and may not score.\n\nRed defends and tries to win the ball. The player nearest the ball carrier presses, and the other two take up positions diagonally behind – one covering the space behind the presser and one the space in front of goal. When red wins the ball the attack ends and blue starts a new one from its own end line. Swap attack and defence after five attacks and change who plays in goal.\n\nVariation: let red counter towards the blue goal when they win the ball. Then blue has to think about its own goal as well. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The player nearest the ball presses – the others cover diagonally behind."
+    },
+    {
+      "id": "cp2",
+      "text": "Talk: \"Mine!\" and \"I've got cover!\" so everyone knows who does what."
+    },
+    {
+      "id": "cp3",
+      "text": "When the ball moves, the jobs change: a new presser, new cover."
+    },
+    {
+      "id": "cp4",
+      "text": "Stand so you can see both the ball and the attacker behind you."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C passes out to A. X moves towards A and Y shifts diagonally behind X.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.411,
+          "y": 0.337
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.451,
+          "y": 0.367,
+          "endX": 0.73,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.62,
+          "endX": 0.74,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.71,
+          "endX": 0.6,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tries to dribble inside past X. Y covers the space and steps in towards the ball.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.71,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.5
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.53,
+          "endX": 0.6,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.7,
+          "endX": 0.57,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y wins the ball. If counters are allowed, Y dribbles straight at the blue goal and X supports.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.71,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.51
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.62,
+          "endX": 0.66,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

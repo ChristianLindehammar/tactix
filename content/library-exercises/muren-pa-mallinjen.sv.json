@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "id": "931fd2b1-5ef2-54bc-a935-8861c565768f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Muren på mållinjen",
+  "description": "Ett mål med målvakt. Röd försvarar med fyra spelare och målvakten, blå har tre anfallare. Tränaren lägger bollen för en indirekt frispark inne i straffområdet, så nära mål att röd måste ställa hela muren på mållinjen, mellan stolparna. Bilden visar muren bredare än målet.\n\nMuren får rusa ut i samma ögonblick som bollen rörs. Två blå spelare måste röra bollen innan den kan gå i mål: en lägger den kort åt sidan och en annan skjuter. Röd ska täppa till skottet och få bort bollen ur straffområdet. Röd får en poäng för varje frispark som inte blir mål och ytterligare en om de spelar bollen till tränaren. Efter sex frisparkar byter lagen uppgift.\n\nFlytta lägget mellan frisparkarna: rakt framifrån, snett från sidan och nära kortlinjen. Variant: låt blå ha en fjärde spelare som står i muren och försöker skymma målvakten. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten ställer muren och står själv i mitten, där hen ser bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Rusa ut direkt när bollen rörs – inte när den skjuts."
+    },
+    {
+      "id": "cp3",
+      "text": "Gå mot bollen med kroppen bred och händerna bakom ryggen."
+    },
+    {
+      "id": "cp4",
+      "text": "De som inte blockerar stannar kvar på linjen och tar returen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "setPieces",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd står på mållinjen. A lägger bollen kort åt sidan till B, och X och Y rusar ut direkt.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.075,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.075,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.23,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.19,
+          "endX": 0.63,
+          "endY": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.1,
+          "endX": 0.43,
+          "endY": 0.15
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.1,
+          "endX": 0.59,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B ska skjuta, men X och Y har redan rusat ut och täpper till skottet.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.577,
+          "y": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y vinner bollen och spelar ut den till tränaren. En extra poäng till röd.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.662,
+          "y": 0.222
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.702,
+          "y": 0.252,
+          "endX": 0.82,
+          "endY": 0.37
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

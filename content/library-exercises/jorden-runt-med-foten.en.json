@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "id": "5dbdb0b6-5d70-5882-9358-7b36e3c7444a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Around the world",
+  "description": "A trick where the foot goes all the way round the ball while it is in the air. Everyone has a ball. Put out four cones in a square as stations, one for each step of the trick ladder. Everyone starts at station 1, and the coach shows the trick first.\n\nStation 1: lift the ball onto your instep and hold it still there, with the foot a little off the ground, for three seconds. Station 2: flick the ball up a little, let it bounce once while your foot circles round it, and catch it on the instep again. Station 3: the same without the bounce. Station 4: do the trick in both directions, with both feet one after the other, or with two circles round the ball.\n\nManage the trick three times in a row and you move on to the next station. Anyone who has cleared station 4 makes up a trick of their own or goes back to help someone who is still at station 1. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lift the ball straight up and high enough – about waist height."
+    },
+    {
+      "id": "cp2",
+      "text": "Quick foot: start the circle as soon as the ball leaves your foot."
+    },
+    {
+      "id": "cp3",
+      "text": "Standing leg slightly bent and arms out for balance."
+    },
+    {
+      "id": "cp4",
+      "text": "Practise as much with your left foot as with your right."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 1,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The stations go round: 1 bottom left, 2 bottom right, 3 top right and 4 top left. A and E are at station 1.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A manages the trick three times in a row and dribbles on to station 2.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.83
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.83,
+          "endX": 0.6,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D has cleared station 4 and dribbles back to help E at station 1.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.4,
+          "endX": 0.15,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "ff7fa536-2ed4-5127-a6ab-a1eb24db84b1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – vänta ut anfallaren",
+  "description": "Spel ett mot ett med en målvakt i varje mål, på en plan som är ungefär 15 meter bred och 25 meter lång. Målen är konmål, ungefär fem meter breda. Med bara en försvarare blir det ofta lägen där anfallaren kommer fri med gott om tid och kan välja: skjuta, lyfta eller dribbla förbi målvakten.\n\nMål där anfallaren dribblar förbi målvakten räknas dubbelt. Då lockas anfallarna att gå hela vägen in, och målvakten måste stå kvar på fötterna, inte gå på fintar och först gå ner när bollen lämnar anfallarens fot. Målvakten startar spelet direkt till sin utespelare efter varje räddning.\n\nEtt mot ett är tungt – byt utespelare efter ungefär en och en halv minut, och låt de vilande paren stå vid sidan. Variant: mål räknas bara på låga skott. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gå ut tidigt medan bollen är en bit från anfallarens fot, och stanna innan hen är redo att avsluta."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå lite förskjuten så att anfallaren väljer den sida du vill."
+    },
+    {
+      "id": "cp3",
+      "text": "Vänta ut fintarna – titta på bollen, inte på kroppen."
+    },
+    {
+      "id": "cp4",
+      "text": "Går anfallaren förbi: gå ner i sidled med händerna mot bollen i samma stund som den puttas iväg."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A har vunnit bollen och driver fri mot mål. Röda lagets målvakt går ut medan A är långt bort.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.145,
+          "endX": 0.5,
+          "endY": 0.215
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.43
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.39,
+          "endX": 0.47,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.58,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten har stannat och väntar, lite förskjuten. A försöker dribbla förbi på vänster sida.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.33
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.31,
+          "endX": 0.27,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.53,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A puttade bollen för långt. Målvakten gick ner, tog bollen och spelar direkt till X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.34,
+          "endX": 0.52,
+          "endY": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.56,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

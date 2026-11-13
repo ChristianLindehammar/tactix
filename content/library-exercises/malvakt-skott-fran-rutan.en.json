@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "id": "7dd46388-907a-5b74-a3b0-4c27d9cce2a5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – shots from the box",
+  "description": "Mark out a box with cones, about 20 × 15 metres, just outside the penalty area. A goalkeeper is in goal and two teams of three meet in the box. The coach stands at the side with balls and plays in a new one as soon as the last one is dead.\n\nOne team attacks and may shoot from the box at any time. The other team defends and wins if it plays the ball out of the box. If a rebound ends up outside the box, the attackers may finish it, but with one touch only. With lots of legs in front of them, the goalkeeper faces shots that are seen late and deflect – a real test of the basics of every save. Swap roles after three minutes.\n\nWith two goalkeepers, swap after every period. More players: four teams taking turns. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Set position as the shooter pulls back the leg: leaning slightly forward, weight on the front of the feet."
+    },
+    {
+      "id": "cp2",
+      "text": "Screened ball: take a small step to the side so you can see the ball past the legs."
+    },
+    {
+      "id": "cp3",
+      "text": "Catch it if you can. Otherwise push the ball out to the side, never straight back into the box."
+    },
+    {
+      "id": "cp4",
+      "text": "Back on your feet at once – the next finish may come from the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B in the box. The goalkeeper moves with the ball.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.424,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.474,
+          "y": 0.39,
+          "endX": 0.61,
+          "endY": 0.345
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B shoots from the box. The goalkeeper is still and in the set position as the shot comes.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.215,
+          "endX": 0.555,
+          "endY": 0.15
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper pushes the shot out to the side. C races to the rebound outside the box.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.12,
+          "endX": 0.29,
+          "endY": 0.15
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.245,
+          "endX": 0.33,
+          "endY": 0.2
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C finishes first time. The goalkeeper is back up and saves again.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.135,
+          "endX": 0.42,
+          "endY": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

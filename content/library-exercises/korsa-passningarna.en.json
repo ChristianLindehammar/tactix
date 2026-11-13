@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "c49d5576-9b0f-59d5-9246-3c7b813753e7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Cross the passes",
+  "description": "A square of about 15 × 15 metres with a line of players at each corner, two or three per line. The two top lines have a ball each.\n\nThe first player in one of the top lines passes diagonally across the square to the opposite corner, then runs straight ahead along the side and joins the back of the line there. The receiver takes the ball out into the square and does the same the other way: a diagonal pass and a run straight ahead along the side. Start with one ball in play at a time. When that works, both corners pass at the same time – one a second before the other so the balls don't collide in the middle.\n\nAfter a while, switch: pass straight along the side and run diagonally. Also try the weaker foot, one touch or a lofted pass. Raise the tempo as you go, but keep the passes and first touches good all the time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Take the ball forward with your first touch so you are ready to pass straight away."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass in front of the receiver, not behind."
+    },
+    {
+      "id": "cp3",
+      "text": "Set off as soon as you have passed."
+    },
+    {
+      "id": "cp4",
+      "text": "Look up before you pass – there is another ball coming the other way."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes diagonally to D, and B passes to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.33,
+          "endX": 0.69,
+          "endY": 0.69
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.33,
+          "endX": 0.31,
+          "endY": 0.69
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A and B run straight ahead along the sides and join the back of the lines. C and D have received.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.7
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.29,
+          "endX": 0.9,
+          "endY": 0.7
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.7
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.7
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C and D pass diagonally up to F and E and run up the sides.",
+      "markers": [
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.67,
+          "endX": 0.69,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.71,
+          "endX": 0.1,
+          "endY": 0.3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.7
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.67,
+          "endX": 0.31,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.71,
+          "endX": 0.9,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.88,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

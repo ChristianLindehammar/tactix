@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "c2b3f32b-435d-5f34-b454-81b31b0b3015",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – inlägg i matchspel",
+  "description": "Matchspel sju mot sju med målvakter på en plan på ungefär 50 × 35 meter. Markera med två koner en zon framför varje mål, ungefär sex meter ut. Ingen utespelare – varken anfallare eller försvarare – får gå in i zonen. Där är målvakten ensam och kan ta inläggen utan att någon stör.\n\nMål efter inlägg räknas dubbelt, så att lagen söker sig ut på kanterna och slår många inlägg. Målvakten bestämmer tidigt om bollen är hens: landar den i zonen eller strax utanför går hen ut och tar den, annars stannar hen och gör sig redo för avslutet. När målvakten har bollen sätter hen direkt igång spelet ut till en kant.\n\nSpela perioder om sex–sju minuter. Variant: spela med offside, om ni gör det i match. Bilden visar bara spelarna närmast bollen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå en bit ut från linjen och lite mot bortre stolpen, med öppen kropp mot bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Läs bollens bana innan du går – bestäm dig och ropa \"Målvakt!\"."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta bollen på högsta punkt med raka armar, och lyft knät närmast spelarna."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter fångsten: titta upp direkt – mot kanten där motståndarna lämnat ytor."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C driver förbi Z på vänsterkanten. Röda lagets målvakt flyttar med bollen.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.35
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.31,
+          "endX": 0.1,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C slår ett tidigt inlägg mot bortre delen av zonen. A och B får inte gå in i zonen.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.225,
+          "endX": 0.6,
+          "endY": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.37,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten har gått ut och fångat bollen. Hen kastar direkt ut till Y på kanten.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.11
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.2
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.22,
+          "endX": 0.81,
+          "endY": 0.3
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.37,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

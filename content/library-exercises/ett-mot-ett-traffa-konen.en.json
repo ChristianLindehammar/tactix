@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "id": "c920735b-2ee9-580a-99a6-0d1e5c7c69af",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "1 v 1 – hit the cone",
+  "description": "An area of about 10 × 15 metres with a cone in each corner. Players team up in pairs, and two teams meet on each area. Each team defends the two cones on its short side and scores by hitting one of the other team's cones with the ball.\n\nOne player from each team plays 1 v 1 while their partners wait behind their short side. After a goal both players go off and the waiting ones come on – the team that conceded starts with the ball from its short side. Also swap if about a minute goes by without a goal. The teams add up their goals.\n\nTake players on and use feints! The cones are far apart, so the defender cannot cover both at once. Variation: the coach gives a bonus point for a goal after a particular feint or dribble you are working on. Two players can also play 1 v 1 without swaps. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Feint one way and go for the cone on the other side."
+    },
+    {
+      "id": "cp2",
+      "text": "Shoot when you have a clear sight – hitting the cone is enough."
+    },
+    {
+      "id": "cp3",
+      "text": "Defender: stay between the ball and the cones and don't dive in at the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "Quick swaps – the waiting player is ready to go straight in."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles at X and feints towards the right-hand cone.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.56,
+          "endX": 0.66,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X covers the right-hand cone. A drags the ball left and hits the left-hand cone.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.42
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.38,
+          "endX": 0.24,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Goal for blue! A and X go off. Y starts with the ball and B comes on to defend.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.31,
+          "endX": 0.48,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.78,
+          "endX": 0.57,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

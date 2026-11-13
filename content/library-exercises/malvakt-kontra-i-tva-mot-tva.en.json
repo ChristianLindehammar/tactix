@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 2,
+  "id": "76d75b93-b442-519e-bd56-f228cf198fd3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – counter in two v two",
+  "description": "Two v two with a goalkeeper in each goal, on a pitch about 20 metres wide and 30 metres long. The goals are cone goals, about five metres wide.\n\nA goal counts double if it comes from a counter-attack the goalkeeper started, that is, if the team scores without the opponents touching the ball after the goalkeeper's distribution. The outfield players may always pass back to their goalkeeper, who must then start the counter with their feet. The goalkeeper wins the ball, looks straight away for the team-mate who is most free and chooses a throw, a roll or a kick.\n\nSwap the outfield players after three minutes. Variant: the goalkeepers also compete against each other and get a point of their own for every counter-attack goal they start. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Secure the ball first – a dropped ball is no counter-attack."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up as you get to your feet and find the team-mate who is most free."
+    },
+    {
+      "id": "cp3",
+      "text": "Play the ball in front of the team-mate, in the direction they are running, so they can take it in their stride."
+    },
+    {
+      "id": "cp4",
+      "text": "Outfield players: start your run the moment your goalkeeper has the ball, not when it is on its way."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 6,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots at the red team's goal. The goalkeeper is in the set position.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.382,
+          "y": 0.732
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.412,
+          "y": 0.762,
+          "endX": 0.46,
+          "endY": 0.84
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.54,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.68,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper catches the ball. Y sets off straight away down the free wing and X runs in behind.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.88
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.8
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "r0",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.38,
+          "endX": 0.46,
+          "endY": 0.28
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.62,
+          "endX": 0.8,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper throws the ball in front of Y as they run.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.88
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.77,
+          "endX": 0.76,
+          "endY": 0.4
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.5,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y dribbles at goal before the blue team can get back. A goal here counts double.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.32
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.28,
+          "endX": 0.6,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 2,
+  "id": "74d9158d-71f6-57c7-866c-5a6f93ef4197",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – crosses, talk and throws",
+  "description": "Two teams, each with a goalkeeper and five outfield players, on a pitch about 40 metres long and 35 metres wide, with full-size goals. Each team has two attackers in the opponents' half, two defenders in its own half and one winger. The wingers have a wing each.\n\nThe winger dribbles and crosses to their two attackers, who face two defenders and the goalkeeper. Goals count only straight from the cross or from a rebound. When the attack is over, the goalkeeper throws the ball out to their own winger on the other wing, who does the same towards the other goal. And so it goes on. The goalkeeper talks all the time: before the cross (who takes whom and where the defenders stand), as the ball comes in (\"Keeper!\" or \"Away!\") and at the throw (the winger's name and \"Turn!\" or \"Play!\").\n\nIf a team concedes without its goalkeeper saying anything before the cross, the goal counts double. Swap roles, ends and wings after every period. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Talk before the ball is struck – place the defenders while the winger dribbles."
+    },
+    {
+      "id": "cp2",
+      "text": "Short, clear words, the same every time: \"Keeper!\", \"Away!\", \"Take the far one!\"."
+    },
+    {
+      "id": "cp3",
+      "text": "Once you have called \"Keeper!\", the ball is yours – go all the way."
+    },
+    {
+      "id": "cp4",
+      "text": "At the throw: call the name first, so the winger knows the ball is coming."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C dribbles down the left. The red team's goalkeeper calls out who takes A and who takes B.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.76,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.74,
+          "label": "V"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.86,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.84,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.33
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.29,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.36,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C crosses. The goalkeeper calls \"Keeper!\" and comes out.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.76,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.74,
+          "label": "V"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.86,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.84,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.1
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.199,
+          "y": 0.224
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.239,
+          "y": 0.219,
+          "endX": 0.48,
+          "endY": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.36,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper has caught the ball and calls Z, who gets the throw on the other wing.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.76,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.74,
+          "label": "V"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.86,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.84,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.17
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.613,
+          "y": 0.204
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.653,
+          "y": 0.224,
+          "endX": 0.82,
+          "endY": 0.33
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.38,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Z dribbles towards the other goal. Now the blue team's goalkeeper talks to D and E.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.78,
+          "label": "U"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.74,
+          "endX": 0.55,
+          "endY": 0.66
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.76,
+          "label": "V"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.88,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.86,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.9,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.9,
+          "y": 0.55
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.9,
+          "y": 0.59,
+          "endX": 0.9,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

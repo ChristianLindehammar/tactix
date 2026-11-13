@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "id": "3c075570-a27f-5fdb-a552-fd5670da6bed",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – skott från rutan",
+  "description": "Markera med koner en ruta, ungefär 20 × 15 meter, strax utanför straffområdet. En målvakt står i mål och två lag med tre spelare möts i rutan. Ledaren står vid sidan med bollar och spelar in en ny boll så fort den förra är död.\n\nDet ena laget anfaller och får skjuta när som helst från rutan. Det andra laget försvarar och vinner om det spelar ut bollen ur rutan. Hamnar en retur utanför rutan får anfallarna avsluta på den, men bara med en touch. Med många ben framför sig får målvakten skott som syns sent och studsar – grunden i varje räddning sätts på prov. Byt uppgifter efter tre minuter.\n\nHar ni två målvakter kan de byta efter varje period. Fler spelare: fyra lag som turas om. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Grundställning när skytten drar bakåt med benet: lätt framåtlutad, vikten på främre delen av fötterna."
+    },
+    {
+      "id": "cp2",
+      "text": "Skymd boll: ta ett litet steg åt sidan så att du ser bollen förbi benen."
+    },
+    {
+      "id": "cp3",
+      "text": "Fånga om du kan. Annars styr du bollen ut åt sidan, aldrig rakt tillbaka i rutan."
+    },
+    {
+      "id": "cp4",
+      "text": "Upp på fötterna direkt – nästa avslut kan komma på returen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B i rutan. Målvakten flyttar med bollen.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.424,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.474,
+          "y": 0.39,
+          "endX": 0.61,
+          "endY": 0.345
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skjuter från rutan. Målvakten står still i grundställning när skottet går.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.25
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.215,
+          "endX": 0.555,
+          "endY": 0.15
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten styr skottet ut åt sidan. C rusar mot returen utanför rutan.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.1
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.12,
+          "endX": 0.29,
+          "endY": 0.15
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.245,
+          "endX": 0.33,
+          "endY": 0.2
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C avslutar med en touch. Målvakten har kommit upp och räddar igen.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.46
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.46
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.62
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.135,
+          "endX": 0.42,
+          "endY": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

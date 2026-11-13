@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "id": "05d99b40-d966-51f5-8100-089e309e8136",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Jorden runt med foten",
+  "description": "Ett trick där foten går ett varv runt bollen medan den är i luften. Alla har en boll. Ställ ut fyra koner i en fyrkant som stationer, en för varje steg i trickstegen. Alla börjar vid station 1, och ledaren visar tricket först.\n\nStation 1: lyft upp bollen på vristen och håll den still där, med foten en bit över marken, i tre sekunder. Station 2: lyft bollen lite, låt den studsa en gång medan foten går ett varv runt den, och ta emot den på vristen igen. Station 3: samma sak utan studs. Station 4: gör tricket åt båda hållen, med båda fötterna efter varandra eller med två varv runt bollen.\n\nKlarar du tricket tre gånger i rad går du till nästa station. Den som har klarat station 4 hittar på ett eget trick eller går tillbaka och hjälper någon som är kvar på station 1. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lyft bollen rakt upp och tillräckligt högt – ungefär till midjan."
+    },
+    {
+      "id": "cp2",
+      "text": "Snabb fot: börja varvet direkt när bollen lämnar foten."
+    },
+    {
+      "id": "cp3",
+      "text": "Stödbenet lite böjt och armarna ut för balansen."
+    },
+    {
+      "id": "cp4",
+      "text": "Öva lika mycket med vänster som med höger fot."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 1,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Stationerna går runt: 1 nere till vänster, 2 nere till höger, 3 uppe till höger och 4 uppe till vänster. A och E är på station 1.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A klarar tricket tre gånger i rad och driver vidare till station 2.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.83
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.83,
+          "endX": 0.6,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D har klarat station 4 och driver tillbaka för att hjälpa E på station 1.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.66
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.66
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.34
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.34
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.9,
+          "y": 0.5
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.74,
+          "label": "E"
+        },
+        {
+          "id": "be",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.83
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.83
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.17
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.35
+        },
+        {
+          "id": "m2",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.4,
+          "endX": 0.15,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

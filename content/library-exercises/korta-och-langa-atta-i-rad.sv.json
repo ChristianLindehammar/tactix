@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "id": "8898acb8-ddc5-597b-82c9-df19b79e1ae9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Korta och långa – åtta i rad",
+  "description": "Sex mot sex på en stor yta utan mål, ungefär 40 × 40 meter, som delas i två halvor med en konlinje i mitten. Laget med bollen ska hålla den inom laget så länge som möjligt. Åtta passningar i rad ger en poäng. En passning tillbaka till den som just passade dig räknas inte. Vinner det andra laget bollen börjar de räkna från noll.\n\nFör att få in både korta och långa passningar: en passning över mittlinjen till en medspelare i andra halvan räknas som två. Laget behöver alltså spelare både nära bollen och långt bort från den.\n\nVariant: högst två tillslag, eller ett när det flyter – men den som bryter en passning får ta så många tillslag hen vill. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Variera avståndet: någon nära för den korta passningen, någon långt bort för den långa."
+    },
+    {
+      "id": "cp2",
+      "text": "Ställ dig så att passningen till dig inte går genom en motståndare."
+    },
+    {
+      "id": "cp3",
+      "text": "Leta efter den långa passningen redan innan bollen kommer till dig."
+    },
+    {
+      "id": "cp4",
+      "text": "Den korta passningen hård och på marken, den långa så att medspelaren kan ta emot den."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar kort till B. Det är passning ett.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.42,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.74,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.62
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.353,
+          "y": 0.616,
+          "endX": 0.51,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår långt över mittlinjen till E. Den räknas som två – nu står det tre.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.42,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.74,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.51
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.594,
+          "y": 0.475,
+          "endX": 0.68,
+          "endY": 0.275
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "E spelar kort vidare till F, och det står fyra. En passning tillbaka till B hade inte räknats.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.2
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.2
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.8
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.8
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.72,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.22,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.42,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.74,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.28,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.31
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.738,
+          "y": 0.336,
+          "endX": 0.84,
+          "endY": 0.405
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:29:44.000Z",
+  "updatedAt": "2026-11-13T20:29:44.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

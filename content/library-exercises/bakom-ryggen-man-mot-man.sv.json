@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "id": "f98b93e4-433a-511a-ba27-62e9e048501d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bakom ryggen – man mot man",
+  "description": "Fem mot fem plus en målvakt, på ungefär 40 × 35 meter. I ena änden står ett stort mål med målvakt, i andra änden två konmål på cirka fem meter ute vid kanterna. Blå laget anfaller det stora målet. Röda laget gör mål genom att driva bollen genom ett konmål.\n\nRöda laget markerar man mot man: varje röd spelare har en blå att ta hand om. De blå spelarna måste därför ta sig loss för att bli spelbara, och det bästa sättet är att löpa bakom ryggen på sin försvarare – på den sida där hen inte ser både dig och bollen. Bollhållaren kan spela till löparen, göra en passningsfint och driva själv, eller passa en tredje spelare. Ett mål efter en lyckad löpning bakom ryggen ger två poäng.\n\nByt roller i halvtid. Variant: spela med offside, så att löparen måste tajma löpningen längs backlinjen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ställ dig så att försvararen måste vrida på huvudet för att se både dig och bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Starta löpningen i samma ögonblick som försvararen tittar på bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Löp i en båge bakom ryggen på försvararen, inte rakt förbi framför hen."
+    },
+    {
+      "id": "cp4",
+      "text": "Bollhållaren: spela bollen dit löparen är på väg, inte dit hen står."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 11,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X tittar på bollen hos A. B smiter i en båge bakom ryggen på X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.355,
+          "endX": 0.62,
+          "endY": 0.215,
+          "bend": 0.07,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar in i ytan bakom X, dit B kommer i full fart.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.279,
+          "y": 0.395,
+          "endX": 0.545,
+          "endY": 0.225
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B avslutar. Mål efter en löpning bakom ryggen ger två poäng.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.155
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.579,
+          "y": 0.122,
+          "endX": 0.53,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:29:44.000Z",
+  "updatedAt": "2026-11-13T20:29:44.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

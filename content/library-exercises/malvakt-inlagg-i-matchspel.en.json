@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "1740d404-0097-5119-96d1-a20435d06a66",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – crosses in a game",
+  "description": "Seven v seven with goalkeepers on a pitch of about 50 × 35 metres. Mark a zone in front of each goal with two cones, about six metres out. No outfield player – attacker or defender – may enter the zone. There the goalkeeper is alone and can take the crosses without anyone challenging.\n\nGoals from crosses count double, so the teams look to the wings and send in plenty of crosses. The goalkeeper decides early whether the ball is theirs: if it drops in the zone or just outside, they come out and take it; otherwise they stay and get ready for the finish. Once the goalkeeper has the ball, they restart straight away out to a wing.\n\nPlay periods of six or seven minutes. Variant: play offside if you do in matches. The diagram shows only the players nearest the ball. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand a little off the line and slightly towards the far post, body open to the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Read the flight of the ball before you go – decide and shout \"Keeper!\"."
+    },
+    {
+      "id": "cp3",
+      "text": "Take the ball at its highest point with straight arms, and lift the knee nearest the players."
+    },
+    {
+      "id": "cp4",
+      "text": "After the catch: look up at once – towards the wing the opponents have left open."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C dribbles past Z down the left. The red team's goalkeeper moves with the ball.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.35
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.31,
+          "endX": 0.1,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C sends an early cross towards the far part of the zone. A and B may not enter the zone.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.1
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.225,
+          "endX": 0.6,
+          "endY": 0.13
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.37,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper has come out and caught the ball. They throw it straight out to Y on the wing.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.26,
+          "y": 0.17
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.17
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.11
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.2
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.22,
+          "endX": 0.81,
+          "endY": 0.3
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.37,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "id": "8a803096-6330-5e1c-b9b2-49d7bf60ee98",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ett mot ett – träffa konen",
+  "description": "En yta på ungefär 10 × 15 meter med en kon i varje hörn. Spelarna går ihop två och två till lag, och två lag möts på varje yta. Varje lag försvarar de två konerna på sin kortsida och gör mål genom att träffa en av motståndarlagets koner med bollen.\n\nEn från varje lag spelar ett mot ett, och kompisarna väntar bakom sin kortsida. När det blir mål går båda ut och de väntande kommer in – laget som släppte in målet startar med bollen från sin kortsida. Byt också om det har gått ungefär en minut utan mål. Lagen räknar ihop sina mål.\n\nUtmana och finta! Konerna står långt ifrån varandra, så försvararen kan inte täcka båda samtidigt. Variant: ledaren ger ett extrapoäng för mål efter en viss fint eller dribbling som ni tränar på just nu. Två spelare kan också köra ett mot ett utan byten. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör en fint åt ena hållet och gå mot konen på andra sidan."
+    },
+    {
+      "id": "cp2",
+      "text": "Skjut när du har ett fritt läge – det räcker att träffa konen."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: stå mellan bollen och konerna och gå inte rakt in i bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Snabba byten – den som väntar är redo att gå in direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver mot X och gör en fint mot den högra konen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.56,
+          "endX": 0.66,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X täcker den högra konen. A drar bollen åt vänster och träffar den vänstra.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.42
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.38,
+          "endX": 0.24,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Mål för blått! A och X går ut. Y startar med bollen och B kommer in och försvarar.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.2
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.2
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.8
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.8
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.93,
+          "y": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.92,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.31,
+          "endX": 0.48,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.78,
+          "endX": 0.57,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

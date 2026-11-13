@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 2,
+  "id": "243c90df-22fc-53d0-9bef-ac0b3a68bf8f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Försvara långa utsparkar",
+  "description": "Fem mot fem med målvakter på en lång och smal plan, ungefär 70 × 35 meter. Varje gång spelet ska startas från en målvakt – efter mål, när bollen gått ut över kortlinjen eller när målvakten tagit bollen – sparkar målvakten långt. Innan sparken ställer båda lagen upp där de tror att bollen landar. Annars är det fritt spel.\n\nLaget som försvarar mot sparken ska vinna den första duellen om bollen och ha spelare runt omkring som tar andrabollen. Vinner försvararna andrabollen och gör mål inom tio sekunder räknas målet dubbelt.\n\nLåt målvakterna variera: utspark, inspark, mot mitten eller ut mot en kant. Variant: spela med offside om ni gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Läs sparken tidigt: en går upp i duellen, de andra ställer sig runt där bollen kan studsa."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå på rätt sida om din spelare – mellan spelaren och ert eget mål."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som vinner duellen nickar eller skarvar bollen till en lagkamrat, inte bara upp i luften."
+    },
+    {
+      "id": "cp4",
+      "text": "Vinn andrabollen och spela framåt direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "setPieces"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå lagets målvakt sparkar långt mot A. X läser bollen och går upp i duellen.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.17,
+          "endX": 0.52,
+          "endY": 0.38
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.54,
+          "label": "W"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.8,
+          "label": "V"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.47,
+          "endX": 0.49,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X vinner duellen och nickar bollen ner till Y, som tar andrabollen.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.54,
+          "label": "W"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.8,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.45
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.49,
+          "endX": 0.3,
+          "endY": 0.56
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.56,
+          "endX": 0.57,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y driver direkt framåt, och X vänder och springer mot blå lagets mål.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.52,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.54,
+          "label": "W"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.8,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.51
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.47,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.36,
+          "endX": 0.6,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

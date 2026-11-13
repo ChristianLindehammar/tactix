@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "958b9036-1de5-5342-a119-bb244f081865",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Long free kicks – hold the line",
+  "description": "Half a pitch with a goal and a goalkeeper. Red defends with five players and the keeper. Blue has four attackers and a free-kick taker. Mark four free-kick spots with cones, 30–40 metres from goal: two out wide and two at an angle in front. The coach stands at the halfway line.\n\nBlue takes one long free kick at a time, from a new spot each time. Before the kick, red and the keeper decide how high the line should stand, who takes whom and who stays higher up for second balls. Red gets a point when they have won the ball and played it to the coach or dribbled it over the halfway line. Blue gets two points for a goal. After ten free kicks the teams swap roles.\n\nTry defending with zonal marking in one round and man marking in the next, and compare. Variation: play with offside – then the whole line must step up together once the ball has been cleared. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The keeper decides how high the line stands, so there is room to come out for balls behind it."
+    },
+    {
+      "id": "cp2",
+      "text": "Stay in line and drop with the attackers when the ball is kicked – nobody sets off early."
+    },
+    {
+      "id": "cp3",
+      "text": "Clear high and wide, preferably towards a wing."
+    },
+    {
+      "id": "cp4",
+      "text": "Step up together straight after the clearance."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "setPieces",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 11,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A takes a long free kick into the penalty area. Red stand in line, and W and X drop with B and C when the ball is kicked.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.42
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.22,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.22,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.31,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.37,
+          "endX": 0.47,
+          "endY": 0.17
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.18,
+          "endX": 0.34,
+          "endY": 0.11
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.18,
+          "endX": 0.6,
+          "endY": 0.11
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.27,
+          "endX": 0.52,
+          "endY": 0.17
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.27,
+          "endX": 0.7,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X wins the header and nods the ball out wide to Z.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.14,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.65,
+          "y": 0.12
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.16,
+          "endX": 0.84,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z dribbles towards the coach at the halfway line while the whole back line steps up together.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.44,
+          "label": "Z"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.31,
+          "label": "E"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.2,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.14,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.747,
+          "y": 0.474
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.707,
+          "y": 0.494,
+          "endX": 0.62,
+          "endY": 0.51,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.34
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.18,
+          "endX": 0.34,
+          "endY": 0.31
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.21,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "r8",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.23,
+          "endX": 0.74,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

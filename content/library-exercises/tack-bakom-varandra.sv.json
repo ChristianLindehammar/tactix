@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "fa330460-4e49-5405-b7d6-de190ca09c83",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Täck bakom varandra",
+  "description": "En yta på ungefär 30 × 40 meter med ett litet mål i varje ände. Fyra mot fyra. Det försvarande laget ställer alltid en av sina spelare i målet, så ute på planen försvarar tre mot två anfallare. Anfallarnas två andra spelare är stödspelare: de får bara passa, högst två tillslag, och får inte göra mål.\n\nRöd försvarar och ska vinna bollen. Den som är närmast bollhållaren pressar, och de andra två ställer sig snett bakom – en täcker ytan bakom den som pressar och en ytan framför mål. När röd vinner bollen bryts anfallet och blå startar ett nytt från sin egen kortlinje. Byt anfall och försvar efter fem anfall och byt vem som står i mål.\n\nVariant: låt röd kontra mot blå lagets mål när de vinner bollen. Då måste blå också tänka på sitt eget mål. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den som är närmast bollen pressar – de andra täcker snett bakom."
+    },
+    {
+      "id": "cp2",
+      "text": "Prata: ”Jag tar!” och ”Jag täcker!” så att alla vet vem som gör vad."
+    },
+    {
+      "id": "cp3",
+      "text": "När bollen flyttas byter ni uppgift: ny pressare, nya täckare."
+    },
+    {
+      "id": "cp4",
+      "text": "Stå så att du ser både bollen och anfallaren bakom dig."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C spelar ut till A. X går mot A och Y flyttar sig snett bakom X.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.411,
+          "y": 0.337
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.451,
+          "y": 0.367,
+          "endX": 0.73,
+          "endY": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.62,
+          "endX": 0.74,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.71,
+          "endX": 0.6,
+          "endY": 0.69
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A försöker driva förbi X inåt. Y täcker ytan och kliver in mot bollen.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.71,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.5
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.53,
+          "endX": 0.6,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.7,
+          "endX": 0.57,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y vinner bollen. Får ni kontra driver Y direkt mot blå lagets mål, och X ger stöd.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.04
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.96,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.895
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.71,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.51
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.48,
+          "endX": 0.66,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.62,
+          "endX": 0.66,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

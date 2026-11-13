@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "id": "72ace5fd-d676-506d-9281-b375df23e8fc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Behind the back – man to man",
+  "description": "Five against five plus a goalkeeper, on about 40 × 35 metres. At one end is a full-size goal with the goalkeeper, at the other two cone goals about five metres wide out near the sidelines. The blue team attacks the big goal. The red team scores by dribbling the ball through a cone goal.\n\nThe red team marks man to man: every red player has a blue player to look after. So the blue players have to get free to be available, and the best way is to run behind their defender's back – on the side where they cannot see both you and the ball. The player on the ball can play the runner in, dummy the pass and dribble, or pass to a third player. A goal after a successful run behind a defender's back is worth two points.\n\nSwap roles at half-time. Variation: play offside, so the runner has to time the run along the back line. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand so that your defender has to turn their head to see both you and the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Start the run the moment your defender looks at the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Curve your run behind the defender's back, not straight past in front of them."
+    },
+    {
+      "id": "cp4",
+      "text": "On the ball: play it to where the runner is going, not where they are standing."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 11,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X is watching the ball at A. B slips round behind X's back.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.355,
+          "endX": 0.62,
+          "endY": 0.215,
+          "bend": 0.07,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays into the space behind X, where B arrives at full speed.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.279,
+          "y": 0.395,
+          "endX": 0.545,
+          "endY": 0.225
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B finishes. A goal after a run behind a defender's back is worth two points.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.93
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.93
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.76,
+          "y": 0.93
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.93
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.62,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.17,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.155
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.579,
+          "y": 0.122,
+          "endX": 0.53,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:29:44.000Z",
+  "updatedAt": "2026-11-13T20:29:44.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

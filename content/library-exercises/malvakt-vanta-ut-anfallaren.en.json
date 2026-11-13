@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "e41385b4-492b-5ba8-8174-2c17cf83b3b2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – wait the attacker out",
+  "description": "One v one with a goalkeeper in each goal, on a pitch about 15 metres wide and 25 metres long. The goals are cone goals, about five metres wide. With only one defender, the attacker often gets clear with plenty of time and can choose: shoot, chip or dribble round the goalkeeper.\n\nGoals where the attacker dribbles round the goalkeeper count double. That tempts the attackers to go all the way in, so the goalkeeper has to stay on their feet, not buy the feints and only go down when the ball leaves the attacker's foot. After every save the goalkeeper restarts straight away to their own outfield player.\n\nOne v one is hard work – swap the outfield players after about a minute and a half, with the resting pairs at the side. Variant: goals count only on low shots. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Come out early while the ball is away from the attacker's foot, and stop before they are ready to finish."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand slightly off-centre so the attacker picks the side you want."
+    },
+    {
+      "id": "cp3",
+      "text": "Wait out the feints – watch the ball, not the body."
+    },
+    {
+      "id": "cp4",
+      "text": "If the attacker goes round you: go down sideways, hands to the ball, the moment it is pushed away."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A has won the ball and runs clear at goal. The red team's goalkeeper comes out while A is still far away.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.145,
+          "endX": 0.5,
+          "endY": 0.215
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.43
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.39,
+          "endX": 0.47,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.58,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The goalkeeper has stopped and waits, slightly off-centre. A tries to dribble past on the left.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.22
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.33
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.31,
+          "endX": 0.27,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.53,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A pushed the ball too far. The goalkeeper went down, took it and plays it straight to X.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.34,
+          "endX": 0.52,
+          "endY": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.56,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

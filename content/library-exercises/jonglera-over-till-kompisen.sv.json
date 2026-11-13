@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "id": "d1312355-1bee-576d-9784-c6ae8de7ca33",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Jonglera över till kompisen",
+  "description": "Två och två med en boll, 3–5 meter isär. Blir det en spelare över blir det tre i en grupp. Bollen ska hållas i luften och spelas mellan er – med fötterna, låren och huvudet.\n\nKör det som en stege i tre steg. Steg 1: bollen får studsa en gång mellan tillslagen, och du jonglerar så många gånger du vill innan du lyfter över till kompisen. Steg 2: du har exakt två tillslag – ett för att ta ner bollen och ett för att spela den vidare. Steg 3: bara ett tillslag, ni spelar bollen direkt fram och tillbaka. Klarar paret tio gånger i rad går ni upp ett steg.\n\nTävla till sist: vilket par klarar flest gånger i rad på sitt steg innan bollen hamnar på marken? Härmlek: ett par visar ett eget sätt att spela bollen mellan sig, och de andra paren försöker göra likadant. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mjuka tillslag – möt bollen och lyft den lagom högt, ungefär till höften."
+    },
+    {
+      "id": "cp2",
+      "text": "Titta på bollen när den kommer och på kompisen innan du spelar."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd båda fötterna. Låret är bra för att ta ner en hög boll."
+    },
+    {
+      "id": "cp4",
+      "text": "Spela bollen så att den blir lätt för kompisen att ta emot."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Steg 1: A jonglerar och lyfter sedan över till B. Bollen får studsa.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.56
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.29,
+          "y": 0.52,
+          "endX": 0.29,
+          "endY": 0.39,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "B"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Steg 2: B tar ner bollen, jonglerar en gång och spelar tillbaka till A.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.44,
+          "endX": 0.27,
+          "endY": 0.57,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Steg 3: ett tillslag var – A och B spelar direkt fram och tillbaka.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.88,
+          "y": 0.5
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.48
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.45,
+          "endX": 0.24,
+          "endY": 0.38,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.51,
+          "endX": 0.32,
+          "endY": 0.58,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

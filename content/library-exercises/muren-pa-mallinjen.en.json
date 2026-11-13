@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "id": "70aaf2cd-4409-5832-8f86-ac28b8a43dad",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "The wall on the goal line",
+  "description": "One goal with a goalkeeper. Red defends with four players and the keeper; blue has three attackers. The coach places the ball for an indirect free kick inside the penalty area, so close to goal that red has to put the whole wall on the goal line, between the posts. The diagram shows the wall wider than the goal.\n\nThe wall may rush out the moment the ball is touched. Two blue players must touch the ball before it can go in: one lays it short to the side and another shoots. Red must block the shot and get the ball out of the penalty area. Red gets a point for every free kick that doesn't end in a goal and one more if they play the ball to the coach. After six free kicks the teams swap roles.\n\nMove the spot between kicks: straight in front, at an angle and close to the end line. Variation: give blue a fourth player who stands in the wall and tries to block the keeper's view. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The keeper sets the wall and stands in the middle, where they can see the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Rush out as soon as the ball is touched – not when it is shot."
+    },
+    {
+      "id": "cp3",
+      "text": "Go at the ball with a wide body and your hands behind your back."
+    },
+    {
+      "id": "cp4",
+      "text": "Those not blocking stay on the line and take the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "setPieces",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red stand on the goal line. A lays the ball short to B, and X and Y rush out straight away.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.075,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.075,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.18
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.23,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.19,
+          "endX": 0.63,
+          "endY": 0.2
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.1,
+          "endX": 0.43,
+          "endY": 0.15
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.1,
+          "endX": 0.59,
+          "endY": 0.15
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B is about to shoot, but X and Y have already rushed out and block the shot.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.577,
+          "y": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y gets the ball and plays it out to the coach. A bonus point for red.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.075
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.85,
+          "y": 0.42
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.075,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.075,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.35,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.662,
+          "y": 0.222
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.702,
+          "y": 0.252,
+          "endX": 0.82,
+          "endY": 0.37
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

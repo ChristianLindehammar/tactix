@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 2,
+  "id": "6a3875f3-c591-5ab6-807c-f228a9abe133",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Passa, pressa och bryt",
+  "description": "En yta på ungefär 15 × 30 meter med koner i hörnen. Två lag: blå står i ett led vid ena kortlinjen och röd vid den andra. Röd har bollarna.\n\nFörsta röda spelar en lång passning till första blå och springer direkt ut för att försvara. Blå tar emot rättvänd och gör mål genom att driva bollen över röda lagets kortlinje. Röd ska först komma i pressavstånd, bromsa och sedan gå in och vinna bollen. Vinner röd bollen gör röd mål genom att driva den över blå lagets kortlinje. Duellen är slut vid mål eller när bollen går ut. Båda ställer sig sist i sitt led, och nästa duell startar från blå – så byter lagen anfall och försvar varannan gång.\n\nBygg på: en andra försvarare startar vid sidan och kommer in och täcker bakom den som pressar. Variant: spela mot två små mål i stället för linjerna. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spring snabbt ut medan bollen rullar, och bromsa in de sista metrarna."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå lite snett med kort steg, och styr anfallaren åt ett håll."
+    },
+    {
+      "id": "cp3",
+      "text": "Gå in när anfallaren tar en för lång touch eller tittar ner."
+    },
+    {
+      "id": "cp4",
+      "text": "Har du täckning bakom dig kan du pressa hårdare."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X passar till A och springer direkt ut mot A.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.06
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.94
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.94
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.06,
+          "label": "W"
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.94,
+          "label": "B"
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.87,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.16
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.21,
+          "endX": 0.5,
+          "endY": 0.76
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.15,
+          "endX": 0.43,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver rättvänd mot X. X bromsar på pressavstånd och väntar på rätt läge.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.06
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.94
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.94
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.06,
+          "label": "W"
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.94,
+          "label": "B"
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.87,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.73
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.69,
+          "endX": 0.52,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.46,
+          "endX": 0.5,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X vinner bollen och driver den över blå lagets kortlinje.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.06
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.94
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.94
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.06,
+          "label": "W"
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.94,
+          "label": "B"
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.87,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.55,
+          "label": "X"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.64
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.68,
+          "endX": 0.38,
+          "endY": 0.88,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Bygg på: Y kommer in från sidan och täcker bakom X, som kan pressa hårdare.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.06
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.06
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.94
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.94
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.06,
+          "label": "W"
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.94,
+          "label": "B"
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.87,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.65,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.6
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.56,
+          "endX": 0.72,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.42,
+          "endX": 0.66,
+          "endY": 0.38
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.34,
+          "endX": 0.38,
+          "endY": 0.32
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:54.000Z",
+  "updatedAt": "2026-11-13T20:25:54.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

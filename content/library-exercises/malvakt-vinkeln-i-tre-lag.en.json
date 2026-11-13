@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 2,
+  "id": "930c8cf0-ce5f-5398-8fc8-1c7ee993cd85",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – angles with three teams",
+  "description": "Split the outfield players into three teams of three. The pitch is about 30 × 30 metres, with a full-size goal and a goalkeeper at one end and two cone goals, about five metres wide, at the other. The goalkeeper belongs to the team defending the big goal, which scores in the cone goals. The second team attacks the goalkeeper. The third team waits at the side.\n\nThe team that concedes a goal goes off and the waiting team comes on – both the goalkeeper's team and the attacking team. If nobody scores within three minutes, the team that has played longest goes off. The goalkeeper stays on throughout and so faces lots of finishes from different angles, moving with the ball and coming out so the shooter sees as little of the goal as possible.\n\nKeep count of how many games each team wins. Variant: play offside when the team attacks the goalkeeper. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand on the line between the ball and the middle of the goal – move every time the ball moves."
+    },
+    {
+      "id": "cp2",
+      "text": "Come out towards the shooter as the ball gets closer, but be still and balanced when the shot comes."
+    },
+    {
+      "id": "cp3",
+      "text": "Tight angle: cover the near post and make the shooter hit you."
+    },
+    {
+      "id": "cp4",
+      "text": "After the save: look up and restart straight away to a team-mate."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 7,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles towards goal down the left. The goalkeeper moves with the ball and steps out.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.05
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.47,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.58,
+          "label": "F"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.57
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.62,
+          "endX": 0.25,
+          "endY": 0.74,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.64,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.87,
+          "endX": 0.41,
+          "endY": 0.82
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A shoots from a tight angle. The goalkeeper has closed the near post and saves.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.05
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.47,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.58,
+          "label": "F"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.85
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.7
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.72,
+          "endX": 0.36,
+          "endY": 0.81
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.74,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The goalkeeper throws to X, and the red team attacks the cone goals. D, E and F wait their turn.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.05
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.47,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.58,
+          "label": "F"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.85
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.8
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.78,
+          "endX": 0.74,
+          "endY": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "bb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "cc",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:20.000Z",
+  "updatedAt": "2026-11-13T20:25:20.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

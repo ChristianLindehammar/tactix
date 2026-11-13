@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "97e360c5-7e9b-57ff-96ce-96fb64317436",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Fånga och håll fast bollen",
+  "description": "Två och två med en boll, 4–5 meter från varandra. Blir det en spelare över blir det tre i en grupp. Här får alla vara målvakter.\n\nKasta bollen till kompisen i olika höjd: mot magen, mot bröstet och lite över huvudet. Den som fångar tar in bollen mot kroppen med armarna under och runt den, som en skopa, eller tar den först med båda händerna och drar sedan in den. När det går bra springer kastaren fram efter kastet och knuffar lätt med axeln på kompisen – bollen ska sitta kvar. Byt roller efter fem kast.\n\nSvårare: kasta högre så att man får hoppa upp och ta bollen, rulla bollen rakt mot kompisen, och sedan vid sidan av så att kompisen får gå ner och ta den. Avsluta med att boxa tillbaka kasten med knytnävarna. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta på bollen hela vägen in i händerna."
+    },
+    {
+      "id": "cp2",
+      "text": "Händerna fram mot bollen – sedan in mot bröstet."
+    },
+    {
+      "id": "cp3",
+      "text": "Krama bollen med armbågarna tätt ihop, så glider den inte ur."
+    },
+    {
+      "id": "cp4",
+      "text": "Knuffa snällt: det ska kännas, inte göra ont."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A kastar till B och C kastar till D. B och D fångar och drar in bollen mot bröstet.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.56
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.52,
+          "endX": 0.3,
+          "endY": 0.38
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.56
+        },
+        {
+          "id": "t2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.52,
+          "endX": 0.72,
+          "endY": 0.38
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A och C springer fram och knuffar lätt. B och D håller kvar bollen.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.6,
+          "endX": 0.3,
+          "endY": 0.43
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.6,
+          "endX": 0.72,
+          "endY": 0.43
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.85,
+          "y": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Svårare: bollen rullas vid sidan av, och B och D går ner och tar den.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.84
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.56
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.52,
+          "endX": 0.15,
+          "endY": 0.36
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.28,
+          "endX": 0.17,
+          "endY": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.56
+        },
+        {
+          "id": "t2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.52,
+          "endX": 0.87,
+          "endY": 0.36
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.27,
+          "label": "D"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.75,
+          "y": 0.28,
+          "endX": 0.85,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

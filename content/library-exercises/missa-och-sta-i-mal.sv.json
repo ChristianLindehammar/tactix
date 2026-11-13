@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "id": "639c60bd-036f-5380-8883-72c2f0584600",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Missa – ställ dig i mål",
+  "description": "Ett mål med en målvakt och en skottlinje mellan två koner, 8–12 meter från målet beroende på ålder. Övriga spelare står i kö bakom linjen. Ledaren står vid sidan med bollarna och ger nästa skytt en boll.\n\nSkytten skjuter från linjen. Blir det mål får målvakten en prick och står kvar. Räddar målvakten är det nästa skytts tur. Skjuter skytten utanför eller över går skytten i mål, och målvakten ställer sig sist i kön. Prickarna sparas hela omgången: den som får tre prickar vilar tills omgången är slut, och den som är kvar sist vinner.\n\nBestäm innan ni börjar om returer gäller. Snabbare variant: kör med en enda boll, och den som först får tag i bollen efter ett skott springer till linjen och skjuter direkt. Eller räkna gjorda mål i stället för prickar, och bestäm vilken fot och vilken del av foten som gäller. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bestäm dig för en sida av målet innan du skjuter."
+    },
+    {
+      "id": "cp2",
+      "text": "Ett lugnt skott som träffar målet är bättre än ett hårt som går över."
+    },
+    {
+      "id": "cp3",
+      "text": "Stödfoten bredvid bollen och blicken på bollen när du träffar den."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakt: stå på tå mitt i målet och var redo att gå åt båda hållen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skjuter och gör mål. D får en prick och står kvar i mål.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.3
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.4
+        },
+        {
+          "id": "bp",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.27,
+          "endX": 0.55,
+          "endY": 0.04
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.49,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.57,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skjuter utanför målet.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.3
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.4
+        },
+        {
+          "id": "bp",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.27,
+          "endX": 0.74,
+          "endY": 0.03
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.49,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.57,
+          "label": "A"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B går i mål och D ställer sig sist i kön. C är näst på tur.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.33,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.67,
+          "y": 0.3
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.86,
+          "y": 0.4
+        },
+        {
+          "id": "bp",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.33,
+          "endX": 0.5,
+          "endY": 0.18
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.13,
+          "endX": 0.15,
+          "endY": 0.58,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.49,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.57,
+          "label": "A"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

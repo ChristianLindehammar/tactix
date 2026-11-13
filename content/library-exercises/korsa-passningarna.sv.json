@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "809fbb42-60d6-5dad-b931-7549685f9918",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Korsa passningarna",
+  "description": "En fyrkant på ungefär 15 × 15 meter med ett led i varje hörn, två eller tre spelare per led. De två översta leden har en boll var.\n\nDen första i ett av de översta leden passar diagonalt över fyrkanten till hörnet snett framför sig, springer sedan rakt fram längs sidan och ställer sig sist i ledet där. Mottagaren tar med sig bollen ut i fyrkanten och gör likadant åt andra hållet: diagonal passning och löpning rakt fram längs sidan. Börja med en boll i spel åt gången. När det sitter passar båda hörnen samtidigt – den ena en sekund före den andra så att bollarna inte krockar i mitten.\n\nByt efter en stund: passa rakt fram längs sidan och spring diagonalt. Prova också med svagare foten, med ett tillslag eller med en lyftad passning. Höj takten efter hand, men passningar och mottagningar ska hålla god kvalitet hela tiden. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta med bollen framåt i första touchen, så är du redo att passa direkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa framför mottagaren, inte bakom."
+    },
+    {
+      "id": "cp3",
+      "text": "Spring direkt när du har passat."
+    },
+    {
+      "id": "cp4",
+      "text": "Titta upp innan du passar – det kommer en boll från andra hållet också."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar diagonalt till D, och B passar till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.33,
+          "endX": 0.69,
+          "endY": 0.69
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.33,
+          "endX": 0.31,
+          "endY": 0.69
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A och B springer rakt fram längs sidorna och ställer sig sist i leden. C och D har tagit emot.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.7
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.29,
+          "endX": 0.9,
+          "endY": 0.7
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.12,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.7
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.7
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C och D passar diagonalt upp till F och E och springer upp längs sidorna.",
+      "markers": [
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.24,
+          "label": "F"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.76,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.7
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.67,
+          "endX": 0.69,
+          "endY": 0.31
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.71,
+          "endX": 0.1,
+          "endY": 0.3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.76,
+          "label": "D"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.7
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.67,
+          "endX": 0.31,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.71,
+          "endX": 0.9,
+          "endY": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.88,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T20:25:18.000Z",
+  "updatedAt": "2026-11-13T20:25:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
