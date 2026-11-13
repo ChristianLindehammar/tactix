@@ -1,6 +1,6 @@
-"""Turns the query string of GET /exercises and GET /library into SQL. Same meaning as filterExercises in
-utils/filterExercises.ts, except sorting by rating, which needs ratings on the server first, and sorting
-by how many coaches saved an exercise, which only the server knows.
+"""Turns the query string of GET /exercises, GET /library and GET /favorites into SQL. Same meaning as
+filterExercises in utils/filterExercises.ts, except sorting by how many coaches saved an exercise, which
+only the server knows. Ratings are the viewer's own, uploaded from their phone.
 Only values from the caller become query parameters; the SQL text comes from this file."""
 import re
 
@@ -18,6 +18,10 @@ SORTS = {
     'difficulty': 'e.difficulty, e.updated_at DESC, e.id',
     # The most saved first
     'favorites': '(SELECT COUNT(*) FROM exercise_favorites fs WHERE fs.exercise_id = e.id) DESC, e.updated_at DESC, e.id',
+    # The viewer's best first, and what they haven't rated last
+    'rating': '(SELECT rs.stars FROM exercise_ratings rs WHERE rs.exercise_id = e.id AND rs.user_id = %s) IS NULL, '
+    '(SELECT rs.stars FROM exercise_ratings rs WHERE rs.exercise_id = e.id AND rs.user_id = %s) DESC, '
+    'e.updated_at DESC, e.id',
 }
 
 
@@ -46,10 +50,18 @@ def _placeholders(values):
     return ', '.join(['%s'] * len(values))
 
 
-def _build(args, where, params):
-    """Returns (where, params, order, limit, offset), narrowing the given conditions by the filters."""
+def _build(args, where, params, viewer_id):
+    """Returns (where, params, order, order_params, limit, offset), narrowing the given conditions by
+    the filters. Ratings are the viewer's own."""
     where = [*where, 'e.deleted_at IS NULL']
     params = list(params)
+
+    if 'minRating' in args:
+        where.append(
+            'EXISTS (SELECT 1 FROM exercise_ratings mr WHERE mr.exercise_id = e.id AND mr.user_id = %s '
+            'AND mr.stars >= %s)'
+        )
+        params.extend([viewer_id, _whole_number(args['minRating'], 1, 5)])
 
     if 'sport' in args:
         where.append('e.sport = %s')
@@ -89,14 +101,15 @@ def _build(args, where, params):
         params.extend([pattern, pattern, pattern])
 
     order = SORTS[_choice(args.get('sort', 'updated'), SORTS)]
+    order_params = [viewer_id] * order.count('%s')
     limit = _whole_number(args['limit'], 1, MAX_PAGE_SIZE) if 'limit' in args else DEFAULT_PAGE_SIZE
     offset = _whole_number(args['offset'], 0, MAX_OFFSET) if 'offset' in args else 0
-    return ' AND '.join(where), params, order, limit, offset
+    return ' AND '.join(where), params, order, order_params, limit, offset
 
 
 def build_listing(args, owner_id):
     """The caller's own exercises."""
-    return _build(args, ['e.owner_id = %s'], [owner_id])
+    return _build(args, ['e.owner_id = %s'], [owner_id], owner_id)
 
 
 # Leaves out hidden exercises, those the viewer reported and those by coaches the viewer blocked
@@ -118,7 +131,7 @@ def build_library(args, viewer_id):
             raise InvalidFilter()
         where.append("(e.locale = %s OR e.locale LIKE %s)")
         params.extend([language, f'{language}-%'])
-    return _build(args, where, params)
+    return _build(args, where, params, viewer_id)
 
 
 def build_favorites(args, viewer_id):
@@ -128,4 +141,4 @@ def build_favorites(args, viewer_id):
         'EXISTS (SELECT 1 FROM exercise_favorites fv WHERE fv.exercise_id = e.id AND fv.user_id = %s)',
         *NOT_UNWANTED,
     ]
-    return _build(args, where, [viewer_id, viewer_id, viewer_id])
+    return _build(args, where, [viewer_id, viewer_id, viewer_id], viewer_id)

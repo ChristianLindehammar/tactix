@@ -88,3 +88,52 @@ class TestFilters:
 
     def test_rejects_an_unknown_filter_value(self, client, me):
         assert client.get('/library?sport=chess', headers=me).status_code == 400
+
+
+class TestByMyRating:
+    def test_keeps_what_i_rated_at_least_that_high(self, client, me, register, publish, titles):
+        from tests.test_ratings import rate
+
+        loved, liked, meh = publish(title='Loved'), publish(title='Liked'), publish(title='Meh')
+        publish(title='Unrated')
+        rate(client, loved, me, 5)
+        rate(client, liked, me, 4)
+        rate(client, meh, me, 2)
+        rate(client, meh, register(), 5)  # someone else's rating doesn't count
+
+        assert sorted(titles('?minRating=4')) == ['Liked', 'Loved']
+
+    def test_sorts_my_best_first_and_unrated_last(self, client, me, register, publish, titles):
+        from tests.test_ratings import rate
+
+        unrated = publish(title='Unrated')
+        meh, loved = publish(title='Meh'), publish(title='Loved')
+        rate(client, meh, me, 2)
+        rate(client, loved, me, 5)
+        rate(client, unrated, register(), 5)  # someone else's rating doesn't count
+
+        assert titles('?sort=rating') == ['Loved', 'Meh', 'Unrated']
+
+    @pytest.mark.parametrize('value', ['0', '6', 'four', '4.5'])
+    def test_rejects_a_rating_outside_one_to_five(self, client, me, value):
+        response = client.get(f'/library?minRating={value}', headers=me)
+
+        assert response.status_code == 400
+        assert response.get_json() == {'error': 'invalidFilter'}
+
+    def test_ignores_a_parameter_it_does_not_know(self, publish, titles):
+        """Older and newer apps can send what this server doesn't know yet."""
+        publish(title='Rondo')
+
+        assert titles('?someNewFilter=1') == ['Rondo']
+
+    def test_filters_my_favourites_too(self, client, me, publish):
+        from tests.test_favorites import favorite, favorite_titles
+        from tests.test_ratings import rate
+
+        loved, meh = publish(title='Loved'), publish(title='Meh')
+        for exercise, stars in ((loved, 5), (meh, 2)):
+            favorite(client, exercise, me)
+            rate(client, exercise, me, stars)
+
+        assert favorite_titles(client, me, '?minRating=4') == ['Loved']

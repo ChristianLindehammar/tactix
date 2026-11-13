@@ -24,6 +24,8 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | `GET /favorites` | Yes, no plan needed | The exercises you saved, in every language, filtered like the library. Leaves out deleted and hidden ones, those you reported and those by coaches you blocked |
 | `GET /exercises/<id>/favorite` | Yes | `favoriteCount`, how many coaches saved it, and `favorited`, whether you did. Its author can ask too |
 | `PUT /exercises/<id>/favorite`, `DELETE /exercises/<id>/favorite` | Yes, no plan needed | Saves or unsaves it for you, and answers like the above. You can't save your own. Saving twice changes nothing, and unsaving works even once it's gone |
+| `PUT /exercises/<id>/rating` | Yes, no plan needed | Takes `stars`, 1–5 or `null` to clear, and `updatedAt`, when it was rated on the phone. The newest rating wins: an older one arriving later changes nothing. Answers with the rating now stored. Works on your own exercises too |
+| `GET /ratings` | Yes, no plan needed | `ratings`, every exercise you rated, as `exerciseId`, `stars` and `updatedAt`. Cleared ones stay, with `stars` null |
 | `POST /exercises/<id>/report` | Yes | Takes an optional `reason`, up to 1000 characters. Hides it from you at once, and from everyone after 3 coaches report it. The first report emails `MODERATOR_EMAIL` |
 | `POST /users/<id>/block`, `DELETE /users/<id>/block` | Yes | Blocks or unblocks a coach, by the `ownerId` on their exercises |
 
@@ -74,11 +76,12 @@ every match, not just this page. `GET /library` and `GET /favorites` also give `
 | `focus`, `difficulty` | Matches any chosen value; repeat the parameter for more |
 | `players` | Fits the exercise's player range. An empty end of the range is open |
 | `search` | Title, description and custom tags, ignoring case and accents |
-| `sort` | `updated` (default), `title`, `difficulty` or `favorites` (most saved first), with the latest edit first within a tie |
+| `minRating` | 1–5. Only exercises you rated at least this high. Uses your own ratings, never other coaches' |
+| `sort` | `updated` (default), `title`, `difficulty`, `favorites` (most saved first) or `rating` (your best first, unrated last), with the latest edit first within a tie |
 | `lang` | Library only. The language the exercise was written in, such as `sv`, which also finds `sv-FI` |
 | `limit`, `offset` | Page size 1–100 (default 50), and where to start |
 
-Rating filters and sorting wait until ratings are on the server. Titles sort by a language-neutral
+Unknown parameters are ignored, so an app can send one this server doesn't know yet. Titles sort by a language-neutral
 alphabet, so Swedish `å`, `ä` and `ö` sort with `a` and `o`, unlike in the app.
 
 ### Rate limits
@@ -89,6 +92,7 @@ alphabet, so Swedish `å`, `ä` and `ö` sort with `a` and `o`, unlike in the ap
 | `POST /auth/email/start` | 30 an hour | IP address, or IPv6 /64 network |
 | `POST /auth/provider` | 60 an hour | IP address, or IPv6 /64 network |
 | `PUT /exercises/<id>` | 300 an hour | Coach |
+| `PUT /exercises/<id>/rating` | 1000 an hour | Coach |
 | `POST /exercises/<id>/report` | 20 an hour | Coach |
 | `POST /teams/<id>/sync` | 1200 an hour | Coach |
 | `GET /invites/<code>`, `POST /invites/<code>/accept` | 30 an hour | Coach |

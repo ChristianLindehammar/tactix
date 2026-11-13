@@ -117,7 +117,7 @@ def listing_response(build, viewer_id=None):
     """With a viewer, each exercise also carries its author's name, how many coaches saved it and
     whether the viewer did."""
     try:
-        where, params, order, limit, offset = build()
+        where, params, order, order_params, limit, offset = build()
     except InvalidFilter:
         return jsonify({'error': 'invalidFilter'}), 400
 
@@ -125,13 +125,13 @@ def listing_response(build, viewer_id=None):
     if viewer_id is None:
         rows = query_all(
             f'SELECT e.* FROM exercises e WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
-            [*params, limit, offset],
+            [*params, *order_params, limit, offset],
         )
     else:
         rows = query_all(
             f'SELECT e.*, u.display_name AS author_name, {FAVORITE_STATS} FROM exercises e '
             f'JOIN users u ON u.id = e.owner_id WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s',
-            [viewer_id, *params, limit, offset],
+            [viewer_id, *params, *order_params, limit, offset],
         )
     focus = _focus_by_exercise([row['id'] for row in rows])
     exercises = []

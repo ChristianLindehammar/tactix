@@ -26,6 +26,8 @@ DEFAULT_LIMITS = {
     'reports': (20, 3600),
     # Phones sync a shared team every 15 seconds while it's on screen, and after each change
     'teamSyncs': (1200, 3600),
+    # A coach's first sync after updating uploads every rating made on the phone so far
+    'ratings': (1000, 3600),
     # Stops anyone guessing invite codes
     'inviteLookups': (30, 3600),
 }

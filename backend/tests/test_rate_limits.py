@@ -6,7 +6,7 @@ from coachmate_api import create_app
 from coachmate_api.rate_limit import DEFAULT_LIMITS
 from tests.test_exercises import build_exercise, put
 
-LIMITS = {**DEFAULT_LIMITS, 'emailCodes': (100, 3600), 'emailCodesPerAddress': (2, 3600), 'saves': (2, 3600)}
+LIMITS = {**DEFAULT_LIMITS, 'emailCodes': (100, 3600), 'emailCodesPerAddress': (2, 3600), 'saves': (2, 3600), 'ratings': (2, 3600)}
 
 
 class Clock:
@@ -147,3 +147,25 @@ class TestSaving:
         codes = [limited.get(f"/exercises/{exercise['id']}", headers=me).status_code for _ in range(4)]
 
         assert codes == [200] * 4
+
+
+class TestRating:
+    def test_stops_one_coach_at_the_limit(self, limited, register):
+        author = register()
+        exercise = build_exercise()
+        put(limited, exercise, author)
+        me = register()
+
+        def rate(stars):
+            return limited.put(
+                f"/exercises/{exercise['id']}/rating",
+                json={'stars': stars, 'updatedAt': f'2026-11-13T10:0{stars}:00.000Z'},
+                headers=me,
+            )
+
+        rate(1)
+        rate(2)
+        response = rate(3)
+
+        assert response.status_code == 429
+        assert response.get_json() == {'error': 'rateLimited'}
