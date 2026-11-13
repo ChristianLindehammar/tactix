@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "id": "e2b6da1b-0d37-5fe9-a9ba-13215f798d69",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "4 mot 3 – hitta den fria",
+  "description": "Fyra anfallare startar på en linje strax bakom mittlinjen: en med boll i mitten, två kanter vid sidlinjerna och en släpande spelare snett bakom. Två försvarare väntar i 3-sekundersområdet, en högt och en under korgen. Den tredje försvararen startar bakom anfallarna, i höjd med straffkastlinjen på andra planhalvan, och får springa först när bollföraren tar första studsen.\n\nAnfallarna har ett övertag tills den tredje försvararen hunnit hem. Försvaret pressar bollen och skyddar korgen – någon anfallare är alltid fri, och det gäller att hitta hen med en extra passning. Efter anfallet byter grupperna roller.\n\nStegring: låt den sena försvararen starta närmare, så att anfallarna måste avgöra snabbare, eller spela vidare 4 mot 4 när den sena försvararen kommit hem. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Spring brett och djupt – utrymmet gör att försvaret inte kan täcka två spelare på en gång."
+    },
+    {
+      "id": "cp2",
+      "text": "Läs försvaret: den som lämnar en spelare öppnar en lucka någon annanstans."
+    },
+    {
+      "id": "cp3",
+      "text": "Ge den extra passningen från ett bra läge till ett ännu bättre."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: stoppa bollen, skydda korgen och rotera tillsammans – den sena försvararen springer mot korgen först."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar framåt, B och C springer brett och D följer efter. Z startar bakom anfallarna och sprintar hem. X och Y väntar vid korgen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.575,
+          "y": 0.48
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.46,
+          "endX": 0.56,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.46,
+          "endX": 0.87,
+          "endY": 0.3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.46,
+          "endX": 0.14,
+          "endY": 0.3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.62,
+          "label": "D"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.58,
+          "endX": 0.35,
+          "endY": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.62,
+          "endX": 0.72,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X möter A. Eftersom Z kommer från höger passar A till C på vänsterkanten, och Y kliver ut mot C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.32,
+          "endX": 0.2,
+          "endY": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.25,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.47,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.13,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.15,
+          "endX": 0.27,
+          "endY": 0.18
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.35,
+          "endX": 0.64,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y har lämnat korgen. D läser luckan och skär, C ger den extra passningen och D avslutar nära korgen.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.25,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.245,
+          "y": 0.29
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.28,
+          "endX": 0.4,
+          "endY": 0.2
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.32,
+          "endX": 0.41,
+          "endY": 0.19
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.25,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.27,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.15,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "id": "55fec35d-d440-5cfe-8d87-24ed34ebc0bb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Down screen to a jump shot",
+  "description": "A passer with the ball at the top, a shooter down on the block and a screener on the wing. The screener goes down towards the block and sets a screen with their back to the baseline. The shooter waits, takes a step in to set up the defender and then comes up tight off the screen to the wing, catches with feet ready and shoots straight away. The screener seals their defender or rolls to the basket once the shooter is past.\n\nThen add a defender on the shooter and let the shooter read: if the defender trails tight, the shooter curls around the screen towards the basket. If the defender cuts the corner above the screen, the shooter fades out to the corner. Switch roles after five shots and work both sides.\n\nThe diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Wait for the screen – don't go until the screener is set."
+    },
+    {
+      "id": "cp2",
+      "text": "Come off tight, shoulder to shoulder, so the defender gets caught."
+    },
+    {
+      "id": "cp3",
+      "text": "Feet ready and hands up before the ball arrives – catch and shoot in one motion."
+    },
+    {
+      "id": "cp4",
+      "text": "Read the defender: trailing tight = curl to the basket, cutting the corner = fade to the corner."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C comes down from the wing and sets a down screen for B on the block. A waits with the ball at the top.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.24,
+          "endX": 0.195,
+          "endY": 0.155
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B comes up tight off C to the wing and X gets caught on the screen. A passes.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.12,
+          "endX": 0.2,
+          "endY": 0.28
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.31,
+          "endX": 0.2,
+          "endY": 0.285
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots straight off the catch. C rolls to the basket for the rebound.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.245,
+          "y": 0.24
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.22,
+          "endX": 0.48,
+          "endY": 0.07
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.12,
+          "endX": 0.34,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Curl: X trails tight, so B curls around C towards the elbow and A passes there.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.15,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.13,
+          "endX": 0.37,
+          "endY": 0.22,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.41,
+          "endY": 0.23
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

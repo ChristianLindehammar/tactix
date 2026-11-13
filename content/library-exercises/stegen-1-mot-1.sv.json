@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "id": "51ac85b3-59eb-546d-95d4-f62a8f4207a5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Stegen – 1 mot 1 korg för korg",
+  "description": "Spela 1 mot 1 på alla korgar som finns, två spelare per korg. Korgarna rangordnas: korg 1 är högst upp på stegen och den sista korgen längst ner. Varje match är kort – först till två korgar (eller tre). Den som anfaller börjar utanför trepoängslinjen; efter en korg eller ett försvarat anfall byter spelarna roller.\n\nNär matchen är slut flyttar vinnaren upp en korg och förloraren ner en. Den som vinner på korg 1 stannar kvar, och den som förlorar på sista korgen stannar där. Kör flera omgångar på tid och se vem som står på korg 1 till slut.\n\nVarianter: max tre studsar per anfall, eller bara poäng på avslut från en viss zon. Med fler spelare än platser väntar en spelare per korg och tar förlorarens plats. Bilden visar två korgar men går lika bra med sidokorgar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: bestäm dig tidigt och attackera försvararens främre fot."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: en armlängd bort, tvinga åt ett håll och avsluta med retur."
+    },
+    {
+      "id": "cp3",
+      "text": "Korta matcher – varje boll är viktig, så spela med full intensitet direkt."
+    },
+    {
+      "id": "cp4",
+      "text": "Vinn eller förlora: byt korg snabbt så att nästa match kommer igång."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Två matcher pågår samtidigt: A mot X på den övre korgen (korg 1) och B mot Y på den nedre (korg 2).",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.34
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.315,
+          "endX": 0.62,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.66
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.685,
+          "endX": 0.38,
+          "endY": 0.87,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vann på korg 1 och stannar. X förlorade och går ner till korg 2. Y vann på korg 2 och flyttar upp; B förlorade på sista korgen och stannar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.195
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.3,
+          "endY": 0.7
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.785
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.83,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.8,
+          "endX": 0.71,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

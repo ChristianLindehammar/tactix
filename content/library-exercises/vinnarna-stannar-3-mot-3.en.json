@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 2,
+  "id": "0c8854d5-27d2-5d29-9859-e3622efe6abc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Score and hold the court – 3v3",
+  "description": "Play 3v3 half-court with at least three teams. One basket decides it: the team that scores wins and stays on the court, but switches to defence. The next team in line comes on to attack and the losers go to the back of the line at half-court. If the defence gets a stop – a rebound, a steal or a turnover – the teams just swap offence and defence, and whoever gets the ball must first take it out beyond the three-point line before the team may score.\n\nThe new offence always starts with the ball at the top. Count how many baskets in a row each team wins.\n\nVariations: two points from outside the arc, three passes before a shot, or a shot clock per possession. Colours show roles: blue attacks and red defends, so the winners change colour in the second diagram. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Talk on defence straight after the change – everyone needs someone to guard."
+    },
+    {
+      "id": "cp2",
+      "text": "Clear the ball beyond the arc before attacking again, or the basket doesn't count."
+    },
+    {
+      "id": "cp3",
+      "text": "Move without the ball: cut, set screens and fill empty spots."
+    },
+    {
+      "id": "cp4",
+      "text": "The line must be ready – the next team steps in the moment the basket drops."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B and C attack against X, Y and Z. B shoots and scores – A, B and C stay on.",
+      "markers": [
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.56,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.335
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.31,
+          "endX": 0.53,
+          "endY": 0.075
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A, B and C now defend (red). D, E and F come on and attack from the top; X, Y and Z go to the back of the line.",
+      "markers": [
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54,
+          "label": "E"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.51,
+          "endX": 0.17,
+          "endY": 0.32
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.54,
+          "label": "F"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.51,
+          "endX": 0.83,
+          "endY": 0.32
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C takes the rebound after a miss. The team must dribble the ball out beyond the three-point line before it may score.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.205
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.23,
+          "endX": 0.22,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.16,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.24,
+          "label": "F"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.13,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 2,
+  "id": "36621526-4bb6-58e6-b310-d267791ea7ce",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Gör mål och stå kvar – 3 mot 3",
+  "description": "Spela 3 mot 3 på halvplan med minst tre lag. En korg avgör: laget som gör poäng vinner och stannar kvar på planen, men byter till försvar. Nästa lag i kön kommer in och anfaller, och förlorarna går sist i kön vid mittlinjen. Gör försvaret en stopp – returen, en bollvinst eller en bolltapp – byter lagen bara anfall och försvar, och den som får bollen måste först föra ut den utanför trepoängslinjen innan laget får göra poäng.\n\nDet nya anfallet startar alltid med bollen på toppen. Räkna hur många korgar i rad varje lag vinner.\n\nVarianter: tvåpoängare från utanför bågen, krav på tre passningar innan skott, eller tidsgräns per anfall. Färgerna visar roller: blått anfaller och rött försvarar, så vinnarna byter färg i bild två. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Prata i försvaret direkt vid bytet – alla ska ha någon att vakta."
+    },
+    {
+      "id": "cp2",
+      "text": "Rensa bollen utanför bågen innan ni anfaller igen, annars räknas inte korgen."
+    },
+    {
+      "id": "cp3",
+      "text": "Röra utan boll: skär, sätt screen och fyll tomma platser."
+    },
+    {
+      "id": "cp4",
+      "text": "Kön ska vara redo – nästa lag kliver in direkt när korgen sitter."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 9,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B och C anfaller mot X, Y och Z. B skjuter och sätter korgen – A, B och C stannar kvar.",
+      "markers": [
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.56,
+          "label": "F"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.335
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.84,
+          "y": 0.31,
+          "endX": 0.53,
+          "endY": 0.075
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A, B och C försvarar nu (röda). D, E och F kommer in och anfaller från toppen; X, Y och Z går sist i kön.",
+      "markers": [
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.54,
+          "label": "E"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.51,
+          "endX": 0.17,
+          "endY": 0.32
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.54,
+          "label": "F"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.51,
+          "endX": 0.83,
+          "endY": 0.32
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.2,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C tar returen efter en miss. Laget måste dribbla ut bollen utanför trepoängslinjen innan det får göra poäng.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.205
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.23,
+          "endX": 0.22,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.16,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.24,
+          "label": "F"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.13,
+          "label": "B"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

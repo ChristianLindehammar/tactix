@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "id": "5ba0853d-f387-584c-84a8-f6cd359f4585",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Grab the ball in the middle",
+  "description": "Split the group into two teams, each lining up on its own sideline. Number the players in each team so every number exists in both teams. Each team attacks its own basket. A ball lies in the centre circle. The coach calls a number and the two players with that number sprint to the ball. Whoever gets it attacks their basket, the other one defends. A point to the team that scores; if the defender wins the ball they attack their own basket instead. Players go back to their spots and the coach puts out a new ball.\n\nCall two numbers for 2v2, or three for 3v3. Call out sums (\"two plus one!\") for younger players.\n\nVariation: players start sitting, lying down or with their backs to the court. In the diagrams A and X share a number, B and Y share one, C and Z share one. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Reaction: go on the first sound, not when you see the others move."
+    },
+    {
+      "id": "cp2",
+      "text": "Pick the ball up on the move and protect it with your body."
+    },
+    {
+      "id": "cp3",
+      "text": "If you get there second: turn straight back and defend the basket."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish calmly – a safe lay-up beats a rushed shot."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 1,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The coach calls the number B and Y share. Both sprint to the ball in the centre circle.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.5,
+          "endX": 0.39,
+          "endY": 0.5
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.5,
+          "endX": 0.61,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B got there first, picks up the ball and dribbles to their basket. Y chases and defends.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.355
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.33,
+          "endX": 0.48,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.37,
+          "endX": 0.56,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Two numbers: A and C against X and Z sprint in – 2v2 for the ball.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.35,
+          "endX": 0.37,
+          "endY": 0.45
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.65,
+          "endX": 0.37,
+          "endY": 0.55
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.35,
+          "endX": 0.63,
+          "endY": 0.45
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.65,
+          "endX": 0.63,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

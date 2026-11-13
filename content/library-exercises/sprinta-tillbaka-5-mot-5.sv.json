@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "id": "e5a9b906-b6d7-5de4-a61b-882ead3b8af5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sprinta hem – 5 mot 5 i omställning",
+  "description": "Spela 5 mot 5 på helplan med fokus på försvaret i omställningen. Så fort ett lag skjuter eller tappar bollen ska alla fem sprinta hem: närmaste spelaren stoppar bollen, de andra springer förbi bollen och skyddar korgen och 3-sekundersområdet, och sedan tar alla sin spelare när anfallet bromsar in.\n\nFör att göra det svårare ropar tränaren namnet på två spelare i laget som just skjutit. De måste springa och nudda baslinjen under den korg de anfallit innan de får springa hem. Då försvarar laget först 3 mot 5 eller 4 mot 5 tills de två kommer ikapp. Poäng: försvaret får en poäng för varje stopp i omställningen och anfallet en poäng för en korg, så det lönar sig att stoppa bollen.\n\nSpela i omgångar på fyra–fem minuter och byt till fler eller färre spelare som ska nudda baslinjen. Med fler än tio spelare byter ett nytt lag in efter varje omgång. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sprinta hem längs mittvägen – titta på bollen över axeln medan du springer."
+    },
+    {
+      "id": "cp2",
+      "text": "Stoppa bollen först: kliv framför bolldribblaren och tvinga hen att bromsa eller passa."
+    },
+    {
+      "id": "cp3",
+      "text": "Skydda korgen: de första hemma tar 3-sekundersområdet, inte närmaste anfallare."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata och hitta din spelare när anfallet stannat – \"jag har bollen!\", \"jag tar 5:an!\"."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "transition",
+    "conditioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skjuter. Tränaren ropar på D och E – de ska nudda baslinjen innan de springer hem.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.31,
+          "label": "V"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.89,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.16,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.385,
+          "endX": 0.515,
+          "endY": 0.08
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.47,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "V har returen och dribblar upp i mitten, W och X springer kanterna. A, B och C sprintar hem; D och E springer hem efter att ha nuddat baslinjen.",
+      "markers": [
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "V"
+        },
+        {
+          "id": "bv",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.505
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.54,
+          "endX": 0.5,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.4,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.845,
+          "y": 0.44,
+          "endX": 0.86,
+          "endY": 0.66
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.155,
+          "y": 0.44,
+          "endX": 0.14,
+          "endY": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.365,
+          "y": 0.7,
+          "endX": 0.43,
+          "endY": 0.8
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.685,
+          "y": 0.42,
+          "endX": 0.66,
+          "endY": 0.7
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.34,
+          "endX": 0.27,
+          "endY": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.115,
+          "endX": 0.76,
+          "endY": 0.3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.115,
+          "endX": 0.2,
+          "endY": 0.25
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.14,
+          "label": "Z"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.53,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A har stoppat bollen, B och C skyddar korgen. D och E kommer ikapp och tar Y och Z – nu är det 5 mot 5 igen.",
+      "markers": [
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "V"
+        },
+        {
+          "id": "bv",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.59
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.72,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.795,
+          "y": 0.375,
+          "endX": 0.73,
+          "endY": 0.54
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "E"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.205,
+          "y": 0.375,
+          "endX": 0.27,
+          "endY": 0.54
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.06,
+          "y": 0.53,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

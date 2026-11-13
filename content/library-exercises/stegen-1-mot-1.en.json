@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "id": "1d4867b2-1bd2-5696-b60e-42fedbaf2821",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "The ladder – 1v1 basket by basket",
+  "description": "Play 1v1 on every basket you have, two players per basket. Rank the baskets: basket 1 is the top of the ladder and the last basket is the bottom. Each game is short – first to two baskets (or three). The attacker starts outside the three-point line; after a basket or a stop the players switch roles.\n\nWhen a game is over the winner moves up one basket and the loser moves down one. The winner on basket 1 stays put, and the loser on the last basket stays there. Play several rounds against the clock and see who is on basket 1 at the end.\n\nVariations: max three dribbles per possession, or points only for finishes from a certain zone. With more players than spots, one player waits at each basket and takes the loser's place. The diagram shows two baskets but it works just as well with side baskets. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: decide early and go at the defender's lead foot."
+    },
+    {
+      "id": "cp2",
+      "text": "Defence: an arm's length away, push them one way and finish with the rebound."
+    },
+    {
+      "id": "cp3",
+      "text": "Short games – every possession matters, so go full intensity from the start."
+    },
+    {
+      "id": "cp4",
+      "text": "Win or lose: change baskets quickly so the next game gets going."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Two games at the same time: A against X on the top basket (basket 1) and B against Y on the bottom one (basket 2).",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.34
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.315,
+          "endX": 0.62,
+          "endY": 0.13,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.66
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.685,
+          "endX": 0.38,
+          "endY": 0.87,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A won on basket 1 and stays. X lost and goes down to basket 2. Y won on basket 2 and moves up; B lost on the last basket and stays.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.13,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.195
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.3,
+          "endY": 0.7
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.85,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.785
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.83,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.8,
+          "endX": 0.71,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

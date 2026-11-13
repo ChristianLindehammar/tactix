@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "id": "c905ef75-bf09-5217-829c-ed9d5cb24ed8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Elva i rullning – 3 mot 2 fram och tillbaka",
+  "description": "Elva spelare på helplan. Vid varje korg står två försvarare, en i höjd med straffkastlinjen och en under korgen. Vid varje planhalva står också två passningsspelare, en vid varje sidlinje i höjd med straffkastlinjen. De tre sista spelarna anfaller 3 mot 2 mot ena korgen.\n\nNär anfallet är slut – korg, retur eller bolltapp – tar en av försvararna bollen (vid korg med inkast bakom baslinjen) och passar ut till en av passningsspelarna. Den som passade och de två passningsspelarna blir nya anfallare och kör 3 mot 2 mot andra korgen. Två av de gamla anfallarna stannar som nya försvarare, och den tredje anfallaren och den andra försvararen tar platserna vid sidlinjerna. Övningen rullar utan stopp.\n\nStegring: räkna korgar och sätt en tidsgräns, till exempel högst sju sekunder per anfall. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: bollen i mitten, kanterna brett – avgör snabbt med en eller två passningar."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: den främre stoppar bollen, den bakre tar första passningen. Prata hela tiden."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta returen och leta direkt efter passningsspelaren – första passningen startar nästa anfall."
+    },
+    {
+      "id": "cp4",
+      "text": "Passningsspelarna står redo med händerna uppe och sprintar iväg i samma stund som de tar emot."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "attack",
+    "defence",
+    "conditioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 11,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A, B och C anfaller 3 mot 2 mot X och Y. A passar ut till B och X kliver mot bollen. Vid andra korgen väntar Z och W, och D, E, F och G står vid sidlinjerna.",
+      "markers": [
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "W"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.8,
+          "label": "G"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.4
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.39,
+          "endX": 0.79,
+          "endY": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.26,
+          "endX": 0.66,
+          "endY": 0.245
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11,
+          "label": "Y"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.2,
+          "label": "E"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skjuter. Försvararna tar returen – eller bollen bakom baslinjen om det blev korg.",
+      "markers": [
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "W"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.8,
+          "label": "G"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.245
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.225,
+          "endX": 0.53,
+          "endY": 0.07
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.2,
+          "label": "E"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y har bollen och passar ut till D. Y och E sprintar iväg. A och B stannar som nya försvarare, C och X går till platserna vid sidlinjerna.",
+      "markers": [
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "W"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.8,
+          "label": "G"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "by",
+          "type": "ball",
+          "x": 0.355,
+          "y": 0.08
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.09,
+          "endX": 0.11,
+          "endY": 0.18
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.16,
+          "endX": 0.26,
+          "endY": 0.52
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.2,
+          "label": "E"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.93,
+          "y": 0.25,
+          "endX": 0.92,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D, Y och E anfaller 3 mot 2 mot Z och W, som sedan passar ut till F eller G – och nästa anfall går mot A och B.",
+      "markers": [
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "W"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.8,
+          "label": "F"
+        },
+        {
+          "id": "g",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.8,
+          "label": "G"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.52
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.55,
+          "endX": 0.57,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.52,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.56,
+          "endX": 0.18,
+          "endY": 0.7
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.52,
+          "label": "E"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.56,
+          "endX": 0.82,
+          "endY": 0.7
+        },
+        {
+          "id": "a",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.2,
+          "label": "X"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 2,
+  "id": "b393b3bf-70fb-515a-b589-b4fa85f91356",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "2 mot 1 med jagare i hälarna",
+  "description": "Helplan. En försvarare X väntar vid korgen på andra sidan. Två anfallare startar vid egen straffkastlinje, en med boll. En andra försvarare, jagaren Y, startar några meter bakom dem vid baslinjen. När anfallaren tar första studsen springer alla: anfallarna mot korgen och Y efter dem.\n\nDet är 2 mot 1 så länge anfallarna håller farten. Tvekar de blir det 2 mot 2 när Y hinner ikapp, och då spelar man klart. Efter anfallet går anfallarna och försvararna till varsin kö, och nästa grupp startar från andra hållet.\n\nAnpassa avståndet till jagaren efter nivån: längre bakom ger lättare 2 mot 1, närmare tvingar fram ett snabbare avslut. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollföraren går rakt mot korgen och tvingar försvararen att bestämma sig."
+    },
+    {
+      "id": "cp2",
+      "text": "Medspelaren håller avståndet – bred och lite före, inte bredvid bollföraren."
+    },
+    {
+      "id": "cp3",
+      "text": "Avgör på högst två passningar; jagaren är på väg."
+    },
+    {
+      "id": "cp4",
+      "text": "Jagaren sprintar mot korgen först och letar sedan efter bollen – inte tvärtom."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar och B springer brett. Y startar några meter bakom och jagar. X väntar vid korgen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.395,
+          "y": 0.74
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.72,
+          "endX": 0.44,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.74,
+          "endX": 0.78,
+          "endY": 0.46
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.88,
+          "endX": 0.56,
+          "endY": 0.72
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X kliver upp mot A, som passar till B på kanten. Y kommer bakifrån.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.515,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.31,
+          "endX": 0.75,
+          "endY": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.55,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.51,
+          "endX": 0.64,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B driver in och lägger upp innan Y hinner fram. Var de för långsamma blir det 2 mot 2.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.705,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.21,
+          "endX": 0.6,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.105,
+          "endX": 0.525,
+          "endY": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.6,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

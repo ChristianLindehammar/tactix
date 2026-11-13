@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 2,
+  "id": "3c49d62d-263b-5997-9427-b855a6a15bcc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Bli spelbar på kanten – V-skär och L-skär",
+  "description": "Tre spelare per korg: en passare med boll på toppen utanför trepoängslinjen, en anfallare på kanten och en försvarare som står tätt och nekar passningen. Anfallaren ska bli spelbar. Med ett V-skär går anfallaren lugnt in mot blocket och tar med sig försvararen, sätter ner foten och exploderar tillbaka ut mot kanten med handen uppe som mål för passningen. Med ett L-skär startar anfallaren vid blocket, går upp längs 3-sekundersområdet till armbågshöjd och svänger sedan rakt ut mot kanten.\n\nNär bollen är fångad vänder anfallaren upp mot korgen i hotposition (skott, dribbling eller passning) och spelar 1 mot 1. Rotation: passare blir anfallare, anfallare blir försvarare, försvarare ställer sig sist bakom passaren.\n\nLättare: försvararen nekar bara passningen och spelet slutar vid mottagningen. Svårare: passaren får bara passa om anfallaren är helt fri, annars börjar skäret om. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Långsamt in, snabbt ut – det är fartskillnaden som gör dig fri."
+    },
+    {
+      "id": "cp2",
+      "text": "Sätt ner yttre foten hårt i vändningen och ta försvararen med dig in innan du drar ut."
+    },
+    {
+      "id": "cp3",
+      "text": "Visa en tydlig hand som mål och möt bollen – vänta inte på den."
+    },
+    {
+      "id": "cp4",
+      "text": "Landa i hotposition med blicken mot korgen innan du väljer skott, dribbling eller passning."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "V-skär: A går lugnt in mot blocket och tar med sig X. B väntar med bollen på toppen, C är nästa på tur.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.22,
+          "endX": 0.25,
+          "endY": 0.12
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A sätter ner foten och exploderar ut mot kanten med handen uppe. B passar när A har vunnit steget.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.37,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.15,
+          "endX": 0.15,
+          "endY": 0.25
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.31,
+          "endX": 0.18,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A vänder upp i hotposition och spelar 1 mot 1 – här driver A längs baslinjen när X kommer sent.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.19
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.31,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.17,
+          "endX": 0.42,
+          "endY": 0.075,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "L-skär: A startar vid blocket, går upp längs 3-sekundersområdet och svänger rakt ut mot kanten för passningen.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "C"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.13,
+          "endX": 0.3,
+          "endY": 0.23
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.24,
+          "endX": 0.14,
+          "endY": 0.24
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.31,
+          "endX": 0.17,
+          "endY": 0.27
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

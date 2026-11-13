@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "id": "bc7bb560-86ac-50dd-b143-b52c8d4cb088",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sprint back – 5v5 transition defence",
+  "description": "Play 5v5 full-court with the focus on transition defence. As soon as a team shoots or loses the ball all five must sprint back: the nearest player stops the ball, the others run past the ball to protect the basket and the lane, and then everyone picks up a player when the offence slows down.\n\nTo make it harder the coach calls the names of two players on the team that just shot. They must run and touch the baseline under the basket they attacked before they can sprint back. The team then defends 3v5 or 4v5 until the two catch up. Scoring: the defence gets a point for every stop in transition and the offence a point for a basket, so stopping the ball pays off.\n\nPlay rounds of four to five minutes and change how many players must touch the baseline. With more than ten players a new team comes on after each round. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sprint back through the middle – look at the ball over your shoulder as you run."
+    },
+    {
+      "id": "cp2",
+      "text": "Stop the ball first: get in front of the dribbler and force them to slow down or pass."
+    },
+    {
+      "id": "cp3",
+      "text": "Protect the basket: the first players back take the lane, not the nearest attacker."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk and find your player once the offence stops – \"I've got ball!\", \"I've got the big!\"."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 5,
+  "focus": [
+    "defence",
+    "transition",
+    "conditioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots. The coach calls D and E – they must touch the baseline before sprinting back.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.31,
+          "label": "V"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.89,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.08,
+          "label": "Y"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.16,
+          "label": "E"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.385,
+          "endX": 0.515,
+          "endY": 0.08
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.47,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "V has the rebound and dribbles up the middle, W and X run the wings. A, B and C sprint back; D and E run back after touching the baseline.",
+      "markers": [
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "V"
+        },
+        {
+          "id": "bv",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.505
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.54,
+          "endX": 0.5,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.4,
+          "label": "W"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.845,
+          "y": 0.44,
+          "endX": 0.86,
+          "endY": 0.66
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.155,
+          "y": 0.44,
+          "endX": 0.14,
+          "endY": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.35,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.365,
+          "y": 0.7,
+          "endX": 0.43,
+          "endY": 0.8
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.685,
+          "y": 0.42,
+          "endX": 0.66,
+          "endY": 0.7
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "r5",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.34,
+          "endX": 0.27,
+          "endY": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.08,
+          "label": "D"
+        },
+        {
+          "id": "r6",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.115,
+          "endX": 0.76,
+          "endY": 0.3
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.08,
+          "label": "E"
+        },
+        {
+          "id": "r7",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.115,
+          "endX": 0.2,
+          "endY": 0.25
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.14,
+          "label": "Z"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.53,
+          "label": "L"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A has stopped the ball, B and C protect the basket. D and E catch up and pick up Y and Z – it is 5v5 again.",
+      "markers": [
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "V"
+        },
+        {
+          "id": "bv",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.59
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.72,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.84,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.48,
+          "label": "Z"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.795,
+          "y": 0.375,
+          "endX": 0.73,
+          "endY": 0.54
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.34,
+          "label": "E"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.205,
+          "y": 0.375,
+          "endX": 0.27,
+          "endY": 0.54
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.06,
+          "y": 0.53,
+          "label": "L"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

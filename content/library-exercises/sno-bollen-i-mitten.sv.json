@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "id": "912d1539-5b1b-5599-bd7b-48268b5c94db",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Sno bollen i mitten",
+  "description": "Dela gruppen i två lag som ställer sig på var sin sidlinje. Spelarna i varje lag numreras, så att varje nummer finns i båda lagen. Varje lag anfaller en egen korg. En boll ligger i mittcirkeln. Tränaren ropar ett nummer och de två spelarna med det numret sprintar mot bollen. Den som får bollen anfaller sin korg, den andra blir försvarare. Poäng till laget som gör korg; tar försvararen bollen anfaller hen i stället mot sin korg. Spelarna går tillbaka till sin plats och tränaren lägger ut en ny boll.\n\nRopa två nummer så blir det 2 mot 2, eller tre nummer för 3 mot 3. Ropa gärna matematik (\"två plus ett!\") för de yngre.\n\nVariant: spelarna startar sittande, liggande eller med ryggen mot planen. I bilderna har A och X samma nummer, B och Y samma, C och Z samma. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Reaktion: starta på första ljudet, inte när du ser de andra springa."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta bollen i farten och skydda den med kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Kommer du tvåa: vänd direkt hem och försvara korgen."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta lugnt – en säker lay-up är bättre än ett stressat skott."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 1,
+  "focus": [
+    "conditioning",
+    "ballControl",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Tränaren ropar numret som B och Y har. Båda sprintar mot bollen i mittcirkeln.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.5,
+          "endX": 0.39,
+          "endY": 0.5
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.5,
+          "endX": 0.61,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B var först, tar bollen och dribblar mot sin korg. Y jagar och försvarar.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.355
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.33,
+          "endX": 0.48,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.37,
+          "endX": 0.56,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Två nummer: A och C mot X och Z sprintar in – 2 mot 2 om bollen.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.63,
+          "label": "L"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.66,
+          "label": "Z"
+        },
+        {
+          "id": "bm",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.35,
+          "endX": 0.37,
+          "endY": 0.45
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.115,
+          "y": 0.65,
+          "endX": 0.37,
+          "endY": 0.55
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.35,
+          "endX": 0.63,
+          "endY": 0.45
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.885,
+          "y": 0.65,
+          "endX": 0.63,
+          "endY": 0.55
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

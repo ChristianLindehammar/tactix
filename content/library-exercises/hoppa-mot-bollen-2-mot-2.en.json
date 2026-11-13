@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "id": "97d76bc2-1570-5de6-a8df-fc5d2c3a0a78",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Jump to the ball – 2v2",
+  "description": "Two attackers, one at the top and one on the wing, against two defenders. Step one is passing only: the attackers pass back and forth and the defenders may not take the ball. While the ball is in the air both defenders move – \"jump\" – in the direction of the ball. The one guarding the receiver goes to the ball with pressure, and the one who was guarding the passer sinks towards the ball and the basket into help position. When the ball comes back they switch again: the helper closes out and the other steps up into the passing lane to deny.\n\nAfter five or six passes the coach calls \"live\" and it becomes full 2v2 until the defence wins the ball or the offence scores. Switch roles and sides after each possession; the other pairs wait at half-court.\n\nVariations: use two wings instead (the help spot is then in the middle of the lane), or let the attackers cut to the basket after passing. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move while the ball is in the air – not once it has landed."
+    },
+    {
+      "id": "cp2",
+      "text": "One pass away: deny with your hand and foot in the passing lane, seeing both ball and player."
+    },
+    {
+      "id": "cp3",
+      "text": "Help: one step towards the ball and one towards the basket, so you can stop a drive in time."
+    },
+    {
+      "id": "cp4",
+      "text": "Talk loudly: \"ball!\", \"deny!\", \"help!\"."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B. While the ball is in the air X jumps towards the ball into help position and Y steps up to the ball handler B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.29,
+          "label": "Y"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.645,
+          "y": 0.395,
+          "endX": 0.83,
+          "endY": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.285,
+          "endX": 0.585,
+          "endY": 0.215
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.27,
+          "endX": 0.785,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes back to A. X closes out on A and Y jumps up into the passing lane to deny.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.59,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.785,
+          "y": 0.35
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.235,
+          "label": "Y"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.355,
+          "endX": 0.565,
+          "endY": 0.4
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.575,
+          "y": 0.235,
+          "endX": 0.515,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.765,
+          "y": 0.26,
+          "endX": 0.725,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The coach calls \"live\": B drives past Y along the baseline and X steps across from help to stop the drive.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.235
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.875,
+          "y": 0.21,
+          "endX": 0.79,
+          "endY": 0.08,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.575,
+          "y": 0.185,
+          "endX": 0.67,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "id": "5a54be45-4acd-5d77-ba57-822b7146a335",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Nedåtscreen till hoppskott",
+  "description": "En passare med boll på toppen, en skytt nere vid blocket och en screenare på kanten. Screenaren går ner mot blocket och ställer en screen med ryggen mot baslinjen. Skytten väntar, tar ett steg in för att sätta upp försvararen och kommer sedan upp tätt förbi screenen ut mot kanten, fångar med fötterna redo och skjuter direkt. Screenaren tätar mot sin försvarare eller rullar mot korgen när skytten är förbi.\n\nLägg sedan till en försvarare på skytten och låt skytten läsa: följer försvararen tätt bakom, svänger skytten runt screenen in mot korgen (curl). Tar försvararen en genväg ovanför screenen, backar skytten ut mot hörnet (fade). Byt roller efter fem skott och kör på båda sidor.\n\nBilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vänta på screenen – gå inte förrän screenaren står still."
+    },
+    {
+      "id": "cp2",
+      "text": "Kom ut tätt förbi screenaren, axel mot axel, så att försvararen fastnar."
+    },
+    {
+      "id": "cp3",
+      "text": "Fötterna redo och händerna uppe innan bollen kommer – fånga och skjut i en rörelse."
+    },
+    {
+      "id": "cp4",
+      "text": "Läs försvararen: tätt bakom = curl mot korgen, genväg = fade ut mot hörnet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C går ner från kanten och ställer en nedåtscreen för B vid blocket. A väntar med bollen på toppen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.24,
+          "endX": 0.195,
+          "endY": 0.155
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B kommer upp tätt förbi C ut mot kanten och X fastnar i screenen. A passar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.12,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.12,
+          "endX": 0.2,
+          "endY": 0.28
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.31,
+          "endX": 0.2,
+          "endY": 0.285
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt från fångsten. C rullar mot korgen och tar returen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.245,
+          "y": 0.24
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "C"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.22,
+          "endX": 0.48,
+          "endY": 0.07
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.12,
+          "endX": 0.34,
+          "endY": 0.05
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Curl: X följer tätt bakom, så B svänger runt C in mot armbågen och A passar dit.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.15,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.13,
+          "endX": 0.37,
+          "endY": 0.22,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.41,
+          "endY": 0.23
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

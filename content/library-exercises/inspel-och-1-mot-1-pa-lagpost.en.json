@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "84e4ec27-ff88-5a78-ae8d-b4fca064058d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Entry pass and 1v1 on the low post",
+  "description": "A wing passer with the ball, a post player on the block and a post defender. The post player works deep, sits into the defender low and wide, and shows a target hand on the open side. The passer reads the defence: a bounce pass past the defender when they play behind or on the side, a lob over the top when they front and the space behind is open.\n\nOn the catch the post player feels where the defender is and plays 1v1: a drop step to the open side and a two-foot power finish, or a shot fake and step through (up-and-under). If a help defender comes, the post kicks it out to the wing, who has relocated to a new shooting spot. Switch roles after three attempts.\n\nStart without live defence so the entry and footwork are solid. Progression: add a help defender from the other side who can double when they like. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Post: low and wide, seat and forearm into the defender – catch with two hands and chin the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Entry: pass to the target hand, away from the defender. Bounce when they play behind, lob when they front."
+    },
+    {
+      "id": "cp3",
+      "text": "Feel the defender before you turn: drop step to the side they are not on."
+    },
+    {
+      "id": "cp4",
+      "text": "Passer: relocate after the entry so you are an open kick-out if help comes."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A seals deep on the block with X behind. B makes a bounce entry away from X. C waits at the top.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.165,
+          "y": 0.24,
+          "endX": 0.245,
+          "endY": 0.15
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X is on A's high side – A drop steps to the baseline and finishes off two feet at the rim.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.175
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.085,
+          "endX": 0.46,
+          "endY": 0.065,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y comes to help. B has relocated above the three-point line and A kicks it out for the shot.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.11,
+          "y": 0.35,
+          "endX": 0.19,
+          "endY": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.175
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.265,
+          "y": 0.21,
+          "endX": 0.21,
+          "endY": 0.415
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

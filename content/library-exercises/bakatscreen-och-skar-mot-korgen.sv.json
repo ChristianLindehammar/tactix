@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "b2685ca2-63fc-544b-84ae-e08145d421c0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Bakåtscreen – skär mot korgen",
+  "description": "Tre anfallare: en guard med boll på toppen, en spelare på kanten och en screenare vid armbågen. Screenaren går ut och ställer sig på korgsidan av kantspelaren (bakåtscreen). Kantspelaren tar ett steg ut för att sätta upp skäret och skär sedan tätt förbi screenarens axel rakt mot korgen. Guarden passar till skäraren för lay-up. Direkt efter skäret vänder screenaren upp och poppar ut mot trepoängslinjen – det är andra alternativet om försvaret byter eller hjälper.\n\nKör först 3 mot 0 åt båda hållen, sedan 2 mot 2 med guard och skärare mot två försvarare och till sist skarpt 3 mot 3 där anfallet ska använda screenen men får spela fritt efteråt. Rotera positioner efter varje anfall.\n\nBilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Screenare: stå still, bred och med armarna in till kroppen – en rörlig screen är foul."
+    },
+    {
+      "id": "cp2",
+      "text": "Skärare: vänta på screenen, sätt upp skäret och skär så tätt förbi screenaren att ingen får plats emellan."
+    },
+    {
+      "id": "cp3",
+      "text": "Guard: passa till skärarens yttre hand när hen har kommit förbi försvararen – inte för tidigt."
+    },
+    {
+      "id": "cp4",
+      "text": "Screenaren är ofta den som blir fri – vänd upp och var redo för skott."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C går från armbågen ut och ställer en bakåtscreen på korgsidan av B. A håller bollen på toppen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.205,
+          "endX": 0.28,
+          "endY": 0.255
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B skär tätt förbi C:s axel mot korgen och A passar för lay-up.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.25,
+          "endX": 0.39,
+          "endY": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.29,
+          "endX": 0.42,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Andra alternativet: C poppar ut mot trepoängslinjen och A passar för skott.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.29,
+          "endX": 0.15,
+          "endY": 0.32
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.385,
+          "y": 0.33,
+          "endX": 0.18,
+          "endY": 0.335
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Skarpt 3 mot 3: C screenar Y och B skär mot korgen. Läs försvaret – är B täckt, sök C eller spela vidare.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.215,
+          "endX": 0.285,
+          "endY": 0.255
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.24,
+          "endX": 0.35,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

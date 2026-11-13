@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "id": "7955b324-c6b5-5da8-8885-d56aa8662868",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Hoppa mot bollen – 2 mot 2",
+  "description": "Två anfallare, en på toppen och en på kanten, mot två försvarare. Steg ett är bara passningar: anfallarna passar fram och tillbaka och försvararna får inte ta bollen. Medan bollen är i luften ska båda försvararna förflytta sig – \"hoppa\" – i bollens riktning. Den som vaktar mottagaren går till bollhållaren med tryck, och den som vaktade passaren sjunker mot bollen och korgen till hjälpposition. När bollen går tillbaka byter de igen: hjälpen går ut med closeout och den andra kliver upp i passningsvägen och nekar.\n\nEfter fem–sex passningar ropar tränaren \"spela\" och det blir skarpt 2 mot 2 tills försvaret tar bollen eller anfallet gör poäng. Byt roller och sida efter varje anfall; övriga par väntar vid mittlinjen.\n\nVarianter: kör med två kantspelare i stället (då blir hjälppositionen mitt i 3-sekundersområdet), eller låt anfallarna skära mot korgen efter passningen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Flytta dig när bollen är i luften – inte när den redan har landat."
+    },
+    {
+      "id": "cp2",
+      "text": "En passning bort: neka med handen och foten i passningsvägen, se både boll och spelare."
+    },
+    {
+      "id": "cp3",
+      "text": "Hjälp: ett steg mot bollen och ett mot korgen, så att du hinner stoppa en drivning."
+    },
+    {
+      "id": "cp4",
+      "text": "Kommunicera högt: \"boll!\", \"neka!\", \"hjälp!\"."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B. Medan bollen är i luften hoppar X mot bollen till hjälpposition och Y kliver fram till bollhållaren B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.29,
+          "label": "Y"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.645,
+          "y": 0.395,
+          "endX": 0.83,
+          "endY": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.285,
+          "endX": 0.585,
+          "endY": 0.215
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.27,
+          "endX": 0.785,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tillbaka till A. X går ut med closeout på A och Y hoppar upp i passningsvägen och nekar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.59,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.785,
+          "y": 0.35
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.235,
+          "label": "Y"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.355,
+          "endX": 0.565,
+          "endY": 0.4
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.575,
+          "y": 0.235,
+          "endX": 0.515,
+          "endY": 0.32
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.765,
+          "y": 0.26,
+          "endX": 0.725,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Tränaren ropar \"spela\": B driver förbi Y längs baslinjen och X kliver in från hjälpen och stoppar drivningen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.235
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.875,
+          "y": 0.21,
+          "endX": 0.79,
+          "endY": 0.08,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.575,
+          "y": 0.185,
+          "endX": 0.67,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

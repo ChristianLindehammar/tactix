@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "id": "7e98d575-642e-5d54-bd90-624ecd339e3f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Hinn först till posten – försvara flashen",
+  "description": "Tränaren står på kanten med bollen. Anfallaren startar på svaga sidan och försvararen står i hjälpposition i 3-sekundersområdet. På tränarens signal flashar anfallaren – skär snabbt in mot bollen – antingen upp till höga posten vid straffkastlinjen eller tvärs över till låga posten på bollsidan. Försvararen ska hinna först till platsen, ställa sig mellan bollen och anfallaren och ta emot med kroppen så att anfallaren inte får sin plats.\n\nTränaren passar bara när anfallaren är fri. Så fort anfallaren tar emot är det skarpt 1 mot 1 mot korgen. Tre försök var, sedan byter paret roller. Övriga par väntar vid baslinjen. Byt sida så att flashen kommer från båda håll.\n\nStegring: lägg till en kantspelare som passar i stället för tränaren, och låt anfallaren välja hög eller låg flash själv. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Se både boll och anfallare från hjälpen – då ser du flashen innan den börjar."
+    },
+    {
+      "id": "cp2",
+      "text": "Möt anfallaren tidigt med kroppen; låt hen inte springa fritt genom 3-sekundersområdet."
+    },
+    {
+      "id": "cp3",
+      "text": "Hand och fot i passningsvägen när du nekar, den andra handen känner på anfallaren."
+    },
+    {
+      "id": "cp4",
+      "text": "Går passningen ändå fram: kliv direkt mellan anfallaren och korgen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A flashar upp mot höga posten. X hinner först, kliver in mellan bollen och A och nekar.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.225,
+          "endX": 0.42,
+          "endY": 0.265
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.14,
+          "endX": 0.53,
+          "endY": 0.205
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Låg flash: A skär tvärs över mot låga posten på bollsidan. X tar emot A med kroppen och ligger på bollsidan.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.175,
+          "y": 0.11,
+          "endX": 0.56,
+          "endY": 0.11
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.435,
+          "y": 0.195,
+          "endX": 0.65,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A blev fri vid straffkastlinjen och tränaren passar. X kliver ner mellan A och korgen – nu är det 1 mot 1.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.295,
+          "endX": 0.52,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.175,
+          "endX": 0.49,
+          "endY": 0.165
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

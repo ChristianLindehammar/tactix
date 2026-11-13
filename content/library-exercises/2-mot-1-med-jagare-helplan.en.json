@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 2,
+  "id": "0d2c9611-1137-51ff-a878-52c8fa955071",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "2v1 with a chaser on your heels",
+  "description": "Full court. One defender X waits at the far basket. Two attackers start at their own free-throw line, one with the ball. A second defender, the chaser Y, starts a few metres behind them on the baseline. When the attacker takes the first dribble everyone goes: the attackers to the basket and Y after them.\n\nIt is 2v1 as long as the attackers keep the pace. If they hesitate it turns into 2v2 when Y catches up, and then they play it out. After the attack, attackers and defenders go to their own lines and the next group starts from the other end.\n\nAdjust the head start to the level: further back makes the 2v1 easier, closer forces a quicker finish. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The ball handler goes straight at the basket and forces the defender to commit."
+    },
+    {
+      "id": "cp2",
+      "text": "The partner keeps the spacing – wide and slightly ahead, not alongside the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Finish within two passes; the chaser is coming."
+    },
+    {
+      "id": "cp4",
+      "text": "The chaser sprints to the basket first and then finds the ball – not the other way round."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles and B runs wide. Y starts a few metres behind and chases. X waits at the basket.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.395,
+          "y": 0.74
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.72,
+          "endX": 0.44,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.74,
+          "endX": 0.78,
+          "endY": 0.46
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.92,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.88,
+          "endX": 0.56,
+          "endY": 0.72
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X steps up to A, who passes to B on the wing. Y comes from behind.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.515,
+          "y": 0.32
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.31,
+          "endX": 0.75,
+          "endY": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.55,
+          "y": 0.55,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.51,
+          "endX": 0.64,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B drives and lays it in before Y arrives. If they were too slow it becomes 2v2.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.705,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.21,
+          "endX": 0.6,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.105,
+          "endX": 0.525,
+          "endY": 0.065
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.6,
+          "endY": 0.33
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

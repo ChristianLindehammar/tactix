@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "b8bbe240-4597-5350-85e1-366102be0840",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Inspel och 1 mot 1 på lågposten",
+  "description": "En inspelare på kanten med boll, en postspelare på blocket och en försvarare på posten. Postspelaren jobbar sig djupt, sätter sätet i försvararen, låg och bred, och visar en hand på den sida som är fri. Inspelaren väljer passning efter försvaret: studspassning förbi försvararen när hen står bakom eller på sidan, lobb över när hen frontar och korgen bakom är fri.\n\nNär bollen är fångad känner postspelaren efter var försvararen är och spelar 1 mot 1: drop step åt det fria hållet och kraftavslut med två fötter, eller finta skott och kliv igenom (up-and-under). Kommer en hjälpförsvarare passar postspelaren ut till inspelaren, som har flyttat sig till en ny skottposition. Byt roller efter tre försök.\n\nBörja utan aktivt försvar så att inspelen och fotarbetet sitter. Stegring: låt en extra försvarare från andra sidan hjälpa när hen vill. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Post: låg och bred, säte och underarm i försvararen – fånga med två händer och skydda bollen under hakan."
+    },
+    {
+      "id": "cp2",
+      "text": "Inspel: passa till handen som visas, bort från försvararen. Studs när hen står bakom, lobb när hen frontar."
+    },
+    {
+      "id": "cp3",
+      "text": "Känn försvararen innan du vänder: drop step åt det håll där hen inte står."
+    },
+    {
+      "id": "cp4",
+      "text": "Inspelare: flytta dig efter passningen så att du blir ett fritt utspel om hjälpen kommer."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 5,
+  "focus": [
+    "attack",
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A sätter sig djupt på blocket med X bakom sig. B spelar in med en studspassning bort från X. C väntar på toppen.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.15,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.165,
+          "y": 0.24,
+          "endX": 0.245,
+          "endY": 0.15
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X står på A:s övre sida – A tar en drop step mot baslinjen och avslutar med två fötter vid korgen.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.175
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.17,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.085,
+          "endX": 0.46,
+          "endY": 0.065,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y kommer och hjälper. B har flyttat sig upp ovanför trepoängslinjen och A passar ut för skott.",
+      "markers": [
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.09,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.11,
+          "y": 0.35,
+          "endX": 0.19,
+          "endY": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.175
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.265,
+          "y": 0.21,
+          "endX": 0.21,
+          "endY": 0.415
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "C"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

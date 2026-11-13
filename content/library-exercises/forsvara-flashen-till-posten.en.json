@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "id": "37e3abe8-c300-5bd9-85ee-57eb814ea293",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Get there first – defending the post flash",
+  "description": "The coach stands on the wing with the ball. The attacker starts on the weak side and the defender is in help position in the lane. On the coach's signal the attacker flashes – cuts hard towards the ball – either up to the high post at the free-throw line or across to the low post on the ball side. The defender has to beat the attacker to the spot, get between ball and attacker and meet them with the body so they cannot take their spot.\n\nThe coach only passes when the attacker is open. As soon as the attacker catches it is live 1v1 to the basket. Three attempts each, then the pair switch roles. Other pairs wait on the baseline. Switch sides so the flash comes from both directions.\n\nProgression: add a wing player to pass instead of the coach, and let the attacker choose a high or low flash. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "See both ball and attacker from help – then you spot the flash before it starts."
+    },
+    {
+      "id": "cp2",
+      "text": "Meet the attacker early with your body; don't let them run freely through the lane."
+    },
+    {
+      "id": "cp3",
+      "text": "Hand and foot in the passing lane when you deny, your other hand feels for the attacker."
+    },
+    {
+      "id": "cp4",
+      "text": "If the pass still gets through: step straight between the attacker and the basket."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A flashes up towards the high post. X gets there first, steps between ball and A and denies.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.225,
+          "endX": 0.42,
+          "endY": 0.265
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.14,
+          "endX": 0.53,
+          "endY": 0.205
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Low flash: A cuts across towards the low post on the ball side. X meets A with the body and stays on the ball side.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.175,
+          "y": 0.11,
+          "endX": 0.56,
+          "endY": 0.11
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.435,
+          "y": 0.195,
+          "endX": 0.65,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A got open at the free-throw line and the coach passes. X drops between A and the basket – now it is 1v1.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.745,
+          "y": 0.29
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.295,
+          "endX": 0.52,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.175,
+          "endX": 0.49,
+          "endY": 0.165
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "b565e30e-3463-5dcc-aced-c51daf1f8071",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Avsluta trots kontakt",
+  "description": "Tränaren (eller en spelare) står vid korgen med en stötdyna. Spelarna står i kö med var sin boll på kanten, driver mot korgen och avslutar. När spelaren hoppar upp ger tränaren en lätt stöt med dynan mot höften eller axeln – inte mot armarna eller i luften så att någon kan falla illa. Spelaren ska hålla linjen, skydda bollen och ändå göra poäng. Byt sida så att alla avslutar med båda händerna.\n\nBörja med kraftavslut från två fötter: hoppstopp med båda fötterna, bollen högt och hoppa rakt upp in i kontakten. Sedan vanlig lay-up från en fot. Varianter: eurosteg runt tränaren som står i vägen, och floater över en hjälpförsvarare som kliver in i 3-sekundersområdet.\n\nBörja försiktigt med lätt kontakt och öka efter hand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta kontakten med axeln och höften – inte med bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen högt och tätt, två händer så länge som möjligt."
+    },
+    {
+      "id": "cp3",
+      "text": "Hoppa uppåt, inte framåt: då håller du balansen när stöten kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta varje gång – räkna med att få fortsätta trots kontakt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "attack",
+    "ballControl"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Kraftavslut: A driver mot korgen, hoppstoppar med två fötter och går rakt upp. Tränaren stöter lätt med dynan. B och C väntar.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.335,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.345,
+          "y": 0.24,
+          "endX": 0.42,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.435,
+          "y": 0.12,
+          "endX": 0.49,
+          "endY": 0.068
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.14,
+          "label": "L"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.295,
+          "y": 0.4
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.55,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.51
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Lay-up från en fot från andra sidan. Tränaren kommer in från motsatt håll och ger kontakt mot höften.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.685,
+          "y": 0.26
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.675,
+          "y": 0.24,
+          "endX": 0.59,
+          "endY": 0.14,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.575,
+          "y": 0.12,
+          "endX": 0.515,
+          "endY": 0.068
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.15,
+          "label": "L"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.725,
+          "y": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Eurosteg: tränaren står i vägen. A går först mot ena sidan och kliver sedan över till andra och lägger upp.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.25,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.38,
+          "endX": 0.6,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.24,
+          "endX": 0.44,
+          "endY": 0.11,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Floater: tränaren kliver in som hjälp. A stannar upp en bit från korgen och lyfter bollen högt över.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.645,
+          "y": 0.32
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.15,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.635,
+          "y": 0.3,
+          "endX": 0.59,
+          "endY": 0.23,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.575,
+          "y": 0.21,
+          "endX": 0.51,
+          "endY": 0.07,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

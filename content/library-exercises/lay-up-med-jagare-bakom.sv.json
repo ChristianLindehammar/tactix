@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "id": "eab76a35-dbf8-50d8-8984-b48d721dce97",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Lay-up med jagare i hälarna",
+  "description": "Spelarna står i par vid mittlinjen: anfallaren med boll och jagaren ett par steg snett bakom. På signal dribblar anfallaren i full fart mot korgen och avslutar med lay-up. Jagaren springer efter och försöker störa avslutet eller slå bort bollen bakifrån – men får inte knuffa eller slå på armen. Anfallaren håller bollen på den sida som är längst bort från jagaren och skyddar med kroppen.\n\nAnfallaren dribblar tillbaka längs sidlinjen, jagaren springer tillbaka och paret byter roller i kön. Nästa par startar när första paret har avslutat.\n\nAnpassa avståndet så att det blir jämnt: ge anfallaren större försprång om jagaren hinner ikapp varje gång, minska om anfallaren aldrig blir störd. Stegring: starta från andra sidan så att avslutet blir med vänster hand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Långa, få studsar – trycka bollen framåt och springa ikapp den."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen på yttre sidan, bort från jagaren, och kroppen mellan jagaren och bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta inte bakåt – blicken på korgen hela vägen."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta lugnt trots stressen: rätt steg, mjuk lay-up mot plattan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "På signal dribblar A i full fart mot korgen. X startar ett par steg bakom och jagar. C och Y är nästa par.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.46
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.43,
+          "endX": 0.62,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lägger upp med bollen på yttre sidan, bort från X som försöker störa bakifrån.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.15
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.665,
+          "y": 0.12,
+          "endX": 0.525,
+          "endY": 0.06
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.26,
+          "endX": 0.5,
+          "endY": 0.21
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A dribblar tillbaka längs sidlinjen och X springer tillbaka till kön – de byter roller till nästa gång. C och Y står redo att starta.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.46
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.285
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.32,
+          "endX": 0.86,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.26,
+          "endX": 0.3,
+          "endY": 0.68
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

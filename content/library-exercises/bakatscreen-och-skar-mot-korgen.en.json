@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "75b630d2-b8a7-5daa-aca6-6c577c52b92c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Back screen – cut to the basket",
+  "description": "Three attackers: a guard with the ball at the top, a wing player and a screener at the elbow. The screener steps out and sets up on the basket side of the wing (back screen). The wing takes a step out to set up the cut and then cuts tight off the screener's shoulder straight to the basket. The guard passes to the cutter for the lay-up. Right after the cut the screener turns and pops out to the three-point line – the second option if the defence switches or helps.\n\nStart 3v0 on both sides, then 2v2 with guard and cutter against two defenders, and finally live 3v3 where the offence must use the screen but plays freely after it. Rotate positions after each possession.\n\nThe diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Screener: stand still, wide and with arms tucked in – a moving screen is a foul."
+    },
+    {
+      "id": "cp2",
+      "text": "Cutter: wait for the screen, set up the cut and go so tight off the screener that nobody fits in between."
+    },
+    {
+      "id": "cp3",
+      "text": "Guard: pass to the cutter's outside hand once they are past the defender – not too early."
+    },
+    {
+      "id": "cp4",
+      "text": "The screener is often the one who gets open – turn and be ready to shoot."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "attack",
+    "passing",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 3,
+  "maxPlayers": 9,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C comes out from the elbow and sets a back screen on the basket side of B. A holds the ball at the top.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.205,
+          "endX": 0.28,
+          "endY": 0.255
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B cuts tight off C's shoulder to the basket and A passes for the lay-up.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.25,
+          "endX": 0.39,
+          "endY": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.29,
+          "endX": 0.42,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Second option: C pops out to the three-point line and A passes for the shot.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.09,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.25,
+          "y": 0.29,
+          "endX": 0.15,
+          "endY": 0.32
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.385,
+          "y": 0.33,
+          "endX": 0.18,
+          "endY": 0.335
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Live 3v3: C screens Y and B cuts to the basket. Read the defence – if B is covered, look for C or keep playing.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.32
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.27,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.13,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.215,
+          "endX": 0.285,
+          "endY": 0.255
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.24,
+          "endX": 0.35,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

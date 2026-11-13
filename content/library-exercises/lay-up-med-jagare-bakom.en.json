@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "id": "ef7da88b-3f23-5754-ae54-4e6e9c2961ad",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Lay-up with a chaser on your heels",
+  "description": "Players work in pairs at half-court: the attacker with the ball and the chaser a couple of steps behind and to the side. On the signal the attacker dribbles at full speed to the basket and finishes with a lay-up. The chaser sprints after them and tries to contest the shot or tip the ball away from behind – without pushing or hitting the arm. The attacker keeps the ball on the side away from the chaser and protects it with the body.\n\nThe attacker dribbles back down the sideline, the chaser runs back and the pair switch roles in the line. The next pair goes once the first pair has finished.\n\nAdjust the gap to keep it even: give the attacker a bigger head start if the chaser catches up every time, shrink it if the attacker is never bothered. Progression: start from the other side so the finish is left-handed. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Few, long dribbles – push the ball ahead and run onto it."
+    },
+    {
+      "id": "cp2",
+      "text": "Ball on the outside, away from the chaser, with your body between chaser and ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Don't look back – eyes on the basket all the way."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish calmly under pressure: right footwork, soft lay-up off the glass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "ballControl",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "On the signal A dribbles at full speed to the basket. X starts a couple of steps behind and chases. C and Y are the next pair.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.46
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.43,
+          "endX": 0.62,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.33
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A lays it up with the ball on the outside, away from X who tries to contest from behind.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.15
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.665,
+          "y": 0.12,
+          "endX": 0.525,
+          "endY": 0.06
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.29,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.26,
+          "endX": 0.5,
+          "endY": 0.21
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.62
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.74,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A dribbles back along the sideline and X runs back to the line – they switch roles for next time. C and Y are ready to go.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.46
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.285
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.32,
+          "endX": 0.86,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.26,
+          "endX": 0.3,
+          "endY": 0.68
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
