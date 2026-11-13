@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "id": "af024163-556e-508f-af5c-8bb55f9421f1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Låg in mot korgen – plocka konen",
+  "description": "Ställ en kon på toppen strax utanför trepoängslinjen och en kon i hörnet av straffkastlinjen (där den möter 3-sekundersområdet). Spelarna står i kö under korgen med var sin boll. Spelaren dribblar ut till toppkonen, rundar den och svänger tillbaka in mot straffkastlinjens hörn. I farten plockar spelaren upp konen med den fria handen – det tvingar ner höfterna – och avslutar direkt med lay-up. Ställ tillbaka konen och gå sist i kön.\n\nKör både från höger och vänster sida så att båda händerna tränas.\n\nVarianter: gör en riktningsförändring precis vid konen innan du plockar den – bakom ryggen, crossover eller mellan benen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Näsan över tårna och höfterna låga när du plockar konen – samma läge som i ett första steg förbi en försvarare."
+    },
+    {
+      "id": "cp2",
+      "text": "Behåll farten genom svängen runt toppkonen, korta steg i kurvan."
+    },
+    {
+      "id": "cp3",
+      "text": "Skydda bollen med kroppen medan du böjer dig ner."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta med rätt hand och rätt fot: höger sida höger hand, vänster sida vänster hand."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A startar under korgen och dribblar ut mot toppkonen. B väntar på sin tur.",
+      "markers": [
+        {
+          "id": "ct",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "ce",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.09,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.155
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.405,
+          "y": 0.185,
+          "endX": 0.43,
+          "endY": 0.38,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.08,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.145
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A rundar toppkonen och svänger in mot konen vid straffkastlinjens hörn.",
+      "markers": [
+        {
+          "id": "ct",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "ce",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.21
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.575,
+          "y": 0.39
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.37,
+          "endX": 0.67,
+          "endY": 0.27,
+          "bend": 0.02,
+          "waves": 3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.08,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.145
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A har plockat upp konen med fria handen i full fart och avslutar med lay-up.",
+      "markers": [
+        {
+          "id": "ct",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.155
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.635,
+          "y": 0.13,
+          "endX": 0.52,
+          "endY": 0.07
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.08,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.145
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

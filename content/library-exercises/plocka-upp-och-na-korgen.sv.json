@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "id": "7d40f7d0-5615-5ca2-868a-072ca19851d0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Plocka upp och nå korgen på en studs",
+  "description": "Lägg en boll vid en kon på trepoängslinjen. Spelaren startar några meter åt sidan, sprintar fram till bollen och plockar upp den. Därefter ett fotarbete för att vända upp mot korgen – till exempel ett drop step eller ett step-through – och sedan en enda lång dribbling ända fram till lay-upen.\n\nEfter varje försök flyttas konen med bollen ett par meter längre ut, mot mittlinjen. Ju längre bort, desto längre måste bollen skjutas ut och desto längre stegen bli. Byt sida så att båda händerna tränas. Gå till sist tillbaka till trepoängslinjen – då känns det lätt, och det är just den känslan i match man vill åt.\n\nTänk på stegreglerna: bollen måste lämna handen innan pivotfoten lyfter, annars blir det steg. Det kommer att bli slarvigt i början – fortsätt försöka. Har ni flera korgar, kör en spelare per korg. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rak och lång väg mot korgen – inga omvägar och inga extra dribblingar."
+    },
+    {
+      "id": "cp2",
+      "text": "Skjut ut bollen framåt mot korgen, inte ner vid fötterna."
+    },
+    {
+      "id": "cp3",
+      "text": "Bollen ska lämna handen innan pivotfoten lyfter."
+    },
+    {
+      "id": "cp4",
+      "text": "Våga misslyckas – längre bort ska kännas svårt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "ballControl",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Bollen ligger vid konen på trepoängslinjen. A sprintar fram och plockar upp den.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.34
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.475,
+          "y": 0.33
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.43,
+          "endX": 0.36,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder upp med ett drop step, skjuter ut bollen i en lång dribbling och lägger upp.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.31
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.28,
+          "endX": 0.5,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.13,
+          "endX": 0.5,
+          "endY": 0.075
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Konen har flyttats ut ett steg i taget mot mittlinjen. B kör från andra sidan för att träna andra handen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.34
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.41
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.48
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.48
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.545,
+          "endX": 0.64,
+          "endY": 0.5
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

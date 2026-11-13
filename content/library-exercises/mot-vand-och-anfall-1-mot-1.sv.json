@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "abd73974-4b15-591e-a358-5c8f6f3dd269",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Mötas, vänd och anfall 1 mot 1",
+  "description": "Två led utanför sidlinjerna i höjd med frikastlinjen. I ena ledet har alla en boll (anfallare), i andra ledet står försvararna. Första spelaren i varje led kliver in: anfallaren dribblar och försvararen springer mot mitten. De möts vid frikastlinjen och slår ihop händerna i luften.\n\nDärefter vänder anfallaren och dribblar i full fart upp till mittlinjen, nuddar den och vänder mot korgen. Försvararen springer under korgen och kommer sedan ut i closeout mot dribblaren. Sedan är det fritt spel 1 mot 1 – båda får ta retur och fortsätta tills det blir korg (eller efter 2–3 avslut). Byt led och roller.\n\nVariant: den som förlorar går till (eller stannar i) försvarsledet. Sätt en tidsgräns på varje anfall. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribbla med blicken uppe – du ska hitta kompisens hand utan att titta på bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvar: möt bollen långt ut, korta stegen sista biten och utmana alla avslut."
+    },
+    {
+      "id": "cp3",
+      "text": "Anfall: stanna inte – använd farten och attackera försvararens främre fot."
+    },
+    {
+      "id": "cp4",
+      "text": "Boxa ut efter skottet och kämpa om returen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar och X springer mot mitten. C och Y väntar på sin tur.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.21
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.215,
+          "endX": 0.38,
+          "endY": 0.235,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.21,
+          "endX": 0.62,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Efter handklappet vid frikastlinjen dribblar A upp till mittlinjen och X springer under korgen.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.285
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.32,
+          "endX": 0.36,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.17,
+          "endX": 0.55,
+          "endY": 0.1,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A vänder och attackerar, X kommer ut i closeout – fritt spel 1 mot 1.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.475,
+          "y": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.135,
+          "endX": 0.45,
+          "endY": 0.25
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.66,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

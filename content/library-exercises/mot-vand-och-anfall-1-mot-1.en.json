@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "3bdc52a2-8426-537a-ac71-c9a0f3771f93",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Meet, turn and attack 1v1",
+  "description": "Two lines outside the sidelines level with the free-throw line. Everyone in one line has a ball (attackers); the defenders are in the other line. The first player in each line steps in: the attacker dribbles and the defender runs towards the middle. They meet at the free-throw line and slap hands in the air.\n\nThen the attacker turns and dribbles at full speed to half-court, touches the line and turns to attack the basket. The defender runs under the basket and then closes out on the dribbler. Then it is live 1v1 – both may rebound and play on until a basket is scored (or after 2–3 shots). Switch lines and roles.\n\nVariant: whoever loses goes to (or stays in) the defenders' line. Put a time limit on each possession. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Dribble with your eyes up – find your partner's hand without looking at the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Defence: meet the ball far out, shorten your steps at the end and contest every shot and drive."
+    },
+    {
+      "id": "cp3",
+      "text": "Attack: don't stop – use your speed and attack the defender's lead foot."
+    },
+    {
+      "id": "cp4",
+      "text": "Box out after the shot and fight for the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles and X runs towards the middle. C and Y wait for their turn.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.21
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.215,
+          "endX": 0.38,
+          "endY": 0.235,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.87,
+          "y": 0.21,
+          "endX": 0.62,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "After the hand slap at the free-throw line, A dribbles to half-court and X runs under the basket.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.285
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.57,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.32,
+          "endX": 0.36,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.17,
+          "endX": 0.55,
+          "endY": 0.1,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A turns and attacks, X closes out – live 1v1.",
+      "markers": [
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.19,
+          "y": 0.3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.475,
+          "y": 0.4
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.135,
+          "endX": 0.45,
+          "endY": 0.25
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.37,
+          "endX": 0.66,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

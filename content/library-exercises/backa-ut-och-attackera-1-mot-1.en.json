@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "id": "cd0d79ac-0b27-5c77-92b5-6c89ee676fd8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Back up and attack 1v1",
+  "description": "Set up a lane of cones about 2 metres wide from half-court to the three-point line. The attacker starts at half-court with the ball and the defender in front. The attacker has to bring the ball up to the three-point line with a control dribble inside the lane while the defender pressures. Dribbling outside the cones is a turnover.\n\nAt the three-point line it becomes live 1v1 to the basket. The attacker must first make at least one and at most two back-up dribbles to create space, then read the defender: if they follow – attack straight past; if they hold back with a shoulder on your middle – drive straight past on that side; if they are square in front – use a change of direction (crossover, behind the back, between the legs or a hesitation). The next pair waits at half-court; switch roles after each go.\n\nProgressions: a narrower lane makes it harder, a wider one easier. Switch hands on the control dribble each time. Then play 2v2 or 3v3 from the same start. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Control dribble: keep the ball low beside your body, with your arm and shoulder protecting it."
+    },
+    {
+      "id": "cp2",
+      "text": "Back up with your eyes up – see both the defender and the basket."
+    },
+    {
+      "id": "cp3",
+      "text": "Read the defender after the back-up dribble and choose your attack from it."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: pressure without fouling and push the attacker towards the cones."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A brings the ball up the lane with a control dribble while X pressures. C and Y are the next pair.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.38,
+          "endX": 0.6,
+          "endY": 0.33,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "At the three-point line it is live: A backs up with one or two dribbles to create space.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.37
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.4,
+          "endX": 0.59,
+          "endY": 0.47,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X steps up after the back-up dribble – A attacks straight past and finishes with a lay-up.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.38,
+          "endX": 0.58,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.14,
+          "endX": 0.51,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

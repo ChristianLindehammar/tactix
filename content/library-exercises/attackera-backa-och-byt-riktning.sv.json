@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "id": "ee8da4ac-0813-5f7c-bf21-fe94acadbff1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Attackera, backa och byt riktning",
+  "description": "Ställ en kon på varje sida ca 6–7 meter från korgen, i höjd med trepoängslinjen. Spelarna står i två led vid mittlinjen, gärna med var sin boll. Första spelaren tar två hårda dribblingar rakt mot konen som om den vore en försvarare, backar sedan med två skyddade dribblingar och gör en riktningsförändring (crossover, inside-out eller mellan benen). Därefter en enda lång dribbling rakt mot korgen och avslut med lay-up eller hoppskott efter stopp. Ta returen och ställ dig sist i det andra ledet.\n\nLeden går växelvis så att det aldrig är två spelare vid korgen samtidigt. Variera riktningsförändringen varje varv och kör lika mycket med båda händerna.\n\nStegring: öka farten tills bollen ibland tappas – det är okej när man lär sig något nytt. Ersätt konen med en passiv försvarare som backar när anfallaren attackerar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Blicken uppe hela tiden – du ska se korgen, inte bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Attackdribblingarna ska vara hårda, så att försvaret tvingas backa."
+    },
+    {
+      "id": "cp3",
+      "text": "Backa med kroppen mellan bollen och försvararen, låg och med böjda knän."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut ut bollen långt framför dig – en dribbling ska räcka hela vägen till avslutet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A tar två hårda dribblingar rakt mot konen. C, B och D väntar i leden.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.455
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.43,
+          "endX": 0.3,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.795,
+          "y": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Vid konen backar A med två skyddade dribblingar, bollen på sidan bort från konen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.205,
+          "y": 0.41
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.215,
+          "y": 0.44,
+          "endX": 0.25,
+          "endY": 0.51,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.795,
+          "y": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A gör en crossover till högerhand, skjuter ut bollen i en lång dribbling och lägger upp.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.365,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.39,
+          "endX": 0.44,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.455,
+          "y": 0.14,
+          "endX": 0.49,
+          "endY": 0.075
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.795,
+          "y": 0.56
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Nästa led: B kör samma sak men stannar och avslutar med ett hoppskott. C gör sig redo.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.3
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.635,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.39,
+          "endX": 0.58,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.235,
+          "endX": 0.51,
+          "endY": 0.075
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.205,
+          "y": 0.56
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "D"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

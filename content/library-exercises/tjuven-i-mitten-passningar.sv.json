@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "485a6ec8-9d0a-5ddd-b841-6249b58e8d15",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Tjuven i mitten – passa förbi",
+  "description": "Grupper om tre med en boll. Två passare står ca 4 meter från varandra och den tredje är tjuv i mitten. Passarna ska få bollen förbi tjuven till varandra – lobbpass över huvudet är förbjudna. Finta för att flytta tjuvens händer och passa sedan genom en lucka: vid ena höften, förbi en axel eller rakt ovanför huvudet. Vänta tills tjuven hunnit tillbaka mot bollen innan nästa passning. Nuddar tjuven bollen byter hen plats med den som passade. Har tjuven svårt att nå bollen, byt efter en bestämd tid i stället.\n\nLåt sedan mottagaren flytta sig 2–3 steg åt valfritt håll. Står mottagaren i rak linje bakom tjuven syns hen knappt – kliv ut ur linjen så att passaren får en fri vinkel.\n\nStegring: 4–5 spelare i en ring med en tjuv i mitten. Man får inte passa till den som står bredvid. Klarar ringen en tjuv, sätt in en till – antingen läser båda passarens blick och axlar, eller så pressar den ena bollhållaren medan den andra jagar passningen. Lägg till krav före passningen: pivotera, finta, en dribbling och passa ur den, eller passa inom en sekund. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Finta åt ett håll och passa åt ett annat – flytta tjuvens händer först."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta emot med ett litet hopp och landa på båda fötterna, då kan du pivotera åt båda hållen."
+    },
+    {
+      "id": "cp3",
+      "text": "Mottagare: stå aldrig i linje bakom tjuven, kliv ut så att passaren ser dig."
+    },
+    {
+      "id": "cp4",
+      "text": "Hårda, raka passningar förbi höft eller axel – inga lobbar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A fintar högt och passar förbi X:s höft till B. X får gå tillbaka mot bollen innan nästa passning.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.54
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.55,
+          "endX": 0.69,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B står i linje bakom X och syns inte. B kliver ut ur linjen och A passar till den fria vinkeln.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.755,
+          "y": 0.465,
+          "endX": 0.78,
+          "endY": 0.37
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.45,
+          "endX": 0.74,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Ring med fem passare och en tjuv. A får inte passa till B eller E, utan passar till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.215,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.324,
+          "y": 0.63,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.676,
+          "y": 0.63,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.785,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.34
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.37,
+          "endX": 0.335,
+          "endY": 0.585
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Två tjuvar: X pressar bollhållaren C och Y läser passningen. C passar förbi till E.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.215,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.324,
+          "y": 0.63,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.676,
+          "y": 0.63,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.785,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.444,
+          "y": 0.63
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.465,
+          "y": 0.61,
+          "endX": 0.74,
+          "endY": 0.475
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

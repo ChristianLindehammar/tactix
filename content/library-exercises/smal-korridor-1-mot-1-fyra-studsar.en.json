@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "da45fe38-bdb8-58a3-935c-573e1e3ba05f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Narrow lane – 1v1 in four dribbles",
+  "description": "Place six cones in two rows of three so they form a narrow lane from the top of the three-point line towards the basket. The attacker starts in front of the lane with the ball and the defender stands in the lane. It is live 1v1 straight away: the attacker has to get through the lane and score using no more than four dribbles. Going outside the cones, or needing a fifth dribble, is a turnover and the pair switch roles. Once the attacker is past the last pair of cones it is free 1v1 to the basket.\n\nThe next pair waits behind the start. Players switch roles after every attempt, or immediately on a turnover.\n\nAdjust: give younger players five or six dribbles and a wider lane; make the lane narrower for experienced players. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack in straight lines to the basket – every sideways step costs a dribble."
+    },
+    {
+      "id": "cp2",
+      "text": "Move the defender with your eyes and shoulders before you go past."
+    },
+    {
+      "id": "cp3",
+      "text": "Aim for the defender's hip and take the contact with your shoulder – but don't run straight into them (offensive foul)."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: hold your ground in the lane, push the attacker towards the cones and count the dribbles out loud."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A starts in front of the lane and X defends inside it. A has four dribbles to get through and score. C and Y are the next pair.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.45
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.37,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.585,
+          "y": 0.42,
+          "endX": 0.53,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.64,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A is past the last pair of cones with X on the hip – it is now free 1v1 and A finishes with a lay-up.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.14
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.675,
+          "y": 0.12,
+          "endX": 0.525,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A dribbles outside the cones (or needs a fifth dribble) – turnover. A and X switch roles.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.47,
+          "endX": 0.8,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

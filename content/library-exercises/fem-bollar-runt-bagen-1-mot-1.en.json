@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 2,
+  "id": "e20bade3-781b-5f0d-a49c-65aa84943b70",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Five balls round the arc – 1v1",
+  "description": "Put five cones (or chairs) just outside the three-point line – two at the ends, two at the slots and one at the top – with a ball beside each. The attacker and the defender start in the lane, the defender closer to the basket.\n\nThe attacker chooses which ball to go for and may fake one way before breaking. As soon as the ball is picked up it is live 1v1 until the attacker scores or the defender wins the ball or the rebound. Both go back into the lane and the attacker picks a new ball. When all five balls are used, switch roles.\n\nVariant: one or two extra players rebound and put the balls back, and the pair plays as many possessions as they can in 30 seconds – a good conditioner too. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attack: change speed and direction to get free – fake one way, go the other."
+    },
+    {
+      "id": "cp2",
+      "text": "Pick the ball up with your feet ready and face the basket straight away."
+    },
+    {
+      "id": "cp3",
+      "text": "If you are open, shoot. If not, attack with one decisive move."
+    },
+    {
+      "id": "cp4",
+      "text": "Defence: stay close, close out under control and take away the strong side."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A fakes and breaks for one of the balls. X starts behind A, closest to the basket.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.385
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.2,
+          "endX": 0.65,
+          "endY": 0.4,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A picks up the ball and faces the basket. X closes out.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.385
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.545,
+          "y": 0.15,
+          "endX": 0.665,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Live 1v1: A drives to the middle and finishes. Then back into the lane for a new ball.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.605,
+          "y": 0.37
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.595,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.465,
+          "y": 0.15,
+          "endX": 0.495,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

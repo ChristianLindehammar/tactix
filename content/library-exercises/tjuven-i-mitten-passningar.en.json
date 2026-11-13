@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "id": "212cc156-7566-507d-bdd6-ea79c0c3409e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Thief in the middle – pass past",
+  "description": "Groups of three with one ball. Two passers stand about 4 metres apart and the third is the thief in the middle. The passers have to get the ball past the thief to each other – no lob passes over the head. Fake to move the thief's hands, then pass through a gap: by a hip, past a shoulder or straight above the head. Let the thief recover towards the ball before the next pass. When the thief touches the ball, they swap places with the passer. If the thief struggles to get a touch, swap after a set time instead.\n\nThen let the receiver move 2–3 steps in any direction. A receiver standing straight behind the thief is hard to see – step off that line so the passer gets a clear angle.\n\nProgression: 4–5 players in a circle with a thief in the middle. No passing to the player next to you. Once the circle beats one thief, add a second – either both read the passer's eyes and shoulders, or one pressures the ball while the other hunts the pass. Add a task before each pass: pivot, fake, one dribble and pass off it, or pass within one second. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Fake one way and pass the other – move the thief's hands first."
+    },
+    {
+      "id": "cp2",
+      "text": "Catch on a small hop and land on both feet so you can pivot either way."
+    },
+    {
+      "id": "cp3",
+      "text": "Receivers: never stand in line behind the thief, step off so the passer sees you."
+    },
+    {
+      "id": "cp4",
+      "text": "Firm, straight passes past a hip or shoulder – no lobs."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 3,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A fakes high and passes past X's hip to B. X recovers towards the ball before the next pass.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.54
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.55,
+          "endX": 0.69,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B is in line behind X and hard to see. B steps off the line and A passes to the open angle.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.345,
+          "y": 0.46
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.755,
+          "y": 0.465,
+          "endX": 0.78,
+          "endY": 0.37
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.45,
+          "endX": 0.74,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A circle of five passers and one thief. A may not pass to B or E, so A passes to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.215,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.324,
+          "y": 0.63,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.676,
+          "y": 0.63,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.785,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.34
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.37,
+          "endX": 0.335,
+          "endY": 0.585
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Two thieves: X pressures the ball handler C and Y reads the pass. C passes past them to E.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.215,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.324,
+          "y": 0.63,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.676,
+          "y": 0.63,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.785,
+          "y": 0.45,
+          "label": "E"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.444,
+          "y": 0.63
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.53,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.465,
+          "y": 0.61,
+          "endX": 0.74,
+          "endY": 0.475
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

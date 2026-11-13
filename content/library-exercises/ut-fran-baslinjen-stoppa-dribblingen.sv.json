@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "b765ca09-bfcb-568c-b7b6-a7f2a77b07b6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Ut från baslinjen – stoppa dribblingen",
+  "description": "Anfallare och försvarare står rygg mot rygg vid frikastlinjen, anfallaren med bollen och ansiktet mot mittlinjen. På tränarens signal dribblar anfallaren i full fart till mittlinjen, vänder och attackerar korgen. Samtidigt sprintar försvararen till baslinjen, nuddar den och sprintar ut för att möta bollen.\n\nFörsvararens mål är att stoppa dribblingen så långt från korgen som möjligt och tvinga anfallaren till ett kontrollerat hoppskott med hand i ansiktet, utanför målområdet. Det liknar försvar i omställning, fast avståndet är längre än i match – därför känns matchen lättare efteråt. Nästa par väntar vid mittlinjen.\n\nVariant: ge anfallaren en skottklocka, t.ex. 6 sekunder från vändningen – inget skott är bolltapp. Anpassa tiden efter nivån. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: sprinta allt du har ut – ingen fegar kvar under korgen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bromsa med korta steg och låg rumpa innan du når bollen, och styr anfallaren snett bort från korgen."
+    },
+    {
+      "id": "cp3",
+      "text": "Stäng vägen till korgen och utmana skottet med handen uppe."
+    },
+    {
+      "id": "cp4",
+      "text": "Anfall: tänk lay-up – gå rakt mot korgen i full fart och få försvararen på hälarna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "På signal: A dribblar mot mittlinjen och X sprintar mot baslinjen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.29
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.165,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.33,
+          "endX": 0.58,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.13,
+          "endX": 0.42,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vänder vid mittlinjen och attackerar. X nuddar baslinjen och sprintar ut mot bollen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.385
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.35,
+          "endX": 0.55,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.12,
+          "endX": 0.49,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X stoppar dribblingen utanför målområdet och tvingar A till ett utmanat hoppskott.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.46,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.735,
+          "y": 0.3,
+          "endX": 0.82,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.22,
+          "endX": 0.56,
+          "endY": 0.075
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.215,
+          "endX": 0.625,
+          "endY": 0.245
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

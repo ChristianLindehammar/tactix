@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "id": "09acd65c-a71a-5667-99ee-b43484c0b6b6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Runt konerna – 1 mot 1 tillbaka mot korgen",
+  "description": "Ställ två koner (eller stolar) bredvid varandra på högra planhalvan, strax före mittlinjen. Två spelare står på baslinjen mitt emot konerna, den som står närmast sidlinjen har bollen. På signal drar båda i full fart – den ena dribblar, den andra sprintar – rundar var sin kon på högersidan och vänder tillbaka mot korgen. Efter vändningen är det 1 mot 1: bollföraren anfaller, den andra försvarar. Nästa par står redo på baslinjen och kör när korgen är avgjord; byt roller varje gång.\n\nStegring: tillåt bara två dribblingar efter vändningen, så måste anfallaren bestämma sig snabbt och attackera korgen direkt.\n\nHelplansvariant: ställ ett konpar strax ovanför frikastlinjens förlängning och ett till på andra sidan mittlinjen. Spelarna korsar varandra vid båda konparen – bollföraren tar den inre konen och löparen den yttre vid första paret, sedan tvärtom – och spelar 1 mot 1 mot bortre korgen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full fart från start – vändningen runt konen ska vara tight och snabb."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfallare: håll blicken uppe i vändningen och attackera innan försvararen hunnit ställa sig."
+    },
+    {
+      "id": "cp3",
+      "text": "Försvarare: spurta hem på kortaste vägen och kom mellan bollen och korgen."
+    },
+    {
+      "id": "cp4",
+      "text": "Avsluta i fart – lay-up eller stopp och skott, sedan retur."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribblar och X sprintar mot var sin kon strax före mittlinjen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.83,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.925,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.16,
+          "endX": 0.93,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.13,
+          "endX": 0.75,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Båda rundar konen på högersidan och vänder hem. A anfaller, X spurtar för att hinna före till korgen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.895,
+          "y": 0.32
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.29,
+          "endX": 0.74,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.32,
+          "endX": 0.53,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "1 mot 1: A attackerar innan X är på plats och avslutar med lay-up.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.835,
+          "y": 0.2
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.17,
+          "endX": 0.66,
+          "endY": 0.1,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.085,
+          "endX": 0.53,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

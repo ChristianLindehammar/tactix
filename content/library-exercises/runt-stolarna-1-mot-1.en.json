@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "id": "c9cd9869-3b14-50e5-8dc4-2620527ea217",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Round the cones – 1v1 back to the basket",
+  "description": "Put two cones (or chairs) side by side on the right half of the court, just short of the half-court line. Two players start on the baseline opposite the cones, and the one nearer the sideline has the ball. On the signal both go at full speed – one dribbling, one sprinting – round their own cone on the right side and turn back towards the basket. After the turn it is live 1v1: the ball handler attacks, the other player defends. The next pair is ready on the baseline and goes as soon as the play is over; switch roles every time.\n\nProgression: allow only two dribbles after the turn, so the attacker has to decide quickly and go straight at the rim.\n\nFull-court variant: place one pair of cones just above the free-throw line extended and another pair past half-court. The players cross at both pairs – the dribbler takes the inside cone and the runner the outside one at the first pair, then the other way round – and play 1v1 at the far basket. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Full speed from the start – the turn round the cone should be tight and quick."
+    },
+    {
+      "id": "cp2",
+      "text": "Attacker: keep your eyes up through the turn and attack before the defender is set."
+    },
+    {
+      "id": "cp3",
+      "text": "Defender: sprint back on the shortest line and get between the ball and the basket."
+    },
+    {
+      "id": "cp4",
+      "text": "Finish at speed – lay-up or pull-up, then crash for the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles and X sprints towards their own cone just short of half-court.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.83,
+          "y": 0.08,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.925,
+          "y": 0.12
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.65,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.92,
+          "y": 0.16,
+          "endX": 0.93,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.13,
+          "endX": 0.75,
+          "endY": 0.41
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Both go round the right side of the cone and turn back. A attacks, X races to get to the basket first.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.895,
+          "y": 0.32
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.29,
+          "endX": 0.74,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.32,
+          "endX": 0.53,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "1v1: A attacks before X is set and finishes with a lay-up.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.66,
+          "y": 0.45
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.84,
+          "y": 0.45
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.835,
+          "y": 0.2
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.17,
+          "endX": 0.66,
+          "endY": 0.1,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.085,
+          "endX": 0.53,
+          "endY": 0.06
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

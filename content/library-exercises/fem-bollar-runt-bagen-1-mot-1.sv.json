@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 2,
+  "id": "b6902977-5bed-5a08-9a75-7695e392835d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Fem bollar runt bågen – 1 mot 1",
+  "description": "Ställ ut fem koner (eller stolar) strax utanför trepoängslinjen – två vid kanterna, två snett ut från korgen och en på toppen – och lägg en boll vid varje. Anfallaren och försvararen startar i 3-sekundersområdet, försvararen närmast korgen.\n\nAnfallaren bestämmer själv vilken boll hen ska hämta och får finta åt ett håll innan hen sticker. Så fort bollen är uppe är det fritt spel 1 mot 1 tills anfallaren gör poäng eller försvararen tar bollen/returen. Båda går tillbaka in i målområdet och anfallaren väljer en ny boll. När alla fem bollar är spelade byter ni roller.\n\nVariant: en eller två extraspelare tar returerna och lägger tillbaka bollarna, och paret kör så många anfall de hinner på 30 sekunder – då blir det också bra kondition. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfall: byt fart och riktning för att komma loss – finta åt ett håll, gå åt det andra."
+    },
+    {
+      "id": "cp2",
+      "text": "Fånga med fötterna redo och vänd upp mot korgen direkt."
+    },
+    {
+      "id": "cp3",
+      "text": "Är du fri – skjut. Annars attackera med en bestämd rörelse."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: följ tätt, kom ut i closeout och stäng den starka sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "defence",
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A fintar och sticker mot en av bollarna. X startar bakom A, närmast korgen.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.385
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.2,
+          "endX": 0.65,
+          "endY": 0.4,
+          "bend": -0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar upp bollen och vänder upp mot korgen. X kommer ut i closeout.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.385
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.545,
+          "y": 0.15,
+          "endX": 0.665,
+          "endY": 0.235
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Fritt 1 mot 1: A driver mot mitten och lägger upp. Sedan in i målområdet igen och ny boll.",
+      "markers": [
+        {
+          "id": "clw",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.2
+        },
+        {
+          "id": "blw",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.265
+        },
+        {
+          "id": "cls",
+          "type": "cone",
+          "x": 0.23,
+          "y": 0.32
+        },
+        {
+          "id": "bls",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.385
+        },
+        {
+          "id": "ctop",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "id": "btop",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.435
+        },
+        {
+          "id": "crs",
+          "type": "cone",
+          "x": 0.77,
+          "y": 0.32
+        },
+        {
+          "id": "crw",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.2
+        },
+        {
+          "id": "brw",
+          "type": "ball",
+          "x": 0.92,
+          "y": 0.265
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.43,
+          "label": "A"
+        },
+        {
+          "id": "brs",
+          "type": "ball",
+          "x": 0.605,
+          "y": 0.37
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.595,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.465,
+          "y": 0.15,
+          "endX": 0.495,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

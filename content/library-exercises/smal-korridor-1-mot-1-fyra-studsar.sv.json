@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "4f77b28e-ba9e-5dbb-986e-479e199a5fe6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Smal korridor – 1 mot 1 på fyra studsar",
+  "description": "Ställ sex koner i två rader om tre så att de bildar en smal korridor från toppen av trepoängslinjen in mot korgen. Anfallaren startar framför korridoren med boll och försvararen står i korridoren. Det är skarpt 1 mot 1 direkt: anfallaren ska ta sig igenom korridoren och göra poäng på högst fyra studsar. Kommer anfallaren utanför konerna, eller behöver en femte studs, är det bolltapp och paret byter roller. När anfallaren har passerat sista konparet är det fritt spel 1 mot 1 till korgen.\n\nNästa par väntar bakom startpunkten. Spelarna byter roller efter varje försök, eller direkt vid bolltapp.\n\nAnpassa: ge yngre spelare fem eller sex studsar och en bredare korridor; gör korridoren smalare för vana spelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Attackera i raka linjer mot korgen – varje sidsteg kostar en studs."
+    },
+    {
+      "id": "cp2",
+      "text": "Flytta försvararen med blicken och axlarna innan du går förbi."
+    },
+    {
+      "id": "cp3",
+      "text": "Sikta på försvararens höft och ta kontakten med axeln – men spring inte rakt in i hen (offensiv foul)."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: stå kvar i korridoren, tvinga ut anfallaren mot konerna och räkna studsarna högt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A startar framför korridoren och X försvarar inne i den. A har fyra studsar på sig att ta sig igenom och göra poäng. C och Y är nästa par.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.45
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.37,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.585,
+          "y": 0.42,
+          "endX": 0.53,
+          "endY": 0.26,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.64,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har tagit sig förbi sista konparet med X på höften – nu är det fritt 1 mot 1 och A avslutar med lay-up.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.18,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.14
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.675,
+          "y": 0.12,
+          "endX": 0.525,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A dribblar ut utanför konerna (eller behöver en femte studs) – bolltapp. A och X byter roller.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.4
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.4
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.33
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.33
+        },
+        {
+          "id": "c5",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.26
+        },
+        {
+          "id": "c6",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.26
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.47,
+          "endX": 0.8,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

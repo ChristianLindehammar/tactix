@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "id": "2e115599-70d9-5e47-a71c-6b71427a5b30",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Bollkontroll på stället – nedräkning",
+  "description": "Alla spelare har en boll och sprider ut sig så att de inte når varandra, med ansiktet mot tränaren. Tränaren väljer en finta – till exempel crossover, mellan benen eller bakom ryggen – och räknar ner: först två vanliga studsar mellan varje finta, sedan en studs, sedan inga studsar alls så att fintarna går i ett. Tränaren byter steg var femte till tionde sekund och sedan finta, utan att stoppa. Kör två–tre minuter non-stop.\n\nFungerar på sidlinjen eller i korridoren innan passet, och med hur många spelare som helst. Har ni plats kan spelarna gå långsamt framåt i stället för att stå still; nybörjare börjar stillastående.\n\nVarianter: räkna baklänges (inga studsar först, sedan en, sedan två), börja på tre studsar, eller gör dubbla fintar (två crossover i rad osv.).",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Slå bollen hårt i golvet – det ger snabbare händer och bättre kontroll."
+    },
+    {
+      "id": "cp2",
+      "text": "Blicken uppe mot tränaren, inte på bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Låga, snabba byten framför kroppen, mellan benen och bakom ryggen."
+    },
+    {
+      "id": "cp4",
+      "text": "Tappar du aldrig bollen går det för långsamt – öka tempot."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 5,
+  "minPlayers": 1,
+  "maxPlayers": 30,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Två studsar mellan varje finta. Spelarna står utspridda med var sin boll och tittar på tränaren L.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "p0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b0",
+          "type": "ball",
+          "x": 0.295,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.42
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.895,
+          "y": 0.42
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.295,
+          "y": 0.6
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "E"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.6
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "F"
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.895,
+          "y": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "L ropar byte: en studs mellan varje finta.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "p0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b0",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.445
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.445
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.445
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.625
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "E"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.625
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "F"
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.625
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Sista steget: inga studsar – fintarna går i ett. Sedan väljer L en ny finta och börjar om.",
+      "markers": [
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "L"
+        },
+        {
+          "id": "p0",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b0",
+          "type": "ball",
+          "x": 0.105,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "b1",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.42
+        },
+        {
+          "id": "p2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "b2",
+          "type": "ball",
+          "x": 0.705,
+          "y": 0.42
+        },
+        {
+          "id": "p3",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.56,
+          "label": "D"
+        },
+        {
+          "id": "b3",
+          "type": "ball",
+          "x": 0.105,
+          "y": 0.6
+        },
+        {
+          "id": "p4",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "E"
+        },
+        {
+          "id": "b4",
+          "type": "ball",
+          "x": 0.405,
+          "y": 0.6
+        },
+        {
+          "id": "p5",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.56,
+          "label": "F"
+        },
+        {
+          "id": "b5",
+          "type": "ball",
+          "x": 0.705,
+          "y": 0.6
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

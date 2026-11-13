@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 2,
+  "id": "b0864812-6544-5444-9f02-bf29fdd8b055",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Två par på samma plan – 1 mot 1 helplan",
+  "description": "1 mot 1 över hela planen är jobbigt och nyttigt, men med ett par i taget står resten och tittar. Kör därför två par samtidigt åt var sitt håll. Ett par startar vid ena baslinjen och anfaller bortre korgen, det andra startar vid motsatt baslinje. Lägg båda paren en bit från mitten, på var sin sida, så att vägarna bara korsar varandra lite vid mittlinjen.\n\nAnfallaren dribblar upp och försvararen tar upp hen vid mittlinjen; därifrån är det fritt spel till korg och retur. Vill ni börja försvaret tidigare: låt försvararen starta närmare och göra en closeout mot anfallaren vid trekvartsplan.\n\nNästa par i ledet bestämmer i förväg vem som anfaller och vem som försvarar och står redo. När bollen är död lämnar paret planen direkt och springer till ledet på andra sidan, så att nästa par kan starta. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Försvar: låg och bred, korta snabba steg, aktiva händer – spurta om anfallaren kommer förbi."
+    },
+    {
+      "id": "cp2",
+      "text": "Anfall: blicken uppe, byt tempo och riktning och skydda bollen med kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll koll på det andra paret när ni möts vid mittlinjen."
+    },
+    {
+      "id": "cp4",
+      "text": "Snabba byten – nästa par ska vara på plan så fort bollen är död."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "ballControl",
+    "conditioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Två par startar samtidigt från var sin baslinje, lite vid sidan av mitten. X och Y väntar vid mittlinjen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.87,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.305,
+          "y": 0.83
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.79,
+          "endX": 0.34,
+          "endY": 0.62,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.13,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.695,
+          "y": 0.17
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.21,
+          "endX": 0.66,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.45,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Försvararna tar upp vid mittlinjen och det är 1 mot 1 mot var sin korg.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.325,
+          "y": 0.36
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.33,
+          "endX": 0.29,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.26,
+          "endX": 0.39,
+          "endY": 0.19
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.675,
+          "y": 0.64
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.67,
+          "endX": 0.71,
+          "endY": 0.83,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.74,
+          "endX": 0.61,
+          "endY": 0.81
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Båda avslutar. Paren lämnar planen direkt och nästa två par drar igång.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.19,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.435,
+          "y": 0.15
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.13,
+          "endX": 0.495,
+          "endY": 0.07
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.81,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.565,
+          "y": 0.85
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.555,
+          "y": 0.87,
+          "endX": 0.51,
+          "endY": 0.93
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.69,
+          "label": "Y"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

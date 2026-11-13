@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "id": "ae4df9b9-e748-5af3-aa7f-4b616db70418",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Pick up and reach the rim in one dribble",
+  "description": "Place a ball by a cone on the three-point line. The player starts a few metres to the side, sprints to the ball and picks it up. Then a footwork move to turn and face the basket – for example a drop step or a step-through – followed by one single long dribble all the way to the lay-up.\n\nAfter each attempt, move the cone with the ball a couple of metres further out, towards half-court. The further away, the further the ball has to be pushed out and the longer the strides. Switch sides so both hands get work. Finish back at the three-point line – it will feel easy, and that is exactly the feeling you want in a game.\n\nMind the travelling rule: the ball must leave the hand before the pivot foot lifts, otherwise it is a travel. It will look messy at first – keep trying. With several baskets, run one player per basket. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Straight and long to the basket – no detours and no extra dribbles."
+    },
+    {
+      "id": "cp2",
+      "text": "Push the ball out ahead towards the basket, not down by your feet."
+    },
+    {
+      "id": "cp3",
+      "text": "The ball must leave your hand before your pivot foot lifts."
+    },
+    {
+      "id": "cp4",
+      "text": "Dare to fail – further out should feel hard."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "ballControl",
+    "attack",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The ball lies by the cone on the three-point line. A sprints over and picks it up.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.4,
+          "y": 0.34
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.475,
+          "y": 0.33
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.43,
+          "endX": 0.36,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns with a drop step, pushes the ball out in one long dribble and finishes with a lay-up.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.495,
+          "y": 0.31
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.28,
+          "endX": 0.5,
+          "endY": 0.15,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.13,
+          "endX": 0.5,
+          "endY": 0.075
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The cone has been moved out a step at a time towards half-court. B goes from the other side to work the other hand.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.34
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.41
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.48
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.545,
+          "y": 0.48
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.545,
+          "endX": 0.64,
+          "endY": 0.5
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

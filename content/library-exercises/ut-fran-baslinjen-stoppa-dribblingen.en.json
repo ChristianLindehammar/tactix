@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "id": "ebe437e9-1660-5b5f-977a-493673c9e64b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Out from the baseline – stop the drive",
+  "description": "The attacker and the defender stand back to back at the free-throw line, the attacker holding the ball and facing half-court. On the coach's signal the attacker speed-dribbles to half-court, turns and attacks the basket. At the same moment the defender sprints to the baseline, touches it and sprints out to meet the ball.\n\nThe defender's goal is to stop the dribble as far from the basket as possible and force a contested pull-up jumper outside the lane. It mimics transition defence, only with a longer distance than in a game – so the game feels easier afterwards. The next pair waits at half-court.\n\nVariant: give the attacker a shot clock, e.g. 6 seconds from the turn – no shot is a turnover. Adjust the time to the level. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Defence: sprint out at full speed – nobody hangs back under the basket."
+    },
+    {
+      "id": "cp2",
+      "text": "Brake with short steps and hips low before you reach the ball, and push the attacker at an angle away from the basket."
+    },
+    {
+      "id": "cp3",
+      "text": "Cut off the way to the rim and contest the shot with a high hand."
+    },
+    {
+      "id": "cp4",
+      "text": "Attack: think lay-up – go straight at the rim at full speed and put the defender on their heels."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "On the signal: A dribbles towards half-court and X sprints to the baseline.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.29
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.165,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.33,
+          "endX": 0.58,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.13,
+          "endX": 0.42,
+          "endY": 0.07
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A turns at half-court and attacks. X touches the baseline and sprints out to the ball.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.385
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.08,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.35,
+          "endX": 0.55,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.12,
+          "endX": 0.49,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X stops the dribble outside the lane and forces A into a contested jumper.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.715,
+          "y": 0.33
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "l",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.46,
+          "label": "L"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.735,
+          "y": 0.3,
+          "endX": 0.82,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.22,
+          "endX": 0.56,
+          "endY": 0.075
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.215,
+          "endX": 0.625,
+          "endY": 0.245
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

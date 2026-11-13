@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "id": "55edd06f-f6f6-5623-8724-e4d688670139",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "basketball",
+  "title": "Backa ut och attackera 1 mot 1",
+  "description": "Sätt upp en korridor med koner, ca 2 meter bred, från mittlinjen fram till trepoängslinjen. Anfallaren startar vid mittlinjen med boll, försvararen står framför. Anfallaren ska ta sig fram till trepoängslinjen med kontrollerad dribbling i korridoren medan försvararen pressar. Dribblar anfallaren utanför konerna är det bolltapp.\n\nVid trepoängslinjen blir det fritt spel 1 mot 1 mot korgen. Anfallaren måste först göra minst en och högst två backdribblingar för att skapa avstånd, och läser sedan försvararen: kommer hen efter – attackera direkt förbi; stannar hen med ena axeln mot din mitt – driv rakt förbi på den sidan; står hen rakt framför – använd en riktningsförändring (crossover, bakom ryggen, mellan benen eller en tvekan). Nästa par väntar vid mittlinjen; byt roller efter varje försök.\n\nStegring: smalare korridor gör det svårare, bredare lättare. Byt hand på kontrolldribblingen varje gång. Spela sedan 2 mot 2 eller 3 mot 3 från samma start. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Kontrolldribbling: låg boll vid sidan av kroppen, armen och axeln skyddar bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Backa ut med blicken uppe – du ska se både försvararen och korgen."
+    },
+    {
+      "id": "cp3",
+      "text": "Läs försvararen efter backdribblingen och välj attack därefter."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvar: pressa utan att foula och tvinga anfallaren mot konerna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A för upp bollen i korridoren med kontrolldribbling medan X pressar. C och Y är nästa par.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.38,
+          "endX": 0.6,
+          "endY": 0.33,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.6,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Vid trepoängslinjen är det fritt spel: A backar ut med en eller två dribblingar för att skapa avstånd.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.37
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.4,
+          "endX": 0.59,
+          "endY": 0.47,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.25,
+          "label": "X"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X kliver fram efter backdribblingen – A attackerar direkt förbi och lägger upp.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.47
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.47
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.595,
+          "y": 0.41
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.38,
+          "endX": 0.58,
+          "endY": 0.17,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.14,
+          "endX": 0.51,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-12T10:00:00.000Z",
+  "updatedAt": "2026-11-12T10:00:00.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
