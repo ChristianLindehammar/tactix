@@ -7,6 +7,7 @@ import {
   ExercisePhase,
   FocusTag,
   parseExercise,
+  RatingStars,
 } from '@/types/exercise';
 
 const REQUEST_TIMEOUT_MS = 20_000;
@@ -25,8 +26,8 @@ export class LibraryError extends Error {
   }
 }
 
-/** The sorts the server offers. Ratings aren't on the server yet. Favourites puts the most saved first. */
-export type LibrarySort = 'updated' | 'title' | 'difficulty' | 'favorites';
+/** The sorts the server offers. Favourites puts the most saved first, rating your best first. */
+export type LibrarySort = 'updated' | 'title' | 'difficulty' | 'favorites' | 'rating';
 
 export interface LibraryFilter {
   sport?: Sport;
@@ -35,6 +36,8 @@ export interface LibraryFilter {
   phase?: ExercisePhase;
   playerCount?: number;
   search?: string;
+  /** Only exercises you rated at least this high. Uses your own ratings, never other coaches'. */
+  minRating?: RatingStars;
   sort?: LibrarySort;
   offset?: number;
   /** The coach's language. Exercises in it are shown, or in English if the sport has none in it. */
@@ -82,6 +85,7 @@ const toQuery = (filter: LibraryFilter, lang?: string) => {
   if (filter.playerCount !== undefined) params.push(['players', String(filter.playerCount)]);
   const search = filter.search?.trim();
   if (search) params.push(['search', search]);
+  if (filter.minRating) params.push(['minRating', String(filter.minRating)]);
   if (filter.sort) params.push(['sort', filter.sort]);
   if (filter.offset) params.push(['offset', String(filter.offset)]);
   if (lang) params.push(['lang', lang]);

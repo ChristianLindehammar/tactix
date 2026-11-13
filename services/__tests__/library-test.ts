@@ -212,6 +212,16 @@ describe('favourites', () => {
     expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?sort=favorites');
   });
 
+  it('filters and sorts by your own ratings, in the library and in favourites', async () => {
+    const { library, fetch } = setup(() => json(200, { exercises: [], total: 0 }));
+
+    await library.list({ minRating: 4, sort: 'rating' });
+    await library.listFavorites({ minRating: 3 });
+
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?minRating=4&sort=rating');
+    expect(fetch.mock.calls[1][0]).toBe('https://api.test/favorites?minRating=3');
+  });
+
   it('reads how many coaches saved an exercise and whether you did', async () => {
     const { library, fetch } = setup(() => json(200, { favoriteCount: 4, favorited: false }));
 

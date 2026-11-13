@@ -122,12 +122,12 @@ export default function ExerciseLibraryScreen() {
   // The library and your favourites both come from the server
   const inLibrary = source !== 'mine';
   const inFavorites = source === 'favorites';
-  // Ratings are only on this device so far, so the server can't filter or sort by them, and only the
-  // server knows how many coaches saved an exercise
+  // Only the server knows how many coaches saved an exercise. Your ratings are synced to it, so it
+  // can filter and sort the library by them too
   const sorts: (ExerciseSort | 'favorites')[] = inLibrary
-    ? [...EXERCISE_SORTS.filter(option => option !== 'rating'), 'favorites']
+    ? [...EXERCISE_SORTS, 'favorites']
     : [...EXERCISE_SORTS];
-  const librarySort: LibrarySort = sort === 'rating' ? 'updated' : sort;
+  const librarySort: LibrarySort = sort;
   const libraryFilter = useMemo(
     () => ({
       sport: selectedSport ?? undefined,
@@ -136,11 +136,12 @@ export default function ExerciseLibraryScreen() {
       phase,
       playerCount: parsedPlayerCount,
       search,
+      minRating,
       sort: librarySort,
       // One language at a time, so a drill published in two languages isn't listed twice
       language: locale,
     }),
-    [selectedSport, focus, difficulties, phase, parsedPlayerCount, search, librarySort, locale],
+    [selectedSport, focus, difficulties, phase, parsedPlayerCount, search, minRating, librarySort, locale],
   );
 
   const loadLibrary = useCallback(async () => {
@@ -189,7 +190,7 @@ export default function ExerciseLibraryScreen() {
   };
 
   const activeFilterCount =
-    focus.length + difficulties.length + (phase ? 1 : 0) + (minRating && !inLibrary ? 1 : 0);
+    focus.length + difficulties.length + (phase ? 1 : 0) + (minRating ? 1 : 0);
 
   const clearFilters = () => {
     setSearch('');
@@ -462,7 +463,6 @@ export default function ExerciseLibraryScreen() {
           ))}
         </ScrollView>
 
-        {!inLibrary && (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -480,7 +480,6 @@ export default function ExerciseLibraryScreen() {
             />
           ))}
         </ScrollView>
-        )}
         </>
       )}
 

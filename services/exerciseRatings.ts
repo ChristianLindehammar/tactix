@@ -1,7 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import { API_BASE_URL } from '@/constants/api';
+import { authSession } from '@/services/account';
 import { getCurrentUserId } from '@/services/currentUser';
 import { withStorageErrors } from '@/services/exerciseRepository';
+import { createRatingSync, RatingSync } from '@/services/ratingSync';
 import { ExerciseRating, isExerciseRating, isRatingStars, RatingStars } from '@/types/exercise';
 
 const KEY_PREFIX = 'exercise-rating:';
@@ -10,6 +13,13 @@ export interface RatingRepository {
   getMine(exerciseId: string): Promise<RatingStars | null>;
   /** Your ratings by exercise id. */
   listMine(): Promise<Record<string, RatingStars>>;
+  /** Every rating you gave, cleared ones too, with when. For syncing. */
+  listAllMine(): Promise<ExerciseRating[]>;
+  /**
+   * Keeps each of your ratings from the server that is newer than the one here, and returns the
+   * ones it kept.
+   */
+  mergeMine(ratings: Omit<ExerciseRating, 'userId'>[]): Promise<ExerciseRating[]>;
   /** Passing null clears your rating. */
   setMine(exerciseId: string, stars: RatingStars | null): Promise<void>;
 }
@@ -35,6 +45,7 @@ const readStored = (key: string, json: string | null): ExerciseRating | null => 
 
 interface LocalRatingOptions {
   getCurrentUserId: () => Promise<string>;
+  now?: () => number;
 }
 
 /**
@@ -48,6 +59,17 @@ export function createLocalRatingRepository(
   const userPrefix = async () =>
     `${KEY_PREFIX}${await withStorageErrors(options.getCurrentUserId)}:`;
 
+  const listAllMine = async () => {
+    const prefix = await userPrefix();
+    const entries = await withStorageErrors(async () => {
+      const keys = await AsyncStorage.getAllKeys();
+      return AsyncStorage.multiGet(keys.filter(key => key.startsWith(prefix)));
+    });
+    return entries
+      .map(([key, json]) => readStored(key, json))
+      .filter((rating): rating is ExerciseRating => rating !== null);
+  };
+
   return {
     getMine: async exerciseId => {
       const key = `${await userPrefix()}${exerciseId}`;
@@ -56,18 +78,31 @@ export function createLocalRatingRepository(
     },
 
     listMine: async () => {
-      const prefix = await userPrefix();
-      const entries = await withStorageErrors(async () => {
-        const keys = await AsyncStorage.getAllKeys();
-        return AsyncStorage.multiGet(keys.filter(key => key.startsWith(prefix)));
-      });
-
       const mine: Record<string, RatingStars> = {};
-      for (const [key, json] of entries) {
-        const rating = readStored(key, json);
-        if (rating?.stars) mine[rating.exerciseId] = rating.stars;
+      for (const rating of await listAllMine()) {
+        if (rating.stars) mine[rating.exerciseId] = rating.stars;
       }
       return mine;
+    },
+
+    listAllMine,
+
+    mergeMine: async incoming => {
+      const userId = await withStorageErrors(options.getCurrentUserId);
+      const here = new Map((await listAllMine()).map(rating => [rating.exerciseId, rating]));
+      const newer = incoming
+        .map(rating => ({ ...rating, userId }))
+        .filter(isExerciseRating)
+        .filter(rating => {
+          const old = here.get(rating.exerciseId);
+          return !old || Date.parse(rating.updatedAt) > Date.parse(old.updatedAt);
+        });
+      await withStorageErrors(() =>
+        AsyncStorage.multiSet(
+          newer.map(rating => [`${KEY_PREFIX}${userId}:${rating.exerciseId}`, JSON.stringify(rating)]),
+        ),
+      );
+      return newer;
     },
 
     setMine: async (exerciseId, stars) => {
@@ -78,7 +113,7 @@ export function createLocalRatingRepository(
         exerciseId,
         userId,
         stars,
-        updatedAt: new Date().toISOString(),
+        updatedAt: new Date((options.now ?? Date.now)()).toISOString(),
       };
       await withStorageErrors(() =>
         AsyncStorage.setItem(`${KEY_PREFIX}${userId}:${exerciseId}`, JSON.stringify(rating)),
@@ -87,4 +122,32 @@ export function createLocalRatingRepository(
   };
 }
 
-export const ratingRepository = createLocalRatingRepository();
+/** Rates on the phone first, then syncs in the background, so rating never waits or fails on the network. */
+export function createSyncedRatingRepository(local: RatingRepository, sync: RatingSync): RatingRepository {
+  return {
+    ...local,
+    setMine: async (exerciseId, stars) => {
+      await local.setMine(exerciseId, stars);
+      void sync.syncNow();
+    },
+  };
+}
+
+const localRatingRepository = createLocalRatingRepository();
+const ratingSync = createRatingSync({
+  baseUrl: API_BASE_URL,
+  fetch: (...args) => fetch(...args),
+  local: localRatingRepository,
+  getAuthHeaders: () => authSession.getAuthHeaders(),
+  onSessionRejected: () => authSession.handleSessionRejected(),
+});
+
+// Signing in uploads ratings given while signed out, and brings down those from other phones
+authSession.subscribe(() => {
+  if (authSession.getState().status === 'signedIn') void ratingSync.syncNow();
+});
+
+export const ratingRepository = createSyncedRatingRepository(localRatingRepository, ratingSync);
+
+/** Uploads ratings given while offline, and brings down those given on other phones. */
+export const syncRatings = () => ratingSync.syncNow();

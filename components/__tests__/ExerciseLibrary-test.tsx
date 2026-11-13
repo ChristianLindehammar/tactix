@@ -398,13 +398,19 @@ describe('exercise library', () => {
       );
     });
 
-    it('offers no rating filter or sort, as ratings are not shared yet', async () => {
+    it('asks the server for exercises you rated highly, best first', async () => {
       await openLibrary();
       await screen.findByText('Rondo');
       fireEvent.press(screen.getByTestId('toggle-filters'));
 
-      expect(screen.queryByTestId('filter-rating-4')).toBeNull();
-      expect(screen.queryByTestId('sort-rating')).toBeNull();
+      fireEvent.press(screen.getByTestId('filter-rating-4'));
+      fireEvent.press(screen.getByTestId('sort-rating'));
+
+      await waitFor(() =>
+        expect(mockList).toHaveBeenLastCalledWith(
+          expect.objectContaining({ minRating: 4, sort: 'rating' }),
+        ),
+      );
     });
 
     it('opens an exercise from the library', async () => {

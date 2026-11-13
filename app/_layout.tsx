@@ -13,7 +13,8 @@ import { AppState, View } from 'react-native';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useTranslation } from '@/hooks/useTranslation';
 import { startAccountAndSync, syncExercises } from '@/services/exerciseRepository';
-// Listens for sign-in, so it has to be loaded before the session is restored
+// These listen for sign-in, so they have to be loaded before the session is restored
+import { syncRatings } from '@/services/exerciseRatings';
 import '@/services/plans';
 
 // Prevent auto-hide of splash screen
@@ -29,7 +30,10 @@ export default function RootLayout() {
   useEffect(() => {
     void startAccountAndSync();
     const subscription = AppState.addEventListener('change', state => {
-      if (state === 'active') void syncExercises();
+      if (state === 'active') {
+        void syncExercises();
+        void syncRatings();
+      }
     });
     return () => subscription.remove();
   }, []);
