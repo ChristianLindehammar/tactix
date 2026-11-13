@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "f5a9e3a4-25c7-5e85-b52d-4984dbb3bb13",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – stay on your feet in the one-on-one",
+  "description": "Three against three with a keeper in each goal, on a pitch about 20 metres wide and 30 metres long. The goals are about five metres wide – small goals or cone goals. With so few outfield players, space keeps opening up and the attackers often get clean through on the keeper.\n\nThe keeper practises the basics of the one-on-one: come out while the ball is a little way from the attacker’s foot, stop and be still and low when the attacker is about to shoot, and stay on their feet for as long as possible. Goals only count from low shots, below knee height, so the keepers get plenty of balls along the ground to save.\n\nPlay periods of three to four minutes and change ends between periods. With more keepers, swap them after each period. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Come out while the ball is far from the attacker’s foot – stop when they are about to shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "Stay low, weight forward, hands down by the sides of your body."
+    },
+    {
+      "id": "cp3",
+      "text": "Don’t go down too early. Whoever stays up longest wins the one-on-one."
+    },
+    {
+      "id": "cp4",
+      "text": "After the save: up quickly and restart play."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays a ball in behind. B runs past Y and gets through.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.37
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.345,
+          "endX": 0.45,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.35,
+          "endX": 0.5,
+          "endY": 0.22,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B dribbles at goal. The red keeper comes out while the ball is far from B’s foot.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.41
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.465,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.145,
+          "endX": 0.5,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper stayed up and saved the low shot. The ball goes straight out to X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.22,
+          "endX": 0.23,
+          "endY": 0.28
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

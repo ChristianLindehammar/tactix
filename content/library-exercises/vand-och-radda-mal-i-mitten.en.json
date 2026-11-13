@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 2,
+  "id": "f5f1e583-7a17-5b03-b70d-ce9d1439f8d2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Turn and save – goal in the middle",
+  "description": "Three players and one ball per group. Make a goal of two cones, about 3 metres wide. One player is the keeper in the goal and the other two stand on either side of it, 4–8 metres away.\n\nThe players on the sides take turns to throw or shoot at the goal: high, low, straight at the keeper and a little to the side, so the keeper gets to catch and save in different ways. After every save the keeper throws the ball to the player behind, turns round and gets ready for the next one. Adjust the distance so the keeper saves far more often than not. Change keeper after about ten balls.\n\nVariant: make it a competition – who lets in the fewest goals in their turn? The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keeper: turn quickly and be ready with your hands up before the next ball comes."
+    },
+    {
+      "id": "cp2",
+      "text": "Catch the ball with both hands and pull it into your body."
+    },
+    {
+      "id": "cp3",
+      "text": "Shooters: start with easy balls and make them harder when the keeper is doing well."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A throws at the goal and the keeper catches the ball.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.74
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.69,
+          "endX": 0.5,
+          "endY": 0.57
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The keeper throws the ball to B and turns round.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.36,
+          "endX": 0.5,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots low towards one corner and the keeper moves across to save.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.3,
+          "endX": 0.36,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.53,
+          "endX": 0.33,
+          "endY": 0.53
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

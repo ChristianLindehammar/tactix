@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "id": "62137a87-459b-55b6-bdd4-59efdb3b110c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Play over the middle zone",
+  "description": "Mark out a court of about 16 × 8 metres with cones and a zone of 2–3 metres across the middle. The zone is the net. Two teams of two to four players, one team on each side.\n\nOne team serves with an easy kick over the zone. The ball may bounce once on your side before anyone touches it. The team may then play it between them, at most three touches as a team and two per player, before it must go back over the zone. If the ball lands in the zone, goes out or bounces twice, the other team gets the point and serves. Agree the rules before you start.\n\nEasier: the ball may bounce anywhere and several times on your side. Harder: no bounces at all, or left foot only. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Read the ball early and move your feet so you are in place when it comes down."
+    },
+    {
+      "id": "cp2",
+      "text": "Cushion your first touch so a teammate can reach the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Talk to each other – call \"mine!\" when you take it."
+    },
+    {
+      "id": "cp4",
+      "text": "Play it over where the opponents have a gap."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C serves over the middle zone to the red side.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.69
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.28,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.65,
+          "endX": 0.36,
+          "endY": 0.36,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "After one bounce X passes to Z, who plays it back over the zone.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.36
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.32,
+          "endX": 0.47,
+          "endY": 0.26
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.25,
+          "endX": 0.64,
+          "endY": 0.64,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B's ball lands in the middle zone – point to the red team.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.15
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.85
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.85
+        },
+        {
+          "id": "z1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.44
+        },
+        {
+          "id": "z2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.44
+        },
+        {
+          "id": "z3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.56
+        },
+        {
+          "id": "z4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.62
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.28,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.58,
+          "endX": 0.55,
+          "endY": 0.5
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

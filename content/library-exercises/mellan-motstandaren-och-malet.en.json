@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 2,
+  "id": "80d46d8a-cd1c-5d2f-b9d5-b330a1b8ea29",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Between your opponent and the goal",
+  "description": "Play 5 v 5 or 7 v 7 with goalkeepers on a smaller pitch. Normal rules with one addition: when a team loses the ball, everyone in it gets back as quickly as possible and stands between their nearest opponent and their own goal.\n\nNow and then, a few seconds after a turnover, the coach shouts \"Freeze!\". Everyone stops where they are and looks: is everyone in the team that lost the ball on the right side? If so, that team gets a point; if not, the opponents get one. Then play on from the same spot.\n\nVariant: a goal scored straight from a counter-attack after a turnover counts double. That makes getting back quickly worth it. Play offside if you do in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Turn and run back as soon as the ball is lost. Don't wait to see what happens."
+    },
+    {
+      "id": "cp2",
+      "text": "Run towards your own goal, not towards the ball. Get between your opponent and the goal."
+    },
+    {
+      "id": "cp3",
+      "text": "The player nearest the ball puts pressure on it, so the others have time to get back."
+    },
+    {
+      "id": "cp4",
+      "text": "Look over your shoulder as you run, so you know where your opponent is."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A tries to pass to B, but X reads the pass and steps in.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.303,
+          "y": 0.378
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.343,
+          "y": 0.358,
+          "endX": 0.68,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.43,
+          "endX": 0.56,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X wins the ball and dribbles towards the blue goal. A, B and C turn at once and run back. D goes towards X to slow the attack down.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.44
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.48,
+          "endX": 0.61,
+          "endY": 0.63,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.49,
+          "endX": 0.32,
+          "endY": 0.72
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.32,
+          "endX": 0.86,
+          "endY": 0.66
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.24,
+          "endX": 0.38,
+          "endY": 0.44
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.76,
+          "endX": 0.63,
+          "endY": 0.72
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The coach shouts \"Freeze!\". A, B and D are between their opponent and the goal. C did not get back in time and is on the wrong side, so red get the point.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.66
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

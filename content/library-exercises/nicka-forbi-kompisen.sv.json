@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 2,
+  "id": "45bc1815-5f87-5286-830f-59b7f95fe6d3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Nicka förbi kompisen",
+  "description": "Två och två med en boll och två små mål, eller konmål, som står mot varandra 5–8 meter isär. Blir det en spelare över blir det tre i en grupp. Båda står i varsitt mål.\n\nTuras om att nicka mål. Börja med att kasta upp bollen till dig själv och nicka mot kompisens mål, medan kompisen försöker rädda. Nästa steg: kompisen kastar bollen till dig, du nickar direkt mot hens mål. Kom överens i paret om vilket sätt ni kör och om man får nicka tillbaka direkt på en nick.\n\nAnpassa avståndet och målens storlek efter hur det går. Räkna mål och tävla i paret, eller gör en tävling mellan alla par. Variant: samma lek men med skott på volley i stället för nick. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll ögonen öppna och titta på bollen hela vägen in mot pannan."
+    },
+    {
+      "id": "cp2",
+      "text": "Nicka med pannan, inte med hjässan."
+    },
+    {
+      "id": "cp3",
+      "text": "Böj dig bakåt och slå till bollen med överkroppen."
+    },
+    {
+      "id": "cp4",
+      "text": "Nicka neråt mot marken – en studsande nick är svår att rädda."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A kastar upp bollen till sig själv och nickar mot X:s mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.62,
+          "endX": 0.6,
+          "endY": 0.15,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X:s tur: X kastar upp bollen och nickar mot A:s mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.38,
+          "endX": 0.4,
+          "endY": 0.85,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Nästa steg: X kastar till A, som nickar direkt mot X:s mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.38,
+          "endX": 0.55,
+          "endY": 0.64,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.66,
+          "endX": 0.38,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "3135ec7c-e3c7-5139-aa6c-4310edaec7ab",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – stå kvar på fötterna i friläget",
+  "description": "Spel tre mot tre med en målvakt i varje mål, på en plan som är ungefär 20 meter bred och 30 meter lång. Målen är ungefär fem meter breda – små mål eller konmål. Med så få utespelare öppnar sig ytorna hela tiden, och anfallarna kommer ofta helt fria med målvakten.\n\nMålvakten övar grunderna i friläget: gå ut medan anfallaren har bollen en bit från foten, stanna och stå still och lågt när anfallaren ska skjuta, och stanna kvar på fötterna så länge det går. Mål räknas bara på låga skott, under knähöjd, så att målvakterna får många bollar längs marken att rädda.\n\nSpela perioder om tre–fyra minuter och byt sida mellan perioderna. Har ni fler målvakter byter de efter varje period. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gå ut när bollen är långt från anfallarens fot – stanna när hen ska skjuta."
+    },
+    {
+      "id": "cp2",
+      "text": "Stå lågt med vikten framåt och händerna nere vid sidan av kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Gå inte ner för tidigt. Den som står kvar längst vinner friläget."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter räddningen: upp snabbt och sätt igång spelet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar en boll i djupled. B löper förbi Y och kommer fri.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.37
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.345,
+          "endX": 0.45,
+          "endY": 0.27
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.35,
+          "endX": 0.5,
+          "endY": 0.22,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver mot mål. Röda lagets målvakt går ut medan bollen är långt från B:s fot.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.46,
+          "y": 0.41
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.465,
+          "y": 0.37,
+          "endX": 0.48,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.145,
+          "endX": 0.5,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten har stått kvar och räddat det låga skottet. Bollen rullas direkt ut till X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.17,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.64,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.22,
+          "endX": 0.23,
+          "endY": 0.28
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 2,
+  "id": "2d294f25-0e49-518d-a37a-c0d40ae203d9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Waves of four v four – close the middle",
+  "description": "A big area, about 50 × 70 metres, with a goal and goalkeeper at each end. Two teams of eight outfield players. Each team has four players on the pitch and four waiting by their own end line, two on each side of the goal.\n\nFour blue players get the ball from their goalkeeper and attack four red players. When the attack is over, after a shot or a turnover, the four red players leave to their end line. At once the four waiting red players come on with a new ball from their goalkeeper and attack the other way. Now the four blue players must switch and defend. It keeps going like that, with the teams switching between attack and defence all the time.\n\nOnly quick attacks count: the coach counts out loud to ten, and the goal must come before that. One point for getting into the penalty area with the ball under control, two for a goal. Play offside sometimes if you do in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Protect the middle first. The space in front of goal is the most dangerous; the wing can wait."
+    },
+    {
+      "id": "cp2",
+      "text": "The nearest player puts pressure on the ball and shows it wide. The others close up behind."
+    },
+    {
+      "id": "cp3",
+      "text": "Don't let any opponent run free behind you. Keep track of the runs."
+    },
+    {
+      "id": "cp4",
+      "text": "After your own attack, get back at once: the new attackers are already on their way."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 18,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The blue goalkeeper plays out to A. W goes towards A and X moves in towards the middle.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "R"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "S"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "T"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "U"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.52,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.133
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.153,
+          "endX": 0.24,
+          "endY": 0.21
+        },
+        {
+          "id": "rw",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.48,
+          "endX": 0.21,
+          "endY": 0.38
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.61,
+          "endX": 0.44,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A dribbles inside. X steps up, Y covers behind and Z tucks in. The middle is closed, so A gets no good chance.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "R"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "S"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "T"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "U"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.64,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.8,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.283,
+          "y": 0.422
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.303,
+          "y": 0.472,
+          "endX": 0.38,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.78,
+          "endX": 0.38,
+          "endY": 0.76
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.69,
+          "endX": 0.58,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The attack is over. W–Z go off and R–U come on with a ball from the red goalkeeper. A–D turn and protect the middle in front of their own goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "W"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "X"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "Y"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "D"
+        },
+        {
+          "id": "r",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.8,
+          "label": "R"
+        },
+        {
+          "id": "s",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "S"
+        },
+        {
+          "id": "t",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "T"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "U"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.83,
+          "endX": 0.3,
+          "endY": 0.81
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.52,
+          "endX": 0.38,
+          "endY": 0.32
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.38,
+          "endX": 0.5,
+          "endY": 0.25
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.36,
+          "endX": 0.64,
+          "endY": 0.26
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.48,
+          "endX": 0.64,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

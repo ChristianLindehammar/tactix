@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "c28254aa-bd07-5720-b10f-9ab81dc99459",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Sparka ut och driv varvet",
+  "description": "Två lag. Blå laget börjar som sparklag och står vid ett mål, rött lag sprider ut sig på planen. Ställ ut fyra koner som hörn i en stor bana runt planen. Bredvid målet ligger några extra bollar.\n\nDen första i blå laget sparkar ut en boll så långt hen kan, tar sedan en av de extra bollarna och driver den runt konerna och hem till målet. Röda laget hämtar den utsparkade bollen och passar den mot målet. Går bollen in medan blå spelaren driver mellan två koner är hen bränd och får gå tillbaka till förra konen. Står hen vid en kon är hen säker och kan vänta där tills nästa spelare har sparkat ut. Byt roller efter ungefär fem minuter.\n\nPoäng: blå laget får en poäng för varje spelare som kommer hem och tre extra för ett helt varv på en egen utspark. Röda laget får en poäng för varje bränning. Hitta gärna på fler regler tillsammans med barnen. Variant: sparka ut på volley, ur händerna eller efter ett kast från en lagkompis. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sparka ut dit där motståndarna inte står."
+    },
+    {
+      "id": "cp2",
+      "text": "Håll bollen nära foten runt konerna, så tappar du den inte i svängen."
+    },
+    {
+      "id": "cp3",
+      "text": "Röda laget: passa till den som står närmast målet i stället för att springa med bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Titta upp innan du lämnar konen – hinner du till nästa?"
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A sparkar ut bollen mot röda laget.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.78
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.42
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.22
+        },
+        {
+          "id": "s",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.13
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.6,
+          "endY": 0.54,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver en ny boll mot första konen. X passar den utsparkade bollen till Y.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.78
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.42
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "s",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.24
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.55
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.29,
+          "endX": 0.13,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.51,
+          "endX": 0.47,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y passar in bollen i mål medan A är mellan två koner – A är bränd och driver tillbaka.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.42
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.78
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.78
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.42
+        },
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "s",
+          "type": "ball",
+          "x": 0.27,
+          "y": 0.62
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.56,
+          "endX": 0.2,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.24
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.88,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.2,
+          "endX": 0.5,
+          "endY": 0.07
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

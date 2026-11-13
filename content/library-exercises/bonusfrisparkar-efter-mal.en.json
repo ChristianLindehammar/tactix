@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "id": "054e8d47-9971-5cfc-9a56-9e43f4e1f6bb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bonus free kicks after a goal",
+  "description": "Seven against seven with goalkeepers on a pitch of about 60 × 45 metres. Put cones on three or four free kick spots in front of each goal: at an angle from the left, straight on, at an angle from the right, and ideally one inside the penalty area (indirect free kick).\n\nNormal match play, but every time a team scores from open play it gets two free kicks in a row as a bonus. The coach points out the spots. The opponents set up a wall of two or three players and the rest mark. A free kick goal is worth one point. Then play restarts from the goalkeeper who conceded.\n\nThe shooting team tries different solutions: a direct shot, a short pass to the side before the shot, a quick free kick before the wall is set, or a combination inside the penalty area. Variation: play with offside now and then – it changes where the receivers can stand. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Decide on the routine before you line up – and fool the wall with your body language."
+    },
+    {
+      "id": "cp2",
+      "text": "On a short free kick: pass firmly and flat, so the shooter can strike first time."
+    },
+    {
+      "id": "cp3",
+      "text": "Look for the chance to take it quickly before the wall and the goalkeeper are set."
+    },
+    {
+      "id": "cp4",
+      "text": "Follow up the shot – goalkeepers often spill free kicks."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "setPieces",
+    "shooting"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B scores from open play. That gives the blue team two bonus free kicks in a row.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.17
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "First free kick, at an angle from the left: X and Y form the wall. A lays the ball short to the side for B.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s2c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.28,
+          "endX": 0.36,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots first time past the wall.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s2c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.24,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Second free kick, straight on: C takes it quickly and shoots before the wall and the goalkeeper are set.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s1c",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.27
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.32,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.19,
+          "endX": 0.36,
+          "endY": 0.18
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.18
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.25,
+          "endX": 0.46,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:15.000Z",
+  "updatedAt": "2026-11-13T19:28:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

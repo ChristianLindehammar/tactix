@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "f8ca1b24-9fab-552e-b55f-451fcc597654",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Last keeper standing",
+  "description": "One goal and a shooting spot about 8–12 metres out, depending on age. One player is the shooter; everyone else stands together on the goal line as goalkeepers. The coach stands at the shooting spot with balls.\n\nIf the shooter scores, the keeper standing nearest to where the ball went in is out, and the shooter gets a new ball and shoots again. If someone saves, the player who saved becomes the new shooter and the shooter joins the goal line. If the shooter misses the goal, the shooter is out and the keeper nearest the ball becomes the shooter. No rebounds – the ball is dead after the first save.\n\nThe last player left in goal wins and the player before comes second. Then everyone joins in again. Variant: decide which foot or type of shot is allowed, for example inside foot only or left foot only. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Shooter: look for a gap between the keepers before you shoot."
+    },
+    {
+      "id": "cp2",
+      "text": "A safe shot on target beats a hard one wide."
+    },
+    {
+      "id": "cp3",
+      "text": "Keepers: stay on your toes and follow the ball all the way."
+    },
+    {
+      "id": "cp4",
+      "text": "Use your whole body – hands, feet and legs can all save."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots and scores nearest to Z.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.1,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.31
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "sp",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.53
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.27,
+          "endX": 0.53,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Z is out and rests. The coach passes a new ball to A.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.11,
+          "endX": 0.79,
+          "endY": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "sp",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.48,
+          "endX": 0.58,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots again, and this time Y saves.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.31
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.27,
+          "endX": 0.4,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y becomes the shooter and A goes to the goal line.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.27,
+          "endX": 0.34,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.35,
+          "endX": 0.57,
+          "endY": 0.16
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

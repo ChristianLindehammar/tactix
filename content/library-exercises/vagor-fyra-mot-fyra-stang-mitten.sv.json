@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 2,
+  "id": "9f277b80-e919-5fea-ace4-7f9b591409fa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Vågor fyra mot fyra – stäng mitten",
+  "description": "En stor yta, ungefär 50 × 70 meter, med ett mål och en målvakt i varje ände. Två lag med åtta utespelare. Varje lag har fyra spelare på planen och fyra som väntar vid egen kortlinje, två på var sida om målet.\n\nFyra blå får bollen av sin målvakt och anfaller mot fyra röda. När anfallet är slut, efter avslut eller brytning, går de fyra röda av till sin kortlinje. Direkt kommer de fyra väntande röda in med en ny boll från sin målvakt och anfaller åt andra hållet. Nu måste de fyra blå ställa om och försvara. Så fortsätter det, och lagen byter hela tiden mellan anfall och försvar.\n\nBara snabba anfall räknas: tränaren räknar högt till tio, och målet ska komma innan dess. En poäng för att ta sig in i straffområdet med bollen under kontroll, två för mål. Spela med offside ibland om ni gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skydda mitten först. Ytan framför mål är farligast, kanten kan vänta."
+    },
+    {
+      "id": "cp2",
+      "text": "Den närmaste stör bollhållaren och styr ut mot kanten. De andra drar ihop sig bakom."
+    },
+    {
+      "id": "cp3",
+      "text": "Låt inte någon motståndare springa fri bakom er. Håll koll på löpningarna."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter ditt eget anfall: spring hem på en gång, de nya anfallarna är redan på väg."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 18,
+  "maxPlayers": 18,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå lagets målvakt spelar ut till A. W går mot A, och X drar sig in mot mitten.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "R"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "S"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "T"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "U"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.52,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.133
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.153,
+          "endX": 0.24,
+          "endY": 0.21
+        },
+        {
+          "id": "rw",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.48,
+          "endX": 0.21,
+          "endY": 0.38
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.61,
+          "endX": 0.44,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver inåt. X möter, Y täcker bakom och Z drar in. Mitten är stängd, så A får inget bra läge.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "R"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "S"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "T"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "U"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.64,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.8,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.72,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.283,
+          "y": 0.422
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.303,
+          "y": 0.472,
+          "endX": 0.38,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.78,
+          "endX": 0.38,
+          "endY": 0.76
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.69,
+          "endX": 0.58,
+          "endY": 0.66
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Anfallet är slut. W–Z går av och R–U kommer in med en boll från röda lagets målvakt. A–D vänder och skyddar mitten framför sitt eget mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "bw1",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.035
+        },
+        {
+          "id": "bw2",
+          "type": "player",
+          "x": 0.23,
+          "y": 0.035
+        },
+        {
+          "id": "bw3",
+          "type": "player",
+          "x": 0.77,
+          "y": 0.035
+        },
+        {
+          "id": "bw4",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.035
+        },
+        {
+          "id": "rw0",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.965,
+          "label": "W"
+        },
+        {
+          "id": "rw1",
+          "type": "opponent",
+          "x": 0.23,
+          "y": 0.965,
+          "label": "X"
+        },
+        {
+          "id": "rw2",
+          "type": "opponent",
+          "x": 0.77,
+          "y": 0.965,
+          "label": "Y"
+        },
+        {
+          "id": "rw3",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.965,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.52,
+          "label": "D"
+        },
+        {
+          "id": "r",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.8,
+          "label": "R"
+        },
+        {
+          "id": "s",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "S"
+        },
+        {
+          "id": "t",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "T"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.78,
+          "label": "U"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.82
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.83,
+          "endX": 0.3,
+          "endY": 0.81
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.52,
+          "endX": 0.38,
+          "endY": 0.32
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.38,
+          "endX": 0.5,
+          "endY": 0.25
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.36,
+          "endX": 0.64,
+          "endY": 0.26
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.48,
+          "endX": 0.64,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

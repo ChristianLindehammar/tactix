@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 2,
+  "id": "03616db2-cb7d-537e-80e6-1caee26f504f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Snett bakåt, snett framåt – sju mot sju",
+  "description": "Sju mot sju med målvakter på en plan på ungefär 55 × 40 meter. Bara markpassningar är tillåtna och varje spelare får högst tre tillslag. En hög passning ger bollen till motståndarna.\n\nPoäng: ett mål ger en poäng. Om anfallet innehöll en passning snett bakåt som följdes direkt av en passning snett framåt ger målet två poäng – tränaren ropar ut när det händer. Spelarna utan boll ska hela tiden flytta sig så att det finns en vinkel bakåt och en framåt till bollhållaren.\n\nVariant: spela med offside om laget gör det i match, eller sänk till två tillslag när det flyter. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå snett, aldrig rakt bakom eller rakt framför en motståndare – då är passningsvägen stängd."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela snett bakåt för att få tid, och leta direkt efter vinkeln snett framåt."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot med rätt fot och öppen kropp, så att nästa passning går på ett eller två tillslag."
+    },
+    {
+      "id": "cp4",
+      "text": "Passa hårt och längs marken, till den fot som är längst från motståndaren."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "U pressar A. A spelar snett bakåt till B, och samtidigt flyttar sig C in i luckan mellan W och Y.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.48,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.32,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.63,
+          "endX": 0.54,
+          "endY": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.47,
+          "endX": 0.34,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar direkt snett framåt till C. D startar en löpning snett in mot mål.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.63
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.42,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.5,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.52,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.32,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.6,
+          "endX": 0.37,
+          "endY": 0.46
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.31,
+          "endX": 0.6,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C tar emot halvvänd och passar snett framåt till D.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.402,
+          "y": 0.348
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.23,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.432,
+          "y": 0.318,
+          "endX": 0.56,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D avslutar – vinkel bakåt följd av vinkel framåt, två poäng.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.15
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "f",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "F"
+        },
+        {
+          "id": "u",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.42,
+          "label": "U"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.48,
+          "y": 0.5,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.12,
+          "endX": 0.55,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:15.000Z",
+  "updatedAt": "2026-11-13T19:28:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

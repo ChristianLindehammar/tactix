@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 2,
+  "id": "8a49baa1-8523-5c5c-b1d4-4860e64c2f93",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – rätt läge när bollen byter lag",
+  "description": "Matchspel fem mot fem, fyra utespelare och en målvakt i varje lag, på en liten plan som är ungefär 30 meter lång och 25 meter bred, med vanliga mål. På den lilla planen är bollen nästan alltid nära något av målen, och den byter ofta lag.\n\nMålvakten jobbar med sin placering i båda lägena. När motståndarna har bollen flyttar hen med bollen, står på linjen mellan bollen och målets mitt och går ut så långt det går utan att bli överlyft. När det egna laget har bollen kliver hen upp och åt sidan, så att hen alltid är spelbar bakåt och hinner ta bollar som slås bakom försvararna. Ledaren kan blåsa av ibland: alla fryser, och målvakterna får själva säga om de står rätt.\n\nSpela fyra perioder om fyra minuter. Med fler spelare: gör planen bredare snarare än längre, så att det blir mer spel från kanterna. Spela med offside om laget gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen flyttar sig – du flyttar dig. Små snabba steg, och stå still när skottet kommer."
+    },
+    {
+      "id": "cp2",
+      "text": "Motståndarnas boll: på linjen mellan bollen och målets mitt, och så långt ut som läget tillåter."
+    },
+    {
+      "id": "cp3",
+      "text": "Eget lags boll: kliv upp mot straffområdets kant och visa dig för en passning bakåt."
+    },
+    {
+      "id": "cp4",
+      "text": "Prata hela tiden och tala om för försvararna var de ska stå."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd anfaller på kanten. Blå lagets målvakt flyttar mot främre stolpen och går lite ut.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.44,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.6,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.68,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.69
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.725,
+          "endX": 0.74,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.565,
+          "y": 0.905,
+          "endX": 0.66,
+          "endY": 0.885
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A har vunnit bollen och spelar hem. Målvakten har redan flyttat åt sidan och är spelbar.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.77,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.598,
+          "y": 0.842
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.558,
+          "y": 0.857,
+          "endX": 0.43,
+          "endY": 0.89
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten spelar ut till C och kliver upp mot straffområdets kant när laget flyttar fram.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkr",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.76,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.54,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.298,
+          "y": 0.828
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.268,
+          "y": 0.798,
+          "endX": 0.16,
+          "endY": 0.71
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.865,
+          "endX": 0.5,
+          "endY": 0.79
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

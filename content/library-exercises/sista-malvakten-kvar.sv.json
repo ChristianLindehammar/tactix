@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "id": "61d21b11-7812-570d-bfdf-db2092ee96c5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Sista målvakten kvar",
+  "description": "Ett mål och en skottplats ungefär 8–12 meter ut, beroende på ålder. En spelare är skytt, alla andra står tillsammans på mållinjen och är målvakter. Ledaren står vid skottplatsen med bollar.\n\nGör skytten mål går den målvakt ut som stod närmast där bollen gick in, och skytten får en ny boll och skjuter igen. Räddar någon blir den som räddade ny skytt, och skytten ställer sig i mål. Skjuter skytten utanför går skytten ut, och den målvakt som stod närmast bollen blir ny skytt. Returer gäller inte – bollen är död efter första räddningen.\n\nDen som står kvar sist i mål vinner, tvåan kommer på andra plats. Sedan är alla med igen. Variant: bestäm vilken fot eller vilken typ av skott som gäller, till exempel bara insida eller bara vänsterfoten. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skytt: titta var det finns en lucka mellan målvakterna innan du skjuter."
+    },
+    {
+      "id": "cp2",
+      "text": "Hellre ett säkert skott på mål än ett hårt utanför."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakter: stå lite på tå och följ bollen hela vägen."
+    },
+    {
+      "id": "cp4",
+      "text": "Använd hela kroppen – händer, fötter och ben får rädda."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "goalkeeping"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A skjuter och gör mål närmast Z.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.1,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.31
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "sp",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.53
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.27,
+          "endX": 0.53,
+          "endY": 0.04
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Z går ut och vilar. Ledaren passar en ny boll till A.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.11,
+          "endX": 0.79,
+          "endY": 0.15
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "sp",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.69,
+          "y": 0.48,
+          "endX": 0.58,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter igen, och nu räddar Y.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.1,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.31
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.27,
+          "endX": 0.4,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Y blir skytt och A ställer sig på mållinjen.",
+      "markers": [
+        {
+          "id": "g",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.1,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.39,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.27,
+          "endX": 0.34,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.35,
+          "endX": 0.57,
+          "endY": 0.16
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.82,
+          "y": 0.42
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

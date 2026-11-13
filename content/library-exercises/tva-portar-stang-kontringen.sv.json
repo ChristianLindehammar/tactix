@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "id": "b5daad54-6df0-5f93-83cd-9f0b05c1e348",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Två portar – stäng kontringen",
+  "description": "En yta på ungefär 30 × 40 meter med två konportar, cirka åtta meter breda, på varje kortlinje. Spel 4 mot 4 utan målvakter. Ett lag gör mål genom att driva bollen genom någon av motståndarnas två portar.\n\nNär ett lag tappar bollen räknar tränaren högt till fem. Mål inom de fem sekunderna – alltså på kontring – ger två poäng, annars en. Laget som tappade bollen ska alltså direkt pressa bollhållaren och stänga den port som ligger närmast bollen. Tränaren har bollar vid sidan och spelar in en ny så fort bollen går ut.\n\nTa bort extrapoängen om lagen slutar våga anfalla. Kör omgångar på tre–fyra minuter med vila emellan. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Närmaste spelare pressar på en gång – bromsa kontringen innan den kommit igång."
+    },
+    {
+      "id": "cp2",
+      "text": "Spring hem mot den port som ligger närmast bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Tänk efter: ska jag pressa, eller springa hem och täcka?"
+    },
+    {
+      "id": "cp4",
+      "text": "Ta tillbaka bollen tillsammans. Den som pressar styr bollhållaren mot en lagkamrat."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 8,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A försöker spela till B, men X läser passningen och kliver in.",
+      "markers": [
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.05
+        },
+        {
+          "id": "b1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "b2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.95
+        },
+        {
+          "id": "b3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.95
+        },
+        {
+          "id": "b4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.15,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.41
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.39,
+          "endX": 0.68,
+          "endY": 0.32
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.43,
+          "endX": 0.56,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X vinner bollen och driver mot blå lagets port. A pressar direkt, D springer hem mot porten och B och C springer tillbaka.",
+      "markers": [
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.05
+        },
+        {
+          "id": "b1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "b2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.95
+        },
+        {
+          "id": "b3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.95
+        },
+        {
+          "id": "b4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.15,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.16,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.44
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.49,
+          "endX": 0.67,
+          "endY": 0.64,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.51,
+          "endX": 0.44,
+          "endY": 0.55
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.72,
+          "endX": 0.68,
+          "endY": 0.82
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.34,
+          "endX": 0.86,
+          "endY": 0.54
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.28,
+          "endX": 0.16,
+          "endY": 0.42
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Porten är stängd, så X måste spela till Z. D hinner fram, tar bollen och blå kan anfalla igen.",
+      "markers": [
+        {
+          "id": "t1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.05
+        },
+        {
+          "id": "t2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.05
+        },
+        {
+          "id": "t3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.05
+        },
+        {
+          "id": "t4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.05
+        },
+        {
+          "id": "b1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.95
+        },
+        {
+          "id": "b2",
+          "type": "cone",
+          "x": 0.36,
+          "y": 0.95
+        },
+        {
+          "id": "b3",
+          "type": "cone",
+          "x": 0.64,
+          "y": 0.95
+        },
+        {
+          "id": "b4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.95
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.05,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.62,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.74,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.67
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.69,
+          "endX": 0.38,
+          "endY": 0.73
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.83,
+          "endX": 0.48,
+          "endY": 0.78
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

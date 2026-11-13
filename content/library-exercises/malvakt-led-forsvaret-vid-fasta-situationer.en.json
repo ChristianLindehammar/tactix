@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 2,
+  "id": "0da4a9d0-8c2c-50e2-9821-7df1a7527178",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – lead the defence at set pieces",
+  "description": "Six against six on a pitch about 50 × 35 metres, with a full-size goal and a keeper at one end and two cone goals, about five metres wide, at the other. Red defends the big goal and scores by dribbling the ball through one of the cone goals. Blue attacks the big goal.\n\nPlay corners and throw-ins towards the big goal as in a match. On top of that, every time red plays the ball over the goal line at the cone-goal end, blue gets a long free kick, from a new spot each time: from the wing, straight on or at an angle. The keeper leads the defence at every set piece – places the players, calls out who marks whom, and decides early whether to come out or stay on the line.\n\nThe teams swap roles at half-time, so both get to defend the big goal. With more players, play seven or eight against eight, and play offside towards the big goal if the team does in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Organise before the ball is struck: who takes the posts, who marks whom."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand so you can see both the ball and the players in front of goal."
+    },
+    {
+      "id": "cp3",
+      "text": "Call early and clearly – \"Keeper!\" or \"Away!\"."
+    },
+    {
+      "id": "cp4",
+      "text": "If you catch it: start the counter at once, while the opponents are still upfield."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 13,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A takes the corner. The red keeper comes out and catches the ball in the air.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.095
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.125,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.25,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.16,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.26,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.05,
+          "y": 0.035
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.09,
+          "y": 0.04,
+          "endX": 0.42,
+          "endY": 0.075,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.535,
+          "y": 0.09,
+          "endX": 0.45,
+          "endY": 0.08
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The keeper throws it out to Y, who dribbles towards one of the cone goals.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.095
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.92,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.38,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.17,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.28,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.19,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.1
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.12,
+          "endX": 0.83,
+          "endY": 0.31
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.41,
+          "endX": 0.8,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red played the ball over the goal line. Blue gets a long free kick, and the keeper leads the defence.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.095
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.39,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.3,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.44,
+          "label": "E"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.21,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.21,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.46,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.15,
+          "y": 0.28,
+          "endX": 0.42,
+          "endY": 0.1,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

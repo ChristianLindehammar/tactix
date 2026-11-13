@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 2,
+  "id": "de82d053-9159-5edc-bf96-a990c17f19ba",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Mellan motståndaren och målet",
+  "description": "Spel 5 mot 5 eller 7 mot 7 med målvakter på en mindre plan. Vanliga regler, men med ett tillägg: när ett lag tappar bollen ska alla i laget så fort som möjligt ta sig hem och ställa sig mellan sin närmaste motståndare och det egna målet.\n\nDå och då, några sekunder efter en brytning, ropar tränaren ”Frys!”. Alla stannar där de står och tittar efter: står alla i laget som tappade bollen på rätt sida? Gör de det får laget en poäng, annars får motståndarna en. Spela sedan vidare från samma ställe.\n\nVariant: ett mål som görs direkt på kontring efter en brytning räknas dubbelt. Då lönar det sig att springa hem fort. Spela med offside om ni gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Vänd och spring hem direkt när bollen är tappad. Vänta inte på att se vad som händer."
+    },
+    {
+      "id": "cp2",
+      "text": "Spring mot eget mål, inte mot bollen. Ställ dig mellan din motståndare och målet."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som är närmast bollen stör bollhållaren, så att de andra hinner hem."
+    },
+    {
+      "id": "cp4",
+      "text": "Titta över axeln medan du springer, så att du vet var din motståndare är."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "defence",
+    "transition",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A försöker spela till B, men X läser passningen och kliver in.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.303,
+          "y": 0.378
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.343,
+          "y": 0.358,
+          "endX": 0.68,
+          "endY": 0.3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.43,
+          "endX": 0.56,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X vinner bollen och driver mot blå lagets mål. A, B och C vänder direkt och springer hem. D går mot X för att störa.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.2,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.24,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.44
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.48,
+          "endX": 0.61,
+          "endY": 0.63,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.49,
+          "endX": 0.32,
+          "endY": 0.72
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.32,
+          "endX": 0.86,
+          "endY": 0.66
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.24,
+          "endX": 0.38,
+          "endY": 0.44
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.76,
+          "endX": 0.63,
+          "endY": 0.72
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Tränaren ropar ”Frys!”. A, B och D står mellan sin motståndare och målet. C hann inte hem och står fel, så röd får poängen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.68,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.58,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.62,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.66
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

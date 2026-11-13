@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 2,
+  "id": "645c2ea7-b5ef-5b92-a95b-386d98aa8b8e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Talk the defence into place",
+  "description": "Play 5 v 5 to 7 v 7 with goals and goalkeepers. Before you start, each team agrees on a few short defending words that everyone understands, for example \"I'm going!\" (I press), \"Cover!\" (I'm behind you), a name plus \"Yours!\" (you take that player) and \"Up!\" (the line steps up). The diagram shows four outfield players per team.\n\nFirst play a short round where nobody may talk at all. Then play with free talk. The defending team gets an extra point every time it wins the ball after a clear call with a name. The coach can stop play and ask the nearest player what was said. Ask after the rounds as well: what was the difference?\n\nPlay offside sometimes if you do in matches – it changes what needs to be said. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Say the name first, so the right person listens – then the word."
+    },
+    {
+      "id": "cp2",
+      "text": "Short, loud and in time. Say it before it happens, not after."
+    },
+    {
+      "id": "cp3",
+      "text": "Only use the words you have agreed on. Everyone should understand them the same way."
+    },
+    {
+      "id": "cp4",
+      "text": "The goalkeeper sees the most and should organise the line from behind."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B has the ball. X shouts \"I'm going!\" and presses. Y answers \"Cover!\" and moves in behind X at an angle.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.39
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.52,
+          "endX": 0.47,
+          "endY": 0.47
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.71,
+          "endX": 0.42,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D starts a run in behind. Z calls Y's name and \"Yours!\", and Y goes with D. Z stays in place.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.64,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.389
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.62,
+          "endX": 0.5,
+          "endY": 0.8
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.68,
+          "endX": 0.46,
+          "endY": 0.76
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tries to play the ball to D, but Y has followed and wins it. Y passes to W. The goalkeeper shouts \"Up!\" and the team steps up.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.62,
+          "endX": 0.25,
+          "endY": 0.64
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.66,
+          "endX": 0.7,
+          "endY": 0.58
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.44,
+          "endX": 0.52,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

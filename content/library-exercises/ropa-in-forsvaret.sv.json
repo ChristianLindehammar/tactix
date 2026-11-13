@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 2,
+  "id": "dbc54d19-3e08-52f0-a012-e87daa7c720a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ropa in försvaret",
+  "description": "Spel 5 mot 5 till 7 mot 7 med mål och målvakter. Innan ni börjar kommer varje lag överens om några korta försvarsord som alla förstår, till exempel ”Jag går!” (jag pressar), ”Täck!” (jag står bakom dig), ”Din!” plus ett namn (du tar den spelaren) och ”Upp!” (linjen kliver upp). Bilden visar fyra utespelare per lag.\n\nSpela först en kort omgång där ingen får prata alls. Spela sedan med fritt prat. Laget som försvarar får en extrapoäng varje gång det vinner bollen efter ett tydligt rop med namn. Tränaren kan stanna spelet och fråga den som var närmast vad som sades. Fråga också efter omgångarna: hur kändes skillnaden?\n\nSpela med offside ibland om ni gör det i match – det ändrar vad som behöver sägas. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Säg namnet först, så att rätt person lyssnar – sedan ordet."
+    },
+    {
+      "id": "cp2",
+      "text": "Kort, högt och i tid. Säg det innan det händer, inte efter."
+    },
+    {
+      "id": "cp3",
+      "text": "Använd bara orden ni kommit överens om. Alla ska förstå dem på samma sätt."
+    },
+    {
+      "id": "cp4",
+      "text": "Målvakten ser mest och ska styra linjen bakifrån."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 10,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B har bollen. X ropar ”Jag går!” och pressar. Y svarar ”Täck!” och flyttar snett bakom X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.39
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.52,
+          "endX": 0.47,
+          "endY": 0.47
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.71,
+          "endX": 0.42,
+          "endY": 0.64
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D börjar springa i djupet. Z ropar Y:s namn och ”Din!”, och Y följer med D. Z stannar kvar i sin yta.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.58,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.64,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.389
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.62,
+          "endX": 0.5,
+          "endY": 0.8
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.68,
+          "endX": 0.46,
+          "endY": 0.76
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B försöker spela fram till D, men Y har följt med och vinner bollen. Y spelar till W. Målvakten ropar ”Upp!” och laget kliver upp.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.42
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.8,
+          "label": "D"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.6,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.74,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.62,
+          "endX": 0.25,
+          "endY": 0.64
+        },
+        {
+          "id": "rz",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.66,
+          "endX": 0.7,
+          "endY": 0.58
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.44,
+          "endX": 0.52,
+          "endY": 0.4
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

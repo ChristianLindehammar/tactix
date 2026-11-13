@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 2,
+  "id": "88a288d9-b0fc-5431-9d0f-0c96a94fbd81",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – set the wall and save the free kick",
+  "description": "Six against six on a pitch about 50 × 35 metres, with a full-size goal and a keeper at one end and two cone goals, about six metres wide, at the other. Red defends the big goal and scores by dribbling the ball through a cone goal. Blue attacks the big goal. Mark five or six free-kick spots with cones: some far out (25–30 metres), some just outside the box, both straight on and at an angle.\n\nEvery time red scores in a cone goal, blue gets a free kick from the next marked spot, and blue also gets a free kick for fouls near the box. The keeper decides how many players go in the wall and where it stands, positions themselves so they can see the ball, and deals with rebounds. With few defenders, take the free kicks straight away, without a wall.\n\nThe teams swap roles at half-time. With more players it gets closer to a match; then play offside towards the big goal as well. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Call out the number in the wall at once – more close to goal, fewer or none far out."
+    },
+    {
+      "id": "cp2",
+      "text": "The wall covers the near post. Line it up from the post and cover the rest of the goal yourself."
+    },
+    {
+      "id": "cp3",
+      "text": "Stand where you can see the ball beside the wall, weight forward."
+    },
+    {
+      "id": "cp4",
+      "text": "Expect a rebound – back on your feet straight after the save."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 13,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A free kick in a central spot. The keeper calls X and Y into the wall and stands beside it.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.075
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.255
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.185,
+          "endX": 0.36,
+          "endY": 0.165
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.225,
+          "endX": 0.55,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A curls the shot round the wall towards the near post. The keeper moves across and saves.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.085
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.165,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.165,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.255
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.235,
+          "endX": 0.44,
+          "endY": 0.035,
+          "bend": -0.15,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.555,
+          "y": 0.08,
+          "endX": 0.48,
+          "endY": 0.065
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The next spot: at an angle, close to the box. One in the wall, and B follows up for the rebound.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.23,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.19
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.17,
+          "endX": 0.42,
+          "endY": 0.04,
+          "bend": -0.08,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.545,
+          "y": 0.255,
+          "endX": 0.55,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

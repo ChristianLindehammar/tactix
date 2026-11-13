@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "id": "5122c901-d670-5864-a003-d708d8211e2f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bryt och spela framåt direkt",
+  "description": "Spel 6 mot 6 med målvakter på en plan på ungefär 50 × 60 meter. Bilden visar fyra utespelare per lag. Fokus ligger på brytningen: den som bryter en passning ska, om det går, spela bollen vidare framåt i samma tillslag och starta kontringen direkt.\n\nEtt mål på en kontring där brytningen och den första passningen var samma tillslag ger tre poäng. Ett vanligt mål ger en. Uppmuntra en lång passning bakom motståndarna när det finns en lagkamrat som redan har börjat springa. Tränaren står vid sidan och spelar in en ny boll när den går ut.\n\nSpela med offside om ni gör det i match – då måste löpningen i djupet tajmas. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Läs passningen tidigt och kliv in framför mottagaren, inte bakom."
+    },
+    {
+      "id": "cp2",
+      "text": "Bestäm innan bollen kommer var den ska. Titta upp innan du bryter."
+    },
+    {
+      "id": "cp3",
+      "text": "Lagkamraterna startar sina löpningar redan när de ser att brytningen kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Går det inte att spela framåt direkt: ta ett säkert tillslag och behåll bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "transition",
+    "defence",
+    "passing"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 12,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "W spelar mot X. A ser passningen komma och kliver in framför X.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.34,
+          "y": 0.49
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.52,
+          "endX": 0.56,
+          "endY": 0.62
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.68,
+          "endX": 0.48,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A bryter och spelar med samma tillslag en lång boll bakom Y. B har redan börjat springa.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.36,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.51
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.48,
+          "endX": 0.8,
+          "endY": 0.2
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.4,
+          "endX": 0.87,
+          "endY": 0.25
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B tar emot bollen och avslutar direkt. Mål på en sådan kontring ger tre poäng.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "rk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "bk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.06,
+          "y": 0.5
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.68,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.32,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.38,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.2
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.17,
+          "endX": 0.56,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:27:25.000Z",
+  "updatedAt": "2026-11-13T19:27:25.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

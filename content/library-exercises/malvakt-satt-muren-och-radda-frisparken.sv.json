@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 2,
+  "id": "3802b7fb-69b2-5d22-b7cd-6ed34d743f55",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – sätt muren och rädda frisparken",
+  "description": "Sex mot sex på en plan på ungefär 50 × 35 meter, med ett stort mål och en målvakt i ena änden och två konmål, ungefär sex meter breda, i den andra. Röd försvarar det stora målet och gör mål genom att driva in bollen i ett konmål. Blå anfaller det stora målet. Markera fem–sex frisparkslägen med koner: några långt ut (25–30 meter), några strax utanför straffområdet, både rakt framifrån och snett från sidan.\n\nVarje gång röd gör mål i ett konmål får blå en frispark från nästa markerade läge, och blå får också frispark vid regelbrott nära straffområdet. Målvakten bestämmer hur många som ska stå i muren och var den ska stå, ställer sig själv så att hen ser bollen och tar returerna. Är försvararna få: skjut frisparkarna direkt, utan mur.\n\nLagen byter uppgift i halvtid. Med fler spelare blir det mer likt match; spela då gärna med offside mot det stora målet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ropa ut antalet i muren direkt – fler nära mål, färre eller ingen långt ut."
+    },
+    {
+      "id": "cp2",
+      "text": "Muren täcker främre stolpen. Ställ upp den från stolpen och täck själv resten av målet."
+    },
+    {
+      "id": "cp3",
+      "text": "Stå så att du ser bollen bredvid muren, med vikten framåt."
+    },
+    {
+      "id": "cp4",
+      "text": "Räkna med retur – upp på fötterna direkt efter räddningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 13,
+  "maxPlayers": 17,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Frispark centralt. Målvakten ropar in X och Y i muren och ställer sig själv bredvid den.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.075
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.255
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.29,
+          "y": 0.185,
+          "endX": 0.36,
+          "endY": 0.165
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.61,
+          "y": 0.225,
+          "endX": 0.55,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A skjuter runt muren mot främre stolpen. Målvakten flyttar med och räddar.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.085
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.165,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.53,
+          "y": 0.165,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.16,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.28,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.255
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.235,
+          "endX": 0.44,
+          "endY": 0.035,
+          "bend": -0.15,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.555,
+          "y": 0.08,
+          "endX": 0.48,
+          "endY": 0.065
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Nästa läge: snett från sidan, nära straffområdet. En i muren, och B följer upp mot returen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "s1",
+          "type": "goal",
+          "x": 0.25,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "s2",
+          "type": "goal",
+          "x": 0.75,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.23,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.19,
+          "label": "Z"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.32,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.17,
+          "y": 0.19
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.17,
+          "endX": 0.42,
+          "endY": 0.04,
+          "bend": -0.08,
+          "waves": 1
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.545,
+          "y": 0.255,
+          "endX": 0.55,
+          "endY": 0.16
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:29.000Z",
+  "updatedAt": "2026-11-13T19:28:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

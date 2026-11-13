@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 2,
+  "id": "f582664c-b7b3-50ee-8f98-1e1d15dd3489",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Head it past your partner",
+  "description": "Pairs with one ball and two small goals, or cone goals, facing each other 5–8 metres apart. With an odd number, make one group of three. Each player stands in a goal.\n\nTake turns to head for goal. Start by tossing the ball up to yourself and heading at your partner's goal while they try to save. Next step: your partner throws the ball to you and you head it straight at their goal. Each pair agrees which way to play and whether you may head a header straight back.\n\nAdjust the distance and goal size to how it goes. Count goals and compete within the pair, or hold a competition between all pairs. Variant: the same game with volleys instead of headers. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep your eyes open and watch the ball all the way onto your forehead."
+    },
+    {
+      "id": "cp2",
+      "text": "Head with your forehead, not the top of your head."
+    },
+    {
+      "id": "cp3",
+      "text": "Lean back and hit the ball with your upper body."
+    },
+    {
+      "id": "cp4",
+      "text": "Head downwards – a bouncing header is hard to save."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A tosses the ball up and heads at X's goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.67
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.62,
+          "endX": 0.6,
+          "endY": 0.15,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X's turn: X tosses the ball up and heads at A's goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.38,
+          "endX": 0.4,
+          "endY": 0.85,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Next step: X throws to A, who heads straight at X's goal.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.12
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.88,
+          "rotation": 180
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "id": "t1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.38,
+          "endX": 0.55,
+          "endY": 0.64,
+          "bend": -0.04,
+          "waves": 1
+        },
+        {
+          "id": "h1",
+          "type": "arrow-dashed",
+          "x": 0.44,
+          "y": 0.66,
+          "endX": 0.38,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

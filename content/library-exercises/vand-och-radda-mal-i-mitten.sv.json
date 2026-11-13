@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 2,
+  "id": "53193853-324c-5a9b-91cb-fa722233860f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Vänd och rädda – mål i mitten",
+  "description": "Tre spelare och en boll per grupp. Gör ett mål av två koner, ungefär 3 meter brett. En spelare är målvakt i målet och de två andra står på var sin sida om målet, 4–8 meter bort.\n\nSpelarna på sidorna turas om att kasta eller skjuta på målet: högt, lågt, rakt på och lite vid sidan, så att målvakten får fånga och rädda på olika sätt. Efter varje räddning kastar målvakten bollen till spelaren bakom sig, vänder sig om och gör sig redo för nästa. Anpassa avståndet så att målvakten räddar mycket oftare än det blir mål. Byt målvakt efter ungefär tio bollar.\n\nVariant: gör en tävling – vem släpper in minst mål under sin tur? Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakt: vänd snabbt och stå redo med händerna framme innan nästa boll kommer."
+    },
+    {
+      "id": "cp2",
+      "text": "Fånga bollen med båda händerna och dra in den mot kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Skyttar: börja med lätta bollar och gör dem svårare när målvakten lyckas."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 1,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 3,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A kastar på målet och målvakten fångar bollen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.74
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.69,
+          "endX": 0.5,
+          "endY": 0.57
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten kastar bollen till B och vänder sig om.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.36,
+          "endX": 0.5,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter lågt mot ena hörnet och målvakten flyttar sig och räddar.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.16,
+          "label": "B"
+        },
+        {
+          "id": "bl",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.3,
+          "endX": 0.36,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.53,
+          "endX": 0.33,
+          "endY": 0.53
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:24:22.000Z",
+  "updatedAt": "2026-11-13T19:24:22.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "id": "607e7226-d93e-5a1f-adc7-fc397b92e8a0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bonusfrisparkar efter mål",
+  "description": "Sju mot sju med målvakter på en plan på ungefär 60 × 45 meter. Lägg ut koner på tre–fyra frisparkslägen framför varje mål: snett från vänster, rakt framifrån, snett från höger och gärna ett inne i straffområdet (indirekt frispark).\n\nVanligt matchspel, men varje gång ett lag gör mål i spelet får det två frisparkar i rad som bonus. Tränaren pekar ut lägena. Motståndarna ställer upp en mur med två eller tre spelare och resten markerar. Ett frisparksmål ger en poäng. Därefter startar spelet igen från målvakten som släppte in.\n\nLaget som skjuter testar olika lösningar: direkt skott, en kort passning åt sidan före skottet, en snabbt lagd frispark innan muren står eller en kombination inne i straffområdet. Variant: spela med offside ibland – det ändrar hur de som ska ta emot bollen kan ställa sig. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bestäm lösningen innan ni ställer upp – och lura muren med kroppsspråket."
+    },
+    {
+      "id": "cp2",
+      "text": "Vid en kort frispark: passa hårt och plant, så att skytten kan slå direkt."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta efter chansen att lägga snabbt innan muren och målvakten är på plats."
+    },
+    {
+      "id": "cp4",
+      "text": "Följ upp skottet – målvakten släpper ofta returer på frisparkar."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "setPieces",
+    "shooting"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B gör mål i spelet. Det ger blå laget två bonusfrisparkar i rad.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.17
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "p0",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.14,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Första frisparken, snett från vänster: X och Y bildar mur. A lägger bollen kort åt sidan till B.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s2c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.27
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.28,
+          "endX": 0.36,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B skjuter direkt förbi muren.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s2c",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.27
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.41,
+          "y": 0.15,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.24,
+          "endX": 0.54,
+          "endY": 0.035
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Andra frisparken, rakt framifrån: C lägger snabbt och skjuter innan muren och målvakten är på plats.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "g2",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gkb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.5
+        },
+        {
+          "id": "s1c",
+          "type": "cone",
+          "x": 0.24,
+          "y": 0.27
+        },
+        {
+          "id": "s3c",
+          "type": "cone",
+          "x": 0.74,
+          "y": 0.13
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.08
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.29
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.32,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.19,
+          "endX": 0.36,
+          "endY": 0.18
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.18
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.25,
+          "endX": 0.46,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:15.000Z",
+  "updatedAt": "2026-11-13T19:28:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

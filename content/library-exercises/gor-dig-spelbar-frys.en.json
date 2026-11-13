@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "id": "4c8fa354-9cea-5d62-947e-a2eaa4f40bec",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Get open – freeze!",
+  "description": "Three against three in an area of about 30 × 25 metres. At one end is a full goal with a goalkeeper, at the other end two cone goals about five metres wide out by the sidelines. One team attacks the big goal, the other scores by dribbling the ball through one of the cone goals. Switch ends at half time so both teams face the goalkeeper.\n\nNow and then the coach calls \"Freeze!\". Everybody stops where they are. If the player on the ball has two team-mates they could pass to – open passing lanes, diagonally ahead or diagonally behind – the team gets a point. If someone is hiding behind an opponent, the coach asks where they should have moved, and then play goes on.\n\nVariation: at most three touches each, so the players off the ball have to move even more. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Get out of your opponent's shadow – an open passing lane matters more than being close."
+    },
+    {
+      "id": "cp2",
+      "text": "Offer yourself diagonally ahead of or diagonally behind the ball carrier, not in a straight line."
+    },
+    {
+      "id": "cp3",
+      "text": "Receive half-turned with your side to the defender, so you see both the ball and the pitch."
+    },
+    {
+      "id": "cp4",
+      "text": "Shield the ball with your body as soon as the defender gets close."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A has the ball and X presses. B moves out diagonally behind A and C moves towards the sideline diagonally ahead of A – A now has two passing options.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.9
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.9
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.9
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.74
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.55,
+          "endX": 0.19,
+          "endY": 0.65
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.71,
+          "y": 0.37,
+          "endX": 0.8,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to C, who receives half-turned with the side to Z.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.9
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.9
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.9
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.74
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.68,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.46,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.57,
+          "endX": 0.77,
+          "endY": 0.51
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C shields the ball and dribbles past Z on the outside.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.9
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.9
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.9
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.74
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.46,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.5,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.84,
+          "y": 0.41
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "Z"
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.37,
+          "endX": 0.7,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C shoots past the goalkeeper.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.9
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.9
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.9
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.9
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.94,
+          "y": 0.74
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.09
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.16
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.36,
+          "label": "Z"
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.13,
+          "endX": 0.56,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-13T19:28:15.000Z",
+  "updatedAt": "2026-11-13T19:28:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
