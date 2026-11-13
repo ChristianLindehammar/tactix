@@ -15,7 +15,17 @@ interface DraggableMarkerProps {
   onLongPress?: () => void;
   /** A tool is selected, so taps around the marker should reach the court. */
   placing?: boolean;
+  /**
+   * What a tap on the marker does. On iOS a press held a moment starts a drag, which takes the touch
+   * from the marker's own button, so a drag that ends where it started counts as the tap instead.
+   * Android still delivers the press to the button, so there the button alone handles it.
+   */
+  onPress?: () => void;
 }
+
+// How far a drag may wander and still count as a tap
+const TAP_SLOP = 8;
+const DRAG_TAKES_THE_PRESS = Platform.OS === 'ios';
 
 export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   id,
@@ -28,6 +38,7 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
   onDragStart,
   onLongPress,
   placing = false,
+  onPress,
 }) => {
   const MARKER_SIZE = 40;
   const halfMarker = MARKER_SIZE / 2;
@@ -73,7 +84,16 @@ export const DraggableMarker: React.FC<DraggableMarkerProps> = ({
       translateX.value = offsetX.value + event.translationX;
       translateY.value = offsetY.value + event.translationY;
     })
-    .onEnd(() => {
+    .onEnd(event => {
+      if (DRAG_TAKES_THE_PRESS && onPress && Math.hypot(event.translationX, event.translationY) < TAP_SLOP) {
+        // Back where it was, so the tap doesn't nudge the marker
+        translateX.value = offsetX.value;
+        translateY.value = offsetY.value;
+        runOnJS(onDragEnd)(id, x, y);
+        runOnJS(onPress)();
+        scale.value = withSpring(1);
+        return;
+      }
       const newX = translateX.value / containerSize.width;
       const newY = translateY.value / containerSize.height;
       runOnJS(onDragEnd)(id, newX, newY);

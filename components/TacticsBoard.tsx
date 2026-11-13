@@ -277,6 +277,16 @@ export function TacticsBoard({
     </TouchableOpacity>
   );
 
+  // What tapping a marker does while editing: a goal turns, a person gets a label
+  const pressAction = (marker: TacticsMarker): (() => void) | undefined =>
+    marker.type === 'goal'
+      ? enableGoalRotation
+        ? () => update(markers => markers.map(m => (m.id === marker.id ? turnGoal(m) : m)))
+        : undefined
+      : marker.type !== 'ball' && marker.type !== 'cone' && enableLabels
+        ? () => setLabellingId(marker.id)
+        : undefined;
+
   const renderMarkerBody = (marker: TacticsMarker, interactive: boolean) => (
     <View style={{ transform: [{ scale: markerScale }] }}>
       {marker.type === 'ball' ? (
@@ -296,11 +306,7 @@ export function TacticsBoard({
           accessibilityRole={interactive && enableGoalRotation ? 'button' : undefined}
           accessibilityLabel={t('markerNames.goal')}
           accessibilityHint={interactive && enableGoalRotation ? t('rotateGoalHint') : undefined}
-          onPress={
-            interactive && enableGoalRotation
-              ? () => update(markers => markers.map(m => (m.id === marker.id ? turnGoal(m) : m)))
-              : undefined
-          }
+          onPress={interactive ? pressAction(marker) : undefined}
           style={[
             styles.coneMarker,
             marker.rotation ? { transform: [{ rotate: `${marker.rotation}deg` }] } : null,
@@ -314,7 +320,7 @@ export function TacticsBoard({
           activeOpacity={0.8}
           accessibilityRole={interactive && enableLabels ? 'button' : undefined}
           accessibilityLabel={marker.label ?? t(`markerNames.${marker.type}`)}
-          onPress={interactive && enableLabels ? () => setLabellingId(marker.id) : undefined}
+          onPress={interactive ? pressAction(marker) : undefined}
           style={[
             styles.personMarker,
             { backgroundColor: PERSON_COLORS[marker.type] ?? PERSON_COLORS.opponent },
@@ -509,6 +515,7 @@ export function TacticsBoard({
                   setDraggingId(null);
                 }}
                 onDragStart={handleDragStart}
+                onPress={pressAction(marker)}
                 placing={addingType !== null}
                 onLongPress={() => {
                   // Don't allow deleting the last remaining ball marker

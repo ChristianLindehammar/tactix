@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Alert } from 'react-native';
 import { fireEvent, render, screen } from '@testing-library/react-native';
-import { getByGestureTestId } from 'react-native-gesture-handler/jest-utils';
+import { fireGestureHandler, getByGestureTestId } from 'react-native-gesture-handler/jest-utils';
+import { State } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { DraggableMarker } from '../DraggableMarker';
@@ -405,6 +406,19 @@ describe('TacticsBoard', () => {
       const { onChange } = await renderBoard({ value: [ball, goal], enableGoalRotation: true });
 
       fireEvent.press(screen.getByTestId(`marker-${goal.id}`));
+
+      expect(onChange.mock.lastCall?.[0].find(m => m.id === goal.id)?.rotation).toBe(45);
+    });
+
+    it('turns a goal held a moment before letting go, as the drag takes over the touch', async () => {
+      const { onChange } = await renderBoard({ value: [ball, goal], enableGoalRotation: true });
+
+      fireGestureHandler(getByGestureTestId(`marker-drag-${goal.id}`), [
+        { state: State.BEGAN, translationX: 0, translationY: 0 },
+        { state: State.ACTIVE, translationX: 0, translationY: 0 },
+        { state: State.ACTIVE, translationX: 2, translationY: 1 },
+        { state: State.END, translationX: 2, translationY: 1 },
+      ]);
 
       expect(onChange.mock.lastCall?.[0].find(m => m.id === goal.id)?.rotation).toBe(45);
     });
