@@ -42,6 +42,14 @@ Renew the App Store profile, e.g. after adding a capability such as Sign in with
 
 Build and upload a new beta build to TestFlight
 
+### ios whats_new
+
+```sh
+[bundle exec] fastlane ios whats_new
+```
+
+Write the release notes into What's New on the App Store version being prepared
+
 ----
 
 

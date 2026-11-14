@@ -274,6 +274,31 @@ platform :ios do
     prebuild(platform: :ios)
     build_and_upload_ios
   end
+
+  desc "Write the release notes into What's New on the App Store version being prepared"
+  lane :whats_new do
+    asc_api_key # also signs Spaceship in
+    expected = JSON.parse(File.read(File.expand_path("../app.json", __dir__)))["expo"]["version"]
+    app = Spaceship::ConnectAPI::App.find(CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier))
+    version = app.get_edit_app_store_version(platform: Spaceship::ConnectAPI::Platform::IOS)
+    UI.user_error!("No App Store version is being prepared; create it in App Store Connect first") unless version
+    unless version.version_string == expected
+      UI.user_error!("The version being prepared is #{version.version_string}, but app.json says #{expected}")
+    end
+
+    notes = release_notes
+    version.get_app_store_version_localizations.each do |localization|
+      # App Store Connect names some languages without a region (sv, fi), the template with one (sv-SE, fi-FI)
+      language = localization.locale.split("-").first
+      text = notes[localization.locale] || notes.find { |locale, _| locale.split("-").first == language }&.last
+      if text
+        localization.update(attributes: { whats_new: text })
+        UI.success("#{localization.locale}: What's New set")
+      else
+        UI.important("#{localization.locale}: no notes in the template, left as it is")
+      end
+    end
+  end
 end
 
 # ---------------------------------------------------------------------------
