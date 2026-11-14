@@ -27,6 +27,7 @@ import {
 import { describeExercise } from '@/utils/describeExercise';
 import { sportKey } from '@/utils/sportWording';
 import { EXERCISE_SORTS, ExerciseSort, filterExercises } from '@/utils/filterExercises';
+import { formatRating } from '@/utils/formatRating';
 
 const toggled = <T,>(list: T[], item: T) =>
   list.includes(item) ? list.filter(existing => existing !== item) : [...list, item];
@@ -43,6 +44,15 @@ const SOURCE_LABELS: Record<Source, string> = {
   favorites: 'favorites',
 };
 const FAVORITE_COLOR = '#E53935';
+
+// Sorts only the server can do, as they count other coaches
+type ServerSort = 'favorites' | 'topRated';
+const SERVER_SORTS: ServerSort[] = ['topRated', 'favorites'];
+const isServerSort = (sort: string): sort is ServerSort => (SERVER_SORTS as string[]).includes(sort);
+type Sort = ExerciseSort | ServerSort;
+// Shared exercises sort by every coach's ratings, not yours: that's what tells a good drill
+const LIBRARY_SORTS: Sort[] = ['updated', 'topRated', 'title', 'difficulty', 'favorites'];
+const sortsFor = (source: Source): Sort[] => (source === 'mine' ? [...EXERCISE_SORTS] : LIBRARY_SORTS);
 
 interface LibraryState {
   status: 'loading' | 'ready' | 'failed';
@@ -71,7 +81,7 @@ export default function ExerciseLibraryScreen() {
   const [difficulties, setDifficulties] = useState<ExerciseDifficulty[]>([]);
   const [phase, setPhase] = useState<ExercisePhase | undefined>();
   const [minRating, setMinRating] = useState<RatingStars | undefined>();
-  const [sort, setSort] = useState<ExerciseSort | 'favorites'>('updated');
+  const [sort, setSort] = useState<Sort>('updated');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [source, setSource] = useState<Source>('mine');
   const [shared, setShared] = useState<LibraryState>({ status: 'loading', entries: [], total: 0 });
@@ -114,19 +124,16 @@ export default function ExerciseLibraryScreen() {
     phase,
     minRating,
     ratings,
-    // Only the server knows how many coaches saved an exercise
-    sort: sort === 'favorites' ? 'updated' : sort,
+    // Only the server knows how other coaches saved and rated an exercise
+    sort: isServerSort(sort) ? 'updated' : sort,
     locale,
   });
 
   // The library and your favourites both come from the server
   const inLibrary = source !== 'mine';
   const inFavorites = source === 'favorites';
-  // Only the server knows how many coaches saved an exercise. Your ratings are synced to it, so it
-  // can filter and sort the library by them too
-  const sorts: (ExerciseSort | 'favorites')[] = inLibrary
-    ? [...EXERCISE_SORTS, 'favorites']
-    : [...EXERCISE_SORTS];
+  // Only the server knows how other coaches saved and rated an exercise
+  const sorts = sortsFor(source);
   const librarySort: LibrarySort = sort;
   const libraryFilter = useMemo(
     () => ({
@@ -136,7 +143,8 @@ export default function ExerciseLibraryScreen() {
       phase,
       playerCount: parsedPlayerCount,
       search,
-      minRating,
+      // Every coach's ratings in the library, like the stars on its cards
+      minAverage: minRating,
       sort: librarySort,
       // One language at a time, so a drill published in two languages isn't listed twice
       language: locale,
@@ -220,6 +228,21 @@ export default function ExerciseLibraryScreen() {
       </View>
     ) : null;
 
+  // Every coach's ratings but the author's, rather than your own, which shows on the exercise
+  const renderCommunityRating = (entry: LibraryEntry) =>
+    entry.ratingAverage !== null && entry.ratingCount > 0 ? (
+      <ThemedText
+        style={styles.favoriteCount}
+        accessibilityLabel={t('communityRating', {
+          count: entry.ratingCount,
+          average: formatRating(entry.ratingAverage, locale),
+        })}
+        testID={`rating-${entry.exercise.id}`}
+      >
+        {`★ ${formatRating(entry.ratingAverage, locale)} (${entry.ratingCount})`}
+      </ThemedText>
+    ) : null;
+
   const renderCard = (item: Exercise, entry?: LibraryEntry) => (
     <Pressable
       accessibilityRole="button"
@@ -231,7 +254,9 @@ export default function ExerciseLibraryScreen() {
           {item.title}
         </ThemedText>
         {entry && renderFavorites(entry)}
-        {ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
+        {entry
+          ? renderCommunityRating(entry)
+          : ratings[item.id] && <ThemedText>{`★ ${ratings[item.id]}`}</ThemedText>}
       </View>
       {entry?.authorName ? (
         <ThemedText style={styles.cardDetail}>{t('byAuthor', { name: entry.authorName })}</ThemedText>
@@ -352,6 +377,7 @@ export default function ExerciseLibraryScreen() {
               // Never show the other list's exercises while this one loads
               setShared({ status: 'loading', entries: [], total: 0 });
               setSource(option);
+              if (!sortsFor(option).includes(sort)) setSort('updated');
             }}
           />
         ))}

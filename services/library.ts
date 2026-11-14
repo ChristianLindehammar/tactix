@@ -26,8 +26,11 @@ export class LibraryError extends Error {
   }
 }
 
-/** The sorts the server offers. Favourites puts the most saved first, rating your best first. */
-export type LibrarySort = 'updated' | 'title' | 'difficulty' | 'favorites' | 'rating';
+/**
+ * The sorts the server offers. Favourites puts the most saved first, rating your best first and top
+ * rated the best by every other coach's ratings.
+ */
+export type LibrarySort = 'updated' | 'title' | 'difficulty' | 'favorites' | 'rating' | 'topRated';
 
 export interface LibraryFilter {
   sport?: Sport;
@@ -36,8 +39,8 @@ export interface LibraryFilter {
   phase?: ExercisePhase;
   playerCount?: number;
   search?: string;
-  /** Only exercises you rated at least this high. Uses your own ratings, never other coaches'. */
-  minRating?: RatingStars;
+  /** Only exercises whose average from every coach but the author is at least this, as shown. */
+  minAverage?: RatingStars;
   sort?: LibrarySort;
   offset?: number;
   /** The coach's language. Exercises in it are shown, or in English if the sport has none in it. */
@@ -55,7 +58,12 @@ export interface LibraryEntry {
   favoriteCount: number;
   /** Whether you did. */
   favorited: boolean;
+  /** The average of every coach's rating but the author's, to one decimal. Null if nobody rated it. */
+  ratingAverage: number | null;
+  ratingCount: number;
 }
+
+export type RatingSummary = Pick<LibraryEntry, 'ratingAverage' | 'ratingCount'>;
 
 export interface FavoriteState {
   favoriteCount: number;
@@ -85,7 +93,7 @@ const toQuery = (filter: LibraryFilter, lang?: string) => {
   if (filter.playerCount !== undefined) params.push(['players', String(filter.playerCount)]);
   const search = filter.search?.trim();
   if (search) params.push(['search', search]);
-  if (filter.minRating) params.push(['minRating', String(filter.minRating)]);
+  if (filter.minAverage) params.push(['minAverage', String(filter.minAverage)]);
   if (filter.sort) params.push(['sort', filter.sort]);
   if (filter.offset) params.push(['offset', String(filter.offset)]);
   if (lang) params.push(['lang', lang]);
@@ -136,6 +144,14 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
     };
   };
 
+  const readRatingSummary = (data: unknown): RatingSummary => {
+    const { ratingAverage, ratingCount } = (data ?? {}) as { ratingAverage?: unknown; ratingCount?: unknown };
+    return {
+      ratingAverage: typeof ratingAverage === 'number' ? ratingAverage : null,
+      ratingCount: typeof ratingCount === 'number' ? ratingCount : 0,
+    };
+  };
+
   const readEntry = (data: unknown): LibraryEntry | null => {
     try {
       const authorName = (data as { authorName?: unknown }).authorName;
@@ -143,6 +159,7 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
         exercise: parseExercise(data),
         authorName: typeof authorName === 'string' ? authorName : null,
         ...readFavorite(data),
+        ...readRatingSummary(data),
       };
     } catch (error) {
       // One exercise from a newer app version mustn't hide the rest of the page
@@ -198,6 +215,13 @@ export function createLibrary({ baseUrl, fetch, getAuthHeaders, onSessionRejecte
 
     setFavorite: async (id: string, favorited: boolean): Promise<FavoriteState> =>
       readFavorite(await expectOk(await request(favoritePath(id), { method: favorited ? 'PUT' : 'DELETE' })).json()),
+
+    /** Every other coach's ratings together. Null if the server doesn't have it. */
+    getRatingSummary: async (id: string): Promise<RatingSummary | null> => {
+      const response = await request(`/exercises/${encodeURIComponent(id)}/rating-summary`);
+      if (response.status === 404) return null;
+      return readRatingSummary(await expectOk(response).json());
+    },
 
     /** Null if it was deleted, or hidden after reports. */
     get: async (id: string): Promise<Exercise | null> => {

@@ -182,7 +182,13 @@ export default {
   copiedFrom: 'Kopioitu harjoitteesta',
   copiedFromGone: 'Harjoite, jota ei enää ole',
   openOriginal: 'Avaa alkuperäinen',
-  yourRating: 'Arviosi',
+  rating: 'Arvosana',
+  ratingSummary: {
+    one: '{{average}} · {{count}} valmentaja',
+    other: '{{average}} · {{count}} valmentajaa',
+  },
+  youGave: 'Annoit {{stars}} ★',
+  noRatingsYet: 'Ei vielä arvioita',
   ratingSaveFailed: 'Arviotasi ei voitu tallentaa.',
   exerciseNotEditable: 'Vain omistaja voi muokata tätä harjoitetta.',
   unsavedChangesTitle: 'Hylätäänkö muutokset?',
@@ -215,6 +221,10 @@ export default {
   favoriteCount: {
     one: '{{count}} valmentaja on tallentanut',
     other: '{{count}} valmentajaa on tallentanut',
+  },
+  communityRating: {
+    one: 'Arvosana {{average}}, {{count}} valmentaja arvioinut',
+    other: 'Arvosana {{average}}, {{count}} valmentajaa arvioinut',
   },
   favoriteSaveFailed: 'Suosikkeja ei voitu päivittää.',
   favoritesEmpty: 'Ei vielä suosikkeja. Napauta kirjaston harjoitteen sydäntä, niin se tallentuu tänne.',
@@ -262,7 +272,8 @@ export default {
   minRatingOption: '{{stars}}★ tai enemmän',
   exerciseSorts: {
     updated: 'Viimeksi muokattu',
-    rating: 'Paras arvosana',
+    rating: 'Oma arvosana',
+    topRated: 'Parhaiten arvioidut',
     title: 'Otsikko A–Ö',
     difficulty: 'Vaikeustaso',
     favorites: 'Eniten tallennetut',

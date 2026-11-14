@@ -182,7 +182,13 @@ export default {
   copiedFrom: 'Copied from',
   copiedFromGone: 'An exercise that no longer exists',
   openOriginal: 'Open the original',
-  yourRating: 'Your rating',
+  rating: 'Rating',
+  ratingSummary: {
+    one: '{{average}} · {{count}} coach',
+    other: '{{average}} · {{count}} coaches',
+  },
+  youGave: 'You gave {{stars}} ★',
+  noRatingsYet: 'No ratings yet',
   ratingSaveFailed: 'Could not save your rating.',
   exerciseNotEditable: 'Only the owner can edit this exercise.',
   unsavedChangesTitle: 'Discard changes?',
@@ -215,6 +221,10 @@ export default {
   favoriteCount: {
     one: 'Saved by {{count}} coach',
     other: 'Saved by {{count}} coaches',
+  },
+  communityRating: {
+    one: 'Rated {{average}} by {{count}} coach',
+    other: 'Rated {{average}} by {{count}} coaches',
   },
   favoriteSaveFailed: 'Could not update your favourites.',
   favoritesEmpty: 'No favourites yet. Tap the heart on an exercise in the library to keep it here.',
@@ -262,7 +272,8 @@ export default {
   minRatingOption: '{{stars}}★ and up',
   exerciseSorts: {
     updated: 'Latest updated',
-    rating: 'Highest rated',
+    rating: 'My rating',
+    topRated: 'Top rated',
     title: 'Title A–Z',
     difficulty: 'Difficulty',
     favorites: 'Most saved',

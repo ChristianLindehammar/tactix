@@ -344,10 +344,12 @@ describe('exercise library', () => {
     overrides: Parameters<typeof buildExercise>[0],
     authorName: string | null = 'Coach Anna',
     favorites: { favoriteCount: number; favorited: boolean } = { favoriteCount: 0, favorited: false },
+    rating: { ratingAverage: number | null; ratingCount: number } = { ratingAverage: null, ratingCount: 0 },
   ) => ({
     exercise: buildExercise({ ownerId: 'anna', sport: 'soccer', ...overrides }),
     authorName,
     ...favorites,
+    ...rating,
   });
 
   describe('the shared library', () => {
@@ -398,19 +400,32 @@ describe('exercise library', () => {
       );
     });
 
-    it('asks the server for exercises you rated highly, best first', async () => {
+    it('asks the server for exercises every coach rated highly, best first', async () => {
       await openLibrary();
       await screen.findByText('Rondo');
       fireEvent.press(screen.getByTestId('toggle-filters'));
 
       fireEvent.press(screen.getByTestId('filter-rating-4'));
-      fireEvent.press(screen.getByTestId('sort-rating'));
+      fireEvent.press(screen.getByTestId('sort-topRated'));
 
       await waitFor(() =>
         expect(mockList).toHaveBeenLastCalledWith(
-          expect.objectContaining({ minRating: 4, sort: 'rating' }),
+          expect.objectContaining({ minAverage: 4, sort: 'topRated' }),
         ),
       );
+    });
+
+    it('sorts by every coach\'s ratings rather than yours, falling back from your own sort', async () => {
+      renderExerciseScreen(<ExerciseLibraryScreen />);
+      await waitFor(() => screen.getByTestId('sort-rating'));
+      fireEvent.press(screen.getByTestId('sort-rating'));
+
+      fireEvent.press(screen.getByTestId('source-library'));
+      await screen.findByText('Rondo');
+
+      expect(screen.queryByTestId('sort-rating')).toBeNull();
+      expect(screen.getByTestId('sort-updated').props.accessibilityState.selected).toBe(true);
+      expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ sort: 'updated' }));
     });
 
     it('opens an exercise from the library', async () => {
@@ -493,6 +508,47 @@ describe('exercise library', () => {
       expect(screen.getByLabelText('Saved by 12 coaches')).toBeTruthy();
       expect(screen.getByText('12')).toBeTruthy();
       expect(screen.queryByTestId('favorites-unsaved')).toBeNull();
+    });
+
+    it('shows every coach\'s ratings together instead of your own', async () => {
+      mockList.mockResolvedValue({
+        entries: [
+          entry({ id: 'loved', title: 'Loved' }, null, undefined, { ratingAverage: 4.3, ratingCount: 12 }),
+          entry({ id: 'unrated', title: 'Unrated' }, null),
+        ],
+        total: 2,
+      });
+      await ratingRepository.setMine('loved', 2);
+      await openLibrary();
+      await screen.findByText('Loved');
+
+      expect(screen.getByLabelText('Rated 4.3 by 12 coaches')).toBeTruthy();
+      expect(screen.getByText('★ 4.3 (12)')).toBeTruthy();
+      expect(screen.queryByText('★ 2')).toBeNull();
+      expect(screen.queryByTestId('rating-unrated')).toBeNull();
+    });
+
+    it('sorts by every coach\'s ratings on the server', async () => {
+      await openLibrary();
+      await screen.findByText('Rondo');
+
+      fireEvent.press(screen.getByTestId('sort-topRated'));
+
+      await waitFor(() =>
+        expect(mockList).toHaveBeenLastCalledWith(expect.objectContaining({ sort: 'topRated' })),
+      );
+    });
+
+    it('offers top rated only in the library, as nobody else rates your private ones', async () => {
+      await saved({ title: 'My drill' });
+      await openLibrary();
+      await screen.findByText('Rondo');
+      fireEvent.press(screen.getByTestId('sort-topRated'));
+
+      fireEvent.press(screen.getByTestId('source-mine'));
+
+      expect(await screen.findByText('My drill')).toBeTruthy();
+      expect(screen.queryByTestId('sort-topRated')).toBeNull();
     });
 
     it('goes back to your own exercises', async () => {

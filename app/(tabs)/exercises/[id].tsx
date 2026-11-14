@@ -13,12 +13,13 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { useTranslation } from '@/hooks/useTranslation';
 import { StarRating } from '@/components/StarRating';
 import { getCurrentUserId } from '@/services/currentUser';
-import { ratingRepository } from '@/services/exerciseRatings';
+import { ratingRepository, syncRatings } from '@/services/exerciseRatings';
 import { exerciseRepository } from '@/services/exerciseRepository';
-import { FavoriteState, library } from '@/services/library';
+import { FavoriteState, library, RatingSummary } from '@/services/library';
 import { Exercise, RatingStars } from '@/types/exercise';
 import { cloneExercise } from '@/utils/cloneExercise';
 import { describeExercise } from '@/utils/describeExercise';
+import { formatRating } from '@/utils/formatRating';
 import { sportKey } from '@/utils/sportWording';
 
 /** Where a copy came from: its title, gone (deleted or hidden), or unknown when it couldn't be looked up. */
@@ -37,7 +38,7 @@ const findOrigin = async (id: string): Promise<Origin> => {
 export default function ExerciseDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const insets = useSafeAreaInsets();
   const background = useThemeColor({}, 'background') as string;
 
@@ -54,6 +55,8 @@ export default function ExerciseDetailScreen() {
   // Null when the server can't say: signed out, offline, or an exercise only on this device
   const [favorite, setFavorite] = useState<FavoriteState | null>(null);
   const [favoriteBusy, setFavoriteBusy] = useState(false);
+  // Every coach's ratings but the author's. Null when the server can't say, like the favourites
+  const [community, setCommunity] = useState<RatingSummary | null>(null);
 
   // Reloads on return from the editor, so edits show straight away
   useFocusEffect(
@@ -66,6 +69,14 @@ export default function ExerciseDetailScreen() {
         },
         () => {
           if (active) setFavorite(null);
+        },
+      );
+      library.getRatingSummary(id).then(
+        summary => {
+          if (active) setCommunity(summary);
+        },
+        () => {
+          if (active) setCommunity(null);
         },
       );
       // This device first, then the shared library, which is also where share links lead
@@ -153,6 +164,15 @@ export default function ExerciseDetailScreen() {
       setRating(stars);
     } catch {
       setFailure(t('ratingSaveFailed'));
+      return;
+    }
+    // The average includes yours once it has reached the server. Offline, the old one stays
+    try {
+      await syncRatings();
+      const summary = await library.getRatingSummary(id);
+      if (summary) setCommunity(summary);
+    } catch {
+      // Shown next time the exercise opens
     }
   };
 
@@ -204,6 +224,9 @@ export default function ExerciseDetailScreen() {
   const authorId = exercise.ownerId;
   // Anything the server can show another coach can be reported: a shared exercise, even when this
   // device holds a copy because its author once used it, or one opened from the server by link
+  // Others can rate a public exercise, so its stars show their average. Your own private ones show yours
+  const showsCommunity = community !== null && exercise.visibility === 'public';
+  const average = community && community.ratingCount > 0 ? community.ratingAverage : null;
   const reportable = !mine && (fromLibrary || exercise.visibility === 'public');
 
   return (
@@ -246,9 +269,22 @@ export default function ExerciseDetailScreen() {
         <ThemedText style={styles.summary}>{t('favoriteCount', { count: favorite.favoriteCount })}</ThemedText>
       )}
 
+      {/* Every coach's average in the stars, as that's what tells a good drill. Pressing them rates it */}
       <View style={styles.section}>
-        <ThemedText type="defaultSemiBold">{t('yourRating')}</ThemedText>
-        <StarRating value={rating} onChange={rate} />
+        <ThemedText type="defaultSemiBold">{t('rating')}</ThemedText>
+        <View style={styles.rateRow}>
+          <StarRating value={rating} onChange={rate} shown={showsCommunity ? average : rating} />
+          {showsCommunity && (
+            <ThemedText style={styles.summary}>
+              {average !== null
+                ? t('ratingSummary', { average: formatRating(average, locale), count: community.ratingCount })
+                : t('noRatingsYet')}
+            </ThemedText>
+          )}
+        </View>
+        {showsCommunity && rating !== null && (
+          <ThemedText style={styles.summary}>{t('youGave', { stars: rating })}</ThemedText>
+        )}
       </View>
 
       {origin && (
@@ -345,6 +381,11 @@ const styles = StyleSheet.create({
   },
   summary: {
     opacity: 0.75,
+  },
+  rateRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
   },
   section: {
     gap: 4,

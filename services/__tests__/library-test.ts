@@ -31,13 +31,24 @@ describe('browsing the library', () => {
     const exercise = buildExercise({ id: 'e1', ownerId: 'anna' });
     const { library } = setup(() =>
       json(200, {
-        exercises: [{ ...exercise, authorName: 'Coach Anna', favoriteCount: 3, favorited: true }],
+        exercises: [
+          {
+            ...exercise,
+            authorName: 'Coach Anna',
+            favoriteCount: 3,
+            favorited: true,
+            ratingAverage: 4.3,
+            ratingCount: 12,
+          },
+        ],
         total: 7,
       }),
     );
 
     expect(await library.list({})).toEqual({
-      entries: [{ exercise, authorName: 'Coach Anna', favoriteCount: 3, favorited: true }],
+      entries: [
+        { exercise, authorName: 'Coach Anna', favoriteCount: 3, favorited: true, ratingAverage: 4.3, ratingCount: 12 },
+      ],
       total: 7,
     });
   });
@@ -48,7 +59,7 @@ describe('browsing the library', () => {
 
     const { entries } = await library.list({});
 
-    expect(entries[0]).toMatchObject({ favoriteCount: 0, favorited: false });
+    expect(entries[0]).toMatchObject({ favoriteCount: 0, favorited: false, ratingAverage: null, ratingCount: 0 });
   });
 
   it('sends the filters the server understands, signed in', async () => {
@@ -199,7 +210,7 @@ describe('favourites', () => {
     expect(fetch.mock.calls).toHaveLength(1);
     expect(fetch.mock.calls[0][0]).toBe('https://api.test/favorites?sport=soccer');
     expect(page).toEqual({
-      entries: [{ exercise, authorName: null, favoriteCount: 1, favorited: true }],
+      entries: [{ exercise, authorName: null, favoriteCount: 1, favorited: true, ratingAverage: null, ratingCount: 0 }],
       total: 1,
     });
   });
@@ -212,14 +223,14 @@ describe('favourites', () => {
     expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?sort=favorites');
   });
 
-  it('filters and sorts by your own ratings, in the library and in favourites', async () => {
+  it('filters and sorts by every coach\'s ratings, in the library and in favourites', async () => {
     const { library, fetch } = setup(() => json(200, { exercises: [], total: 0 }));
 
-    await library.list({ minRating: 4, sort: 'rating' });
-    await library.listFavorites({ minRating: 3 });
+    await library.list({ minAverage: 4, sort: 'topRated' });
+    await library.listFavorites({ minAverage: 3 });
 
-    expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?minRating=4&sort=rating');
-    expect(fetch.mock.calls[1][0]).toBe('https://api.test/favorites?minRating=3');
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/library?minAverage=4&sort=topRated');
+    expect(fetch.mock.calls[1][0]).toBe('https://api.test/favorites?minAverage=3');
   });
 
   it('reads how many coaches saved an exercise and whether you did', async () => {
@@ -227,6 +238,19 @@ describe('favourites', () => {
 
     expect(await library.getFavorite('e1')).toEqual({ favoriteCount: 4, favorited: false });
     expect(fetch.mock.calls[0][0]).toBe('https://api.test/exercises/e1/favorite');
+  });
+
+  it('reads every other coach\'s ratings of an exercise together', async () => {
+    const { library, fetch } = setup(() => json(200, { ratingAverage: 4.5, ratingCount: 2 }));
+
+    expect(await library.getRatingSummary('e1')).toEqual({ ratingAverage: 4.5, ratingCount: 2 });
+    expect(fetch.mock.calls[0][0]).toBe('https://api.test/exercises/e1/rating-summary');
+  });
+
+  it('gives no rating summary when the server does not have the exercise', async () => {
+    const { library } = setup(() => json(404, { error: 'notFound' }));
+
+    expect(await library.getRatingSummary('e1')).toBeNull();
   });
 
   it('gives null when the server does not have the exercise', async () => {

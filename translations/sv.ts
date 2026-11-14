@@ -182,7 +182,13 @@ export default {
   copiedFrom: 'Kopierad från',
   copiedFromGone: 'En övning som inte längre finns',
   openOriginal: 'Öppna originalet',
-  yourRating: 'Ditt betyg',
+  rating: 'Betyg',
+  ratingSummary: {
+    one: '{{average}} · {{count}} tränare',
+    other: '{{average}} · {{count}} tränare',
+  },
+  youGave: 'Du gav {{stars}} ★',
+  noRatingsYet: 'Inga betyg än',
   ratingSaveFailed: 'Det gick inte att spara ditt betyg.',
   exerciseNotEditable: 'Bara ägaren kan redigera den här övningen.',
   unsavedChangesTitle: 'Slänga ändringarna?',
@@ -215,6 +221,10 @@ export default {
   favoriteCount: {
     one: 'Sparad av {{count}} tränare',
     other: 'Sparad av {{count}} tränare',
+  },
+  communityRating: {
+    one: 'Betyg {{average}} från {{count}} tränare',
+    other: 'Betyg {{average}} från {{count}} tränare',
   },
   favoriteSaveFailed: 'Det gick inte att uppdatera dina favoriter.',
   favoritesEmpty: 'Inga favoriter än. Tryck på hjärtat på en övning i biblioteket för att spara den här.',
@@ -262,7 +272,8 @@ export default {
   minRatingOption: '{{stars}}★ och uppåt',
   exerciseSorts: {
     updated: 'Senast ändrad',
-    rating: 'Högst betyg',
+    rating: 'Mitt betyg',
+    topRated: 'Bäst betyg',
     title: 'Titel A–Ö',
     difficulty: 'Svårighetsgrad',
     favorites: 'Mest sparade',

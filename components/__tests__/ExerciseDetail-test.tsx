@@ -1,3 +1,4 @@
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import * as React from 'react';
 import { Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -28,7 +29,7 @@ jest.mock('expo-router', () => {
 // The server is the boundary: the library service's own tests cover the requests
 jest.mock('@/services/library', () => ({
   ...jest.requireActual('@/services/library'),
-  library: { get: jest.fn(), report: jest.fn(), block: jest.fn(), getFavorite: jest.fn(), setFavorite: jest.fn() },
+  library: { get: jest.fn(), report: jest.fn(), block: jest.fn(), getFavorite: jest.fn(), setFavorite: jest.fn(), getRatingSummary: jest.fn() },
 }));
 const mockLibrary = library as jest.Mocked<typeof library>;
 
@@ -44,6 +45,7 @@ describe('exercise detail', () => {
     mockLibrary.block.mockReset().mockResolvedValue(undefined);
     mockLibrary.getFavorite.mockReset().mockResolvedValue(null);
     mockLibrary.setFavorite.mockReset();
+    mockLibrary.getRatingSummary.mockReset().mockResolvedValue(null);
     await exerciseRepository.save(
       buildExercise({
         ownerId: await getCurrentUserId(),
@@ -495,6 +497,96 @@ describe('exercise detail', () => {
 
     expect(screen.queryByText('Copied from')).toBeNull();
     expect(mockLibrary.get).not.toHaveBeenCalled();
+  });
+
+  describe('every coach\'s rating', () => {
+    beforeEach(() => {
+      mockId = 'shared';
+      mockLibrary.get.mockResolvedValue(
+        buildExercise({ id: 'shared', ownerId: 'anna', sport: 'soccer', title: 'Rondo' }),
+      );
+    });
+
+    const shownStars = () =>
+      // The host element under the icon drops its name, so read it from the icon itself
+      [1, 2, 3, 4, 5].map(
+        stars =>
+          screen.UNSAFE_getAllByType(MaterialIcons).find(icon => icon.props.testID === `star-icon-${stars}`)!.props
+            .name,
+      );
+
+    it('shows the average in the stars, with how many coaches rated it', async () => {
+      mockLibrary.getRatingSummary.mockResolvedValue({ ratingAverage: 4.3, ratingCount: 12 });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('4.3 · 12 coaches')).toBeTruthy();
+      expect(shownStars()).toEqual(['star', 'star', 'star', 'star', 'star-half']);
+      expect(screen.queryByText(/You gave/)).toBeNull();
+      expect(mockLibrary.getRatingSummary).toHaveBeenCalledWith('shared');
+    });
+
+    it('says what you gave under the average', async () => {
+      await ratingRepository.setMine('shared', 2);
+      mockLibrary.getRatingSummary.mockResolvedValue({ ratingAverage: 4, ratingCount: 3 });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('You gave 2 ★')).toBeTruthy();
+      expect(shownStars()).toEqual(['star', 'star', 'star', 'star', 'star-border']);
+    });
+
+    it('says when nobody has rated it yet', async () => {
+      mockLibrary.getRatingSummary.mockResolvedValue({ ratingAverage: null, ratingCount: 0 });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('No ratings yet')).toBeTruthy();
+      expect(shownStars()).toEqual(Array(5).fill('star-border'));
+    });
+
+    it('shows the new average once your rating has reached the server', async () => {
+      mockLibrary.getRatingSummary
+        .mockResolvedValueOnce({ ratingAverage: 4, ratingCount: 1 })
+        .mockResolvedValue({ ratingAverage: 3, ratingCount: 2 });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+      await screen.findByText('4.0 · 1 coach');
+
+      fireEvent.press(screen.getByTestId('rate-2'));
+
+      expect(await screen.findByText('3.0 · 2 coaches')).toBeTruthy();
+      expect(screen.getByText('You gave 2 ★')).toBeTruthy();
+    });
+
+    it('leaves out other coaches on a private exercise, as nobody else can rate it', async () => {
+      mockLibrary.get.mockResolvedValue(
+        buildExercise({ id: 'shared', ownerId: 'anna', sport: 'soccer', title: 'Rondo', visibility: 'private' }),
+      );
+      mockLibrary.getRatingSummary.mockResolvedValue({ ratingAverage: null, ratingCount: 0 });
+      renderExerciseScreen(<ExerciseDetailScreen />);
+      await screen.findByText('Rondo');
+
+      expect(screen.queryByText('No ratings yet')).toBeNull();
+      expect(screen.getByTestId('rate-1')).toBeTruthy();
+    });
+
+    it('shows your own stars when only you can see it', async () => {
+      await ratingRepository.setMine('shared', 3);
+      mockLibrary.get.mockResolvedValue(
+        buildExercise({ id: 'shared', ownerId: 'anna', sport: 'soccer', title: 'Rondo', visibility: 'private' }),
+      );
+      renderExerciseScreen(<ExerciseDetailScreen />);
+      await screen.findByText('Rondo');
+      await act(async () => {});
+
+      expect(shownStars()).toEqual(['star', 'star', 'star', 'star-border', 'star-border']);
+      expect(screen.queryByText(/You gave/)).toBeNull();
+    });
+
+    it('still shows the exercise when the server can\'t say', async () => {
+      mockLibrary.getRatingSummary.mockRejectedValue(new Error('offline'));
+      renderExerciseScreen(<ExerciseDetailScreen />);
+
+      expect(await screen.findByText('Rondo')).toBeTruthy();
+      expect(screen.queryByText(/ · \d+ coach/)).toBeNull();
+    });
   });
 
   describe('favourites', () => {
