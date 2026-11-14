@@ -137,3 +137,112 @@ class TestByMyRating:
             rate(client, exercise, me, stars)
 
         assert favorite_titles(client, me, '?minRating=4') == ['Loved']
+
+
+class TestCommunityRating:
+    """Every coach's ratings together, so good exercises are easy to find."""
+
+    @pytest.fixture()
+    def library(self, client, me):
+        def _library(query=''):
+            response = client.get(f'/library{query}', headers=me)
+            assert response.status_code == 200
+            return {e['title']: e for e in response.get_json()['exercises']}
+
+        return _library
+
+    def test_gives_the_average_and_how_many_rated(self, client, register, publish, library):
+        from tests.test_ratings import rate
+
+        rondo = publish(title='Rondo')
+        for stars in (5, 4, 4):
+            rate(client, rondo, register(), stars)
+
+        entry = library()['Rondo']
+
+        assert entry['ratingAverage'] == 4.3
+        assert entry['ratingCount'] == 3
+
+    def test_unrated_has_no_average(self, publish, library):
+        publish(title='Rondo')
+
+        entry = library()['Rondo']
+
+        assert entry['ratingAverage'] is None
+        assert entry['ratingCount'] == 0
+
+    def test_leaves_out_the_authors_own_and_cleared_ratings(self, client, register, publish, library):
+        from tests.test_ratings import rate
+
+        author = register()
+        rondo = publish(headers=author, title='Rondo')
+        rate(client, rondo, author, 5)
+        cleared_by = register()
+        rate(client, rondo, cleared_by, 5, '2026-11-13T10:00:00.000Z')
+        rate(client, rondo, cleared_by, None, '2026-11-13T11:00:00.000Z')
+        rate(client, rondo, register(), 2)
+
+        entry = library()['Rondo']
+
+        assert (entry['ratingAverage'], entry['ratingCount']) == (2.0, 1)
+
+    def test_favourites_carry_it_too(self, client, me, register, publish):
+        from tests.test_favorites import favorite
+        from tests.test_ratings import rate
+
+        rondo = publish(title='Rondo')
+        favorite(client, rondo, me)
+        rate(client, rondo, register(), 4)
+
+        entry = client.get('/favorites', headers=me).get_json()['exercises'][0]
+
+        assert (entry['ratingAverage'], entry['ratingCount']) == (4.0, 1)
+
+    def test_filters_by_the_average_as_shown(self, client, me, register, publish, titles):
+        from tests.test_ratings import rate
+
+        author = register()
+        loved, liked, meh = (publish(headers=author, title=t) for t in ('Loved', 'Liked', 'Meh'))
+        publish(title='Unrated')
+        rate(client, loved, register(), 5)
+        for stars in (4, 4, 3):  # 3.7 shown, so below four
+            rate(client, liked, register(), stars)
+        rate(client, meh, register(), 2)
+        rate(client, meh, author, 5)  # the author's own doesn't count
+        rate(client, meh, me, 5, '2026-11-13T10:00:00.000Z')
+        rate(client, meh, me, None, '2026-11-13T11:00:00.000Z')
+
+        assert titles('?minAverage=4') == ['Loved']
+        assert sorted(titles('?minAverage=3')) == ['Liked', 'Loved']
+
+    def test_filters_favourites_by_the_average_too(self, client, me, register, publish):
+        from tests.test_favorites import favorite, favorite_titles
+        from tests.test_ratings import rate
+
+        loved, meh = publish(title='Loved'), publish(title='Meh')
+        for exercise, stars in ((loved, 5), (meh, 2)):
+            favorite(client, exercise, me)
+            rate(client, exercise, register(), stars)
+
+        assert favorite_titles(client, me, '?minAverage=4') == ['Loved']
+
+    @pytest.mark.parametrize('value', ['0', '6', 'four', '4.5'])
+    def test_rejects_an_average_outside_one_to_five(self, client, me, value):
+        response = client.get(f'/library?minAverage={value}', headers=me)
+
+        assert response.status_code == 400
+
+    def test_top_rated_needs_several_ratings_to_beat_well_proven_ones(self, client, register, publish, titles):
+        from tests.test_ratings import rate
+
+        once = publish(title='One five', updatedAt='2026-11-03T12:00:00.000Z')
+        proven = publish(title='Proven', updatedAt='2026-11-03T10:00:00.000Z')
+        poor = publish(title='Poor', updatedAt='2026-11-03T11:00:00.000Z')
+        publish(title='Unrated', updatedAt='2026-11-03T09:00:00.000Z')
+        rate(client, once, register(), 5)
+        for stars in (5, 5, 5, 4):
+            rate(client, proven, register(), stars)
+        for stars in (1, 2):
+            rate(client, poor, register(), stars)
+
+        assert titles('?sort=topRated') == ['Proven', 'One five', 'Unrated', 'Poor']

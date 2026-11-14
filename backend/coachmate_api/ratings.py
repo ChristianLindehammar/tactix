@@ -1,10 +1,11 @@
 """Each coach's own star ratings. The app keeps them on the device and uploads them here, so the
-library can filter and sort by them and they follow the coach to a new phone."""
+library can filter and sort by them and they follow the coach to a new phone. Together, every coach's
+ratings except the author's show which exercises are good."""
 from flask import Blueprint, g, jsonify, request
 
 from .auth import require_user
 from .db import get_db, query_all, query_one
-from .exercises import _format_date
+from .exercises import _format_date, rating_average
 from .favorites import _readable
 from .rate_limit import current_user, rate_limited
 from .validation import ExerciseParseError, parse_date
@@ -63,3 +64,19 @@ def set_rating(exercise_id):
         (exercise_id, g.user_id),
     )
     return jsonify(_to_rating(stored))
+
+
+@bp.get('/exercises/<exercise_id>/rating-summary')
+@require_user
+def rating_summary(exercise_id):
+    """The average and number of ratings from every coach but the author, as in the library."""
+    exercise_id = exercise_id.lower()
+    if _readable(exercise_id) is None:
+        return jsonify({'error': 'notFound'}), 404
+    row = query_one(
+        'SELECT ROUND(AVG(r.stars), 1) AS rating_average, COUNT(r.stars) AS rating_count '
+        'FROM exercises e LEFT JOIN exercise_ratings r ON r.exercise_id = e.id AND r.stars IS NOT NULL '
+        'AND r.user_id <> e.owner_id WHERE e.id = %s',
+        (exercise_id,),
+    )
+    return jsonify({'ratingAverage': rating_average(row['rating_average']), 'ratingCount': row['rating_count']})

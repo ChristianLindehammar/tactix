@@ -107,3 +107,31 @@ class TestRating:
         rate(client, exercise, register(), 2)
 
         assert my_ratings(client, me) == []
+
+
+class TestRatingSummary:
+    def summary(self, client, exercise, headers):
+        return client.get(f"/exercises/{exercise['id']}/rating-summary", headers=headers)
+
+    def test_gives_every_other_coachs_ratings_together(self, client, me, register, publish):
+        author = register()
+        exercise = publish(headers=author)
+        rate(client, exercise, author, 1)  # the author's own doesn't count
+        rate(client, exercise, me, 5)
+        rate(client, exercise, register(), 4)
+
+        response = self.summary(client, exercise, me)
+
+        assert response.status_code == 200
+        assert response.get_json() == {'ratingAverage': 4.5, 'ratingCount': 2}
+
+    def test_unrated_has_no_average(self, client, me, publish):
+        assert self.summary(client, publish(), me).get_json() == {'ratingAverage': None, 'ratingCount': 0}
+
+    def test_an_unknown_exercise_is_not_found(self, client, me):
+        response = client.get('/exercises/00000000-0000-4000-8000-000000000000/rating-summary', headers=me)
+
+        assert response.status_code == 404
+
+    def test_needs_an_account(self, client, publish):
+        assert self.summary(client, publish(), {}).status_code == 401

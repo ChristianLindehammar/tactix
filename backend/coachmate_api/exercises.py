@@ -5,7 +5,7 @@ from flask import Blueprint, g, jsonify, request
 
 from .auth import require_user
 from .db import get_db, query_all, query_one
-from .listing import InvalidFilter, build_library, build_listing
+from .listing import OTHERS_RATINGS, InvalidFilter, build_library, build_listing
 from .plans import has_active_plan
 from .rate_limit import current_user, rate_limited
 from .validation import SCHEMA_VERSION, ExerciseParseError, parse_exercise, upgrade_coaching_points
@@ -109,13 +109,20 @@ def _write_exercise(exercise, owner_id, exists):
 
 FAVORITE_STATS = (
     '(SELECT COUNT(*) FROM exercise_favorites fc WHERE fc.exercise_id = e.id) AS favorite_count, '
-    'EXISTS (SELECT 1 FROM exercise_favorites fm WHERE fm.exercise_id = e.id AND fm.user_id = %s) AS favorited'
+    'EXISTS (SELECT 1 FROM exercise_favorites fm WHERE fm.exercise_id = e.id AND fm.user_id = %s) AS favorited, '
+    f'(SELECT ROUND(AVG(cr.stars), 1) {OTHERS_RATINGS}) AS rating_average, '
+    f'(SELECT COUNT(*) {OTHERS_RATINGS}) AS rating_count'
 )
+
+
+def rating_average(value):
+    """One decimal, or None when no other coach rated it. MariaDB gives a Decimal."""
+    return None if value is None else float(value)
 
 
 def listing_response(build, viewer_id=None):
     """With a viewer, each exercise also carries its author's name, how many coaches saved it and
-    whether the viewer did."""
+    whether the viewer did, and the average and number of other coaches' ratings."""
     try:
         where, params, order, order_params, limit, offset = build()
     except InvalidFilter:
@@ -141,6 +148,8 @@ def listing_response(build, viewer_id=None):
             exercise['authorName'] = row['author_name']
             exercise['favoriteCount'] = row['favorite_count']
             exercise['favorited'] = bool(row['favorited'])
+            exercise['ratingAverage'] = rating_average(row['rating_average'])
+            exercise['ratingCount'] = row['rating_count']
         exercises.append(exercise)
     return jsonify({'exercises': exercises, 'total': total})
 

@@ -25,6 +25,7 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 | `GET /exercises/<id>/favorite` | Yes | `favoriteCount`, how many coaches saved it, and `favorited`, whether you did. Its author can ask too |
 | `PUT /exercises/<id>/favorite`, `DELETE /exercises/<id>/favorite` | Yes, no plan needed | Saves or unsaves it for you, and answers like the above. You can't save your own. Saving twice changes nothing, and unsaving works even once it's gone |
 | `PUT /exercises/<id>/rating` | Yes, no plan needed | Takes `stars`, 1–5 or `null` to clear, and `updatedAt`, when it was rated on the phone. The newest rating wins: an older one arriving later changes nothing. Answers with the rating now stored. Works on your own exercises too |
+| `GET /exercises/<id>/rating-summary` | Yes, no plan needed | `ratingAverage`, rounded to one decimal or `null` if unrated, and `ratingCount`: every coach's rating except the author's own |
 | `GET /ratings` | Yes, no plan needed | `ratings`, every exercise you rated, as `exerciseId`, `stars` and `updatedAt`. Cleared ones stay, with `stars` null |
 | `POST /exercises/<id>/report` | Yes | Takes an optional `reason`, up to 1000 characters. Hides it from you at once, and from everyone after 3 coaches report it. The first report emails `MODERATOR_EMAIL` |
 | `POST /users/<id>/block`, `DELETE /users/<id>/block` | Yes | Blocks or unblocks a coach, by the `ownerId` on their exercises |
@@ -68,7 +69,7 @@ Extra error codes: `invalidId`, `teamExists`, `invalidChange`, `notOwner`, `owne
 
 `GET /exercises` and `GET /library` return `{"exercises": [...], "total": 12}`, where `total` counts
 every match, not just this page. `GET /library` and `GET /favorites` also give `authorName`,
-`favoriteCount` and `favorited` on each exercise. All of these are optional:
+`favoriteCount`, `favorited`, `ratingAverage` and `ratingCount` on each exercise. The rating is every coach's except the author's own, like `GET /exercises/<id>/rating-summary`. All of these are optional:
 
 | Parameter | Meaning |
 |---|---|
@@ -77,7 +78,8 @@ every match, not just this page. `GET /library` and `GET /favorites` also give `
 | `players` | Fits the exercise's player range. An empty end of the range is open |
 | `search` | Title, description and custom tags, ignoring case and accents |
 | `minRating` | 1–5. Only exercises you rated at least this high. Uses your own ratings, never other coaches' |
-| `sort` | `updated` (default), `title`, `difficulty`, `favorites` (most saved first) or `rating` (your best first, unrated last), with the latest edit first within a tie |
+| `minAverage` | 1–5. Only exercises whose average rating, as given in `ratingAverage`, is at least this. Unrated ones are left out |
+| `sort` | `updated` (default), `title`, `difficulty`, `favorites` (most saved first) `rating` (your best first, unrated last) or `topRated` (every other coach's ratings, best first; each exercise counts as also having two 3-star ratings, so one 5 doesn't beat a drill many rated well), with the latest edit first within a tie |
 | `lang` | Library only. The language the exercise was written in, such as `sv`, which also finds `sv-FI` |
 | `limit`, `offset` | Page size 1–100 (default 50), and where to start |
 

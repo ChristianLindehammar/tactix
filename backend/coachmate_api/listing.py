@@ -1,6 +1,7 @@
 """Turns the query string of GET /exercises, GET /library and GET /favorites into SQL. Same meaning as
 filterExercises in utils/filterExercises.ts, except sorting by how many coaches saved an exercise, which
-only the server knows. Ratings are the viewer's own, uploaded from their phone.
+only the server knows. minRating and sort=rating use the viewer's own ratings, uploaded from their phone;
+minAverage and sort=topRated use every other coach's.
 Only values from the caller become query parameters; the SQL text comes from this file."""
 import re
 
@@ -12,6 +13,19 @@ MAX_OFFSET = 1_000_000
 MAX_SEARCH_LENGTH = 200
 LANGUAGE = re.compile(r'[a-z]{2,3}')
 
+# Every coach's rating of the exercise except its author's, as the author would rate their own highly
+OTHERS_RATINGS = (
+    'FROM exercise_ratings cr WHERE cr.exercise_id = e.id AND cr.stars IS NOT NULL AND cr.user_id <> e.owner_id'
+)
+# Top rated ranks the average as if every exercise also had this many ratings of this many stars, so
+# a single five can't beat a drill many coaches rated well, and a few bad ratings rank below unrated
+PRIOR_RATINGS = 2
+PRIOR_STARS = 3
+RATING_SCORE = (
+    f'(SELECT (COALESCE(SUM(cr.stars), 0) + {PRIOR_RATINGS * PRIOR_STARS}) / (COUNT(*) + {PRIOR_RATINGS}) '
+    f'{OTHERS_RATINGS})'
+)
+
 SORTS = {
     'updated': 'e.updated_at DESC, e.id',
     'title': 'e.title, e.updated_at DESC, e.id',
@@ -22,6 +36,8 @@ SORTS = {
     'rating': '(SELECT rs.stars FROM exercise_ratings rs WHERE rs.exercise_id = e.id AND rs.user_id = %s) IS NULL, '
     '(SELECT rs.stars FROM exercise_ratings rs WHERE rs.exercise_id = e.id AND rs.user_id = %s) DESC, '
     'e.updated_at DESC, e.id',
+    # Every other coach's ratings, the best first
+    'topRated': f'{RATING_SCORE} DESC, e.updated_at DESC, e.id',
 }
 
 
@@ -62,6 +78,11 @@ def _build(args, where, params, viewer_id):
             'AND mr.stars >= %s)'
         )
         params.extend([viewer_id, _whole_number(args['minRating'], 1, 5)])
+
+    if 'minAverage' in args:
+        # Rounded like the average shown, so 3.7 isn't 4 stars and up
+        where.append(f'(SELECT ROUND(AVG(cr.stars), 1) {OTHERS_RATINGS}) >= %s')
+        params.append(_whole_number(args['minAverage'], 1, 5))
 
     if 'sport' in args:
         where.append('e.sport = %s')
