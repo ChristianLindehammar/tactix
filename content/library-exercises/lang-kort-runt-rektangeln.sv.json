@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "id": "6836185b-963f-5057-8764-658ca7f193a6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Lång, kort – runt rektangeln",
+  "description": "Fyra spelare och en boll i en rektangel, ungefär 8 meter på kortsidan och 20 meter på långsidan, en spelare i varje hörn. Har ni fler spelare gör ni flera rektanglar bredvid varandra.\n\nBollen går längs marken runt rektangeln: en lång passning längs långsidan, en kort längs kortsidan, en lång igen och så vidare. Varje spelare har två tillslag – ett för mottagningen och ett för passningen. Mottagningen ska föra bollen åt det håll nästa passning ska gå. Efter ett par minuter byter ni håll, eller ändrar ordningen, till exempel en lång följd av två korta fram och tillbaka över kortsidan. Byt hörn ibland så att alla får både långa och korta passningar.\n\nVarianter: ledaren bestämmer hur bollen ska tas emot (insida, utsida, sula) och med vilken fot den ska passas. Spela utan bestämd ordning, men växla mellan lång och kort. För de som kan: lyft bollen och ta emot med låret, bröstet eller huvudet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Möt bollen – vänta inte på att den ska komma fram till dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Första touchen åt det håll du ska passa."
+    },
+    {
+      "id": "cp3",
+      "text": "Mjuk fot vid mottagningen av en hård, lång passning."
+    },
+    {
+      "id": "cp4",
+      "text": "Titta upp innan bollen kommer så att du vet var nästa passning ska."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång passning längs långsidan till D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.69
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.65,
+          "endX": 0.28,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D tar med bollen in mot mitten och passar kort till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.22
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.22,
+          "endX": 0.6,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C slår långt tillbaka längs andra långsidan till B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.31
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.35,
+          "endX": 0.72,
+          "endY": 0.65
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passar kort till A, och varvet börjar om.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.78
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.78,
+          "endX": 0.4,
+          "endY": 0.78
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

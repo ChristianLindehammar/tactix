@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "2d1d6d7b-321b-5feb-915e-29efc99dec0c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "First back goes in goal",
+  "description": "An area of about 20 × 30 metres with a cone goal, about six metres wide, at each end. Three against three. When a team loses the ball, the player who gets back first goes in their own goal. The attacking team has one player who only passes and supports from behind and may not score. Out on the pitch it is two against two, and each defender marks one attacker.\n\nIf the defenders win the ball they attack the other way at once – then it is their turn to have a support player and the opponents' turn to race back to their goal. Change the support player often. The defenders get a point for every ball won, the attackers one for every goal.\n\nVariation: three against three with no goalkeeper or support player. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stay goal-side of your player, shifted slightly towards the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "See both the ball and your player – never turn your back on either."
+    },
+    {
+      "id": "cp3",
+      "text": "The closer the attacker is to the ball and the goal, the tighter you mark."
+    },
+    {
+      "id": "cp4",
+      "text": "Go with them on runs in behind, and step in when the pass comes."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red has Z in goal. C passes to A, who moves wide – X goes with them goal-side.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.72
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.69,
+          "endX": 0.2,
+          "endY": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.52,
+          "endX": 0.16,
+          "endY": 0.56
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.4,
+          "endX": 0.18,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B runs in behind Y, but Y stays goal-side all the way.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.6,
+          "endX": 0.7,
+          "endY": 0.24
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.36,
+          "endX": 0.76,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.27,
+          "endX": 0.64,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y intercepts and dribbles straight at the blue goal. C is first back and goes in goal.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.28
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.32,
+          "endX": 0.56,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.79,
+          "endX": 0.5,
+          "endY": 0.88
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

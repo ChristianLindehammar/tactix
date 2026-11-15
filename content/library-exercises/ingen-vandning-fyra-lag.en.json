@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "id": "da8d9001-094b-5162-8257-3c1147d32a77",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "No turning – four teams",
+  "description": "A pitch of about 25 × 30 metres with a full-size goal and a goalkeeper at each end. Four teams of three outfield players. Two teams play three against three for three minutes while the other two rest at the side, then you swap. The teams compete in pairs: add up the goals of the two teams that go together.\n\nThe defensive theme is opponents who receive with their back to goal. The coach calls \"Point!\" every time a team wins the ball from an opponent facing the wrong way, and those points count as goals. In the first round each defender only takes their own player – no help. In the next round the nearest teammate may leave their player and cover behind the one pressing.\n\nVariation: play with offside now and then, if you do in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Be close when the ball arrives – half a step diagonally behind, not straight behind."
+    },
+    {
+      "id": "cp2",
+      "text": "Watch the ball past the opponent and put your foot in when it comes."
+    },
+    {
+      "id": "cp3",
+      "text": "Be patient: better they play backwards than turn."
+    },
+    {
+      "id": "cp4",
+      "text": "With cover behind you, you can go in harder. Without cover – don't sell yourself."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B plays into A, who has their back to goal. X steps up tight behind A.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.62,
+          "endX": 0.58,
+          "endY": 0.47
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.29,
+          "endX": 0.61,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tries to turn towards the touchline. X goes with them and closes. In round two Y covers behind X.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.42
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.39,
+          "endX": 0.82,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.27,
+          "endX": 0.76,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.31,
+          "endX": 0.47,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X wins the ball – a point to red – and passes straight on to Z.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.35,
+          "endX": 0.55,
+          "endY": 0.51
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

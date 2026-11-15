@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "id": "b40dee31-b089-5013-a90a-6f4cadc8955e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – bonus penalty after every goal",
+  "description": "Five against five, four outfield players and a goalkeeper in each team, on a pitch about 30 metres long and 25 metres wide. The goals are cone goals, about five metres wide. A goal only counts if the ball goes in along the ground or below the height of the cones – so every shot is a low one.\n\nEvery time a team scores in open play it also gets a penalty against the same goal, from about seven metres. The players take turns to take it. The same rule applies: only low balls count. The penalty is not a break in play – if the keeper saves, play carries straight on, and rebounds count.\n\nPlay periods of five minutes and count both goals from play and penalty goals. Variation: teams also get a bonus penalty instead of a corner. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand still and big while the taker runs up – don’t go too early."
+    },
+    {
+      "id": "cp2",
+      "text": "Low ball: step diagonally forward towards the ball and go down hands first."
+    },
+    {
+      "id": "cp3",
+      "text": "Back on your feet straight after the save – the rebound is live."
+    },
+    {
+      "id": "cp4",
+      "text": "If you give a rebound, push it out wide, not back into the middle."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "shooting"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A shoots low past the red team's keeper. The goal from play earns the blue team a bonus penalty.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.21
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.17,
+          "endX": 0.4,
+          "endY": 0.04
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.66,
+          "label": "W"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.18,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.76,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A takes the penalty low towards the corner. The others wait behind A until the ball is struck.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.215
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.19,
+          "endX": 0.69,
+          "endY": 0.045
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "W"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper has saved but given a rebound. A and Y both go for the ball – play is on again.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.975,
+          "rotation": 180
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.08
+        },
+        {
+          "id": "gk2",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.905
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.2
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.3,
+          "endX": 0.66,
+          "endY": 0.24
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.38,
+          "label": "Y"
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.34,
+          "endX": 0.8,
+          "endY": 0.27
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.38,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "W"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.55,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.58,
+          "label": "D"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

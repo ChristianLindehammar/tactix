@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "id": "ab8b721e-e699-56be-b73e-5e9f6ab36b19",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Runda mittenspelaren",
+  "description": "Grupper om tre med en boll. Spelarna ställer sig på en rad med ungefär 8–10 meter mellan varje, så att en står i mitten och en i varje ände.\n\nDen som har bollen i ena änden driver upp och rundar mittenspelaren – upp på ena sidan och tillbaka på den andra – och passar sedan till spelaren i andra änden. Hen gör likadant åt andra hållet. Bestäm vilken väg man ska runda: ena gången runt mitten, nästa gång runt både mitten och andra änden. Byt den som står i mitten ungefär varannan minut, så att alla får driva lika mycket.\n\nVarianter: ledaren bestämmer fot (bara höger, bara vänster, eller insida och utsida). Gör en riktningsändring, en fartökning eller en fint när du passerar mittenspelaren. Ändra avståndet mellan spelarna. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll bollen nära i svängen runt kompisen – många små tillslag."
+    },
+    {
+      "id": "cp2",
+      "text": "Använd båda fötterna och både insidan och utsidan."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta upp innan du passar, så att kompisen är redo."
+    },
+    {
+      "id": "cp4",
+      "text": "Öka farten på raksträckan när du har kommit runt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 24,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver upp på ena sidan om B, rundar och kommer tillbaka på andra sidan.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.76
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.7,
+          "endX": 0.7,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.34,
+          "endX": 0.34,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.4,
+          "endX": 0.36,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar förbi B till C i andra änden.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.76
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.7,
+          "endX": 0.42,
+          "endY": 0.26,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C rundar B åt andra hållet och passar sedan tillbaka till A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.3,
+          "endX": 0.3,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.66,
+          "endX": 0.66,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.6,
+          "endX": 0.64,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

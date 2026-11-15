@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 2,
+  "id": "c82985d9-23ce-5715-9253-f4b912316b2b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Count out loud – wall passes score extra",
+  "description": "Three against three in a square of about 15 × 15 metres, with no goals. With more players, set up more squares. The team with the ball counts its passes out loud, and the other team tries to win it. If they win it they start counting their own passes straight away, from one. The team with the most passes in a row when the round ends wins.\n\nBonus: a successful wall pass – a pass, a run past an opponent and a first-time pass back – adds three extra passes to the count. Change the bonus after a while, for example a pass with the outside of the foot or a pass between two opponents. Play rounds of two to three minutes and change opponents between rounds.\n\nVariants: two touches at most all the time, or one touch when it is going well. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Get open – stand where there is a clear passing line to you."
+    },
+    {
+      "id": "cp2",
+      "text": "Move as soon as you have passed, and look for the wall pass."
+    },
+    {
+      "id": "cp3",
+      "text": "The wall player passes back first time, in front of the runner."
+    },
+    {
+      "id": "cp4",
+      "text": "When you win the ball: make the first pass a safe one."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blue has the ball. A passes to B – \"one!\".",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.66
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.65,
+          "endX": 0.64,
+          "endY": 0.61
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes to C and runs past X. C plays it straight back – a wall pass, bonus.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.59,
+          "endX": 0.44,
+          "endY": 0.43
+        },
+        {
+          "id": "r",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.54,
+          "endX": 0.62,
+          "endY": 0.24,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "w",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.29,
+          "endX": 0.55,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z cuts out a pass and red starts counting at once: Z passes to X – \"one!\".",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.47
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.5,
+          "endX": 0.57,
+          "endY": 0.56
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

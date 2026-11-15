@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "id": "a65122f4-0fff-5f28-a123-5583cb53b08d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – stressad skytt i två mot två",
+  "description": "Två mot två mot ett mål med målvakt, på en yta som är ungefär 25 meter bred och 30 meter lång. Ledaren står längst bort med bollar. Blå par anfaller i tre minuter i sträck, och rött par försvarar. När röd vinner bollen spelar de den till ledaren, som direkt spelar in en ny boll till blå.\n\nFörsvararna är alltid nära, så den som kommer fri har sällan tid att ta ner bollen och sikta. Under vissa perioder räknas bara mål inifrån en konlinje ungefär tio meter från mål. Då blir det fler frilägen med en försvarare i hälarna – byt tillbaka om spelet börjar kännas onaturligt.\n\nByt anfall och försvar efter tre minuter och räkna mål per par. Med fyra par: två spelar och två vilar. Variant: två målvakter, en per lag, som turas om i mål. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Har skytten en försvarare i ryggen: gå ut snabbt och gör ytan mindre."
+    },
+    {
+      "id": "cp2",
+      "text": "Läs touchen – en lång touch är din chans att ta bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Stanna och sätt dig i grundposition innan skytten skjuter, även när du är på väg ut."
+    },
+    {
+      "id": "cp4",
+      "text": "Kommer du inte fram: gå ner bred med händerna mot bollen och spärra."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A spelar till B, som startar mot mål. X och Y är nära.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.41
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.39,
+          "endX": 0.6,
+          "endY": 0.33
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.4,
+          "endX": 0.64,
+          "endY": 0.35
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver mot mål med X tätt efter. Röda lagets målvakt går ut och minskar vinkeln.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.13,
+          "endX": 0.54,
+          "endY": 0.18
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.31
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.27,
+          "endX": 0.58,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.44,
+          "endX": 0.74,
+          "endY": 0.34
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.56,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten spärrade, X tog bollen och spelar den till ledaren. Ledaren spelar in en ny boll.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.39
+        },
+        {
+          "id": "cl",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.43,
+          "endX": 0.54,
+          "endY": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "Y"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

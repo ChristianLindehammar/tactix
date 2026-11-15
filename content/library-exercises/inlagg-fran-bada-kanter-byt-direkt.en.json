@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "id": "e67dd40d-88a9-52c4-b012-77b60e06eb18",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Crosses from both wings – switch at once",
+  "description": "A full-size goal with a goalkeeper and the space in front of the penalty area. A winger on each side, J on the left and K on the right, crosses for whichever team is attacking. In the middle, three blues against three reds.\n\nJ dribbles down the wing and crosses, and blue try to score while red and the goalkeeper defend. When the attack is over, rebounds included, the goalkeeper throws the ball out to K on the other wing. The teams switch at once: red attack and blue must get back and pick up their players before the cross comes in.\n\nGoals only count from a first-time finish or a rebound. The defenders get a point when they clear a cross or the goalkeeper takes it without a shot. Change wingers, sides and jobs within the teams as you go. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand so you can see both the ball and your player – never lose sight of either."
+    },
+    {
+      "id": "cp2",
+      "text": "Get to the ball before your player and clear it with power and height."
+    },
+    {
+      "id": "cp3",
+      "text": "The goalkeeper calls early: \"Keeper!\" or \"Away!\"."
+    },
+    {
+      "id": "cp4",
+      "text": "On the switch: sprint back first, then find your player."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J dribbles down the wing. A and C run towards the posts, X and Z go with them goal-side.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.07,
+          "y": 0.41
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.07,
+          "y": 0.37,
+          "endX": 0.07,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.4,
+          "endX": 0.21,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.4,
+          "endX": 0.79,
+          "endY": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.28,
+          "endX": 0.29,
+          "endY": 0.22
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.29,
+          "endX": 0.7,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "J crosses towards the far post. Z gets to the ball first.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.095
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.125,
+          "endX": 0.63,
+          "endY": 0.165
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z clears and the goalkeeper throws out to K. Now red attack and blue get back.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.095
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.17,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.075
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.1,
+          "endX": 0.89,
+          "endY": 0.43
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.64,
+          "endY": 0.42
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.34,
+          "endX": 0.48,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

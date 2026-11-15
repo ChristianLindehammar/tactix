@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "id": "3fa06e1a-75df-5630-acf7-80dc007693a4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – win the cross in a crowd",
+  "description": "One goal with a goalkeeper and a short pitch in front of it, about 30 metres long. The blue team has three attackers in front of goal and a crosser with balls on each wing. The red team defends with three players. The attackers may challenge the goalkeeper when the ball comes in – shoulder to shoulder and always to play the ball, never with hands or in the back.\n\nCrosses come alternately from the left and the right, at a high tempo. Blue gets a point for a goal straight from the cross or from a rebound. Red gets a point every time the keeper catches the cross or punches the ball out of the penalty area. After a catch, the keeper throws quickly to a red player who has turned out towards the wing.\n\nSwap roles after ten crosses. With two goalkeepers, take turns, and the one resting can take the crosses. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand where you can see both the ball and the attackers – not glued to the line."
+    },
+    {
+      "id": "cp2",
+      "text": "Decide early and call \"Keeper!\" – then go all the way."
+    },
+    {
+      "id": "cp3",
+      "text": "Take off from one leg, knee up towards the crowd, and catch the ball at its highest point."
+    },
+    {
+      "id": "cp4",
+      "text": "If you can’t get there cleanly, punch the ball high and far out to the side."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "D dribbles down the left wing. A, B and C look for space, X, Y and Z mark.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.33
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D crosses. B goes for the keeper, but the keeper comes out and takes the ball above B.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.13,
+          "endX": 0.44,
+          "endY": 0.16
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.16
+        },
+        {
+          "id": "cr",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.14,
+          "endX": 0.38,
+          "endY": 0.145,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.45,
+          "endY": 0.22
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.26,
+          "endX": 0.54,
+          "endY": 0.2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A point to red. The keeper throws straight out to Z. The next cross comes from E on the right.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.14
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.13
+        },
+        {
+          "id": "th",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.14,
+          "endX": 0.82,
+          "endY": 0.24
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

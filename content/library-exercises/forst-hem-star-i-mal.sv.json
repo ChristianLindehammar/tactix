@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "id": "e580ea56-afbd-50fc-94b1-20d1f358fdc2",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Först hem står i mål",
+  "description": "En yta på ungefär 20 × 30 meter med ett konmål, ungefär sex meter brett, i varje kortände. Tre mot tre. När ett lag tappar bollen ska den spelare som först hinner hem ställa sig i det egna målet. Det anfallande laget har en spelare som bara passar och ger stöd bakifrån men inte får göra mål. Ute på planen blir det alltså två mot två, och försvararna markerar varsin anfallare.\n\nVinner försvararna bollen anfaller de direkt åt andra hållet – då är det deras tur att ha en stödspelare och motståndarnas tur att springa hem till målet. Byt vem som är stödspelare ofta. Försvararna får en poäng för varje vunnen boll, anfallarna en för varje mål.\n\nVariant: tre mot tre utan målvakt och stödspelare. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå på målsidan av din spelare, lite förskjuten mot bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Se både bollen och din spelare – vänd inte ryggen åt någon av dem."
+    },
+    {
+      "id": "cp3",
+      "text": "Ju närmare bollen och målet anfallaren är, desto tätare markerar du."
+    },
+    {
+      "id": "cp4",
+      "text": "Följ med på löpningen bakåt, och gå in när passningen kommer."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 6,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röd har Z i mål. C spelar till A, som går mot sidan – X följer med på målsidan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.54,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.72
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.69,
+          "endX": 0.2,
+          "endY": 0.63
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.52,
+          "endX": 0.16,
+          "endY": 0.56
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.4,
+          "endX": 0.18,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B löper i djupet bakom Y, men Y är med hela vägen på målsidan.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.64
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.6,
+          "endX": 0.7,
+          "endY": 0.24
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.36,
+          "endX": 0.76,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.27,
+          "endX": 0.64,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y bryter och driver direkt mot blå lagets mål. C är först hem och ställer sig i mål.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.09,
+          "label": "Z"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.75,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.15,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.21,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.47,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.67,
+          "y": 0.19,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.67,
+          "y": 0.28
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.32,
+          "endX": 0.56,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.79,
+          "endX": 0.5,
+          "endY": 0.88
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 2,
+  "id": "480358ac-f1bc-565c-b70f-4171c6da5123",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Wait out the ball carrier",
+  "description": "An area of about 30 × 40 metres with a full-size goal and a goalkeeper at each end. Two teams of six outfield players, split into pairs. One pair from each team is on the pitch; the others wait at their own end line on either side of the goal.\n\nThe blue goalkeeper plays out to a blue pair, who attack facing forward against two reds. When the attack is over – a goal, a shot, a won ball or the ball out – the two reds go off. A new red pair comes straight in with a ball from their goalkeeper and attacks the other way, and the blue pair who just attacked have to turn and defend. And so it keeps rolling.\n\nThe defenders should delay, not dive in. The coach counts aloud to eight when an attack starts: if the attackers have not had a shot by then, the defenders get a point. A goal gives the attackers two points. Variation: play with offside if you do in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Sprint out, but slow down in good time and stay on your feet."
+    },
+    {
+      "id": "cp2",
+      "text": "Stand side-on and steer the ball carrier towards the touchline, away from goal."
+    },
+    {
+      "id": "cp3",
+      "text": "Back off at the ball carrier's pace until your partner is in place behind you."
+    },
+    {
+      "id": "cp4",
+      "text": "Only go in when the ball gets too far from the foot or the attacker looks down."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "transition"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The blue goalkeeper plays out to A. X and Y run out towards A and B.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.95,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.95,
+          "label": "D"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.05,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.05,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.4,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.815
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.8,
+          "endX": 0.33,
+          "endY": 0.75
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.47,
+          "endX": 0.32,
+          "endY": 0.58
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.45,
+          "endX": 0.6,
+          "endY": 0.54
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A dribbles at X facing forward. X backs off, side-on, and steers A wide while Y covers inside.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.95,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.95,
+          "label": "D"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.05,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.05,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.65
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.62,
+          "endX": 0.16,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.46,
+          "endX": 0.27,
+          "endY": 0.37
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.57,
+          "y": 0.44,
+          "endX": 0.46,
+          "endY": 0.37
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.72,
+          "y": 0.58,
+          "endX": 0.72,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The attack is over. X and Y go off, Z and W come on with a new ball – now A and B turn and defend.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.95,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.95,
+          "label": "D"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.25,
+          "y": 0.25,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.75,
+          "y": 0.25,
+          "label": "W"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.08,
+          "y": 0.05,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.92,
+          "y": 0.05,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.205,
+          "endX": 0.31,
+          "endY": 0.24
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.44,
+          "endX": 0.25,
+          "endY": 0.36
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.63,
+          "y": 0.44,
+          "endX": 0.68,
+          "endY": 0.36
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "id": "38cd97de-22f0-5619-941b-fad19f62a24a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Bryt i farten – två mot två",
+  "description": "En yta på ungefär 15 × 25 meter med ett konmål, ungefär sex meter brett, i varje kortände. Två mot två utan målvakter. Mål görs genom att driva in bollen genom motståndarnas konmål. Är ni fler: spela i par som byter efter en och en halv minut, och låt de som vilar hämta bollar som går ut.\n\nFokus är brytningen. Läs passningen, kliv in före motståndaren och starta kontringen med samma tillslag – antingen en passning till kompisen som redan har börjat springa, eller en touch framåt i fri yta. Mål efter en sådan brytning ger två poäng, andra mål en.\n\nVariant: för att det ska löna sig ännu mer, ge tre poäng när brytningen och passningen till kompisen var samma tillslag. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå så att du ser både bollen och spelaren du ska bryta mot."
+    },
+    {
+      "id": "cp2",
+      "text": "Gå på passningen när den är på väg – inte när den redan har kommit fram."
+    },
+    {
+      "id": "cp3",
+      "text": "Bestäm innan bollen kommer vart den ska: till kompisen eller framåt i ytan."
+    },
+    {
+      "id": "cp4",
+      "text": "Kompisen börjar springa redan när du kliver in, inte efter."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar mot B. X läser passningen och kliver in i passningslinjen.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.53
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.44
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.36,
+          "endX": 0.52,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X bryter och spelar med samma tillslag till Y, som redan springer framåt.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.51
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.55,
+          "endX": 0.22,
+          "endY": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.48,
+          "endX": 0.15,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y driver in bollen genom konmålet – två poäng. A och B hinner inte hem.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.73
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.77,
+          "endX": 0.45,
+          "endY": 0.92,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.63,
+          "endX": 0.4,
+          "endY": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.47,
+          "endX": 0.6,
+          "endY": 0.66
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

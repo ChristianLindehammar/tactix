@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "id": "55270969-e34a-5bdf-ac73-7e1cb4a4e3ba",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Intercept on the move – two v two",
+  "description": "An area of about 15 × 25 metres with a cone goal, about six metres wide, at each end. Two against two without goalkeepers. Score by dribbling the ball through the opponents' cone goal. With more players: play in pairs that swap every minute and a half, and let those resting fetch balls that go out.\n\nThe focus is the interception. Read the pass, step in ahead of the opponent and start the counter with the same touch – either a pass to the partner who has already started running, or a touch forward into space. A goal after an interception like that gives two points, other goals one.\n\nVariation: to make it pay even more, give three points when the interception and the pass to the partner were the same touch. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stand so you can see both the ball and the player you want to intercept."
+    },
+    {
+      "id": "cp2",
+      "text": "Go for the pass while it is travelling – not when it has already arrived."
+    },
+    {
+      "id": "cp3",
+      "text": "Decide before the ball comes where it is going: to your partner or forward into space."
+    },
+    {
+      "id": "cp4",
+      "text": "Your partner starts running as you step in, not after."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes towards B. X reads the pass and steps into the passing line.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.53
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.44
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.36,
+          "endX": 0.52,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X intercepts and with the same touch plays to Y, who is already running forward.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.18,
+          "y": 0.44,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.51
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.55,
+          "endX": 0.22,
+          "endY": 0.68
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.48,
+          "endX": 0.15,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y dribbles the ball through the cone goal – two points. A and B can't get back.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.05
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.05
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.38,
+          "y": 0.95
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.62,
+          "y": 0.95
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.45,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.42,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.66,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.73
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.27,
+          "y": 0.77,
+          "endX": 0.45,
+          "endY": 0.92,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.63,
+          "endX": 0.4,
+          "endY": 0.74
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.47,
+          "endX": 0.6,
+          "endY": 0.66
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

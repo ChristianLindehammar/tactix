@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "id": "5397b114-5d15-5947-b4d9-4a4cbede6d74",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – vinn inlägget i trängseln",
+  "description": "Ett mål med målvakt och en kort plan framför, ungefär 30 meter lång. Blå lag har tre anfallare framför mål och en inläggsspelare på varje kant med bollar. Röda laget försvarar med tre spelare. Anfallarna får gå in i närkamp med målvakten när bollen kommer – axel mot axel och alltid för att spela bollen, aldrig med händerna eller i ryggen.\n\nInläggen kommer varannan gång från vänster och varannan från höger, i högt tempo. Blå får en poäng för mål direkt på inlägget eller på retur. Röd får en poäng varje gång målvakten fångar inlägget eller boxar ut bollen ur straffområdet. Efter en fångad boll kastar målvakten snabbt ut till en röd spelare som har vänt ut mot kanten.\n\nByt uppgifter efter tio inlägg. Har ni två målvakter turas de om, och den som vilar kan slå inläggen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ställ dig så att du ser både bollen och anfallarna – inte fastklistrad på linjen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bestäm dig tidigt och ropa \"Målvakt!\" – sedan går du hela vägen."
+    },
+    {
+      "id": "cp3",
+      "text": "Hoppa på ett ben med knät upp mot trängseln och ta bollen i högsta punkten."
+    },
+    {
+      "id": "cp4",
+      "text": "Kommer du inte fram rent: boxa bollen högt och långt ut åt sidan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "D driver längs vänsterkanten. A, B och C letar lägen, X, Y och Z markerar.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.33
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.1,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.18,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.33,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.32,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.21,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.24,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D slår inlägget. B går mot målvakten, men målvakten går ut och tar bollen över B.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.13,
+          "endX": 0.44,
+          "endY": 0.16
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.16,
+          "y": 0.16
+        },
+        {
+          "id": "cr",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.14,
+          "endX": 0.38,
+          "endY": 0.145,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.45,
+          "endY": 0.22
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.26,
+          "endX": 0.54,
+          "endY": 0.2
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Röd poäng. Målvakten kastar direkt ut till Z. Nästa inlägg kommer från E på högerkanten.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.14
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.57,
+          "y": 0.13
+        },
+        {
+          "id": "th",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.14,
+          "endX": 0.82,
+          "endY": 0.24
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.16,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

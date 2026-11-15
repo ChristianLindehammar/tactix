@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "id": "90a870c9-9e94-5324-8c16-ac36ca7af449",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ingen vändning – fyra lag",
+  "description": "En plan på ungefär 25 × 30 meter med ett stort mål och en målvakt i varje ände. Fyra lag med tre utespelare. Två lag spelar tre mot tre i tre minuter medan de andra två vilar vid sidan, sedan byter ni. Lagen tävlar ihop två och två: lägg ihop målen för de två lag som hör ihop.\n\nFörsvarstemat är motståndare som tar emot med ryggen mot mål. Tränaren ropar ”Poäng!” varje gång ett lag vinner bollen av en felvänd motståndare, och de poängen räknas som mål. Första omgången tar varje försvarare bara sin egen spelare – ingen hjälp. I nästa omgång får närmaste lagkamrat släppa sin spelare och täcka bakom den som pressar.\n\nVariant: spela med offside ibland, om ni gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Var nära när bollen kommer – ett halvt steg snett bakom, inte rakt bakom."
+    },
+    {
+      "id": "cp2",
+      "text": "Se bollen förbi motståndaren och sätt foten i när den kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Var tålig: låt hellre anfallaren spela bakåt än vända upp."
+    },
+    {
+      "id": "cp4",
+      "text": "Med täckning bakom dig kan du gå på hårdare. Utan täckning – sälj dig inte."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B spelar in till A, som står med ryggen mot mål. X kliver upp tätt bakom A.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.72,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.47,
+          "y": 0.66
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.62,
+          "endX": 0.58,
+          "endY": 0.47
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.29,
+          "endX": 0.61,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A försöker vända mot kanten. X följer med och stänger. I omgång två täcker Y bakom X.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.35,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.56,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.42
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.39,
+          "endX": 0.82,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.27,
+          "endX": 0.76,
+          "endY": 0.2
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.32,
+          "y": 0.31,
+          "endX": 0.47,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "X vinner bollen – poäng till röd – och spelar direkt vidare till Z.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.55,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.31
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.78,
+          "y": 0.35,
+          "endX": 0.55,
+          "endY": 0.51
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

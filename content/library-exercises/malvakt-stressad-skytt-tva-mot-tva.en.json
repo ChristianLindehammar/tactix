@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "id": "21036710-5631-566e-94ed-7cfdb14e9233",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – rushed shooter in two against two",
+  "description": "Two against two towards one goal with a goalkeeper, in an area about 25 metres wide and 30 metres long. The coach stands at the far end with balls. The blue pair attacks for three minutes in a row, and the red pair defends. When red wins the ball they play it to the coach, who straight away plays a new ball in to blue.\n\nThe defenders are always close, so whoever gets free rarely has time to control the ball and aim. During some periods, goals only count from inside a cone line about ten metres from goal. That gives more breakaways with a defender on the attacker’s heels – go back to normal if play starts to feel unnatural.\n\nSwap attack and defence after three minutes and count goals per pair. With four pairs, two play and two rest. Variation: two goalkeepers, one per team, taking turns in goal. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "If the shooter has a defender behind them, come out fast and make the target smaller."
+    },
+    {
+      "id": "cp2",
+      "text": "Read the touch – a long touch is your chance to take the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Stop and get set before the shot, even when you are on your way out."
+    },
+    {
+      "id": "cp4",
+      "text": "If you can’t get there, go down wide with your hands towards the ball and block."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "defence"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B, who sets off towards goal. X and Y are close.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.41
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.32,
+          "y": 0.39,
+          "endX": 0.6,
+          "endY": 0.33
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.69,
+          "y": 0.4,
+          "endX": 0.64,
+          "endY": 0.35
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.54,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B dribbles at goal with X right behind. The red team's keeper comes out and narrows the angle.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.095
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.13,
+          "endX": 0.54,
+          "endY": 0.18
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.31
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.27,
+          "endX": 0.58,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.48,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.44,
+          "endX": 0.74,
+          "endY": 0.34
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.56,
+          "label": "Y"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper blocked, X won the ball and plays it to the coach. The coach plays in a new ball.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.12,
+          "y": 0.3
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.88,
+          "y": 0.3
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.17
+        },
+        {
+          "id": "l",
+          "type": "coach",
+          "x": 0.5,
+          "y": 0.72
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.39
+        },
+        {
+          "id": "cl",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.43,
+          "endX": 0.54,
+          "endY": 0.66
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.32,
+          "y": 0.52,
+          "label": "Y"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

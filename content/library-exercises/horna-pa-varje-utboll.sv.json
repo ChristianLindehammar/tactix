@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 2,
+  "id": "c16363ed-ed0c-5168-908a-dcba6fd9908b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Hörna på varje utboll",
+  "description": "Spel fem mot fem eller sex mot sex med målvakter på en plan på ungefär 40 × 50 meter. Bilden visar fyra utespelare per lag. Vanliga regler med ett undantag: går bollen ut, över sidlinjen eller kortlinjen, blir det hörna till laget som inte rörde den sist. Hörnan slås från närmaste hörn på den planhalva där motståndarnas mål står. Då blir det många hörnor att försvara.\n\nInnan hörnan slås har försvarande lag några sekunder på sig. Målvakten bestämmer vem som står vid första stolpen, vem som tar ytan framför och vem som markerar vem. Försvararna får en poäng om de rensar hörnan och sedan för bollen under kontroll över mittlinjen. Byt uppgifter mellan hörnorna så att alla provar att stå vid stolpen, ta zon och markera.\n\nVariant: spela med offside och fler spelare om ni gör det i match. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten styr: ropa ut uppgifterna innan bollen slås."
+    },
+    {
+      "id": "cp2",
+      "text": "Markera på målsidan och se både bollen och din spelare."
+    },
+    {
+      "id": "cp3",
+      "text": "Gå mot bollen och nicka eller sparka den högt, långt och brett."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter rensningen kliver alla ut tillsammans – stå inte kvar i straffområdet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "setPieces",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X petar bollen över sidlinjen när A driver framåt. Hörna till blå.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.64,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.5,
+          "endX": 0.97,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C slår hörnan. X står vid första stolpen, Y tar ytan framför, Z och W markerar B och A.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.93,
+          "y": 0.04
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.89,
+          "y": 0.05,
+          "endX": 0.75,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y kommer först och nickar ut. Z hämtar bollen – driver Z över mittlinjen blir det poäng till röd.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.27
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.3,
+          "endX": 0.84,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.23,
+          "endX": 0.76,
+          "endY": 0.44
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 2,
+  "id": "18ae40cb-c804-5900-ba8a-3678ace03427",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Målvakt – frisparksduell, tio försök var",
+  "description": "Två lag, gärna fulltaliga, med en målvakt var. Laget som försvarar har sin egen målvakt i mål. Lägg ut koner på fem–sex frisparkslägen utanför straffområdet, från strax utanför till ungefär 30 meter ut, både rakt framifrån och snett från sidan.\n\nAnfallande lag får tio frisparkar från olika lägen och testar olika lösningar: direkt skott, en kort passning åt sidan före skottet eller en boll in i straffområdet. Mål på returer räknas. Försvarande lag ställer upp en mur och markerar. Vinner de bollen och får den under kontroll utanför straffområdet får de en poäng. Efter tio försök byter lagen, så att den andra målvakten står i mål.\n\nLaget med flest poäng efter två omgångar vinner. Variant: spela med offside, så att de som ska ta emot bollen inte kan stå hur som helst. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör dig inte förrän bollen är slagen – en kort passning ändrar vinkeln."
+    },
+    {
+      "id": "cp2",
+      "text": "Flyttas bollen åt sidan: ta nya små steg till rätt läge innan skottet kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "Ropa tidigt hur många som ska stå i muren, och om någon ska gå ut mot bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Efter räddningen: upp direkt och styr returen ut åt sidan, bort från skyttarna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 22,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Frispark snett från höger. X och Y står i muren och täcker första stolpen. A spelar kort till B.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.085
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.33,
+          "endX": 0.36,
+          "endY": 0.36
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Målvakten tar nya steg mot mitten innan B skjuter mot bortre hörnet.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.085
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.09,
+          "endX": 0.54,
+          "endY": 0.09
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.28,
+          "endX": 0.58,
+          "endY": 0.035
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Målvakten räddar ut åt sidan. C följer upp, men W hinner först och spelar ut till Y utanför straffområdet. Poäng till röd.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.09
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.19
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "cl",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.22,
+          "endX": 0.86,
+          "endY": 0.34
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.32,
+          "endX": 0.68,
+          "endY": 0.26
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

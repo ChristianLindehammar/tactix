@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "id": "b4a39dbc-d8bb-55bd-b2c9-4181cd4c8793",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Round the middle player",
+  "description": "Groups of three with one ball. The players stand in a line about 8–10 metres apart, one in the middle and one at each end.\n\nThe player with the ball at one end dribbles up and around the middle player – up one side and back down the other – and then passes to the player at the far end, who does the same the other way. Decide which way round to go: one time round the middle player, the next time round both the middle and the far end. Change the middle player about every other minute so everyone dribbles as much.\n\nVariants: the coach picks the foot (right only, left only, or inside and outside). Change direction, speed up or do a feint as you pass the middle player. Change the distance between the players. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball close as you go round – lots of small touches."
+    },
+    {
+      "id": "cp2",
+      "text": "Use both feet and both the inside and outside of the foot."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up before you pass so your teammate is ready."
+    },
+    {
+      "id": "cp4",
+      "text": "Speed up on the straight once you are round."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 24,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles up one side of B, goes round and comes back down the other side.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.76
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.7,
+          "endX": 0.7,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.34,
+          "endX": 0.34,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.3,
+          "y": 0.4,
+          "endX": 0.36,
+          "endY": 0.72,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes past B to C at the other end.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.76
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.7,
+          "endX": 0.42,
+          "endY": 0.26,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C goes round B the other way and then passes back to A.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.18,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.24
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.3,
+          "endX": 0.3,
+          "endY": 0.6,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.66,
+          "endX": 0.66,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.7,
+          "y": 0.6,
+          "endX": 0.64,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 2,
+  "id": "dbee4eb4-2d37-5ac1-94d3-f6a838ec987e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Overlap – pass or dummy",
+  "description": "Five against five on about 40 × 30 metres. At one end is a full-size goal with a goalkeeper from the team defending it; at the other end two cone goals without a goalkeeper, where goals are scored by dribbling through. Swap at half-time so both teams attack the big goal.\n\nThe team on the ball creates overlaps anywhere on the pitch, including in tight spaces near goal. A goal after an overlap is worth two points – both when the overlapping player got the ball and when the player on the ball used the overlap to dummy the pass and go alone. Other goals are worth one.\n\nVariation: three points if the overlap ends with a pass to a third player. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The player on the ball dribbles inside and takes the defender along – that opens the space outside."
+    },
+    {
+      "id": "cp2",
+      "text": "The overlapping player runs behind the ball carrier, at full speed, and calls."
+    },
+    {
+      "id": "cp3",
+      "text": "Read the defender: if they stay with you, pass. If they follow the runner, dummy and go yourself."
+    },
+    {
+      "id": "cp4",
+      "text": "Play the ball ahead of the overlapping player so the run never has to stop."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "attack",
+    "passing"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A dribbles inside. B starts an overlapping run behind A, along the side.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.955
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.955
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.955
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.955
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.64,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.74,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.34,
+          "y": 0.4,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.6,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.565
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.53,
+          "endX": 0.46,
+          "endY": 0.46,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.68,
+          "endX": 0.14,
+          "endY": 0.38,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "X stays with A, so A plays B in on the run. A goal after an overlap is worth two points.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.955
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.955
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.955
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.955
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.6,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.42
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.41,
+          "endX": 0.19,
+          "endY": 0.365
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "If X goes to B instead: A dummies the pass and dribbles past on the inside.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.955
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.955
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.955
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.955
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.26,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.6,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.41
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.37,
+          "endX": 0.42,
+          "endY": 0.21,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A shoots at the big goal – this is worth two points too, because the overlap opened the way.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.1
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.14,
+          "y": 0.955
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.955
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.955
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.955
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.78,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.66,
+          "label": "E"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.38,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.27,
+          "label": "Y"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.36,
+          "label": "W"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.6,
+          "label": "V"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.17
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.135,
+          "endX": 0.46,
+          "endY": 0.035
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:16:17.000Z",
+  "updatedAt": "2026-11-15T20:16:17.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 2,
+  "id": "6cb6ee13-0e49-5547-8583-4d0d2e7d7a4a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Räkna högt – väggspel ger bonus",
+  "description": "Tre mot tre i en ruta på ungefär 15 × 15 meter, utan mål. Har ni fler spelare gör ni flera rutor. Laget med bollen räknar sina passningar högt, och det andra laget försöker bryta. Vinner de bollen börjar de genast räkna sina egna passningar, från ett. Det lag som har klarat flest passningar i rad när omgången är slut vinner.\n\nBonus: ett lyckat väggspel – en passning, löpning förbi en motståndare och passning tillbaka direkt – ger tre extra passningar i räkningen. Byt bonus efter en stund, till exempel en passning med utsidan eller en passning mellan två motståndare. Spela omgångar på två–tre minuter och byt motståndare mellan omgångarna.\n\nVarianter: högst två tillslag hela tiden, eller ett tillslag när det går bra. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Gör dig spelbar – ställ dig så att det går en fri passningsväg till dig."
+    },
+    {
+      "id": "cp2",
+      "text": "Spring direkt när du har passat, och leta efter väggspelet."
+    },
+    {
+      "id": "cp3",
+      "text": "Väggspelaren spelar tillbaka direkt, framför den som löper."
+    },
+    {
+      "id": "cp4",
+      "text": "När ni vinner bollen: första passningen ska vara säker."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Blå laget har bollen. A passar till B – ”ett!”.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.43,
+          "y": 0.66
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.65,
+          "endX": 0.64,
+          "endY": 0.61
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar till C och löper förbi X. C spelar direkt tillbaka – väggspel, bonus.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.6,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.62
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.44,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.59,
+          "endX": 0.44,
+          "endY": 0.43
+        },
+        {
+          "id": "r",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.54,
+          "endX": 0.62,
+          "endY": 0.24,
+          "bend": 0.04,
+          "waves": 1
+        },
+        {
+          "id": "w",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.29,
+          "endX": 0.55,
+          "endY": 0.24
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z bryter och röda laget börjar räkna med en gång: Z passar till X – ”ett!”.",
+      "markers": [
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.25
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.25
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.15,
+          "y": 0.75
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.58,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.48,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.74,
+          "y": 0.38,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.47
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.5,
+          "endX": 0.57,
+          "endY": 0.56
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

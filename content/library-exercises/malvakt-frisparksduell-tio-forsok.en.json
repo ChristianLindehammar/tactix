@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 2,
+  "id": "6793d14a-a600-5a6d-86a8-e36811a2e383",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Goalkeeper – free-kick contest, ten attempts each",
+  "description": "Two teams, ideally full sides, with a goalkeeper each. The defending team has its own keeper in goal. Mark five or six free-kick spots with cones outside the box, from just outside to about 30 metres out, both straight on and at an angle.\n\nThe attacking team gets ten free kicks from different spots and tries different solutions: a direct shot, a short pass to the side before the shot, or a ball into the box. Goals from rebounds count. The defending team sets up a wall and marks. If they win the ball and get it under control outside the box, they get a point. After ten attempts the teams swap, so that the other keeper goes in goal.\n\nThe team with the most points after two rounds wins. Variation: play offside, so the players waiting for the ball can’t stand just anywhere. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Don’t move until the ball is struck – a short pass changes the angle."
+    },
+    {
+      "id": "cp2",
+      "text": "If the ball is moved to the side, take new small steps into position before the shot comes."
+    },
+    {
+      "id": "cp3",
+      "text": "Call early how many go in the wall, and whether someone should rush out at the ball."
+    },
+    {
+      "id": "cp4",
+      "text": "After the save, get up at once and push the rebound wide, away from the shooters."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "goalkeeping",
+    "setPieces",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 14,
+  "maxPlayers": 22,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A free kick at an angle from the right. X and Y form the wall and cover the near post. A plays it short to B.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.085
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.31
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.33,
+          "endX": 0.36,
+          "endY": 0.36
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "The keeper takes new steps towards the middle before B shoots at the far corner.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.085
+        },
+        {
+          "id": "rg",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.09,
+          "endX": 0.54,
+          "endY": 0.09
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.63,
+          "y": 0.2,
+          "label": "Y"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.84,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.4,
+          "label": "B"
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.31
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.28,
+          "endX": 0.58,
+          "endY": 0.035
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The keeper saves out wide. C follows up, but W gets there first and passes out to Y outside the box. A point to red.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.09
+        },
+        {
+          "id": "b",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.19
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.12,
+          "label": "W"
+        },
+        {
+          "id": "cl",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.22,
+          "endX": 0.86,
+          "endY": 0.34
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.88,
+          "y": 0.42,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "rc",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.32,
+          "endX": 0.68,
+          "endY": 0.26
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "v",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.13,
+          "label": "V"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "pb",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "D"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:14:31.000Z",
+  "updatedAt": "2026-11-15T20:14:31.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

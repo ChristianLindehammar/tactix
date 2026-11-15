@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "id": "7d18ec61-e0a9-50a5-8b50-056ecc298958",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Long, short – round the rectangle",
+  "description": "Four players and one ball in a rectangle, about 8 metres on the short side and 20 metres on the long side, one player in each corner. With more players, set up several rectangles side by side.\n\nThe ball goes along the ground round the rectangle: a long pass along the long side, a short one along the short side, a long one again and so on. Each player has two touches – one to receive and one to pass. The first touch takes the ball towards where the next pass is going. After a couple of minutes change direction, or change the order, for example one long pass followed by two short ones back and forth across the short side. Swap corners now and then so everyone gets both long and short passes.\n\nVariants: the coach decides how to receive (inside, outside, sole) and which foot to pass with. Play in no fixed order, but keep switching between long and short. For those who can: lift the ball and receive with the thigh, chest or head. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Move to meet the ball – don't wait for it to reach you."
+    },
+    {
+      "id": "cp2",
+      "text": "First touch towards where you are passing."
+    },
+    {
+      "id": "cp3",
+      "text": "A soft foot when you receive a hard, long pass."
+    },
+    {
+      "id": "cp4",
+      "text": "Look up before the ball arrives so you know where the next pass goes."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays a long pass along the long side to D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.28,
+          "y": 0.69
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.65,
+          "endX": 0.28,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D takes the ball in towards the middle and plays a short pass to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.41,
+          "y": 0.22
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.47,
+          "y": 0.22,
+          "endX": 0.6,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C plays long back along the other long side to B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.72,
+          "y": 0.31
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.35,
+          "endX": 0.72,
+          "endY": 0.65
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes short to A, and the round starts again.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.78
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.78,
+          "endX": 0.4,
+          "endY": 0.78
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

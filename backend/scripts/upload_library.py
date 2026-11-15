@@ -2,7 +2,8 @@
 
     COACHMATE_API_TOKEN=... .venv/bin/python scripts/upload_library.py [--dry-run] [file ...]
 
-The token is the CoachMate account's session token (POST /auth/email/start, then /auth/email/verify).
+The token is the CoachMate account's session token. Get it with scripts/library_token.py, which saves it to
+~/.config/coachmate/library-token; that file is used when COACHMATE_API_TOKEN is not set.
 API_BASE_URL overrides the live server. Each file is checked with the server's own validation first.
 An exercise the server already has with the same content is skipped. A changed one is sent with
 updatedAt set to now, so apps see it as newer.
@@ -33,6 +34,11 @@ def content_of(data):
     return {key: value for key, value in parsed.items() if key not in IGNORED}
 
 
+def saved_token():
+    path = Path.home() / '.config' / 'coachmate' / 'library-token'
+    return path.read_text().strip() if path.exists() else None
+
+
 def request(method, url, token, body=None):
     data = None if body is None else json.dumps(body, ensure_ascii=False).encode('utf-8')
     req = urllib.request.Request(url, data=data, method=method, headers={
@@ -57,10 +63,10 @@ def main():
     args = parser.parse_args()
 
     files = args.files or sorted(CONTENT.glob('*.json'))
-    token = os.environ.get('COACHMATE_API_TOKEN')
+    token = os.environ.get('COACHMATE_API_TOKEN') or saved_token()
     api = os.environ.get('API_BASE_URL', DEFAULT_API).rstrip('/')
     if not token and not args.dry_run:
-        sys.exit('Set COACHMATE_API_TOKEN to the CoachMate account\'s session token')
+        sys.exit('No token: run scripts/library_token.py start <email>, then verify <code>')
 
     failures = 0
     for path in files:

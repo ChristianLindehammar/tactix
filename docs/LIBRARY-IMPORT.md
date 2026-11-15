@@ -104,16 +104,27 @@ Half-court or half-rink drills use the top half. The bandy sarg is a low board a
 
 ## Upload
 
-The uploader runs as the CoachMate account. It needs that account's session token in `COACHMATE_API_TOKEN`; keep the
-token in a file outside the repo and never print or commit it.
+The uploader runs as the CoachMate account and needs that account's session token. The token lives in
+`~/.config/coachmate/library-token` (outside the repo, readable only by you); never print or commit it.
+
+**Getting a token** (once per machine, or when uploads start failing with 401). It needs the code from the CoachMate
+account's inbox, which Christian has. In Claude Code, Christian runs these with the `!` prefix so the code never has to
+be typed into the chat:
 
 ```sh
-COACHMATE_API_TOKEN="$(cat <token file>)" backend/.venv/bin/python backend/scripts/upload_library.py [--dry-run] <files...>
+cd backend
+.venv/bin/python scripts/library_token.py start <CoachMate account email>   # mails a six-digit code
+.venv/bin/python scripts/library_token.py verify <code>                     # saves the token, prints only the path
 ```
 
+**Uploading:**
+
+```sh
+backend/.venv/bin/python backend/scripts/upload_library.py [--dry-run] <files...>
+```
+
+- The uploader reads the saved token file; `COACHMATE_API_TOKEN` overrides it.
 - With no files it uploads the whole library; unchanged drills are skipped, changed ones get a new `updatedAt`.
-- **Getting a token:** sign in with the email code: `POST /auth/email/start` with the CoachMate account's email, then
-  `POST /auth/email/verify` with the code from the mail (Christian has the inbox). The response holds the session token.
 - `planRequired` means the account's RevenueCat lifetime entitlement is missing. Fix it in RevenueCat, not in the database.
 - Never sign the CoachMate account into the app for personal use: anything it creates becomes official library content.
 

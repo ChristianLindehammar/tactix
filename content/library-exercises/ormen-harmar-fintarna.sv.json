@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "id": "306436fe-2a8b-5680-b92e-564d96b67eb3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Ormen härmar fintarna",
+  "description": "En yta på ungefär 20 × 20 meter. Spelarna delas in i grupper om fyra eller fem, och alla har en boll. Varje grupp är en orm: spelarna driver bollen i ett led efter varandra, med några meters lucka, och följer den första i ledet vart hen än går.\n\nDen första i ledet bestämmer: hen svänger, byter fart och gör då och då en fint och en dribbling, till exempel ett översteg och sedan iväg åt andra hållet. Alla bakom gör samma fint på samma ställe. Efter ungefär en minut ropar ledaren ”byt!” – då driver den första ut i en båge och ställer sig sist i ledet, och nästa spelare tar över.\n\nVarianter: ledaren ropar vilken fint som gäller, eller låter varje nytt ormhuvud visa en egen. Flera ormar på samma yta tvingar alla att titta upp. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta upp mellan tillslagen så att du ser vad den framför gör."
+    },
+    {
+      "id": "cp2",
+      "text": "Gör finten ordentligt – en stor kroppsrörelse, sedan snabbt iväg."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll luckan till den framför, varken för nära eller för långt bort."
+    },
+    {
+      "id": "cp4",
+      "text": "Som först i ledet: visa tydligt, och variera vänster och höger."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 24,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A leder ormen och svänger. B, C och D följer efter i samma spår med var sin boll.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.21
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.39
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.66,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.57
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.84,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.17,
+          "endX": 0.72,
+          "endY": 0.12,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A gör en fint och drar iväg åt andra hållet. B gör samma fint när hen kommer dit.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.25
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.59,
+          "y": 0.25
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.457,
+          "y": 0.402
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.66,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.44,
+          "y": 0.57
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.3,
+          "endX": 0.8,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Byte: A har svängt ut och lagt sig sist i ledet. Nu leder B ormen.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.16,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.16
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.62,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.71
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.535
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.26,
+          "label": "D"
+        },
+        {
+          "id": "bd",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.35
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.6,
+          "y": 0.75,
+          "endX": 0.4,
+          "endY": 0.86,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:12:15.000Z",
+  "updatedAt": "2026-11-15T20:12:15.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

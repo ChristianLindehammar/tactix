@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 2,
+  "id": "c8cc9afb-a2f6-5590-8726-df22c5c6ef1b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "A corner for every ball out",
+  "description": "Five against five or six against six with goalkeepers on a pitch of about 40 × 50 metres. The diagram shows four outfield players per team. Normal rules with one exception: when the ball goes out, over the touchline or the end line, it is a corner to the team that did not touch it last. The corner is taken from the nearest corner in the half where the opponents' goal is. That gives lots of corners to defend.\n\nBefore the corner is taken, the defending team has a few seconds. The goalkeeper decides who stands at the near post, who takes the space in front and who marks whom. The defenders get a point if they clear the corner and then bring the ball under control over the halfway line. Change jobs between corners so that everyone tries the post, zone and marking.\n\nVariation: play with offside and more players if you do in matches. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The goalkeeper is in charge: call out the jobs before the ball is struck."
+    },
+    {
+      "id": "cp2",
+      "text": "Mark goal-side and see both the ball and your player."
+    },
+    {
+      "id": "cp3",
+      "text": "Attack the ball and head or kick it high, long and wide."
+    },
+    {
+      "id": "cp4",
+      "text": "After the clearance everyone steps out together – don't stay in the box."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 3,
+  "focus": [
+    "setPieces",
+    "defence"
+  ],
+  "durationMinutes": 25,
+  "minPlayers": 10,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "X pokes the ball over the touchline as A drives forward. Corner to blue.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.56,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.64,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.36,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.36,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.83,
+          "y": 0.5
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.88,
+          "y": 0.5,
+          "endX": 0.97,
+          "endY": 0.5
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C takes the corner. X is at the near post, Y takes the space in front, Z and W mark B and A.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.93,
+          "y": 0.04
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.89,
+          "y": 0.05,
+          "endX": 0.75,
+          "endY": 0.13
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Y gets there first and heads it out. Z collects – if Z dribbles over the halfway line, red scores.",
+      "markers": [
+        {
+          "id": "gt",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.03
+        },
+        {
+          "id": "gb",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.97,
+          "rotation": 180
+        },
+        {
+          "id": "bgk",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.9
+        },
+        {
+          "id": "rgk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.13,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.55,
+          "y": 0.42,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.06,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.18,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.43,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "w",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.16,
+          "label": "W"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.27
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.3,
+          "endX": 0.84,
+          "endY": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.23,
+          "endX": 0.76,
+          "endY": 0.44
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

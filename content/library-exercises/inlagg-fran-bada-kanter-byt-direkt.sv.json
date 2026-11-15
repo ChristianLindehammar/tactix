@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "id": "96a13850-4914-5417-9301-ae26a5f4f56a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "soccer",
+  "title": "Inlägg från båda kanter – byt direkt",
+  "description": "Ett stort mål med målvakt och ytan framför straffområdet. En kantspelare på varje kant, J till vänster och K till höger, slår inlägg för det lag som anfaller. I mitten tre blå mot tre röda.\n\nJ driver längs kanten och slår in, och blå försöker göra mål medan röd och målvakten försvarar. När anfallet är slut, returer inräknade, kastar målvakten ut bollen till K på andra kanten. Då byter lagen direkt: röd anfaller och blå måste hinna hem och ta sina spelare innan inlägget kommer.\n\nMål räknas bara på första tillslaget eller på en retur. Försvararna får en poäng när de rensar ut ett inlägg eller målvakten tar det utan att det blir avslut. Byt kantspelare, sida och uppgifter inom lagen efter hand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stå så att du ser både bollen och din spelare – byt inte blicken helt."
+    },
+    {
+      "id": "cp2",
+      "text": "Var före din spelare till bollen och slå bort den med kraft och höjd."
+    },
+    {
+      "id": "cp3",
+      "text": "Målvakten ropar tidigt: ”Min!” eller ”Bort!”."
+    },
+    {
+      "id": "cp4",
+      "text": "Vid bytet: spring hem först, leta spelare sedan."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 4,
+  "focus": [
+    "defence",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "J driver längs kanten. A och C löper mot stolparna, X och Z följer med på målsidan.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.1
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.5,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.28,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.33,
+          "y": 0.32,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.68,
+          "y": 0.33,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.07,
+          "y": 0.41
+        },
+        {
+          "id": "m1",
+          "type": "arrow-solid",
+          "x": 0.07,
+          "y": 0.37,
+          "endX": 0.07,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.4,
+          "endX": 0.21,
+          "endY": 0.3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.4,
+          "endX": 0.79,
+          "endY": 0.3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.28,
+          "endX": 0.29,
+          "endY": 0.22
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.29,
+          "endX": 0.7,
+          "endY": 0.21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "J slår inlägget mot bortre stolpen. Z är först på bollen.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.095
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.85,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.72,
+          "y": 0.2,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.1,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.125,
+          "endX": 0.63,
+          "endY": 0.165
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Z rensar och målvakten kastar ut till K. Nu anfaller röd och blå vänder hem.",
+      "markers": [
+        {
+          "id": "g1",
+          "type": "goal",
+          "x": 0.5,
+          "y": 0.025
+        },
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.095
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.2,
+          "label": "J"
+        },
+        {
+          "id": "k",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.5,
+          "label": "K"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.27,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.17,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.6,
+          "y": 0.075
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.1,
+          "endX": 0.89,
+          "endY": 0.43
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.3,
+          "endX": 0.64,
+          "endY": 0.42
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.34,
+          "endX": 0.48,
+          "endY": 0.24
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-15T20:15:40.000Z",
+  "updatedAt": "2026-11-15T20:15:40.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
