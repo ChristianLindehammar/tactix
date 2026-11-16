@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "id": "0fe86b3c-d982-52b3-ab1a-8066c5ed18ae",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Full Lap – long curve, pass and one-timer",
+  "description": "A line in each corner: A and B by the top goal, C and D by the bottom one. A goalkeeper in both goals. A runs in a long curve down along the boards and in towards the middle of the other half and gets a pass from line D. A carries the ball forward, passes up to B in the corner and sprints towards goal. In the slot A gets a pass back and shoots first time.\n\nAt the same time D does the same the other way: long curve, pass from line A, pass to C and a one-timer at the bottom goal. Then B and C start.\n\nRotation: A to B, B to A, C to D and D to C. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The receiver shows with the stick where the pass should go."
+    },
+    {
+      "id": "cp2",
+      "text": "Play the passes into the runner's path so they keep their speed."
+    },
+    {
+      "id": "cp3",
+      "text": "Sprint towards goal straight after the pass to the corner."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time in the slot – the shots should hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs in a long curve down into the other half.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.88,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.811,
+          "y": 0.825
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.18,
+          "endX": 0.62,
+          "endY": 0.66,
+          "bend": 0.3,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D passes to A at pace.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.88,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.811,
+          "y": 0.825
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.791,
+          "y": 0.805,
+          "endX": 0.67,
+          "endY": 0.7
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A carries the ball forward and passes up to B in the corner.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.66,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.88,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.669,
+          "y": 0.599
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.669,
+          "y": 0.569,
+          "endX": 0.68,
+          "endY": 0.47,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.44,
+          "endX": 0.85,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A sprints into the slot, gets the ball back and shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.47,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.88,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.831,
+          "y": 0.181
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.811,
+          "y": 0.201,
+          "endX": 0.6,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.43,
+          "endX": 0.56,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

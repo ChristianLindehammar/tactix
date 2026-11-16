@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "id": "e60ee6f9-c056-5092-ba43-053f3a68ffe1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The bow tie – one-touch passing between four lines",
+  "description": "Four lines in a rectangle, two on each side, with the first player in each line facing in. The ball goes round with one-touch passes in a bow-tie pattern: A passes diagonally to B, B straight up to C, C diagonally to D and D straight up to A. After passing, go to the back of your own line.\n\nVariations: pass forehand only, then backhand only, and send the ball the other way round. With many players: add a second ball. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Quick, accurate passes along the floor, without bounces."
+    },
+    {
+      "id": "cp2",
+      "text": "Take a step towards the ball and play it first time."
+    },
+    {
+      "id": "cp3",
+      "text": "Show with your stick where you want the ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 8,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes diagonally to B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.304,
+          "y": 0.276
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.334,
+          "y": 0.301,
+          "endX": 0.72,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes first time straight up to C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.394
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.364,
+          "endX": 0.8,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes diagonally to D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.696,
+          "y": 0.276
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.666,
+          "y": 0.301,
+          "endX": 0.28,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passes first time straight up to A. Every passer goes to the back of their line.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.394
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.364,
+          "endX": 0.2,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "e3180fca-de0a-5ce9-9dcc-7bee263577d3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The pendulum – into the slot and a long shot",
+  "description": "Two lines out on each side, just above the centre line, and a goalkeeper. The players in line A have two balls each. B runs diagonally in towards the slot, gets the pass from A and shoots first time. Right after, A takes a long shot, then runs diagonally into the slot and gets the pass from C, who is now first in line B. A shoots first time. The goalkeeper has to keep moving sideways.\n\nRotation: change lines after your shot and run it mirrored so both sides get trained. Harder variant: put a cone beside the goal. After the first shot B rounds it, gets a pass from their own line and shoots first time again – only then does A take the long shot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show with your stick where you want the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "The pass should be well placed, in front of the runner."
+    },
+    {
+      "id": "cp3",
+      "text": "Full speed in the runs into the slot."
+    },
+    {
+      "id": "cp4",
+      "text": "Hit the target – make the goalkeeper work."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "focus": [
+    "passing",
+    "shooting",
+    "goalkeeping"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 10,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B runs diagonally in towards the slot and A passes in front of B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.41,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.41
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.78,
+          "y": 0.36,
+          "endX": 0.65,
+          "endY": 0.29
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.39,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.41,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.55,
+          "y": 0.23
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.54,
+          "y": 0.2,
+          "endX": 0.51,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A takes a long shot and runs diagonally in towards the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.41,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.41,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.32,
+          "y": 0.41
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.38,
+          "endX": 0.47,
+          "endY": 0.1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.36,
+          "endX": 0.29,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C passes and A shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.5
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.23,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.41,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.68,
+          "y": 0.41
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.39,
+          "endX": 0.38,
+          "endY": 0.25
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.18,
+          "endX": 0.46,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:02:59.000Z",
+  "updatedAt": "2026-11-16T08:02:59.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

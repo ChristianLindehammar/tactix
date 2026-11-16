@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "id": "2b18b0ec-216b-5014-bd02-e143b94e4c93",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Rosetten – direktpass mellan fyra led",
+  "description": "Fyra led i en rektangel, två på varje sida, med ledens första spelare vända inåt. Bollen går med direktpass i ett mönster som en rosett: A passar diagonalt till B, B rakt upp till C, C diagonalt till D och D rakt upp till A. Efter sin passning ställer man sig sist i sitt eget led.\n\nVarianter: passa bara forehand, sedan bara backhand, och byt håll på bollen. Med många spelare: sätt in en andra boll. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Snabba och precisa passningar längs golvet, utan studs."
+    },
+    {
+      "id": "cp2",
+      "text": "Ta ett steg mot bollen och spela direkt."
+    },
+    {
+      "id": "cp3",
+      "text": "Visa med klubban var du vill ha bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing"
+  ],
+  "durationMinutes": 8,
+  "minPlayers": 8,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar diagonalt till B.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.304,
+          "y": 0.276
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.334,
+          "y": 0.301,
+          "endX": 0.72,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar direkt rakt upp till C.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.394
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.8,
+          "y": 0.364,
+          "endX": 0.8,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar diagonalt till D.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.696,
+          "y": 0.276
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.666,
+          "y": 0.301,
+          "endX": 0.28,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passar direkt rakt upp till A. Varje passare går sist i sitt led.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.394
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.364,
+          "endX": 0.2,
+          "endY": 0.3
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "a8067c7d-03b0-54a7-8b7b-628ba7f897b4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Sicksacken – direktpass upp i banan och direktskott",
+  "description": "Tre led: A vid egen mållinje till höger, B längs högra sargen strax före mitten och C på andra planhalvan, lite till vänster om mitten. Målvakt i det bortre målet. A passar B och springer upp en bit i banan. B spelar direkt tillbaka och springer i en båge uppåt. A slår en ny direktpass till B. Under tiden har C sprungit ned i en båge och vänt upp mot slottet. B passar in i slottet och C skjuter direkt.\n\nLedbyten: A till B, B till C och C till A. Kör spegelvänt också, så att båda sidorna tränas.\n\nEnklare variant: utan C – efter den andra direktpassen springer B själv in mot slottet och skjuter. Svårare variant: C bågar ut mot sargen, tar emot, tar några steg in mot slottet och avslutar, medan B fortsätter framåt, plockar upp en boll vid C-ledet och avslutar också. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mottagaren visar med klubban var passningen ska komma."
+    },
+    {
+      "id": "cp2",
+      "text": "Direktpassen ska vara fasta och läggas framför spelaren, så att den kan hålla farten."
+    },
+    {
+      "id": "cp3",
+      "text": "C tajmar bågen så att den kommer in i slottet i samma stund som passningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt och sikta på mål – hellre träff än hårt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B och springer upp i banan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.74,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.798,
+          "y": 0.822
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.818,
+          "y": 0.792,
+          "endX": 0.87,
+          "endY": 0.69
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.708,
+          "y": 0.832,
+          "endX": 0.56,
+          "endY": 0.72,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar direkt tillbaka till A och bågar uppåt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.64,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.842,
+          "y": 0.698
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.822,
+          "y": 0.708,
+          "endX": 0.61,
+          "endY": 0.72
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.59,
+          "endX": 0.68,
+          "endY": 0.47,
+          "bend": 0.06,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A slår direktpass till B. C springer i en båge ned och vänder.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.629,
+          "y": 0.665
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.639,
+          "y": 0.635,
+          "endX": 0.67,
+          "endY": 0.53
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.43,
+          "endX": 0.48,
+          "endY": 0.57,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passar in i slottet och C skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.47,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.59,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.29
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.622,
+          "y": 0.412
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.602,
+          "y": 0.382,
+          "endX": 0.54,
+          "endY": 0.29
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.54,
+          "endX": 0.49,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.26,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

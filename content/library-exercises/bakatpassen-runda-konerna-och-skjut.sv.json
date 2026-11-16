@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "id": "3c4711e9-cf41-5f6d-a083-326b717aab34",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Bakåtpassen – runda konerna och skjut i fart",
+  "description": "Ett mål med målvakt. Ett led vid sargen en bit ut från mål, en kon i hörnet vid samma sarg och en kon snett ut från målet på andra sidan. Den förste i ledet (A) driver bollen i högt tempo längs sargen och rundar konen i hörnet. Därefter passar A bollen bakåt till B, som nu står först i ledet.\n\nA rusar direkt vidare runt den andra konen och vänder in mot slottet. B slår tillbaka bollen så att den kommer framför A, som skjuter direkt eller tar emot och skjuter snabbt. A ställer sig sist i ledet och B kör nästa tur. Kör lika mycket spegelvänt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv bollen i full fart men med kontroll runt konen."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa platt och utan studs – både bakåtpassen och passen in i slottet."
+    },
+    {
+      "id": "cp3",
+      "text": "B: passa till där A är på väg, inte där A är."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut hårt och snabbt – skottet ska träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver längs sargen och rundar konen i hörnet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.355
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.89,
+          "y": 0.325,
+          "endX": 0.76,
+          "endY": 0.13,
+          "bend": 0.1,
+          "waves": 4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar bakåt till B, som står först i ledet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.215
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.245,
+          "endX": 0.845,
+          "endY": 0.455
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rundar den andra konen och vänder in. B passar in i slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.51
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.16,
+          "endX": 0.15,
+          "endY": 0.43,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.47,
+          "endX": 0.37,
+          "endY": 0.38,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.5,
+          "endX": 0.4,
+          "endY": 0.355
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A skjuter direkt eller efter en snabb mottagning.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.275
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.25,
+          "endX": 0.49,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "id": "d3786947-1fcd-52ac-aafa-de6e4a22234c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Dragningen – boll längs sargen och pass in",
+  "description": "Ett led med bollar i ena hörnet vid målet och ett led ute vid andra sidan i höjd med mittlinjen. A driver bollen ner längs sargen. Samtidigt springer B snett fram in mot slottet. A passar till B, som skjuter direkt.\n\nLedbyte: A ställer sig sist i B-ledet och B sist i A-ledet. Kör även spegelvänt. Variant: A gör en fint eller en vändning med bollen innan passningen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Håll bollen nära bladet och jobba med den hela vägen."
+    },
+    {
+      "id": "cp2",
+      "text": "Visa med klubban var du vill ha bollen."
+    },
+    {
+      "id": "cp3",
+      "text": "Passa platt och framför löparen, utan studs."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt och sikta på mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "focus": [
+    "ballControl",
+    "passing",
+    "shooting"
+  ],
+  "difficulty": 1,
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver bollen längs sargen. B springer snett in mot slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.43,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.26,
+          "endX": 0.14,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.38,
+          "endX": 0.67,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till B, som skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.38,
+          "endX": 0.57,
+          "endY": 0.29
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.23,
+          "endX": 0.53,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:02:59.000Z",
+  "updatedAt": "2026-11-16T08:02:59.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "id": "d1340949-d5c9-52bd-80ee-39ef9b26ff04",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Ge och gå – passa och sprinta in i slottet",
+  "description": "Två led vid mittlinjen: A nära sargen och B mer centralt. Målvakt i målet. A tar några steg framåt samtidigt som B passar. A fortsätter framåt med bollen medan B sprintar in mot slottet. A passar in och B skjuter direkt.\n\nLedbyten: byt led efter avslutet. Kör spegelvänt, så att båda sidorna tränas. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mottagaren visar med klubban var passningen ska komma."
+    },
+    {
+      "id": "cp2",
+      "text": "B passar och sprintar direkt – vänta inte för att se var bollen tar vägen."
+    },
+    {
+      "id": "cp3",
+      "text": "A lägger passningen framför B i slottet."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt och träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passar till A, som tar några steg framåt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.51,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.411,
+          "y": 0.455
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.391,
+          "y": 0.445,
+          "endX": 0.21,
+          "endY": 0.41
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.47,
+          "endX": 0.16,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver bollen framåt. B sprintar mot slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.39,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.242,
+          "y": 0.341
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.232,
+          "y": 0.311,
+          "endX": 0.19,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.47,
+          "endX": 0.46,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar in i slottet och B skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.272,
+          "y": 0.289
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.302,
+          "y": 0.279,
+          "endX": 0.4,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

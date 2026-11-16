@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 2,
+  "id": "958595fd-64cf-5cdd-b92b-c15ac9e9d236",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Runt zonen – fyra direktpass och skott",
+  "description": "Fyra led och en målvakt i ena planhalvan: A och D i hörnen vid målet, B och C längs sargen ute vid backpositionerna. A passar ner till B och springer i en båge in mot slottet. Bollen går sedan med direktpass runt zonen: B till C, C till D och D in till A, som skjuter direkt.\n\nLedbyte: A går till B, B till C, C till D och D till A. Kör även spegelvänt, så att A startar från andra hörnet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Visa med klubban var du vill ha bollen – då kan passaren slå direkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Passningarna ska vara hårda, längs golvet och rätt placerade."
+    },
+    {
+      "id": "cp3",
+      "text": "A: tajma löpningen så att du kommer in i slottet när D får bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt och träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar ner längs sargen till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.205,
+          "y": 0.148
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.195,
+          "y": 0.183,
+          "endX": 0.14,
+          "endY": 0.38
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en direktpass till C. A springer i en båge in mot slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.408
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.278,
+          "y": 0.428,
+          "endX": 0.82,
+          "endY": 0.44
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.14,
+          "endX": 0.4,
+          "endY": 0.27,
+          "bend": -0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C slår en direktpass upp till D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.772,
+          "y": 0.408
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.792,
+          "y": 0.378,
+          "endX": 0.86,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passar direkt in till A, som skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.776,
+          "y": 0.136
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.746,
+          "y": 0.161,
+          "endX": 0.5,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.24,
+          "endX": 0.47,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

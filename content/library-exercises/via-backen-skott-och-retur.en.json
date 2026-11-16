@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "id": "6e611548-ee08-5861-aeaf-2760b0f0d68e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Via the defender – one-touch pass, shot and rebound",
+  "description": "Three lines and a goalkeeper. A stands in the corner beside the goal, B along the same boards out at the defender position and C on the far side level with B. A passes along the boards to B and runs straight to the goal. B plays a one-touch pass across to C, who shoots first time. A is at the goal by then and looks for the rebound.\n\nRotation: A goes to B, B to C and C to A. Run it from both sides.\n\nEasier version: only A and B. A passes B along the boards, runs into the slot and gets a one-touch return that A shoots first time. Harder version: C chooses between shooting and passing to A in front of the goal. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Show with your stick where you want the ball."
+    },
+    {
+      "id": "cp2",
+      "text": "Passes along the floor without bounces – vary forehand and backhand."
+    },
+    {
+      "id": "cp3",
+      "text": "A: run right after the pass and have the stick on the floor at the goal."
+    },
+    {
+      "id": "cp4",
+      "text": "C: shoot first time and hit the target – a rebound needs a shot on goal."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes along the boards to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.205,
+          "y": 0.148
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.195,
+          "y": 0.183,
+          "endX": 0.14,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays a one-touch pass to C. A runs to the goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.388
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.13,
+          "endX": 0.36,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.278,
+          "y": 0.388,
+          "endX": 0.76,
+          "endY": 0.365
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C shoots first time and A goes for the rebound.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.716,
+          "y": 0.324
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.696,
+          "y": 0.299,
+          "endX": 0.545,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

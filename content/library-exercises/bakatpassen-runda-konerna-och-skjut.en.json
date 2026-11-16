@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "id": "50b39309-a51e-5a21-82b2-945dbeb26728",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The back pass – round the cones and shoot at speed",
+  "description": "One goal with a goalkeeper. One line by the boards a little way out from goal, a cone in the corner by the same board and a cone out to the side of the goal on the far side. The first player in the line (A) carries the ball at high tempo along the boards and rounds the cone in the corner. Then A passes back to B, who is now first in the line.\n\nA sprints straight on around the second cone and turns in towards the slot. B plays the ball back so that it arrives in front of A, who shoots first time or takes it and shoots quickly. A goes to the back of the line and B takes the next turn. Run it just as much mirrored. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Carry the ball at full speed but under control around the cone."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass flat with no bounce – both the back pass and the pass into the slot."
+    },
+    {
+      "id": "cp3",
+      "text": "B: pass to where A is going, not to where A is."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot hard and quickly – the shot must hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball along the boards and rounds the cone in the corner.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.355
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.89,
+          "y": 0.325,
+          "endX": 0.76,
+          "endY": 0.13,
+          "bend": 0.1,
+          "waves": 4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes back to B, first in the line.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.215
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.76,
+          "y": 0.245,
+          "endX": 0.845,
+          "endY": 0.455
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rounds the second cone and turns in. B passes into the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.74,
+          "y": 0.51
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.16,
+          "endX": 0.15,
+          "endY": 0.43,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.47,
+          "endX": 0.37,
+          "endY": 0.38,
+          "bend": 0.06,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.71,
+          "y": 0.5,
+          "endX": 0.4,
+          "endY": 0.355
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A shoots first time or after a quick touch.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.85,
+          "y": 0.21
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "id": "q1",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.6
+        },
+        {
+          "id": "q2",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.69
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.45,
+          "y": 0.275
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.25,
+          "endX": 0.49,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

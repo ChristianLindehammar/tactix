@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "9d4ce954-1898-541f-a44c-f8cbbd061126",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The diagonal run – switch places and shoot first time",
+  "description": "One goal with a goalkeeper. Line A stands just in front of their own goal crease and line B in the corner at the same goal. A runs without the ball diagonally out towards the boards and gets a forward pass from B. B sets off straight away on a diagonal run across the court into the slot, while A carries the ball along the boards. A passes in to B, who shoots first time, and A carries on towards goal for any rebound.\n\nPlayers switch lines after each turn. Run it just as much mirrored. Easier variant: two lines a little way from goal, one by each board, with a cone in front of line B. A rounds the cone, B plays a short pass to A and curves in towards the middle, A carries the ball a few steps and passes to B, who shoots first time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "High tempo in every run – if you wait for the ball, you set off too late."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass flat and in front of your team-mate so they can take it in stride."
+    },
+    {
+      "id": "cp3",
+      "text": "Shoot early and hard – do not carry the ball all the way to the goal line."
+    },
+    {
+      "id": "cp4",
+      "text": "Whoever does not shoot always follows up for the rebound."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs diagonally out to the boards. B passes forward to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.775
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.69,
+          "endX": 0.18,
+          "endY": 0.575
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.13,
+          "y": 0.745,
+          "endX": 0.13,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball along the boards. B runs diagonally into the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.495
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.465,
+          "endX": 0.13,
+          "endY": 0.31,
+          "bend": 0.03,
+          "waves": 5
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.81,
+          "endX": 0.47,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes in to B in the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.275
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.272,
+          "endX": 0.445,
+          "endY": 0.262
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B shoots first time. A goes to goal for the rebound.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.195
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.165,
+          "endX": 0.52,
+          "endY": 0.095
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.255,
+          "endX": 0.37,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

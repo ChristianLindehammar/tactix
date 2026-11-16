@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "8e9642ad-d968-5bc5-8921-22f21bc1330e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Passaren blir back – 2 mot 1 i full fart",
+  "description": "Ett mål med målvakt, tre led vid mittlinjen (A vid vänster sarg, B i mitten med bollarna, C vid höger sarg) och en kon snett framför mål på C-sidan. C springer utan boll i högt tempo och rundar konen. Samtidigt driver B några steg och passar till C. Direkt efter passen rusar B ner framför mål och spelar back, medan A löper ner mot mål på andra sidan.\n\nNu är det 2 mot 1: C skjuter själv eller passar till A som skjuter. Den av A och C som inte skjuter går på returen. Byt led efter varje tur: A till B, B till C och C till A. Kör lika mycket spegelvänt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anpassa starterna så att ingen behöver vänta på bollen – allt går i fart."
+    },
+    {
+      "id": "cp2",
+      "text": "B: passa och spring direkt – ta kortaste vägen hem till slottet."
+    },
+    {
+      "id": "cp3",
+      "text": "C: utmana backen och bestäm dig sent – skjut om hen täcker A, passa om hen går på dig."
+    },
+    {
+      "id": "cp4",
+      "text": "Backen stänger skottläget och läser passningen över till A."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C rundar konen. B driver några steg med bollen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.455
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.48,
+          "endX": 0.72,
+          "endY": 0.19,
+          "bend": 0.12,
+          "waves": 1
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.425,
+          "endX": 0.51,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar till C. A löper ner mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.35
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.33,
+          "endX": 0.68,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.48,
+          "endX": 0.3,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B rusar ner framför mål och blir back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.21
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 mot 1: C skjuter eller passar till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.18,
+          "endX": 0.54,
+          "endY": 0.095
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.225,
+          "endX": 0.35,
+          "endY": 0.29
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

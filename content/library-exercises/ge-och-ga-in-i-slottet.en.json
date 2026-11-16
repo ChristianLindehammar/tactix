@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "id": "3bbf4cc1-f9a6-5f9f-afde-4705cf8eb755",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Give and Go – pass and sprint into the slot",
+  "description": "Two lines at the centre line: A near the boards and B more central. A goalkeeper in goal. A takes a few steps forward as B passes. A carries on with the ball while B sprints towards the slot. A passes in and B shoots first time.\n\nRotation: switch lines after the shot. Run it mirrored so both sides get trained. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The receiver shows with the stick where the pass should go."
+    },
+    {
+      "id": "cp2",
+      "text": "B passes and sprints at once – don't wait to watch the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "A plays the pass in front of B in the slot."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time and hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B passes to A, who takes a few steps forward.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.51,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.411,
+          "y": 0.455
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.391,
+          "y": 0.445,
+          "endX": 0.21,
+          "endY": 0.41
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.47,
+          "endX": 0.16,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A carries the ball forward. B sprints towards the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.39,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.51,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.242,
+          "y": 0.341
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.232,
+          "y": 0.311,
+          "endX": 0.19,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.48,
+          "y": 0.47,
+          "endX": 0.46,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes into the slot and B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.19,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.6
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.47,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.48,
+          "y": 0.6
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.272,
+          "y": 0.289
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.302,
+          "y": 0.279,
+          "endX": 0.4,
+          "endY": 0.27
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

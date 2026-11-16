@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "id": "f4bf4107-1fbb-58e2-9943-f16eb302b9a9",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The carry – down the boards and pass in",
+  "description": "One line with balls in a corner by the goal and one line out on the other side level with the centre line. A carries the ball down along the boards. At the same time B runs diagonally forward in towards the slot. A passes to B, who shoots first time.\n\nRotation: A joins the back of line B and B the back of line A. Run it mirrored too. Variant: A does a fake or a turn with the ball before the pass. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball close to the blade and work with it all the way."
+    },
+    {
+      "id": "cp2",
+      "text": "Show with your stick where you want the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Pass flat and in front of the runner, without bounce."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time and hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "focus": [
+    "ballControl",
+    "passing",
+    "shooting"
+  ],
+  "difficulty": 1,
+  "durationMinutes": 10,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball along the boards. B runs diagonally in towards the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.43,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.22
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.26,
+          "endX": 0.14,
+          "endY": 0.4,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.38,
+          "endX": 0.67,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to B, who shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.28,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.4
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.38,
+          "endX": 0.57,
+          "endY": 0.29
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.61,
+          "y": 0.23,
+          "endX": 0.53,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:02:59.000Z",
+  "updatedAt": "2026-11-16T08:02:59.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

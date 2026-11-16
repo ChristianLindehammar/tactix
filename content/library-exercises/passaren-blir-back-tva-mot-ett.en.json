@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "76258c8e-20fa-5227-8b1f-cefc45be86fe",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Pass and defend – the passer becomes the back in a 2 v 1",
+  "description": "One goal with a goalkeeper, three lines at the centre line (A by the left board, B in the middle with the balls, C by the right board) and a cone out in front of goal on C's side. C sprints without the ball and rounds the cone. At the same time B carries the ball a few steps and passes to C. Straight after the pass, B races down in front of goal and plays as the defender, while A runs down towards goal on the other side.\n\nNow it is 2 v 1: C shoots or passes to A, who shoots. Whichever of A and C does not shoot follows up for the rebound. Switch lines after each turn: A to B, B to C and C to A. Run it just as much mirrored. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Time the starts so nobody has to wait for the ball – everything happens at speed."
+    },
+    {
+      "id": "cp2",
+      "text": "B: pass and go at once – take the shortest way back to the slot."
+    },
+    {
+      "id": "cp3",
+      "text": "C: take on the defender and decide late – shoot if they cover A, pass if they come at you."
+    },
+    {
+      "id": "cp4",
+      "text": "The defender closes the shooting lane and reads the pass across to A."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "attack",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C rounds the cone. B carries the ball a few steps.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.455
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.48,
+          "endX": 0.72,
+          "endY": 0.19,
+          "bend": 0.12,
+          "waves": 1
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.425,
+          "endX": 0.51,
+          "endY": 0.36,
+          "bend": 0.03,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes to C. A runs down towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.35
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.33,
+          "endX": 0.68,
+          "endY": 0.24
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.48,
+          "endX": 0.3,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B races down in front of goal and becomes the defender.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.21
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.49,
+          "y": 0.35,
+          "endX": 0.45,
+          "endY": 0.22,
+          "bend": 0.04,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 v 1: C shoots or passes to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.44,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.19,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.58,
+          "y": 0.21
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.18,
+          "endX": 0.54,
+          "endY": 0.095
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.225,
+          "endX": 0.35,
+          "endY": 0.29
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

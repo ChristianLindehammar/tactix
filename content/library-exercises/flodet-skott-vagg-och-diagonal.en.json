@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 2,
+  "id": "ed439aec-5069-5120-87b5-39cef748e4f4",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The flow – shot, wall pass and diagonal",
+  "description": "One line in each corner at one end and a cone on each side further out. A runs round the cone, gets a diagonal pass from line D and shoots first time. At the same time B starts their run on the other side. After the shot A turns back towards their own corner, gets the ball from C and plays it straight back. C then plays a first-time diagonal pass to B, who has rounded their cone and shoots first time. B then turns towards line D for their extra pass, and so it keeps going.\n\nRotation: after your wall pass, join the other line. Keep the tempo high so it flows. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Stay alert right after the shot – the next job is waiting."
+    },
+    {
+      "id": "cp2",
+      "text": "Show with your stick where you want the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Passes should be flat and without bounce."
+    },
+    {
+      "id": "cp4",
+      "text": "Play the diagonal pass early, in front of the runner."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "difficulty": 2,
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs round the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.42
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.26,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.17
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.31,
+          "endX": 0.36,
+          "endY": 0.36,
+          "bend": 0.28,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D passes and A shoots first time. B starts their run.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.42
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.76,
+          "y": 0.17
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.19,
+          "endX": 0.42,
+          "endY": 0.36
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.33,
+          "endX": 0.46,
+          "endY": 0.1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.89,
+          "y": 0.31,
+          "endX": 0.9,
+          "endY": 0.44
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A moves up towards their corner and plays a one-two with C. B rounds the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.42
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.225
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.2,
+          "endX": 0.37,
+          "endY": 0.19
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.225,
+          "endX": 0.25,
+          "endY": 0.235
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.52,
+          "endX": 0.68,
+          "endY": 0.4,
+          "bend": -0.07,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C plays the diagonal first time and B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.42
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.8,
+          "y": 0.42
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.08
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.08
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.17,
+          "label": "D"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.38,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.225
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.245,
+          "endX": 0.59,
+          "endY": 0.36
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.33,
+          "endX": 0.53,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:02:59.000Z",
+  "updatedAt": "2026-11-16T08:02:59.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

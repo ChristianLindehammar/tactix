@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "f6ff0299-60c4-5f50-b591-f02e1052cb95",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Byt bollar – lång diagonalpass i fart",
+  "description": "Två led i motsatta hörn, A uppe till vänster och B nere till höger, alla med boll. Målvakt i båda målen. A och B startar samtidigt och driver bollen längs sargen mot mitten. Några meter före mittlinjen slår båda en lång passning snett över planen till varandra och fortsätter springa. De tar emot, driver snett in mot mitten på andra planhalvan, bågar tillbaka och går mot mål för avslut – A mot det övre målet och B mot det nedre.\n\nLedbyten: byt led efter avslutet. Kör spegelvänt från de andra hörnen också. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mottagaren visar med klubban var passningen ska komma."
+    },
+    {
+      "id": "cp2",
+      "text": "Lägg passningen framför medspelaren – den ska tas emot i full fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll bollen nära bladet i bågen och titta upp innan du skjuter."
+    },
+    {
+      "id": "cp4",
+      "text": "Högt tempo hela vägen – skotten ska träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B driver bollen längs sargen mot mitten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.158,
+          "y": 0.198
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.138,
+          "y": 0.228,
+          "endX": 0.1,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.842,
+          "y": 0.802
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.862,
+          "y": 0.772,
+          "endX": 0.9,
+          "endY": 0.68,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Båda slår en lång diagonalpass och springer vidare.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.169,
+          "y": 0.395
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.209,
+          "y": 0.405,
+          "endX": 0.85,
+          "endY": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.119,
+          "y": 0.405,
+          "endX": 0.1,
+          "endY": 0.48
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.831,
+          "y": 0.605
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.791,
+          "y": 0.595,
+          "endX": 0.15,
+          "endY": 0.48
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.881,
+          "y": 0.595,
+          "endX": 0.9,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "De tar emot och driver snett in på andra planhalvan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.182,
+          "y": 0.549
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.202,
+          "y": 0.579,
+          "endX": 0.38,
+          "endY": 0.72,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.818,
+          "y": 0.451
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.798,
+          "y": 0.421,
+          "endX": 0.62,
+          "endY": 0.28,
+          "bend": 0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "De bågar tillbaka och avslutar mot var sitt mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.429,
+          "y": 0.679
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.429,
+          "y": 0.649,
+          "endX": 0.42,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.3,
+          "endX": 0.48,
+          "endY": 0.1
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.571,
+          "y": 0.321
+        },
+        {
+          "id": "d6",
+          "type": "arrow-solid",
+          "x": 0.571,
+          "y": 0.351,
+          "endX": 0.58,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

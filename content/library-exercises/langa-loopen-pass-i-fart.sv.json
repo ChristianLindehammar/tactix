@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "id": "89795a2c-542f-5892-b352-ae1f9cff2dc5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Långa loopen – pass till en spelare i fart",
+  "description": "Ett led i varje hörn, målvakt i båda målen. A springer i högt tempo upp på andra planhalvan, gör en stor loop och vänder tillbaka mot sitt eget mål. Samtidigt tar B några kliv ut från hörnet och får en passning från D. B driver bollen några steg och passar A, som tar emot i fart och går på avslut. Efter passningen bågar B in mot mitten och blir nästa löpare.\n\nLedbyten: A till C, C till A, B till D och D till B. Kör från de andra hörnen samtidigt.\n\nEnklare variant: hoppa över mellanstationen – B slår den långa passningen direkt från hörnet till A, som avslutar och ställer sig sist i samma led. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mottagaren visar med klubban var passningen ska komma."
+    },
+    {
+      "id": "cp2",
+      "text": "Passningen ska ligga på golvet, utan studs, och läggas i A:s löpväg."
+    },
+    {
+      "id": "cp3",
+      "text": "Ta emot utan att tappa fart och bryt in mot mål."
+    },
+    {
+      "id": "cp4",
+      "text": "Högt tempo i loopen – skotten ska träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "conditioning"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer upp på andra planhalvan. B kliver ut och får passning från D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.88,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.12,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.189,
+          "y": 0.175
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.219,
+          "y": 0.195,
+          "endX": 0.84,
+          "endY": 0.26
+        },
+        {
+          "id": "r0",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.17,
+          "endX": 0.88,
+          "endY": 0.25
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.83,
+          "endX": 0.52,
+          "endY": 0.32,
+          "bend": 0.08,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B driver bollen framåt. A gör en loop och vänder.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.811,
+          "y": 0.325
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.821,
+          "y": 0.355,
+          "endX": 0.86,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.26,
+          "endX": 0.66,
+          "endY": 0.6,
+          "bend": -0.15,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar A i fart.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.802,
+          "y": 0.518
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.782,
+          "y": 0.548,
+          "endX": 0.71,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A driver in och avslutar. B bågar in mot mitten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.62,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.88,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.12,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.709,
+          "y": 0.681
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.709,
+          "y": 0.711,
+          "endX": 0.6,
+          "endY": 0.8,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.83,
+          "endX": 0.52,
+          "endY": 0.9
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.82,
+          "y": 0.43,
+          "endX": 0.62,
+          "endY": 0.36,
+          "bend": 0.05,
+          "waves": 1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

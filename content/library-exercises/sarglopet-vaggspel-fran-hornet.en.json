@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 2,
+  "id": "9151cd52-8a52-5dab-a693-70c2ed534804",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Down the boards – wall passes from the corner and an extra pass",
+  "description": "Full court, goalkeeper in the far goal. Line A stands just outside their own goal crease, line B in the corner behind the same goal and line C at the centre line a little in from the boards. A cone in the corner. A passes to B, rounds the cone and gets the ball back. A plays a first-time pass to the next player in line A (D), who plays it straight back in front of A along the boards.\n\nA then plays a first-time pass to C, carries on at speed along the boards and cuts inside. C passes back into A's path, and A takes the ball into the slot and shoots. Switch lines after each turn: A to C, B to A and C to B. Run it just as much mirrored – or both ways at once with a set of lines on each side. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The receiver shows with the stick where the pass should go."
+    },
+    {
+      "id": "cp2",
+      "text": "The wall passes are first time – no controlling touch."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep the tempo high along the boards and cut inside in time."
+    },
+    {
+      "id": "cp4",
+      "text": "Take the ball into the slot and shoot – the shot must hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B in the corner and rounds the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.955,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.75,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.75,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.555,
+          "y": 0.825
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.845,
+          "endX": 0.765,
+          "endY": 0.93
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.67,
+          "y": 0.74,
+          "endX": 0.92,
+          "endY": 0.68,
+          "bend": 0.34,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays it back. A plays a first-time pass to D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.955,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.75,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.8,
+          "y": 0.885
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.85,
+          "endX": 0.89,
+          "endY": 0.735
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.89,
+          "y": 0.705,
+          "endX": 0.48,
+          "endY": 0.75
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "D plays it straight back along the boards. A passes first time on to C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.955,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.7,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.75,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.67
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.655,
+          "endX": 0.9,
+          "endY": 0.6
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.93,
+          "y": 0.655,
+          "endX": 0.93,
+          "endY": 0.585
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.9,
+          "y": 0.57,
+          "endX": 0.72,
+          "endY": 0.485
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A cuts inside, gets the ball from C, goes into the slot and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.86,
+          "y": 0.83
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.955,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.93,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.75,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.56,
+          "y": 0.42
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.93,
+          "y": 0.535,
+          "endX": 0.8,
+          "endY": 0.3,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.59,
+          "y": 0.4,
+          "endX": 0.77,
+          "endY": 0.315
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.27,
+          "endX": 0.55,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.175,
+          "endX": 0.505,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

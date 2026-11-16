@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "3aeb28e0-9c75-54d0-b1f4-72185ffc33a5",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Swap the Balls – long diagonal passes at pace",
+  "description": "Two lines in opposite corners, A top left and B bottom right, everyone with a ball. A goalkeeper in both goals. A and B start at the same time and carry the ball along the boards towards the centre. A few metres before the centre line both play a long pass diagonally across the court to each other and keep running. They receive, carry the ball diagonally in towards the middle of the other half, curve back and go for goal – A at the top goal and B at the bottom one.\n\nRotation: switch lines after the shot. Run it mirrored from the other corners too. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The receiver shows with the stick where the pass should go."
+    },
+    {
+      "id": "cp2",
+      "text": "Play the pass in front of your teammate – it should be received at full speed."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep the ball close to the blade in the curve and look up before you shoot."
+    },
+    {
+      "id": "cp4",
+      "text": "High tempo all the way – the shots should hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B carry the ball along the boards towards the centre.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.158,
+          "y": 0.198
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.138,
+          "y": 0.228,
+          "endX": 0.1,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.842,
+          "y": 0.802
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.862,
+          "y": 0.772,
+          "endX": 0.9,
+          "endY": 0.68,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Both play a long diagonal pass and keep running.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.169,
+          "y": 0.395
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.209,
+          "y": 0.405,
+          "endX": 0.85,
+          "endY": 0.52
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.119,
+          "y": 0.405,
+          "endX": 0.1,
+          "endY": 0.48
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.831,
+          "y": 0.605
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.791,
+          "y": 0.595,
+          "endX": 0.15,
+          "endY": 0.48
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.881,
+          "y": 0.595,
+          "endX": 0.9,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "They receive and carry the ball diagonally into the other half.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.182,
+          "y": 0.549
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.202,
+          "y": 0.579,
+          "endX": 0.38,
+          "endY": 0.72,
+          "bend": 0.05,
+          "waves": 3
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.818,
+          "y": 0.451
+        },
+        {
+          "id": "d4",
+          "type": "arrow-solid",
+          "x": 0.798,
+          "y": 0.421,
+          "endX": 0.62,
+          "endY": 0.28,
+          "bend": 0.05,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "They curve back and shoot, each at their own goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.74,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.429,
+          "y": 0.679
+        },
+        {
+          "id": "d5",
+          "type": "arrow-solid",
+          "x": 0.429,
+          "y": 0.649,
+          "endX": 0.42,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.3,
+          "endX": 0.48,
+          "endY": 0.1
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.571,
+          "y": 0.321
+        },
+        {
+          "id": "d6",
+          "type": "arrow-solid",
+          "x": 0.571,
+          "y": 0.351,
+          "endX": 0.58,
+          "endY": 0.66,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.7,
+          "endX": 0.52,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

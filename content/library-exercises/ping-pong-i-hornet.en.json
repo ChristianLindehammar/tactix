@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "id": "6fe1f71c-a628-5aba-bd7d-b9a42ccbb3f3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Ping-pong in the corner – quick passes and a shot from the slot",
+  "description": "Three lines and a goalkeeper. A stands down in the corner, B along the same boards a bit further out and C in the slot. A passes to B, B plays it straight back to A and A straight to B again. B then plays a one-touch pass in to C, who shoots first time.\n\nThe idea is that the quick passes along the boards draw the defenders out of the slot so that the shooter is free. Rotation: A goes to B, B to C and C to A. Also run it mirrored on the other side. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Quick passes without bounces – the ball never stops along the boards."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass to the receiver's blade, not to the body."
+    },
+    {
+      "id": "cp3",
+      "text": "C: keep the stick on the floor and shoot first time."
+    },
+    {
+      "id": "cp4",
+      "text": "Variation: B fakes a pass to A and plays it in to C."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes along the boards to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.132
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.208,
+          "y": 0.162,
+          "endX": 0.15,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays it straight back to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.288
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.208,
+          "y": 0.258,
+          "endX": 0.15,
+          "endY": 0.16
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A plays it straight to B again.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.132
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.208,
+          "y": 0.162,
+          "endX": 0.15,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes first time in to C, who shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.352
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.268,
+          "y": 0.347,
+          "endX": 0.43,
+          "endY": 0.34
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.28,
+          "endX": 0.51,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

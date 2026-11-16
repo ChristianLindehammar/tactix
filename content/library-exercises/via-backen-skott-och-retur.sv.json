@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "id": "42a331ce-bca7-54a6-b646-326920404aa3",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Via backen – direktpass, skott och retur",
+  "description": "Tre led och en målvakt. A står i hörnet bredvid målet, B längs samma sarg ute på backposition och C på andra kanten i höjd med B. A passar längs sargen till B och springer direkt mot mål. B slår en direktpass tvärs över till C, som skjuter direkt. A är framme vid målet och tar en eventuell retur.\n\nLedbyte: A går till B, B till C och C till A. Kör från båda hållen.\n\nEnklare variant: bara A och B. A passar B längs sargen, springer in mot slottet och får en direktpass tillbaka som A skjuter direkt. Svårare variant: C väljer själv mellan skott och pass till A framför mål. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Visa med klubban var du vill ha bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Passningarna längs golvet och utan studs – variera forehand och backhand."
+    },
+    {
+      "id": "cp3",
+      "text": "A: spring direkt efter passningen och ha klubban i golvet vid målet."
+    },
+    {
+      "id": "cp4",
+      "text": "C: skjut direkt och sikta på mål – en retur kräver ett skott på mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar längs sargen till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.205,
+          "y": 0.148
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.195,
+          "y": 0.183,
+          "endX": 0.14,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B slår en direktpass till C. A springer mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.388
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.13,
+          "endX": 0.36,
+          "endY": 0.2,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.278,
+          "y": 0.388,
+          "endX": 0.76,
+          "endY": 0.365
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C skjuter direkt och A går på returen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.42,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.716,
+          "y": 0.324
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.696,
+          "y": 0.299,
+          "endX": 0.545,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

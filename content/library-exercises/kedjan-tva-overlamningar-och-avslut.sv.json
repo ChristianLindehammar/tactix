@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "id": "e87db8e7-596b-51cf-9c86-3afe6d5fd604",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Kedjan – två överlämningar och fritt avslut",
+  "description": "Ett mål med målvakt och tre led strax innanför mittlinjen: A vid vänster sarg, C i mitten och B vid höger sarg. Bollarna ligger hos C. C driver snett framåt mot vänster och lämnar över bollen till A, som kommer in bakom. A driver snett framåt mot höger och lämnar över till B, som också kommer bakom. A och C fortsätter mot var sin stolpe, och B väljer att skjuta själv eller passa till A eller C för ett direktskott.\n\nByt led efter varje tur: A till B, B till C och C till A. Kör lika mycket spegelvänt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den som tar över bollen kommer alltid bakom den som för bollen."
+    },
+    {
+      "id": "cp2",
+      "text": "Lämna bollen stilla vid överlämningen – mottagaren tar den i fart."
+    },
+    {
+      "id": "cp3",
+      "text": "B: läs läget och välj – eget skott, eller passa till den som är friast."
+    },
+    {
+      "id": "cp4",
+      "text": "Alla går på mål efteråt och tar returerna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "ballControl",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C driver snett mot vänster. A springer in bakom.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.53
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.44,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.375
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.47,
+          "y": 0.35,
+          "endX": 0.36,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.41,
+          "endX": 0.24,
+          "endY": 0.355
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A tar över och driver snett mot höger. C går mot mål, B startar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.53
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.34,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.37
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.36,
+          "endX": 0.62,
+          "endY": 0.28,
+          "bend": 0.03,
+          "waves": 4
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.88,
+          "y": 0.4,
+          "endX": 0.8,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A lämnar över till B och fortsätter mot bortre stolpen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.53
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.63,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.27
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.68,
+          "y": 0.28,
+          "endX": 0.55,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 2
+        },
+        {
+          "id": "r4",
+          "type": "arrow-solid",
+          "x": 0.66,
+          "y": 0.18,
+          "endX": 0.71,
+          "endY": 0.155
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B skjuter själv eller passar till A eller C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.53
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.53
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.9,
+          "y": 0.53
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.24,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.265
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.235,
+          "endX": 0.5,
+          "endY": 0.095
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.46,
+          "y": 0.265,
+          "endX": 0.37,
+          "endY": 0.245
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.25,
+          "endX": 0.69,
+          "endY": 0.175
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

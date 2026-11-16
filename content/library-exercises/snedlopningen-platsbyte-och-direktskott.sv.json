@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "id": "9b9b3b2a-6c33-577c-8775-5bb2a4c92365",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Snedlöpningen – platsbyte och direktskott",
+  "description": "Ett mål med målvakt. Led A står strax framför egen målgård och led B i hörnet vid samma mål. A springer utan boll snett ut mot sargen och får en passning framåt från B. B springer direkt diagonalt över planen in i slottet, medan A driver bollen längs sargen. A passar in till B, som skjuter direkt, och A fortsätter mot mål och tar en eventuell retur.\n\nSpelarna byter led efter varje tur. Kör lika mycket spegelvänt. Enklare variant: ställ två led en bit från mål, ett vid varje sarg, och en kon framför B-ledet. A rundar konen, B slår en kort pass till A och bågar in mot mitten, A driver några steg och passar till B som skjuter direkt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Högt tempo i alla löpningar – den som väntar på bollen har sprungit för sent."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa platt och framför medspelaren så att hen kan ta bollen i farten."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut tidigt och hårt – driv inte ända ner till mållinjen."
+    },
+    {
+      "id": "cp4",
+      "text": "Den som inte skjuter går alltid på returen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer snett ut mot sargen. B passar framåt till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.72,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.775
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.69,
+          "endX": 0.18,
+          "endY": 0.575
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.13,
+          "y": 0.745,
+          "endX": 0.13,
+          "endY": 0.6
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver längs sargen. B springer diagonalt in i slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.56,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.495
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.465,
+          "endX": 0.13,
+          "endY": 0.31,
+          "bend": 0.03,
+          "waves": 5
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.81,
+          "endX": 0.47,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar in till B i slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.275
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.272,
+          "endX": 0.445,
+          "endY": 0.262
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B skjuter direkt. A går på mål och tar returen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.81
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.93
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.195
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.165,
+          "endX": 0.52,
+          "endY": 0.095
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.255,
+          "endX": 0.37,
+          "endY": 0.15
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:03:29.000Z",
+  "updatedAt": "2026-11-16T08:03:29.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

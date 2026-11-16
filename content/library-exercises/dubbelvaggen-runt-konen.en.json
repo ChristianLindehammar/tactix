@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 2,
+  "id": "bd79c32d-e020-51a1-a7b6-e45bf78d9e7e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Double Wall – round the cone and a one-timer",
+  "description": "Three lines in one half: A in the corner by the goal line, B diagonally in front of the goal on the same side and C on the other side. A cone on the same side, a little before the centre line. A passes to B and runs towards the cone. B plays it back, A rounds the cone with the ball and passes to C. Then A sprints towards goal, gets a first-time pass from C and shoots first time.\n\nRotation: A to B, B to C and C to A. Run it mirrored and switch between forehand and backhand passes.\n\nEasier variants: A gets the ball back from B, rounds the cone and shoots alone (no C), or A starts with the ball, rounds the cone, passes to C and gets a first-time return to shoot (no B). The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The receiver shows with the stick where the pass should go."
+    },
+    {
+      "id": "cp2",
+      "text": "Round the cone tightly with the ball close to the blade."
+    },
+    {
+      "id": "cp3",
+      "text": "Switch between forehand and backhand passes."
+    },
+    {
+      "id": "cp4",
+      "text": "Sprint towards goal straight after the pass to C – the one-timer should hit the target."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B and runs towards the cone.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.197,
+          "y": 0.192
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.227,
+          "y": 0.212,
+          "endX": 0.3,
+          "endY": 0.23
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.137,
+          "y": 0.202,
+          "endX": 0.11,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays it back to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.302,
+          "y": 0.298
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.282,
+          "y": 0.318,
+          "endX": 0.16,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rounds the cone with the ball and passes to C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.11,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.47,
+          "endX": 0.36,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.43,
+          "endX": 0.75,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A sprints towards goal, gets a first-time pass from C and shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.751,
+          "y": 0.321
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.731,
+          "y": 0.321,
+          "endX": 0.55,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.41,
+          "endX": 0.5,
+          "endY": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.24,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

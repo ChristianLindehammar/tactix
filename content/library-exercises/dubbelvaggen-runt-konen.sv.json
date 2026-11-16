@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 2,
+  "id": "6637f7f0-8ff7-579e-8a97-7f57171d090e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Dubbelväggen – runda konen och direktskott",
+  "description": "Tre led på en planhalva: A i hörnet vid mållinjen, B snett framför målet på samma sida och C på andra sidan. En kon på samma sida, en bit före mittlinjen. A passar B och springer mot konen. B spelar tillbaka, A rundar konen med bollen och passar C. Sedan sprintar A mot mål, får en direktpass från C och skjuter direkt.\n\nLedbyten: A till B, B till C och C till A. Kör spegelvänt och växla mellan forehand- och backhandpassningar.\n\nEnklare varianter: A får tillbaka bollen från B, rundar konen och går själv på avslut (inget C), eller A startar med bollen, rundar konen, passar C och får en direktpass tillbaka till avslut (inget B). Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Mottagaren visar med klubban var passningen ska komma."
+    },
+    {
+      "id": "cp2",
+      "text": "Runda konen tätt med bollen nära bladet."
+    },
+    {
+      "id": "cp3",
+      "text": "Växla mellan forehand- och backhandpassningar."
+    },
+    {
+      "id": "cp4",
+      "text": "Sprinta mot mål direkt efter passningen till C – direktskottet ska träffa mål."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar B och springer mot konen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.14,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.197,
+          "y": 0.192
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.227,
+          "y": 0.212,
+          "endX": 0.3,
+          "endY": 0.23
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.137,
+          "y": 0.202,
+          "endX": 0.11,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar tillbaka till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.302,
+          "y": 0.298
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.282,
+          "y": 0.318,
+          "endX": 0.16,
+          "endY": 0.34
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rundar konen med bollen och passar C.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.11,
+          "y": 0.35,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.11,
+          "y": 0.42
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.12,
+          "y": 0.47,
+          "endX": 0.36,
+          "endY": 0.45,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.39,
+          "y": 0.43,
+          "endX": 0.75,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A sprintar mot mål, får en direktpass från C och skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.45,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.24,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.26,
+          "label": "C"
+        },
+        {
+          "id": "k",
+          "type": "cone",
+          "x": 0.22,
+          "y": 0.41
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.751,
+          "y": 0.321
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.731,
+          "y": 0.321,
+          "endX": 0.55,
+          "endY": 0.26
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.41,
+          "endX": 0.5,
+          "endY": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.24,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:05:16.000Z",
+  "updatedAt": "2026-11-16T08:05:16.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

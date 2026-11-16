@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "id": "8402c990-dfd5-5888-ae52-ad6d35324f03",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Diagonalen – lång pass, retur och skott i fart",
+  "description": "Fyra led och en målvakt i ena planhalvan: D och A i hörnen vid målet, C och B längs sargen ute vid backpositionerna. C slår en lång diagonalpass till A och springer in mot slottet. A spelar direkt tillbaka in i Cs löpväg, och C skjuter direkt. Därefter samma sak från andra sidan: B passar D, springer in och får returen.\n\nLedbyte: A går till B, B till C, C till D och D till A.\n\nVariant: A startar med bollen och passar C, som spelar direkt tillbaka och sedan springer in mot slottet. A slår en ny direktpass, och C skjuter direkt. Då blir det två väggspel och ännu högre krav på passningarna. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den långa passningen ska vara hård och gå längs golvet."
+    },
+    {
+      "id": "cp2",
+      "text": "A: spela returen dit löparen är på väg, inte dit hen var."
+    },
+    {
+      "id": "cp3",
+      "text": "Variera med forehand, backhand och volley."
+    },
+    {
+      "id": "cp4",
+      "text": "Ha klubban i golvet in mot slottet och skjut direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C slår en lång diagonalpass till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.228,
+          "y": 0.408
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.268,
+          "y": 0.388,
+          "endX": 0.82,
+          "endY": 0.14
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C springer in mot slottet. A spelar direkt tillbaka.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.44,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.776,
+          "y": 0.136
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.39,
+          "endX": 0.38,
+          "endY": 0.31,
+          "bend": 0.05,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.746,
+          "y": 0.161,
+          "endX": 0.47,
+          "endY": 0.29
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C skjuter direkt. Sedan startar B från andra sidan och passar D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.44,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.3,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.539,
+          "y": 0.282
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.539,
+          "y": 0.247,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T08:04:53.000Z",
+  "updatedAt": "2026-11-16T08:04:53.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
