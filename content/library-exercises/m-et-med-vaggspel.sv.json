@@ -5,7 +5,7 @@
   "clonedFromId": null,
   "sport": "floorball",
   "title": "M-et med väggspel – pass, retur och avslut",
-  "description": "En vidareutveckling av M-et. Två led i hörnen vid ena målet och en kon på var sida en bit ut. A springer upp längs sargen, rundar sin kon och får en passning från B i motsatta hörnet. A spelar tillbaka till B, får bollen igen och avslutar – gärna direkt. Sedan startar B från andra sidan.\n\nSe till att spelarna verkligen springer ut och rundar konen. Annars kommer de för nära mål, övningen tappar fart och det blir trångt. Avslutet får gärna vara ett backhandskott, eftersom det är nära till mål. Bilden är inte skalenlig.",
+  "description": "En vidareutveckling av M-et. Ett led i varje hörn vid ena målet och en kon på var sida en bit ut mot mitten. A springer ner längs sargen, rundar sin kon och får passningen från B i andra hörnet. A spelar direkt tillbaka till B och fortsätter rakt in mot mål. B slår en ny direktpass och A skjuter direkt från slottet – gärna med backhand, eftersom det är nära till mål. Sedan springer B runt konen på sin sida och gör samma sak med A-ledet.\n\nSe till att spelarna verkligen springer ut och rundar konen. Annars kommer de för nära mål, övningen tappar fart och det blir trångt. Ledbyte: efter skottet går man till det andra ledet. Variant: låt A ta emot och finta sig förbi en tänkt back innan skottet. Bilden är inte skalenlig.",
   "coachingPoints": [
     {
       "id": "cp1",
@@ -13,10 +13,14 @@
     },
     {
       "id": "cp2",
-      "text": "Väggpassningen tillbaka ska vara direkt och hård."
+      "text": "Väggpassningen tillbaka ska vara direkt och hård, utan studs."
     },
     {
       "id": "cp3",
+      "text": "Fortsätt rakt in mot mål efter väggen, inte ut mot sargen."
+    },
+    {
+      "id": "cp4",
       "text": "Prova backhandskott – avståndet är kort."
     }
   ],
@@ -38,70 +42,62 @@
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.32
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.32
         },
         {
-          "id": "q1",
+          "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
-          "id": "q2",
+          "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
           "x": 0.12,
-          "y": 0.21,
+          "y": 0.17,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.823,
-          "y": 0.256
+          "x": 0.8,
+          "y": 0.22
         },
         {
           "id": "r1",
           "type": "arrow-solid",
-          "x": 0.15,
-          "y": 0.26,
-          "endX": 0.24,
-          "endY": 0.47
-        },
-        {
-          "id": "r1b",
-          "type": "arrow-solid",
-          "x": 0.25,
-          "y": 0.48,
-          "endX": 0.37,
-          "endY": 0.39,
-          "bend": 0.08,
+          "x": 0.12,
+          "y": 0.22,
+          "endX": 0.33,
+          "endY": 0.345,
+          "bend": 0.21,
           "waves": 1
         }
       ]
@@ -112,205 +108,205 @@
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.32
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.32
         },
         {
-          "id": "q1",
+          "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
-          "id": "q2",
+          "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
-          "x": 0.37,
-          "y": 0.37,
+          "x": 0.36,
+          "y": 0.38,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.823,
-          "y": 0.256
+          "x": 0.8,
+          "y": 0.22
         },
         {
           "id": "p1",
           "type": "arrow-dashed",
-          "x": 0.793,
-          "y": 0.276,
-          "endX": 0.43,
+          "x": 0.77,
+          "y": 0.24,
+          "endX": 0.42,
           "endY": 0.36
         }
       ]
     },
     {
       "id": "f3",
-      "note": "A spelar direkt tillbaka till B och fortsätter in mot mål.",
+      "note": "A spelar direkt tillbaka och fortsätter in mot mål.",
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.32
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.32
         },
         {
-          "id": "q1",
+          "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
-          "id": "q2",
+          "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
-          "x": 0.37,
-          "y": 0.37,
+          "x": 0.36,
+          "y": 0.38,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.435,
-          "y": 0.327
+          "x": 0.48,
+          "y": 0.38
         },
         {
           "id": "p2",
           "type": "arrow-dashed",
-          "x": 0.465,
-          "y": 0.317,
-          "endX": 0.8,
-          "endY": 0.23
+          "x": 0.5,
+          "y": 0.35,
+          "endX": 0.82,
+          "endY": 0.22
         },
         {
-          "id": "r2",
+          "id": "r3",
           "type": "arrow-solid",
-          "x": 0.38,
-          "y": 0.32,
-          "endX": 0.42,
-          "endY": 0.25
+          "x": 0.37,
+          "y": 0.33,
+          "endX": 0.41,
+          "endY": 0.29
         }
       ]
     },
     {
       "id": "f4",
-      "note": "B passar igen, och A avslutar direkt.",
+      "note": "B slår en ny direktpass och A skjuter direkt.",
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.32
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.32
         },
         {
-          "id": "q1",
+          "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
-          "id": "q2",
+          "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
           "x": 0.42,
-          "y": 0.23,
+          "y": 0.24,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.811,
-          "y": 0.251
+          "x": 0.8,
+          "y": 0.22
         },
         {
           "id": "p3",
           "type": "arrow-dashed",
-          "x": 0.781,
-          "y": 0.251,
+          "x": 0.77,
+          "y": 0.23,
           "endX": 0.48,
-          "endY": 0.23
+          "endY": 0.25
         },
         {
           "id": "s1",
           "type": "arrow-dashed",
-          "x": 0.45,
+          "x": 0.43,
           "y": 0.19,
-          "endX": 0.46,
-          "endY": 0.085
+          "endX": 0.47,
+          "endY": 0.1
         }
       ]
     }

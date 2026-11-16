@@ -5,23 +5,27 @@
   "clonedFromId": null,
   "sport": "floorball",
   "title": "Donken – the M with a diagonal pass and finish at speed",
-  "description": "Two lines, one in each corner beside the goal, with a high cone on each side further out. The first in one line runs without the ball down and around their cone. The first in the other line plays a diagonal pass to the runner, who shoots first time near the cone. Then the passer runs around their cone and gets the pass from the other side, and so on. The running paths make an M.\n\nSwap lines so everyone shoots from both sides. A quick warm-up for both players and goalkeeper. The diagram is not to scale.",
+  "description": "One line in each corner at one end and a cone on each side further out towards the middle. A runs without the ball down along the boards, rounds the cone and turns in towards the slot. B plays a diagonal pass from the other corner and A shoots first time. Then B runs the same way on their side and gets the pass from the next player in line A. The running paths make an M.\n\nRotation: after the shot, join the other line, so everyone shoots from both sides. A quick warm-up for both players and goalkeeper. Variants: let the next player in your own line pass from behind (one line is enough, run it from both corners), or put the lines out by the sides level with the centre line – the runner goes diagonally towards the cone on the other side near the goal, receives, rounds the cone and shoots. The diagram is not to scale.",
   "coachingPoints": [
     {
       "id": "cp1",
-      "text": "Pass along the floor, to the blade."
+      "text": "Full speed through the whole run, round the cone too."
     },
     {
       "id": "cp2",
-      "text": "The runner shows with the stick where they want the ball."
+      "text": "Show with your stick where you want the ball."
     },
     {
       "id": "cp3",
-      "text": "Shoot first time – do not stop the ball first."
+      "text": "The pass should be flat and in front of the runner."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time – do not stop to receive."
     }
   ],
   "locale": "en",
-  "difficulty": 2,
+  "difficulty": 1,
   "focus": [
     "passing",
     "shooting",
@@ -35,221 +39,203 @@
   "frames": [
     {
       "id": "f1",
-      "note": "A runs without the ball down and around the left cone.",
+      "note": "A runs down along the boards and rounds the cone.",
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.33
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.33
         },
         {
           "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
           "x": 0.12,
-          "y": 0.21,
+          "y": 0.17,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.76,
-          "y": 0.23
+          "x": 0.8,
+          "y": 0.22
         },
         {
           "id": "r1",
           "type": "arrow-solid",
-          "x": 0.15,
-          "y": 0.26,
-          "endX": 0.24,
-          "endY": 0.49
-        },
-        {
-          "id": "r1b",
-          "type": "arrow-solid",
-          "x": 0.26,
-          "y": 0.5,
-          "endX": 0.39,
-          "endY": 0.42,
-          "bend": 0.025,
+          "x": 0.12,
+          "y": 0.22,
+          "endX": 0.36,
+          "endY": 0.27,
+          "bend": 0.28,
           "waves": 1
         }
       ]
     },
     {
       "id": "f2",
-      "note": "B plays a diagonal pass to A.",
+      "note": "B plays a diagonal pass in front of A.",
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.33
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.33
         },
         {
           "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
           "x": 0.36,
-          "y": 0.36,
+          "y": 0.37,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.76,
-          "y": 0.23
+          "x": 0.8,
+          "y": 0.22
         },
         {
           "id": "p1",
           "type": "arrow-dashed",
-          "x": 0.73,
-          "y": 0.25,
-          "endX": 0.43,
-          "endY": 0.34
+          "x": 0.77,
+          "y": 0.24,
+          "endX": 0.42,
+          "endY": 0.35
         }
       ]
     },
     {
       "id": "f3",
-      "note": "A shoots first time. B runs around the right cone for the next pass.",
+      "note": "A shoots first time. B starts their run on the other side.",
       "markers": [
         {
           "id": "gk",
-          "type": "player",
+          "type": "opponent",
           "x": 0.5,
-          "y": 0.13
+          "y": 0.085
         },
         {
           "id": "k1",
           "type": "cone",
-          "x": 0.3,
-          "y": 0.44
+          "x": 0.2,
+          "y": 0.33
         },
         {
           "id": "k2",
           "type": "cone",
-          "x": 0.7,
-          "y": 0.44
+          "x": 0.8,
+          "y": 0.33
         },
         {
           "id": "qa",
           "type": "player",
           "x": 0.12,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "qb",
           "type": "player",
           "x": 0.88,
-          "y": 0.13
+          "y": 0.08
         },
         {
           "id": "a",
           "type": "player",
           "x": 0.36,
-          "y": 0.36,
+          "y": 0.37,
           "label": "A"
         },
         {
           "id": "b",
           "type": "player",
           "x": 0.88,
-          "y": 0.21,
+          "y": 0.17,
           "label": "B"
         },
         {
           "id": "ball",
           "type": "ball",
-          "x": 0.4,
-          "y": 0.3
+          "x": 0.44,
+          "y": 0.32
         },
         {
           "id": "s1",
           "type": "arrow-dashed",
-          "x": 0.4,
-          "y": 0.27,
-          "endX": 0.42,
-          "endY": 0.08
+          "x": 0.45,
+          "y": 0.29,
+          "endX": 0.48,
+          "endY": 0.1
         },
         {
-          "id": "r2",
+          "id": "r3",
           "type": "arrow-solid",
-          "x": 0.85,
-          "y": 0.26,
-          "endX": 0.76,
-          "endY": 0.49
-        },
-        {
-          "id": "r2b",
-          "type": "arrow-solid",
-          "x": 0.74,
-          "y": 0.5,
-          "endX": 0.61,
-          "endY": 0.42,
-          "bend": -0.025,
-          "waves": 1
+          "x": 0.89,
+          "y": 0.22,
+          "endX": 0.9,
+          "endY": 0.44
         }
       ]
     }
