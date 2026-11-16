@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "bc3df491-d419-54fd-9dbb-d87d6dc14540",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Hörnstarten – 1 mot 1 som växer till 3 mot 2",
+  "description": "Halvplan mot ett mål med målvakt. Två blå anfallare (A och B) och två röda försvarare (X och Y) är inne åt gången. En tredje blå spelare är joker (J) vid mittlinjen, och resten väntar bakom mittlinjen.\n\nMålvakten slår ut bollen i hörnet, där A och X gör upp 1 mot 1. När någon har kontroll på bollen eller den lämnar hörnet kliver B och Y in från sina platser framför mål: 2 mot 2. Blått får spela till jokern och har då 3 mot 2, som ska avgöras snabbt. Vinner rött bollen ska de föra den över mittlinjen. Nästa grupp startar när förra är klar. Byt roller mellan blått och rött med jämna mellanrum och byt joker efter några försök.\n\nVariant: räkna poäng – vunnen hörnkamp ger 1 poäng och mål ger 2. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Hörnkampen: kroppen mellan motståndaren och bollen, använd sargen."
+    },
+    {
+      "id": "cp2",
+      "text": "Efter bollvinst: lyft blicken och ta dig ut ur hörnet direkt."
+    },
+    {
+      "id": "cp3",
+      "text": "Stödspelaren rör sig till en fri yta där hen kan få bollen."
+    },
+    {
+      "id": "cp4",
+      "text": "Med jokern: spela snabbt och avsluta innan försvaret hinner flytta sig."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "defence",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten slår ut bollen i hörnet. A och X sprintar dit.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.21,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.1
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.095,
+          "endX": 0.11,
+          "endY": 0.07
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.23,
+          "endX": 0.21,
+          "endY": 0.13
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vinner hörnkampen och tar sig ut längs sargen. B och Y kliver in: 2 mot 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.21,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.185
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.21,
+          "endX": 0.16,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A spelar till jokern J – nu är det 3 mot 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.45
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.45,
+          "endY": 0.51
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "J spelar vidare till B, som skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.455
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.44,
+          "endX": 0.69,
+          "endY": 0.35
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "id": "c11e05a6-558b-531d-81b8-ea8903826777",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Chase back – 2 v 1 that becomes 2 v 2",
+  "description": "Full court with goalkeepers in both goals and four players on at a time. Two blue attackers stand on the centre line, one by each board, and A has the ball. A red defender stands in each end (D at the top, E at the bottom).\n\nA and B attack the top goal 2 v 1 against D. At the same time E sprints back from the other end and tries to catch up, so it becomes 2 v 2. The attack ends with a shot or when red wins the ball. Then the reds go to the centre line and attack the bottom goal the same way. The blues become defenders, one in each end, and the one furthest away chases back. Change the group of four about every minute.\n\nVariant: the chasing player may only start once the attackers have made their first pass. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Lone defender: back off, slow the attack down and cover the shot until help arrives."
+    },
+    {
+      "id": "cp2",
+      "text": "Chasing player: run straight back in front of your own goal, not after the ball."
+    },
+    {
+      "id": "cp3",
+      "text": "Talk once there are two of you: who takes the ball carrier and who takes the other one?"
+    },
+    {
+      "id": "cp4",
+      "text": "Attackers: finish it before the second defender gets back."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "defence",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B attack the top goal. E sprints back from the other end.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.435
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.41,
+          "endX": 0.26,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.45,
+          "endX": 0.76,
+          "endY": 0.33
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.71,
+          "endX": 0.5,
+          "endY": 0.52
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "D backs off and slows A down. E catches up from behind.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.26,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.32,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.305
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.29,
+          "endX": 0.38,
+          "endY": 0.22,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "re",
+          "type": "arrow-solid",
+          "x": 0.52,
+          "y": 0.45,
+          "endX": 0.63,
+          "endY": 0.31
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Now it is 2 v 2: E is back and takes B. A shoots past D.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.7,
+          "y": 0.3,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.215
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.2,
+          "endX": 0.46,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Next attack: D and E attack the bottom goal. B defends and A chases back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.14,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "opponent",
+          "x": 0.86,
+          "y": 0.5,
+          "label": "E"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.76,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.565
+        },
+        {
+          "id": "dd",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.59,
+          "endX": 0.26,
+          "endY": 0.7,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ree",
+          "type": "arrow-solid",
+          "x": 0.84,
+          "y": 0.55,
+          "endX": 0.76,
+          "endY": 0.67
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.29,
+          "endX": 0.5,
+          "endY": 0.46
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

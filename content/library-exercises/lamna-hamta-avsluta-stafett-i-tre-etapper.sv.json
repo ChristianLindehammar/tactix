@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "id": "87bf4a6a-58ba-5a5f-abc2-94d0814c704f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Lämna, hämta, avsluta – stafett i tre etapper",
+  "description": "Dela gruppen i två eller tre lag som står i varsitt led mot samma mål. Framför varje led står lika många koner som det finns spelare i laget, med ungefär två meters mellanrum. Alla har en boll och dribblar på stället medan de väntar.\n\nEtapp 1: den första driver bollen till första konen, lämnar den stilla bredvid konen och springer tillbaka och sätter sig sist i ledet. Nästa tar nästa kon, och så vidare tills det ligger en boll vid varje kon. Etapp 2: den som sitter först springer och hämtar bollen längst bort och driver tillbaka den, sedan hämtar nästa den näst längst bort, och så vidare. Etapp 3: en i taget driver slalom mellan konerna och avslutar på mål, och sätter sig sedan i ledet. Laget som först sitter ner efter etapp 3 vinner.\n\nStötta de yngsta med vad som kommer härnäst – det tar en stund innan alla minns ordningen. Variant: passa in i målet i stället för att skjuta. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Högt tempo med bollen, men lugna händer när den ska lämnas stilla vid konen."
+    },
+    {
+      "id": "cp2",
+      "text": "Bollen nära bladet i slalomen – ta hellre små steg runt konerna."
+    },
+    {
+      "id": "cp3",
+      "text": "Blicken upp mot målet innan du avslutar."
+    },
+    {
+      "id": "cp4",
+      "text": "Håll koll på vad du ska göra härnäst."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Etapp 1: driv till nästa lediga kon, lämna bollen och spring tillbaka.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.77
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.77
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.735,
+          "endX": 0.29,
+          "endY": 0.63,
+          "bend": 0.012,
+          "waves": 3
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.735,
+          "endX": 0.71,
+          "endY": 0.63,
+          "bend": 0.012,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Etapp 2: spring till bollen längst bort och driv tillbaka den till ledet.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ba0",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.5449999999999999
+        },
+        {
+          "id": "ba1",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.425
+        },
+        {
+          "id": "ba2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.305
+        },
+        {
+          "id": "ba3",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.185
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.5449999999999999
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.425
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.305
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.185
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.745,
+          "endX": 0.15,
+          "endY": 0.2
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.36,
+          "endY": 0.73,
+          "bend": 0.015,
+          "waves": 6
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.745,
+          "endX": 0.85,
+          "endY": 0.2
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.73,
+          "bend": 0.015,
+          "waves": 6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Etapp 3: driv slalom mellan konerna och avsluta på mål.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.77
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.77
+        },
+        {
+          "id": "s1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.735,
+          "endX": 0.37,
+          "endY": 0.635,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.6,
+          "endX": 0.16,
+          "endY": 0.51,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s3",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.47,
+          "endX": 0.34,
+          "endY": 0.39,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s4",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.35,
+          "endX": 0.16,
+          "endY": 0.27,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "sh",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.225,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

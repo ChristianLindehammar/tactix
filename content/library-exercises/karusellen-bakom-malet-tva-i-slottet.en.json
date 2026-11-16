@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "id": "03e74eb7-7d1d-57a7-a324-4233828261a8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Carousel – the ball round the goal and two in the slot",
+  "description": "Half court, one goal with a goalkeeper. Four spots: A at the centre line by the right boards with the balls, B in the right corner, C in the left corner and D at the centre line by the left boards. A passes along the boards to B and heads straight for the slot. B carries the ball behind the goal, passes on to C and comes out in front of goal on their own side. C plays up the boards to D, who has two players to choose from in front of goal and passes to the one who is freest. The receiver shoots first time.\n\nRotation: everyone moves one spot in the direction of the ball (A to B, B to C, C to D and D to the A line). Switch sides after a few minutes so the ball goes round the goal the other way.\n\nVariant: a defender steps in front of goal and can only cover one of the two – D reads who is free. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Keep the ball moving round the goal without stopping – that is what pulls the defence apart."
+    },
+    {
+      "id": "cp2",
+      "text": "A and B: spread out in front of goal so one defender cannot cover both."
+    },
+    {
+      "id": "cp3",
+      "text": "D: look up before the ball arrives and decide early who gets the pass."
+    },
+    {
+      "id": "cp4",
+      "text": "The shooter keeps the stick on the floor and shoots first time."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes along the boards to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.735,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.4,
+          "endX": 0.845,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B carries the ball behind the goal. A heads for the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.19
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.15,
+          "endX": 0.67,
+          "endY": 0.05,
+          "bend": 0.015,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.41,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes behind the goal to C and comes out in front.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.04,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.596,
+          "y": 0.035
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.556,
+          "y": 0.03,
+          "endX": 0.23,
+          "endY": 0.075,
+          "bend": 0.015,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.08,
+          "endX": 0.71,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C plays up to D, who passes to whoever is free. One-timer.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.176
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.21,
+          "endX": 0.14,
+          "endY": 0.39
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.43,
+          "endX": 0.505,
+          "endY": 0.315
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.24,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

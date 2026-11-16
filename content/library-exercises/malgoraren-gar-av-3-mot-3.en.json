@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 2,
+  "id": "8ffc3984-97f7-5b76-8af1-54e79ffd7904",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Scorer off – 3 v 3 with a player up or down",
+  "description": "Two teams with two or three lines of three each. Play 3 v 3 on the full court or a smaller court across, with goalkeepers in both goals. The subs wait by the boards.\n\nWhoever scores leaves the court at once, and the team plays on a player short. The goalkeeper of the team that conceded restarts at once with a throw-out. Shifts are short, about 30 seconds, then the next three from each team come on and it starts again at 3 v 3. If a team scores three goals in one shift it has no one left on the court and the shift is over. The goals count for the whole match.\n\nVariant: move the goals closer together so the shots come quicker.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "With an extra player: move the ball quickly and find the free player."
+    },
+    {
+      "id": "cp2",
+      "text": "Decide quickly between shot and pass."
+    },
+    {
+      "id": "cp3",
+      "text": "A player down: stay tight in front of your own goal and close the shooting lanes."
+    },
+    {
+      "id": "cp4",
+      "text": "Come on straight away at a change – no dead time."
+    }
+  ],
+  "locale": "en",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "3 v 3. A shoots and scores.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.17
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.15,
+          "endX": 0.46,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A leaves the court at once. Red restarts with a throw-out from the goalkeeper.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.1
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.11,
+          "endX": 0.75,
+          "endY": 0.15
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.27,
+          "endX": 0.12,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Red attack 3 v 2, set up Z and shoot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.78,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.675
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.69,
+          "endX": 0.72,
+          "endY": 0.77
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.82,
+          "endX": 0.55,
+          "endY": 0.905
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

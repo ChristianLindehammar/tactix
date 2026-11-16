@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "117e7f62-b539-586b-b7b0-2d19bd4a9a5a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Far and near – two shots on the goalkeeper",
+  "description": "Half the court, goalkeeper in goal. The shooters' line A with balls stands by the boards level with the centre line, feeder B by the opposite boards across from them, and feeder C with balls along the same boards as A, a little closer to goal. A plays a cross pass to B and sets off towards goal. B plays the ball into A's run, and A takes a first shot from distance. A carries straight on towards goal, gets a pass from C and shoots again close in.\n\nThe focus is on the goalkeeper: save the first shot, get up and set for the new angle before the next one. Rotate: A becomes B, B becomes C and C joins the A line. Switch sides after a few minutes.\n\nVariant: C plays the second pass hard across the front of goal and A only deflects it in. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Goalkeeper: after the first save – up quickly and find your position again."
+    },
+    {
+      "id": "cp2",
+      "text": "Goalkeeper: follow C's pass with your eyes and move to the new angle before the shot."
+    },
+    {
+      "id": "cp3",
+      "text": "A: do not stop after the first shot, carry straight on to the next finishing spot."
+    },
+    {
+      "id": "cp4",
+      "text": "Feeders: pass into A's path so the shots come at speed."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A plays a cross pass to B and sets off towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.51
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.505,
+          "endX": 0.81,
+          "endY": 0.485
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.44,
+          "endX": 0.27,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays the ball into A's run.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.45
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.44,
+          "endX": 0.45,
+          "endY": 0.315
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A shoots from distance and carries on towards goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.27,
+          "endX": 0.36,
+          "endY": 0.215
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C passes to A, who shoots again close in.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.31
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.235,
+          "y": 0.29,
+          "endX": 0.3,
+          "endY": 0.235
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.17,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

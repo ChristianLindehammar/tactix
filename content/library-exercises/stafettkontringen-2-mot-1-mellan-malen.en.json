@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 2,
+  "id": "440d4220-3ee6-5057-8cb2-c3cfa459a4f8",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Relay counter – 2 v 1 between the goals",
+  "description": "Full court with goalkeepers in both goals. Blue has two lines behind the bottom goal, one on each side, and red the same at the top goal. The balls are with the left-hand lines. A red defender (D) starts at the centre spot. A (with a ball) and B set off and attack the top goal 2 v 1 against D.\n\nWhen the attack is over, A stays in the middle as the next defender, B goes to a blue line and D to a red line. Then two reds (X with a ball, and Y) attack the bottom goal 2 v 1 against A. It keeps going both ways in turn.\n\nVariants: the old defender sprints back instead of going to the line, so the 2 v 1 quickly becomes 2 v 2. Or play 3 v 2: two defenders in each end, the goalkeeper starts with a pass to one of two attackers, and a third joins from a line by the boards. After the attack the three go to the line and two new players become defenders. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Drive the ball straight at the defender so they have to choose."
+    },
+    {
+      "id": "cp2",
+      "text": "Pass once the defender has chosen – not before."
+    },
+    {
+      "id": "cp3",
+      "text": "Keep the width: the second attacker runs in their own lane, not behind the ball carrier."
+    },
+    {
+      "id": "cp4",
+      "text": "New defender: switch the moment your attack ends and meet the next one at the right height."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "transition",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and B set off from their lines. D drops back towards the top goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.795
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.77,
+          "endX": 0.26,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.81,
+          "endX": 0.74,
+          "endY": 0.58
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.45,
+          "endX": 0.5,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A drives at D, who goes for A. A passes to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.305
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.3,
+          "endX": 0.72,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B shoots. A goes to the middle as the next defender.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.245
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.22,
+          "endX": 0.56,
+          "endY": 0.095
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.41,
+          "endX": 0.47,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X and Y attack the bottom goal 2 v 1 against A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.205
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.23,
+          "endX": 0.27,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.19,
+          "endX": 0.74,
+          "endY": 0.42
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

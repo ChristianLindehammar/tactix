@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "id": "e8c59f3e-faf3-5053-9bf2-2c4edc072c06",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Långt och nära – två skott på målvakten",
+  "description": "Halva planen, målvakt i målet. Skyttarnas led A med bollar står vid sargen i höjd med mittlinjen, inspelare B vid motsatt sarg mitt emot och inspelare C med bollar längs samma sarg som A, en bit närmare målet. A slår en tvärpass till B och startar mot mål. B spelar in bollen i A:s löpning, och A skjuter ett första skott från distans. A fortsätter direkt in mot mål, får en passning från C och skjuter igen nära målet.\n\nFokus ligger på målvakten: rädda det första skottet, kom upp och ställ in dig mot den nya vinkeln innan nästa skott. Ledbyte: A blir B, B blir C och C går till A-ledet. Byt sida efter några minuter.\n\nVariant: C slår den andra passningen hårt framför mål, och A styr bara in den. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten: efter första räddningen – upp snabbt och hitta läget igen."
+    },
+    {
+      "id": "cp2",
+      "text": "Målvakten: följ passningen från C med blicken och flytta dig till den nya vinkeln innan skottet."
+    },
+    {
+      "id": "cp3",
+      "text": "A: stanna inte efter första skottet, fortsätt direkt in mot nästa avslutsplats."
+    },
+    {
+      "id": "cp4",
+      "text": "Inspelarna: passa in i A:s löpväg så att skotten kommer i fart."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en tvärpass till B och startar mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.51
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.505,
+          "endX": 0.81,
+          "endY": 0.485
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.44,
+          "endX": 0.27,
+          "endY": 0.4
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar in bollen i A:s löpning.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.45
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.44,
+          "endX": 0.45,
+          "endY": 0.315
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.33,
+          "y": 0.37,
+          "endX": 0.4,
+          "endY": 0.32
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A skjuter från distans och fortsätter in mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.31,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.53,
+          "y": 0.28
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.25,
+          "endX": 0.5,
+          "endY": 0.1
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.27,
+          "endX": 0.36,
+          "endY": 0.215
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C passar till A, som skjuter igen nära målet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.36,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.31
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.235,
+          "y": 0.29,
+          "endX": 0.3,
+          "endY": 0.235
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.17,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

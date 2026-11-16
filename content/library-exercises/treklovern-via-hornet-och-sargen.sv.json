@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 2,
+  "id": "91810e5e-74d8-512f-89a8-6cacdced3df6",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Treklövern – lång pass till hörnet, via sargen och skott",
+  "description": "Halvplan mot ett mål med målvakt, grupper om tre. A står med boll i mittcirkeln, B vid mittlinjen längs högra sargen och C i högra hörnet. A slår en lång diagonalpass till C och springer direkt snett in mot skottplatsen i slottet. Samtidigt tar B några steg ner längs sargen för att bli spelbar. C passar till B, som spelar in till A, och A skjuter direkt.\n\nLedbyte: skytten går till Bs plats, B till hörnet och C till mittcirkeln. Byt sida efter några minuter.\n\nVariant: C spelar först en väggpass med A, som är på väg in, och passar sedan till B. Då blir det en passning till innan avslutet och ännu högre krav på tajming. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Den långa passningen ska vara hård och gå längs golvet."
+    },
+    {
+      "id": "cp2",
+      "text": "A: spring direkt efter passningen – vänta inte och titta."
+    },
+    {
+      "id": "cp3",
+      "text": "B: starta ner längs sargen när C tar emot bollen, inte innan."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt på passningen från B."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A slår en lång diagonalpass till C i hörnet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.624,
+          "y": 0.47
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.44,
+          "endX": 0.82,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A springer in mot slottet och B kommer ner längs sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.11
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.51,
+          "y": 0.43,
+          "endX": 0.56,
+          "endY": 0.31
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.43,
+          "endX": 0.82,
+          "endY": 0.37
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passar till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.11
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.746,
+          "y": 0.15,
+          "endX": 0.8,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B spelar in till A, som skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.56,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.33,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.58
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.396
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.77,
+          "y": 0.38,
+          "endX": 0.63,
+          "endY": 0.29
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.22,
+          "endX": 0.51,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

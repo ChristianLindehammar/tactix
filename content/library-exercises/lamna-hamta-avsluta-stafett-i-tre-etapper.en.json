@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "id": "b9ccac9f-07aa-57c3-aba9-4d6b20a2e75e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Leave, fetch, finish – a relay in three stages",
+  "description": "Split the group into two or three teams, each in its own line facing the same goal. In front of each line are as many cones as there are players in the team, about two metres apart. Everyone has a ball and dribbles on the spot while they wait.\n\nStage 1: the first player carries the ball to the first cone, leaves it still beside the cone, runs back and sits down at the back of the line. The next takes the next cone, and so on until there is a ball at every cone. Stage 2: whoever is sitting first runs out, fetches the ball furthest away and carries it back, then the next fetches the second furthest, and so on. Stage 3: one at a time, dribble a slalom through the cones, finish on goal and sit down in the line again. The first team sitting down after stage 3 wins.\n\nHelp the youngest with what comes next – it takes a while before everyone remembers the order. Variant: pass the ball into the goal instead of shooting. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "High tempo with the ball, but calm hands when you leave it still by the cone."
+    },
+    {
+      "id": "cp2",
+      "text": "Keep the ball close to the blade in the slalom – take small steps round the cones."
+    },
+    {
+      "id": "cp3",
+      "text": "Look up at the goal before you finish."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep track of what you do next."
+    }
+  ],
+  "locale": "en",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "ballControl",
+    "conditioning",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Stage 1: carry the ball to the next free cone, leave it and run back.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.77
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.77
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.735,
+          "endX": 0.29,
+          "endY": 0.63,
+          "bend": 0.012,
+          "waves": 3
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.735,
+          "endX": 0.71,
+          "endY": 0.63,
+          "bend": 0.012,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Stage 2: run to the ball furthest away and carry it back to the line.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ba0",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.5449999999999999
+        },
+        {
+          "id": "ba1",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.425
+        },
+        {
+          "id": "ba2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.305
+        },
+        {
+          "id": "ba3",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.185
+        },
+        {
+          "id": "bb0",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.5449999999999999
+        },
+        {
+          "id": "bb1",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.425
+        },
+        {
+          "id": "bb2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.305
+        },
+        {
+          "id": "bb3",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.185
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.745,
+          "endX": 0.15,
+          "endY": 0.2
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.2,
+          "endX": 0.36,
+          "endY": 0.73,
+          "bend": 0.015,
+          "waves": 6
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.745,
+          "endX": 0.85,
+          "endY": 0.2
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.73,
+          "bend": 0.015,
+          "waves": 6
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Stage 3: dribble a slalom through the cones and finish on goal.",
+      "markers": [
+        {
+          "id": "ka0",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "ka1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.48
+        },
+        {
+          "id": "ka2",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.36
+        },
+        {
+          "id": "ka3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.24
+        },
+        {
+          "id": "kb0",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "kb1",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.48
+        },
+        {
+          "id": "kb2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.36
+        },
+        {
+          "id": "kb3",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.24
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.88
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.88
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.25,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.75,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.77
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.63,
+          "y": 0.77
+        },
+        {
+          "id": "s1",
+          "type": "arrow-solid",
+          "x": 0.37,
+          "y": 0.735,
+          "endX": 0.37,
+          "endY": 0.635,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.6,
+          "endX": 0.16,
+          "endY": 0.51,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s3",
+          "type": "arrow-solid",
+          "x": 0.16,
+          "y": 0.47,
+          "endX": 0.34,
+          "endY": 0.39,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "s4",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.35,
+          "endX": 0.16,
+          "endY": 0.27,
+          "bend": 0.025,
+          "waves": 2
+        },
+        {
+          "id": "sh",
+          "type": "arrow-dashed",
+          "x": 0.18,
+          "y": 0.225,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 2,
+  "id": "ecbde583-d6c7-5c2e-bb5c-3df8f0ac3062",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Målgöraren går av – 3 mot 3 i över- och underläge",
+  "description": "Två lag med två eller tre kedjor om tre spelare var. Spela 3 mot 3 på hela planen eller en mindre bana tvärs över, med målvakter i båda målen. Avbytarna väntar vid sargen.\n\nDen som gör mål går direkt av planen, och laget spelar vidare med en spelare mindre. Målvakten i det lag som släppte in målet sätter igång spelet direkt med ett utkast. Byten är korta, ungefär 30 sekunder, och sedan kommer nästa tre från varje lag in och det börjar om med 3 mot 3. Gör ett lag tre mål under samma byte har det ingen kvar på planen och bytet är slut. Målen räknas för hela matchen.\n\nVariant: flytta målen närmare varandra så att avsluten kommer snabbare.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "I överläge: spela bollen snabbt och hitta den fria spelaren."
+    },
+    {
+      "id": "cp2",
+      "text": "Bestäm dig snabbt mellan skott och pass."
+    },
+    {
+      "id": "cp3",
+      "text": "I underläge: tätt framför eget mål och stäng skottlägena."
+    },
+    {
+      "id": "cp4",
+      "text": "Kliv in direkt vid byte – ingen dödtid."
+    }
+  ],
+  "locale": "sv",
+  "phase": "game",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "positioning"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 12,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "3 mot 3. A skjuter och gör mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.39,
+          "y": 0.17
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.41,
+          "y": 0.15,
+          "endX": 0.46,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A går direkt av planen. Rött sätter igång med ett utkast från målvakten.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.38,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.34,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.8,
+          "y": 0.18,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.56,
+          "y": 0.26,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.64,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.62,
+          "y": 0.1
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.65,
+          "y": 0.11,
+          "endX": 0.75,
+          "endY": 0.15
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.34,
+          "y": 0.27,
+          "endX": 0.12,
+          "endY": 0.36
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Rött anfaller 3 mot 2, spelar fram Z och avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "s1",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.44
+        },
+        {
+          "id": "s2",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.56
+        },
+        {
+          "id": "s3",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.44
+        },
+        {
+          "id": "s4",
+          "type": "opponent",
+          "x": 0.93,
+          "y": 0.56
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.07,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.78,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.68,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.52,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.62,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.78,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.31,
+          "y": 0.675
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.69,
+          "endX": 0.72,
+          "endY": 0.77
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.82,
+          "endX": 0.55,
+          "endY": 0.905
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

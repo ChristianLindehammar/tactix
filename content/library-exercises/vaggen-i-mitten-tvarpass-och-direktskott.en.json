@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "id": "f0a56da1-063d-5095-a7cf-5beab13b218c",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Wall in the middle – one-two out of the corner and a one-timer from the far side",
+  "description": "Half the court, goalkeeper in goal. Three lines: A with the balls in the corner next to the goal, B centrally a little out above the slot and C on the far side. A carries the ball a few metres up the boards and passes to B. B plays it straight back to A, who has moved to a new space. A plays a cross pass to C, who shoots first time. Straight after the pass, B heads in front of goal for the rebound.\n\nRotate A to B, B to C and C to A. Switch sides after a few minutes so everyone shoots from both sides.\n\nVariant: everything one touch – the passes and the shot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: move after the pass so B gets a new, open passing angle."
+    },
+    {
+      "id": "cp2",
+      "text": "A: check on C before the ball comes back – is the shooter open?"
+    },
+    {
+      "id": "cp3",
+      "text": "Firm, flat passes along the floor, and the shot straight at goal."
+    },
+    {
+      "id": "cp4",
+      "text": "B: go to the net straight after the pass with the stick on the floor."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball a few metres up the boards.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.13
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.16,
+          "endX": 0.15,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passes to B in the middle and moves to a new space.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.305
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.315,
+          "endX": 0.46,
+          "endY": 0.355
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.33,
+          "endX": 0.2,
+          "endY": 0.385
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B plays it straight back to A and heads for the net.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.43,
+          "endX": 0.28,
+          "endY": 0.425
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.43,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A plays the cross pass to C, who shoots first time. B follows up for the rebound.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.39
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.385,
+          "endX": 0.78,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.25,
+          "endX": 0.555,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

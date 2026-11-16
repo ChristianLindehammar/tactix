@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "cc96dc26-81f5-511f-8e92-aa066b3f8185",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Back Door – pass from behind the goal and a shot at full speed",
+  "description": "Half court, one goal with a goalkeeper. Three lines: A with the balls by the left boards near the centre line, B in the left corner and C by the right boards near the centre line. A carries the ball a few metres and passes on the move to B. B takes the ball behind the goal and passes it out on the other side to C, who arrives at full speed and shoots from a bit further out. After the pass A carries on in front of goal and goes for the rebound.\n\nRotation: A to the B line, B to the C line and C to the A line. Switch sides after a few minutes.\n\nVariant: after the pass B steps in and defends against A in front of goal. C can then choose between a shot and a pass in to A. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "C: start in time to reach the shooting spot at the same moment as the pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Shoot at full speed – don't stop to shoot."
+    },
+    {
+      "id": "cp3",
+      "text": "B: look up behind the goal and put the pass in front of C."
+    },
+    {
+      "id": "cp4",
+      "text": "A: get to where the rebound will land, stick on the floor."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A carries the ball and passes on the move to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.46
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.42,
+          "endX": 0.24,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.3,
+          "endX": 0.16,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B takes the ball behind the goal. A heads for goal and C starts.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.044
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.035,
+          "endX": 0.64,
+          "endY": 0.03,
+          "bend": 0.015,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.27,
+          "endX": 0.38,
+          "endY": 0.22
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.41,
+          "endX": 0.74,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes out to C, who shoots at full speed. A takes the rebound.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.05,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.116
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.705,
+          "y": 0.155,
+          "endX": 0.715,
+          "endY": 0.275
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.3,
+          "endX": 0.55,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

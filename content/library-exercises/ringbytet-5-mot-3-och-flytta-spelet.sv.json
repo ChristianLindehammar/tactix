@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "d88365c9-3cb1-50e0-a645-984a4c72dbbb",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Ringbytet – vinn bollen och flytta spelet till andra zonen",
+  "description": "Två lag om fem, rött och blått. Dela planen i två zoner, en planhalva var. I den ena zonen står de fem röda i en ring med tre blå inne i ringen. De två andra blå, D och E, väntar i den andra zonen.\n\nRöda passar runt i ringen och de tre blå jagar bollen. När en blå vinner den slår hen direkt en passning till D eller E i den andra zonen. De tre blå sprintar efter och bildar en ny ring på fem tillsammans med D och E. De tre röda som var närmast följer efter och blir försvarare inne i den nya ringen, medan två röda stannar kvar och väntar. När röda vinner bollen går allt åt andra hållet. Kör intervaller på några minuter.\n\nVariant: laget som vinner bollen ska ha den i andra zonen på högst två passningar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollvinst: få bort bollen från pressen och upp till andra zonen direkt."
+    },
+    {
+      "id": "cp2",
+      "text": "Bolltapp: de tre närmaste går direkt och pressar, de två andra stannar."
+    },
+    {
+      "id": "cp3",
+      "text": "I ringen: håll avståndet och gör dig spelbar i luckan mellan två försvarare."
+    },
+    {
+      "id": "cp4",
+      "text": "Försvararna jobbar ihop – en pressar bollen, två stänger passningslinjerna."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Röda passar runt i ringen. A går mot passningen.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.39,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.47
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.47,
+          "endX": 0.33,
+          "endY": 0.47
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.385,
+          "y": 0.42,
+          "endX": 0.375,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A bryter och slår direkt upp till E i andra zonen.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.51,
+          "endX": 0.7,
+          "endY": 0.675
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A, B och C sprintar efter och bildar ring med D och E.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.655
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.53,
+          "endX": 0.24,
+          "endY": 0.55
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.34,
+          "endX": 0.5,
+          "endY": 0.765
+        },
+        {
+          "id": "rc2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.76,
+          "endY": 0.55,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Tre röda följer efter och försvarar. Två röda stannar kvar.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.72
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.72,
+          "endX": 0.39,
+          "endY": 0.72
+        },
+        {
+          "id": "rr4",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.51,
+          "endX": 0.38,
+          "endY": 0.6
+        },
+        {
+          "id": "rr3",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.6
+        },
+        {
+          "id": "rr1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.65
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

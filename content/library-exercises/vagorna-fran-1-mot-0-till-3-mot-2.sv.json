@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 2,
+  "id": "7b6b5622-4ce1-5c63-853b-63eb08f69740",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Vågorna – från 1 mot 0 till 3 mot 2",
+  "description": "Hela planen med målvakter i båda målen. Grupper om fem: tre blå och två röda, alla med varsin boll. B och C väntar bakom det nedre målet, en på var sida, och X och Y bakom det övre. A startar från nedre änden.\n\nVågorna går fram och tillbaka och växer för varje gång: 1 mot 0 – A driver hela planen och skjuter. 1 mot 1 – X startar med boll mot det nedre målet och A vänder och försvarar. 2 mot 1 – B startar med boll och anfaller uppåt tillsammans med A mot X. 2 mot 2 – Y startar med boll och anfaller nedåt med X mot A och B. 3 mot 2 – C startar med boll, och tre blå anfaller det övre målet mot två röda. Den nya spelaren kommer alltid från det lag som precis försvarade, och den gamla bollen lämnas. Sedan startar nästa femgrupp.\n\nVariant: efter 3 mot 2 får rött en tredje spelare och anfaller 3 mot 3 nedåt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "När ditt eget anfall är slut: vänd direkt och spring hem."
+    },
+    {
+      "id": "cp2",
+      "text": "Läs läget: i överläge – bind och passa; i lika antal – sök djup och fart."
+    },
+    {
+      "id": "cp3",
+      "text": "Den som ansluter ropar så att lagkamraterna vet att hen kommer."
+    },
+    {
+      "id": "cp4",
+      "text": "Håll tempot – nästa våg startar så fort bollen är död."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "1 mot 0: A driver hela planen och skjuter på det övre målet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.93,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.735
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.71,
+          "endX": 0.44,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.26,
+          "endX": 0.48,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "1 mot 1: X startar med boll mot det nedre målet. A vänder och försvarar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.93,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.195
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.22,
+          "endX": 0.3,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.29,
+          "endX": 0.45,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "2 mot 1: B startar med boll och anfaller uppåt med A. X backar hem.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.87,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.805
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.78,
+          "endX": 0.22,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.73,
+          "endX": 0.68,
+          "endY": 0.5
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.67,
+          "endX": 0.45,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 mot 2: Y startar med boll och anfaller nedåt med X. Sedan startar C: 3 mot 2 uppåt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.185
+        },
+        {
+          "id": "dy",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.21,
+          "endX": 0.8,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.27,
+          "endX": 0.4,
+          "endY": 0.55
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.29,
+          "endX": 0.61,
+          "endY": 0.58
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.35,
+          "endX": 0.22,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

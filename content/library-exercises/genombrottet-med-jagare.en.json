@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "id": "9c8ea748-06d6-5fbf-99b6-d79fc935d819",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Breakaway – through ball with a chaser on your back",
+  "description": "A goal with a goalkeeper and two cones a little way out from goal, a few metres apart. The passer B stands with balls on the other side of the centre line. The attacker A and the chaser X start in front of goal. Work in groups of three while the rest wait.\n\nA runs out towards the cones with X following and checks over the shoulder twice to find B. B plays the ball between the cones to A, who receives, rounds the nearest cone and attacks the goal. X rounds the other cone and backchecks to catch up before the shot. Rotation: A becomes the chaser, B the attacker and X the passer.\n\nVariant: the chaser does not have to round the cone, so the attacker has less time. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Check over your shoulder before the ball arrives – know where the passer and the chaser are."
+    },
+    {
+      "id": "cp2",
+      "text": "First touch forwards, away from the chaser."
+    },
+    {
+      "id": "cp3",
+      "text": "Full speed at goal and shoot before the chaser catches up."
+    },
+    {
+      "id": "cp4",
+      "text": "Chaser: run back towards the slot, not towards the ball."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A runs out towards the cones and checks over the shoulder. X follows.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.595
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.49,
+          "endY": 0.34
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.27,
+          "endX": 0.6,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays the ball between the cones to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.595
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.57,
+          "endX": 0.5,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rounds the nearest cone with the ball. X rounds the other one and chases back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.445
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.45,
+          "endX": 0.27,
+          "endY": 0.45,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.42,
+          "endX": 0.22,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.46,
+          "endX": 0.61,
+          "endY": 0.24,
+          "bend": 0.19,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A shoots before X can catch up.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.19
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.17,
+          "endX": 0.45,
+          "endY": 0.1
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.24,
+          "endX": 0.46,
+          "endY": 0.22
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "8cda030e-c201-5b90-ad9f-71b329196a5a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Triangle round – the goalkeeper faces three angles in a row",
+  "description": "Half the court, goalkeeper in goal. Four spots: B and C by each board level with the centre line, D in the corner next to the goal and the shooter A in the other corner. B, C and D have balls. A comes out of the corner, gets a pass from B and shoots. Then A backs out to the top of the slot, gets a pass from C and shoots again. Finally A moves across to the other side, gets the pass from D and shoots a third time.\n\nThe goalkeeper resets to a new angle before every shot. Rotate: A to B's spot, B to C, C to D and D becomes the new shooter. Switch sides after a few minutes so both left- and right-handed shooters shoot from both sides.\n\nVariant: the passers choose the order themselves, so the goalkeeper does not know where the next shot is coming from. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Goalkeeper: move while the pass is travelling and be still when the shot is taken."
+    },
+    {
+      "id": "cp2",
+      "text": "Goalkeeper: read the passer and the shooter's blade – it shows where the shot is going."
+    },
+    {
+      "id": "cp3",
+      "text": "A: shoot first time or off the first touch, and give the goalkeeper a new angle every time."
+    },
+    {
+      "id": "cp4",
+      "text": "Passers: wait until the goalkeeper has reset before the next pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A comes out of the corner, gets the pass from B and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.15,
+          "endX": 0.3,
+          "endY": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.42,
+          "endX": 0.31,
+          "endY": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.355,
+          "y": 0.255,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A backs out to the top of the slot, gets the pass from C and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.45
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.44,
+          "endX": 0.53,
+          "endY": 0.425
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.39,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A moves across to the other side, gets the pass from D and shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.14
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.39,
+          "endX": 0.62,
+          "endY": 0.31
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.17,
+          "endX": 0.67,
+          "endY": 0.26
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.26,
+          "endX": 0.54,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

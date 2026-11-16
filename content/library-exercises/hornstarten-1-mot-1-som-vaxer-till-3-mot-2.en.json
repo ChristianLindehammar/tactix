@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "480d34c1-55c5-58d3-99d1-00ca794b85e7",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Corner start – 1 v 1 that grows into 3 v 2",
+  "description": "Half court, one goal with a goalkeeper. Two blue attackers (A and B) and two red defenders (X and Y) are on at a time. A third blue player is a joker (J) at the centre line, and the rest wait behind the centre line.\n\nThe goalkeeper sends the ball into the corner, where A and X battle 1 v 1. Once someone has control or the ball leaves the corner, B and Y come in from their spots in front of goal: 2 v 2. Blue may pass to the joker and then have 3 v 2, which should be finished quickly. If red wins the ball they try to carry it over the centre line. The next group starts when the last one is done. Swap the blue and red roles regularly and change the joker after a few goes.\n\nVariant: keep score – a won corner battle gives 1 point and a goal 2. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The corner battle: body between opponent and ball, use the boards."
+    },
+    {
+      "id": "cp2",
+      "text": "After winning the ball: get your head up and get out of the corner at once."
+    },
+    {
+      "id": "cp3",
+      "text": "The support player moves into free space where they can take a pass."
+    },
+    {
+      "id": "cp4",
+      "text": "With the joker: play fast and shoot before the defence can shift."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "defence",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 7,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper sends the ball into the corner. A and X sprint for it.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.2,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.21,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.1
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.095,
+          "endX": 0.11,
+          "endY": 0.07
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.23,
+          "endX": 0.21,
+          "endY": 0.13
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.17,
+          "y": 0.29,
+          "endX": 0.1,
+          "endY": 0.17
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A wins the corner battle and gets out along the boards. B and Y come in: 2 v 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.12,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.66,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.21,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.185
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.21,
+          "endX": 0.16,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes to the joker J – now it is 3 v 2.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.45
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.46,
+          "endX": 0.45,
+          "endY": 0.51
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "J passes on to B, who shoots.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "w1",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.62
+        },
+        {
+          "id": "w2",
+          "type": "opponent",
+          "x": 0.66,
+          "y": 0.62
+        },
+        {
+          "id": "j",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.16,
+          "y": 0.4,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.28,
+          "y": 0.34,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.22,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.455
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.53,
+          "y": 0.44,
+          "endX": 0.69,
+          "endY": 0.35
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.7,
+          "y": 0.25,
+          "endX": 0.55,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

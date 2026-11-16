@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "id": "9fdc4973-43d2-509d-991d-cca63952460b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Väggen i mitten – väggpass ur hörnet och direktskott från andra kanten",
+  "description": "Halva planen, målvakt i målet. Tre led: A med bollarna i hörnet bredvid målet, B centralt en bit ut ovanför slottet och C på motsatt kant. A driver några meter upp längs sargen och passar till B. B spelar direkt tillbaka till A, som har flyttat sig till en ny yta. A slår en tvärpass till C, som skjuter direkt. B går direkt efter sin passning in framför mål och tar returen.\n\nLedbyte: A till B, B till C och C till A. Byt sida efter några minuter så att alla skjuter från båda kanterna.\n\nVariant: allt på en touch – både passningarna och skottet. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: flytta dig efter passningen så att B får en ny, fri passningsvinkel."
+    },
+    {
+      "id": "cp2",
+      "text": "A: titta över på C innan bollen kommer tillbaka – är skytten fri?"
+    },
+    {
+      "id": "cp3",
+      "text": "Raka, hårda passningar längs golvet, och skottet direkt mot mål."
+    },
+    {
+      "id": "cp4",
+      "text": "B: gå in framför mål direkt efter passningen och ha klubban i golvet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 4,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver några meter upp längs sargen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.13
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.16,
+          "endX": 0.15,
+          "endY": 0.27,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A passar till B i mitten och flyttar sig till en ny yta.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.305
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.26,
+          "y": 0.315,
+          "endX": 0.46,
+          "endY": 0.355
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.33,
+          "endX": 0.2,
+          "endY": 0.385
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B spelar direkt tillbaka till A och går in mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.52,
+          "y": 0.43
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.43,
+          "endX": 0.28,
+          "endY": 0.425
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.32,
+          "endX": 0.43,
+          "endY": 0.23
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A slår tvärpassen till C, som skjuter direkt. B tar returen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.84,
+          "y": 0.29,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.33,
+          "y": 0.39
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.36,
+          "y": 0.385,
+          "endX": 0.78,
+          "endY": 0.31
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.25,
+          "endX": 0.555,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

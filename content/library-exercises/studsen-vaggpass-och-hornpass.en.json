@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "id": "6407ca6b-50c6-5130-aea9-ceb79af8bd0f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Bounce – wall pass in the middle and a finish off the corner pass",
+  "description": "Half court, one goal with a goalkeeper. Two lines at the centre line, one by each board, with the balls in the right line. C stands in the left corner. B, first in the right line, carries the ball diagonally in towards the middle and passes to A in the left line, who plays it straight back. B then passes to C in the corner and moves in towards goal on the left side. C passes in and B shoots first time.\n\nRotation: the shooter stays in the corner, C goes to the left line and A to the right line. Switch sides after a few minutes.\n\nVariant: C chooses between passing in to B and shooting themselves, so B has to be ready for both. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "The wall pass should be firm and put in front of B, so the speed is kept."
+    },
+    {
+      "id": "cp2",
+      "text": "B: move towards goal straight after the pass to the corner."
+    },
+    {
+      "id": "cp3",
+      "text": "Time the run so you arrive as C passes."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time in front of goal."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B carries the ball diagonally in towards the middle.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.414
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.385,
+          "endX": 0.67,
+          "endY": 0.35,
+          "bend": 0.03,
+          "waves": 3
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes to A, who plays it straight back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.294
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.21,
+          "endY": 0.44,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.5,
+          "endX": 0.59,
+          "endY": 0.38,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passes to C in the corner and heads for goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.36,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.516,
+          "y": 0.37
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.355,
+          "endX": 0.2,
+          "endY": 0.16
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.31,
+          "endX": 0.45,
+          "endY": 0.265
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C passes in and B shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.48,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.58
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.11
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.14,
+          "endX": 0.34,
+          "endY": 0.23
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.42,
+          "y": 0.215,
+          "endX": 0.47,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "5504cbaf-0f39-5d1c-86f2-0f463f5c6800",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Inskäret – tvärpass från mållinjen och skott i rörelse",
+  "description": "Halvplan mot ett mål med målvakt. Två led med skyttar står bredvid varandra en bit ut, ungefär halvvägs mellan mittlinjen och målet och strax utanför målområdet på var sida. A och B står med bollar på var sin sida av målet, i höjd med mållinjen. Den första i högra ledet (C) skär snett in framför mål. A, på motsatt sida, slår en tvärpass in i löpningen och C skjuter direkt. Sedan startar D från vänstra ledet och får passningen från B. Övningen går omväxlande från båda hållen.\n\nLedbyte: skytten tar platsen som passare på den sida passningen kom ifrån, och passaren ställer sig sist i ledet på samma sida.\n\nVariant: de första i båda leden startar samtidigt och korsar varandra framför mål. Passaren väljer vem som får bollen, och den andra går på returen. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Skytten: starta så att du kommer in framför mål i samma ögonblick som passningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Passaren: lägg bollen framför klubban i löpriktningen, inte på skytten."
+    },
+    {
+      "id": "cp3",
+      "text": "Skjut direkt i rörelse – tvärpassen gör att målvakten måste flytta sig."
+    },
+    {
+      "id": "cp4",
+      "text": "Håll klubban i golvet hela vägen in."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C skär snett in framför mål. A slår en tvärpass in i löpningen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.166
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.3,
+          "endX": 0.47,
+          "endY": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.2,
+          "endX": 0.39,
+          "endY": 0.225
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C skjuter direkt i rörelse.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.18,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Sedan andra hållet: D skär in och får passningen från B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.87,
+          "y": 0.166
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.3,
+          "endX": 0.53,
+          "endY": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.2,
+          "endX": 0.61,
+          "endY": 0.225
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "id": "55ab7bd5-746d-5deb-b5dc-f9039a88e1ea",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Genombrottet – djupledspass med en jagare i ryggen",
+  "description": "Mål med målvakt och två koner en bit framför mål, några meter isär. Passaren B står med bollar på andra sidan mittlinjen. Anfallaren A och jagaren X startar framför mål. Kör i grupper om tre medan resten väntar.\n\nA springer ut mot konerna med X efter sig och tittar två gånger över axeln för att se B. B spelar bollen mellan konerna till A, som tar emot, rundar närmaste konen och anfaller mot mål. X rundar den andra konen och backcheckar för att hinna ikapp före skottet. Rotation: A blir jagare, B blir anfallare och X blir passare.\n\nVariant: jagaren behöver inte runda konen, så anfallaren får mindre tid. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Titta över axeln innan bollen kommer – vet var passaren och jagaren är."
+    },
+    {
+      "id": "cp2",
+      "text": "Första touchen framåt, bort från jagaren."
+    },
+    {
+      "id": "cp3",
+      "text": "Full fart mot mål och avsluta innan jagaren är ikapp."
+    },
+    {
+      "id": "cp4",
+      "text": "Jagaren: spring hem mot slottet, inte mot bollen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "shooting",
+    "transition"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A springer ut mot konerna och tittar över axeln. X följer efter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.595
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.44,
+          "y": 0.27,
+          "endX": 0.49,
+          "endY": 0.34
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.58,
+          "y": 0.27,
+          "endX": 0.6,
+          "endY": 0.46
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar bollen mellan konerna till A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.595
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.57,
+          "endX": 0.5,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A rundar närmaste konen med bollen. X rundar den andra och jagar hem.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.445
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.45,
+          "endX": 0.27,
+          "endY": 0.45,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.42,
+          "endX": 0.22,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.46,
+          "endX": 0.61,
+          "endY": 0.24,
+          "bend": 0.19,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "A avslutar innan X hinner ikapp.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.32,
+          "y": 0.36
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.68,
+          "y": 0.36
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.6,
+          "y": 0.25,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.19
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.17,
+          "endX": 0.45,
+          "endY": 0.1
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.56,
+          "y": 0.24,
+          "endX": 0.46,
+          "endY": 0.22
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

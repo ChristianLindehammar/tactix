@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "id": "e8a23ada-85ca-5cf9-8854-b0e0e617cb20",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Andra vågen – 1 mot 1 som blir 2 mot 1",
+  "description": "Halvplan mot ett mål med målvakt. Tre led vid mittlinjen: A-ledet vid vänster sarg med bollar, B-ledet i mitten och C-ledet vid höger sarg, också med bollar. A passar till B och sätter fart mot mål. B spelar direkt tillbaka i A:s löpning och blir försvarare. A går 1 mot 1 mot B och försöker komma till avslut.\n\nNär 1 mot 1 är slut – skott eller bollvinst för B – startar C med en ny boll. A och C anfaller nu 2 mot 1 mot B, med högst två passningar före avslut. Ledbyte: A till B-ledet, B till C-ledet och C till A-ledet. Kör lika mycket från andra sidan.\n\nVarianter: tillåt bara en passning i 2 mot 1. Eller kör bara 1 mot 1-delen som försvarsövning med två led, och låt sedan försvararen starta från mittlinjen vid motsatta sargen så att hen får längre väg för att komma framför anfallaren. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Anfallaren: ta emot i full fart och gå rakt mot mål i 1 mot 1."
+    },
+    {
+      "id": "cp2",
+      "text": "Försvararen: stäng avståndet direkt efter passen och styr anfallaren ut mot sargen."
+    },
+    {
+      "id": "cp3",
+      "text": "2 mot 1: bind försvararen med bollen innan du passar, och håll avstånd till din medspelare."
+    },
+    {
+      "id": "cp4",
+      "text": "Avgör snabbt – skjut själv om försvararen täcker passningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar till B och sätter fart mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.52,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.52
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.52,
+          "endX": 0.42,
+          "endY": 0.52
+        },
+        {
+          "id": "r",
+          "type": "arrow-solid",
+          "x": 0.14,
+          "y": 0.47,
+          "endX": 0.22,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B spelar tillbaka i A:s löpning och kliver fram som försvarare.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.32,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.52,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.455
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.48,
+          "y": 0.43,
+          "endX": 0.3,
+          "endY": 0.28
+        },
+        {
+          "id": "r",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.47,
+          "endX": 0.5,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "1 mot 1: A utmanar B och avslutar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.235
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.22,
+          "y": 0.21,
+          "endX": 0.31,
+          "endY": 0.16,
+          "bend": 0.02,
+          "waves": 2
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.34,
+          "y": 0.15,
+          "endX": 0.46,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C startar med en ny boll. A och C anfaller 2 mot 1 mot B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.61
+        },
+        {
+          "id": "qb",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.61
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.61
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.26,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.52,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.88,
+          "y": 0.455
+        },
+        {
+          "id": "d",
+          "type": "arrow-solid",
+          "x": 0.86,
+          "y": 0.42,
+          "endX": 0.72,
+          "endY": 0.24,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.25,
+          "endX": 0.27,
+          "endY": 0.34
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

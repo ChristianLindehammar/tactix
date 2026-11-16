@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "id": "c39d5757-e977-5b5d-a758-b47a17fee022",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Svängdörren – vänd runt konen och passa vidare",
+  "description": "Grupper om tre. Ställ två koner på en linje med några meters mellanrum. A och C står i var sin ände i linjens förlängning, och B står mellan konerna. A har bollen.\n\nA passar till B, som rör sig mot den närmaste konen och tar emot i farten. B vänder tätt runt konen med bollen och slår en svepande passning till C i andra änden. Direkt efter rör sig B mot den andra konen, får passningen från C och gör samma sak åt andra hållet. Kör utan pauser i ungefär en minut, sedan byter B plats med en av ytterspelarna.\n\nVariant: A och C flyttar sig i sidled, så att B måste titta upp och hitta mottagaren innan vändningen. Växla mellan att vända med bollen på forehand och backhand. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta emot bollen i rörelse, inte stillastående."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd tätt runt konen med bollen nära bladet."
+    },
+    {
+      "id": "cp3",
+      "text": "Titta upp mot mottagaren redan innan du vänder."
+    },
+    {
+      "id": "cp4",
+      "text": "Passa med ett svep, platt och hela vägen fram till klubban."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 2,
+  "focus": [
+    "ballControl",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 3,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar. B rör sig mot konen och tar emot i farten.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.2
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.375,
+          "y": 0.235,
+          "endX": 0.37,
+          "endY": 0.33
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.465,
+          "y": 0.475,
+          "endX": 0.39,
+          "endY": 0.425
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B vänder tätt runt konen med bollen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.345
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.38,
+          "y": 0.32,
+          "endX": 0.46,
+          "endY": 0.26,
+          "bend": 0.012,
+          "waves": 2
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.26,
+          "endX": 0.63,
+          "endY": 0.34,
+          "bend": 0.012,
+          "waves": 2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B slår en svepande passning till C.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.64,
+          "y": 0.475
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.5,
+          "endX": 0.54,
+          "endY": 0.75
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B rör sig mot den andra konen och får passningen från C.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.36
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.5,
+          "y": 0.64
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.2,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.64,
+          "y": 0.41,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.735
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.64,
+          "y": 0.45,
+          "endX": 0.64,
+          "endY": 0.56
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.71,
+          "endX": 0.62,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

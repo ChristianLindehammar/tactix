@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "id": "6fdc3bb2-8d4c-5666-a00f-e2490a55fc39",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Karusellen – bollen runt målet och två i slottet",
+  "description": "Halvplan mot ett mål med målvakt. Fyra platser: A vid mittlinjen längs högra sargen med bollarna, B i högra hörnet, C i vänstra hörnet och D vid mittlinjen längs vänstra sargen. A passar längs sargen till B och går direkt mot slottet. B tar med sig bollen bakom målet, passar vidare till C och kommer själv ut framför mål på sin sida. C spelar längs sargen upp till D, som har två spelare att välja på framför mål och passar till den som står friast. Mottagaren skjuter direkt.\n\nLedbyte: alla flyttar en plats i bollens riktning (A till B, B till C, C till D och D till A-ledet). Byt sida efter några minuter, så att bollen går åt andra hållet runt målet.\n\nVariant: en försvarare ställer sig framför mål och hinner bara täcka den ena av de två – D läser vem som är fri. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen ska gå runt målet utan att stanna – det är det som drar isär försvaret."
+    },
+    {
+      "id": "cp2",
+      "text": "A och B: sprid ut er framför mål, så att en försvarare inte kan täcka båda."
+    },
+    {
+      "id": "cp3",
+      "text": "D: titta upp innan bollen kommer och bestäm dig tidigt för vem som får passningen."
+    },
+    {
+      "id": "cp4",
+      "text": "Skytten har klubban i golvet och skjuter direkt."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar längs sargen till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.735,
+          "y": 0.44
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.4,
+          "endX": 0.845,
+          "endY": 0.26
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar med sig bollen bakom målet. A går mot slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.19,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.19
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.73,
+          "y": 0.15,
+          "endX": 0.67,
+          "endY": 0.05,
+          "bend": 0.015,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.41,
+          "endX": 0.6,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar bakom målet till C och kommer ut framför mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.04,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.596,
+          "y": 0.035
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.556,
+          "y": 0.03,
+          "endX": 0.23,
+          "endY": 0.075,
+          "bend": 0.015,
+          "waves": 1
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.74,
+          "y": 0.08,
+          "endX": 0.71,
+          "endY": 0.19
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C spelar upp till D, som passar den som är fri. Direktskott.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.58,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.71,
+          "y": 0.22,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.176
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.14,
+          "y": 0.21,
+          "endX": 0.14,
+          "endY": 0.39
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.2,
+          "y": 0.43,
+          "endX": 0.505,
+          "endY": 0.315
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.57,
+          "y": 0.24,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

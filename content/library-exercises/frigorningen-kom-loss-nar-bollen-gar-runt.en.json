@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "id": "be1fbf07-d3e2-5eb5-8a1a-5406a0c1c16d",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Break-Free – lose your marker while the ball goes round",
+  "description": "Half court, one goal with a goalkeeper. A stands in the left corner with the balls, B at the centre line by the left boards, C at the centre line by the right boards and D in the right corner. X defends in front of goal. A passes up to B and moves into the slot. The ball then goes B–C–D, and meanwhile A has to shake off X: go one way, then break into free space just as the ball reaches D. D passes in and A shoots first time. X defends at half pace – stick in the passing lane, but no tackling.\n\nRotation: everyone moves one step in the direction of the ball (A to B, B to C, C to D, D to X and X to the A line). Switch halves after a few minutes.\n\nEasier: without X, focusing only on starting for the shooting spot at the right moment. Harder: X defends for real and D may shoot instead if A is covered. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: don't go too early – make your move while the ball is on its way to D."
+    },
+    {
+      "id": "cp2",
+      "text": "Change direction sharply so X ends up a step behind."
+    },
+    {
+      "id": "cp3",
+      "text": "Move the ball quickly from side to side – then neither X nor the goalkeeper can keep up."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time off the pass."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes up to B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.15,
+          "endX": 0.17,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passes across to C. A moves into the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.46
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.79,
+          "endY": 0.46
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.14,
+          "endX": 0.33,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C plays to D. A breaks away from X into free space.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.394
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.86,
+          "y": 0.355,
+          "endX": 0.86,
+          "endY": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.25,
+          "bend": -0.035,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passes in and A shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.177
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.2,
+          "endX": 0.69,
+          "endY": 0.255
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.22,
+          "endX": 0.54,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "id": "46b922d7-f36b-5d3d-9d8b-90569dab3dac",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The crossing – one-two and finishing at speed on two goals",
+  "description": "Two goals with goalkeepers and two groups, one a few metres in front of each goal. Each group has a line on one side, a wide player on the other side and a middle player between them. At the top goal the A line has the balls on one side; at the bottom goal the X line has them on the opposite side. The goals can be moved closer together, for example about 20 metres apart, for more finishes in less time.\n\nBoth groups go at the same time. A plays a cross pass to the wide player B, and the next in line steps in as the middle player C. B passes to C, who plays it straight back and sets off diagonally across the court towards the other goal. There the other group's wide player Y passes into C's run, and C finishes. The same happens the other way with X, Y and Z, so the runners meet in the middle.\n\nRotation: the runner takes over as wide player from the one who passed to them, and that wide player joins their group's line. Variant: a competition – which group scores most in a few minutes? The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Runner: set off at the right moment, so the pass arrives at speed."
+    },
+    {
+      "id": "cp2",
+      "text": "Wide player: pass ahead of the runner, into their path – not at the body."
+    },
+    {
+      "id": "cp3",
+      "text": "Finish at speed and aim for the far part of the goal when coming in at an angle."
+    },
+    {
+      "id": "cp4",
+      "text": "High tempo: the next in line is ready as soon as the ball has gone."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A and X each play a cross pass to the wide players B and Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.27
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.295
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.73,
+          "endX": 0.2,
+          "endY": 0.705
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B and Y pass in to the middle players C and Z.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.27
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.73
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.29,
+          "endX": 0.65,
+          "endY": 0.37
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.71,
+          "endX": 0.35,
+          "endY": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C and Z play it straight back and set off diagonally across the court.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.37
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.63
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.355,
+          "endX": 0.8,
+          "endY": 0.325
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.645,
+          "endX": 0.2,
+          "endY": 0.675
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.44,
+          "endX": 0.54,
+          "endY": 0.7
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.56,
+          "endX": 0.46,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes to Z and Y passes to C – both finish at speed.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.33
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.67
+        },
+        {
+          "id": "p7",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.32,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "p8",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.68,
+          "endX": 0.48,
+          "endY": 0.73
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.22,
+          "endX": 0.46,
+          "endY": 0.1
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.78,
+          "endX": 0.54,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

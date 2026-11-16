@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "id": "e72ae290-a251-5754-9b51-53e4ef705f2f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Middle route – breakout through the centre and a finish",
+  "description": "Full court, goalkeeper in the goal the team attacks. Two defenders, A and B, stand in their own zone level with the crease, one on each side, and A has the ball. The centre C stands just over the centre line and the forward D in front of goal in the attacking zone. The rest wait in a line behind their own goal.\n\nC comes back into their own half and gets the pass from A. At the same time B moves up along the boards. C plays the ball out to B, who carries it up into the attacking zone. D comes towards the ball in front of goal, gets the pass from B and finishes.\n\nRotation: A becomes B, B becomes the centre, C becomes the forward and D joins the line. A new A steps in from the line. Switch sides after a few minutes. Variant: a defender in the middle zone tries to cut out the pass to the centre. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "C: come back when A is ready to pass – not too early, not too late."
+    },
+    {
+      "id": "cp2",
+      "text": "B: move up the boards in the passing lane, so C has an easy pass out."
+    },
+    {
+      "id": "cp3",
+      "text": "A breakout through the middle draws the defence in and opens the wing."
+    },
+    {
+      "id": "cp4",
+      "text": "D: come towards the ball in front of goal with the stick on the floor."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 6,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C comes back and gets the pass from A. B moves up along the boards.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.84,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.35,
+          "y": 0.81
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.46,
+          "endX": 0.5,
+          "endY": 0.6
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.78,
+          "endX": 0.46,
+          "endY": 0.69
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.79,
+          "y": 0.8,
+          "endX": 0.86,
+          "endY": 0.62
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C plays the ball out to B on the wing.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.61
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.64,
+          "y": 0.6,
+          "endX": 0.81,
+          "endY": 0.575
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B carries the ball up into the attacking zone. D comes towards the ball in front of goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.58,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.2,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.51
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.85,
+          "y": 0.5,
+          "endX": 0.82,
+          "endY": 0.34,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.23,
+          "endX": 0.49,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passes to D, who finishes.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.84,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.64,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.29,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.82,
+          "y": 0.23
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.235,
+          "endX": 0.56,
+          "endY": 0.275
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.245,
+          "endX": 0.51,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

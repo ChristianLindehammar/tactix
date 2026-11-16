@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "id": "ee877986-233d-55c3-8fc1-34d28a37236b",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Cut-In – cross pass from the goal line and a shot on the move",
+  "description": "Half court, one goal with a goalkeeper. Two lines of shooters stand side by side, roughly halfway between the centre line and the goal and just outside the goal area on each side. A and B stand with balls on either side of the goal, level with the goal line. The first player in the right line (C) cuts in diagonally in front of goal. A, on the opposite side, plays a cross pass into the run and C shoots first time. Then D starts from the left line and gets the pass from B. The drill alternates between sides.\n\nRotation: the shooter takes over as passer on the side the pass came from, and the passer joins the back of the line on the same side.\n\nVariant: the first players in both lines start at the same time and cross in front of goal. The passer chooses who gets the ball, and the other one goes for the rebound. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Shooter: time your start so you arrive in front of goal at the same moment as the pass."
+    },
+    {
+      "id": "cp2",
+      "text": "Passer: put the ball in front of the stick, in the direction of the run, not at the shooter."
+    },
+    {
+      "id": "cp3",
+      "text": "Shoot first time on the move – the cross pass forces the goalkeeper to move."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep the stick on the floor all the way in."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "C cuts in diagonally in front of goal. A plays a cross pass into the run.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.13,
+          "y": 0.166
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.65,
+          "y": 0.3,
+          "endX": 0.47,
+          "endY": 0.22
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.17,
+          "y": 0.2,
+          "endX": 0.39,
+          "endY": 0.225
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "C shoots first time on the move.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.22,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.56,
+          "y": 0.18,
+          "endX": 0.52,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Then the other way: D cuts in and gets the pass from B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.1,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.87,
+          "y": 0.1,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.34,
+          "label": "D"
+        },
+        {
+          "id": "qc",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.43
+        },
+        {
+          "id": "qd",
+          "type": "player",
+          "x": 0.32,
+          "y": 0.43
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.87,
+          "y": 0.166
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.3,
+          "endX": 0.53,
+          "endY": 0.22
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.83,
+          "y": 0.2,
+          "endX": 0.61,
+          "endY": 0.225
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "3043dcf0-eb46-5b56-b6bc-bdf1cbf87a9a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Triangelvarvet – målvakten möter tre vinklar i rad",
+  "description": "Halva planen, målvakt i målet. Fyra platser: B och C vid var sin sarg i höjd med mittlinjen, D i hörnet bredvid målet och skytten A i det andra hörnet. B, C och D har bollar. A kommer ut ur hörnet, får en passning från B och skjuter. Sedan backar A ut till slottets topp, får en passning från C och skjuter igen. Till sist flyttar A över till andra sidan, får passningen från D och skjuter en tredje gång.\n\nMålvakten ställer om till en ny vinkel inför varje skott. Ledbyte: A till B:s plats, B till C, C till D och D blir ny skytt. Byt sida efter några minuter så att både vänster- och högerfattade skyttar får skjuta från båda sidor.\n\nVariant: passarna bestämmer själva i vilken ordning de spelar, så att målvakten inte vet varifrån nästa skott kommer. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Målvakten: flytta dig medan passningen är på väg och stå still när skottet går."
+    },
+    {
+      "id": "cp2",
+      "text": "Målvakten: läs passaren och skyttens blad – det visar vart skottet ska."
+    },
+    {
+      "id": "cp3",
+      "text": "A: skjut direkt eller på första touch, och ge målvakten en ny vinkel varje gång."
+    },
+    {
+      "id": "cp4",
+      "text": "Passarna: vänta tills målvakten hunnit ställa om innan nästa passning."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "goalkeeping",
+    "shooting"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A kommer ut ur hörnet, får passningen från B och skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.45
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.15,
+          "y": 0.15,
+          "endX": 0.3,
+          "endY": 0.26
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.24,
+          "y": 0.42,
+          "endX": 0.31,
+          "endY": 0.33
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.355,
+          "y": 0.255,
+          "endX": 0.46,
+          "endY": 0.095
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A backar ut till slottets topp, får passningen från C och skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.33,
+          "y": 0.29,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.45
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.33,
+          "endX": 0.47,
+          "endY": 0.4
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.74,
+          "y": 0.44,
+          "endX": 0.53,
+          "endY": 0.425
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.5,
+          "y": 0.39,
+          "endX": 0.5,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A flyttar över till andra sidan, får passningen från D och skjuter.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.48,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.48,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.88,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.77,
+          "y": 0.14
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.53,
+          "y": 0.39,
+          "endX": 0.62,
+          "endY": 0.31
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.75,
+          "y": 0.17,
+          "endX": 0.67,
+          "endY": 0.26
+        },
+        {
+          "id": "s3",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.26,
+          "endX": 0.54,
+          "endY": 0.095
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

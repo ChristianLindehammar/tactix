@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 2,
+  "id": "d0902b81-96bd-55a5-9f50-ba9d1db5a1fa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The waves – from 1 v 0 to 3 v 2",
+  "description": "Full court with goalkeepers in both goals. Groups of five: three blues and two reds, each with a ball. B and C wait behind the bottom goal, one on each side, and X and Y behind the top one. A starts from the bottom end.\n\nThe waves go back and forth and grow each time: 1 v 0 – A dribbles the length of the court and shoots. 1 v 1 – X sets off with a ball towards the bottom goal and A turns and defends. 2 v 1 – B sets off with a ball and attacks upwards with A against X. 2 v 2 – Y sets off with a ball and attacks downwards with X against A and B. 3 v 2 – C sets off with a ball, and three blues attack the top goal against two reds. The new player always comes from the team that just defended, and the old ball is left. Then the next group of five starts.\n\nVariant: after the 3 v 2, red gets a third player and attacks 3 v 3 downwards. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "When your own attack is over: turn at once and get back."
+    },
+    {
+      "id": "cp2",
+      "text": "Read the situation: with an extra player – commit and pass; with equal numbers – look for depth and speed."
+    },
+    {
+      "id": "cp3",
+      "text": "The player joining calls out so the teammates know they are coming."
+    },
+    {
+      "id": "cp4",
+      "text": "Keep the tempo – the next wave starts as soon as the ball is dead."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "transition",
+    "attack",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 5,
+  "maxPlayers": 15,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "1 v 0: A dribbles the length of the court and shoots at the top goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.93,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.07,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.8,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.42,
+          "y": 0.735
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.71,
+          "endX": 0.44,
+          "endY": 0.3,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.26,
+          "endX": 0.48,
+          "endY": 0.1
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "1 v 1: X sets off with a ball towards the bottom goal. A turns and defends.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.93,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.24,
+          "y": 0.13,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.24,
+          "y": 0.195
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.22,
+          "endX": 0.3,
+          "endY": 0.52,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.43,
+          "y": 0.29,
+          "endX": 0.45,
+          "endY": 0.58
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "2 v 1: B sets off with a ball and attacks upwards with A. X gets back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.76,
+          "y": 0.07,
+          "label": "Y"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.52,
+          "y": 0.78,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.36,
+          "y": 0.72,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.87,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.2,
+          "y": 0.805
+        },
+        {
+          "id": "db",
+          "type": "arrow-solid",
+          "x": 0.21,
+          "y": 0.78,
+          "endX": 0.22,
+          "endY": 0.56,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.55,
+          "y": 0.73,
+          "endX": 0.68,
+          "endY": 0.5
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.39,
+          "y": 0.67,
+          "endX": 0.45,
+          "endY": 0.45
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "2 v 2: Y sets off with a ball and attacks downwards with X. Then C starts: 3 v 2 upwards.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.93,
+          "label": "C"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.22,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.12,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.78,
+          "y": 0.185
+        },
+        {
+          "id": "dy",
+          "type": "arrow-solid",
+          "x": 0.8,
+          "y": 0.21,
+          "endX": 0.8,
+          "endY": 0.5,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.42,
+          "y": 0.27,
+          "endX": 0.4,
+          "endY": 0.55
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.29,
+          "endX": 0.61,
+          "endY": 0.58
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.35,
+          "endX": 0.22,
+          "endY": 0.62
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

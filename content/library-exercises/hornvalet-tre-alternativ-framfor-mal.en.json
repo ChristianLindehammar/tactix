@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 2,
+  "id": "73fb784b-b0be-5765-9767-1ef119d2482e",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Corner choice – shoot or pass, three options in front of goal",
+  "description": "Half the court, goalkeeper in goal. Three lines on the same side: A with the balls a little in from the boards near the centre line, B on the boards halfway down and C in the corner next to the goal. A passes to B and heads straight for the slot. B plays the ball down to C in the corner and carries on to the far post. C passes out to A in front of goal, who plays it straight back.\n\nNow C chooses: shoot, pass to B at the far post or play it back to A. Whoever does not finish follows up for the rebound. Rotate A to B, B to C and C to A. Switch sides after a few minutes so the finishing comes from both sides.\n\nVariant: put a defender in front of goal. C reads which option the defender covers and picks one of the others. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Pass and go – move towards the finishing spot straight after the pass."
+    },
+    {
+      "id": "cp2",
+      "text": "B: arrive at the far post with the stick on the floor; that is where rebounds end up."
+    },
+    {
+      "id": "cp3",
+      "text": "A: play it straight back, so C has the ball before the goalkeeper can reset."
+    },
+    {
+      "id": "cp4",
+      "text": "C: look up before the ball arrives – decide from what the goalkeeper and defender do."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 4,
+  "maxPlayers": 13,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passes to B on the boards and heads for the slot.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.23,
+          "y": 0.43
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.21,
+          "y": 0.405,
+          "endX": 0.14,
+          "endY": 0.355
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.42,
+          "endX": 0.4,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B plays the ball down to C in the corner and carries on to the far post.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.1,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.21,
+          "y": 0.28
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.19,
+          "y": 0.255,
+          "endX": 0.13,
+          "endY": 0.15
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.35,
+          "endX": 0.64,
+          "endY": 0.21,
+          "bend": 0.1,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C passes out to A, who plays it straight back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.13
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.23,
+          "y": 0.165,
+          "endX": 0.36,
+          "endY": 0.25,
+          "bend": 0.03,
+          "waves": 1
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.38,
+          "y": 0.235,
+          "endX": 0.27,
+          "endY": 0.145,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "C chooses: here a pass to B at the far post – or a shot, or back to A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.28,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.68,
+          "y": 0.17,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.12,
+          "y": 0.1,
+          "label": "C"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.235,
+          "y": 0.13
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.14,
+          "endX": 0.62,
+          "endY": 0.175
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.66,
+          "y": 0.13,
+          "endX": 0.555,
+          "endY": 0.09
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

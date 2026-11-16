@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 2,
+  "id": "8b1b2e81-5a84-5123-8fd6-66fa7dd239fc",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Stafettkontringen – 2 mot 1 mellan målen",
+  "description": "Hela planen med målvakter i båda målen. Blått har två led bakom det nedre målet, ett på var sida, och rött likadant vid det övre målet. Bollarna ligger hos de vänstra leden. En röd back (D) startar vid mittpunkten. A (med boll) och B startar och anfaller det övre målet 2 mot 1 mot D.\n\nNär anfallet är slut stannar A kvar vid mitten som ny back, B går till blått led och D till rött led. Då startar två röda (X med boll och Y) och anfaller det nedre målet 2 mot 1 mot A. Så går det växelvis åt båda hållen.\n\nVarianter: den gamla backen sprintar hem i stället för att gå till ledet, så att 2 mot 1 snabbt blir 2 mot 2. Eller kör 3 mot 2: två backar i varje ände, målvakten startar med en passning till en av två anfallare, och en tredje ansluter från ett led vid sargen. Efter anfallet går de tre till ledet och två nya ställer sig som backar. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Driv bollen rakt mot backen så att hen måste välja."
+    },
+    {
+      "id": "cp2",
+      "text": "Passa när backen har valt – inte före."
+    },
+    {
+      "id": "cp3",
+      "text": "Håll bredden: andra anfallaren springer i eget spår, inte bakom bollföraren."
+    },
+    {
+      "id": "cp4",
+      "text": "Ny back: ställ om direkt när ditt anfall är slut och möt nästa anfall i rätt höjd."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "attack",
+    "transition",
+    "defence",
+    "shooting"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 8,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och B startar från sina led. D backar hem mot det övre målet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.86,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.86,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.795
+        },
+        {
+          "id": "da",
+          "type": "arrow-solid",
+          "x": 0.23,
+          "y": 0.77,
+          "endX": 0.26,
+          "endY": 0.58,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "rb",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.81,
+          "endX": 0.74,
+          "endY": 0.58
+        },
+        {
+          "id": "rd",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.45,
+          "endX": 0.5,
+          "endY": 0.33
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A driver mot D, som väljer att gå på A. A passar till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.31,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.24,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.4,
+          "y": 0.305
+        },
+        {
+          "id": "p",
+          "type": "arrow-dashed",
+          "x": 0.43,
+          "y": 0.3,
+          "endX": 0.72,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B avslutar. A går till mitten som ny back.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "rq3",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14
+        },
+        {
+          "id": "rq4",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.36,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.76,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "opponent",
+          "x": 0.52,
+          "y": 0.22,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.69,
+          "y": 0.245
+        },
+        {
+          "id": "s",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.22,
+          "endX": 0.56,
+          "endY": 0.095
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.36,
+          "y": 0.41,
+          "endX": 0.47,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "X och Y anfaller det nedre målet 2 mot 1 mot A.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "bq1",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.955
+        },
+        {
+          "id": "bq2",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.955
+        },
+        {
+          "id": "rq1",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.045
+        },
+        {
+          "id": "rq2",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.045
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.5,
+          "label": "A"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.14,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.14,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.205
+        },
+        {
+          "id": "dx",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.23,
+          "endX": 0.27,
+          "endY": 0.42,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "ry",
+          "type": "arrow-solid",
+          "x": 0.77,
+          "y": 0.19,
+          "endX": 0.74,
+          "endY": 0.42
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.55,
+          "endX": 0.5,
+          "endY": 0.67
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:18.000Z",
+  "updatedAt": "2026-11-16T09:57:18.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

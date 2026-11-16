@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 2,
+  "id": "3ab34c6d-bd4e-5e54-a901-62ffa208f070",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Kompassen – spring till rätt kon och spela direkt",
+  "description": "Spelarna går två och två. Varje par bygger en ruta med fyra koner, några meter i sida. Har ni koner i olika färger använder ni färgerna, annars får konerna namn efter var de står sett från passaren: nära vänster, nära höger, bort vänster och bort höger. A står i mitten av rutan och B med bollen utanför.\n\nB ropar en kon. A rör sig dit, tar emot passningen från B och spelar direkt tillbaka. Sedan tillbaka till mitten och invänta nästa kon. Byt roller efter ungefär en minut.\n\nVariant: B ropar inte utan pekar med klubban mot konen, så att A måste titta på B hela tiden. Nästa steg: A tar emot, vänder och för bollen runt konen innan passningen tillbaka. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Rör dig mot bollen när du tar emot – vänta inte på den."
+    },
+    {
+      "id": "cp2",
+      "text": "Spela direkt tillbaka, platt och mot passarens klubba."
+    },
+    {
+      "id": "cp3",
+      "text": "Blicken på passaren när du rör dig, inte på golvet."
+    },
+    {
+      "id": "cp4",
+      "text": "Snabbt tillbaka till mitten så att du är redo för nästa kon."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 10,
+  "minPlayers": 2,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "B ropar \"bort vänster\". A rör sig mot den konen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.755
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.46,
+          "y": 0.43,
+          "endX": 0.36,
+          "endY": 0.375
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar till A vid konen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.755
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.725,
+          "endX": 0.375,
+          "endY": 0.445
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A spelar direkt tillbaka och går tillbaka till mitten.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.37,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.37,
+          "y": 0.437
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.385,
+          "y": 0.46,
+          "endX": 0.49,
+          "endY": 0.75
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.385,
+          "y": 0.365,
+          "endX": 0.47,
+          "endY": 0.43
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Ny kon: B ropar \"nära höger\", A rör sig dit och får passningen.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.32
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.32
+        },
+        {
+          "id": "k3",
+          "type": "cone",
+          "x": 0.25,
+          "y": 0.6
+        },
+        {
+          "id": "k4",
+          "type": "cone",
+          "x": 0.75,
+          "y": 0.6
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.82,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.755
+        },
+        {
+          "id": "r3",
+          "type": "arrow-solid",
+          "x": 0.54,
+          "y": 0.49,
+          "endX": 0.64,
+          "endY": 0.545
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.52,
+          "y": 0.725,
+          "endX": 0.63,
+          "endY": 0.6
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

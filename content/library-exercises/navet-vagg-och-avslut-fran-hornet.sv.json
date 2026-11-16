@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 2,
+  "id": "ee61381e-fc60-52f9-a5c7-6bc836ebe364",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Navet – vägg via mittlinjen och avslut på hörnpass",
+  "description": "Halvplan mot ett mål med målvakt. Ledet står i vänstra hörnet, B med bollarna i högra hörnet och D vid mittlinjen längs högra sargen. A, först i ledet, rör sig ut mot mitten av zonen och får en passning från B. A spelar snett ut till D, som returnerar direkt. A passar sedan tillbaka till B i hörnet och tar sig in framför mål, där B lägger passningen och A skjuter direkt.\n\nLedbyte: skytten stannar som ny passare i högra hörnet, och B går runt bakom målet till ledet i vänstra hörnet. Byt spelare på mittlinjen med några minuters mellanrum, och kör även spegelvänt.\n\nVariant: alla passningar görs med en touch. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Ta emot bollen i rörelse – stanna inte i mitten."
+    },
+    {
+      "id": "cp2",
+      "text": "Vänd upp kroppen mot nästa passning redan innan bollen kommer."
+    },
+    {
+      "id": "cp3",
+      "text": "A: gå bort en bit innan du kommer in framför mål, så öppnar du en fri yta."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt på passningen från hörnet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A rör sig ut mot mitten och får passningen från B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.11
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.15,
+          "endX": 0.4,
+          "endY": 0.27
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.716,
+          "y": 0.14,
+          "endX": 0.48,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A spelar ut till D, som returnerar direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.8,
+          "endY": 0.41,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.47,
+          "endX": 0.57,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passar tillbaka till B i hörnet och går in mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.155
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.26,
+          "endX": 0.53,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B lägger passningen och A skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.235,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.738,
+          "y": 0.12
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.708,
+          "y": 0.15,
+          "endX": 0.61,
+          "endY": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.535,
+          "y": 0.19,
+          "endX": 0.515,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

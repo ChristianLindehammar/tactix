@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "id": "7b3f6b85-383a-5c1f-a78a-f5c0a3c4982f",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Frigörningen – kom loss från backen medan bollen går runt",
+  "description": "Halvplan mot ett mål med målvakt. A står i vänstra hörnet med bollarna, B vid mittlinjen längs vänstra sargen, C vid mittlinjen längs högra sargen och D i högra hörnet. X är försvarare framför mål. A passar upp till B och går in mot slottet. Bollen går sedan B–C–D, och under tiden ska A lura sig loss från X: gå åt ena hållet och dra sedan iväg till en fri yta precis när bollen når D. D passar in och A skjuter direkt. X försvarar halvaktivt – klubban i passningsvägen, men ingen tackling.\n\nLedbyte: alla flyttar ett steg i bollens riktning (A till B, B till C, C till D, D till X och X till A-ledet). Byt planhalva efter några minuter.\n\nEnklare variant: utan X, och fokus bara på att starta mot skottplatsen i rätt läge. Svårare: X försvarar fullt ut och D får välja att skjuta själv om A är täckt. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "A: starta inte för tidigt – gör frigörningen när bollen är på väg till D."
+    },
+    {
+      "id": "cp2",
+      "text": "Byt riktning skarpt, så att X hamnar ett steg efter."
+    },
+    {
+      "id": "cp3",
+      "text": "Bollen ska flytta snabbt från sida till sida – då hinner varken X eller målvakten med."
+    },
+    {
+      "id": "cp4",
+      "text": "Skjut direkt på passningen."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "passing",
+    "attack"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A passar upp till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.15,
+          "endX": 0.17,
+          "endY": 0.39
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B passar tvärs över till C. A går in mot slottet.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.46
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.3,
+          "y": 0.46,
+          "endX": 0.79,
+          "endY": 0.46
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.19,
+          "y": 0.14,
+          "endX": 0.33,
+          "endY": 0.2
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C spelar till D. A drar sig loss från X mot den fria ytan.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.36,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.394
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.86,
+          "y": 0.355,
+          "endX": 0.86,
+          "endY": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.2,
+          "endX": 0.64,
+          "endY": 0.25,
+          "bend": -0.035,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "D passar in och A skjuter direkt.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "D"
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.46,
+          "y": 0.33,
+          "label": "X"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.86,
+          "y": 0.177
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.82,
+          "y": 0.2,
+          "endX": 0.69,
+          "endY": 0.255
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.22,
+          "endX": 0.54,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 2,
+  "id": "6ffc4860-55fe-5011-847a-f43efc37e050",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The Hub – a wall pass via the centre line and a finish off the corner pass",
+  "description": "Half court, one goal with a goalkeeper. The line stands in the left corner, B with the balls in the right corner and D at the centre line by the right boards. A, first in line, moves out towards the middle of the zone and gets a pass from B. A plays it out diagonally to D, who returns it first time. A then passes back to B in the corner and gets in front of goal, where B lays it on and A shoots first time.\n\nRotation: the shooter stays on as the new passer in the right corner, and B goes round behind the goal to the line in the left corner. Change the player at the centre line every few minutes, and run it mirrored too.\n\nVariant: every pass is one touch. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Receive the ball on the move – don't stop in the middle."
+    },
+    {
+      "id": "cp2",
+      "text": "Open your body to the next pass before the ball arrives."
+    },
+    {
+      "id": "cp3",
+      "text": "A: drift away first before coming in front of goal, to open up free space."
+    },
+    {
+      "id": "cp4",
+      "text": "Shoot first time off the pass from the corner."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "passing",
+    "shooting",
+    "ballControl"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 5,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A moves out to the middle and gets the pass from B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.736,
+          "y": 0.11
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.18,
+          "y": 0.15,
+          "endX": 0.4,
+          "endY": 0.27
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.716,
+          "y": 0.14,
+          "endX": 0.48,
+          "endY": 0.27
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A plays it out to D, who returns it first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.31,
+          "endX": 0.8,
+          "endY": 0.41,
+          "bend": -0.03,
+          "waves": 1
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.79,
+          "y": 0.47,
+          "endX": 0.57,
+          "endY": 0.35,
+          "bend": -0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A passes back to B in the corner and heads for goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.44,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.564,
+          "y": 0.3
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.6,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.155
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.45,
+          "y": 0.26,
+          "endX": 0.53,
+          "endY": 0.22
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B lays it on and A shoots first time.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.235,
+          "label": "A"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.2
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "D"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.738,
+          "y": 0.12
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.708,
+          "y": 0.15,
+          "endX": 0.61,
+          "endY": 0.22
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.535,
+          "y": 0.19,
+          "endX": 0.515,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

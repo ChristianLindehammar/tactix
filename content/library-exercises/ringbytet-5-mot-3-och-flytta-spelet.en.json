@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "id": "35ab9ea6-9bd6-5dbf-9035-96d9c11acaa1",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "The ring switch – win the ball and move play to the other zone",
+  "description": "Two teams of five, red and blue. Split the court into two zones, one half each. In one zone the five reds stand in a ring with three blues inside it. The other two blues, D and E, wait in the other zone.\n\nRed pass the ball round the ring and the three blues hunt it. When a blue wins it, they pass straight away to D or E in the other zone. The three blues sprint after it and form a new ring of five with D and E. The three reds who were nearest follow and become defenders inside the new ring, while two reds stay behind and wait. When red win the ball, it all goes the other way. Play intervals of a few minutes.\n\nVariant: the team that wins the ball must get it into the other zone in no more than two passes. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Winning the ball: get it away from the pressure and up to the other zone at once."
+    },
+    {
+      "id": "cp2",
+      "text": "Losing the ball: the three nearest press straight away, the other two stay."
+    },
+    {
+      "id": "cp3",
+      "text": "In the ring: keep your distance and offer yourself in the gap between two defenders."
+    },
+    {
+      "id": "cp4",
+      "text": "Defenders work together – one presses the ball, two close the passing lanes."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "transition",
+    "passing",
+    "defence"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 10,
+  "maxPlayers": 12,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Red pass round the ring. A goes for the pass.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.39,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.66,
+          "y": 0.47
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.63,
+          "y": 0.47,
+          "endX": 0.33,
+          "endY": 0.47
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.385,
+          "y": 0.42,
+          "endX": 0.375,
+          "endY": 0.47
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A intercepts and plays it straight up to E in the other zone.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.42,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.48
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.51,
+          "y": 0.51,
+          "endX": 0.7,
+          "endY": 0.675
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "A, B and C sprint after it and form a ring with D and E.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.37,
+          "y": 0.49,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.61,
+          "y": 0.38,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.73,
+          "y": 0.655
+        },
+        {
+          "id": "ra2",
+          "type": "arrow-solid",
+          "x": 0.35,
+          "y": 0.53,
+          "endX": 0.24,
+          "endY": 0.55
+        },
+        {
+          "id": "rb2",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.34,
+          "endX": 0.5,
+          "endY": 0.765
+        },
+        {
+          "id": "rc2",
+          "type": "arrow-solid",
+          "x": 0.62,
+          "y": 0.42,
+          "endX": 0.76,
+          "endY": 0.55,
+          "bend": 0.03,
+          "waves": 1
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Three reds follow and defend. Two reds stay behind.",
+      "markers": [
+        {
+          "id": "r1",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.19
+        },
+        {
+          "id": "r2",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.29
+        },
+        {
+          "id": "r5",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.29
+        },
+        {
+          "id": "r3",
+          "type": "opponent",
+          "x": 0.78,
+          "y": 0.47
+        },
+        {
+          "id": "r4",
+          "type": "opponent",
+          "x": 0.22,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.22,
+          "y": 0.58,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.8,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.78,
+          "y": 0.58,
+          "label": "C"
+        },
+        {
+          "id": "d",
+          "type": "player",
+          "x": 0.27,
+          "y": 0.72,
+          "label": "D"
+        },
+        {
+          "id": "e",
+          "type": "player",
+          "x": 0.73,
+          "y": 0.72,
+          "label": "E"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.61,
+          "y": 0.72
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.58,
+          "y": 0.72,
+          "endX": 0.39,
+          "endY": 0.72
+        },
+        {
+          "id": "rr4",
+          "type": "arrow-solid",
+          "x": 0.24,
+          "y": 0.51,
+          "endX": 0.38,
+          "endY": 0.6
+        },
+        {
+          "id": "rr3",
+          "type": "arrow-solid",
+          "x": 0.76,
+          "y": 0.51,
+          "endX": 0.62,
+          "endY": 0.6
+        },
+        {
+          "id": "rr1",
+          "type": "arrow-solid",
+          "x": 0.5,
+          "y": 0.23,
+          "endX": 0.5,
+          "endY": 0.65
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

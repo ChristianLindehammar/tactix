@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "id": "fc512508-dc1f-5895-aaa0-3e20f8dae5f0",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Korsningen – väggpass och avslut i fart mot två mål",
+  "description": "Två mål med målvakt och två grupper, en några meter framför varje mål. Varje grupp har ett led på ena kanten, en kantspelare på andra kanten och en mittspelare mellan dem. Vid det övre målet står A-ledet med bollarna på ena kanten, vid det nedre målet står X-ledet med bollarna på motsatt kant. Det går bra att flytta målen närmare varandra, till exempel cirka 20 meter, så blir det fler avslut på kortare tid.\n\nBåda grupperna kör samtidigt. A slår en tvärpass till kantspelaren B, och nästa i ledet kliver in som mittspelare C. B passar till C, som spelar direkt tillbaka och startar snett över planen mot det andra målet. Där passar den andra gruppens kantspelare Y in i C:s löpning, och C avslutar. Samma sak sker åt andra hållet med X, Y och Z, så löparna möts på mitten.\n\nLedbyte: löparen tar platsen som kantspelare efter den som passade, och kantspelaren går till ledet i sin grupp. Variant: tävling – vilken grupp gör flest mål på några minuter? Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Löparen: starta i rätt ögonblick, så att passningen kommer i farten."
+    },
+    {
+      "id": "cp2",
+      "text": "Kantspelaren: passa framför löparen, in i löpvägen – inte till kroppen."
+    },
+    {
+      "id": "cp3",
+      "text": "Avsluta i fart och sikta på bortre delen av målet när du kommer snett in."
+    },
+    {
+      "id": "cp4",
+      "text": "Högt tempo: nästa i ledet är redo så snart bollen lämnat."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 2,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 8,
+  "maxPlayers": 16,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A och X slår var sin tvärpass till kantspelarna B och Y.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.27
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.73
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.27,
+          "endX": 0.8,
+          "endY": 0.295
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.73,
+          "endX": 0.2,
+          "endY": 0.705
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B och Y passar in till mittspelarna C och Z.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.27
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.73
+        },
+        {
+          "id": "p3",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.29,
+          "endX": 0.65,
+          "endY": 0.37
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.71,
+          "endX": 0.35,
+          "endY": 0.63
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "C och Z spelar direkt tillbaka och startar snett över planen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.4,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.6,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.71,
+          "y": 0.37
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.29,
+          "y": 0.63
+        },
+        {
+          "id": "p5",
+          "type": "arrow-dashed",
+          "x": 0.73,
+          "y": 0.355,
+          "endX": 0.8,
+          "endY": 0.325
+        },
+        {
+          "id": "p6",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.645,
+          "endX": 0.2,
+          "endY": 0.675
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.59,
+          "y": 0.44,
+          "endX": 0.54,
+          "endY": 0.7
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.41,
+          "y": 0.56,
+          "endX": 0.46,
+          "endY": 0.3
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "B passar Z och Y passar C – båda avslutar i fart.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "gk2",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.915
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.54,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "x",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.7,
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.7,
+          "label": "Y"
+        },
+        {
+          "id": "z",
+          "type": "player",
+          "x": 0.46,
+          "y": 0.26,
+          "label": "Z"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.75,
+          "y": 0.33
+        },
+        {
+          "id": "ball2",
+          "type": "ball",
+          "x": 0.25,
+          "y": 0.67
+        },
+        {
+          "id": "p7",
+          "type": "arrow-dashed",
+          "x": 0.72,
+          "y": 0.32,
+          "endX": 0.52,
+          "endY": 0.27
+        },
+        {
+          "id": "p8",
+          "type": "arrow-dashed",
+          "x": 0.28,
+          "y": 0.68,
+          "endX": 0.48,
+          "endY": 0.73
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.22,
+          "endX": 0.46,
+          "endY": 0.1
+        },
+        {
+          "id": "s2",
+          "type": "arrow-dashed",
+          "x": 0.55,
+          "y": 0.78,
+          "endX": 0.54,
+          "endY": 0.9
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:55:38.000Z",
+  "updatedAt": "2026-11-16T09:55:38.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "id": "fead1569-33eb-5d6f-b387-c4b4ad7b9214",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Mjuka händer – passa och ta emot i tre steg",
+  "description": "Tre korta steg för 6–8-åringar som hela gruppen går igenom på samma träning, ungefär en minut per steg och korta byten emellan. Alla har en boll.\n\nSteg 1: spelarna sprider ut sig längs sargen, passar mot sargen och tar emot sin egen passning. Bollen ska rulla längs golvet. Flytta närmare eller längre bort så att passningen får olika hårdhet. Steg 2: lägg en kon mellan spelaren och sargen. Passa på ena sidan om konen så att bollen kommer tillbaka på andra sidan: passa på forehand, ta emot på backhand, och sedan tvärtom. Steg 3: spelarna går två och två, tre–fyra meter från varandra, med två koner tätt ihop mitt emellan. Passa förbi konerna på ena sidan. Kompisen tar emot, drar med bollen till andra sidan och passar tillbaka förbi konerna där.\n\nFörbered steg 3 medan barnen kör steg 1 och 2. Är medtaget svårt: ta emot på forehand, flytta fötterna till andra sidan och passa rakt över. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Bollen ska rulla – det är viktigare än att den går fort."
+    },
+    {
+      "id": "cp2",
+      "text": "Sug in bollen när du tar emot, slå inte bara på den."
+    },
+    {
+      "id": "cp3",
+      "text": "Anpassa hårdheten efter avståndet."
+    },
+    {
+      "id": "cp4",
+      "text": "Bollen bredvid kroppen, inte långt framför – annars lyfter den."
+    }
+  ],
+  "locale": "sv",
+  "phase": "warmup",
+  "difficulty": 1,
+  "focus": [
+    "passing",
+    "ballControl"
+  ],
+  "durationMinutes": 15,
+  "minPlayers": 2,
+  "maxPlayers": 20,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Steg 1: passa mot sargen och ta emot din egen passning.",
+      "markers": [
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.42,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.3,
+          "y": 0.25
+        },
+        {
+          "id": "pa1",
+          "type": "arrow-dashed",
+          "x": 0.27,
+          "y": 0.245,
+          "endX": 0.035,
+          "endY": 0.27
+        },
+        {
+          "id": "pa2",
+          "type": "arrow-dashed",
+          "x": 0.035,
+          "y": 0.29,
+          "endX": 0.31,
+          "endY": 0.33
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.6,
+          "y": 0.5,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.48,
+          "y": 0.48
+        },
+        {
+          "id": "pb1",
+          "type": "arrow-dashed",
+          "x": 0.45,
+          "y": 0.475,
+          "endX": 0.035,
+          "endY": 0.5
+        },
+        {
+          "id": "pb2",
+          "type": "arrow-dashed",
+          "x": 0.035,
+          "y": 0.52,
+          "endX": 0.49,
+          "endY": 0.56
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.74,
+          "label": "C"
+        },
+        {
+          "id": "bc",
+          "type": "ball",
+          "x": 0.18,
+          "y": 0.72
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "Steg 2: passa på ena sidan om konen, ta emot på andra sidan.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.38
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.38,
+          "label": "A"
+        },
+        {
+          "id": "ba",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.325
+        },
+        {
+          "id": "pa1",
+          "type": "arrow-dashed",
+          "x": 0.35,
+          "y": 0.31,
+          "endX": 0.035,
+          "endY": 0.38
+        },
+        {
+          "id": "pa2",
+          "type": "arrow-dashed",
+          "x": 0.035,
+          "y": 0.39,
+          "endX": 0.36,
+          "endY": 0.45
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.2,
+          "y": 0.66
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.45,
+          "y": 0.66,
+          "label": "B"
+        },
+        {
+          "id": "bb",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.605
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Steg 3: passa förbi konerna, dra med bollen till andra sidan och passa tillbaka.",
+      "markers": [
+        {
+          "id": "k1",
+          "type": "cone",
+          "x": 0.46,
+          "y": 0.47
+        },
+        {
+          "id": "k2",
+          "type": "cone",
+          "x": 0.54,
+          "y": 0.47
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.24,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.5,
+          "y": 0.7,
+          "label": "B"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.38,
+          "y": 0.24
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.37,
+          "y": 0.27,
+          "endX": 0.38,
+          "endY": 0.6
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.4,
+          "y": 0.635,
+          "endX": 0.6,
+          "endY": 0.635,
+          "bend": 0.012,
+          "waves": 3
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.62,
+          "y": 0.6,
+          "endX": 0.6,
+          "endY": 0.28
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:55.000Z",
+  "updatedAt": "2026-11-16T09:57:55.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

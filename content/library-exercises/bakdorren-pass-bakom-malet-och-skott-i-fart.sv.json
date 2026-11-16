@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "id": "ff0134c2-a7a7-5a38-8f55-a5685fa3017a",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Bakdörren – pass bakom målet och skott i full fart",
+  "description": "Halvplan mot ett mål med målvakt. Tre led: A med bollarna längs vänstra sargen nära mittlinjen, B i vänstra hörnet och C längs högra sargen nära mittlinjen. A driver bollen några meter och passar i rörelse till B. B tar med sig bollen bakom målet och passar ut på andra sidan till C, som kommer i full fart och skjuter en bit ut. A fortsätter in framför mål efter sin passning och går på returen.\n\nLedbyte: A till B-ledet, B till C-ledet och C till A-ledet. Byt sida efter några minuter.\n\nVariant: efter sin passning går B in och försvarar mot A framför mål. Då kan C välja mellan skott och en passning in till A. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "C: starta i tid så att du kommer fram till skottplatsen samtidigt som passningen."
+    },
+    {
+      "id": "cp2",
+      "text": "Skjut i full fart – stanna inte för att skjuta."
+    },
+    {
+      "id": "cp3",
+      "text": "B: titta upp bakom målet och lägg passningen framför C."
+    },
+    {
+      "id": "cp4",
+      "text": "A: ställ dig där returen hamnar, med klubban i golvet."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "shooting",
+    "passing"
+  ],
+  "durationMinutes": 12,
+  "minPlayers": 6,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "A driver bollen och passar i rörelse till B.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.46,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.264,
+          "y": 0.46
+        },
+        {
+          "id": "d1",
+          "type": "arrow-solid",
+          "x": 0.26,
+          "y": 0.42,
+          "endX": 0.24,
+          "endY": 0.32,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.3,
+          "endX": 0.16,
+          "endY": 0.18
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "B tar bollen bakom målet. A går mot mål och C startar.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.24,
+          "y": 0.3,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.11,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.86,
+          "y": 0.46,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.14,
+          "y": 0.044
+        },
+        {
+          "id": "d2",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.035,
+          "endX": 0.64,
+          "endY": 0.03,
+          "bend": 0.015,
+          "waves": 3
+        },
+        {
+          "id": "r1",
+          "type": "arrow-solid",
+          "x": 0.28,
+          "y": 0.27,
+          "endX": 0.38,
+          "endY": 0.22
+        },
+        {
+          "id": "r2",
+          "type": "arrow-solid",
+          "x": 0.83,
+          "y": 0.41,
+          "endX": 0.74,
+          "endY": 0.35
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "B passar ut till C, som skjuter i full fart. A tar returen.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.4,
+          "y": 0.21,
+          "label": "A"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.7,
+          "y": 0.05,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.34,
+          "label": "C"
+        },
+        {
+          "id": "qa",
+          "type": "player",
+          "x": 0.14,
+          "y": 0.56
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.7,
+          "y": 0.116
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.705,
+          "y": 0.155,
+          "endX": 0.715,
+          "endY": 0.275
+        },
+        {
+          "id": "s1",
+          "type": "arrow-dashed",
+          "x": 0.67,
+          "y": 0.3,
+          "endX": 0.55,
+          "endY": 0.1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-16T09:57:28.000Z",
+  "updatedAt": "2026-11-16T09:57:28.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
