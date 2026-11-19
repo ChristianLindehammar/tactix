@@ -2,7 +2,7 @@
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
-import { OpaqueColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { ColorValue, OpaqueColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import CourtIconSvg from './CourtIconSvg';
 
 type IconMapping = {
@@ -41,9 +41,11 @@ export function IconSymbol({
 }: {
   name: IconSymbolName;
   size?: number;
-  color: string | OpaqueColorValue;
+  color: ColorValue;
   style?: StyleProp<ViewStyle>;
 }) {
+  // Ionicons takes no null or numeric colors
+  const iconColor: string | OpaqueColorValue | undefined = color == null || typeof color === 'number' ? undefined : color;
   const mapping = MAPPING[name];
   
   if (!mapping) {
@@ -53,13 +55,13 @@ export function IconSymbol({
 
   if (mapping.type === 'custom') {
     const CustomIcon = mapping.icon as React.ComponentType<any>;
-    return <CustomIcon width={size} height={size} fill={color} style={style} />;
+    return <CustomIcon width={size} height={size} fill={iconColor} style={style} />;
   }
 
   return <Ionicons 
     name={mapping.icon as React.ComponentProps<typeof Ionicons>['name']} 
     size={size} 
-    color={color} 
+    color={iconColor} 
     style={style as StyleProp<TextStyle>}
   />;
 }

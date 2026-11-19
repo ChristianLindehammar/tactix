@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Alert } from 'react-native';
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import { fireGestureHandler, getByGestureTestId } from 'react-native-gesture-handler/jest-utils';
-import { State } from 'react-native-gesture-handler';
+import { GestureHandlerRootView, State } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { DraggableMarker } from '../DraggableMarker';
@@ -76,16 +76,18 @@ describe('TacticsBoard', () => {
   describe('placing a marker next to another', () => {
     const renderMarker = (placing: boolean) =>
       render(
-        <DraggableMarker
-          id={ball.id}
-          x={0.5}
-          y={0.5}
-          containerSize={COURT}
-          onDragEnd={jest.fn()}
-          placing={placing}
-        >
-          <></>
-        </DraggableMarker>,
+        <GestureHandlerRootView>
+          <DraggableMarker
+            id={ball.id}
+            x={0.5}
+            y={0.5}
+            containerSize={COURT}
+            onDragEnd={jest.fn()}
+            placing={placing}
+          >
+            <></>
+          </DraggableMarker>
+        </GestureHandlerRootView>,
       );
     const touchArea = () => getByGestureTestId(`marker-drag-${ball.id}`).config.hitSlop;
 

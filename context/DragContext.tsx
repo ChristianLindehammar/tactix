@@ -20,16 +20,18 @@ interface DragContextProps {
   benchRect: SharedValue<Rect | null>;
   /** True while a court player is held over the bench */
   overBench: SharedValue<boolean>;
-  courtRef: React.RefObject<View | null>;
-  benchRef: React.RefObject<View | null>;
+  courtRef: React.RefObject<ViewInstance | null>;
+  benchRef: React.RefObject<ViewInstance | null>;
   startDrag: (player: PlayerType, source: DropSource) => void;
   endDrag: (point: Position, courtPosition?: Position) => void;
   cancelDrag: () => void;
 }
 
+type ViewInstance = React.ComponentRef<typeof View>;
+
 const DragContext = createContext<DragContextProps | undefined>(undefined);
 
-const measure = (ref: React.RefObject<View | null>, onMeasured: (rect: Rect) => void) =>
+const measure = (ref: React.RefObject<ViewInstance | null>, onMeasured: (rect: Rect) => void) =>
   ref.current?.measureInWindow((x, y, width, height) => onMeasured({ x, y, width, height }));
 
 interface DragProviderProps {
@@ -48,8 +50,8 @@ export const DragProvider: React.FC<PropsWithChildren<DragProviderProps>> = ({ c
   const benchRect = useSharedValue<Rect | null>(null);
   const overBench = useSharedValue(false);
   const courtRect = useRef<Rect | null>(null);
-  const courtRef = useRef<View | null>(null);
-  const benchRef = useRef<View | null>(null);
+  const courtRef = useRef<ViewInstance | null>(null);
+  const benchRef = useRef<ViewInstance | null>(null);
   const onDropRef = useRef(onDrop);
   onDropRef.current = onDrop;
 

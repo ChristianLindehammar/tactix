@@ -307,7 +307,7 @@ export default function ExerciseLibraryScreen() {
             <ThemedButton disabled={loadingMore} onPress={loadMore}>
               {t('showMore')}
             </ThemedButton>
-          ) : null
+          ) : undefined
         }
         renderItem={({ item }) => renderCard(item.exercise, item)}
       />

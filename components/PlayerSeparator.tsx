@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { useTranslation } from '@/hooks/useTranslation';
 
-export const PlayerSeparator = forwardRef<View>((props, ref) => {
+export const PlayerSeparator = forwardRef<React.ComponentRef<typeof View>>((props, ref) => {
   const { t } = useTranslation();
   return (
     <View ref={ref} {...props} style={[styles.container]}>
