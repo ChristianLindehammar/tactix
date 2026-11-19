@@ -125,6 +125,17 @@ def asc_api_key
   )
 end
 
+# Creating App Store versions and editing their metadata needs the App Manager role,
+# which the upload key above does not have
+def asc_release_key
+  app_store_connect_api_key(
+    key_id: "HGL5XFT2B3",
+    issuer_id: "c182c483-9d61-427c-b16a-28deba60b60f",
+    key_filepath: File.expand_path("./AuthKey_HGL5XFT2B3.p8", __dir__),
+    duration: 1200
+  )
+end
+
 # ---------------------------------------------------------------------------
 # Private: iOS build + TestFlight upload (no prebuild)
 # ---------------------------------------------------------------------------
@@ -275,9 +286,36 @@ platform :ios do
     build_and_upload_ios
   end
 
+  desc "Create the App Store version from app.json, attach its newest processed build and set What's New. Does not submit for review"
+  lane :prepare_release do
+    asc_release_key # also signs Spaceship in
+    version_string = JSON.parse(File.read(File.expand_path("../app.json", __dir__)))["expo"]["version"]
+    platform = Spaceship::ConnectAPI::Platform::IOS
+    app = Spaceship::ConnectAPI::App.find(CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier))
+
+    version = app.get_edit_app_store_version(platform: platform)
+    if version && version.version_string != version_string
+      # Renaming it would throw away whatever was prepared for that version
+      UI.user_error!("App Store Connect is already preparing #{version.version_string}; finish or delete it first")
+    end
+    unless version
+      Spaceship::ConnectAPI.post_app_store_version(app_id: app.id, attributes: { versionString: version_string, platform: platform })
+      version = app.get_edit_app_store_version(platform: platform)
+      UI.success("Created App Store version #{version_string}")
+    end
+
+    build = Spaceship::ConnectAPI::Build.all(app_id: app.id, version: version_string, sort: "-uploadedDate")
+                                        .find { |b| b.processing_state == Spaceship::ConnectAPI::Build::ProcessingState::VALID && !b.expired }
+    UI.user_error!("No processed build of #{version_string} on App Store Connect; upload one with `fastlane ios beta`") unless build
+    version.select_build(build_id: build.id)
+    UI.success("Attached build #{build.app_version} (#{build.version})")
+
+    whats_new
+  end
+
   desc "Write the release notes into What's New on the App Store version being prepared"
   lane :whats_new do
-    asc_api_key # also signs Spaceship in
+    asc_release_key # also signs Spaceship in
     expected = JSON.parse(File.read(File.expand_path("../app.json", __dir__)))["expo"]["version"]
     app = Spaceship::ConnectAPI::App.find(CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier))
     version = app.get_edit_app_store_version(platform: Spaceship::ConnectAPI::Platform::IOS)
