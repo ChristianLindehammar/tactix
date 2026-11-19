@@ -313,6 +313,30 @@ platform :ios do
     whats_new
   end
 
+  desc "Set the promotional text from fastlane/promotional-text.txt on the live version and the next one"
+  lane :promotional_text do
+    asc_release_key # also signs Spaceship in
+    content = File.read(File.expand_path("promotional-text.txt", __dir__)).gsub(/<!--.*?-->/m, "")
+    texts = content.scan(%r{<([A-Za-z-]+)>(.*?)</\1>}m).to_h { |locale, text| [locale, text.strip] }
+    texts.each do |locale, text|
+      UI.user_error!("#{locale} promotional text is #{text.length} characters, over the App Store's 170") if text.length > 170
+    end
+
+    app = Spaceship::ConnectAPI::App.find(CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier))
+    # The version on sale, plus the newest one not yet released (being prepared or in review)
+    versions = app.get_app_store_versions(filter: { platform: "IOS" }).first(2)
+                  .select { |v| v.app_store_state != "REPLACED_WITH_NEW_VERSION" }
+    versions.each do |version|
+      version.get_app_store_version_localizations.each do |localization|
+        language = localization.locale.split("-").first
+        text = texts[localization.locale] || texts.find { |locale, _| locale.split("-").first == language }&.last
+        next UI.important("#{version.version_string} #{localization.locale}: no promotional text, left as it is") unless text
+        localization.update(attributes: { promotionalText: text })
+        UI.success("#{version.version_string} #{localization.locale}: promotional text set")
+      end
+    end
+  end
+
   desc "Write the release notes into What's New on the App Store version being prepared"
   lane :whats_new do
     asc_release_key # also signs Spaceship in

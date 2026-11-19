@@ -12,13 +12,16 @@ Releases run through fastlane (`fastlane/Fastfile`); run lanes with `bundle exec
    build and sets What's New. It does not submit for review; the coach does that.
 4. Production on Google Play is promoted by hand in Play Console.
 
+The App Store promotional text lives in `fastlane/promotional-text.txt` (max 170 characters).
+`fastlane ios promotional_text` sets it on the live version and the next one; it needs no review.
+
 ### App Store Connect API keys
 
 Two keys live in `fastlane/` (git-ignored, same issuer ID). Use the one each lane already uses:
 
 - `AuthKey_9KF34Z7C3A.p8` (`asc_api_key`): uploads only. Building, match and TestFlight.
 - `AuthKey_HGL5XFT2B3.p8` (`asc_release_key`): App Manager. Needed to create App Store
-  versions and edit their metadata (`prepare_release`, `whats_new`). The upload key gets
+  versions and edit their metadata (`prepare_release`, `whats_new`, `promotional_text`). The upload key gets
   "The API key in use does not allow this request" for those.
 
 Never print the signing secrets fastlane reads from the environment (`MATCH_PASSWORD`,

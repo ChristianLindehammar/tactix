@@ -50,6 +50,14 @@ Build and upload a new beta build to TestFlight
 
 Create the App Store version from app.json, attach its newest processed build and set What's New. Does not submit for review
 
+### ios promotional_text
+
+```sh
+[bundle exec] fastlane ios promotional_text
+```
+
+Set the promotional text from fastlane/promotional-text.txt on the live version and the next one
+
 ### ios whats_new
 
 ```sh
