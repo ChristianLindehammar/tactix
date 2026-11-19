@@ -10,14 +10,16 @@ import { buildExercise } from '@/test-utils/exerciseFixture';
 import { renderExerciseScreen } from '@/test-utils/renderExerciseScreen';
 
 const mockBack = jest.fn();
-const mockDispatch = jest.fn();
 let mockParams: { id?: string } = {};
-let mockPreventRemove: { enabled: boolean; callback: (event: { data: { action: unknown } }) => void };
+type PreventedRemoval = { data: { action: unknown }; repeat: () => void };
+let mockPreventRemove: { enabled: boolean; callback: (event: PreventedRemoval) => void };
+// The prevented exit only goes through when the screen asks the navigator to repeat it
+const mockRepeat = jest.fn();
+const tryToLeave = () => mockPreventRemove.callback({ data: { action: { type: 'GO_BACK' } }, repeat: mockRepeat });
 
 jest.mock('expo-router', () => ({
   useRouter: () => ({ back: mockBack }),
   useLocalSearchParams: () => mockParams,
-  useNavigation: () => ({ dispatch: mockDispatch }),
   Stack: { Screen: () => null },
 }));
 // The navigator is the boundary: leaving the screen is its job, deciding whether to warn is ours
@@ -36,7 +38,7 @@ describe('exercise editor', () => {
   beforeEach(async () => {
     await AsyncStorage.clear();
     mockBack.mockClear();
-    mockDispatch.mockClear();
+    mockRepeat.mockClear();
     mockParams = {};
     jest.restoreAllMocks();
   });
@@ -340,31 +342,29 @@ describe('exercise editor', () => {
       const alert = jest.spyOn(Alert, 'alert');
       renderExerciseScreen(<ExerciseEditorScreen />);
       await editTitle();
-      const action = { type: 'GO_BACK' };
 
-      mockPreventRemove.callback({ data: { action } });
+      tryToLeave();
       const buttons = alert.mock.lastCall?.[2];
       buttons?.find(button => button.text === 'Keep editing')?.onPress?.();
-      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(mockRepeat).not.toHaveBeenCalled();
 
       buttons?.find(button => button.text === 'Discard')?.onPress?.();
-      expect(mockDispatch).toHaveBeenCalledWith(action);
+      expect(mockRepeat).toHaveBeenCalledTimes(1);
     });
 
     it('leaves without asking after a successful save', async () => {
       const alert = jest.spyOn(Alert, 'alert');
       renderExerciseScreen(<ExerciseEditorScreen />);
       await editTitle();
-      const action = { type: 'GO_BACK' };
 
       await pressSave();
       expect(mockBack).toHaveBeenCalledTimes(1);
 
       // Navigation reports the exit to the still-armed warning, which must let it through
-      mockPreventRemove.callback({ data: { action } });
+      tryToLeave();
 
       expect(alert).not.toHaveBeenCalled();
-      expect(mockDispatch).toHaveBeenCalledWith(action);
+      expect(mockRepeat).toHaveBeenCalledTimes(1);
     });
 
     it('keeps the warning armed while leaving, since changing it mid-exit crashes Android', async () => {
@@ -384,10 +384,10 @@ describe('exercise editor', () => {
       await pressSave();
       const alert = jest.spyOn(Alert, 'alert');
 
-      mockPreventRemove.callback({ data: { action: { type: 'GO_BACK' } } });
+      tryToLeave();
 
       expect(alert).toHaveBeenCalledTimes(1);
-      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(mockRepeat).not.toHaveBeenCalled();
     });
   });
 });

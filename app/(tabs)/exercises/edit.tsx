@@ -13,7 +13,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { Stack, useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { usePreventRemove } from 'expo-router/react-navigation';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -101,7 +101,6 @@ export default function ExerciseEditorScreen() {
   const { id } = useLocalSearchParams<{ id?: string }>();
   const { selectedSport } = useSport();
   const router = useRouter();
-  const navigation = useNavigation();
   const { t, locale } = useTranslation();
   const insets = useSafeAreaInsets();
   const background = useThemeColor({}, 'background') as string;
@@ -149,14 +148,15 @@ export default function ExerciseEditorScreen() {
 
   // The warning stays armed on our own exit and lets it through. Turning it off first would
   // update the native header while the screen is popped, which crashes on Android.
-  usePreventRemove(isDraftChanged(baseline, draft), ({ data }) => {
+  // `repeat` is the only way through: since SDK 58 a re-dispatched action is prevented again.
+  usePreventRemove(isDraftChanged(baseline, draft), ({ repeat }) => {
     if (saved.current) {
-      navigation.dispatch(data.action);
+      repeat();
       return;
     }
     Alert.alert(t('unsavedChangesTitle'), t('unsavedChangesMessage'), [
       { text: t('keepEditing'), style: 'cancel' },
-      { text: t('discard'), style: 'destructive', onPress: () => navigation.dispatch(data.action) },
+      { text: t('discard'), style: 'destructive', onPress: repeat },
     ]);
   });
 
