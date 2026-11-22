@@ -19,7 +19,7 @@ function createDevPlanStore(): PlanStore {
   };
   return {
     getPlan: async () => plan,
-    getPrice: async () => '349 kr',
+    getPrice: async () => '$14.99',
     purchase: async () => (plan = { expiresAt: LIFETIME_ENDS, lifetime: true }),
     restore: async () => plan,
     manage: async () => undefined,
