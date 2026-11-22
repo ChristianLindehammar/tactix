@@ -1,9 +1,11 @@
 import { Stack } from 'expo-router';
+import { useBottomTabBarHeight } from 'expo-router/js-tabs';
 import { Platform } from 'react-native';
 
 import { AccountGate } from '@/components/AccountGate';
 import { PlanGate } from '@/components/PlanGate';
 import { Colors } from '@/constants/Colors';
+import { useSport } from '@/context/SportContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useTranslation } from '@/hooks/useTranslation';
 import { authSession } from '@/services/account';
@@ -22,10 +24,22 @@ export default function ExercisesLayout() {
   const { t } = useTranslation();
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme === 'dark' ? 'dark' : 'light'];
+  const { selectedSport } = useSport();
+  const tabBarHeight = useBottomTabBarHeight();
 
+  // What's included and the price come before sign-in, so a coach sees what they'd get first
   return (
-    <AccountGate session={authSession} providers={providers} restore={restoreAccount}>
-      <PlanGate plans={plans} onExport={exportExercises} onDeleteAll={deleteExercises}>
+    <PlanGate
+      plans={plans}
+      session={authSession}
+      providers={providers}
+      restoreSession={restoreAccount}
+      sport={selectedSport}
+      onExport={exportExercises}
+      onDeleteAll={deleteExercises}
+      bottomInset={Platform.OS === 'ios' ? tabBarHeight : 0}
+    >
+      <AccountGate session={authSession} providers={providers} restore={restoreAccount}>
         <Stack
           screenOptions={{
             headerStyle: { backgroundColor: colors.background },
@@ -37,7 +51,7 @@ export default function ExercisesLayout() {
           <Stack.Screen name="[id]" options={{ title: '' }} />
           <Stack.Screen name="edit" options={{ title: t('editExercise') }} />
         </Stack>
-      </PlanGate>
-    </AccountGate>
+      </AccountGate>
+    </PlanGate>
   );
 }

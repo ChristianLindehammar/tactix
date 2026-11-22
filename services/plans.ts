@@ -4,7 +4,7 @@ import { API_BASE_URL } from '@/constants/api';
 import { authSession } from '@/services/account';
 import { syncExercises } from '@/services/exerciseRepository';
 import { createPlanService, PlanStore, StorePlan } from '@/services/planService';
-import { createRevenueCatPlanStore } from '@/services/revenueCatPlanStore';
+import { createRevenueCatPlanStore, LIFETIME_ENDS } from '@/services/revenueCatPlanStore';
 
 const API_KEY = Platform.select({
   ios: process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY,
@@ -14,15 +14,13 @@ const API_KEY = Platform.select({
 /** Lets dev builds show the paywall before the store products exist. Set EXPO_PUBLIC_DEV_PLAN=lapsed to see a plan that ended. */
 function createDevPlanStore(): PlanStore {
   const YEAR_MS = 365 * 86_400_000;
-  const MONTH_MS = 30 * 86_400_000;
   let plan: StorePlan = {
     expiresAt: process.env.EXPO_PUBLIC_DEV_PLAN === 'lapsed' ? new Date(Date.now() - YEAR_MS).toISOString() : null,
   };
   return {
     getPlan: async () => plan,
-    getPrices: async () => ({ annual: '199 kr', monthly: '29 kr' }),
-    purchase: async period =>
-      (plan = { expiresAt: new Date(Date.now() + (period === 'annual' ? YEAR_MS : MONTH_MS)).toISOString() }),
+    getPrice: async () => '349 kr',
+    purchase: async () => (plan = { expiresAt: LIFETIME_ENDS, lifetime: true }),
     restore: async () => plan,
     manage: async () => undefined,
     logIn: async () => undefined,
@@ -34,7 +32,7 @@ function createDevPlanStore(): PlanStore {
 const unavailableStore: PlanStore = {
   unavailable: true,
   getPlan: () => Promise.reject(new Error('No RevenueCat key in this build')),
-  getPrices: async () => ({ annual: null, monthly: null }),
+  getPrice: async () => null,
   purchase: () => Promise.reject(new Error('No RevenueCat key in this build')),
   restore: () => Promise.reject(new Error('No RevenueCat key in this build')),
   manage: () => Promise.reject(new Error('No RevenueCat key in this build')),

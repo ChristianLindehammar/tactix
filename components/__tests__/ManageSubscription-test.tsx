@@ -1,9 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react-native';
 import * as React from 'react';
 
 import { ManageSubscription } from '@/components/ManageSubscription';
-import { createPlanService, PlanPeriod, PlanStore, StorePlan } from '@/services/planService';
+import { createPlanService, PlanStore, StorePlan } from '@/services/planService';
 import i18n from '@/translations/i18n';
 
 const NEXT_YEAR = '2099-01-15T08:00:00.000Z';
@@ -14,8 +14,8 @@ const t = (key: string) => i18n.t(key);
 function setup(plan: StorePlan) {
   const store: jest.Mocked<PlanStore> = {
     getPlan: jest.fn(async () => plan),
-    getPrices: jest.fn(async () => ({ annual: '199 kr', monthly: '29 kr' })),
-    purchase: jest.fn(async (_period: PlanPeriod) => plan),
+    getPrice: jest.fn(async () => '349 kr'),
+    purchase: jest.fn(async () => plan),
     restore: jest.fn(async () => plan),
     manage: jest.fn(async (): Promise<void> => undefined),
     logIn: jest.fn(async (_userId: string, _email: string | null): Promise<void> => undefined),
@@ -52,6 +52,15 @@ test.each([
   const { store } = setup({ expiresAt });
 
   await waitFor(() => expect(store.getPlan).toHaveBeenCalled());
+
+  expect(screen.queryByRole('button', { name: t('planManage') })).toBeNull();
+});
+
+test('a coach who bought once has no subscription to manage', async () => {
+  const { store } = setup({ expiresAt: '2100-01-01T00:00:00.000Z', lifetime: true });
+
+  await waitFor(() => expect(store.getPlan).toHaveBeenCalled());
+  await act(async () => undefined);
 
   expect(screen.queryByRole('button', { name: t('planManage') })).toBeNull();
 });

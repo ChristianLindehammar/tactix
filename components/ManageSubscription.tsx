@@ -10,7 +10,7 @@ interface ManageSubscriptionProps {
   plans: ReturnType<typeof createPlanService>;
 }
 
-/** Lets a paying coach cancel or switch plans without hunting through the phone's settings. */
+/** Lets a coach still on a subscription cancel it without hunting through the phone's settings. */
 export function ManageSubscription({ plans }: ManageSubscriptionProps) {
   const { t } = useTranslation();
   const state = React.useSyncExternalStore(plans.subscribe, plans.getState);
@@ -21,7 +21,8 @@ export function ManageSubscription({ plans }: ManageSubscriptionProps) {
     void plans.refresh();
   }, [plans]);
 
-  if (!plans.canSell || state.status !== 'active') return null;
+  // A one-time purchase has nothing to cancel
+  if (!plans.canSell || state.status !== 'active' || state.lifetime) return null;
 
   const manage = async () => {
     setBusy(true);
