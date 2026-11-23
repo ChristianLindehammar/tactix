@@ -6,11 +6,15 @@ import type { PlanStore, StorePlan } from '@/services/planService';
 const ENTITLEMENT = 'premium';
 const DAY_MS = 86_400_000;
 const PLAY_SUBSCRIPTIONS_URL = 'https://play.google.com/store/account/subscriptions';
+/** Stands in for the end of a plan that never ends, the same date the server uses. */
+export const LIFETIME_ENDS = '2100-01-01T00:00:00.000Z';
 
-const toPlan = (info: CustomerInfo): StorePlan => {
+export const toPlan = (info: CustomerInfo): StorePlan => {
   const entitlement = info.entitlements.all[ENTITLEMENT];
   if (!entitlement) return { expiresAt: null };
-  // An active plan can show a past or missing date, during a store's grace period for example.
+  // A one-time purchase, or access granted by hand, has no end date
+  if (entitlement.isActive && !entitlement.expirationDate) return { expiresAt: LIFETIME_ENDS, lifetime: true };
+  // An active subscription can show a past date, during a store's grace period for example.
   // The store's word wins, and the next check moves the date on.
   const dateIsPast = !entitlement.expirationDate || Date.parse(entitlement.expirationDate) <= Date.now();
   if (entitlement.isActive && dateIsPast) return { expiresAt: new Date(Date.now() + DAY_MS).toISOString() };
@@ -22,16 +26,10 @@ export function createRevenueCatPlanStore(apiKey: string): PlanStore {
 
   return {
     getPlan: async () => toPlan(await Purchases.getCustomerInfo()),
-    getPrices: async () => {
-      const offering = (await Purchases.getOfferings()).current;
-      return {
-        annual: offering?.annual?.product.priceString ?? null,
-        monthly: offering?.monthly?.product.priceString ?? null,
-      };
-    },
-    purchase: async period => {
-      const offered = (await Purchases.getOfferings()).current?.[period];
-      if (!offered) throw new Error(`No ${period} plan is on offer`);
+    getPrice: async () => (await Purchases.getOfferings()).current?.lifetime?.product.priceString ?? null,
+    purchase: async () => {
+      const offered = (await Purchases.getOfferings()).current?.lifetime;
+      if (!offered) throw new Error('No lifetime purchase is on offer');
       try {
         return toPlan((await Purchases.purchasePackage(offered)).customerInfo);
       } catch (error) {
@@ -40,6 +38,7 @@ export function createRevenueCatPlanStore(apiKey: string): PlanStore {
       }
     },
     restore: async () => toPlan(await Purchases.restorePurchases()),
+    // Only for coaches still on a subscription they bought before the one-time purchase
     manage: async () => {
       // Apple's sheet opens inside the app and also covers TestFlight purchases
       if (Platform.OS === 'ios') return Purchases.showManageSubscriptions();

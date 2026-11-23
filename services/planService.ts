@@ -10,23 +10,18 @@ const NEEDS_SIGN_IN_KEY = 'planNeedsSignIn';
 export interface StorePlan {
   /** When the plan ended or will end. Null if this coach never had one. */
   expiresAt: string | null;
-}
-
-export type PlanPeriod = 'annual' | 'monthly';
-
-/** Prices in the coach's own currency. Null if that plan isn't on offer or the store can't say right now. */
-export interface PlanPrices {
-  annual: string | null;
-  monthly: string | null;
+  /** Bought once and never ends, so there's no subscription to manage. */
+  lifetime?: true;
 }
 
 export interface PlanStore {
   /** Set by a build that has no store to sell through. */
   readonly unavailable?: true;
   getPlan(): Promise<StorePlan>;
-  getPrices(): Promise<PlanPrices>;
+  /** The one-time price in the coach's own currency. Null if it isn't on offer or the store can't say right now. */
+  getPrice(): Promise<string | null>;
   /** 'cancelled' when the coach backed out of the store's own sheet. */
-  purchase(period: PlanPeriod): Promise<StorePlan | 'cancelled'>;
+  purchase(): Promise<StorePlan | 'cancelled'>;
   restore(): Promise<StorePlan>;
   /** Opens the store's own page where the coach cancels or switches plans. */
   manage(): Promise<void>;
@@ -40,7 +35,7 @@ export interface PlanStore {
 export type PlanState =
   | { status: 'unknown' }
   | { status: 'none' }
-  | { status: 'active'; expiresAt: string }
+  | { status: 'active'; expiresAt: string; lifetime?: true }
   | { status: 'lapsed'; expiresAt: string };
 
 interface PlanServiceOptions {
@@ -65,9 +60,10 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
   let state: PlanState = { status: 'unknown' };
   const listeners = new Set<() => void>();
 
-  const toState = ({ expiresAt }: StorePlan): PlanState => {
+  const toState = ({ expiresAt, lifetime }: StorePlan): PlanState => {
     if (expiresAt === null) return { status: 'none' };
-    return Date.parse(expiresAt) > now() ? { status: 'active', expiresAt } : { status: 'lapsed', expiresAt };
+    if (Date.parse(expiresAt) <= now()) return { status: 'lapsed', expiresAt };
+    return lifetime ? { status: 'active', expiresAt, lifetime } : { status: 'active', expiresAt };
   };
 
   const adopt = async (plan: StorePlan) => {
@@ -130,7 +126,7 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
   return {
     canSell: !store.unavailable,
     getState: () => state,
-    getPrices: () => store.getPrices(),
+    getPrice: () => store.getPrice(),
     subscribe: (listener: () => void) => {
       listeners.add(listener);
       return () => void listeners.delete(listener);
@@ -140,8 +136,8 @@ export function createPlanService({ store, auth, baseUrl, fetch, now = Date.now 
       await adopt(await store.restore());
       await tellServer().catch(warnNotLinked);
     },
-    purchase: async (period: PlanPeriod) => {
-      const plan = await store.purchase(period);
+    purchase: async () => {
+      const plan = await store.purchase();
       if (plan === 'cancelled') return;
       await adopt(plan);
       await tellServer().catch(warnNotLinked);
