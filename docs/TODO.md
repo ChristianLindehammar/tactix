@@ -20,3 +20,15 @@ were submitted for review the same day.
       (`scripts/create_lifetime_product.rb`) and the 2.3.0 release notes.
 - [ ] Optionally refresh `fastlane/promotional-text.txt` to mention the one-time purchase, then run
       `bundle exec fastlane ios promotional_text`.
+
+## RevenueCat on iOS: CocoaPods to Swift Package Manager
+
+Noted 2026-11-26. CocoaPods' public repository goes read-only on 2026-12-02, so RevenueCat stops publishing
+iOS SDK updates there. `react-native-purchases` 12 is the first version that needs SPM. RevenueCat
+recommends that Expo apps stay on v11 with CocoaPods until Expo's SPM support leaves preview. Nothing breaks
+in the meantime: builds on v11 keep working, and `^11.0.4` won't move to 12 on its own.
+
+- [ ] Watch https://rev.cat/react-native-spm-migration until it has a tested migration path for Expo apps.
+- [ ] Then upgrade to `react-native-purchases` 12 and move iOS to SPM. `ios/` is generated, so this probably
+      goes through an Expo config plugin rather than edits to the Podfile.
+- [ ] Do this sooner if we need a RevenueCat fix or feature that only comes in v12.
