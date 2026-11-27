@@ -9,7 +9,7 @@ Flask service that stores exercises in MariaDB. It runs on Phusion Passenger at
 |---|---|---|
 | `GET /health` | No | 200 if the database answers, otherwise 503 |
 | `POST /auth/email/start` | No | Emails a 6-digit code. Takes `email` and optional `locale` (`en`, `sv`, `fi`) |
-| `POST /auth/email/verify` | No | Takes `email` and `code`. Returns `userId`, `email` and `token`, once |
+| `POST /auth/email/verify` | No | Takes `email` and `code`. Returns `userId`, `email` and `token`, once. With `createAccount: false`, an address with no account gets 404 `noAccount` and the code stays usable, so the app can ask the coach first |
 | `POST /auth/provider` | No | Takes `provider` (`apple` or `google`), `idToken` and `nonce`, and for Apple the sign-in's `authorizationCode`, kept so deleting the account can revoke it. Answers like verify |
 | `POST /auth/sign-out` | Yes | Ends this session only |
 | `GET /me` | Yes | Returns `userId`, `email`, `displayName` and `plan` (`active`, `expiresAt`) |

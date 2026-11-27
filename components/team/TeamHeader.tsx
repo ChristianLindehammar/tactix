@@ -18,13 +18,21 @@ interface TeamHeaderProps {
 
 /** The open team's name, which switches team, with its menu, the add players button and who it is shared with. */
 export function TeamHeader({ onSwitchTeam, onTeamOptions, onAddPlayers }: TeamHeaderProps) {
-  const { team } = useTeam();
+  const { team, sharingPausedFor } = useTeam();
   const { t } = useTranslation();
   const colors = useTeamUiColors();
   const tint = useThemeColor({}, 'tint') as string;
   if (!team) return null;
 
   const playerCount = team.startingPlayers.length + team.benchPlayers.length;
+  const paused = team.shared ? sharingPausedFor(team) : null;
+  const sharing = !team.shared
+    ? t('onlyOnThisDevice')
+    : paused
+      ? paused.accountEmail
+        ? t('sharingPaused', { email: paused.accountEmail })
+        : t('sharingPausedNoEmail')
+      : t('sharedWithCoaches');
 
   return (
     <View style={styles.header}>
@@ -46,9 +54,11 @@ export function TeamHeader({ onSwitchTeam, onTeamOptions, onAddPlayers }: TeamHe
         </View>
       </View>
       <View style={styles.subtitle}>
-        {team.shared ? <Ionicons name="people" size={15} color={colors.accent} /> : null}
+        {team.shared ? (
+          <Ionicons name={paused ? 'pause-circle' : 'people'} size={15} color={paused ? colors.muted : colors.accent} />
+        ) : null}
         <ThemedText style={[styles.subtitleText, { color: colors.muted }]}>
-          {`${t('teamPlayerCount', { count: playerCount })} · ${team.shared ? t('sharedWithCoaches') : t('onlyOnThisDevice')}`}
+          {`${t('teamPlayerCount', { count: playerCount })} · ${sharing}`}
         </ThemedText>
       </View>
     </View>
@@ -84,6 +94,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   subtitleText: {
+    flexShrink: 1,
     fontSize: 13,
   },
 });

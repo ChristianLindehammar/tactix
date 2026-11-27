@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react-native';
 import * as React from 'react';
 
 import { AccountPanel } from '@/components/AccountPanel';
@@ -12,15 +12,26 @@ import i18n from '@/translations/i18n';
 const json = (status: number, body: unknown = {}) =>
   new Response(status === 204 ? null : JSON.stringify(body), { status });
 
-const setup = (providers: SignInProvider[] = [], profile?: React.ComponentProps<typeof AccountPanel>['profile']) => {
-  const fetch = jest.fn(async (url: string, _init?: RequestInit) =>
-    url.endsWith('/auth/email/start')
-      ? json(202)
-      : url.endsWith('/auth/email/verify') || url.endsWith('/auth/provider')
-        ? json(200, { userId: 'account-1', email: 'coach@example.com', token: 'secret' })
-        : json(204),
-  );
-  let token: string | null = null;
+/** Only coach@example.com has an account, like a server where the coach signed up once. */
+const answer = async (url: string, init?: RequestInit) => {
+  if (url.endsWith('/auth/email/start')) return json(202);
+  if (url.endsWith('/auth/email/verify')) {
+    const body = JSON.parse(String(init?.body));
+    if (body.email !== 'coach@example.com' && body.createAccount === false) return json(404, { error: 'noAccount' });
+    const userId = body.email === 'coach@example.com' ? 'account-1' : 'account-2';
+    return json(200, { userId, email: body.email, token: 'secret' });
+  }
+  if (url.endsWith('/auth/provider')) return json(200, { userId: 'account-1', email: 'coach@example.com', token: 'secret' });
+  return json(204);
+};
+
+const setup = (
+  providers: SignInProvider[] = [],
+  profile?: React.ComponentProps<typeof AccountPanel>['profile'],
+  savedToken: string | null = null,
+) => {
+  const fetch = jest.fn(answer);
+  let token: string | null = savedToken;
   const session = createAuthSession({
     baseUrl: 'https://api.test',
     fetch: fetch as unknown as typeof globalThis.fetch,
@@ -38,12 +49,16 @@ const setup = (providers: SignInProvider[] = [], profile?: React.ComponentProps<
 
 const t = (key: string) => i18n.t(key);
 
-const signIn = async () => {
-  fireEvent.changeText(screen.getByLabelText(t('accountEmail')), 'coach@example.com');
+const signIn = async (address = 'coach@example.com') => {
+  await enterCode(address);
+  await screen.findByRole('button', { name: t('accountSignOut') });
+};
+
+const enterCode = async (address: string) => {
+  fireEvent.changeText(await screen.findByLabelText(t('accountEmail')), address);
   fireEvent.press(screen.getByRole('button', { name: t('accountSendCode') }));
   fireEvent.changeText(await screen.findByLabelText(t('accountCode')), '123456');
   fireEvent.press(screen.getByRole('button', { name: t('accountVerifyCode') }));
-  await screen.findByRole('button', { name: t('accountSignOut') });
 };
 
 beforeEach(() => AsyncStorage.clear());
@@ -259,4 +274,51 @@ describe('the display name', () => {
 
     expect(await screen.findByText(t('displayNameInvalid'))).toBeTruthy();
   });
+});
+
+test('an address with no account asks before making one, naming the account the phone had', async () => {
+  setup();
+  await signIn();
+  fireEvent.press(screen.getByRole('button', { name: t('accountSignOut') }));
+
+  await enterCode('other@example.com');
+
+  expect(await screen.findByText(i18n.t('accountNoAccountMessage', { email: 'other@example.com', previous: 'coach@example.com' }))).toBeTruthy();
+  expect(screen.queryByRole('button', { name: t('accountSignOut') })).toBeNull();
+});
+
+test('the coach can still make the new account with the same code', async () => {
+  setup();
+  await signIn();
+  fireEvent.press(screen.getByRole('button', { name: t('accountSignOut') }));
+  await enterCode('other@example.com');
+
+  fireEvent.press(await screen.findByRole('button', { name: t('accountCreateNewAccount') }));
+
+  await screen.findByRole('button', { name: t('accountSignOut') });
+  expect(screen.getByText('other@example.com')).toBeTruthy();
+});
+
+test('going back leaves the coach signed out, ready to sign in another way', async () => {
+  setup();
+  await signIn();
+  fireEvent.press(screen.getByRole('button', { name: t('accountSignOut') }));
+  await enterCode('other@example.com');
+
+  fireEvent.press(await screen.findByRole('button', { name: t('accountNoAccountBack') }));
+
+  expect(await screen.findByRole('button', { name: t('accountSendCode') })).toBeTruthy();
+  expect(screen.queryByRole('button', { name: t('accountSignOut') })).toBeNull();
+});
+
+test('a phone signed in before this version also asks', async () => {
+  // How the app left a signed-in phone before it remembered the last account
+  await AsyncStorage.setItem('account', JSON.stringify({ userId: 'account-1', email: 'coach@example.com' }));
+  const { session } = setup([], undefined, 'secret');
+  await act(() => session.restore());
+  fireEvent.press(await screen.findByRole('button', { name: t('accountSignOut') }));
+
+  await enterCode('other@example.com');
+
+  expect(await screen.findByRole('button', { name: t('accountCreateNewAccount') })).toBeTruthy();
 });

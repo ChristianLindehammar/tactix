@@ -10,6 +10,7 @@ import { TeamProvider } from '@/context/TeamContext';
 import { SportProvider } from '@/context/SportContext';
 import { AppState, View } from 'react-native';
 
+import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useTranslation } from '@/hooks/useTranslation';
 import { startAccountAndSync, syncExercises } from '@/services/exerciseRepository';
@@ -59,7 +60,16 @@ export default function RootLayout() {
           <SafeAreaProvider>
             <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
               {/* Only the arrow: the screen behind is the tab group, whose name "(tabs)" isn't a title */}
-              <Stack screenOptions={{ headerBackButtonDisplayMode: 'minimal' }}>
+              {/* An opaque header, like the tabs' stacks: the see-through default on newer iOS
+                  starts the screen under it and hides its first lines */}
+              <Stack
+                screenOptions={{
+                  headerBackButtonDisplayMode: 'minimal',
+                  headerStyle: { backgroundColor: Colors[colorScheme ?? 'light'].background },
+                  headerTintColor: Colors[colorScheme ?? 'light'].tint,
+                  headerTitleStyle: { fontWeight: '600' },
+                }}
+              >
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="share-team" options={{ title: t('coachTogether') }} />
                 <Stack.Screen name="join/index" options={{ title: t('joinTeam') }} />

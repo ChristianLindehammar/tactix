@@ -5,6 +5,8 @@ import { moveLocalData } from '@/services/localAccountData';
 import type { ProviderToken } from '@/services/signInProviders';
 
 const ACCOUNT_KEY = 'account';
+// Kept after signing out, so signing in to a different account by mistake can be caught
+const LAST_ACCOUNT_KEY = 'last-account';
 const REQUEST_TIMEOUT_MS = 20_000;
 const WEB_CLIENT_HEADERS = { 'X-CoachMate-Client': 'web' };
 
@@ -16,6 +18,8 @@ export type AuthErrorCode =
   | 'invalidEmail'
   | 'invalidCode'
   | 'invalidProviderToken'
+  /** The code was right, but no account uses the address, and the app asked before making one. */
+  | 'noAccount'
   | 'rateLimited'
   | 'offline'
   | 'unavailable';
@@ -103,6 +107,7 @@ export function createAuthSession({
     if (!usesCookies) await tokenStore.set(token);
     // Saved before moving anything, so restore() can finish the move if the app stops partway
     await AsyncStorage.setItem(ACCOUNT_KEY, JSON.stringify({ userId, email: email ?? null }));
+    await AsyncStorage.setItem(LAST_ACCOUNT_KEY, JSON.stringify({ email: email ?? null }));
     await adoptLocalData(userId);
     setState({ status: 'signedIn', userId, email: email ?? null });
   };
@@ -133,6 +138,8 @@ export function createAuthSession({
         await AsyncStorage.removeItem(ACCOUNT_KEY);
         return;
       }
+      // Phones signed in before the last account was kept learn it here
+      await AsyncStorage.setItem(LAST_ACCOUNT_KEY, JSON.stringify({ email: email ?? null }));
       await adoptLocalData(userId);
       setState({ status: 'signedIn', userId, email });
     },
@@ -142,9 +149,24 @@ export function createAuthSession({
       if (!response.ok) throw new AuthError('invalidEmail');
     },
 
-    verifyEmailCode: async (email: string, code: string) => {
-      const response = await postJson('/auth/email/verify', sessionFor({ email, code }));
+    /**
+     * On a phone that was signed in before, an address with no account fails with `noAccount`
+     * instead of making one, unless `createAccount` says to.
+     */
+    verifyEmailCode: async (email: string, code: string, { createAccount }: { createAccount?: boolean } = {}) => {
+      const create = createAccount ?? (await AsyncStorage.getItem(LAST_ACCOUNT_KEY)) === null;
+      const response = await postJson('/auth/email/verify', sessionFor({ email, code, createAccount: create }));
+      if (response.status === 404) {
+        const { error } = await response.json().catch(() => ({ error: null }));
+        if (error === 'noAccount') throw new AuthError('noAccount');
+      }
       await finishSignIn(response, 'invalidCode');
+    },
+
+    /** The address of the account this phone was last signed in to, even after signing out. */
+    getLastAccountEmail: async (): Promise<string | null> => {
+      const stored = await AsyncStorage.getItem(LAST_ACCOUNT_KEY);
+      return stored ? (JSON.parse(stored).email ?? null) : null;
     },
 
     signInWithProvider: async (provider: 'apple' | 'google', token: ProviderToken) => {
@@ -169,6 +191,7 @@ export function createAuthSession({
       const response = await request('/me', { method: 'DELETE', headers: headers ?? {} });
       if (!response.ok && response.status !== 401) throw new AuthError('unavailable');
       const accountId = await identity.getCurrentUserId();
+      await AsyncStorage.removeItem(LAST_ACCOUNT_KEY);
       await endLocally();
       await moveLocalData(accountId, await identity.getCurrentUserId());
     },

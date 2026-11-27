@@ -14,6 +14,7 @@ const ERROR_KEYS: Record<AuthErrorCode, string> = {
   invalidEmail: 'accountErrorInvalidEmail',
   invalidCode: 'accountErrorInvalidCode',
   invalidProviderToken: 'accountErrorProvider',
+  noAccount: 'accountNoAccountTitle',
   rateLimited: 'accountErrorRateLimited',
   offline: 'accountErrorOffline',
   unavailable: 'accountErrorUnavailable',
@@ -106,6 +107,8 @@ export function AccountPanel({ session, providers, intro, profile }: AccountPane
   const [code, setCode] = React.useState('');
   const [codeSent, setCodeSent] = React.useState(false);
   const [confirmingDelete, setConfirmingDelete] = React.useState(false);
+  /** Set while asking whether to make a new account. Holds the account the phone had before. */
+  const [noAccount, setNoAccount] = React.useState<{ previous: string | null } | null>(null);
   const [busy, setBusy] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -127,6 +130,7 @@ export function AccountPanel({ session, providers, intro, profile }: AccountPane
     setCode('');
     setCodeSent(false);
     setConfirmingDelete(false);
+    setNoAccount(null);
   };
 
   const inputStyle = [styles.input, { borderColor: border, color: textColor }];
@@ -177,6 +181,26 @@ export function AccountPanel({ session, providers, intro, profile }: AccountPane
     );
   }
 
+  if (codeSent && noAccount) {
+    return (
+      <View style={styles.container}>
+        <ThemedText type="defaultSemiBold">{t('accountNoAccountTitle')}</ThemedText>
+        <ThemedText>
+          {t('accountNoAccountMessage', { email: email.trim(), previous: noAccount.previous ?? t('accountPreviousAccount') })}
+        </ThemedText>
+        <ThemedButton disabled={busy} onPress={reset}>{t('accountNoAccountBack')}</ThemedButton>
+        <ThemedButton
+          disabled={busy}
+          onPress={() => attempt(async () => {
+            await session.verifyEmailCode(email, code, { createAccount: true });
+            reset();
+          })}
+        >{t('accountCreateNewAccount')}</ThemedButton>
+        {feedback}
+      </View>
+    );
+  }
+
   if (codeSent) {
     return (
       <View style={styles.container}>
@@ -196,8 +220,13 @@ export function AccountPanel({ session, providers, intro, profile }: AccountPane
         <ThemedButton
           disabled={busy || code.trim().length === 0}
           onPress={() => attempt(async () => {
-            await session.verifyEmailCode(email, code);
-            reset();
+            try {
+              await session.verifyEmailCode(email, code);
+              reset();
+            } catch (failure) {
+              if (!(failure instanceof AuthError && failure.code === 'noAccount')) throw failure;
+              setNoAccount({ previous: await session.getLastAccountEmail() });
+            }
           })}
         >{t('accountVerifyCode')}</ThemedButton>
         <ThemedButton
