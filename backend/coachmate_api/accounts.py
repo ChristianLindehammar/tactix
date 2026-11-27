@@ -164,6 +164,12 @@ def verify_email_sign_in():
         cursor.close()
         return _invalid_code()
 
+    # An app that was signed in to another account asks before a new one is made. The code stays
+    # usable, so the coach can say yes without waiting for another
+    if body.get('createAccount') is False and query_one('SELECT id FROM users WHERE email = %s', (email,)) is None:
+        cursor.close()
+        return jsonify({'error': 'noAccount'}), 404
+
     # Whoever deletes the row owns the code, so it can only be used once
     cursor.execute('DELETE FROM sign_in_codes WHERE email_hash = %s', (email_hash,))
     if cursor.rowcount != 1:

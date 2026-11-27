@@ -40,8 +40,8 @@ def request_code(api, email='coach@example.com', locale='sv'):
     return api.post('/auth/email/start', json={'email': email, 'locale': locale})
 
 
-def verify(api, code, email='coach@example.com'):
-    return api.post('/auth/email/verify', json={'email': email, 'code': code})
+def verify(api, code, email='coach@example.com', **extra):
+    return api.post('/auth/email/verify', json={'email': email, 'code': code, **extra})
 
 
 def test_a_coach_signs_in_with_the_code_sent_to_their_email(api, outbox):
@@ -83,6 +83,40 @@ def test_email_case_and_spaces_do_not_make_a_second_account(api, outbox):
     second = verify(api, outbox.last_code, email='COACH@example.com ').get_json()
 
     assert second['userId'] == first['userId']
+
+
+def test_an_app_can_ask_before_a_new_account_is_made(api, outbox):
+    request_code(api, email='new@example.com')
+    code = outbox.last_code
+
+    asked = verify(api, code, email='new@example.com', createAccount=False)
+
+    assert asked.status_code == 404
+    assert asked.get_json() == {'error': 'noAccount'}
+    # The coach said yes, with the same code
+    created = verify(api, code, email='new@example.com', createAccount=True)
+    assert created.status_code == 200
+
+
+def test_asking_first_signs_in_to_an_account_the_address_already_has(api, outbox):
+    request_code(api)
+    first = verify(api, outbox.last_code).get_json()
+
+    request_code(api)
+    again = verify(api, outbox.last_code, createAccount=False)
+
+    assert again.status_code == 200
+    assert again.get_json()['userId'] == first['userId']
+
+
+def test_asking_first_still_refuses_a_wrong_code(api, outbox):
+    request_code(api, email='new@example.com')
+    wrong = '000000' if outbox.last_code != '000000' else '000001'
+
+    response = verify(api, wrong, email='new@example.com', createAccount=False)
+
+    assert response.status_code == 400
+    assert response.get_json() == {'error': 'invalidCode'}
 
 
 def test_a_wrong_code_does_not_sign_in(api, outbox):

@@ -28,6 +28,11 @@ export interface SharedTeamLink {
   /** The team's id on the server, which differs from the local id. */
   id: string;
   role: 'owner' | 'editor';
+  /**
+   * The account this phone syncs the team as. Signed in as another one, the team waits rather
+   * than syncing. Missing on teams shared before this was kept, until their next sync.
+   */
+  accountId?: string;
 }
 
 
