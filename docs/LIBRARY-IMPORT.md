@@ -49,6 +49,22 @@ CoachMate account and checked in the app. Written so a new agent or person can p
    `| <slug> | <sport> | <source and page/drill ref>. <Own title; what we added> | <YYYY-MM-DD> |`
 9. **Commit and push** only when Christian asks.
 
+## From a coach's own exercise
+
+A coach's exercise made in the app can become a library drill too: fetch it, improve and translate it, and upload
+it as a **new** drill owned by the CoachMate account. The coach's own exercise is left as it is (the app only
+uploads, so a server-side edit would never reach their phone). Only with the coach's agreement, unless it is
+Christian's own. The Claude Code skill `.claude/skills/library-improve` walks through it.
+
+```sh
+python3 -I scripts/library/fetch_exercise.py --title "<part of title>" <scratch folder>   # lists matches
+python3 -I scripts/library/fetch_exercise.py --id <first characters> <scratch folder>     # writes the generator
+```
+
+It reads production over SSH (`COACHMATE_SSH_HOST`, default `inleed`) in a read-only transaction, and writes
+`<slug>.source.json` and `gen_<slug>.py` with the sketch converted to drills.py calls and TODOs for missing text and
+metadata. From there it is the normal workflow: write, preview, test, upload, SOURCES row.
+
 ## Writing a drill
 
 ```python
