@@ -33,6 +33,8 @@ export interface SharedTeamLink {
    * than syncing. Missing on teams shared before this was kept, until their next sync.
    */
   accountId?: string;
+  /** That account's email, to tell the coach which one to sign in to while the team waits. */
+  accountEmail?: string | null;
 }
 
 

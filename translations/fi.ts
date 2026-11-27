@@ -444,6 +444,8 @@ export default {
   openTeamFileHint: "Kopio, jonka joku lähetti sinulle (.coachmate).",
   teamPlayerCount: { zero: "Ei pelaajia", one: "1 pelaaja", other: "{{count}} pelaajaa" },
   sharedWithCoaches: "Jaettu muiden valmentajien kanssa",
+  sharingPaused: 'Tauolla – jaettu tilin {{email}} kautta. Kirjaudu sille tilille synkronoidaksesi.',
+  sharingPausedNoEmail: 'Tauolla – kirjaudu tilille, jonka kautta joukkue on jaettu, synkronoidaksesi.',
   onlyOnThisDevice: "Vain tällä laitteella",
   coachTogetherHint: "Suunnittele reaaliajassa muiden valmentajien kanssa. Muutokset näkyvät heille sekunneissa.",
   sendCopy: "Lähetä kopio",

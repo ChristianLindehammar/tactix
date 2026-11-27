@@ -47,6 +47,11 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
     const state = services.auth.getState();
     return state.status === 'signedIn' ? state.userId : null;
   }, [services]);
+  /** What a team synced as the signed-in account keeps in its link. */
+  const accountLink = useCallback(() => {
+    const state = services.auth.getState();
+    return state.status === 'signedIn' ? { accountId: state.userId, accountEmail: state.email } : null;
+  }, [services]);
   // Changes with every sign-in, so another account's teams are looked at again
   const account = useSyncExternalStore(services.auth.subscribe, currentAccount);
   const teamsRef = useRef(teams);
@@ -56,15 +61,16 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
   const inFlight = useRef(new Set<string>());
   const rerun = useRef(new Set<string>());
 
-  const apply = useCallback((localId: string, sharedId: string, accountId: string, outcome: SyncOutcome) => {
+  const apply = useCallback((localId: string, sharedId: string, account: { accountId: string; accountEmail: string | null }, outcome: SyncOutcome) => {
     setTeams(previous => previous.map(team => {
       if (team.id !== localId || team.shared?.id !== sharedId) return team;
-      const next = { ...rebase(team, outcome), shared: { id: sharedId, role: outcome.role, accountId } };
+      const next = { ...rebase(team, outcome), shared: { id: sharedId, role: outcome.role, ...account } };
       // Nothing new keeps the same object, so the screen and storage don't redo their work
       const same =
         JSON.stringify(teamToItems(next)) === JSON.stringify(teamToItems(team)) &&
         next.shared.role === team.shared.role &&
         next.shared.accountId === team.shared.accountId &&
+        next.shared.accountEmail === team.shared.accountEmail &&
         next.selectedConfigurationId === team.selectedConfigurationId;
       return same ? team : next;
     }));
@@ -85,16 +91,16 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
       return;
     }
     const team = teamsRef.current.find(candidate => candidate.id === localId);
-    const accountId = currentAccount();
-    if (!team?.shared || !accountId) return;
+    const account = accountLink();
+    if (!team?.shared || !account) return;
     // Shared under another account: it waits for that one, as this account can't reach it
-    if (team.shared.accountId && team.shared.accountId !== accountId) return;
+    if (team.shared.accountId && team.shared.accountId !== account.accountId) return;
     const sharedId = team.shared.id;
 
     inFlight.current.add(localId);
     try {
       const outcome = await services.sync.sync(team, { onlyIfChanged });
-      if (outcome) apply(localId, sharedId, accountId, outcome);
+      if (outcome) apply(localId, sharedId, account, outcome);
     } catch (error) {
       if (error instanceof TeamSharingError && error.code === 'notFound') lose(localId, sharedId);
       // Anything else, such as being offline, waits for the next try
@@ -102,7 +108,7 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
       inFlight.current.delete(localId);
       if (rerun.current.delete(localId)) void syncTeam(localId, true);
     }
-  }, [apply, lose, currentAccount, services]);
+  }, [apply, lose, accountLink, services]);
 
   const syncAll = useCallback((onlyIfChanged: boolean) => {
     teamsRef.current.filter(team => team.shared).forEach(team => void syncTeam(team.id, onlyIfChanged));
@@ -149,7 +155,7 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
           if (existing && (!existing.shared?.accountId || existing.shared.accountId === account)) continue;
           const downloaded = await services.sync.download(summary.id, existing?.id ?? newLocalId());
           if (cancelled) return;
-          const team = { ...downloaded, shared: { ...downloaded.shared!, accountId: account } };
+          const team = { ...downloaded, shared: { ...downloaded.shared!, ...accountLink() } };
           setTeams(previous => {
             const current = previous.find(candidate => candidate.shared?.id === summary.id);
             if (!current) return [...previous, team];
@@ -164,7 +170,7 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
     return () => {
       cancelled = true;
     };
-  }, [isLoading, account, setTeams, services]);
+  }, [isLoading, account, setTeams, services, accountLink]);
 
   const replaceTeam = (localId: string, update: (team: Team) => Team) =>
     setTeams(previous => previous.map(team => (team.id === localId ? update(team) : team)));
@@ -191,7 +197,7 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
       if (existing && (!existing.shared?.accountId || existing.shared.accountId === accountId)) return existing;
 
       const downloaded = await services.sync.download(teamId, existing?.id ?? newLocalId());
-      const team = { ...downloaded, shared: { ...downloaded.shared!, ...(accountId ? { accountId } : {}) } };
+      const team = { ...downloaded, shared: { ...downloaded.shared!, ...accountLink() } };
       setTeams(previous => (existing
         ? previous.map(candidate => (candidate.id === existing.id ? team : candidate))
         : [...previous, team]));
@@ -218,5 +224,14 @@ export function useSharedTeams({ teams, setTeams, isLoading, onSharingLost, serv
     },
 
     syncNow: (localId: string) => syncTeam(localId, false),
+
+    /**
+     * Set while a shared team waits for the account it syncs as, because another one or none is
+     * signed in. Holds that account's email, to say which one to sign in to.
+     */
+    pausedFor: (team: Team): { accountEmail: string | null } | null => {
+      if (!team.shared?.accountId || team.shared.accountId === account) return null;
+      return { accountEmail: team.shared.accountEmail ?? null };
+    },
   };
 }

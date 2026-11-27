@@ -444,6 +444,8 @@ export default {
   openTeamFileHint: "A copy someone sent you (.coachmate).",
   teamPlayerCount: { zero: "No players", one: "1 player", other: "{{count}} players" },
   sharedWithCoaches: "Shared with other coaches",
+  sharingPaused: 'Paused – shared through {{email}}. Sign in to that account to sync.',
+  sharingPausedNoEmail: 'Paused – sign in to the account it is shared through to sync.',
   onlyOnThisDevice: "Only on this device",
   coachTogetherHint: "Plan live with other coaches. Changes reach them within seconds.",
   sendCopy: "Send a copy",

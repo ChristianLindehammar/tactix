@@ -44,6 +44,8 @@ interface TeamContextProps {
   joinTeam: (code: string) => Promise<Team>;
   stopSharing: (teamId: string) => Promise<void>;
   leaveTeam: (teamId: string) => Promise<void>;
+  /** Set while a shared team waits for the account it syncs as. Holds that account's email. */
+  sharingPausedFor: (team: Team) => { accountEmail: string | null } | null;
 }
 
 export const TeamContext = createContext<TeamContextProps | undefined>(undefined);
@@ -103,7 +105,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
     Alert.alert(t('sharingEndedTitle'), t('sharingEndedMessage', { teamName: lost.name }));
   }, [t]);
 
-  const { shareTeam, joinTeam: joinSharedTeam, stopSharing, leaveTeam } = useSharedTeams({
+  const { shareTeam, joinTeam: joinSharedTeam, stopSharing, leaveTeam, pausedFor } = useSharedTeams({
     teams,
     setTeams,
     isLoading,
@@ -574,6 +576,7 @@ export const TeamProvider: React.FC<PropsWithChildren> = ({ children }) => {
       joinTeam,
       stopSharing,
       leaveTeam,
+      sharingPausedFor: pausedFor,
     }}>
       {children}
     </TeamContext.Provider>

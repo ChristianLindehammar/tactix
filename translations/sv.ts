@@ -444,6 +444,8 @@ export default {
   openTeamFileHint: "En kopia som någon skickat till dig (.coachmate).",
   teamPlayerCount: { zero: "Inga spelare", one: "1 spelare", other: "{{count}} spelare" },
   sharedWithCoaches: "Delas med andra tränare",
+  sharingPaused: 'Pausad – delas via {{email}}. Logga in på det kontot för att synka.',
+  sharingPausedNoEmail: 'Pausad – logga in på kontot den delas via för att synka.',
   onlyOnThisDevice: "Bara på den här enheten",
   coachTogetherHint: "Planera live med andra tränare. Ändringar når dem inom några sekunder.",
   sendCopy: "Skicka en kopia",

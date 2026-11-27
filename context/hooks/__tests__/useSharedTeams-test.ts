@@ -24,6 +24,10 @@ function fakeAuth(initial: AuthState) {
       state = { status: 'signedIn', userId, email: `${userId}@example.com` };
       listeners.forEach(listener => listener());
     },
+    signOut: () => {
+      state = { status: 'signedOut' };
+      listeners.forEach(listener => listener());
+    },
   };
 }
 
@@ -107,7 +111,7 @@ const buildTeam = (overrides: Partial<Team> = {}): Team => ({
 });
 
 function setup(initialTeams: Team[], prepare: (server: ReturnType<typeof fakeServer>) => void, signedInAs = 'coach-a') {
-  const auth = fakeAuth({ status: 'signedIn', userId: signedInAs, email: null });
+  const auth = fakeAuth({ status: 'signedIn', userId: signedInAs, email: `${signedInAs}@example.com` });
   const server = fakeServer(auth);
   prepare(server);
   const sync = createTeamSync({ api: server.api, store: asyncStorageSyncStore, newId: () => 'shared-new' });
@@ -141,7 +145,7 @@ it('keeps a shared team linked when the phone signs in to another account', asyn
   await act(() => result.current.syncNow('local-1'));
   await act(() => new Promise(resolve => setTimeout(resolve, 50)));
 
-  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a' });
+  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a', accountEmail: 'coach-a@example.com' });
   expect(onSharingLost).not.toHaveBeenCalled();
   unmount();
 });
@@ -158,7 +162,7 @@ it('picks up where it left off when the phone signs back in to that account', as
   act(() => auth.signInAs('coach-a'));
 
   await waitFor(() => expect(result.current.teams[0].name).toBe('F2012 Röd'));
-  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a' });
+  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a', accountEmail: 'coach-a@example.com' });
   unmount();
 });
 
@@ -187,7 +191,7 @@ it('remembers the account for a team shared before accounts were kept', async ()
   act(() => auth.signInAs('coach-b'));
   await act(() => result.current.syncNow('local-1'));
 
-  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a' });
+  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a', accountEmail: 'coach-a@example.com' });
   expect(onSharingLost).not.toHaveBeenCalled();
   unmount();
 });
@@ -209,7 +213,7 @@ it('joining through an invite as another account links the copy already on the p
   expect(joined?.id).toBe('local-1');
   await waitFor(() => expect(result.current.teams[0].name).toBe('F2012 Röd'));
   expect(result.current.teams).toHaveLength(1);
-  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'editor', accountId: 'coach-b' });
+  expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'editor', accountId: 'coach-b', accountEmail: 'coach-b@example.com' });
   unmount();
 });
 
@@ -224,8 +228,35 @@ it('signing in to another account that is in the team takes over the copy on the
   server.rename('f2012', 'F2012 Röd');
   act(() => auth.signInAs('coach-a'));
 
-  await waitFor(() => expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a' }));
+  await waitFor(() => expect(linkOf(result.current.teams)).toEqual({ id: 'f2012', role: 'owner', accountId: 'coach-a', accountEmail: 'coach-a@example.com' }));
   expect(result.current.teams).toHaveLength(1);
   expect(result.current.teams[0].name).toBe('F2012 Röd');
+  unmount();
+});
+
+it('says a team is paused, and for which account, while another account is signed in', async () => {
+  const { result, auth, unmount } = setup(
+    [buildTeam({ shared: { id: 'f2012', role: 'owner' } })],
+    server => server.addTeam('f2012', { 'coach-a': 'owner' }, 'F2012'),
+  );
+  await waitFor(() => expect(linkOf(result.current.teams)?.accountId).toBe('coach-a'));
+  expect(result.current.pausedFor(result.current.teams[0])).toBeNull();
+
+  act(() => auth.signInAs('coach-b'));
+
+  expect(result.current.pausedFor(result.current.teams[0])).toEqual({ accountEmail: 'coach-a@example.com' });
+  unmount();
+});
+
+it('says a team is paused while no one is signed in', async () => {
+  const { result, auth, unmount } = setup(
+    [buildTeam({ shared: { id: 'f2012', role: 'owner' } })],
+    server => server.addTeam('f2012', { 'coach-a': 'owner' }, 'F2012'),
+  );
+  await waitFor(() => expect(linkOf(result.current.teams)?.accountId).toBe('coach-a'));
+
+  act(() => auth.signOut());
+
+  expect(result.current.pausedFor(result.current.teams[0])).toEqual({ accountEmail: 'coach-a@example.com' });
   unmount();
 });
