@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 2,
+  "id": "b8e7181f-08f0-5f71-89a5-752f86266aaa",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Jokerbackar – 3 mot 3 mot ett mål",
+  "description": "Spel 3 mot 3 på halvplan mot ett mål med målvakt, där båda lagen anfaller samma mål. Varje lag har dessutom två jokrar (J) som står bakom konorna vid mittlinjen. Övningen lär spelarna att släppa bollen till en back i stället för att hålla den själva.\n\nMålvakten kastar ut bollen i ett hörn och spelet är igång. Laget som vinner bollen måste spela den till en av sina egna jokrar innan det får göra mål. Den som passar jokern byter plats med den: passaren går ut bakom konorna och blir joker, och jokern kommer in i spelet, antingen genom att dribbla in med bollen eller genom att passa in till en medspelare. Efter mål, eller när bollen går ut, kastar målvakten direkt ut en ny boll i ett hörn så att spelet håller igång.\n\nHåll 3 mot 3 i spelytan så att det inte blir för trångt. Är ni fler, ta in fler jokrar bakom konorna. Varianter: högst tre touch per spelare i spelytan, eller minst två passningar efter jokern innan avslut. Bilden är inte skalenlig.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Släpp bollen tidigt till jokern när du är pressad – leta inte efter en egen lösning."
+    },
+    {
+      "id": "cp2",
+      "text": "Lyft blicken direkt efter bollvinst: var står närmaste joker?"
+    },
+    {
+      "id": "cp3",
+      "text": "Gå direkt ut bakom konorna efter passningen, så kommer jokern in snabbt."
+    },
+    {
+      "id": "cp4",
+      "text": "Jokern väljer snabbt: dribbla in i en fri yta eller passa till en medspelare i rörelse."
+    }
+  ],
+  "locale": "sv",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "Målvakten kastar ut bollen i hörnet. A och X kämpar om den.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.1,
+          "endX": 0.12,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.13
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.28,
+          "endX": 0.1,
+          "endY": 0.17
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A vinner bollen och spelar bakåt till en blå joker. Blått får inte göra mål förrän bollen har varit hos en joker.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.55
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.33,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "Jokern dribblar in och blått får avsluta. A går ut bakom konorna och blir ny joker.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.6
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.555,
+          "endX": 0.25,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ra3",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.26,
+          "endX": 0.1,
+          "endY": 0.43
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.14,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Rött vinner bollen och måste nu spela till en röd joker innan de får anfalla mot mål.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.33,
+          "label": "J"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.41
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.45,
+          "endX": 0.44,
+          "endY": 0.555
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.15,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-27T11:57:26.000Z",
+  "updatedAt": "2026-11-27T11:57:26.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}

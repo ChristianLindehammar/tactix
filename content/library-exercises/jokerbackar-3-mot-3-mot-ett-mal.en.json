@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 2,
+  "id": "193fd93c-f1da-51d9-958e-d569f23dbead",
+  "ownerId": null,
+  "clonedFromId": null,
+  "sport": "floorball",
+  "title": "Joker backs – 3v3 to one goal",
+  "description": "A 3v3 game on half a court to one goal with a goalkeeper, where both teams attack the same goal. Each team also has two jokers (J) standing behind the cones at the centre line. The drill teaches players to release the ball to a back instead of keeping it themselves.\n\nThe goalkeeper throws the ball into a corner to start. The team that wins the ball must play it to one of its own jokers before it may score. Whoever passes to the joker swaps places with them: the passer goes out behind the cones and becomes a joker, and the joker comes into play, either by dribbling in with the ball or by passing in to a teammate. After a goal, or when the ball goes out, the goalkeeper throws a new ball into a corner straight away to keep the game going.\n\nKeep it 3v3 in the playing area so it does not get crowded. With more players, add more jokers behind the cones. Variations: at most three touches per player in the playing area, or at least two passes after the joker before a shot. The diagram is not to scale.",
+  "coachingPoints": [
+    {
+      "id": "cp1",
+      "text": "Release the ball early to the joker when you are under pressure – do not look for a solution on your own."
+    },
+    {
+      "id": "cp2",
+      "text": "Look up straight after winning the ball: where is the nearest joker?"
+    },
+    {
+      "id": "cp3",
+      "text": "Go out behind the cones straight after the pass, so the joker can come in quickly."
+    },
+    {
+      "id": "cp4",
+      "text": "The joker decides quickly: dribble into free space or pass to a teammate on the move."
+    }
+  ],
+  "locale": "en",
+  "phase": "main",
+  "difficulty": 3,
+  "focus": [
+    "passing",
+    "transition",
+    "attack"
+  ],
+  "durationMinutes": 20,
+  "minPlayers": 9,
+  "maxPlayers": 14,
+  "customTags": [],
+  "frames": [
+    {
+      "id": "f1",
+      "note": "The goalkeeper throws the ball into the corner. A and X battle for it.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.36,
+          "y": 0.11
+        },
+        {
+          "id": "p1",
+          "type": "arrow-dashed",
+          "x": 0.33,
+          "y": 0.1,
+          "endX": 0.12,
+          "endY": 0.075
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.34,
+          "y": 0.27,
+          "label": "A"
+        },
+        {
+          "id": "ra",
+          "type": "arrow-solid",
+          "x": 0.31,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.13
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.15,
+          "y": 0.31,
+          "label": "X"
+        },
+        {
+          "id": "rx",
+          "type": "arrow-solid",
+          "x": 0.13,
+          "y": 0.28,
+          "endX": 0.1,
+          "endY": 0.17
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.65,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.37,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.85,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "note": "A wins the ball and plays it back to a blue joker. Blue may not score until the ball has been to a joker.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.13,
+          "y": 0.15,
+          "label": "A"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.22,
+          "y": 0.2
+        },
+        {
+          "id": "p2",
+          "type": "arrow-dashed",
+          "x": 0.22,
+          "y": 0.24,
+          "endX": 0.2,
+          "endY": 0.55
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.12,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.45,
+          "y": 0.33,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "note": "The joker dribbles in and blue may shoot. A goes out behind the cones as the new joker.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.08,
+          "y": 0.6
+        },
+        {
+          "id": "d3",
+          "type": "arrow-solid",
+          "x": 0.2,
+          "y": 0.555,
+          "endX": 0.25,
+          "endY": 0.37,
+          "bend": 0.03,
+          "waves": 3
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.08,
+          "y": 0.22,
+          "label": "A"
+        },
+        {
+          "id": "ra3",
+          "type": "arrow-solid",
+          "x": 0.08,
+          "y": 0.26,
+          "endX": 0.1,
+          "endY": 0.43
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.14,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.3,
+          "label": "B"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.47,
+          "y": 0.36,
+          "label": "Y"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.17,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "note": "Red wins the ball and must now play it to a red joker before attacking the goal.",
+      "markers": [
+        {
+          "id": "gk",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.085
+        },
+        {
+          "id": "c1",
+          "type": "cone",
+          "x": 0.08,
+          "y": 0.5
+        },
+        {
+          "id": "c2",
+          "type": "cone",
+          "x": 0.3,
+          "y": 0.5
+        },
+        {
+          "id": "c3",
+          "type": "cone",
+          "x": 0.7,
+          "y": 0.5
+        },
+        {
+          "id": "c4",
+          "type": "cone",
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "id": "a",
+          "type": "player",
+          "x": 0.2,
+          "y": 0.6,
+          "label": "A"
+        },
+        {
+          "id": "j2",
+          "type": "player",
+          "x": 0.8,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v1",
+          "type": "opponent",
+          "x": 0.42,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "v2",
+          "type": "opponent",
+          "x": 0.58,
+          "y": 0.6,
+          "label": "J"
+        },
+        {
+          "id": "j1",
+          "type": "player",
+          "x": 0.3,
+          "y": 0.33,
+          "label": "J"
+        },
+        {
+          "id": "y",
+          "type": "opponent",
+          "x": 0.5,
+          "y": 0.34,
+          "label": "Y"
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "x": 0.5,
+          "y": 0.41
+        },
+        {
+          "id": "p4",
+          "type": "arrow-dashed",
+          "x": 0.49,
+          "y": 0.45,
+          "endX": 0.44,
+          "endY": 0.555
+        },
+        {
+          "id": "x",
+          "type": "opponent",
+          "x": 0.3,
+          "y": 0.15,
+          "label": "X"
+        },
+        {
+          "id": "b",
+          "type": "player",
+          "x": 0.62,
+          "y": 0.27,
+          "label": "B"
+        },
+        {
+          "id": "c",
+          "type": "player",
+          "x": 0.72,
+          "y": 0.15,
+          "label": "C"
+        },
+        {
+          "id": "z",
+          "type": "opponent",
+          "x": 0.82,
+          "y": 0.3,
+          "label": "Z"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-27T11:57:26.000Z",
+  "updatedAt": "2026-11-27T11:57:26.000Z",
+  "deletedAt": null,
+  "visibility": "public"
+}
